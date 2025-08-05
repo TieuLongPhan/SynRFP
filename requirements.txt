@@ -1,0 +1,7 @@
+synkit>=0.0.14
+pynauty>=2.8.8.1
+datasketch>=1.6.5
+# Development dependencies
+pytest
+black
+flake8
