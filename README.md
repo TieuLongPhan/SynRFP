@@ -47,12 +47,16 @@ synrfp/
 
 ```bash
 # 1) Clone the repository
-git clone https://github.com/your-org/synrfp.git
+git clone https://github.com/TieuLongPhan/synrfp.git
 cd synrfp
 
 # 2) Install the package (with optional extras)
 pip install .                  # core functionality
 pip install .[all]             # with datasketch and pynauty support
+```
+or can install via pip
+```bash
+pip install synrfp
 ```
 
 ## 🔧 Quick Start
@@ -84,10 +88,10 @@ bits = res.to_binary()   # [0,1,0,0, …]
 ### 2. One‐line wrapper
 
 ```python
-from synrfp import rsmi_to_fingerprint
+from synrfp import synrfp
 
 # Generate a 1024-bit binary fingerprint in one call
-bits = rsmi_to_fingerprint(
+bits = synrfp(
     "CCO>>C=C.O",
     tokenizer="wl",
     radius=1,
