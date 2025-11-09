@@ -6,6 +6,7 @@ from .synrfp import (
     jaccard_minhash,
     SynRFP,
     SynRFPResult,
+    synrfp,
 )
 from .encoder import SynRFPEncoder
 
@@ -16,4 +17,5 @@ __all__ = [
     "SynRFP",
     "SynRFPResult",
     "SynRFPEncoder",
+    "synrfp",
 ]

@@ -1,5 +1,5 @@
+# ----------------------------------------------------------------------------
 # tests/test_encoder.py
-
 import unittest
 import numpy as np
 
@@ -38,22 +38,24 @@ class TestSynRFPEncoder(unittest.TestCase):
 
     def test_inconsistent_lengths_error(self):
         """
-        If underlying rsmi_to_fingerprint returns vectors of differing lengths,
+        If underlying synrfp returns vectors of differing lengths,
         encode() should raise a ValueError.
         """
         import synrfp.encoder as enc_mod
 
-        # Monkey-patch rsmi_to_fingerprint to produce different lengths
-        original = enc_mod.rsmi_to_fingerprint
+        # Monkey-patch synrfp to produce different lengths
+        original = enc_mod.synrfp
 
-        def fake_rsmi_to_fingerprint(rsmi, **kwargs):
+        def fake_synrfp(rsmi, **kwargs):
             return [0, 1] if rsmi == "A" else [1, 0, 1]
 
-        enc_mod.rsmi_to_fingerprint = fake_rsmi_to_fingerprint
-        with self.assertRaises(ValueError):
-            SynRFPEncoder.encode(["A", "B"])
-        # Restore original function
-        enc_mod.rsmi_to_fingerprint = original
+        enc_mod.synrfp = fake_synrfp
+        try:
+            with self.assertRaises(ValueError):
+                SynRFPEncoder.encode(["A", "B"])
+        finally:
+            # Restore original function
+            enc_mod.synrfp = original
 
 
 if __name__ == "__main__":

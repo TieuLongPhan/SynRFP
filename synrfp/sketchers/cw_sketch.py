@@ -1,6 +1,7 @@
 # synrfp/sketchers/cw_sketch.py
+from __future__ import annotations
 
-from typing import Dict, Tuple
+from typing import Mapping
 import numpy as np
 
 from synrfp.sketchers.base import WeightedSketch
@@ -8,110 +9,106 @@ from synrfp.sketchers.base import WeightedSketch
 try:
     from datasketch import WeightedMinHashGenerator
 
-    _HAVE_DATASKETCH = True
-except ImportError:
-    _HAVE_DATASKETCH = False
+    _HAVE_DS = True
+except Exception:
+    _HAVE_DS = False
 
 
 class CWSketch(WeightedSketch):
     """
-    Consistent Weighted Sampling (Weighted MinHash).
+    Consistent Weighted Sampling (Ioffe, 2010) with deterministic fallback.
 
-    Approximates weighted Jaccard similarity over positive/negative namespaces
-    using a WeightedMinHashGenerator.
+    Supports signed inputs by splitting the signed vector into two non-negative
+    channels (pos, neg) and sketching their concatenation.
 
-    :param m: Number of hash samples (permutation count).
+    :param m: Number of samples (permutations), > 0.
     :type m: int
-    :param seed: Random seed for reproducibility.
+    :param seed: Random seed.
     :type seed: int
+    :param normalize: If True, dense helpers L1-normalize inputs.
+    :type normalize: bool
+    :raises ValueError: If arguments invalid.
 
-    :raises RuntimeError: If `datasketch` is not installed.
-    :raises ValueError: If `m` or `seed` are invalid.
-
-    :example:
-        >>> from synrfp.sketchers.cw_sketch import CWSketch
-        >>> cw = CWSketch(m=128, seed=42)
-        >>> pos = {100: 2, 200: 1}
-        >>> neg = {150: 1}
-        >>> sketch = cw.build(pos, neg)
-        >>> len(sketch)  # = 128
+    Example
+    -------
+    >>> cw = CWSketch(m=64, seed=1)
+    >>> sk = cw.build({10:2, 20:1}, {30:1})
+    >>> len(sk) == 64
+    True
     """
 
-    def __init__(self, m: int = 256, seed: int = 1):
-        if not _HAVE_DATASKETCH:
-            raise RuntimeError(
-                "`datasketch` is not installed; install it to use CWSketch."
-            )
-        if not isinstance(m, int) or m <= 0:
-            raise ValueError(f"m must be a positive integer, got {m!r}")
-        if not isinstance(seed, int) or seed < 0:
-            raise ValueError(f"seed must be a non-negative integer, got {seed!r}")
-
-        self.m = m
-        self.seed = seed
+    def __init__(self, m: int = 256, seed: int = 0, normalize: bool = True):
+        super().__init__(m=m, seed=seed, normalize=normalize)
 
     def __repr__(self) -> str:
-        return f"CWSketch(m={self.m}, seed={self.seed})"
+        return f"CWSketch(m={self._m}, seed={self._seed}, normalize={self._normalize})"
 
-    @staticmethod
-    def describe() -> str:
+    # --------------------------- public API -------------------------------
+    def build(self, pos: Mapping[int, int], neg: Mapping[int, int]) -> np.ndarray:
         """
-        Return a usage example for CWSketch.
+        Build a length-``m`` weighted hash signature.
 
-        :returns: Example instantiation and usage code.
-        :rtype: str
-        """
-        return (
-            ">>> from synrfp.sketchers.cw_sketch import CWSketch\n"
-            ">>> cw = CWSketch(m=256, seed=1)\n"
-            ">>> pos = {h1: 2, h2: 1}\n"
-            ">>> neg = {h3: 1}\n"
-            ">>> sketch = cw.build(pos, neg)\n"
-        )
-
-    def build(self, pos: Dict[int, int], neg: Dict[int, int]) -> np.ndarray:
-        """
-        Build a weighted sketch from positive and negative token counts.
-
-        :param pos: Mapping from token to positive count.
-        :type pos: Dict[int, int]
-        :param neg: Mapping from token to negative count.
-        :type neg: Dict[int, int]
-        :returns: NumPy array of hash values of length `m`.
+        :param pos: Positive token counts.
+        :type pos: Mapping[int,int]
+        :param neg: Negative token counts.
+        :type neg: Mapping[int,int]
+        :returns: Array of sampled indices (hash values) of length ``m``.
         :rtype: numpy.ndarray
-
-        :raises TypeError: If `pos` or `neg` are not dicts.
         """
-        if not isinstance(pos, dict) or not isinstance(neg, dict):
-            raise TypeError("pos and neg must be dicts mapping int to int")
+        # Convert to signed dense, then split to two nonnegative channels.
+        signed, _ = self.dicts_to_dense(pos, neg, ensure_signed=True)
+        w_pos, w_neg = self.signed_to_pos_neg_arrays(signed)
+        weights = np.concatenate([w_pos, w_neg], axis=0)
+        if weights.size == 0:
+            return np.zeros(self._m, dtype=np.uint64)
 
-        # Empty‐input shortcut: return a zero‐array
-        if not pos and not neg:
-            import numpy as _np
+        if _HAVE_DS:
+            gen = WeightedMinHashGenerator(
+                len(weights), sample_size=self._m, seed=self._seed
+            )
+            mh = gen.minhash(weights)
+            return mh.hashvalues.copy()
 
-            return _np.zeros(self.m, dtype="uint64")
+        return self._fallback_cws(weights)
 
-        # Flatten features into weights list with namespace keys
-        index: Dict[Tuple[str, int], int] = {}
-        weights: list[float] = []
+    # --------------------------- deterministic fallback -------------------
+    def _fallback_cws(self, weights: np.ndarray) -> np.ndarray:
+        """
+        Deterministic CWS implementation (vectorized).
 
-        def _add(namespace: str, token: int, count: int):
-            if count <= 0:
-                return
-            key = (namespace, int(token))
-            idx = index.get(key)
-            if idx is None:
-                idx = len(index)
-                index[key] = idx
-                weights.append(0.0)
-            weights[idx] = float(count)
+        :param weights: Non-negative weights (1D array).
+        :type weights: numpy.ndarray
+        :returns: Hashvalues array (uint64) length ``m``.
+        :rtype: numpy.ndarray
+        """
+        w = np.asarray(weights, dtype=float)
+        n = w.size
+        if n == 0:
+            return np.zeros(self._m, dtype=np.uint64)
 
-        for token, count in pos.items():
-            _add("p", token, count)
-        for token, count in neg.items():
-            _add("n", token, count)
+        # log(w); zero-weights -> -inf so never selected
+        with np.errstate(divide="ignore"):
+            logw = np.log(w)
 
-        # Build the Weighted MinHash sketch
-        wmg = WeightedMinHashGenerator(len(weights), sample_size=self.m, seed=self.seed)
-        mh = wmg.minhash(weights)
-        return mh.hashvalues.copy()
+        out = np.empty(self._m, dtype=np.uint64)
+
+        # For each permutation, sample r,c ~ Gamma(2,1), beta ~ U(0,1) per feature
+        # Using a deterministic RNG seeded by (seed + perm)
+        for i in range(self._m):
+            rng = np.random.default_rng(self._seed + i)
+            U = rng.random(
+                (3, 2, n), dtype=np.float64
+            )  # for r,c: sum of two Exp(1); for beta: later
+            # r, c via sum of two Exponential(1): -log U1 - log U2
+            r = -np.log(U[0, 0]) - np.log(U[0, 1])
+            c = -np.log(U[1, 0]) - np.log(U[1, 1])
+            beta = rng.random(n)
+
+            t = np.floor(logw / r + beta)
+            y = np.exp(r * (t - beta))
+            a = c / (y * np.exp(r))
+            a[~np.isfinite(logw)] = np.inf
+
+            out[i] = np.uint64(np.argmin(a))
+
+        return out

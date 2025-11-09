@@ -1,12 +1,12 @@
 # ----------------------------------------------------------------------------
 # tests/sketchers/test_minhash_sketch.py
 import unittest
-from synrfp.sketchers.minhash_sketch import MinHashSketch, _HAVE_DATASKETCH
+from synrfp.sketchers.minhash_sketch import MinHashSketch, _HAVE_DS
 
 
 class TestMinHashSketch(unittest.TestCase):
     def test_instantiation_and_invalid_m(self):
-        if not _HAVE_DATASKETCH:
+        if not _HAVE_DS:
             with self.assertRaises(RuntimeError):
                 MinHashSketch()
         else:
@@ -17,7 +17,7 @@ class TestMinHashSketch(unittest.TestCase):
             with self.assertRaises(ValueError):
                 MinHashSketch(m=0, seed=1)
 
-    @unittest.skipUnless(_HAVE_DATASKETCH, "requires datasketch")
+    @unittest.skipUnless(_HAVE_DS, "requires datasketch")
     def test_build_determinism_and_seed_variation(self):
         mh1 = MinHashSketch(m=8, seed=42)
         tokens = [10, 20, 30]

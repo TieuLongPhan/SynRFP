@@ -1,6 +1,7 @@
+# ----------------------------------------------------------------------------
 # tests/test_synrfp.py
-
 import unittest
+import numpy as np
 from collections import Counter
 
 from synrfp import build_graph_from_printout, tanimoto_bits, jaccard_minhash, SynRFP
@@ -16,7 +17,7 @@ class TestConvenienceFunctions(unittest.TestCase):
         edges = {(0, 1): {"order": 1.5}}
         G = build_graph_from_printout(nodes, edges)
         self.assertIsInstance(G, GraphData)
-        # should preserve dicts exactly
+        # should preserve dicts exactly (GraphData.from_dicts uses same structure)
         self.assertEqual(G.nodes, nodes)
         self.assertEqual(G.edges, {(0, 1): {"order": 1.5}})
 
@@ -57,9 +58,10 @@ class TestSynRFP(unittest.TestCase):
         self.assertEqual(res.delta, Counter())
         self.assertEqual(res.support, [])
 
-        # sketch should be all zeros
-        self.assertIsInstance(res.sketch, bytearray)
-        self.assertTrue(all(bit == 0 for bit in res.sketch))
+        # sketch should be a numpy uint8 array of zeros
+        self.assertIsInstance(res.sketch, np.ndarray)
+        self.assertEqual(res.sketch.dtype, np.uint8)
+        self.assertTrue(bool((res.sketch == 0).all()))
 
     def test_simple_reaction_delta_and_sketch(self):
         # Reactant: two-node edge; Product: single isolated node
@@ -88,9 +90,10 @@ class TestSynRFP(unittest.TestCase):
         # support length == number of nonzero entries in delta
         self.assertEqual(len(res.support), len(res.delta))
 
-        # sketch is a bytearray of length bits
-        self.assertIsInstance(res.sketch, bytearray)
-        self.assertEqual(len(res.sketch), 16)
+        # sketch is a numpy array of uint8 bits of length bits
+        self.assertIsInstance(res.sketch, np.ndarray)
+        self.assertEqual(res.sketch.dtype, np.uint8)
+        self.assertEqual(res.sketch.size, 16)
 
 
 if __name__ == "__main__":

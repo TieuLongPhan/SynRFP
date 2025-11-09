@@ -1,4 +1,4 @@
-# synrfp/synrfp.py
+# synrfp.py
 # -----------------------------------------------------------------------------
 # SynRFP: Mapping-free reaction fingerprints with clean separation of
 #          Tokenizers (graph -> multiset of tokens)
@@ -6,8 +6,9 @@
 # -----------------------------------------------------------------------------
 
 from dataclasses import dataclass
-from typing import Counter, Dict, List, Union, Optional
+from typing import Dict, List, Union, Optional
 
+from collections import Counter
 from synrfp.graph.graph_data import GraphData
 from synrfp.tokenizers.base import BaseTokenizer
 from synrfp.sketchers.base import BaseSketch, WeightedSketch
@@ -17,6 +18,8 @@ from synrfp.tokenizers.nauty import NautyTokenizer
 from synrfp.sketchers.parity_fold import ParityFold
 from synrfp.sketchers.minhash_sketch import MinHashSketch
 from synrfp.sketchers.cw_sketch import CWSketch
+
+import numpy as _np
 
 
 def build_graph_from_printout(
@@ -42,27 +45,27 @@ def build_graph_from_printout(
 
 
 def tanimoto_bits(
-    b1: Union[bytearray, List[int]],
-    b2: Union[bytearray, List[int]],
+    b1: Union[bytearray, List[int], _np.ndarray],
+    b2: Union[bytearray, List[int], _np.ndarray],
 ) -> float:
     """
     Compute the Tanimoto (Jaccard) similarity between two binary‐bit sketches.
 
+    Accepts bytearray, list[int], or numpy array of 0/1.
+
     :param b1: First bit array (0/1 per position).
-    :type b1: bytearray or List[int]
+    :type b1: bytearray or List[int] or numpy.ndarray
     :param b2: Second bit array.
-    :type b2: bytearray or List[int]
+    :type b2: bytearray or List[int] or numpy.ndarray
     :returns: Intersection size divided by union size, or 0.0 if union is zero.
     :rtype: float
-
-    :example:
-        >>> b1 = bytearray([1,0,1])
-        >>> b2 = bytearray([1,1,0])
-        >>> tanimoto_bits(b1, b2)
-        0.3333333333333333
     """
-    inter = sum((x & 1) and (y & 1) for x, y in zip(b1, b2))
-    union = sum(((x & 1) or (y & 1)) for x, y in zip(b1, b2))
+    a1 = _np.asarray(b1, dtype=int)
+    a2 = _np.asarray(b2, dtype=int)
+    if a1.shape != a2.shape:
+        raise ValueError("bit sketches must have identical shape")
+    inter = int(_np.sum((a1 & 1) & (a2 & 1)))
+    union = int(_np.sum(((a1 & 1) | (a2 & 1))))
     return 0.0 if union == 0 else inter / union
 
 
@@ -76,12 +79,6 @@ def jaccard_minhash(h1: Union[list, tuple], h2: Union[list, tuple]) -> float:
     :type h2: list or tuple of hash ints
     :returns: Fraction of positions where h1[i] == h2[i].
     :rtype: float
-
-    :example:
-        >>> h1 = [10, 20, 30]
-        >>> h2 = [10, 99, 30]
-        >>> jaccard_minhash(h1, h2)
-        0.6666666666666666
     """
     import numpy as _np
 
@@ -92,26 +89,41 @@ def jaccard_minhash(h1: Union[list, tuple], h2: Union[list, tuple]) -> float:
     return float((a1 == a2).mean())
 
 
-def sketch_to_binary(sketch: Union[bytearray, List[int]]) -> List[int]:
+def sketch_to_binary(sketch: Union[bytearray, List[int], _np.ndarray]) -> List[int]:
     """
-    Convert a binary sketch (e.g. a ParityFold bytearray) into a list of 0/1 bits.
+    Convert a binary sketch (e.g. a ParityFold result) into a list of 0/1 bits.
+
+    Supports bytearray, list[int], or numpy arrays with integer/boolean dtype.
 
     :param sketch: The sketch object containing bits as 0/1.
-    :type sketch: bytearray or List[int]
+    :type sketch: bytearray or List[int] or numpy.ndarray
     :returns: List of integer bits (0 or 1).
     :rtype: List[int]
-    :raises TypeError: If `sketch` is not a bytearray or list of ints.
-    :example:
-        >>> from synrfp import sketch_to_binary
-        >>> bits = bytearray([1,0,1,1])
-        >>> sketch_to_binary(bits)
-        [1, 0, 1, 1]
+    :raises TypeError: If `sketch` is not a supported type or contains non-binary values.
     """
+    # numpy array path
+    if isinstance(sketch, _np.ndarray):
+        if sketch.ndim != 1:
+            raise TypeError("numpy sketch must be a 1D array of bits")
+        # cast to integers and ensure only 0/1 values
+        arr = sketch.astype(int).tolist()
+        if not all((x == 0 or x == 1) for x in arr):
+            raise TypeError("numpy sketch contains values other than 0/1")
+        return arr
+
+    # bytearray path
     if isinstance(sketch, bytearray):
         return list(sketch)
-    if isinstance(sketch, list) and all(isinstance(x, int) for x in sketch):
-        return [0 if x == 0 else 1 for x in sketch]
-    raise TypeError("sketch_to_binary expects a bytearray or list of ints")
+
+    # list-of-int path
+    if isinstance(sketch, list) and all(isinstance(x, (int, (bool,))) for x in sketch):
+        if not all((int(x) == 0 or int(x) == 1) for x in sketch):
+            raise TypeError("list sketch contains values other than 0/1")
+        return [0 if int(x) == 0 else 1 for x in sketch]
+
+    raise TypeError(
+        "sketch_to_binary expects a bytearray, list[int], or 1D numpy array"
+    )
 
 
 @dataclass
@@ -129,14 +141,11 @@ class SynRFPResult:
     :type support: List[int]
     :param sketch: Sketch object (bytes, list, or array) from the compressor.
     :type sketch: Union[bytes, List[int], object]
-
-    :returns: A human-readable summary.
-    :rtype: str
     """
 
-    tokens_R: Counter[int]
-    tokens_P: Counter[int]
-    delta: Counter[int]
+    tokens_R: Counter
+    tokens_P: Counter
+    delta: Counter
     support: List[int]
     sketch: object
 
@@ -170,15 +179,14 @@ class SynRFPResult:
         """
         Return the sketch stored in this result as a plain list of 0/1 bits.
 
-        Only works for binary sketchers (e.g. ParityFold).
+        Only works for binary sketchers (e.g. ParityFold). For non-binary
+        sketchers (MinHash, CWSketch) a TypeError is raised.
 
         :returns: Bit-vector corresponding to the sketch.
         :rtype: List[int]
         :raises TypeError: If the underlying sketch cannot be interpreted as bits.
-        :example:
-            >>> res = fp.fingerprint(reactant_G, product_G)
-            >>> bits = res.to_binary()
         """
+        # If already a recognized binary container, convert it
         return sketch_to_binary(self.sketch)
 
 
@@ -281,7 +289,7 @@ class SynRFP:
         tokens_P = self.tokenizer.tokens_graph(product, self.radius)
 
         # 2) Signed delta: P − R
-        delta: Counter[int] = Counter(tokens_P)
+        delta: Counter = Counter(tokens_P)
         for token, count in tokens_R.items():
             delta[token] -= count
             if delta[token] == 0:
@@ -306,7 +314,7 @@ class SynRFP:
         )
 
 
-def rsmi_to_fingerprint(
+def synrfp(
     rsmi: str,
     *,
     tokenizer: str = "wl",

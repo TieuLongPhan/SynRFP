@@ -1,5 +1,7 @@
+# ----------------------------------------------------------------------------
 # tests/tokenizers/test_wl.py
 import unittest
+from collections import Counter
 from synrfp.tokenizers.wl import WLTokenizer
 from synrfp.graph.graph_data import GraphData
 
@@ -17,14 +19,26 @@ class TestWLTokenizer(unittest.TestCase):
         self.assertIn("WLTokenizer", repr(self.tokenizer))
 
     def test_describe(self):
-        self.assertIn("tokenizer = WLTokenizer", WLTokenizer.describe())
+        desc = WLTokenizer.describe()
+        self.assertIn("WLTokenizer", desc)
+        self.assertIn("tokens_graph", desc)
 
     def test_tokens_graph_radius0(self):
         tokens = self.tokenizer.tokens_graph(self.G, radius=0)
-        # radius=0 yields only initial atom labels count=3
+        # Expect a Counter-like result and 3 initial node labels
+        self.assertIsInstance(tokens, Counter)
         self.assertEqual(sum(tokens.values()), 3)
 
     def test_tokens_graph_radius1(self):
         tokens1 = self.tokenizer.tokens_graph(self.G, radius=1)
-        # radius=1 adds one iteration per node, total tokens = 3 + 3 =6
+        # radius=1 yields k=0 and k=1 tokens: 3 + 3 = 6
+        self.assertIsInstance(tokens1, Counter)
         self.assertEqual(sum(tokens1.values()), 6)
+
+    def test_invalid_radius_raises(self):
+        with self.assertRaises(ValueError):
+            self.tokenizer.tokens_graph(self.G, radius=-1)
+
+
+if __name__ == "__main__":
+    unittest.main()

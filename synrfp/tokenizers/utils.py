@@ -1,35 +1,60 @@
-# ------------------------------------------
 # synrfp/tokenizers/utils.py
+from __future__ import annotations
+
 from hashlib import blake2b
-from typing import Tuple, List
+from typing import Tuple, List, Any, Iterable
+
 from synrfp.graph.graph_data import GraphData, NodeId
 
 
-def _h64(x) -> int:
+def _h64(obj: Any, *, seed: int = 0) -> int:
     """
-    Compute a stable 64-bit hash of the input using BLAKE2b.
+    Stable 64-bit hash using BLAKE2b.
 
-    :param x: Any hashable object (e.g., tuple of labels).
-    :type x: object
-    :returns: 64-bit integer hash value.
+    :param obj: Any printable object (e.g., tuple of labels).
+    :type obj: Any
+    :param seed: Optional seed mixed into the hash.
+    :type seed: int
+    :returns: 64-bit integer hash.
     :rtype: int
+
+    Example
+    -------
+    >>> isinstance(_h64(('C', 4)), int)
+    True
     """
-    h = blake2b(digest_size=8)
-    h.update(repr(x).encode("utf-8"))
+    h = blake2b(digest_size=8, person=b"synrfp")
+    if seed:
+        h.update(seed.to_bytes(8, "little", signed=False))
+    h.update(repr(obj).encode("utf-8"))
     return int.from_bytes(h.digest(), "little")
+
+
+def batch_h64(items: Iterable[Any], *, seed: int = 0) -> List[int]:
+    """
+    Hash a sequence deterministically.
+
+    :param items: Objects to hash.
+    :type items: Iterable[Any]
+    :param seed: Optional integer seed.
+    :type seed: int
+    :returns: List of 64-bit ints.
+    :rtype: List[int]
+    """
+    return [_h64(x, seed=seed) for x in items]
 
 
 def atom_label_tuple(G: GraphData, v: NodeId, node_attrs: List[str]) -> Tuple:
     """
-    Build a node label tuple from selected node attributes and degree.
+    Build node label tuple from selected attributes and degree.
 
-    :param G: GraphData instance containing node data.
+    :param G: GraphData with node data.
     :type G: GraphData
-    :param v: Node identifier.
+    :param v: Node id.
     :type v: NodeId
-    :param node_attrs: List of attribute keys to include.
+    :param node_attrs: Attribute keys to include.
     :type node_attrs: List[str]
-    :returns: Tuple of attribute values followed by node degree.
+    :returns: Label tuple.
     :rtype: Tuple
     """
     values = [G.nodes[v].get(attr) for attr in node_attrs]
@@ -41,17 +66,17 @@ def bond_label_tuple(
     G: GraphData, u: NodeId, v: NodeId, edge_attrs: List[str]
 ) -> Tuple:
     """
-    Build an edge label tuple from selected edge attributes.
+    Build edge label tuple from selected attributes.
 
-    :param G: GraphData instance containing edge data.
+    :param G: GraphData with edge data.
     :type G: GraphData
-    :param u: First node of the edge.
+    :param u: First node.
     :type u: NodeId
-    :param v: Second node of the edge.
+    :param v: Second node.
     :type v: NodeId
-    :param edge_attrs: List of attribute keys to include.
+    :param edge_attrs: Edge attribute keys to include.
     :type edge_attrs: List[str]
-    :returns: Tuple of attribute values.
+    :returns: Label tuple.
     :rtype: Tuple
     """
     return tuple(G.edge_attr(u, v).get(attr) for attr in edge_attrs)
