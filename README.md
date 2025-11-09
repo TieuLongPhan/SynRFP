@@ -1,4 +1,10 @@
 # SynRFP
+[![PyPI version](https://img.shields.io/pypi/v/synrfp.svg)](https://pypi.org/project/synrfp/)
+[![Release](https://img.shields.io/github/v/release/tieulongphan/synrfp.svg)](https://github.com/tieulongphan/synrfp/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/tieulongphan/synrfp.svg)](https://github.com/tieulongphan/synrfp/commits)
+[![Zenodo](https://zenodo.org/badge/1032455620.svg)](https://doi.org/10.5281/zenodo.17563778)
+[![CI](https://github.com/tieulongphan/synrfp/actions/workflows/test-and-lint.yml/badge.svg?branch=main)](https://github.com/tieulongphan/synrfp/actions/workflows/test-and-lint.yml)
+[![Stars](https://img.shields.io/github/stars/tieulongphan/synrfp.svg?style=social&label=Star)](https://github.com/tieulongphan/synrxn/stargazers)
 
 **SynRFP** (Synthesis Reaction FingerPrint) is a mapping-free, graph-invariant fingerprinting framework for chemical reactions. It represents transformations by:
 
