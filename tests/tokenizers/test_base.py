@@ -3,11 +3,11 @@ import unittest
 from collections import Counter
 
 from synrfp.tokenizers.base import BaseTokenizer
-from synrfp.graph.graph_data import GraphData
+from synrfp.graph.molecule import Molecule
 
 
 class DummyTokenizer(BaseTokenizer):
-    def tokens_graph(self, G: GraphData, radius: int) -> Counter:
+    def tokens_graph(self, G: Molecule, radius: int) -> Counter:
         # simple implementation: return degree counts
         super().tokens_graph(G, radius)
         return Counter({v: G.degree(v) for v in G.nodes})
@@ -16,7 +16,7 @@ class DummyTokenizer(BaseTokenizer):
 class TestBaseTokenizer(unittest.TestCase):
     def setUp(self):
         # build simple graph: path of length 2
-        self.G = GraphData.from_dicts({0: {}, 1: {}, 2: {}}, {(0, 1): {}, (1, 2): {}})
+        self.G = Molecule.from_dicts({0: {}, 1: {}, 2: {}}, {(0, 1): {}, (1, 2): {}})
         self.tokenizer = DummyTokenizer()
 
     def test_init_defaults(self):
@@ -41,7 +41,7 @@ class TestBaseTokenizer(unittest.TestCase):
 
     def test_tokens_side(self):
         # using two graphs
-        G2 = GraphData.from_dicts({0: {}}, {})
+        G2 = Molecule.from_dicts({0: {}}, {})
         combined = self.tokenizer.tokens_side([self.G, G2], radius=1)
         # combine tokens from both
         expected = Counter({0: 1, 1: 2, 2: 1}) + Counter({0: 0})

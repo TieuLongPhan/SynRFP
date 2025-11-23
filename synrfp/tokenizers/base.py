@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 from collections import Counter
 from typing import Sequence, Optional
 
-from synrfp.graph.graph_data import GraphData
+from synrfp.graph.molecule import Molecule
 
 
 class BaseTokenizer(ABC):
@@ -43,29 +43,29 @@ class BaseTokenizer(ABC):
         )
 
     @abstractmethod
-    def tokens_graph(self, G: GraphData, radius: int) -> Counter:
+    def tokens_graph(self, G: Molecule, radius: int) -> Counter:
         """
-        Generate tokens for a single :class:`GraphData` instance.
+        Generate tokens for a single :class:`Molecule` instance.
 
-        :param G: GraphData instance to tokenize.
-        :type G: GraphData
+        :param G: Molecule instance to tokenize.
+        :type G: Molecule
         :param radius: Non-negative neighborhood radius.
         :type radius: int
         :returns: Multiset of tokens (hashed neighborhood labels).
         :rtype: Counter
         """
-        if not isinstance(G, GraphData):
-            raise TypeError(f"Expected GraphData, got {type(G).__name__}")
+        if not isinstance(G, Molecule):
+            raise TypeError(f"Expected Molecule, got {type(G).__name__}")
         if not isinstance(radius, int) or radius < 0:
             raise ValueError(f"Radius must be a non-negative integer, got {radius}")
         return Counter()
 
-    def tokens_side(self, graphs: Sequence[GraphData], radius: int) -> Counter:
+    def tokens_side(self, graphs: Sequence[Molecule], radius: int) -> Counter:
         """
         Generate tokens across multiple graphs (e.g., reaction sides).
 
-        :param graphs: Sequence of GraphData objects.
-        :type graphs: Sequence[GraphData]
+        :param graphs: Sequence of Molecule objects.
+        :type graphs: Sequence[Molecule]
         :param radius: Non-negative neighborhood radius.
         :type radius: int
         :returns: Combined multiset of tokens for all graphs.
@@ -73,15 +73,15 @@ class BaseTokenizer(ABC):
         """
         if not isinstance(graphs, Sequence):
             raise TypeError(
-                f"Expected sequence of GraphData, got {type(graphs).__name__}"
+                f"Expected sequence of Molecule, got {type(graphs).__name__}"
             )
         if not isinstance(radius, int) or radius < 0:
             raise ValueError(f"Radius must be a non-negative integer, got {radius}")
         out = Counter()
         for g in graphs:
-            if not isinstance(g, GraphData):
+            if not isinstance(g, Molecule):
                 raise TypeError(
-                    f"Expected GraphData in sequence, got {type(g).__name__}"
+                    f"Expected Molecule in sequence, got {type(g).__name__}"
                 )
             out.update(self.tokens_graph(g, radius))
         return out

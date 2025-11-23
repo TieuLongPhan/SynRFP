@@ -1,26 +1,25 @@
-# ----------------------------------------------------------------------------
-# tests/tokenizers/test_wl.py
+# tests/tokenizers/test_morgan.py
 import unittest
 from collections import Counter
-from synrfp.tokenizers.wl import WLTokenizer
+from synrfp.tokenizers.morgan import MorganTokenizer
 from synrfp.graph.molecule import Molecule
 
 
-class TestWLTokenizer(unittest.TestCase):
+class TestMorganTokenizer(unittest.TestCase):
     def setUp(self):
         # triangle graph 0-1-2-0
         self.G = Molecule.from_dicts(
             {0: {}, 1: {}, 2: {}},
             {(0, 1): {"order": 1}, (1, 2): {"order": 1}, (0, 2): {"order": 1}},
         )
-        self.tokenizer = WLTokenizer()
+        self.tokenizer = MorganTokenizer()
 
     def test_repr(self):
-        self.assertIn("WLTokenizer", repr(self.tokenizer))
+        self.assertIn("MorganTokenizer", repr(self.tokenizer))
 
     def test_describe(self):
-        desc = WLTokenizer.describe()
-        self.assertIn("WLTokenizer", desc)
+        desc = MorganTokenizer.describe()
+        self.assertIn("MorganTokenizer", desc)
         self.assertIn("tokens_graph", desc)
 
     def test_tokens_graph_radius0(self):

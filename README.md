@@ -105,7 +105,7 @@ print(len(bits), bits[:16])  # e.g. 1024 [0, 1, 0, 0, …]
 ### 3.  Batch encoding
 
 ```python
-from synrfp.encoder import SynRFPEncoder
+from synrfp import BatchEncoder
 
 rxn_smiles = [
     "CO.O[C@@H]1CCNC1.[C-]#[N+]CC(=O)OC>>[C-]#[N+]CC(=O)N1CC[C@@H](O)C1",
@@ -113,13 +113,14 @@ rxn_smiles = [
 ]
 
 # Encode two reactions into a 2×1024 array of bits
-fps = SynRFPEncoder.encode(
+fps = BatchEncoder.encode(
     rxn_smiles,
     tokenizer="wl",
     radius=1,
     sketch="parity",
     bits=1024,
     seed=42,
+    batch_size=2
 )
 
 print(fps.shape)    # (2, 1024)

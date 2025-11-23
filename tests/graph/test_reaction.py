@@ -4,7 +4,7 @@ import unittest
 import networkx as nx
 import pandas as pd
 
-from synrfp.graph.graph_data import GraphData
+from synrfp.graph.molecule import Molecule
 from synrfp.graph.reaction import Reaction
 
 
@@ -27,8 +27,8 @@ class TestReaction(unittest.TestCase):
         rep = repr(rxn)
         self.assertIn("reactant_nodes=3", rep)
         self.assertIn("product_nodes=2", rep)
-        self.assertIsInstance(rxn.reactant, GraphData)
-        self.assertIsInstance(rxn.product, GraphData)
+        self.assertIsInstance(rxn.reactant, Molecule)
+        self.assertIsInstance(rxn.product, Molecule)
 
     def test_len_iter_getitem_to_dataframe(self):
         G_r = make_test_graph(2, [(0, 1)])

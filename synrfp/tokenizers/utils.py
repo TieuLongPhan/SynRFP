@@ -4,7 +4,7 @@ from __future__ import annotations
 from hashlib import blake2b
 from typing import Tuple, List, Any, Iterable
 
-from synrfp.graph.graph_data import GraphData, NodeId
+from synrfp.graph.molecule import Molecule, NodeId
 
 
 def _h64(obj: Any, *, seed: int = 0) -> int:
@@ -44,12 +44,12 @@ def batch_h64(items: Iterable[Any], *, seed: int = 0) -> List[int]:
     return [_h64(x, seed=seed) for x in items]
 
 
-def atom_label_tuple(G: GraphData, v: NodeId, node_attrs: List[str]) -> Tuple:
+def atom_label_tuple(G: Molecule, v: NodeId, node_attrs: List[str]) -> Tuple:
     """
     Build node label tuple from selected attributes and degree.
 
-    :param G: GraphData with node data.
-    :type G: GraphData
+    :param G: Molecule with node data.
+    :type G: Molecule
     :param v: Node id.
     :type v: NodeId
     :param node_attrs: Attribute keys to include.
@@ -62,14 +62,12 @@ def atom_label_tuple(G: GraphData, v: NodeId, node_attrs: List[str]) -> Tuple:
     return tuple(values)
 
 
-def bond_label_tuple(
-    G: GraphData, u: NodeId, v: NodeId, edge_attrs: List[str]
-) -> Tuple:
+def bond_label_tuple(G: Molecule, u: NodeId, v: NodeId, edge_attrs: List[str]) -> Tuple:
     """
     Build edge label tuple from selected attributes.
 
-    :param G: GraphData with edge data.
-    :type G: GraphData
+    :param G: Molecule with edge data.
+    :type G: Molecule
     :param u: First node.
     :type u: NodeId
     :param v: Second node.

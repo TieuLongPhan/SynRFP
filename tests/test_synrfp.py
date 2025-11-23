@@ -5,7 +5,7 @@ import numpy as np
 from collections import Counter
 
 from synrfp import build_graph_from_printout, tanimoto_bits, jaccard_minhash, SynRFP
-from synrfp.graph.graph_data import GraphData
+from synrfp.graph.molecule import Molecule
 from synrfp.tokenizers.wl import WLTokenizer
 from synrfp.sketchers.parity_fold import ParityFold
 
@@ -16,8 +16,8 @@ class TestConvenienceFunctions(unittest.TestCase):
         nodes = {0: {"element": "C"}, 1: {"element": "O"}}
         edges = {(0, 1): {"order": 1.5}}
         G = build_graph_from_printout(nodes, edges)
-        self.assertIsInstance(G, GraphData)
-        # should preserve dicts exactly (GraphData.from_dicts uses same structure)
+        self.assertIsInstance(G, Molecule)
+        # should preserve dicts exactly (Molecule.from_dicts uses same structure)
         self.assertEqual(G.nodes, nodes)
         self.assertEqual(G.edges, {(0, 1): {"order": 1.5}})
 
@@ -44,7 +44,7 @@ class TestSynRFP(unittest.TestCase):
 
     def test_empty_reaction(self):
         # reactant == product => empty delta
-        G = GraphData.from_dicts({}, {})
+        G = Molecule.from_dicts({}, {})
         fp = SynRFP(
             tokenizer=WLTokenizer(), radius=1, sketch=ParityFold(bits=8, seed=0)
         )
@@ -67,8 +67,8 @@ class TestSynRFP(unittest.TestCase):
         # Reactant: two-node edge; Product: single isolated node
         nodes_r, edges_r = {0: {}, 1: {}}, {(0, 1): {}}
         nodes_p, edges_p = {0: {}}, {}
-        G_r = GraphData.from_dicts(nodes_r, edges_r)
-        G_p = GraphData.from_dicts(nodes_p, edges_p)
+        G_r = Molecule.from_dicts(nodes_r, edges_r)
+        G_p = Molecule.from_dicts(nodes_p, edges_p)
 
         fp = SynRFP(
             tokenizer=WLTokenizer(),
