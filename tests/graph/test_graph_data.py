@@ -2,10 +2,10 @@
 
 import unittest
 import networkx as nx
-from synrfp.graph.graph_data import GraphData
+from synrfp.graph.molecule import Molecule
 
 
-class TestGraphData(unittest.TestCase):
+class TestMolecule(unittest.TestCase):
 
     def setUp(self):
         # Basic two‐node graph
@@ -18,7 +18,7 @@ class TestGraphData(unittest.TestCase):
         }
 
     def test_empty_graph(self):
-        G = GraphData.from_dicts({}, {})
+        G = Molecule.from_dicts({}, {})
         self.assertEqual(len(G.nodes), 0)
         self.assertEqual(len(G.edges), 0)
         self.assertEqual(G.adj, {})  # no adjacency
@@ -30,7 +30,7 @@ class TestGraphData(unittest.TestCase):
         # provide reversed key
         nodes = {0: {}, 1: {}}
         edges = {(1, 0): {"foo": "bar"}}
-        G = GraphData.from_dicts(nodes, edges)
+        G = Molecule.from_dicts(nodes, edges)
         # internal key must be (0,1)
         self.assertIn((0, 1), G.edges)
         self.assertNotIn((1, 0), G.edges)
@@ -41,7 +41,7 @@ class TestGraphData(unittest.TestCase):
     def test_self_loop(self):
         nodes = {0: {"element": "X"}}
         edges = {(0, 0): {"order": 1.0}}
-        G = GraphData.from_dicts(nodes, edges)
+        G = Molecule.from_dicts(nodes, edges)
         # adjacency: self‐loop appears twice
         self.assertEqual(G.adj, {0: [0, 0]})
         # degree counts both ends
@@ -49,15 +49,15 @@ class TestGraphData(unittest.TestCase):
         self.assertEqual(G.edge_attr(0, 0), {"order": 1.0})
 
     def test_from_dicts_and_repr(self):
-        G = GraphData.from_dicts(self.nodes, self.edges)
+        G = Molecule.from_dicts(self.nodes, self.edges)
         # repr shows correct counts
-        self.assertEqual(repr(G), "GraphData(nodes=2, edges=1)")
+        self.assertEqual(repr(G), "Molecule(nodes=2, edges=1)")
         # copies of inputs
         self.assertIsNot(G.nodes, self.nodes)
         self.assertIsNot(G.edges, self.edges)
 
     def test_adj_and_degree_caching(self):
-        G = GraphData.from_dicts(self.nodes, self.edges)
+        G = Molecule.from_dicts(self.nodes, self.edges)
         adj1 = G.adj
         adj2 = G.adj
         self.assertIs(adj1, adj2)  # same object cached
@@ -70,8 +70,8 @@ class TestGraphData(unittest.TestCase):
         for (u, v), attr in self.edges.items():
             nxg.add_edge(u, v, **attr)
 
-        G1 = GraphData.from_dicts(self.nodes, self.edges)
-        G2 = GraphData.from_nx_graph(nxg)
+        G1 = Molecule.from_dicts(self.nodes, self.edges)
+        G2 = Molecule.from_nx_graph(nxg)
         self.assertEqual(G1.nodes, G2.nodes)
         self.assertEqual(G1.edges, G2.edges)
 

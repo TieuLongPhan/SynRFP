@@ -1,8 +1,7 @@
-# ----------------------------------------------------------------------------
-# tests/sketchers/test_parity_fold.py
 import unittest
 import numpy as np
 from synrfp.sketchers.parity_fold import ParityFold
+from synrfp.tokenizers.utils import _h64
 
 
 class TestParityFold(unittest.TestCase):
@@ -31,10 +30,10 @@ class TestParityFold(unittest.TestCase):
         self.assertEqual(sketch1.dtype, np.uint8)
         self.assertEqual(sketch1.size, 1024)
         # Parity: token 1 toggled twice -> 0
-        idx1 = hash((pf.seed, 1)) % pf.bits
+        idx1 = _h64(("pf", 1), seed=pf.seed) % pf.bits
         self.assertEqual(int(sketch1[idx1]), 0)
         # token 2 toggled once -> 1
-        idx2 = hash((pf.seed, 2)) % pf.bits
+        idx2 = _h64(("pf", 2), seed=pf.seed) % pf.bits
         self.assertEqual(int(sketch1[idx2]), 1)
 
     def test_build_empty(self):

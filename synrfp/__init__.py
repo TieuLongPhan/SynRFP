@@ -1,14 +1,12 @@
 # synrfp/__init__.py
 
 from .synrfp import (
-    build_graph_from_printout,
-    tanimoto_bits,
-    jaccard_minhash,
     SynRFP,
     SynRFPResult,
     synrfp,
 )
-from .encoder import SynRFPEncoder
+from .utils import build_graph_from_printout, tanimoto_bits, jaccard_minhash
+from .encode import BatchEncoder
 
 __all__ = [
     "build_graph_from_printout",
@@ -16,6 +14,6 @@ __all__ = [
     "jaccard_minhash",
     "SynRFP",
     "SynRFPResult",
-    "SynRFPEncoder",
+    "BatchEncoder",
     "synrfp",
 ]

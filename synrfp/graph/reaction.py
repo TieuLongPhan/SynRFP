@@ -4,7 +4,8 @@ from dataclasses import dataclass
 import networkx as nx
 import pandas as pd
 
-from synrfp.graph.graph_data import GraphData
+# from synrfp.graph.graph_data import Molecule
+from synrfp.graph.molecule import Molecule
 
 NodeId = int
 Edge = Tuple[NodeId, NodeId]
@@ -15,14 +16,14 @@ class Reaction:
     """
     Represents a chemical reaction with a single reactant and a single product graph.
 
-    :param reactant: GraphData for the reactant molecule.
-    :type reactant: GraphData
-    :param product: GraphData for the product molecule.
-    :type product: GraphData
+    :param reactant: Molecule for the reactant molecule.
+    :type reactant: Molecule
+    :param product: Molecule for the product molecule.
+    :type product: Molecule
     """
 
-    reactant: GraphData
-    product: GraphData
+    reactant: Molecule
+    product: Molecule
 
     @staticmethod
     def from_rsmi(rsmi: str) -> Reaction:
@@ -31,7 +32,7 @@ class Reaction:
 
         :param rsmi: Reaction SMILES string.
         :type rsmi: str
-        :returns: Reaction with reactant and product GraphData.
+        :returns: Reaction with reactant and product Molecule.
         :rtype: Reaction
         :raises ValueError: If parsing fails.
         """
@@ -43,8 +44,8 @@ class Reaction:
             rsmi, drop_non_aam=False, use_index_as_atom_map=False
         )
         return Reaction(
-            reactant=GraphData.from_nx_graph(r_graph),
-            product=GraphData.from_nx_graph(p_graph),
+            reactant=Molecule.from_nx_graph(r_graph),
+            product=Molecule.from_nx_graph(p_graph),
         )
 
     @staticmethod
@@ -60,8 +61,8 @@ class Reaction:
         :rtype: Reaction
         """
         return Reaction(
-            reactant=GraphData.from_nx_graph(reactant_graph),
-            product=GraphData.from_nx_graph(product_graph),
+            reactant=Molecule.from_nx_graph(reactant_graph),
+            product=Molecule.from_nx_graph(product_graph),
         )
 
     def __repr__(self) -> str:
@@ -102,24 +103,24 @@ class Reaction:
         """
         return 2
 
-    def __iter__(self) -> Iterator[GraphData]:
+    def __iter__(self) -> Iterator[Molecule]:
         """
-        Iterate over reactant and product GraphData.
+        Iterate over reactant and product Molecule.
 
         :returns: Iterator yielding reactant then product.
-        :rtype: Iterator[GraphData]
+        :rtype: Iterator[Molecule]
         """
         yield self.reactant
         yield self.product
 
-    def __getitem__(self, key: Union[int, str]) -> GraphData:
+    def __getitem__(self, key: Union[int, str]) -> Molecule:
         """
         Index reaction sides by 0/reactant or 1/product or keys.
 
         :param key: 0, 1, 'reactant', or 'product'.
         :type key: int or str
-        :returns: Corresponding GraphData.
-        :rtype: GraphData
+        :returns: Corresponding Molecule.
+        :rtype: Molecule
         :raises KeyError: If key invalid.
         """
         if key in (0, "reactant"):

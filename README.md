@@ -4,7 +4,7 @@
 
 1. **Extracting local graph tokens**  
    - Weisfeiler–Lehman (WL) subtree hashes  
-   - Canonical ego-subgraph hashes (via `pynauty`)
+   - Canonical ego-subgraph hashes
 
 2. **Computing a signed multiset difference**  
    - Δ = tokens(product) − tokens(reactant)
@@ -25,7 +25,6 @@ This approach requires **no atom-mapping** or reactant/reagent distinction, is *
 synrfp/
 ├── __init__.py           # package exports & version
 ├── synrfp.py             # core driver: convenience builders & similarity functions, rsmi_to_fingerprint
-├── encoder.py            # SynRFPEncoder: batch‐encode RSMI list → 2D bit arrays
 ├── graph/
 │   ├── __init__.py
 │   ├── graph_data.py     # GraphData container & utilities
@@ -105,7 +104,7 @@ print(len(bits), bits[:16])  # e.g. 1024 [0, 1, 0, 0, …]
 ### 3.  Batch encoding
 
 ```python
-from synrfp.encoder import SynRFPEncoder
+from synrfp import BatchEncoder
 
 rxn_smiles = [
     "CO.O[C@@H]1CCNC1.[C-]#[N+]CC(=O)OC>>[C-]#[N+]CC(=O)N1CC[C@@H](O)C1",
@@ -113,13 +112,14 @@ rxn_smiles = [
 ]
 
 # Encode two reactions into a 2×1024 array of bits
-fps = SynRFPEncoder.encode(
+fps = BatchEncoder.encode(
     rxn_smiles,
     tokenizer="wl",
     radius=1,
     sketch="parity",
     bits=1024,
     seed=42,
+    batch_size=2
 )
 
 print(fps.shape)    # (2, 1024)
