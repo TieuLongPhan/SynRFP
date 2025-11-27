@@ -1,47 +1,24 @@
-# SynRFP
+## SynRFP — Graph-based, mapping-free reaction fingerprints
 
-**SynRFP** (Synthesis Reaction FingerPrint) is a mapping-free, graph-invariant fingerprinting framework for chemical reactions. It represents transformations by:
+[![PyPI version](https://img.shields.io/pypi/v/synrfp.svg)](https://pypi.org/project/synrfp/)
+[![Release](https://img.shields.io/github/v/release/tieulongphan/synrfp.svg)](https://github.com/tieulongphan/synrfp/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/tieulongphan/synrfp.svg)](https://github.com/tieulongphan/synrfp/commits)
+[![ZENODO](https://zenodo.org/badge/1032455620.svg)](https://doi.org/10.5281/zenodo.17563778)
+[![CI](https://github.com/tieulongphan/synrfp/actions/workflows/test-and-lint.yml/badge.svg?branch=main)](https://github.com/tieulongphan/synrfp/actions/workflows/test-and-lint.yml)
+[![Stars](https://img.shields.io/github/stars/tieulongphan/synrfp.svg?style=social&label=Star)](https://github.com/tieulongphan/synrfp/stargazers)
 
-1. **Extracting local graph tokens**  
-   - Weisfeiler–Lehman (WL) subtree hashes  
-   - Canonical ego-subgraph hashes
+**SynRFP** (Synthesis Reaction FingerPrint) is a **mapping-free**, permutation-invariant framework for representing chemical transformations as fixed-length fingerprints.  
+It explicitly factorises the fingerprint pipeline into three modular operators:
 
-2. **Computing a signed multiset difference**  
-   - Δ = tokens(product) − tokens(reactant)
+- **Ψ (extractor)** — isomorphism-invariant subgraph/token extraction from each reaction side;  
+- **Φ (combination)** — algebraic reparameterisation producing the signed net change Δ and total counts U per token;  
+- **𝒮 (sketcher)** — randomized compression of (Δ,U) into a fixed-dimensional fingerprint **f ∈ 𝓕**.
 
-3. **Compressing into compact sketches**  
-   - **ParityFold**: binary parity-fold into _B_ bits  
-   - **MinHashSketch**: classical MinHash with _m_ permutations  
-   - **CWSketch**: weighted MinHash for signed deltas  
 
-This approach requires **no atom-mapping** or reactant/reagent distinction, is **permutation-invariant**, and **scales linearly** with graph size.
-
-![SynRFP Workflow](data/figure/synrfp.png)
+![SynRFP Workflow](https://raw.githubusercontent.com/TieuLongPhan/SynRFP/main/doc/figure/synrfp.png)
 
 ---
 
-## 📁 Repository Structure
-```bash
-synrfp/
-├── __init__.py           # package exports & version
-├── synrfp.py             # core driver: convenience builders & similarity functions, rsmi_to_fingerprint
-├── graph/
-│   ├── __init__.py
-│   ├── graph_data.py     # GraphData container & utilities
-│   └── reaction.py       # Reaction.from_rsmi / from_graph, Reaction collection API
-├── tokenizers/
-│   ├── __init__.py
-│   ├── base.py           # BaseTokenizer interface
-│   ├── utils.py          # _h64, atom_label_tuple, bond_label_tuple helpers
-│   ├── wl.py             # WLTokenizer implementation
-│   └── nauty.py          # NautyTokenizer implementation
-└── sketchers/
-    ├── __init__.py
-    ├── base.py           # BaseSketch & WeightedSketch interfaces
-    ├── parity_fold.py    # ParityFold sketcher
-    ├── minhash_sketch.py # MinHashSketch sketcher
-    └── cw_sketch.py      # CWSketch sketcher
-```
 ## ⚙️ Installation
 
 ```bash

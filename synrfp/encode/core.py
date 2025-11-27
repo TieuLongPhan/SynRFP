@@ -29,7 +29,6 @@ def synrfp(
     mode: str = "delta",
     node_attrs: Optional[Sequence[str]] = None,
     edge_attrs: Optional[Sequence[str]] = None,
-    require_pynauty: bool = False,
 ) -> List[int]:
     """
     Convert a reaction SMILES (RSMI) into a binary fingerprint bit-vector.
@@ -87,9 +86,6 @@ def synrfp(
         Node attribute names passed to the tokenizer (e.g. ``["element"]``).
     edge_attrs : Sequence[str] or None, optional
         Edge attribute names passed to the tokenizer (e.g. ``["order"]``).
-    require_pynauty : bool, default False
-        If ``tokenizer="nauty"``, whether to enforce :mod:`pynauty` installation
-        (raise if missing).
 
     Returns
     -------
@@ -111,7 +107,6 @@ def synrfp(
         tok = NautyTokenizer(
             node_attrs=node_attrs,
             edge_attrs=edge_attrs,
-            require_pynauty=require_pynauty,
         )
     elif tok_lower == "morgan":
         tok = MorganTokenizer(node_attrs=node_attrs, edge_attrs=edge_attrs)

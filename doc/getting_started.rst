@@ -1,60 +1,155 @@
-.. _getting-started-template:
+.. _getting_started:
 
-.. image:: https://img.shields.io/pypi/v/template.svg
-   :alt: PyPI version
-   :align: right
+.. container:: badges
+
+   .. image:: https://img.shields.io/pypi/v/synrfp.svg
+      :alt: PyPI version
+      :target: https://pypi.org/project/synrfp/
+      :align: left
+
+   .. image:: https://zenodo.org/badge/1032455620.svg
+      :alt: Zenodo DOI
+      :target: https://doi.org/10.5281/zenodo.17563778
+      
+   .. image:: https://github.com/TieuLongPhan/synrfp/actions/workflows/publish-package.yml/badge.svg
+      :alt: CI status
+      :target: https://github.com/TieuLongPhan/synrfp/actions/workflows/publish-package.yml
+      :align: left
+
+   .. raw:: html
+
+      <div style="clear: both;"></div>
 
 ===============================
-Getting Started with Template
+Getting Started with SynRFP
 ===============================
 
-Welcome to the **template** documentation!
+Welcome to the **SynRFP** documentation.
 
-This repository provides a standardized template for building, testing, documenting, and releasing Python-based methods. It includes recommended layouts, tooling integrations, and CI/CD workflows to streamline development.
+**SynRFP** is a mapping-free, graph-based toolkit for converting chemical
+transformations (reaction SMILES) into compact, reproducible fingerprints.
+It separates the pipeline into three modular operators: tokenizers (graph → tokens),
+combination/Δ aggregation, and randomized sketchers (multiset → fixed-size sketch).
+The high-level convenience wrapper and engine are implemented in the `synrfp` module. :contentReference[oaicite:0]{index=0}
 
-🛠 Development Workflow
------------------------
+.. _fig:synrfp-workflow:
 
-1. **Source Layout**  
-   Store all library code under ``src/`` (rename folder as desired).
+.. figure:: figure/synrfp.png
+   :alt: SynRFP pipeline
+   :align: center
 
-2. **Unit Tests**  
-   Keep tests in ``tests/`` and run via pytest::
+   Figure 1 — Overview of the SynRFP pipeline.
 
-      pytest --maxfail=1 --disable-warnings -q
 
-3. **Linting & Formatting**  
-   - Follow PEP 8 style and PEP 257 docstring conventions.  
-   - Use ``black`` for automatic formatting and ``flake8`` to enforce quality.  
-   - Run both via::
+Installation
+------------
 
-        ./lint.sh
+Python requirements
+~~~~~~~~~~~~~~~~~~~
+SynRFP targets **Python 3.11 or later**.
 
-   - Edit ``lint.sh`` to adjust rules or exclude files.
+Create an isolated environment (recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-4. **Documentation**  
-   - Write docs in ``docs/`` using Sphinx.  
-   - Build locally with::
+.. code-block:: bash
 
-        ./build_doc.sh
+   # venv
+   python -m venv .venv
+   source .venv/bin/activate
 
-   - Automate publishing via ReadTheDocs with ``.readthedocs.yml``.
+   # or conda
+   conda create --name synrfp-env python=3.11
+   conda activate synrfp-env
 
-5. **Dependency Management**  
-   - Use ``env.yml`` for Conda (pins ``rdkit>=2025.3.1``, ``pytest``, ``black``, ``flake8``).  
-   - Alternatively, manage with ``requirements.txt`` for pip users.
+Install from PyPI
+~~~~~~~~~~~~~~~~~
+Install the stable release:
 
-6. **Release & Packaging**  
-   - Define package metadata in ``pyproject.toml``.  
-   - Local install::
+.. code-block:: bash
 
-        pip install .
+   pip install synrfp
 
-   - CI/CD workflows:  
-     - **PyPI**: ``.github/workflows/publish-package.yml``  
-     - **Docker**: ``.github/workflows/docker-publish.yml``
+Install the package for development
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-7. **Automated Dependency Updates**  
-   - ``.github/dependabot.yml`` configured for weekly checks and PRs.
+.. code-block:: bash
 
-*Feel free to adapt any naming conventions or tooling versions to fit your project needs.*  
+   git clone https://github.com/TieuLongPhan/SynRFP.git
+   cd SynRFP
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -e ".[dev]"
+
+This installs SynRFP in editable mode so local edits are immediately importable.
+
+Quick sanity checks
+------------------
+
+Check the installed version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+   python -c "import importlib.metadata as m; print(m.version('synrfp'))"
+
+Core concepts & where to find them
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- The convenience wrapper `synrfp(...)` converts an RSMI string to a binary bit vector; see the top-level implementation. :contentReference[oaicite:1]{index=1}  
+- The `SynRFP` engine composes a tokenizer with either an unweighted sketcher (e.g., `ParityFold`, `MinHashSketch`) or a weighted sketcher (e.g., `CWSketch`). See the ParityFold and sketcher implementations.   
+- Reactions are parsed into lightweight `GraphData` containers and `Reaction` objects; these helpers are used by `SynRFP` for robust graph construction. 
+
+Minimal examples
+~~~~~~~~~~~~~~~~
+
+1) Verify a single reaction fingerprint (one-liner)
+
+.. code-block:: python
+
+   from synrfp.synrfp import synrfp
+
+   bits = synrfp(
+       "CCO>>C=C.O",
+       tokenizer="wl",     # "wl" or "nauty"
+       radius=1,
+       sketch="parity",    # "parity", "minhash", or "cw"
+       bits=1024,
+       seed=42,
+   )
+   print(len(bits), bits[:16])  # -> 1024, [0,1,0,0,...]  (binary vector)
+   # synrfp(...) convenience wrapper implemented in synrfp.py. 
+
+2) Build an engine programmatically (tokenizer + sketcher)
+
+.. code-block:: python
+
+   from synrfp.tokenizers.wl import WLTokenizer
+   from synrfp.sketchers.parity_fold import ParityFold
+   from synrfp.synrfp import SynRFP, build_graph_from_printout, tanimoto_bits
+
+   # Tokenizer and sketcher classes (examples)
+   tok = WLTokenizer()
+   sk = ParityFold(bits=1024, seed=0)
+
+   # Create a SynRFP engine
+   fp_engine = SynRFP(tokenizer=tok, radius=1, sketch=sk)
+   # fp_engine.fingerprint(...) expects GraphData instances. GraphData helpers live in graph_data.py. 
+
+3) Encode a batch of reactions (parallel-friendly)
+
+.. code-block:: python
+
+   from synrfp.encoder import SynRFPEncoder
+
+   rxn_smiles = ["CCO>>C=C.O", "CO>>CO2"]
+   fps = SynRFPEncoder.encode(
+       rxn_smiles,
+       tokenizer="wl",
+       radius=1,
+       sketch="parity",
+       bits=1024,
+       seed=0,
+   )
+   print(fps.shape)  # (2, 1024)  
+
+For more extensive examples and tutorials, visit the
+:ref:`tutorials-and-examples` section.
