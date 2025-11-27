@@ -8,15 +8,15 @@ from importlib.metadata import version as _get_version, PackageNotFoundError
 sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
-project = "synrfp"
-author = "Van-Thinh To"
+project = "synrxn"
+author = "Tieu-Long Phan"
 
 
 try:
-    release = _get_version("synrfp")
+    release = _get_version("synrxn")
 except PackageNotFoundError:
     try:
-        release = m.version("synrfp")
+        release = m.version("synrxn")
     except (ImportError, AttributeError):
         # Fallback default
         release = "0.0.1"
@@ -33,7 +33,7 @@ extensions = [
 ]
 
 bibtex_bibfiles = ["refs.bib"]
-templates_path = ["_synrfp"]
+templates_path = ["_templates"]
 exclude_patterns = []
 autosectionlabel_prefix_document = True
 

@@ -1,5 +1,12 @@
 ## SynRFP — Graph-based, mapping-free reaction fingerprints
 
+[![PyPI version](https://img.shields.io/pypi/v/synrfp.svg)](https://pypi.org/project/synrfp/)
+[![Release](https://img.shields.io/github/v/release/tieulongphan/synrfp.svg)](https://github.com/tieulongphan/synrfp/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/tieulongphan/synrfp.svg)](https://github.com/tieulongphan/synrfp/commits)
+[![ZENODO](https://zenodo.org/badge/1032455620.svg)](https://doi.org/10.5281/zenodo.17563778)
+[![CI](https://github.com/tieulongphan/synrfp/actions/workflows/test-and-lint.yml/badge.svg?branch=main)](https://github.com/tieulongphan/synrfp/actions/workflows/test-and-lint.yml)
+[![Stars](https://img.shields.io/github/stars/tieulongphan/synrfp.svg?style=social&label=Star)](https://github.com/tieulongphan/synrfp/stargazers)
+
 **SynRFP** (Synthesis Reaction FingerPrint) is a **mapping-free**, permutation-invariant framework for representing chemical transformations as fixed-length fingerprints.  
 It explicitly factorises the fingerprint pipeline into three modular operators:
 
@@ -8,7 +15,7 @@ It explicitly factorises the fingerprint pipeline into three modular operators:
 - **𝒮 (sketcher)** — randomized compression of (Δ,U) into a fixed-dimensional fingerprint **f ∈ 𝓕**.
 
 
-![SynRFP Workflow](https://raw.githubusercontent.com/TieuLongPhan/SynRFP/main/doc/figure/synrxn.png)
+![SynRFP Workflow](https://raw.githubusercontent.com/TieuLongPhan/SynRFP/main/doc/figure/synrfp.png)
 
 ---
 
