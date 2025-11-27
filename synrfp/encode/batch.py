@@ -44,8 +44,6 @@ class BatchEncoder:
     :type node_attrs: Sequence[str] | None
     :param edge_attrs: Optional edge attribute names passed to tokenizers.
     :type edge_attrs: Sequence[str] | None
-    :param require_pynauty: Whether to require pynauty for the 'nauty' tokenizer.
-    :type require_pynauty: bool
     :param n_jobs: Number of jobs for parallel encoding (1 = serial).
     :type n_jobs: int
     :param batch_size: Maximum number of reactions per batch. If None, no chunking.
@@ -79,7 +77,6 @@ class BatchEncoder:
         mode: str = "delta",
         node_attrs: Optional[Sequence[str]] = None,
         edge_attrs: Optional[Sequence[str]] = None,
-        require_pynauty: bool = False,
         *,
         n_jobs: int = 1,
         batch_size: Optional[int] = None,
@@ -110,7 +107,6 @@ class BatchEncoder:
         self.mode = mode
         self.node_attrs = list(node_attrs) if node_attrs is not None else None
         self.edge_attrs = list(edge_attrs) if edge_attrs is not None else None
-        self.require_pynauty = bool(require_pynauty)
 
         self.n_jobs = int(n_jobs)
         self.batch_size = batch_size
@@ -151,7 +147,6 @@ class BatchEncoder:
             mode=self.mode,
             node_attrs=self.node_attrs,
             edge_attrs=self.edge_attrs,
-            require_pynauty=self.require_pynauty,
         )
 
     def _encode_chunk(self, rsmi_list: Sequence[str]) -> List[List[int]]:
@@ -244,7 +239,6 @@ class BatchEncoder:
         mode: str = "delta",
         node_attrs: Optional[Sequence[str]] = None,
         edge_attrs: Optional[Sequence[str]] = None,
-        require_pynauty: bool = False,
         batch_size: Optional[int] = None,
     ) -> np.ndarray:
         """
@@ -270,8 +264,6 @@ class BatchEncoder:
         :type node_attrs: Sequence[str] | None
         :param edge_attrs: Edge attribute names for tokenizer.
         :type edge_attrs: Sequence[str] | None
-        :param require_pynauty: Require pynauty for 'nauty' tokenizer.
-        :type require_pynauty: bool
         :param batch_size: Maximum chunk size for encode_many.
         :type batch_size: int | None
         :returns: 2D numpy array of fingerprints.
@@ -290,7 +282,6 @@ class BatchEncoder:
             mode=mode,
             node_attrs=node_attrs,
             edge_attrs=edge_attrs,
-            require_pynauty=require_pynauty,
             n_jobs=1,
             batch_size=batch_size,
         )
