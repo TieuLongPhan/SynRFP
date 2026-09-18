@@ -1,0 +1,15 @@
+# Separate environment for RXNFP (pins old transformers/torch).
+#   conda env create -f environment.yml && conda activate rxnfp
+name: rxnfp
+channels: [conda-forge, pytorch]
+dependencies:
+  - python=3.8
+  - rdkit
+  - pytorch
+  - pip
+  - pip:
+      - rxnfp
+      - pandas
+      - numpy
+      - pyyaml
+      - scikit-learn

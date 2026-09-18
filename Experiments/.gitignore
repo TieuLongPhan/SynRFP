@@ -1,0 +1,7 @@
+# caches (tables, splits, features, fine-tuned models) are rebuilt by the scripts
+work/
+# the curated mechanism mapping is provided by the authors
+# (data/mech_level1_map.csv is intentionally NOT ignored)
+**/__pycache__/
+*.tmp
+*.tmp.npz

@@ -1,0 +1,131 @@
+# SynRFP experiment configuration.
+# All relative paths are resolved against this file's directory (Experiments/).
+
+paths:
+  synrxn_data: ../../SynRXN/Data                      # SynRXN repository Data/ folder
+  mech_raw: ../../SynRXN/Data/raw/mechfinder/mech-USPTO-31k.csv
+  mech_level1_map: data/mech_level1_map.csv            # REQUIRED for mech_1; see data/*.DRAFT.csv
+  work: work                                           # shared caches: tables, splits, features
+# Each experiment writes to its own folder: Experiments/<NN_name>/results/
+
+n_jobs: 16          # parallel workers for tokenization / sketching
+fp_seed: 1          # hash seed of the SynRFP sketches (fixed; not a replicate seed)
+
+# ---------------------------------------------------------------------------
+# Datasets. `split: published` uses the SynRXN split column (train/test) and
+# carves a stratified validation set from train. `split: random` builds 8:1:1
+# stratified splits. `hierarchy` lists coarse -> fine label columns of the
+# same reactions (used by clustering / retrieval granularity analyses).
+# `pair` links unbalanced/balanced versions of the same records by r_id.
+# ---------------------------------------------------------------------------
+datasets:
+  schneider_ub: {file: classification/schneider_u.csv.gz, label: label, split: published, pair: schneider, role: UB}
+  schneider_b:  {file: classification/schneider_b.csv.gz, label: label, split: published, pair: schneider, role: B}
+  tpl_ub:       {file: classification/tpl_u.csv.gz,       label: label, split: published, pair: tpl, role: UB}
+  tpl_b:        {file: classification/tpl_b.csv.gz,       label: label, split: published, pair: tpl, role: B}
+  uspto50k_ub:  {file: classification/uspto_50k_u.csv.gz, label: label, split: published, pair: uspto50k, role: UB}
+  uspto50k_b:   {file: classification/uspto_50k_b.csv.gz, label: label, split: published, pair: uspto50k, role: B}
+  syntemp_r0:   {file: classification/syntemp.csv.gz,     label: label_0, split: random, hierarchy: [label_0, label_1, label_2]}
+  ecreact_1:    {file: classification/ecreact.csv.gz,     label: ec1, split: published, hierarchy: [ec1, ec2, ec3]}
+  ecreact_2:    {file: classification/ecreact.csv.gz,     label: ec2, split: published, hierarchy: [ec1, ec2, ec3]}
+  ecreact_3:    {file: classification/ecreact.csv.gz,     label: ec3, split: published, hierarchy: [ec1, ec2, ec3]}
+  mech_1:       {source: mech, label: level1, split: random, hierarchy: [level1, level2]}
+  mech_2:       {source: mech, label: level2, split: random, hierarchy: [level1, level2]}
+
+mech:
+  reaction_column: original_reactions   # patent reaction; `updated_reaction` adds mechanistic reagents
+  mapped_column: updated_reaction       # atom-mapped, used by 08_reaction_center.py
+
+splits:
+  min_class_count: 10      # classes with fewer records are removed before splitting (logged)
+  val_fraction: 0.1        # of the training part, stratified
+  random_ratio: [0.8, 0.1, 0.1]
+  grouped_folds: 10        # StratifiedGroupKFold: fold s -> test, fold s+1 -> val
+  replicate_seeds: [0, 1, 2, 3, 4]
+
+# ---------------------------------------------------------------------------
+# Fingerprints
+# ---------------------------------------------------------------------------
+synrfp:
+  node_attrs: [element, aromatic, charge, hcount]
+  edge_attrs: [order]
+  agents: both
+  bbit: 2
+  default: {tokenizer: wl, radius: 2, bits: 1024, sketch: parity, mode: delta}
+  grid:                                # full crossed factorial: 3*3*3*3*2 = 162
+    tokenizer: [wl, morgan, path]
+    radius: [1, 2, 3]
+    bits: [512, 1024, 2048]
+    sketch: [parity, minhash, cw]
+    mode: [delta, union]
+
+baselines:
+  drfp: {n_folded_length: 2048, radius: 3, rings: true}
+  rdkit_struct: {}          # CreateStructuralFingerprintForReaction (4096 bits)
+  rdkit_diff: {}            # CreateDifferenceFingerprintForReaction (2048 signed counts)
+  rxnfp_pretrained: {external: true}   # produced by external/rxnfp_embed.py
+  rxnfp_ft: {external: true}           # produced by external/rxnfp_finetune.py (per dataset/split)
+
+# ---------------------------------------------------------------------------
+# Studies
+# ---------------------------------------------------------------------------
+benchmark:                 # SynRFP default vs baselines
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp_pretrained, rxnfp_ft]
+  models: [knn, linear, mlp]
+  schemes: [published, random, grouped]
+
+factorial:                 # 162 SynRFP configurations
+  datasets: [schneider_ub, schneider_b, uspto50k_ub, uspto50k_b, syntemp_r0, ecreact_1, ecreact_3, mech_1, mech_2, tpl_b]
+  max_records: 50000       # larger datasets are stratified-subsampled (fixed seed) for this study
+  models: [knn, linear, mlp]
+  schemes: [random]
+  seeds: [0, 1, 2]
+  seeds_per_model: {mlp: [0]}   # the MLP dominates the cost; one seed unless raised here
+
+models:
+  knn: {k: 5}              # Tanimoto for bit vectors, cosine for real-valued features
+  linear: {alpha: 1.0e-5, max_iter: 30}      # SGD logistic regression (linear probe)
+  mlp: {hidden: [512], alpha: 1.0e-4, max_iter: 200, batch_size: 256}
+  xgb: {n_estimators: 500, learning_rate: 0.1, max_depth: 6, early_stopping_rounds: 20, max_classes: 200}
+
+clustering:
+  datasets: [schneider_ub, schneider_b, uspto50k_ub, uspto50k_b, syntemp_r0, mech_1, mech_2]
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rxnfp_pretrained]
+  kmeans: {n_init: 10}
+  bitbirch:                # k-free; binary fingerprints only
+    thresholds: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90]
+    branching_factor: 50
+    merge_criterion: diameter
+  hdbscan:                 # k-free; any fingerprint (on PCA-reduced features)
+    min_cluster_size: [5, 10, 25, 50]
+    pca_dim: 50
+  calibration_dataset: uspto50k_b   # threshold chosen here (by AMI) and frozen for all others
+
+retrieval:
+  datasets: [schneider_b, uspto50k_b, syntemp_r0, ecreact_3, mech_2]
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp_pretrained]
+  k: [1, 5, 10]
+  scheme: published_or_random   # published split if available, else random seed 0
+
+robustness:
+  pair_fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp_pretrained]
+  transfer_models: [knn, mlp]
+  perturbation_datasets: [schneider_b, uspto50k_b, ecreact_1, mech_2]
+  perturbation_sample: 2000
+  perturbation_fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff]
+  resolution_datasets: [schneider_b, uspto50k_b, syntemp_r0, ecreact_3, mech_2]
+  resolution_fingerprints:
+    - synrfp-wl-r2-b512-parity-delta
+    - synrfp-wl-r2-b1024-parity-delta
+    - synrfp-wl-r2-b2048-parity-delta
+    - synrfp-wl-r2-b1024-minhash-delta
+    - synrfp-wl-r2-b1024-cw-delta
+    - synrfp-wl-r2-b1024-parity-union
+    - synrfp-wl-r3-b1024-parity-delta
+    - drfp
+    - rdkit_struct
+
+reaction_center:
+  radius: 3
+  sample: null            # null = all mapped mechanistic reactions
+  top_tokens_per_class: 5
