@@ -1,4 +1,3 @@
-# /mnt/data/graph_data.py
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -42,7 +41,7 @@ class Molecule:
 
         :param nodes: Node attribute mapping.
         :param edges: Edge attribute mapping (may have u>v).
-        :returns: Initialized Molecule.
+        :return: Initialized Molecule.
         """
         normalized_edges: Dict[Edge, Dict] = {}
         for (u, v), attr in edges.items():
@@ -56,7 +55,7 @@ class Molecule:
         Construct Molecule from a NetworkX Graph.
 
         :param G: NetworkX graph with node and edge attributes.
-        :returns: Initialized Molecule.
+        :return: Initialized Molecule.
         """
         nodes = {n: dict(G.nodes[n]) for n in G.nodes}
         edges: Dict[Edge, Dict] = {}
@@ -69,7 +68,7 @@ class Molecule:
         """
         Convert this Molecule back to a NetworkX Graph.
 
-        :returns: networkx.Graph with the same nodes/edges/attributes.
+        :return: networkx.Graph with the same nodes/edges/attributes.
         """
         G = nx.Graph()
         for n, attr in self.nodes.items():
@@ -82,7 +81,7 @@ class Molecule:
         """
         Shallow copy of the molecule (attributes dicts are copied, not deep).
 
-        :returns: New Molecule with copied node/edge mappings.
+        :return: New Molecule with copied node/edge mappings.
         """
         return Molecule.from_dicts(self.nodes, self.edges)
 
@@ -94,7 +93,7 @@ class Molecule:
         """
         Lazily compute and cache adjacency list.
 
-        :returns: Mapping from node id to sorted neighbor list.
+        :return: Mapping from node id to sorted neighbor list.
         """
         if self._adj is None:
             A: Dict[NodeId, List[NodeId]] = defaultdict(list)
@@ -109,7 +108,7 @@ class Molecule:
         Get degree of node v.
 
         :param v: Node identifier.
-        :returns: Degree count.
+        :return: Degree count.
         """
         return len(self.adj.get(v, []))
 
@@ -119,7 +118,7 @@ class Molecule:
 
         :param u: First node.
         :param v: Second node.
-        :returns: Edge attributes.
+        :return: Edge attributes.
         :raises KeyError: If edge not present.
         """
         a, b = (u, v) if u < v else (v, u)
@@ -147,9 +146,5 @@ class Molecule:
         return f"Molecule(nodes={len(self.nodes)}, edges={len(self.edges)})"
 
 
-# ----------------------------------------------------------------------
-# Backwards compatibility: GraphData is now just an alias for Molecule.
-# All existing imports `from synrfp.graph.graph_data import GraphData`
-# continue to work.
-# ----------------------------------------------------------------------
+# Backwards-compatible alias; ``synrfp.graph.graph_data`` re-exports it.
 GraphData = Molecule

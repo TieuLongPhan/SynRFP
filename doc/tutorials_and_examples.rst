@@ -1,169 +1,270 @@
 .. _tutorials-and-examples:
 
+======================
 Tutorials and Examples
 ======================
 
-This page collects practical, copy-and-paste examples showing how to:
+This page provides practical, copy-and-paste Python examples demonstrating the full capabilities of **SynRFP**:
 
-- compute and inspect **SynRFP** fingerprints for single reactions,
-- explore tokenizer tokens and Δ (delta / support) statistics,
-- encode reaction lists in batch (CPU-friendly),
-- persist fingerprints to disk (NumPy / Parquet) for ML,
-- run a tiny supervised baseline (scikit-learn) using SynRFP bits,
-- compare sketchers (ParityFold, MinHash, CWSketch) and compute similarities.
+1. :ref:`single-reaction-and-inspection`
+2. :ref:`reaction-directionality-and-antisymmetry`
+3. :ref:`comparing-sketchers-and-similarities`
+4. :ref:`fast-parameter-sweeps-from-tokens`
+5. :ref:`high-throughput-batch-encoding`
+6. :ref:`persisting-fingerprints`
+7. :ref:`supervised-classification-with-mlp`
+8. :ref:`unsupervised-reaction-clustering`
 
-If you have not installed **SynRFP** yet, see :doc:`Getting Started <getting_started>`.
+.. _single-reaction-and-inspection:
 
+1. Single Reaction Encoding & Token Inspection
+==============================================
 
-Single reaction — token + fingerprint
-------------------------------------
+Decompose a chemical transformation into reactant and product token multisets,
+compute the signed net change $\Delta = C_H - C_G$, and generate a binary fingerprint:
 
-This example shows the common, low-level flow: parse reaction SMILES, create graph objects,
-tokenize, aggregate Δ (net change), and sketch.
+.. code-block:: python
+
+   from synrfp import SynRFP
+   from synrfp.graph.reaction import Reaction
+   from synrfp.tokenizers.wl import WLTokenizer
+   from synrfp.sketchers.parity_fold import ParityFold
+
+   # 1) Parse reaction SMILES
+   rxn = Reaction.from_rsmi("CCO>>C=C.O")
+
+   # 2) Set up tokenizer (radius 2 Weisfeiler-Lehman) and sketcher (1024-bit ParityFold)
+   tokenizer = WLTokenizer()
+   sketcher = ParityFold(bits=1024, seed=42)
+   engine = SynRFP(tokenizer=tokenizer, radius=2, sketch=sketcher)
+
+   # 3) Compute fingerprint result
+   result = engine.fingerprint(rxn.reactant, rxn.product, mode="delta")
+
+   # 4) Inspect extracted chemical features
+   print(f"Reactant motifs: {len(result.tokens_R)} unique tokens")
+   print(f"Product motifs:  {len(result.tokens_P)} unique tokens")
+   print(f"Non-zero delta motifs: {len(result.delta)} (formed + consumed)")
+
+   # Show the first 5 signed delta counts: positive = formed, negative = consumed
+   for motif_id, change in list(result.delta.items())[:5]:
+       role = "formed" if change > 0 else "consumed"
+       print(f"  Motif {motif_id}: {role} ({change:+d})")
+
+   # 5) Convert to binary bit-vector (list of 0/1 integers)
+   bits = result.to_binary()
+   print(f"Fingerprint bits: {len(bits)}, set bits: {sum(bits)}")
+
+.. _reaction-directionality-and-antisymmetry:
+
+2. Reaction Directionality & Antisymmetry
+=========================================
+
+The signed delta $\Delta = C_H - C_G$ is strictly antisymmetric under reaction reversal:
+$\Delta(H \to G) = -\Delta(G \to H)$. Conversely, the total abundance $U = C_H + C_G$ is symmetric.
+
+.. code-block:: python
+
+   from synrfp import synrfp, tanimoto_bits
+
+   forward_rxn = "CCO>>C=C.O"
+   reverse_rxn = "C=C.O>>CCO"
+
+   # In delta mode, forward and reverse reactions have distinct fingerprints
+   fp_fwd_delta = synrfp(forward_rxn, mode="delta", bits=1024)
+   fp_rev_delta = synrfp(reverse_rxn, mode="delta", bits=1024)
+   print("Tanimoto (forward vs reverse, delta):", tanimoto_bits(fp_fwd_delta, fp_rev_delta))
+
+   # In union mode, fragment identities are pooled regardless of side
+   fp_fwd_union = synrfp(forward_rxn, mode="union", bits=1024)
+   fp_rev_union = synrfp(reverse_rxn, mode="union", bits=1024)
+   print("Tanimoto (forward vs reverse, union):", tanimoto_bits(fp_fwd_union, fp_rev_union))
+   # In union mode, the two representations are identical (Tanimoto = 1.0)
+
+.. _comparing-sketchers-and-similarities:
+
+3. Comparing Sketchers & Computing Similarities
+===============================================
+
+SynRFP provides four sketch cores targeting distinct similarity semantics:
+
+- **ParityFold**: Fast XOR parity compression into compact bitvectors.
+- **MinHashSketch**: Minwise hashing estimating unweighted Jaccard set similarity.
+- **CWSketch**: Consistent Weighted Sampling estimating count-aware weighted Jaccard similarity.
+- **SRPSketch**: Signed Random Projection estimating cosine similarity.
+
+.. code-block:: python
+
+   from synrfp import synrfp, tanimoto_bits
+
+   rxn_a = "CCO>>C=C.O"
+   rxn_b = "CCCO>>CC=C.O"
+
+   # 1) ParityFold (binary XOR hashing)
+   fp_p_a = synrfp(rxn_a, sketch="parity", bits=1024)
+   fp_p_b = synrfp(rxn_b, sketch="parity", bits=1024)
+   print("ParityFold Tanimoto:", tanimoto_bits(fp_p_a, fp_p_b))
+
+   # 2) b-bit MinHash (unweighted Jaccard approximation)
+   fp_mh_a = synrfp(rxn_a, sketch="minhash", bits=1024)
+   fp_mh_b = synrfp(rxn_b, sketch="minhash", bits=1024)
+   print("MinHash Tanimoto:   ", tanimoto_bits(fp_mh_a, fp_mh_b))
+
+   # 3) Consistent Weighted Sampling (weighted Jaccard, count-aware)
+   fp_cw_a = synrfp(rxn_a, sketch="cw", bits=1024)
+   fp_cw_b = synrfp(rxn_b, sketch="cw", bits=1024)
+   print("CWS Tanimoto:       ", tanimoto_bits(fp_cw_a, fp_cw_b))
+
+.. _fast-parameter-sweeps-from-tokens:
+
+4. Rapid Parameter Sweeps with Precomputed Tokens
+=================================================
+
+When tuning sketch parameters (sketch type, bit length, seed), re-tokenizing molecular graphs
+is redundant. Use :func:`~synrfp.encode.core.fingerprint_from_tokens` to bypass graph parsing:
 
 .. code-block:: python
 
    from synrfp.graph.reaction import Reaction
    from synrfp.tokenizers.wl import WLTokenizer
-   from synrfp.sketchers.parity_fold import ParityFold
-   from synrfp.synrfp import SynRFP
+   from synrfp.encode.core import fingerprint_from_tokens
 
-   # 1) parse RSMI -> GraphData pair (reactant_graph, product_graph)
-   reactant_G, product_G = Reaction.from_rsmi("CCO>>C=C.O")
+   # 1) Tokenize once
+   rxn = Reaction.from_rsmi("CCO>>C=C.O")
+   tok = WLTokenizer()
+   tokens_R = tok.tokens_graph(rxn.reactant, radius=2)
+   tokens_P = tok.tokens_graph(rxn.product, radius=2)
 
-   # 2) instantiate tokenizer + sketcher
-   tokenizer = WLTokenizer()                 # WL-style subtree tokens
-   sketcher = ParityFold(bits=1024, seed=42) # XOR parity fold to 1024 bits
+   # 2) Sweep sketchers or bit lengths instantly
+   fp_512  = fingerprint_from_tokens(tokens_R, tokens_P, sketch="parity", bits=512)
+   fp_1024 = fingerprint_from_tokens(tokens_R, tokens_P, sketch="parity", bits=1024)
+   fp_cw   = fingerprint_from_tokens(tokens_R, tokens_P, sketch="cw", bits=1024)
 
-   # 3) build engine (composes tokenizer + sketcher)
-   engine = SynRFP(tokenizer=tokenizer, radius=1, sketch=sketcher)
+   print(f"fp_512 shape: {fp_512.shape}, fp_1024 shape: {fp_1024.shape}")
 
-   # 4) compute fingerprint result (object contains tokens, Δ, and sketch)
-   result = engine.fingerprint(reactant_G, product_G)
+.. _high-throughput-batch-encoding:
 
-   # Print a human-friendly summary
-   print(result)          # e.g., tokens_R=..., tokens_P=..., support=..., sketch_type=...
-   bits = result.to_binary()   # list/array of 0/1 for downstream use
-   print("bits length:", len(bits), "sample:", bits[:16])
+5. High-Throughput Batch Encoding
+=================================
 
-Inspect tokenizer tokens and Δ (deltas)
---------------------------------------
-
-Often you want to inspect local tokens and the signed delta U (counts) to validate the representation.
-
-.. code-block:: python
-
-   # Token extraction (tokenizer API: tokens_graph or equivalent)
-   # NOTE: API name may vary by version; common pattern: tokenizer.tokens_graph(graph)
-   toks_R = tokenizer.tokens_graph(reactant_G, radius=1)
-   toks_P = tokenizer.tokens_graph(product_G, radius=1)
-   print("Reactant tokens (sample):", list(toks_R)[:20])
-   print("Product tokens (sample):",  list(toks_P)[:20])
-
-   # If your SynRFP engine exposes a delta / support view:
-   # The exact attribute names differ by release; typical pattern:
-   print("Delta (signed counts):", result.delta)   # token -> integer (neg/pos)
-   print("Total support (unique tokens):", result.support)
-
-   # If method names differ, inspect result.__dict__ or repr(result) to find fields.
-
-Batch encoding
---------------
-
-Encode many reactions in one call. Use the BatchEncoder convenience helper for throughput and batching.
+Use :class:`~synrfp.encode.batch.BatchEncoder` for processing large reaction collections
+with multi-core CPU parallelization:
 
 .. code-block:: python
 
    from synrfp import BatchEncoder
 
-   rxn_smiles = [
+   reactions = [
        "CCO>>C=C.O",
+       "CC(=O)O.OCC>>CC(=O)OCC.O",
        "CO.O[C@@H]1CCNC1.[C-]#[N+]CC(=O)OC>>[C-]#[N+]CC(=O)N1CC[C@@H](O)C1",
-       # ...
+       "CCOC(=O)C(CC)c1cccnc1.Cl.O>>CCC(C(=O)O)c1cccnc1",
    ]
 
-   fps = BatchEncoder.encode(
-       rxn_smiles,
-       tokenizer="wl",      # accepts string aliases: "wl", "nauty", ...
-       radius=1,
-       sketch="parity",     # "parity", "minhash", "cw"
+   # Configure batch encoder with joblib parallelization
+   encoder = BatchEncoder(
+       tokenizer="wl",
+       radius=2,
+       sketch="parity",
        bits=1024,
-       seed=42,
-       batch_size=64,       # tune to your RAM/CPU
-       n_jobs=4,            # if BatchEncoder supports parallel backends
+       mode="delta",
+       n_jobs=4,          # number of parallel workers
+       batch_size=2,      # chunk size for streaming execution
    )
 
-   # fps is a (N, B) NumPy array or list-of-lists depending on version
-   import numpy as np
-   fps = np.asarray(fps)
-   print("fingerprints shape:", fps.shape)
+   fps = encoder.encode_many(reactions)
+   print("Encoded matrix shape:", fps.shape)  # (4, 1024)
 
-Persisting fingerprints
------------------------
+.. _persisting-fingerprints:
 
-Save fingerprints and metadata for reuse (NumPy + Pandas / Parquet recommended).
+6. Persisting Fingerprints to Disk
+==================================
 
-.. code-block:: python
-
-   import numpy as np
-   import pandas as pd
-
-   # fps: (N, B) binary array, meta: list of rxn smiles
-   np.save("fps.npy", fps)  # fast binary dump
-   np.savez_compressed("fps_compressed.npz", fps=fps)
-
-   # for ML: save in Parquet with metadata (index aligned)
-   meta = pd.DataFrame({"rxn": rxn_smiles, "label": labels})  # if supervised
-   df_bits = pd.DataFrame(fps.astype(int), index=meta.index)
-   output = pd.concat([meta, df_bits.add_prefix("b_")], axis=1)
-   output.to_parquet("fps_table.parquet")
-
-Quick ML baseline: RandomForest classifier
------------------------------------------
-
-A minimal pipeline: encode, train/test split, train a RandomForest and evaluate.
+Save generated fingerprints for reproducible ML workflows using NumPy or Pandas/Parquet:
 
 .. code-block:: python
 
    import numpy as np
    import pandas as pd
-   from sklearn.ensemble import RandomForestClassifier
+
+   # 1) Fast binary NumPy dump
+   np.save("reaction_fps.npy", fps)
+   np.savez_compressed("reaction_fps.npz", fps=fps)
+
+   # 2) Tabular format with metadata via Parquet
+   metadata = pd.DataFrame({"reaction_smiles": reactions})
+   df_fps = pd.DataFrame(fps, columns=[f"bit_{i}" for i in range(fps.shape[1])])
+   df_combined = pd.concat([metadata, df_fps], axis=1)
+   df_combined.to_parquet("reactions_with_fps.parquet", index=False)
+
+.. _supervised-classification-with-mlp:
+
+7. Supervised Classification (MLP Baseline)
+===========================================
+
+In the SynRFP publication :cite:`phan2025synrfp`, a lightweight Multilayer Perceptron (MLP)
+with one hidden layer of 512 units achieved state-of-the-art results (mean MCC = 0.953)
+across 12 benchmarks. Here is a minimal implementation:
+
+.. code-block:: python
+
+   import numpy as np
+   from sklearn.neural_network import MLPClassifier
    from sklearn.model_selection import train_test_split
-   from sklearn.metrics import matthews_corrcoef, f1_score
+   from sklearn.metrics import matthews_corrcoef, classification_report
+   from synrfp import BatchEncoder
 
-   # assume fps (N,B) and labels (N,)
-   X_train, X_test, y_train, y_test = train_test_split(fps, labels, test_size=0.2, random_state=0, stratify=labels)
+   # Sample reaction dataset (replace with actual SMILES and labels)
+   rxn_data = [
+       "CCO>>C=C.O",
+       "CCCO>>CC=C.O",
+       "CC(=O)O.OCC>>CC(=O)OCC.O",
+       "CCC(=O)O.OCC>>CCC(=O)OCC.O",
+   ]
+   labels = [0, 0, 1, 1]
 
-   clf = RandomForestClassifier(n_estimators=200, n_jobs=-1, random_state=0)
+   # 1) Encode reactions to SynRFP bitvectors
+   X = BatchEncoder.encode(rxn_data, tokenizer="wl", radius=2, bits=1024)
+   y = np.array(labels)
+
+   # 2) Train / test split
+   X_train, X_test, y_train, y_test = train_test_split(
+       X, y, test_size=0.5, random_state=42
+   )
+
+   # 3) Initialize and fit MLP classifier
+   clf = MLPClassifier(
+       hidden_layer_sizes=(512,),
+       activation="relu",
+       max_iter=200,
+       random_state=42,
+       early_stopping=True,
+   )
    clf.fit(X_train, y_train)
 
+   # 4) Evaluate
    y_pred = clf.predict(X_test)
-   print("MCC:", matthews_corrcoef(y_test, y_pred))
-   print("F1 (weighted):", f1_score(y_test, y_pred, average="weighted"))
+   print("Validation MCC:", matthews_corrcoef(y_test, y_pred))
 
-Comparing sketchers and computing similarity
--------------------------------------------
+.. _unsupervised-reaction-clustering:
 
-You may want to compare different sketchers (binary parity vs MinHash vs weighted CWSketch) or compute similarity (Tanimoto/Jaccard for bits).
+8. Unsupervised Reaction Clustering ($k$-Means)
+===============================================
+
+SynRFP fingerprints induce an effective geometry for unsupervised clustering
+without requiring pre-trained transformers or supervised labels:
 
 .. code-block:: python
 
-   import numpy as np
+   from sklearn.cluster import KMeans
+   from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 
-   def tanimoto(a: np.ndarray, b: np.ndarray) -> float:
-       # expects binary 0/1 arrays
-       a = a.astype(bool)
-       b = b.astype(bool)
-       inter = np.logical_and(a, b).sum()
-       union = np.logical_or(a, b).sum()
-       return float(inter) / union if union > 0 else 0.0
+   # Cluster fingerprints into k groups
+   kmeans = KMeans(n_clusters=2, random_state=42, n_init=10)
+   cluster_labels = kmeans.fit_predict(X)
 
-   # Example: compute pairwise similarity for first 10 fps
-   sims = np.zeros((10, 10))
-   for i in range(10):
-       for j in range(10):
-           sims[i, j] = tanimoto(fps[i], fps[j])
-   print(sims[:3, :3])
-
-   # To compare sketchers: create engines with different sketch classes and encode the same reactions;
-   # then compute pairwise correlations between resulting representations (e.g. cosine on MinHash int vectors).
+   # Evaluate cluster agreement against ground truth
+   ari = adjusted_rand_score(labels, cluster_labels)
+   nmi = normalized_mutual_info_score(labels, cluster_labels)
+   print(f"Adjusted Rand Index (ARI): {ari:.3f}")
+   print(f"Normalized Mutual Info (NMI): {nmi:.3f}")

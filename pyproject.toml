@@ -5,26 +5,51 @@ build-backend = "hatchling.build"
 [project]
 name = "synrfp"
 version = "0.0.3"
-authors = [
-    {name="Tieu Long Phan", email="tieu@bioinf.uni-leipzig.de"}
-]
-description = "Reaction fingerprint"
+description = "Mapping-free, graph-based reaction fingerprints"
 readme = "README.md"
-long-description = {file = "CHANGELOG.md"}
-long-description-content-type = "text/markdown"
 requires-python = ">=3.11"
+license = { text = "MIT" }
+license-files = ["LICENSE"]
+authors = [
+  { name = "Tieu Long Phan", email = "tieu@bioinf.uni-leipzig.de" },
+]
+keywords = [
+  "cheminformatics",
+  "reaction fingerprint",
+  "graph sketching",
+  "Weisfeiler-Lehman",
+  "MinHash",
+]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Chemistry",
 ]
 dependencies = [
-    "synkit>=1.0.1",
-    "datasketch>=1.6.5",
+  "synkit>=1.6.2",
+  "numpy>=2.2.0",
+  "networkx>=3.3",
+  "pandas>=1.5.3",
+  "datasketch>=1.6.5",
 ]
 
 [project.optional-dependencies]
-all = ["numpy>=2.2.0", "pandas>=1.5.3"]
+parallel = ["joblib>=1.3"]
+all = ["joblib>=1.3"]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov",
+  "flake8>=7.0",
+  "black>=24.0",
+  "build",
+  "twine",
+]
 docs = [
   "sphinx>=6.0",
   "sphinx-rtd-theme",
@@ -32,7 +57,35 @@ docs = [
 ]
 
 [project.urls]
-homepage = "https://github.com/TieuLongPhan/synrfp"
-source = "https://github.com/TieuLongPhan/synrfp"
-issues = "https://github.com/TieuLongPhan/synrfp/issues"
+homepage = "https://github.com/TieuLongPhan/SynRFP"
+source = "https://github.com/TieuLongPhan/SynRFP"
+issues = "https://github.com/TieuLongPhan/SynRFP/issues"
 documentation = "https://synrfp.readthedocs.io/en/latest/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["synrfp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/synrfp",
+  "/tests",
+  "/LICENSE",
+  "/README.md",
+  "/pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["synrfp"]
+
+[tool.coverage.report]
+precision = 1
+show_missing = true
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+extend-exclude = "Experiments/work"

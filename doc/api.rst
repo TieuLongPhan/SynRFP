@@ -4,213 +4,211 @@ API Reference
 =============
 
 This page provides an overview of the public Python API exposed by
-:mod:`synrfp`. It focuses on:
+:mod:`synrfp`. It is structured according to the core framework architecture:
 
-- core fingerprint builders in :mod:`synrfp`,
-- graph containers and reaction helpers in :mod:`synrfp.graph`,
-- tokenization backends in :mod:`synrfp.tokenizers`,
-- sketching backends in :mod:`synrfp.sketchers`, and
-- batch encoding utilities in :mod:`synrfp.encoder`.
+- **Top-level API** in :mod:`synrfp` (convenience functions and common classes)
+- **Encoding & Pipeline Engine** in :mod:`synrfp.encode` (:class:`~synrfp.encode.engine.SynRFP`, :class:`~synrfp.encode.batch.BatchEncoder`, :func:`~synrfp.encode.core.fingerprint_from_tokens`)
+- **Graph & Reaction Containers** in :mod:`synrfp.graph` (:class:`~synrfp.graph.molecule.Molecule`, :class:`~synrfp.graph.reaction.Reaction`)
+- **Subgraph Tokenizers** in :mod:`synrfp.tokenizers` (WL, Morgan, Path, Nauty, MAP)
+- **Sketchers** in :mod:`synrfp.sketchers` (ParityFold, MinHash, CWS, SRP)
+- **Utilities & Metrics** in :mod:`synrfp.utils` (Tanimoto, MinHash Jaccard, bit conversions)
 
-If you are looking for high-level usage examples, see the README
-on GitHub or the :doc:`Getting Started <getting_started>` page.
-
--------------------------
+----------------------------
 Top-level API: :mod:`synrfp`
--------------------------
+----------------------------
 
-The :mod:`synrfp` module collects the main user-facing entry points:
-fingerprint engines, convenience wrappers, and similarity utilities.
+The top-level :mod:`synrfp` module collects primary user-facing entry points:
 
 .. automodule:: synrfp
    :members:
    :undoc-members:
    :show-inheritance:
 
-Key classes and functions
+Key Classes and Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autosummary::
-   :toctree: _autosummary
    :nosignatures:
 
-   synrfp.SynRFP
-   synrfp.SynRFPResult
-   synrfp.synrfp
-   synrfp.build_graph_from_printout
-   synrfp.tanimoto_bits
-   synrfp.jaccard_minhash
-   synrfp.SynRFPEncoder
+   synrfp
+   SynRFP
+   SynRFPResult
+   BatchEncoder
+   tanimoto_bits
+   jaccard_minhash
+   build_graph_from_printout
 
-Typical responsibilities of the top-level API include:
+---------------------------------------
+Encoding & Engine: :mod:`synrfp.encode`
+---------------------------------------
 
-- converting reaction SMILES (RSMI) directly into fixed-length fingerprints,
-- configuring a :class:`~synrfp.SynRFP` engine with a tokenizer and sketcher,
-- exposing similarity utilities for binary and MinHash sketches, and
-- providing a simple batch encoder for lists of reaction SMILES.
+The :mod:`synrfp.encode` subpackage coordinates the 3-stage pipeline:
+token extraction, algebraic combination, and sketching.
 
-------------------------------
-Graph utilities: :mod:`synrfp.graph`
-------------------------------
+Core Wrapper & Token Sweeps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :mod:`synrfp.graph` subpackage defines light-weight graph containers
-and helpers for representing reactions.
-
-.. automodule:: synrfp.graph.graph_data
+.. automodule:: synrfp.encode.core
    :members:
    :undoc-members:
    :show-inheritance:
+
+Batch Processing
+~~~~~~~~~~~~~~~~
+
+.. automodule:: synrfp.encode.batch
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Engine Composition
+~~~~~~~~~~~~~~~~~~
+
+.. automodule:: synrfp.encode.engine
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Result Container
+~~~~~~~~~~~~~~~~
+
+.. automodule:: synrfp.encode.result
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :no-index:
+
+-------------------------------------
+Graph Containers: :mod:`synrfp.graph`
+-------------------------------------
+
+The :mod:`synrfp.graph` subpackage defines lightweight graph representations
+for molecules and chemical transformations.
+
+Molecules & Graph Data
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: synrfp.graph.molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Chemical Reactions
+~~~~~~~~~~~~~~~~~~
 
 .. automodule:: synrfp.graph.reaction
    :members:
    :undoc-members:
    :show-inheritance:
 
-Key classes
-~~~~~~~~~~~
-
-.. autosummary::
-   :toctree: _autosummary
-   :nosignatures:
-
-   synrfp.graph.graph_data.GraphData
-   synrfp.graph.reaction.Reaction
-
-Typical responsibilities include:
-
-- representing labeled molecular graphs via :class:`~synrfp.graph.graph_data.GraphData`,
-- constructing :class:`~synrfp.graph.reaction.Reaction` objects from RSMI or
-  from existing :mod:`networkx` graphs, and
-- providing small convenience methods for introspection and tabular summaries.
-
---------------------------------
+------------------------------------
 Tokenizers: :mod:`synrfp.tokenizers`
---------------------------------
+------------------------------------
 
-Tokenizers map molecular graphs to multisets of integer tokens
-(e.g. WL subtree hashes). They are responsible for the graph → tokens stage.
+Tokenizers decompose molecular graphs into multisets of integer tokens representing
+local chemical environments.
+
+Base Tokenizer Interface
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: synrfp.tokenizers.base
    :members:
    :undoc-members:
    :show-inheritance:
 
+Weisfeiler–Lehman (WL) Tokenizer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. automodule:: synrfp.tokenizers.wl
    :members:
    :undoc-members:
    :show-inheritance:
+
+Morgan Circular Tokenizer
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: synrfp.tokenizers.morgan
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Path Tokenizer
+~~~~~~~~~~~~~~
+
+.. automodule:: synrfp.tokenizers.path
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Nauty Canonical Subgraph Tokenizer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: synrfp.tokenizers.nauty
    :members:
    :undoc-members:
    :show-inheritance:
 
+Tokenizer Utilities
+~~~~~~~~~~~~~~~~~~~
+
 .. automodule:: synrfp.tokenizers.utils
    :members:
    :undoc-members:
    :show-inheritance:
 
-Key classes and helpers
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. autosummary::
-   :toctree: _autosummary
-   :nosignatures:
-
-   synrfp.tokenizers.base.BaseTokenizer
-   synrfp.tokenizers.wl.WLTokenizer
-   synrfp.tokenizers.nauty.NautyTokenizer
-   synrfp.tokenizers.utils._h64
-   synrfp.tokenizers.utils.atom_label_tuple
-   synrfp.tokenizers.utils.bond_label_tuple
-
-Typical responsibilities include:
-
-- defining the abstract :class:`~synrfp.tokenizers.base.BaseTokenizer` interface,
-- providing concrete implementations such as
-  :class:`~synrfp.tokenizers.wl.WLTokenizer` and
-  :class:`~synrfp.tokenizers.nauty.NautyTokenizer`,
-- specifying which node/edge attributes participate in labels, and
-- offering hashing helpers used to turn label tuples into stable 64-bit tokens.
-
---------------------------------
+----------------------------------
 Sketchers: :mod:`synrfp.sketchers`
---------------------------------
+----------------------------------
 
-Sketchers compress (signed) token multisets into fixed-size
-fingerprints. They implement the Δ/U → sketch stage.
+Sketchers compress (signed) token summaries into compact, fixed-dimensional vectors.
+
+Base Sketcher Interfaces
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: synrfp.sketchers.base
    :members:
    :undoc-members:
    :show-inheritance:
 
+Parity Folding (XOR Hashing)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. automodule:: synrfp.sketchers.parity_fold
    :members:
    :undoc-members:
    :show-inheritance:
+
+MinHash Sketching
+~~~~~~~~~~~~~~~~~
 
 .. automodule:: synrfp.sketchers.minhash_sketch
    :members:
    :undoc-members:
    :show-inheritance:
 
+Consistent Weighted Sampling (CWS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. automodule:: synrfp.sketchers.cw_sketch
    :members:
    :undoc-members:
    :show-inheritance:
 
-Key classes
-~~~~~~~~~~~
+Signed Random Projection (SRP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. autosummary::
-   :toctree: _autosummary
-   :nosignatures:
-
-   synrfp.sketchers.base.BaseSketch
-   synrfp.sketchers.base.WeightedSketch
-   synrfp.sketchers.parity_fold.ParityFold
-   synrfp.sketchers.minhash_sketch.MinHashSketch
-   synrfp.sketchers.cw_sketch.CWSketch
-
-Typical responsibilities include:
-
-- defining unweighted and weighted sketcher interfaces
-  (:class:`~synrfp.sketchers.base.BaseSketch`,
-  :class:`~synrfp.sketchers.base.WeightedSketch`),
-- implementing binary parity-fold sketches
-  (:class:`~synrfp.sketchers.parity_fold.ParityFold`),
-- implementing MinHash-based sketches for Jaccard estimation
-  (:class:`~synrfp.sketchers.minhash_sketch.MinHashSketch`), and
-- implementing consistent weighted sampling for signed deltas
-  (:class:`~synrfp.sketchers.cw_sketch.CWSketch`).
-
-------------------------------------
-Batch encoding: :mod:`synrfp.encoder`
-------------------------------------
-
-The :mod:`synrfp.encoder` module provides a convenience wrapper for batch
-encoding lists of reaction SMILES into SynRFP fingerprints, with optional
-parallelization via :mod:`joblib`.
-
-.. automodule:: synrfp.encoder
+.. automodule:: synrfp.sketchers.srp_sketch
    :members:
    :undoc-members:
    :show-inheritance:
 
-Key class
-~~~~~~~~~
+------------------------------
+Utilities: :mod:`synrfp.utils`
+------------------------------
 
-.. autosummary::
-   :toctree: _autosummary
-   :nosignatures:
+Helper functions for signature folding, binary bit conversions, and distance/similarity metrics.
 
-   synrfp.encoder.SynRFPEncoder
-
-Typical responsibilities of :class:`~synrfp.encoder.SynRFPEncoder` include:
-
-- turning a list of RSMI strings into a 2D NumPy array of fingerprints,
-- exposing the same configuration knobs as :func:`synrfp.synrfp`
-  (tokenizer, radius, sketch type, bit length, seed), and
-- handling multi-process or multi-threaded execution transparently when
-  ``n_jobs > 1``.
+.. automodule:: synrfp.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

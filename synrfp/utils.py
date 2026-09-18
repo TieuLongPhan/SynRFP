@@ -30,7 +30,7 @@ def signature_to_bits(sig, n_bits: int, method: str = "bbit") -> List[int]:
     :type n_bits: int
     :param method: ``"bbit"`` or ``"mod"``.
     :type method: str
-    :returns: List of 0/1 bits of length ``n_bits``.
+    :return: List of 0/1 bits of length ``n_bits``.
     :rtype: List[int]
     :raises ValueError: If ``n_bits / len(sig)`` is not a power of two >= 2
         for ``method="bbit"``, or ``method`` is unknown.
@@ -68,10 +68,10 @@ def build_graph_from_printout(
     :type nodes: Dict[int, Dict]
     :param edges: Mapping from (u, v) edges (with u < v) to attribute dict.
     :type edges: Dict[tuple[int, int], Dict]
-    :returns: A fresh :class:`Molecule` instance.
+    :return: A fresh :class:`Molecule` instance.
     :rtype: Molecule
 
-    :example:
+    Example usage:
         >>> nodes = {0: {'element': 'C'}, 1: {'element': 'O'}}
         >>> edges = {(0, 1): {'order': 1.5}}
         >>> G = build_graph_from_printout(nodes, edges)
@@ -92,7 +92,7 @@ def tanimoto_bits(
     :type b1: bytearray or List[int] or numpy.ndarray
     :param b2: Second bit array.
     :type b2: bytearray or List[int] or numpy.ndarray
-    :returns: Intersection size divided by union size, or 0.0 if union is zero.
+    :return: Intersection size divided by union size, or 0.0 if union is zero.
     :rtype: float
     """
     a1 = np.asarray(b1, dtype=int)
@@ -112,7 +112,7 @@ def jaccard_minhash(h1: Union[list, tuple], h2: Union[list, tuple]) -> float:
     :type h1: list or tuple
     :param h2: Second MinHash sequence (must be same length).
     :type h2: list or tuple
-    :returns: Fraction of positions where ``h1[i] == h2[i]``.
+    :return: Fraction of positions where ``h1[i] == h2[i]``.
     :rtype: float
     """
     a1 = np.asarray(h1)
@@ -131,7 +131,7 @@ def sketch_to_binary(sketch: Union[bytearray, List[int], np.ndarray]) -> List[in
 
     :param sketch: Sketch to convert.
     :type sketch: bytearray or List[int] or numpy.ndarray
-    :returns: Binary bit-vector.
+    :return: Binary bit-vector.
     :rtype: List[int]
     :raises TypeError: If ``sketch`` is not a supported type or contains
                        non-binary values.
@@ -175,7 +175,7 @@ def sketch_to_array(sketch: object) -> np.ndarray:
 
     :param sketch: Sketch object (list/array/bytearray).
     :type sketch: object
-    :returns: 1D numpy array of ints.
+    :return: 1D numpy array of ints.
     :rtype: numpy.ndarray
     :raises TypeError: If ``sketch`` cannot be coerced to 1D.
     """

@@ -60,7 +60,7 @@ class SynRFPResult:
             SynRFPResult(tokens_R=10 tokens, tokens_P=8 tokens,
             support=3, mode='delta', sketch_type=bytearray)
 
-        :returns: Example usage string.
+        :return: Example usage string.
         :rtype: str
         """
         return (
@@ -77,7 +77,7 @@ class SynRFPResult:
         Only works for binary sketchers (e.g. ParityFold). For non-binary
         sketchers (MinHash, CWSketch, SRP) a :class:`TypeError` is raised.
 
-        :returns: Binary fingerprint as list of 0/1 bits.
+        :return: Binary fingerprint as list of 0/1 bits.
         :rtype: list[int]
         :raises TypeError: If the underlying sketch cannot be interpreted as bits.
         """
@@ -93,7 +93,7 @@ class SynRFPResult:
           - CWSketch: sample indices
           - SRPSketch: sign pattern (+1/-1)
 
-        :returns: 1D numpy array representation of the sketch.
+        :return: 1D numpy array representation of the sketch.
         :rtype: numpy.ndarray
         """
         return sketch_to_array(self.sketch)

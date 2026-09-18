@@ -4,7 +4,6 @@ from dataclasses import dataclass
 import networkx as nx
 import pandas as pd
 
-# from synrfp.graph.graph_data import Molecule
 from synrfp.graph.molecule import Molecule
 
 NodeId = int
@@ -42,7 +41,7 @@ class Reaction:
         :type rsmi: str
         :param agents: Agent placement, one of ``"both"``, ``"reactants"``, ``"drop"``.
         :type agents: str
-        :returns: Reaction with reactant and product Molecule.
+        :return: Reaction with reactant and product Molecule.
         :rtype: Reaction
         :raises ValueError: If the string is not a reaction SMILES or cannot be parsed.
         """
@@ -79,7 +78,7 @@ class Reaction:
         :type reactant_graph: nx.Graph
         :param product_graph: NetworkX Graph for product.
         :type product_graph: nx.Graph
-        :returns: Reaction instance.
+        :return: Reaction instance.
         :rtype: Reaction
         """
         return Reaction(
@@ -91,7 +90,7 @@ class Reaction:
         """
         Representation showing reactant and product sizes.
 
-        :returns: String repr.
+        :return: String repr.
         :rtype: str
         """
         return (
@@ -105,7 +104,7 @@ class Reaction:
         """
         Show usage examples for Reaction.
 
-        :returns: Usage guide.
+        :return: Usage guide.
         :rtype: str
         """
         return (
@@ -120,7 +119,7 @@ class Reaction:
         """
         Number of sides (reactant + product).
 
-        :returns: Always 2.
+        :return: Always 2.
         :rtype: int
         """
         return 2
@@ -129,7 +128,7 @@ class Reaction:
         """
         Iterate over reactant and product Molecule.
 
-        :returns: Iterator yielding reactant then product.
+        :return: Iterator yielding reactant then product.
         :rtype: Iterator[Molecule]
         """
         yield self.reactant
@@ -141,7 +140,7 @@ class Reaction:
 
         :param key: 0, 1, 'reactant', or 'product'.
         :type key: int or str
-        :returns: Corresponding Molecule.
+        :return: Corresponding Molecule.
         :rtype: Molecule
         :raises KeyError: If key invalid.
         """
@@ -155,7 +154,7 @@ class Reaction:
         """
         Summarize reaction graphs as a pandas DataFrame.
 
-        :returns: DataFrame with columns ['side','n_nodes','n_edges'].
+        :return: DataFrame with columns ['side','n_nodes','n_edges'].
         :rtype: pd.DataFrame
         """
         data = [

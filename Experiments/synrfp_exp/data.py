@@ -32,7 +32,61 @@ def rxn_key(cfg: Dict[str, Any], dataset: str) -> str:
     spec = cfg["datasets"][dataset]
     if spec.get("source") == "mech":
         return "mech"
-    return Path(spec["file"]).name.split(".")[0]
+    return spec["name"]
+
+
+def load_synrxn(cfg: Dict[str, Any], name: str, task: str = "classification") -> pd.DataFrame:
+    """One SynRXN dataset via the ``synrxn`` package (pinned release or local checkout)."""
+    from synrxn.data import DataLoader
+
+    sx = cfg["synrxn"]
+    if sx["source"] == "local":
+        dl = DataLoader(task=task, source="local", data_dir=cfg["paths"]["synrxn_local"])
+    else:
+        dl = DataLoader(task=task, source=sx["source"], version=sx["version"],
+                        cache_dir=cfg["paths"]["synrxn_cache"],
+                        force_record_id=sx.get("record_id"))
+    log.info("loading SynRXN %s/%s (%s %s)", task, name, sx["source"], sx.get("version", ""))
+    return dl.load(name)
+
+
+def _synrxn_stamp(cfg: Dict[str, Any]) -> Dict[str, str]:
+    sx = cfg["synrxn"]
+    if sx["source"] == "local":
+        return {"source": "local", "dir": str(cfg["paths"]["synrxn_local"])}
+    return {"source": str(sx["source"]), "version": str(sx["version"])}
+
+
+def check_data_source(cfg: Dict[str, Any]) -> None:
+    """
+    Refuse to reuse cached tables built from a different SynRXN source.
+
+    Every cache under ``work/`` (tables, splits, features, exports) is keyed by
+    name only. ``work/tables/SOURCE.json`` records the SynRXN source the
+    tables were built from; a mismatch, or SynRXN tables cached before the
+    stamp existed, raises instead of silently mixing data versions.
+
+    :raises RuntimeError: If the cached tables come from another source.
+    """
+    folder = cfg["paths"]["work"] / "tables"
+    stamp_path = folder / "SOURCE.json"
+    want = _synrxn_stamp(cfg)
+    if stamp_path.exists():
+        have = json.loads(stamp_path.read_text())
+    elif any(p.name != "rxn_mech.pkl" for p in folder.glob("rxn_*.pkl")):
+        have = {"source": "unknown (cached before SOURCE.json)"}
+    else:
+        folder.mkdir(parents=True, exist_ok=True)
+        stamp_path.write_text(json.dumps(want, indent=1))
+        return
+    if have != want:
+        work = cfg["paths"]["work"]
+        raise RuntimeError(
+            f"cached tables in {folder} were built from SynRXN {have}, but the "
+            f"config asks for {want}. Remove {work}/tables, {work}/splits, "
+            f"{work}/features and {work}/export (or point paths.work elsewhere) "
+            "and rerun 01_data/prepare_data.py."
+        )
 
 
 def _load_mech(cfg: Dict[str, Any]) -> pd.DataFrame:
@@ -61,18 +115,14 @@ def _load_mech(cfg: Dict[str, Any]) -> pd.DataFrame:
 
 def reaction_table(cfg: Dict[str, Any], key: str) -> pd.DataFrame:
     """All records of one source file, cached as a pickle under work/tables."""
+    check_data_source(cfg)
     cache = cfg["paths"]["work"] / "tables" / f"rxn_{key}.pkl"
     if cache.exists():
         return pd.read_pickle(cache)
     if key == "mech":
         df = _load_mech(cfg)
     else:
-        spec = next(
-            s
-            for s in cfg["datasets"].values()
-            if s.get("file") and Path(s["file"]).name.split(".")[0] == key
-        )
-        df = pd.read_csv(cfg["paths"]["synrxn_data"] / spec["file"])
+        df = load_synrxn(cfg, key)
         df["rxn"] = df["rxn"].astype(str)
     df = df.reset_index(drop=True)
     cache.parent.mkdir(parents=True, exist_ok=True)
@@ -88,6 +138,7 @@ def dataset_table(cfg: Dict[str, Any], dataset: str) -> pd.DataFrame:
     (0..K-1), ``label`` (original), the hierarchy columns, and
     ``split_published`` when the source provides a split.
     """
+    check_data_source(cfg)
     cache = cfg["paths"]["work"] / "tables" / f"ds_{dataset}.pkl"
     if cache.exists():
         return pd.read_pickle(cache)
@@ -170,3 +221,26 @@ def canonical_for(cfg: Dict[str, Any], dataset: str) -> np.ndarray:
         np.save(cache, np.asarray(can, dtype=object), allow_pickle=True)
     rows = dataset_table(cfg, dataset)["row"].to_numpy()
     return np.load(cache, allow_pickle=True)[rows]
+
+
+def export_reactions(cfg: Dict[str, Any], key: str, rsmis) -> None:
+    """Plain CSV of a reaction table's reactions, for tools in other environments."""
+    out = cfg["paths"]["work"] / "export" / f"rxn_{key}.csv.gz"
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame({"rxn": list(rsmis)}).to_csv(out, index=False)
+
+
+def export_table(cfg: Dict[str, Any], dataset: str, ds: pd.DataFrame) -> None:
+    """
+    Plain CSV copies of a dataset table and its reaction table (work/export/).
+
+    The RXNFP environment runs an older Python/numpy that cannot read the
+    pickles written here, so it only reads these CSV files and the ``.npy``
+    split codes.
+    """
+    key = rxn_key(cfg, dataset)
+    export_reactions(cfg, key, reaction_table(cfg, key)["rxn"])
+    out = cfg["paths"]["work"] / "export" / f"ds_{dataset}.csv.gz"
+    if not out.exists():
+        ds[["row", "r_id", "rxn", "y"]].to_csv(out, index=False)

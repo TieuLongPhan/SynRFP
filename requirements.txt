@@ -1,8 +1,8 @@
-synkit>=1.0.1
+# Runtime dependencies of the synrfp package (mirrors pyproject.toml).
+# Development tools: pip install -e ".[dev]"
+# Experiment suite: conda env create -f Experiments/environment.yml
+synkit>=1.6.2
+numpy>=2.2.0
+networkx>=3.3
+pandas>=1.5.3
 datasketch>=1.6.5
-# Development dependencies
-pytest
-black
-flake8
-# benchmarking dependencies
-synrxn>=0.0.7

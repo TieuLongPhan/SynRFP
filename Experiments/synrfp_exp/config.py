@@ -29,6 +29,7 @@ def load_config(path: str | Path | None = None) -> Dict[str, Any]:
     cfg = yaml.safe_load(path.read_text())
     base = path.resolve().parent
     cfg["paths"] = {k: (base / v).resolve() for k, v in cfg["paths"].items()}
+    cfg["paths"]["synrxn_local"] = (base / cfg["synrxn"]["local_dir"]).resolve()
     cfg["paths"]["work"].mkdir(parents=True, exist_ok=True)
     global _RESULTS_ROOT
     _RESULTS_ROOT = cfg["paths"].get("results_root", EXP_DIR)

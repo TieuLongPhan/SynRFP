@@ -51,7 +51,7 @@ class ParityFold(BaseSketch):
 
         :param support: Iterable of integer tokens.
         :type support: Iterable[int]
-        :returns: Binary sketch of length ``bits`` (dtype ``uint8``).
+        :return: Binary sketch of length ``bits`` (dtype ``uint8``).
         :rtype: numpy.ndarray
         """
         counts = self._as_counter(support)
@@ -79,7 +79,7 @@ class ParityFold(BaseSketch):
 
         :param token: Integer token as passed to :meth:`build`.
         :type token: int
-        :returns: Bit position in ``[0, bits)``.
+        :return: Bit position in ``[0, bits)``.
         :rtype: int
         """
         return _h64(("pf", int(token)), seed=self.seed) % self.bits
@@ -89,7 +89,7 @@ class ParityFold(BaseSketch):
         """
         Return a brief usage example for :class:`ParityFold`.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (

@@ -35,7 +35,7 @@ class WLTokenizer(BaseTokenizer):
       (:func:`networkx.algorithms.graph_hashing.weisfeiler_lehman_subgraph_hashes`),
       enabled via ``use_nx=True``.
 
-    :example:
+    Example usage:
         >>> tok = WLTokenizer(node_attrs=['element'], edge_attrs=['order'])
         >>> isinstance(tok, WLTokenizer)
         True
@@ -90,7 +90,7 @@ class WLTokenizer(BaseTokenizer):
         """
         Return a usage example for the :class:`WLTokenizer`.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (
@@ -123,7 +123,7 @@ class WLTokenizer(BaseTokenizer):
             only the initial atom-level subtree labels; higher values add
             increasingly larger neighbourhoods.
         :type radius: int
-        :returns: Counter mapping integer subtree-hash tokens to their
+        :return: Counter mapping integer subtree-hash tokens to their
             multiplicities.
         :rtype: collections.Counter
         :raises ValueError: If ``radius`` is negative.
@@ -167,7 +167,7 @@ class WLTokenizer(BaseTokenizer):
         :type G: Molecule
         :param radius: Number of WL iterations (>=0).
         :type radius: int
-        :returns: Counter of integer subtree tokens.
+        :return: Counter of integer subtree tokens.
         :rtype: collections.Counter
         """
         # k = 0: initial node labels (atomic labels)
@@ -205,7 +205,7 @@ class WLTokenizer(BaseTokenizer):
         :type G: Molecule
         :param radius: Number of WL iterations (>= 0).
         :type radius: int
-        :returns: Mapping token -> list of ``(root vertex, iteration)``.
+        :return: Mapping token -> list of ``(root vertex, iteration)``.
         :rtype: Dict[int, List[Tuple[NodeId, int]]]
         """
         if not isinstance(radius, int) or radius < 0:
@@ -243,7 +243,7 @@ class WLTokenizer(BaseTokenizer):
         :type G: Molecule
         :param radius: Number of WL iterations (>=0).
         :type radius: int
-        :returns: Counter of integer subtree tokens derived from NetworkX WL.
+        :return: Counter of integer subtree tokens derived from NetworkX WL.
         :rtype: collections.Counter
         """
         if not _HAVE_NX_WL:

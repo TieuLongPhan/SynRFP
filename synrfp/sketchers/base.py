@@ -17,8 +17,8 @@ class BaseSketch(ABC):
     :type seed: int
     :raises ValueError: If ``seed`` is negative or not an integer.
 
-    Example
-    -------
+    Example usage:
+
     >>> class Dummy(BaseSketch):
     ...     def build(self, support): return Counter(support)
     ...
@@ -39,7 +39,7 @@ class BaseSketch(ABC):
 
         :param support: Iterable of integer-encoded features (can repeat).
         :type support: Iterable[int]
-        :returns: Sketch object (type depends on subclass).
+        :return: Sketch object (type depends on subclass).
         :rtype: Any
         """
         raise NotImplementedError
@@ -57,7 +57,7 @@ class BaseSketch(ABC):
 
         :param support: Iterable of tokens.
         :type support: Iterable[int]
-        :returns: Token multiplicities.
+        :return: Token multiplicities.
         :rtype: Counter
         """
         return Counter(int(x) for x in support)
@@ -87,8 +87,8 @@ class WeightedSketch(ABC):
     :type normalize: bool
     :raises ValueError: If parameters are invalid.
 
-    Example
-    -------
+    Example usage:
+
     >>> class Echo(WeightedSketch):
     ...     def build(self, pos, neg): return self.dicts_to_dense(pos, neg)[0]
     ...
@@ -118,7 +118,7 @@ class WeightedSketch(ABC):
 
         :param normalize: True to enable L1 normalization.
         :type normalize: bool
-        :returns: self
+        :return: self
         :rtype: WeightedSketch
         """
         self._normalize = bool(normalize)
@@ -130,7 +130,7 @@ class WeightedSketch(ABC):
 
         :param dtype: NumPy dtype (e.g., np.float32, np.float64).
         :type dtype: numpy.dtype
-        :returns: self
+        :return: self
         :rtype: WeightedSketch
         """
         self._dtype = np.dtype(dtype)
@@ -146,7 +146,7 @@ class WeightedSketch(ABC):
         :type pos: Mapping[int, int]
         :param neg: Mapping token -> non-negative count.
         :type neg: Mapping[int, int]
-        :returns: Implementation-defined sketch object.
+        :return: Implementation-defined sketch object.
         :rtype: Any
         """
         raise NotImplementedError
@@ -180,7 +180,7 @@ class WeightedSketch(ABC):
 
         :param maps: One or more maps token->count.
         :type maps: Mapping[int,int]
-        :returns: token->index mapping sorted by token id.
+        :return: token->index mapping sorted by token id.
         :rtype: Dict[int,int]
         """
         vocab = set()
@@ -208,7 +208,7 @@ class WeightedSketch(ABC):
         :param ensure_signed: If True return (n,) signed array (pos-neg); else
                               return (2,n) with [pos, neg] channels.
         :type ensure_signed: bool
-        :returns: (array, index_map).
+        :return: (array, index_map).
         :rtype: Tuple[numpy.ndarray, Dict[int,int]]
         """
         self.validate_pos_neg(pos, neg)
@@ -249,7 +249,7 @@ class WeightedSketch(ABC):
 
         :param vec: Signed vector.
         :type vec: numpy.ndarray
-        :returns: (pos, neg) arrays, both >= 0.
+        :return: (pos, neg) arrays, both >= 0.
         :rtype: Tuple[numpy.ndarray, numpy.ndarray]
         """
         v = np.asarray(vec)
@@ -267,7 +267,7 @@ class WeightedSketch(ABC):
         :type vec_a: numpy.ndarray
         :param vec_b: Signed vector B.
         :type vec_b: numpy.ndarray
-        :returns: Similarity in [0,1].
+        :return: Similarity in [0,1].
         :rtype: float
         """
         a = np.asarray(vec_a)
@@ -289,7 +289,7 @@ class WeightedSketch(ABC):
         :type vec_a: numpy.ndarray
         :param vec_b: Vector B.
         :type vec_b: numpy.ndarray
-        :returns: Cosine in [-1,1].
+        :return: Cosine in [-1,1].
         :rtype: float
         """
         a = np.asarray(vec_a, dtype=float)
@@ -322,7 +322,7 @@ class WeightedSketch(ABC):
         :type neg_b: Mapping[int,int]
         :param index_map: Optional shared index map.
         :type index_map: Optional[Dict[int,int]]
-        :returns: {"weighted_jaccard": float, "cosine": float}
+        :return: {"weighted_jaccard": float, "cosine": float}
         :rtype: Dict[str,float]
         """
         if index_map is None:
@@ -343,7 +343,7 @@ class WeightedSketch(ABC):
         """
         Return the last token→index map computed by :meth:`dicts_to_dense`.
 
-        :returns: Shallow copy of index map or None.
+        :return: Shallow copy of index map or None.
         :rtype: Optional[Dict[int,int]]
         """
         return dict(self._last_index_map) if self._last_index_map is not None else None
@@ -352,7 +352,7 @@ class WeightedSketch(ABC):
         """
         Short usage snippet for subclasses.
 
-        :returns: Example text.
+        :return: Example text.
         :rtype: str
         """
         return (

@@ -10,6 +10,7 @@ from synrfp.tokenizers.wl import WLTokenizer
 from synrfp.tokenizers.nauty import NautyTokenizer
 from synrfp.tokenizers.morgan import MorganTokenizer
 from synrfp.tokenizers.path import PathTokenizer
+from synrfp.tokenizers.map import MAPTokenizer
 from synrfp.sketchers.parity_fold import ParityFold
 from synrfp.sketchers.minhash_sketch import MinHashSketch
 from synrfp.sketchers.cw_sketch import CWSketch
@@ -40,78 +41,60 @@ def synrfp(
 
     Internally:
 
-    - A tokenizer (WL, Nauty, Morgan, Path) converts each side into multiset
-      tokens.
+    - A tokenizer (WL, Nauty, Morgan, Path, MAP) converts each side into
+      multiset tokens.
     - Depending on ``mode``, either token *delta* (P−R) or *union* (R+P)
       is computed.
     - A sketcher (parity, minhash, cw, srp) converts the token set/weights into
       a fixed-size sketch.
     - The sketch is finally mapped into a binary vector of length ``bits``.
 
-    Parameters
-    ----------
-    rsmi : str
-        Reaction SMILES, e.g. ``"CCO>>C=C.O"``.
-    tokenizer : str, default "wl"
-        Which tokenizer to use:
-
-        - ``"wl"``     : Weisfeiler–Lehman style tokenizer.
-        - ``"nauty"``  : Nauty-based canonical labeling tokenizer.
-        - ``"morgan"`` : Morgan/ECFP-style neighborhood tokenizer.
-        - ``"path"``   : simple path-based tokenizer.
-
-    radius : int, default 2
-        Neighborhood radius for the tokenizer (ignored by some tokenizers if
-        not applicable).
-    sketch : str, default "parity"
-        Which sketcher to use:
-
-        - ``"parity"``  : parity-folding into a binary vector.
-        - ``"minhash"`` : MinHash signature, then mapped to bits.
-        - ``"cw"``      : count-weighted sketch, then mapped to bits.
-        - ``"srp"``     : signed random projection sketch (cosine-oriented).
-
-    bits : int, default 1024
-        Length of the final binary fingerprint.
-        For ``sketch="parity"``, this is the internal bit-length of
-        :class:`ParityFold`. For ``"minhash"``, ``"cw"`` and ``"srp"``, it
-        controls the final bin count used by :func:`signature_to_bits`.
-
-    m : int or None, default None
-        Number of samples for MinHash or CWSketch. ``None`` sets
+    :param rsmi: Reaction SMILES, e.g. ``"CCO>>C=C.O"``.
+    :type rsmi: str
+    :param tokenizer: ``"wl"`` (Weisfeiler–Lehman), ``"nauty"`` (canonical
+        ego-subgraph labels), ``"morgan"`` (ECFP-style neighbourhoods),
+        ``"path"`` (bond paths) or ``"map"``.
+    :type tokenizer: str
+    :param radius: Neighbourhood radius for the tokenizer (ignored where not
+        applicable).
+    :type radius: int
+    :param sketch: ``"parity"`` (parity folding), ``"minhash"`` (MinHash),
+        ``"cw"`` (consistent weighted sampling) or ``"srp"`` (signed random
+        projection, cosine-oriented).
+    :type sketch: str
+    :param bits: Length of the final binary fingerprint. For ``"parity"`` it
+        is the internal length of :class:`ParityFold`; for the other sketches it
+        is the bin count used by :func:`signature_to_bits`.
+    :type bits: int
+    :param m: Number of MinHash/CWS samples. ``None`` sets
         ``m = bits // 2**bbit`` so that the b-bit encoding fills exactly
         ``bits`` positions. SRP always uses ``m = bits`` (one sign per bit).
-    seed : int, default 1
-        Random seed for reproducibility.
-    mode : {"delta", "union"}, default "delta"
-        Token combination mode:
-
-        - ``"delta"`` : signed difference P−R.
-        - ``"union"`` : union of tokens appearing on either side.
-
-    node_attrs : Sequence[str] or None, optional
-        Node attribute names passed to the tokenizer (e.g. ``["element"]``).
-    edge_attrs : Sequence[str] or None, optional
-        Edge attribute names passed to the tokenizer (e.g. ``["order"]``).
-    bbit : int, default 2
-        Bits per signature sample for the b-bit encoding of MinHash/CWS.
-    fold : {"bbit", "mod"}, default "bbit"
-        Signature-to-bits mapping; ``"mod"`` reproduces the legacy behaviour.
-    agents : {"both", "reactants", "drop"}, default "both"
-        Placement of agents in ``reactants>agents>products``; see
+    :type m: Optional[int]
+    :param seed: Hash seed of the sketch.
+    :type seed: int
+    :param mode: ``"delta"`` (signed difference P−R) or ``"union"`` (tokens
+        of either side).
+    :type mode: str
+    :param node_attrs: Node attribute names passed to the tokenizer
+        (e.g. ``["element"]``).
+    :type node_attrs: Optional[Sequence[str]]
+    :param edge_attrs: Edge attribute names passed to the tokenizer
+        (e.g. ``["order"]``).
+    :type edge_attrs: Optional[Sequence[str]]
+    :param bbit: Bits per signature sample for the b-bit encoding of
+        MinHash/CWS.
+    :type bbit: int
+    :param fold: Signature-to-bits mapping, ``"bbit"`` or ``"mod"`` (legacy).
+    :type fold: str
+    :param agents: Placement of agents in ``reactants>agents>products``:
+        ``"both"``, ``"reactants"`` or ``"drop"``; see
         :meth:`synrfp.graph.reaction.Reaction.from_rsmi`.
-
-    Returns
-    -------
-    list[int]
-        Fingerprint as a list of 0/1 bits of length ``bits``.
-
-    Raises
-    ------
-    ValueError
-        On invalid ``tokenizer``, ``sketch``, or ``mode`` names.
-    RuntimeError
-        If required dependencies (e.g. ``pynauty`` or ``datasketch``) are missing.
+    :type agents: str
+    :return: Fingerprint as a list of 0/1 bits of length ``bits``.
+    :rtype: List[int]
+    :raises ValueError: On invalid ``tokenizer``, ``sketch`` or ``mode`` names.
+    :raises RuntimeError: If an optional dependency (e.g. ``datasketch``) is
+        missing.
     """
     # 1) Parse tokenizer
     tok_lower = tokenizer.lower()
@@ -126,10 +109,12 @@ def synrfp(
         tok = MorganTokenizer(node_attrs=node_attrs, edge_attrs=edge_attrs)
     elif tok_lower == "path":
         tok = PathTokenizer(node_attrs=node_attrs, edge_attrs=edge_attrs)
+    elif tok_lower == "map":
+        tok = MAPTokenizer(node_attrs=node_attrs, edge_attrs=edge_attrs)
     else:
         raise ValueError(
             f"Unknown tokenizer: {tokenizer!r} "
-            "(choose 'wl', 'nauty', 'morgan', or 'path')"
+            "(choose 'wl', 'nauty', 'morgan', 'path' or 'map')"
         )
 
     # 2) Parse sketcher
@@ -181,7 +166,7 @@ def fingerprint_from_tokens(
 
     :param tokens_R: Reactant-side token counts (``collections.Counter``).
     :param tokens_P: Product-side token counts (``collections.Counter``).
-    :returns: ``uint8`` array of length ``bits``.
+    :return: ``uint8`` array of length ``bits``.
     :rtype: numpy.ndarray
     """
     sk, weighted, m = _make_sketcher(sketch, bits, m, seed, bbit)

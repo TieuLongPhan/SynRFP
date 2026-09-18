@@ -1,9 +1,15 @@
 #!/usr/bin/env python
-"""Pretrained RXNFP embeddings (256-d) for every reaction table.
+"""Pretrained RXNFP embeddings (256-d) for every exported reaction table.
 
-Run in the `rxnfp` environment after 01_data/prepare_data.py:
+Run in the `rxnfp` environment after 01_data/prepare_data.py (and, for the
+enzyme-activity study, after 10_enzyme_activity/activity.py --export):
     python external/rxnfp/rxnfp_embed.py [--config ...] [--datasets ...]
 Writes work/features/<rxn_key>/rxnfp_pretrained.npz (rows = reaction table).
+
+The encoder weights ship inside the `rxnfp` wheel (see README.md). `--model`
+selects one of them: `bert_ft` (default; the published RXNFP fingerprint,
+fine-tuned on Pistachio reaction classes) or `bert_pretrained` (masked-LM
+pre-training only, no class labels).
 """
 import argparse
 
@@ -11,7 +17,8 @@ import numpy as np
 from rxnfp.transformer_fingerprints import (RXNBERTFingerprintGenerator,
                                             get_default_model_and_tokenizer)
 
-from common import load_config, reaction_table, rxn_key, rxnfp_input, save_features
+from common import (load_config, reaction_keys, reaction_table, rxn_key, rxnfp_input,
+                    save_features)
 
 
 def main():
@@ -19,15 +26,18 @@ def main():
     ap.add_argument("--config")
     ap.add_argument("--datasets", nargs="*")
     ap.add_argument("--batch", type=int, default=256)
+    ap.add_argument("--model", default="bert_ft", choices=["bert_ft", "bert_pretrained"],
+                    help="encoder shipped with the rxnfp package")
     args = ap.parse_args()
     cfg = load_config(args.config)
-    model, tokenizer = get_default_model_and_tokenizer()
+    model, tokenizer = get_default_model_and_tokenizer(model=args.model)
+    print(f"RXNFP encoder: {args.model}")
     gen = RXNBERTFingerprintGenerator(model, tokenizer)
-    done = set()
-    for ds in args.datasets or list(cfg["datasets"]):
-        key = rxn_key(cfg, ds)
+    keys = ([rxn_key(cfg, d) for d in args.datasets] if args.datasets
+            else reaction_keys(cfg))
+    for key in dict.fromkeys(keys):
         out = cfg["paths"]["work"] / "features" / key / "rxnfp_pretrained.npz"
-        if key in done or out.exists():
+        if out.exists():
             continue
         rsmis = [rxnfp_input(s) for s in reaction_table(cfg, key)["rxn"]]
         X = np.zeros((len(rsmis), 256), dtype=np.float32)
@@ -45,7 +55,6 @@ def main():
                     except Exception:
                         pass
         save_features(out, X, ok)
-        done.add(key)
         print(f"{key}: {ok.sum()}/{len(ok)} embedded -> {out}")
 
 

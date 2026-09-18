@@ -1,0 +1,21 @@
+# Main experiment environment: SynRFP (this checkout) + SynRXN data + DRFP/RDKit
+# baselines + analysis. RXNFP needs its own environment (external/rxnfp/).
+#   conda env create -f Experiments/environment.yml
+#   conda activate synrfp-bench && pip install -e .     # from the repository root
+name: synrfp-bench
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - synrxn==1.2.1
+      - drfp==0.3.7
+      - bblean
+      - scikit-learn>=1.7
+      - statsmodels
+      - scikit-posthocs
+      - xgboost
+      - matplotlib
+      - pyyaml
+      - joblib
+      - pytest

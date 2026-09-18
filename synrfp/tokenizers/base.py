@@ -17,8 +17,8 @@ class BaseTokenizer(ABC):
     :param edge_attrs: Edge attribute keys to include in labels.
     :type edge_attrs: Optional[Sequence[str]]
 
-    Example
-    -------
+    Example usage:
+
     >>> class Dummy(BaseTokenizer):
     ...     def tokens_graph(self, G, radius): return Counter({0: len(G.nodes)})
     ...
@@ -51,7 +51,7 @@ class BaseTokenizer(ABC):
         :type G: Molecule
         :param radius: Non-negative neighborhood radius.
         :type radius: int
-        :returns: Multiset of tokens (hashed neighborhood labels).
+        :return: Multiset of tokens (hashed neighborhood labels).
         :rtype: Counter
         """
         if not isinstance(G, Molecule):
@@ -68,7 +68,7 @@ class BaseTokenizer(ABC):
         :type graphs: Sequence[Molecule]
         :param radius: Non-negative neighborhood radius.
         :type radius: int
-        :returns: Combined multiset of tokens for all graphs.
+        :return: Combined multiset of tokens for all graphs.
         :rtype: Counter
         """
         if not isinstance(graphs, Sequence):
@@ -91,7 +91,7 @@ class BaseTokenizer(ABC):
         """
         Return a generic usage example for tokenizers.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (

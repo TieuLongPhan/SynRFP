@@ -69,6 +69,7 @@ class NautyCanonicalizer:
         permutation, automorphisms, orbits, and early-stop flag.
 
         The algorithm:
+
         - Build initial partition from node_attrs (or single cell if none)
         - Repeatedly refine partition by node signatures until stable
         - If partition refined to singletons, build label and update best
@@ -327,7 +328,7 @@ class NautyTokenizer(BaseTokenizer):
     :param edge_attrs: list of edge attribute keys to include for edge distinctions.
     :type edge_attrs: list[str] | None
     :param max_cache: maximum number of ego-canonicalizations cached
-    (simple LRU via dict).
+        (simple LRU via dict).
     :type max_cache: int
     """
 
@@ -426,7 +427,7 @@ class NautyTokenizer(BaseTokenizer):
         :type G: Molecule
         :param radius: maximum radius (inclusive) for ego-subgraphs.
         :type radius: int
-        :returns: Counter mapping canonical integer tokens to counts.
+        :return: Counter mapping canonical integer tokens to counts.
         :rtype: collections.Counter
         """
         super().tokens_graph(G, radius)

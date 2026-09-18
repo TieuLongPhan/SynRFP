@@ -62,7 +62,7 @@ class SRPSketch(WeightedSketch):
         :type pos: Mapping[int,int]
         :param neg: Negative token counts (magnitudes).
         :type neg: Mapping[int,int]
-        :returns: ``int8`` array of +1/-1 of length ``m``; all +1 when empty.
+        :return: ``int8`` array of +1/-1 of length ``m``; all +1 when empty.
         :rtype: numpy.ndarray
         """
         self.validate_pos_neg(pos, neg)
@@ -99,7 +99,7 @@ class SRPSketch(WeightedSketch):
         """
         Return usage example for SRPSketch.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (
@@ -110,19 +110,25 @@ class SRPSketch(WeightedSketch):
 
     @staticmethod
     def approx_cosine_from_sketch(a: np.ndarray, b: np.ndarray) -> float:
-        """
+        r"""
         Approximate cosine similarity from two SRP sketches.
 
-        For SRP sign sketches s_a, s_b in {-1,+1}:
+        For SRP sign sketches ``s_a``, ``s_b`` in ``{-1, +1}``:
 
-            E[ sign(Rx) == sign(Ry) ] = 1 - arccos(sim(x,y))/pi
-        and a simple unbiased estimator for cosine(sim) is:
+        .. math::
 
-            cos_est ≈ 2 * mean(s_a == s_b) - 1
+           \mathbb{E}[\operatorname{sign}(Rx) == \operatorname{sign}(Ry)]
+           = 1 - \frac{\arccos(\operatorname{sim}(x, y))}{\pi}
+
+        An estimator for cosine similarity is:
+
+        .. math::
+
+           \cos_{\text{est}} \approx 2 \cdot \operatorname{mean}(s_a == s_b) - 1
 
         :param a: SRP sketch (np.ndarray of int8, +/-1).
         :param b: SRP sketch (same shape as a).
-        :returns: Estimated cosine similarity in [-1, 1].
+        :return: Estimated cosine similarity in [-1, 1].
         :rtype: float
         """
         if a.shape != b.shape:

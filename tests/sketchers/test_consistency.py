@@ -1,5 +1,6 @@
 # tests/sketchers/test_consistency.py
 """Cross-reaction consistency of the weighted sketches and bit encodings."""
+
 import unittest
 
 import numpy as np

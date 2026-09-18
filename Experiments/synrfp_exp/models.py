@@ -31,7 +31,7 @@ def similarity_topk(
     :param D: Database matrix.
     :param k: Number of neighbours.
     :param tanimoto: Tanimoto (bits) if True, else cosine.
-    :returns: ``(idx, sim)`` arrays of shape ``(len(Q), k)``, most similar first.
+    :return: ``(idx, sim)`` arrays of shape ``(len(Q), k)``, most similar first.
     """
     Q = np.ascontiguousarray(Q, dtype=np.float32)
     D = np.ascontiguousarray(D, dtype=np.float32)

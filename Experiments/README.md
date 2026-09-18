@@ -26,8 +26,13 @@ pip install -e ..                      # this SynRFP checkout (corrected sketche
 pip install bblean drfp statsmodels scikit-posthocs xgboost
 ```
 
-Data are read from a SynRXN checkout (`paths.synrxn_data` in `config.yaml`,
-default `../../SynRXN/Data`).
+SynRXN data are loaded with the `synrxn` package (`synrxn` section of
+`config.yaml`): by default the pinned Zenodo release (v1.2.1, cached under
+`work/synrxn_cache`), or a local checkout with `source: local`
+(`local_dir`, default `../../SynRXN/Data`). The mechanism table still comes
+from `paths.mech_raw`. Cached tables record their source in
+`work/tables/SOURCE.json`; after changing the source or version, clear
+`work/tables`, `work/splits`, `work/features` and `work/export`.
 
 **Required before running `mech_1`:** provide the curated 9-class mechanism
 grouping as `data/mech_level1_map.csv` (columns `mechanistic_class,level1`).

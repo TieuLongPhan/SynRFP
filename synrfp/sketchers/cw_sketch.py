@@ -76,7 +76,7 @@ class CWSketch(WeightedSketch):
         :type pos: Mapping[int,int]
         :param neg: Negative token counts (magnitudes).
         :type neg: Mapping[int,int]
-        :returns: ``uint64`` array of length ``m``; all zeros for an empty input.
+        :return: ``uint64`` array of length ``m``; all zeros for an empty input.
         :rtype: numpy.ndarray
         """
         keys, w = self._lifted_weights(pos, neg)
@@ -108,7 +108,7 @@ class CWSketch(WeightedSketch):
         """
         Return a brief usage example for :class:`CWSketch`.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (

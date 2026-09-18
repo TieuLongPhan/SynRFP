@@ -53,7 +53,7 @@ class BatchEncoder:
     :param backend: joblib backend (e.g. 'loky', 'threading').
     :type backend: str
 
-    :example:
+    Example usage:
 
     >>> from synrfp.encode.batch import BatchEncoder
     >>> enc = BatchEncoder(tokenizer='wl', sketch='parity', bits=1024, n_jobs=1)
@@ -135,7 +135,7 @@ class BatchEncoder:
 
         :param rsmi: Reaction SMILES string (RSMI).
         :type rsmi: str
-        :returns: Fingerprint as a Python list of ints (0/1 for bit-based sketches).
+        :return: Fingerprint as a Python list of ints (0/1 for bit-based sketches).
         :rtype: list[int]
         """
         return _synrfp_call(
@@ -158,7 +158,7 @@ class BatchEncoder:
 
         :param rsmi_list: Sequence of reaction SMILES strings.
         :type rsmi_list: Sequence[str]
-        :returns: List of fingerprint lists in input order.
+        :return: List of fingerprint lists in input order.
         :rtype: list[list[int]]
         :raises RuntimeError: If ``n_jobs != 1`` but joblib is not available.
         """
@@ -189,7 +189,7 @@ class BatchEncoder:
 
         :param rsmi: Reaction SMILES string.
         :type rsmi: str
-        :returns: 1D numpy array of ints (length == bits).
+        :return: 1D numpy array of ints (length == bits).
         :rtype: numpy.ndarray
         """
         fp = self._encode_one(rsmi)
@@ -204,8 +204,8 @@ class BatchEncoder:
 
         :param rsmi_list: Sequence of reaction SMILES strings.
         :type rsmi_list: Sequence[str]
-        :returns: 2D numpy array with shape (N, L) where N = len(rsmi_list)
-        and L = fingerprint length.
+        :return: 2D numpy array with shape (N, L) where N = len(rsmi_list)
+            and L = fingerprint length.
         :rtype: numpy.ndarray
         :raises ValueError: If fingerprint lengths are inconsistent across batches.
         """
@@ -269,9 +269,11 @@ class BatchEncoder:
         :type edge_attrs: Sequence[str] | None
         :param batch_size: Maximum chunk size for encode_many.
         :type batch_size: int | None
-        :returns: 2D numpy array of fingerprints.
+        :return: 2D numpy array of fingerprints.
         :rtype: numpy.ndarray
-        :example:
+
+        Example usage:
+
         >>> BatchEncoder.encode(['CCO>>CCO'], tokenizer='wl', sketch='parity', bits=64)
         array([[...]], dtype=int)
         """

@@ -73,7 +73,7 @@ class SynRFP:
             >>> fp = SynRFP(tokenizer=WLTokenizer(), radius=2, sketch=ParityFold(1024))
             >>> res = fp.fingerprint(reactant_G, product_G)
 
-        :returns: Example usage string.
+        :return: Example usage string.
         :rtype: str
         """
         return (
@@ -187,7 +187,7 @@ class SynRFP:
         :type node_attrs: Sequence[str] | None
         :param edge_attrs: Optional edge attribute names for tokenizer.
         :type edge_attrs: Sequence[str] | None
-        :returns: A :class:`SynRFPResult` with tokens, support and sketch.
+        :return: A :class:`SynRFPResult` with tokens, support and sketch.
         :rtype: SynRFPResult
         :raises TypeError: If inputs are not :class:`Molecule` instances.
         :raises ValueError: If ``mode`` is invalid.
@@ -215,7 +215,7 @@ class SynRFP:
         :type tokens_P: Counter
         :param mode: ``'delta'`` or ``'union'``.
         :type mode: str
-        :returns: A :class:`SynRFPResult`.
+        :return: A :class:`SynRFPResult`.
         :rtype: SynRFPResult
         """
         # 2) compute delta / union

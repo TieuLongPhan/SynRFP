@@ -1,5 +1,6 @@
 # tests/test_invariance.py
 """Invariants stated in the paper, checked end to end on reaction SMILES."""
+
 import unittest
 
 import numpy as np

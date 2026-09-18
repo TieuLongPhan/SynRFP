@@ -15,11 +15,11 @@ def _h64(obj: Any, *, seed: int = 0) -> int:
     :type obj: Any
     :param seed: Optional seed mixed into the hash.
     :type seed: int
-    :returns: 64-bit integer hash.
+    :return: 64-bit integer hash.
     :rtype: int
 
-    Example
-    -------
+    Example usage:
+
     >>> isinstance(_h64(('C', 4)), int)
     True
     """
@@ -38,7 +38,7 @@ def batch_h64(items: Iterable[Any], *, seed: int = 0) -> List[int]:
     :type items: Iterable[Any]
     :param seed: Optional integer seed.
     :type seed: int
-    :returns: List of 64-bit ints.
+    :return: List of 64-bit ints.
     :rtype: List[int]
     """
     return [_h64(x, seed=seed) for x in items]
@@ -54,7 +54,7 @@ def atom_label_tuple(G: Molecule, v: NodeId, node_attrs: List[str]) -> Tuple:
     :type v: NodeId
     :param node_attrs: Attribute keys to include.
     :type node_attrs: List[str]
-    :returns: Label tuple.
+    :return: Label tuple.
     :rtype: Tuple
     """
     values = [G.nodes[v].get(attr) for attr in node_attrs]
@@ -74,7 +74,7 @@ def bond_label_tuple(G: Molecule, u: NodeId, v: NodeId, edge_attrs: List[str]) -
     :type v: NodeId
     :param edge_attrs: Edge attribute keys to include.
     :type edge_attrs: List[str]
-    :returns: Label tuple.
+    :return: Label tuple.
     :rtype: Tuple
     """
     return tuple(G.edge_attr(u, v).get(attr) for attr in edge_attrs)

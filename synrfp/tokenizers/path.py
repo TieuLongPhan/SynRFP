@@ -68,7 +68,7 @@ class PathTokenizer(BaseTokenizer):
         """
         Return a usage example for the :class:`PathTokenizer`.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (
@@ -107,7 +107,7 @@ class PathTokenizer(BaseTokenizer):
         :param radius: Effective maximum path length in bonds. A value of
             ``radius <= 0`` is treated as ``radius = min_path``.
         :type radius: int
-        :returns: Counter mapping integer path-hash tokens to counts.
+        :return: Counter mapping integer path-hash tokens to counts.
         :rtype: collections.Counter
         :raises ValueError: If ``radius`` is negative.
         """

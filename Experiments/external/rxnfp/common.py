@@ -1,8 +1,8 @@
 """Minimal, dependency-light access to the experiment tables from the rxnfp env.
 
-The main package needs Python >= 3.11; this module only reads the pickled
-tables and split arrays written by 01_data/prepare_data.py, so the RXNFP
-environment does not have to import it.
+The main package needs Python >= 3.11; this module only reads the CSV exports
+(work/export/) and split arrays (work/splits/) written by
+01_data/prepare_data.py, so the RXNFP environment does not have to import it.
 """
 from pathlib import Path
 
@@ -22,19 +22,37 @@ def load_config(path=None):
 
 
 def dataset_table(cfg, dataset):
-    p = cfg["paths"]["work"] / "tables" / f"ds_{dataset}.pkl"
+    p = cfg["paths"]["work"] / "export" / f"ds_{dataset}.csv.gz"
     if not p.exists():
         raise FileNotFoundError(f"{p} missing; run 01_data/prepare_data.py first")
-    return pd.read_pickle(p)
+    return pd.read_csv(p)
 
 
 def reaction_table(cfg, key):
-    return pd.read_pickle(cfg["paths"]["work"] / "tables" / f"rxn_{key}.pkl")
+    return pd.read_csv(cfg["paths"]["work"] / "export" / f"rxn_{key}.csv.gz")
+
+
+def reaction_keys(cfg):
+    """Every exported reaction table (benchmark datasets and extra studies)."""
+    folder = cfg["paths"]["work"] / "export"
+    return sorted(p.name[len("rxn_"):-len(".csv.gz")] for p in folder.glob("rxn_*.csv.gz"))
 
 
 def rxn_key(cfg, dataset):
     spec = cfg["datasets"][dataset]
-    return "mech" if spec.get("source") == "mech" else Path(spec["file"]).name.split(".")[0]
+    return "mech" if spec.get("source") == "mech" else spec["name"]
+
+
+def scheme_seeds(cfg, dataset, schemes=None, seeds=None):
+    """Same rule as synrfp_exp.splits.scheme_seeds."""
+    table = cfg["benchmark"]["schemes"]
+    primary = "published" if cfg["datasets"][dataset]["split"] == "published" else "random"
+    out = []
+    for scheme in schemes or list(table):
+        if scheme in ("published", "random") and scheme != primary:
+            continue
+        out += [(scheme, s) for s in (seeds if seeds is not None else table[scheme])]
+    return out
 
 
 def split_codes(cfg, dataset, scheme, seed):

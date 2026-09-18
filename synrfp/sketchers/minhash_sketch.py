@@ -67,7 +67,7 @@ class MinHashSketch(BaseSketch):
 
         :param tokens: Set of distinct tokens.
         :type tokens: set[int]
-        :returns: List of length ``m`` of integer hash values.
+        :return: List of length ``m`` of integer hash values.
         :rtype: list[int]
         """
         if not tokens:
@@ -96,7 +96,7 @@ class MinHashSketch(BaseSketch):
 
         :param support: Iterable of integer tokens.
         :type support: Iterable[int]
-        :returns: MinHash signature as a list of length ``m``.
+        :return: MinHash signature as a list of length ``m``.
         :rtype: list[int]
         """
         tokens = set(int(x) for x in support)
@@ -117,7 +117,7 @@ class MinHashSketch(BaseSketch):
         """
         Return a brief usage example for :class:`MinHashSketch`.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (

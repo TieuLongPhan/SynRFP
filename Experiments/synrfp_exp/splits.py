@@ -9,7 +9,7 @@ Split codes: 0 = train, 1 = validation, 2 = test.
 """
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
@@ -122,6 +122,29 @@ def make_split(cfg: Dict[str, Any], dataset: str, scheme: str, seed: int) -> np.
 
 def default_scheme(cfg: Dict[str, Any], dataset: str) -> str:
     return "published" if cfg["datasets"][dataset]["split"] == "published" else "random"
+
+
+def scheme_seeds(
+    cfg: Dict[str, Any],
+    dataset: str,
+    schemes: Optional[List[str]] = None,
+    seeds: Optional[List[int]] = None,
+) -> List[Tuple[str, int]]:
+    """
+    (scheme, seed) pairs of the benchmark for one dataset.
+
+    ``published`` applies to datasets with a published split and ``random``
+    to those without one; ``grouped`` applies to all. Seeds come from
+    ``benchmark.schemes`` unless overridden.
+    """
+    table = cfg["benchmark"]["schemes"]
+    primary = default_scheme(cfg, dataset)
+    out = []
+    for scheme in schemes or list(table):
+        if scheme in ("published", "random") and scheme != primary:
+            continue
+        out += [(scheme, s) for s in (seeds if seeds is not None else table[scheme])]
+    return out
 
 
 def subsample_rows(y: np.ndarray, max_records: int, seed: int = 0) -> np.ndarray:

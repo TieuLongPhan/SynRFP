@@ -8,6 +8,7 @@ not comparable. Seeding a generator per reaction and indexing it by a local
 dense position breaks this. Here every random quantity is a pure function of
 ``(seed, sample index, token key, stream)``, computed with SplitMix64.
 """
+
 from __future__ import annotations
 
 from typing import Iterable
@@ -27,7 +28,7 @@ def splitmix64(x: np.ndarray) -> np.ndarray:
 
     :param x: Input array (converted to ``uint64``).
     :type x: numpy.ndarray
-    :returns: Mixed ``uint64`` array of the same shape.
+    :return: Mixed ``uint64`` array of the same shape.
     :rtype: numpy.ndarray
     """
     z = np.asarray(x, dtype=np.uint64)
@@ -43,7 +44,7 @@ def mix(*keys: np.ndarray) -> np.ndarray:
     Combine several ``uint64`` arrays (broadcast together) into one hash.
 
     :param keys: Arrays or scalars interpreted as ``uint64``.
-    :returns: Broadcast ``uint64`` hash array.
+    :return: Broadcast ``uint64`` hash array.
     :rtype: numpy.ndarray
     """
     h = np.uint64(0x243F6A8885A308D3)
@@ -57,7 +58,7 @@ def to_uint64_keys(tokens: Iterable[int]) -> np.ndarray:
     Reduce arbitrary Python integers (possibly > 64 bit) to ``uint64`` keys.
 
     :param tokens: Integer token identifiers.
-    :returns: ``uint64`` array.
+    :return: ``uint64`` array.
     :rtype: numpy.ndarray
     """
     return np.fromiter(
@@ -70,7 +71,7 @@ def uniform_open01(h: np.ndarray) -> np.ndarray:
     Map ``uint64`` hashes to floats strictly inside ``(0, 1)``.
 
     :param h: ``uint64`` hash array.
-    :returns: Float array in the open unit interval.
+    :return: Float array in the open unit interval.
     :rtype: numpy.ndarray
     """
     return ((h >> np.uint64(11)).astype(np.float64) + 0.5) * _TWO_M53
@@ -82,7 +83,7 @@ def gaussian(h1: np.ndarray, h2: np.ndarray) -> np.ndarray:
 
     :param h1: First ``uint64`` hash array.
     :param h2: Second ``uint64`` hash array.
-    :returns: Float array of N(0, 1) variates.
+    :return: Float array of N(0, 1) variates.
     :rtype: numpy.ndarray
     """
     u1 = uniform_open01(h1)

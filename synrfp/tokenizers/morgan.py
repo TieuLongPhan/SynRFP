@@ -30,7 +30,7 @@ class MorganTokenizer(BaseTokenizer):
     internal tags (``\"m0\"``, ``\"mb\"``, ``\"morgan\"``) but otherwise
     follows a very similar refinement scheme.
 
-    :example:
+    Example usage:
         >>> tok = MorganTokenizer(node_attrs=['element'], edge_attrs=['order'])
         >>> isinstance(tok, MorganTokenizer)
         True
@@ -66,7 +66,7 @@ class MorganTokenizer(BaseTokenizer):
         """
         Return a usage example for the :class:`MorganTokenizer`.
 
-        :returns: Example code snippet.
+        :return: Example code snippet.
         :rtype: str
         """
         return (
@@ -98,7 +98,7 @@ class MorganTokenizer(BaseTokenizer):
             ``radius=0`` yields only atom-level invariants; larger radii
             incorporate progressively larger circular neighborhoods.
         :type radius: int
-        :returns: Counter mapping integer environment identifiers to counts.
+        :return: Counter mapping integer environment identifiers to counts.
         :rtype: collections.Counter
         :raises ValueError: If ``radius`` is negative.
         """

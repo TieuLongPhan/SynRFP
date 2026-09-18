@@ -1,6 +1,5 @@
 import os
 import sys
-import importlib.metadata as m
 from importlib.metadata import version as _get_version, PackageNotFoundError
 
 # -- Path setup --------------------------------------------------------------
@@ -8,28 +7,25 @@ from importlib.metadata import version as _get_version, PackageNotFoundError
 sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
-project = "synrxn"
+project = "synrfp"
 author = "Tieu-Long Phan"
 
-
 try:
-    release = _get_version("synrxn")
+    release = _get_version("synrfp")
 except PackageNotFoundError:
-    try:
-        release = m.version("synrxn")
-    except (ImportError, AttributeError):
-        # Fallback default
-        release = "0.0.1"
+    release = "0.0.0"
 # Use only major.minor for short version
 version = ".".join(release.split(".")[:2])
 
 # -- General configuration ---------------------------------------------------
 extensions = [
     "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.githubpages",
     "sphinxcontrib.bibtex",
-    # "sphinx.ext.napoleon",  # un-comment if using Google/NumPy docstrings
 ]
 
 bibtex_bibfiles = ["refs.bib"]

@@ -1,8 +1,16 @@
 # SynRFP experiment configuration.
 # All relative paths are resolved against this file's directory (Experiments/).
 
+# SynRXN benchmark data, loaded with the `synrxn` package (pip install synrxn).
+# `zenodo` pins an archived release; `local` reads a SynRXN checkout instead.
+synrxn:
+  source: zenodo            # zenodo | local
+  version: "1.2.1"
+  record_id: 22045145       # Zenodo record of v1.2.1 (skips the concept-DOI lookup)
+  local_dir: ../../SynRXN/Data
+
 paths:
-  synrxn_data: ../../SynRXN/Data                      # SynRXN repository Data/ folder
+  synrxn_cache: work/synrxn_cache                     # downloaded SynRXN files
   mech_raw: ../../SynRXN/Data/raw/mechfinder/mech-USPTO-31k.csv
   mech_level1_map: data/mech_level1_map.csv            # REQUIRED for mech_1; see data/*.DRAFT.csv
   work: work                                           # shared caches: tables, splits, features
@@ -12,23 +20,26 @@ n_jobs: 16          # parallel workers for tokenization / sketching
 fp_seed: 1          # hash seed of the SynRFP sketches (fixed; not a replicate seed)
 
 # ---------------------------------------------------------------------------
-# Datasets. `split: published` uses the SynRXN split column (train/test) and
-# carves a stratified validation set from train. `split: random` builds 8:1:1
-# stratified splits. `hierarchy` lists coarse -> fine label columns of the
+# Datasets (SynRXN classification task, by name). `split: published` uses the
+# SynRXN split column (train/test) and carves a stratified validation set from
+# train; `split: random` marks datasets without a published split, which use
+# stratified 8:1:1 splits instead. `hierarchy` lists coarse -> fine label columns of the
 # same reactions (used by clustering / retrieval granularity analyses).
 # `pair` links unbalanced/balanced versions of the same records by r_id.
 # ---------------------------------------------------------------------------
 datasets:
-  schneider_ub: {file: classification/schneider_u.csv.gz, label: label, split: published, pair: schneider, role: UB}
-  schneider_b:  {file: classification/schneider_b.csv.gz, label: label, split: published, pair: schneider, role: B}
-  tpl_ub:       {file: classification/tpl_u.csv.gz,       label: label, split: published, pair: tpl, role: UB}
-  tpl_b:        {file: classification/tpl_b.csv.gz,       label: label, split: published, pair: tpl, role: B}
-  uspto50k_ub:  {file: classification/uspto_50k_u.csv.gz, label: label, split: published, pair: uspto50k, role: UB}
-  uspto50k_b:   {file: classification/uspto_50k_b.csv.gz, label: label, split: published, pair: uspto50k, role: B}
-  syntemp_r0:   {file: classification/syntemp.csv.gz,     label: label_0, split: random, hierarchy: [label_0, label_1, label_2]}
-  ecreact_1:    {file: classification/ecreact.csv.gz,     label: ec1, split: published, hierarchy: [ec1, ec2, ec3]}
-  ecreact_2:    {file: classification/ecreact.csv.gz,     label: ec2, split: published, hierarchy: [ec1, ec2, ec3]}
-  ecreact_3:    {file: classification/ecreact.csv.gz,     label: ec3, split: published, hierarchy: [ec1, ec2, ec3]}
+  schneider_ub: {name: schneider_u, label: label, split: published, pair: schneider, role: UB}
+  schneider_b:  {name: schneider_b, label: label, split: published, pair: schneider, role: B}
+  tpl_ub:       {name: tpl_u, label: label, split: published, pair: tpl, role: UB}
+  tpl_b:        {name: tpl_b, label: label, split: published, pair: tpl, role: B}
+  uspto50k_ub:  {name: uspto_50k_u, label: label, split: published, pair: uspto50k, role: UB}
+  uspto50k_b:   {name: uspto_50k_b, label: label, split: published, pair: uspto50k, role: B}
+  syntemp_r0:   {name: syntemp, label: label_0, split: random, hierarchy: [label_0, label_1, label_2]}
+  syntemp_r1:   {name: syntemp, label: label_1, split: random, hierarchy: [label_0, label_1, label_2]}
+  syntemp_r2:   {name: syntemp, label: label_2, split: random, hierarchy: [label_0, label_1, label_2]}
+  ecreact_1:    {name: ecreact, label: ec1, split: published, hierarchy: [ec1, ec2, ec3]}
+  ecreact_2:    {name: ecreact, label: ec2, split: published, hierarchy: [ec1, ec2, ec3]}
+  ecreact_3:    {name: ecreact, label: ec3, split: published, hierarchy: [ec1, ec2, ec3]}
   mech_1:       {source: mech, label: level1, split: random, hierarchy: [level1, level2]}
   mech_2:       {source: mech, label: level2, split: random, hierarchy: [level1, level2]}
 
@@ -41,7 +52,6 @@ splits:
   val_fraction: 0.1        # of the training part, stratified
   random_ratio: [0.8, 0.1, 0.1]
   grouped_folds: 10        # StratifiedGroupKFold: fold s -> test, fold s+1 -> val
-  replicate_seeds: [0, 1, 2, 3, 4]
 
 # ---------------------------------------------------------------------------
 # Fingerprints
@@ -72,7 +82,15 @@ baselines:
 benchmark:                 # SynRFP default vs baselines
   fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp_pretrained, rxnfp_ft]
   models: [knn, linear, mlp]
-  schemes: [published, random, grouped]
+  # scheme -> replicate seeds. `published` is one fixed split, so its seeds
+  # only re-initialise the linear/MLP models (kNN is deterministic and runs
+  # once). `random` replaces `published` for datasets without a published
+  # split. `grouped` (scaffold) splits differ per seed: the out-of-distribution
+  # estimate with data variance.
+  schemes:
+    published: [0, 1, 2]
+    random: [0, 1, 2, 3, 4]
+    grouped: [0, 1, 2, 3, 4]
 
 factorial:                 # 162 SynRFP configurations
   datasets: [schneider_ub, schneider_b, uspto50k_ub, uspto50k_b, syntemp_r0, ecreact_1, ecreact_3, mech_1, mech_2, tpl_b]
@@ -124,6 +142,14 @@ robustness:
     - synrfp-wl-r3-b1024-parity-delta
     - drfp
     - rdkit_struct
+
+activity:                  # EHreact enzyme activity (small-data, per assay)
+  name: ehreact_activity
+  min_positives: 5         # assays with fewer active (or inactive) reactions are skipped
+  folds: 5
+  repeats: 5
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp_pretrained]
+  models: [knn, linear]
 
 reaction_center:
   radius: 3
