@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from collections import Counter
-from typing import Dict, Optional, Sequence
+from typing import Dict, List, Optional, Sequence, Tuple
 
 try:
     import networkx as nx
@@ -190,6 +190,46 @@ class WLTokenizer(BaseTokenizer):
             out.update(labels.values())
         return out
 
+    def tokens_with_provenance(
+        self, G: Molecule, radius: int
+    ) -> Dict[int, List[Tuple[NodeId, int]]]:
+        """
+        Return every WL token together with the atoms that emitted it.
+
+        Uses the in-house refinement, so tokens are identical to
+        :meth:`tokens_graph` with ``use_nx=False``. A token emitted by vertex
+        ``v`` at iteration ``k`` describes the rooted ball of radius ``k``
+        around ``v``.
+
+        :param G: Molecular graph.
+        :type G: Molecule
+        :param radius: Number of WL iterations (>= 0).
+        :type radius: int
+        :returns: Mapping token -> list of ``(root vertex, iteration)``.
+        :rtype: Dict[int, List[Tuple[NodeId, int]]]
+        """
+        if not isinstance(radius, int) or radius < 0:
+            raise ValueError(f"radius must be non-negative, got {radius!r}")
+        prov: Dict[int, List[Tuple[NodeId, int]]] = {}
+        labels: Dict[NodeId, int] = {
+            v: _h64(("a0",) + atom_label_tuple(G, v, self.node_attrs)) for v in G.nodes
+        }
+        for v, t in labels.items():
+            prov.setdefault(t, []).append((v, 0))
+        for k in range(1, radius + 1):
+            new_labels: Dict[NodeId, int] = {}
+            for v in G.nodes:
+                neigh = []
+                for u in G.adj.get(v, []):
+                    bl = _h64(("b",) + bond_label_tuple(G, v, u, self.edge_attrs))
+                    neigh.append((bl, labels[u]))
+                neigh.sort()
+                new_labels[v] = _h64(("wl", k, labels[v], tuple(neigh)))
+            labels = new_labels
+            for v, t in labels.items():
+                prov.setdefault(t, []).append((v, k))
+        return prov
+
     def _tokens_graph_networkx(self, G: Molecule, radius: int) -> Counter:
         """
         NetworkX-based WL subtree hashing implementation.
@@ -217,16 +257,16 @@ class WLTokenizer(BaseTokenizer):
             lbl = atom_label_tuple(G, v, self.node_attrs)
             nx_graph.add_node(v, __synrfp_label__=repr(lbl))
 
-        # Attach edge labels (if any) while avoiding duplicate undirected edges.
-        if self.edge_attrs:
-            seen = set()
-            for v in G.nodes:
-                for u in G.adj.get(v, []):
-                    if (u, v) in seen or (v, u) in seen:
-                        continue
-                    seen.add((v, u))
+        # Always add the bonds; attach edge labels only when requested.
+        for v in G.nodes:
+            for u in G.adj.get(v, []):
+                if nx_graph.has_edge(v, u):
+                    continue
+                attrs = {}
+                if self.edge_attrs:
                     bl = bond_label_tuple(G, v, u, self.edge_attrs)
-                    nx_graph.add_edge(v, u, __synrfp_edge__=repr(bl))
+                    attrs["__synrfp_edge__"] = repr(bl)
+                nx_graph.add_edge(v, u, **attrs)
 
         node_attr_name = "__synrfp_label__"
         edge_attr_name = "__synrfp_edge__" if self.edge_attrs else None

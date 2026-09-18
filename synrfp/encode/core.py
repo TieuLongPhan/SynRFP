@@ -3,6 +3,8 @@ from __future__ import annotations
 
 from typing import List, Optional, Sequence
 
+import numpy as np
+
 from synrfp.graph.reaction import Reaction
 from synrfp.tokenizers.wl import WLTokenizer
 from synrfp.tokenizers.nauty import NautyTokenizer
@@ -24,11 +26,14 @@ def synrfp(
     radius: int = 2,
     sketch: str = "parity",
     bits: int = 1024,
-    m: int = 256,
+    m: Optional[int] = None,
     seed: int = 1,
     mode: str = "delta",
     node_attrs: Optional[Sequence[str]] = None,
     edge_attrs: Optional[Sequence[str]] = None,
+    bbit: int = 2,
+    fold: str = "bbit",
+    agents: str = "both",
 ) -> List[int]:
     """
     Convert a reaction SMILES (RSMI) into a binary fingerprint bit-vector.
@@ -72,8 +77,10 @@ def synrfp(
         :class:`ParityFold`. For ``"minhash"``, ``"cw"`` and ``"srp"``, it
         controls the final bin count used by :func:`signature_to_bits`.
 
-    m : int, default 256
-        Number of hash samples/projections for MinHash, CWSketch, or SRP.
+    m : int or None, default None
+        Number of samples for MinHash or CWSketch. ``None`` sets
+        ``m = bits // 2**bbit`` so that the b-bit encoding fills exactly
+        ``bits`` positions. SRP always uses ``m = bits`` (one sign per bit).
     seed : int, default 1
         Random seed for reproducibility.
     mode : {"delta", "union"}, default "delta"
@@ -86,6 +93,13 @@ def synrfp(
         Node attribute names passed to the tokenizer (e.g. ``["element"]``).
     edge_attrs : Sequence[str] or None, optional
         Edge attribute names passed to the tokenizer (e.g. ``["order"]``).
+    bbit : int, default 2
+        Bits per signature sample for the b-bit encoding of MinHash/CWS.
+    fold : {"bbit", "mod"}, default "bbit"
+        Signature-to-bits mapping; ``"mod"`` reproduces the legacy behaviour.
+    agents : {"both", "reactants", "drop"}, default "both"
+        Placement of agents in ``reactants>agents>products``; see
+        :meth:`synrfp.graph.reaction.Reaction.from_rsmi`.
 
     Returns
     -------
@@ -120,27 +134,10 @@ def synrfp(
 
     # 2) Parse sketcher
     sketch_lower = sketch.lower()
-    weighted = False
-    if sketch_lower == "parity":
-        sk = ParityFold(bits=bits, seed=seed)
-        weighted = False
-    elif sketch_lower == "minhash":
-        sk = MinHashSketch(m=m, seed=seed)
-        weighted = False
-    elif sketch_lower == "cw":
-        sk = CWSketch(m=m, seed=seed)
-        weighted = True
-    elif sketch_lower == "srp":
-        sk = SRPSketch(m=m, seed=seed, normalize=True)
-        weighted = True
-    else:
-        raise ValueError(
-            f"Unknown sketch: {sketch!r} "
-            "(choose 'parity', 'minhash', 'cw', or 'srp')"
-        )
+    sk, weighted, m = _make_sketcher(sketch, bits, m, seed, bbit)
 
     # 3) Parse reaction graphs
-    parsed = Reaction.from_rsmi(rsmi)
+    parsed = Reaction.from_rsmi(rsmi, agents=agents)
     if isinstance(parsed, Reaction):
         reactant_G, product_G = parsed.reactant, parsed.product
     else:
@@ -161,10 +158,68 @@ def synrfp(
     )
 
     # 5) Return binary bits
-    if sketch_lower == "parity":
-        # parity-fold already produces binary bits internally
-        return res.to_binary()
+    return _to_bits(res, sketch_lower, bits, fold)
 
-    # MinHash / CWSketch / SRP: convert numeric/signature -> bit-vector of length `bits`
+
+def fingerprint_from_tokens(
+    tokens_R,
+    tokens_P,
+    *,
+    sketch: str = "parity",
+    bits: int = 1024,
+    m: Optional[int] = None,
+    seed: int = 1,
+    mode: str = "delta",
+    bbit: int = 2,
+    fold: str = "bbit",
+) -> np.ndarray:
+    """
+    Bit fingerprint from precomputed side token counts.
+
+    Gives the same result as :func:`synrfp` for the same tokens, without
+    re-tokenizing. Intended for experiments that sweep sketch settings.
+
+    :param tokens_R: Reactant-side token counts (``collections.Counter``).
+    :param tokens_P: Product-side token counts (``collections.Counter``).
+    :returns: ``uint8`` array of length ``bits``.
+    :rtype: numpy.ndarray
+    """
+    sk, weighted, m = _make_sketcher(sketch, bits, m, seed, bbit)
+    if weighted:
+        engine = SynRFP(tokenizer=None, radius=0, weighted_sketch=sk)
+    else:
+        engine = SynRFP(tokenizer=None, radius=0, sketch=sk)
+    res = engine.fingerprint_from_tokens(tokens_R, tokens_P, mode=mode)
+    return np.asarray(_to_bits(res, sketch.lower(), bits, fold), dtype=np.uint8)
+
+
+def _make_sketcher(sketch: str, bits: int, m: Optional[int], seed: int, bbit: int):
+    """Instantiate a sketcher; returns ``(sketcher, weighted, m)``."""
+    s = sketch.lower()
+    if s in ("minhash", "cw") and m is None:
+        if bits % (2**bbit):
+            raise ValueError(f"bits={bits} must be divisible by 2**bbit={2**bbit}")
+        m = bits // (2**bbit)
+    if s == "srp":
+        m = bits
+    if s == "parity":
+        return ParityFold(bits=bits, seed=seed), False, m
+    if s == "minhash":
+        return MinHashSketch(m=m, seed=seed), False, m
+    if s == "cw":
+        return CWSketch(m=m, seed=seed), True, m
+    if s == "srp":
+        return SRPSketch(m=m, seed=seed, normalize=True), True, m
+    raise ValueError(
+        f"Unknown sketch: {sketch!r} (choose 'parity', 'minhash', 'cw', or 'srp')"
+    )
+
+
+def _to_bits(res: SynRFPResult, sketch_lower: str, bits: int, fold: str) -> List[int]:
+    """Convert an engine result to a 0/1 list of length ``bits``."""
+    if sketch_lower == "parity":
+        return res.to_binary()
     sig = res.as_array()
-    return signature_to_bits(sig, bits)
+    if sketch_lower == "srp":
+        return (np.asarray(sig) > 0).astype(np.uint8).tolist()
+    return signature_to_bits(sig, bits, method=fold)

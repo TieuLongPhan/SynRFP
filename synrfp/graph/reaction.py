@@ -26,23 +26,45 @@ class Reaction:
     product: Molecule
 
     @staticmethod
-    def from_rsmi(rsmi: str) -> Reaction:
+    def from_rsmi(rsmi: str, agents: str = "both") -> Reaction:
         """
         Create a Reaction from an RSMI string using synkit IO.
 
+        Agents written between the arrows (``reactants>agents>products``) are
+        placed according to ``agents``:
+
+        * ``"both"`` (default): added to both sides. They cancel in the signed
+          delta and contribute context to the total count.
+        * ``"reactants"``: added to the reactant side only.
+        * ``"drop"``: ignored.
+
         :param rsmi: Reaction SMILES string.
         :type rsmi: str
+        :param agents: Agent placement, one of ``"both"``, ``"reactants"``, ``"drop"``.
+        :type agents: str
         :returns: Reaction with reactant and product Molecule.
         :rtype: Reaction
-        :raises ValueError: If parsing fails.
+        :raises ValueError: If the string is not a reaction SMILES or cannot be parsed.
         """
         try:
             from synkit.IO import rsmi_to_graph
         except ImportError as e:
             raise RuntimeError("synkit.IO.rsmi_to_graph not available") from e
+        if agents not in ("both", "reactants", "drop"):
+            raise ValueError("agents must be 'both', 'reactants' or 'drop'")
+        parts = rsmi.strip().split(" ")[0].split(">")
+        if len(parts) != 3:
+            raise ValueError(f"Not a reaction SMILES (expected 'R>A>P'): {rsmi!r}")
+        reac, agent, prod = parts
+        if agent and agents != "drop":
+            reac = ".".join(x for x in (reac, agent) if x)
+            if agents == "both":
+                prod = ".".join(x for x in (prod, agent) if x)
         r_graph, p_graph = rsmi_to_graph(
-            rsmi, drop_non_aam=False, use_index_as_atom_map=False
+            f"{reac}>>{prod}", drop_non_aam=False, use_index_as_atom_map=False
         )
+        if r_graph is None or p_graph is None:
+            raise ValueError(f"Could not parse reaction SMILES: {rsmi!r}")
         return Reaction(
             reactant=Molecule.from_nx_graph(r_graph),
             product=Molecule.from_nx_graph(p_graph),

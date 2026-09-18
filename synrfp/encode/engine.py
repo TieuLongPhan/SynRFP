@@ -199,7 +199,25 @@ class SynRFP:
         # 1) Tokenize both sides
         tokens_R: Counter = self.tokenizer.tokens_graph(reactant, self.radius)
         tokens_P: Counter = self.tokenizer.tokens_graph(product, self.radius)
+        return self.fingerprint_from_tokens(tokens_R, tokens_P, mode=mode)
 
+    def fingerprint_from_tokens(
+        self, tokens_R: Counter, tokens_P: Counter, *, mode: str = "delta"
+    ) -> SynRFPResult:
+        """
+        Combine and sketch precomputed token counts (stages 2 and 3).
+
+        Useful when one tokenization is reused for several sketch settings.
+
+        :param tokens_R: Reactant-side token counts.
+        :type tokens_R: Counter
+        :param tokens_P: Product-side token counts.
+        :type tokens_P: Counter
+        :param mode: ``'delta'`` or ``'union'``.
+        :type mode: str
+        :returns: A :class:`SynRFPResult`.
+        :rtype: SynRFPResult
+        """
         # 2) compute delta / union
         delta, support = self._compute_delta_union(tokens_R, tokens_P, mode)
 

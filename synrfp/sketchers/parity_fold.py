@@ -69,6 +69,21 @@ class ParityFold(BaseSketch):
         v = np.bincount(np.fromiter(indices, int), minlength=self.bits) & 1
         return v.astype(np.uint8, copy=False)
 
+    def bit_index(self, token: int) -> int:
+        """
+        Return the bit that ``token`` toggles.
+
+        In delta mode the engine passes sign-tagged tokens
+        ``2 * t + (0 if produced else 1)``; pass the same value here to map a
+        tokenizer token back to its fingerprint bit.
+
+        :param token: Integer token as passed to :meth:`build`.
+        :type token: int
+        :returns: Bit position in ``[0, bits)``.
+        :rtype: int
+        """
+        return _h64(("pf", int(token)), seed=self.seed) % self.bits
+
     @staticmethod
     def describe() -> str:
         """

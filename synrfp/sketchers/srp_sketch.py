@@ -1,10 +1,11 @@
-# /mnt/data/srp_sketch.py
+# synrfp/sketchers/srp_sketch.py
 from __future__ import annotations
 
 from typing import Mapping
 import numpy as np
 
 from synrfp.sketchers.base import WeightedSketch, ArrayLike
+from synrfp.sketchers._hashing import gaussian, mix, to_uint64_keys
 
 
 class SRPSketch(WeightedSketch):
@@ -52,43 +53,46 @@ class SRPSketch(WeightedSketch):
         """
         Build an SRP sketch for the signed multiset (pos - neg).
 
+        The Gaussian projection entry for token ``t`` in row ``i`` is a pure
+        function of ``(seed, i, t)``, so the same token is projected
+        identically in every reaction and the sign agreement between two
+        sketches estimates their angular (cosine) similarity.
+
         :param pos: Positive token counts.
         :type pos: Mapping[int,int]
-        :param neg: Negative token counts.
+        :param neg: Negative token counts (magnitudes).
         :type neg: Mapping[int,int]
-        :returns: Sketch array of shape (m,) with entries in {-1,+1} (dtype np.int8).
+        :returns: ``int8`` array of +1/-1 of length ``m``; all +1 when empty.
         :rtype: numpy.ndarray
         """
-        # signed dense vector; length n depends on union of pos,neg keys
-        vec, index_map = self.dicts_to_dense(pos, neg, ensure_signed=True)
-        n = int(vec.size)
-        if n == 0:
-            return np.zeros(self._m, dtype=np.int8)
+        self.validate_pos_neg(pos, neg)
+        net = {}
+        for t, c in pos.items():
+            net[int(t)] = net.get(int(t), 0.0) + float(c)
+        for t, c in neg.items():
+            net[int(t)] = net.get(int(t), 0.0) - float(c)
+        items = [(t, c) for t, c in net.items() if c != 0.0]
+        if not items:
+            return np.ones(self._m, dtype=np.int8)
+        keys = to_uint64_keys(t for t, _ in items)
+        vec = np.fromiter((c for _, c in items), dtype=np.float64)
+        if self._normalize:
+            vec = vec / np.abs(vec).sum()
 
-        # ensure vec is float dtype expected by projections
-        vec = np.asarray(vec, dtype=self._dtype, copy=False)
-
-        # decide whether to allocate full R matrix or stream row-by-row
-        use_rowwise = (self._memory_safe_threshold > 0) and (
-            self._m * n > self._memory_safe_threshold
-        )
-
-        rng = np.random.default_rng(self._seed)
-
-        if not use_rowwise:
-            # allocate full random projection matrix R ~ N(0,1)
-            R = rng.standard_normal((self._m, n), dtype=self._dtype)
-            proj = R @ vec  # shape (m,)
-        else:
-            # memory-safe: compute projection one row at a time
-            proj = np.empty(self._m, dtype=self._dtype)
-            for i in range(self._m):
-                r = rng.standard_normal(n, dtype=self._dtype)
-                proj[i] = float(np.dot(r, vec))
-
-        # sign -> +1 / -1, return as int8 for compactness
-        sketch = np.where(proj >= 0.0, 1, -1).astype(np.int8, copy=False)
-        return sketch
+        seed = np.uint64(self._seed)
+        proj = np.empty(self._m, dtype=np.float64)
+        # stream rows in blocks to bound memory for large supports
+        block = max(1, self._memory_safe_threshold // max(1, keys.size))
+        for start in range(0, self._m, block):
+            rows = np.arange(start, min(self._m, start + block), dtype=np.uint64)
+            i = rows[:, None]
+            g = gaussian(
+                mix(seed, i, keys[None, :], np.uint64(1)),
+                mix(seed, i, keys[None, :], np.uint64(2)),
+            )
+            stop = start + rows.size
+            proj[start:stop] = g @ vec
+        return np.where(proj >= 0.0, 1, -1).astype(np.int8, copy=False)
 
     @staticmethod
     def describe() -> str:

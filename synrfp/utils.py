@@ -8,27 +8,52 @@ from synrfp.graph.molecule import Molecule
 # ---------------------------------------------------------------------------
 
 
-def signature_to_bits(sig, n_bits: int) -> List[int]:
+def signature_to_bits(sig, n_bits: int, method: str = "bbit") -> List[int]:
     """
-    Convert an integer signature (e.g. MinHash or CWSketch) into a binary
-    bit-vector of length ``n_bits``.
+    Convert an integer signature (MinHash or CWS) into a binary bit-vector.
 
-    Each integer h in the signature is mapped to an index ``h % n_bits`` and
-    that position is set to 1 (collisions are allowed).
+    ``method="bbit"`` (default) uses b-bit minwise hashing (Li and Koenig,
+    2010): with ``m = len(sig)`` samples and ``2**b = n_bits / m`` bits per
+    sample, sample ``i`` sets exactly one bit inside its own block
+    ``[i * 2**b, (i + 1) * 2**b)``. Every fingerprint then has exactly ``m``
+    set bits, and the expected bit overlap of two fingerprints increases
+    monotonically with the fraction of equal signature entries, so the bit
+    vector preserves the Jaccard estimate of the signature.
 
-    :param sig: 1D signature (list/array of ints).
+    ``method="mod"`` is the legacy mapping ``bits[h % n_bits] = 1``. It lets
+    samples collide with each other and should only be used to reproduce old
+    results.
+
+    :param sig: 1D signature (list/array of non-negative ints).
     :type sig: Sequence[int] or numpy.ndarray
     :param n_bits: Length of the output fingerprint.
     :type n_bits: int
+    :param method: ``"bbit"`` or ``"mod"``.
+    :type method: str
     :returns: List of 0/1 bits of length ``n_bits``.
     :rtype: List[int]
+    :raises ValueError: If ``n_bits / len(sig)`` is not a power of two >= 2
+        for ``method="bbit"``, or ``method`` is unknown.
     """
-    arr = np.asarray(sig, dtype=np.int64).ravel()
+    from synrfp.sketchers._hashing import splitmix64, to_uint64_keys
+
+    arr = to_uint64_keys(np.asarray(sig).ravel().tolist())
     bits = np.zeros(n_bits, dtype=np.uint8)
     if arr.size == 0:
         return bits.tolist()
-    idx = arr % n_bits
-    bits[idx] = 1
+    if method == "mod":
+        bits[(arr % np.uint64(n_bits)).astype(np.int64)] = 1
+        return bits.tolist()
+    if method != "bbit":
+        raise ValueError(f"unknown method {method!r}; use 'bbit' or 'mod'")
+    m = arr.size
+    width = n_bits // m
+    if width * m != n_bits or width < 2 or width & (width - 1):
+        raise ValueError(
+            f"n_bits={n_bits} must equal len(sig)={m} times a power of two >= 2"
+        )
+    low = (splitmix64(arr) & np.uint64(width - 1)).astype(np.int64)
+    bits[np.arange(m) * width + low] = 1
     return bits.tolist()
 
 

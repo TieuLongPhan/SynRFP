@@ -72,12 +72,13 @@ class BatchEncoder:
         radius: int = 2,
         sketch: str = "parity",
         bits: int = 1024,
-        m: int = 256,
+        m: Optional[int] = None,
         seed: int = 1,
         mode: str = "delta",
         node_attrs: Optional[Sequence[str]] = None,
         edge_attrs: Optional[Sequence[str]] = None,
         *,
+        agents: str = "both",
         n_jobs: int = 1,
         batch_size: Optional[int] = None,
         verbose: Optional[int] = None,
@@ -88,8 +89,8 @@ class BatchEncoder:
             raise ValueError("n_jobs must be a non-zero integer; use 1 for serial.")
         if bits <= 0:
             raise ValueError("bits must be a positive integer.")
-        if m <= 0:
-            raise ValueError("m must be a positive integer.")
+        if m is not None and m <= 0:
+            raise ValueError("m must be a positive integer or None.")
         if mode not in ("delta", "union"):
             raise ValueError("mode must be either 'delta' or 'union'.")
         if batch_size is not None and (
@@ -102,7 +103,8 @@ class BatchEncoder:
         self.radius = int(radius)
         self.sketch = str(sketch)
         self.bits = int(bits)
-        self.m = int(m)
+        self.m = None if m is None else int(m)
+        self.agents = agents
         self.seed = int(seed)
         self.mode = mode
         self.node_attrs = list(node_attrs) if node_attrs is not None else None
@@ -147,6 +149,7 @@ class BatchEncoder:
             mode=self.mode,
             node_attrs=self.node_attrs,
             edge_attrs=self.edge_attrs,
+            agents=self.agents,
         )
 
     def _encode_chunk(self, rsmi_list: Sequence[str]) -> List[List[int]]:
@@ -234,7 +237,7 @@ class BatchEncoder:
         radius: int = 2,
         sketch: str = "parity",
         bits: int = 1024,
-        m: int = 256,
+        m: Optional[int] = None,
         seed: int = 1,
         mode: str = "delta",
         node_attrs: Optional[Sequence[str]] = None,
@@ -254,8 +257,8 @@ class BatchEncoder:
         :type sketch: str
         :param bits: Fingerprint length for bit-based sketches.
         :type bits: int
-        :param m: Sketch size parameter.
-        :type m: int
+        :param m: Sketch size for MinHash/CWS; ``None`` derives it from ``bits``.
+        :type m: int | None
         :param seed: RNG seed.
         :type seed: int
         :param mode: Token aggregation mode ('delta'|'union').

@@ -1,143 +1,107 @@
-# synrfp/sketchers/cw_sketch.py
 from __future__ import annotations
 
-from typing import Mapping
+from typing import Mapping, Tuple
 
 import numpy as np
 
 from synrfp.sketchers.base import WeightedSketch, ArrayLike
+from synrfp.sketchers._hashing import mix, to_uint64_keys, uniform_open01
 
-try:
-    from datasketch import WeightedMinHashGenerator  # type: ignore
-
-    _HAVE_DS = True
-except Exception:
-    _HAVE_DS = False
+# channel tags keep production (+) and consumption (-) of a token distinct
+_POS = np.uint64(0x2B)
+_NEG = np.uint64(0x2D)
 
 
 class CWSketch(WeightedSketch):
     """
-    Consistent Weighted Sampling (CWS) sketch for weighted Jaccard.
+    Consistent Weighted Sampling (CWS) sketch for weighted Jaccard similarity.
 
-    This sketch operates on *signed* sparse multisets (``pos``, ``neg``). It
-    converts them into a signed dense vector via
-    :meth:`~synrfp.sketchers.base.WeightedSketch.dicts_to_dense`, splits into
-    separate non-negative positive/negative channels, concatenates them, and
-    applies Consistent Weighted Sampling.
+    The signed multiset (``pos``, ``neg``) is sign-lifted into two
+    non-negative channels, so the same token produced and consumed yields two
+    different keys. Improved CWS (Ioffe, 2010) is then applied with random
+    variables that are a pure function of ``(seed, sample, key)``. The same
+    token therefore receives the same randomness in every reaction, which is
+    what makes
 
-    If :mod:`datasketch` is available, it delegates to
-    :class:`datasketch.WeightedMinHashGenerator`. Otherwise it uses a
-    deterministic ICWS-like fallback implementation.
+    .. math::
+        \\Pr[s_i(w) = s_i(w')] = J_w(w, w')
 
-    :param m: Number of CWS samples (length of the sketch).
+    hold across reactions.
+
+    Each sample is returned as one 64-bit hash of the selected
+    ``(key, t)`` pair, so two signatures can be compared elementwise.
+
+    :param m: Number of CWS samples (length of the signature).
     :type m: int
-    :param seed: Random seed for the sampler.
+    :param seed: Non-negative seed.
     :type seed: int
-    :param normalize: If True, dense helpers L1-normalize the signed vector
-        prior to splitting. Scaling does not change the weighted Jaccard but
-        can improve numerical stability.
+    :param normalize: If True, L1-normalise the weights before sampling. This
+        changes weighted Jaccard between reactions of different total weight,
+        so it is off by default.
     :type normalize: bool
-    :raises ValueError: If arguments are invalid.
     """
 
-    def __init__(self, m: int = 256, seed: int = 0, normalize: bool = True) -> None:
+    def __init__(self, m: int = 256, seed: int = 0, normalize: bool = False) -> None:
         super().__init__(m=m, seed=seed, normalize=normalize)
 
     def __repr__(self) -> str:
         return f"CWSketch(m={self._m}, seed={self._seed}, normalize={self._normalize})"
 
-    # ------------------------------------------------------------------ #
-    # public API                                                         #
-    # ------------------------------------------------------------------ #
+    def _lifted_weights(
+        self, pos: Mapping[int, int], neg: Mapping[int, int]
+    ) -> Tuple[np.ndarray, np.ndarray]:
+        """Return ``(keys, weights)`` of the sign-lifted, non-negative channels."""
+        self.validate_pos_neg(pos, neg)
+        net = {}
+        for t, c in pos.items():
+            net[int(t)] = net.get(int(t), 0.0) + float(c)
+        for t, c in neg.items():
+            net[int(t)] = net.get(int(t), 0.0) - float(c)
+        items = [(t, c) for t, c in net.items() if c != 0.0]
+        if not items:
+            return np.empty(0, dtype=np.uint64), np.empty(0, dtype=np.float64)
+        toks = to_uint64_keys(t for t, _ in items)
+        vals = np.fromiter((c for _, c in items), dtype=np.float64)
+        keys = mix(toks, np.where(vals > 0, _POS, _NEG))
+        weights = np.abs(vals)
+        if self._normalize:
+            weights = weights / weights.sum()
+        return keys, weights
+
     def build(self, pos: Mapping[int, int], neg: Mapping[int, int]) -> ArrayLike:
         """
-        Build a length-``m`` CWS hash signature for a signed multiset.
-
-        Internally this:
-
-        1. Uses :meth:`dicts_to_dense` with ``ensure_signed=True`` to obtain
-           a 1D signed dense vector.
-        2. Splits it into non-negative positive/negative arrays using
-           :meth:`WeightedSketch.signed_to_pos_neg_arrays`.
-        3. Concatenates these into a non-negative weight vector.
-        4. Applies either :mod:`datasketch` or a deterministic fallback
-           to draw ``m`` CWS samples.
+        Build a length-``m`` CWS signature for the signed multiset pos - neg.
 
         :param pos: Positive token counts.
         :type pos: Mapping[int,int]
-        :param neg: Negative token counts.
+        :param neg: Negative token counts (magnitudes).
         :type neg: Mapping[int,int]
-        :returns: Array of sampled indices (hash values) of length ``m``.
+        :returns: ``uint64`` array of length ``m``; all zeros for an empty input.
         :rtype: numpy.ndarray
         """
-        # signed dense vector
-        vec, index_map = self.dicts_to_dense(pos, neg, ensure_signed=True)
-        if vec.size == 0:
+        keys, w = self._lifted_weights(pos, neg)
+        if keys.size == 0:
             return np.zeros(self._m, dtype=np.uint64)
 
-        # split into non-negative channels and concatenate
-        w_pos, w_neg = self.signed_to_pos_neg_arrays(vec)
-        w_pos = w_pos.astype(float, copy=False)
-        w_neg = w_neg.astype(float, copy=False)
-        weights = np.concatenate([w_pos, w_neg], axis=0)
-        if weights.size == 0:
-            return np.zeros(self._m, dtype=np.uint64)
+        seed = np.uint64(self._seed)
+        i = np.arange(self._m, dtype=np.uint64)[:, None]  # (m, 1)
+        k = keys[None, :]  # (1, n)
 
-        # datasketch backend
-        if _HAVE_DS:
-            gen = WeightedMinHashGenerator(
-                len(weights), sample_size=self._m, seed=self._seed
-            )
-            mh = gen.minhash(weights)
-            return mh.hashvalues.copy()
+        def u(stream: int) -> np.ndarray:
+            return uniform_open01(mix(seed, i, k, np.uint64(stream)))
 
-        # deterministic CWS fallback
-        return self._fallback_cws(weights)
+        r = -np.log(u(1)) - np.log(u(2))  # Gamma(2, 1)
+        c = -np.log(u(3)) - np.log(u(4))  # Gamma(2, 1)
+        beta = u(5)
+        logw = np.log(w)[None, :]
+        t = np.floor(logw / r + beta)
+        y = np.exp(r * (t - beta))
+        a = c / (y * np.exp(r))
 
-    # ------------------------------------------------------------------ #
-    # deterministic fallback (ICWS-style)                                #
-    # ------------------------------------------------------------------ #
-    def _fallback_cws(self, weights: ArrayLike) -> ArrayLike:
-        """
-        Deterministic CWS implementation (vectorized over permutations).
-
-        This follows the ICWS scheme (Ioffe, 2010) for non-negative weights.
-        Zero weights are never selected.
-
-        :param weights: Non-negative weights (1D array).
-        :type weights: numpy.ndarray
-        :returns: Hashvalues array (uint64) length ``m``.
-        :rtype: numpy.ndarray
-        """
-        w = np.asarray(weights, dtype=float)
-        n = w.size
-        if n == 0:
-            return np.zeros(self._m, dtype=np.uint64)
-
-        # log(w); zero-weights -> -inf so never selected
-        with np.errstate(divide="ignore"):
-            logw = np.log(w)
-
-        rng = np.random.default_rng(self._seed)
-        out = np.empty(self._m, dtype=np.uint64)
-
-        for i in range(self._m):
-            # Gamma(2,1) via sum of two Exp(1): -log U1 - log U2
-            U = rng.random((2, 2, n))
-            r = -np.log(U[0, 0]) - np.log(U[0, 1])
-            c = -np.log(U[1, 0]) - np.log(U[1, 1])
-            beta = rng.random(n)
-
-            t = np.floor(logw / r + beta)
-            y = np.exp(r * (t - beta))
-            a = c / (y * np.exp(r))
-
-            # coordinates with w <= 0 (logw = -inf or nan) must never win
-            a[~np.isfinite(logw)] = np.inf
-
-            out[i] = np.uint64(np.argmin(a))
-
-        return out
+        j = np.argmin(a, axis=1)
+        rows = np.arange(self._m)
+        t_sel = t[rows, j].astype(np.int64).view(np.uint64)
+        return mix(keys[j], t_sel)
 
     @staticmethod
     def describe() -> str:
