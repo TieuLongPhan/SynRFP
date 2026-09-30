@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "ecreact_3",
+ "scheme": "random",
+ "seed": 4,
+ "fingerprint": "synrfp-wl-r3-b512-minhash-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 1,
+ "mcc": 0.9134374988527008,
+ "accuracy": 0.9186,
+ "macro_f1": 0.7146661574262134,
+ "weighted_f1": 0.9141215959988851,
+ "balanced_accuracy": 0.7012749498888505,
+ "tokenizer": "wl",
+ "radius": 3,
+ "bits": 512,
+ "sketch": "minhash",
+ "mode": "delta"
+}

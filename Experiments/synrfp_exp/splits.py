@@ -1,11 +1,17 @@
 """Train/validation/test splits.
 
-Split codes: 0 = train, 1 = validation, 2 = test.
+Split codes: 0 = train, 1 = validation, 2 = test. Two schemes only, never
+mixed in one table or test (exp.md §3):
 
-* ``published``: SynRXN split column for test; validation carved from train.
-* ``random``: stratified 8:1:1 (``splits.random_ratio``).
-* ``grouped``: StratifiedGroupKFold with the product scaffold as group, so no
-  scaffold is shared between train and test (out-of-distribution probe).
+* ``cv``    Track A: grouped 5x5 repeated CV. ``seed`` encodes
+  ``repeat * 5 + fold`` (repeat, fold in 0..4). Each repeat computes a fresh
+  StratifiedGroupKFold (product scaffold as group, so no scaffold is shared
+  between train and test); fold ``f`` -> test, fold ``f + 1`` -> validation,
+  the rest -> train.
+* ``fixed`` Track B: one split per dataset -- the SynRXN published column, or
+  a deterministic stratified 8:1:1 split for a dataset without one. ``seed``
+  does not affect the partition, only which
+  model-initialisation seed the caller is on.
 """
 from __future__ import annotations
 
@@ -21,7 +27,7 @@ from sklearn.model_selection import (
 )
 
 from .config import log
-from .data import dataset_table, reaction_table, rxn_key
+from .data import dataset_table, reaction_table, rxn_key, syncat_syntemp_split
 
 TRAIN, VAL, TEST = 0, 1, 2
 
@@ -81,6 +87,49 @@ def random_codes(cfg: Dict[str, Any], y: np.ndarray, seed: int) -> np.ndarray:
     return code
 
 
+def cv_split(cfg: Dict[str, Any], dataset: str, ds: pd.DataFrame, y: np.ndarray, seed: int) -> np.ndarray:
+    """Track A: one (repeat, fold) split of the grouped 5x5 repeated CV."""
+    n_folds = 5
+    repeat, fold = divmod(seed, n_folds)
+    idx = np.arange(len(ds))
+    g = groups_for(cfg, dataset)
+    folds = list(
+        StratifiedGroupKFold(n_splits=n_folds, shuffle=True, random_state=repeat).split(
+            idx, y, g
+        )
+    )
+    code = np.full(len(ds), TRAIN, dtype=np.int8)
+    code[folds[fold][1]] = TEST
+    code[folds[(fold + 1) % n_folds][1]] = VAL
+    return code
+
+
+def fixed_split(cfg: Dict[str, Any], dataset: str, ds: pd.DataFrame, y: np.ndarray) -> np.ndarray:
+    """
+    Track B: one fixed split, source depending on the dataset.
+
+    :raises ValueError: If a dataset has neither a published split nor a
+        recognised fixed-split source.
+    """
+    spec = cfg["datasets"][dataset]
+    if rxn_key(cfg, dataset) == "mech" or dataset.startswith("syntemp_r"):
+        return random_codes(cfg, y, seed=cfg["splits"].get("fixed_random_seed", 42))
+
+    idx = np.arange(len(ds))
+    if spec["split"] == "published":
+        if "split_published" not in ds:
+            raise ValueError(f"{dataset} has no published split")
+        test = ds["split_published"].str.lower().isin(["test"]).to_numpy()
+    else:
+        raise ValueError(f"{dataset}: no Track B fixed-split source configured")
+
+    code = np.full(len(ds), TRAIN, dtype=np.int8)
+    code[test] = TEST
+    _, val = _holdout(idx[~test], y, cfg["splits"]["val_fraction"], seed=0)
+    code[val] = VAL
+    return code
+
+
 def make_split(cfg: Dict[str, Any], dataset: str, scheme: str, seed: int) -> np.ndarray:
     """Split codes for every row of the dataset table (cached)."""
     cache = cfg["paths"]["work"] / "splits" / dataset / f"{scheme}_s{seed}.npy"
@@ -88,30 +137,11 @@ def make_split(cfg: Dict[str, Any], dataset: str, scheme: str, seed: int) -> np.
         return np.load(cache)
     ds = dataset_table(cfg, dataset)
     y = ds["y"].to_numpy()
-    n = len(ds)
-    code = np.full(n, TRAIN, dtype=np.int8)
-    idx = np.arange(n)
-    vf = cfg["splits"]["val_fraction"]
 
-    if scheme == "published":
-        if "split_published" not in ds:
-            raise ValueError(f"{dataset} has no published split")
-        test = ds["split_published"].str.lower().isin(["test"]).to_numpy()
-        code[test] = TEST
-        _, val = _holdout(idx[~test], y, vf, seed)
-        code[val] = VAL
-    elif scheme == "random":
-        code = random_codes(cfg, y, seed)
-    elif scheme == "grouped":
-        k = cfg["splits"]["grouped_folds"]
-        g = groups_for(cfg, dataset)
-        folds = list(
-            StratifiedGroupKFold(n_splits=k, shuffle=True, random_state=seed).split(
-                idx, y, g
-            )
-        )
-        code[folds[0][1]] = TEST
-        code[folds[1][1]] = VAL
+    if scheme == "cv":
+        code = cv_split(cfg, dataset, ds, y, seed)
+    elif scheme == "fixed":
+        code = fixed_split(cfg, dataset, ds, y)
     else:
         raise ValueError(f"unknown split scheme {scheme!r}")
 
@@ -120,29 +150,16 @@ def make_split(cfg: Dict[str, Any], dataset: str, scheme: str, seed: int) -> np.
     return code
 
 
-def default_scheme(cfg: Dict[str, Any], dataset: str) -> str:
-    return "published" if cfg["datasets"][dataset]["split"] == "published" else "random"
-
-
 def scheme_seeds(
     cfg: Dict[str, Any],
     dataset: str,
     schemes: Optional[List[str]] = None,
     seeds: Optional[List[int]] = None,
 ) -> List[Tuple[str, int]]:
-    """
-    (scheme, seed) pairs of the benchmark for one dataset.
-
-    ``published`` applies to datasets with a published split and ``random``
-    to those without one; ``grouped`` applies to all. Seeds come from
-    ``benchmark.schemes`` unless overridden.
-    """
+    """(scheme, seed) pairs of the benchmark; both schemes apply to every dataset."""
     table = cfg["benchmark"]["schemes"]
-    primary = default_scheme(cfg, dataset)
     out = []
     for scheme in schemes or list(table):
-        if scheme in ("published", "random") and scheme != primary:
-            continue
         out += [(scheme, s) for s in (seeds if seeds is not None else table[scheme])]
     return out
 

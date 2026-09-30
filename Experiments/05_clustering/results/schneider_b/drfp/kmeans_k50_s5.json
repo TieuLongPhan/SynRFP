@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "drfp",
+ "method": "kmeans",
+ "param": 5,
+ "n": 50000,
+ "elapsed_seconds": 263.4592383890413,
+ "label__ari": 0.1942180358277577,
+ "label__ami": 0.6482192079266534,
+ "label__nmi": 0.6505779070561623,
+ "label__homogeneity": 0.6074817611813539,
+ "label__completeness": 0.7002556444488692,
+ "label__v_measure": 0.6505779070561623,
+ "label__mcc_hungarian": 0.462698818796039,
+ "label__n_clusters": 50,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.2302
+}

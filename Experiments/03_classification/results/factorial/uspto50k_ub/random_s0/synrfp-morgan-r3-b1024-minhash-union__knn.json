@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "uspto50k_ub",
+ "scheme": "random",
+ "seed": 0,
+ "fingerprint": "synrfp-morgan-r3-b1024-minhash-union",
+ "model": "knn",
+ "n_train": 44999,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.7022188929496234,
+ "accuracy": 0.7626,
+ "macro_f1": 0.7241238537046597,
+ "weighted_f1": 0.7598919989608824,
+ "balanced_accuracy": 0.6904749859633464,
+ "tokenizer": "morgan",
+ "radius": 3,
+ "bits": 1024,
+ "sketch": "minhash",
+ "mode": "union"
+}

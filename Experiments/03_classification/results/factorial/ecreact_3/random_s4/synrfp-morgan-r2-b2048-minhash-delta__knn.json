@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "ecreact_3",
+ "scheme": "random",
+ "seed": 4,
+ "fingerprint": "synrfp-morgan-r2-b2048-minhash-delta",
+ "model": "knn",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 1,
+ "mcc": 0.8907133260805008,
+ "accuracy": 0.8972,
+ "macro_f1": 0.6623106967544199,
+ "weighted_f1": 0.8919486017097253,
+ "balanced_accuracy": 0.6587838248016905,
+ "tokenizer": "morgan",
+ "radius": 2,
+ "bits": 2048,
+ "sketch": "minhash",
+ "mode": "delta"
+}

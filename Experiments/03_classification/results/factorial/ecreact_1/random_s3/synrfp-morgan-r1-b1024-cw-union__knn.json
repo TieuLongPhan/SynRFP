@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "ecreact_1",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-morgan-r1-b1024-cw-union",
+ "model": "knn",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9171423352159941,
+ "accuracy": 0.9452,
+ "macro_f1": 0.7776246783364891,
+ "weighted_f1": 0.944293597822194,
+ "balanced_accuracy": 0.7612957685890971,
+ "tokenizer": "morgan",
+ "radius": 1,
+ "bits": 1024,
+ "sketch": "cw",
+ "mode": "union"
+}

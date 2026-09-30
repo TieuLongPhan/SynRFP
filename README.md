@@ -23,10 +23,19 @@ $$\mathbf{f}_{\Theta,\omega,\Xi}(G \to H) = \mathcal{S}_{\Xi}\Bigl(\operatorname
 - **Mapping-Free & Robust**: Operates directly on molecular graphs without requiring atom-to-atom mapping (AAM), condensed graph of reaction (CGR) heuristics, or transition-state calculations.
 - **Strict Invariance Guarantees**: Mathematically invariant to atom renumbering, component permutations (reactants, products, spectator reagents), and SMILES serialization artifacts.
 - **Directional & Antisymmetric**: Signed net change encoding distinguishes formed from cleaved motifs ($\Delta(H \to G) = -\Delta(G \to H)$) while automatically canceling unchanged spectator molecules.
-- **State-of-the-Art Accuracy**: Achieves a mean Matthews Correlation Coefficient (MCC) of **0.953** across 12 benchmarks with a compact MLP, outperforming fine-tuned **RXNFP** (0.926) and **DRFP** (0.918).
-- **Superior on Enzymatic & Mechanistic Chemistry**: Outperforms all baselines on every hierarchical level of **ECREACT** (enzymatic) and achieves **0.990–0.993 MCC** on mechanistic partitions.
-- **Unsupervised Reaction Discovery**: Produces superior clustering geometry ($k$-means MCC: 0.561, ARI: 0.336, NMI: 0.560) that automatically separates fine mechanistic subtypes without supervision.
-- **High Throughput**: CPU-friendly pure graph algorithms and bitwise hashing encode thousands of reactions per second with no pre-training or GPU requirements.
+- **Audited representation evidence**: The current evaluation package reports
+  signed-delta, reversal, and unchanged-spectator controls, feature-validity
+  rates, paired clustering stability, and protocol metadata. See
+  [`Experiments/11_interpretation/`](Experiments/11_interpretation/).
+- **Classification and clustering benchmarks**: The current results are kept
+  split-aware and model-specific; the XGBoost and MLP queues are still being
+  completed, so no single pooled MCC headline is advertised here.
+- **Unsupervised reaction discovery**: SynRFP leads DRFP on all seven small
+  K-means endpoints by both AMI and ARI in the completed ten-seed comparison,
+  while the large-data exceptions remain visible in the audit tables.
+- **CPU-compatible implementation**: SynRFP can be encoded without a GPU;
+  measured throughput depends on tokenizer, dataset, and hardware, so this
+  README does not claim an unbenchmarked rate.
 
 ---
 
@@ -88,7 +97,15 @@ Compresses sparse token summaries into fixed-length vectors:
 
 ## 📊 Benchmark Performance
 
-Comparison of default **SynRFP** (WL2, signed delta, 1024-bit ParityFold) against **DRFP** (2048-bit, radius 3) and fine-tuned **RXNFP** with an MLP classifier across 12 standard benchmarks:
+The repository's current comparison is generated from the split-aware
+artifacts under [`Experiments/11_interpretation/results/`](Experiments/11_interpretation/results/).
+The primary benchmark keeps scaffold-CV, fixed reference splits, and factorial
+random holdouts separate. XGBoost and MLP factorial runs are still in flight;
+the generated readiness and progress files identify which cells are complete.
+
+> **Historical snapshot.** The table below comes from an earlier protocol and
+> must not be read as the current audited result. Use the generated audit
+> tables linked above for current comparisons.
 
 | Benchmark Category | Dataset | Size | Classes | DRFP (2048b) | RXNFP (fine-tuned) | **SynRFP (1024b)** |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -106,7 +123,9 @@ Comparison of default **SynRFP** (WL2, signed delta, 1024-bit ParityFold) agains
 | | `Mech_2nd` | 31,673 | 63 | 0.889 | 0.859 | **0.993** |
 | **Overall Average** | *(Mean ± SD across 12 datasets)* | | | 0.918 ± 0.039 | 0.926 ± 0.067 | **0.953 ± 0.037** |
 
-> **Factorial Analysis Finding**: In a factorial study of 162 configurations, the **combination mode** (signed $\Delta$ vs total count $U$) and **sketch core** dominate performance. Hyperparameters like context radius ($r=1,2,3$), bit length ($B=512,1024,2048$), and tokenizer choice vary performance by $\le 0.02$ MCC once the core sketch and delta mode are selected.
+> **Historical factorial note.** The current completed kNN factorial confirms a
+> strong delta-versus-union contrast, but model-specific XGBoost and MLP
+> factorial effects are withheld until their full matrices are complete.
 
 ---
 
@@ -319,7 +338,7 @@ All experiments, figures, and tables reported in the paper can be reproduced usi
 
 - `Experiments/01_data`: Benchmark curation, rare-class filtering, and data audits.
 - `Experiments/02_featurize`: High-throughput reaction encoding across configurations.
-- `Experiments/03_classification`: 5-NN, Linear Probe, and MLP benchmarks under published, random, and scaffold-grouped splits.
+- `Experiments/03_classification`: 5-NN, XGBoost, and MLP benchmarks under fixed and repeated scaffold-grouped splits; MLP runs through the GPU queue.
 - `Experiments/04_factorial`: Factorial analysis across 162 design configurations.
 - `Experiments/05_clustering`: $k$-means, BitBIRCH, and HDBSCAN unsupervised clustering.
 - `Experiments/06_retrieval`: Metric-free k-NN similarity search across hierarchical taxonomies.

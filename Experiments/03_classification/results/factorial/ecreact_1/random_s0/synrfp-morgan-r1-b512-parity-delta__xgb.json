@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "ecreact_1",
+ "scheme": "random",
+ "seed": 0,
+ "fingerprint": "synrfp-morgan-r1-b512-parity-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9530971673113836,
+ "accuracy": 0.969,
+ "macro_f1": 0.8543162163341246,
+ "weighted_f1": 0.9682535644376332,
+ "balanced_accuracy": 0.8256763801303935,
+ "tokenizer": "morgan",
+ "radius": 1,
+ "bits": 512,
+ "sketch": "parity",
+ "mode": "delta"
+}

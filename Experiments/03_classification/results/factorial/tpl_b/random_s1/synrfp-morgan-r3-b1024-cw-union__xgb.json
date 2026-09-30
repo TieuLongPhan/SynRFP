@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "tpl_b",
+ "scheme": "random",
+ "seed": 1,
+ "fingerprint": "synrfp-morgan-r3-b1024-cw-union",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 1,
+ "mcc": 0.697492763036448,
+ "accuracy": 0.699,
+ "macro_f1": 0.5682301112152127,
+ "weighted_f1": 0.6707071826392208,
+ "balanced_accuracy": 0.5737202851551786,
+ "tokenizer": "morgan",
+ "radius": 3,
+ "bits": 1024,
+ "sketch": "cw",
+ "mode": "union"
+}

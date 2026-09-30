@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "mech_1",
+ "scheme": "random",
+ "seed": 4,
+ "fingerprint": "synrfp-wl-r1-b512-cw-union",
+ "model": "knn",
+ "n_train": 28505,
+ "n_val": 3168,
+ "n_test": 3168,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.5723423897989817,
+ "accuracy": 0.6953914141414141,
+ "macro_f1": 0.5848703679766998,
+ "weighted_f1": 0.6855892871092703,
+ "balanced_accuracy": 0.5414283203453196,
+ "tokenizer": "wl",
+ "radius": 1,
+ "bits": 512,
+ "sketch": "cw",
+ "mode": "union"
+}

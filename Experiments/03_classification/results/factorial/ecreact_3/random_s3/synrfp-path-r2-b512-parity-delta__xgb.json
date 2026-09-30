@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "ecreact_3",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-path-r2-b512-parity-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9206582942266944,
+ "accuracy": 0.9254,
+ "macro_f1": 0.6932424600365461,
+ "weighted_f1": 0.9207756080175206,
+ "balanced_accuracy": 0.7023415317182591,
+ "tokenizer": "path",
+ "radius": 2,
+ "bits": 512,
+ "sketch": "parity",
+ "mode": "delta"
+}

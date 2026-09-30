@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "tpl_b",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-path-r1-b2048-parity-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.5571575870230921,
+ "accuracy": 0.5586,
+ "macro_f1": 0.40556855011828796,
+ "weighted_f1": 0.46435799500857994,
+ "balanced_accuracy": 0.4372198585907751,
+ "tokenizer": "path",
+ "radius": 1,
+ "bits": 2048,
+ "sketch": "parity",
+ "mode": "delta"
+}

@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "mech_1",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-path-r1-b512-minhash-union",
+ "model": "knn",
+ "n_train": 28505,
+ "n_val": 3168,
+ "n_test": 3168,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.7395804717967782,
+ "accuracy": 0.8112373737373737,
+ "macro_f1": 0.731823476809827,
+ "weighted_f1": 0.8098360677811451,
+ "balanced_accuracy": 0.7021495911890355,
+ "tokenizer": "path",
+ "radius": 1,
+ "bits": 512,
+ "sketch": "minhash",
+ "mode": "union"
+}

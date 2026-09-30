@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "schneider_ub",
+ "scheme": "random",
+ "seed": 0,
+ "fingerprint": "synrfp-path-r3-b1024-minhash-union",
+ "model": "linear",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.8293622256028773,
+ "accuracy": 0.8326,
+ "macro_f1": 0.8312729145267324,
+ "weighted_f1": 0.8312729145267324,
+ "balanced_accuracy": 0.8325999999999999,
+ "tokenizer": "path",
+ "radius": 3,
+ "bits": 1024,
+ "sketch": "minhash",
+ "mode": "union"
+}

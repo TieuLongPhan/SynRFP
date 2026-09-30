@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "tpl_b",
+ "scheme": "random",
+ "seed": 0,
+ "fingerprint": "synrfp-morgan-r1-b2048-minhash-union",
+ "model": "knn",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 1,
+ "mcc": 0.7043465196573305,
+ "accuracy": 0.7058,
+ "macro_f1": 0.5909599803470577,
+ "weighted_f1": 0.678609068399533,
+ "balanced_accuracy": 0.5951947799920906,
+ "tokenizer": "morgan",
+ "radius": 1,
+ "bits": 2048,
+ "sketch": "minhash",
+ "mode": "union"
+}

@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "ecreact_1",
+ "scheme": "cv",
+ "seed": 6,
+ "fingerprint": "rxnfp_mlm",
+ "model": "knn",
+ "n_train": 145405,
+ "n_val": 36281,
+ "n_test": 40329,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.6687627526774731,
+ "accuracy": 0.7655037318058965,
+ "macro_f1": 0.4945623611187469,
+ "weighted_f1": 0.7281828695456324,
+ "balanced_accuracy": 0.5313110893940827
+}

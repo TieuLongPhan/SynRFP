@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "schneider_ub",
+ "scheme": "random",
+ "seed": 1,
+ "fingerprint": "synrfp-morgan-r1-b2048-minhash-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9842917405801249,
+ "accuracy": 0.9846,
+ "macro_f1": 0.9844772383860927,
+ "weighted_f1": 0.9844772383860926,
+ "balanced_accuracy": 0.9846,
+ "tokenizer": "morgan",
+ "radius": 1,
+ "bits": 2048,
+ "sketch": "minhash",
+ "mode": "delta"
+}

@@ -1,0 +1,962 @@
+{
+  "study": "r2_nested_grouped_mlp_v1",
+  "stage": "outer_refit",
+  "total": 50,
+  "done": 50,
+  "failed": 0,
+  "active": 0,
+  "pending": 0,
+  "elapsed_seconds": 292.24990725517273,
+  "jobs": [
+    {
+      "outer": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.930852999263221,
+        "inner_mcc": [
+          0.9304340108015565,
+          0.932210831208711,
+          0.9299141557793955
+        ],
+        "refit_epochs": 60
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer00_synrfp.json"
+    },
+    {
+      "outer": 0,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9372097862723973,
+        "inner_mcc": [
+          0.9385993334169177,
+          0.931916455185259,
+          0.9411135702150153
+        ],
+        "refit_epochs": 80
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer00_drfp.json"
+    },
+    {
+      "outer": 1,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.931913998848466,
+        "inner_mcc": [
+          0.9290499917333396,
+          0.9312116253870306,
+          0.9354803794250279
+        ],
+        "refit_epochs": 59
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer01_synrfp.json"
+    },
+    {
+      "outer": 1,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939725160678914,
+        "inner_mcc": [
+          0.9433547549442122,
+          0.932242775544946,
+          0.9435779515475841
+        ],
+        "refit_epochs": 73
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer01_drfp.json"
+    },
+    {
+      "outer": 2,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.929520741536357,
+        "inner_mcc": [
+          0.9280911203419366,
+          0.929780234808933,
+          0.9306908694582015
+        ],
+        "refit_epochs": 53
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer02_synrfp.json"
+    },
+    {
+      "outer": 2,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939265713081103,
+        "inner_mcc": [
+          0.9402250958326843,
+          0.9446033120149299,
+          0.9329687313956951
+        ],
+        "refit_epochs": 90
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer02_drfp.json"
+    },
+    {
+      "outer": 3,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9328134129740575,
+        "inner_mcc": [
+          0.9330028941664894,
+          0.9360035909381054,
+          0.9294337538175776
+        ],
+        "refit_epochs": 67
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer03_synrfp.json"
+    },
+    {
+      "outer": 3,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939152116230106,
+        "inner_mcc": [
+          0.9435148196679617,
+          0.934919296044237,
+          0.9390222329781193
+        ],
+        "refit_epochs": 75
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer03_drfp.json"
+    },
+    {
+      "outer": 4,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9331810069648304,
+        "inner_mcc": [
+          0.9375144692371152,
+          0.9291086130934816,
+          0.9329199385638944
+        ],
+        "refit_epochs": 63
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer04_synrfp.json"
+    },
+    {
+      "outer": 4,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9410928012781712,
+        "inner_mcc": [
+          0.9420199213301028,
+          0.9377001993306484,
+          0.9435582831737626
+        ],
+        "refit_epochs": 98
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer04_drfp.json"
+    },
+    {
+      "outer": 5,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9291297943718483,
+        "inner_mcc": [
+          0.9286158899623478,
+          0.9280018530858332,
+          0.9307716400673637
+        ],
+        "refit_epochs": 66
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer05_synrfp.json"
+    },
+    {
+      "outer": 5,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9369584375825325,
+        "inner_mcc": [
+          0.9355285068614225,
+          0.9328124798581279,
+          0.942534326028047
+        ],
+        "refit_epochs": 59
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer05_drfp.json"
+    },
+    {
+      "outer": 6,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9310911864808755,
+        "inner_mcc": [
+          0.9303334876650892,
+          0.9302674991366221,
+          0.9326725726409153
+        ],
+        "refit_epochs": 69
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer06_synrfp.json"
+    },
+    {
+      "outer": 6,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9367845149483749,
+        "inner_mcc": [
+          0.9344699747386255,
+          0.936044543407779,
+          0.9398390266987201
+        ],
+        "refit_epochs": 51
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer06_drfp.json"
+    },
+    {
+      "outer": 7,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.930519469623884,
+        "inner_mcc": [
+          0.9286671131547573,
+          0.929944535065642,
+          0.9329467606512525
+        ],
+        "refit_epochs": 56
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer07_synrfp.json"
+    },
+    {
+      "outer": 7,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9394330081449004,
+        "inner_mcc": [
+          0.9399851016431569,
+          0.9437615587030355,
+          0.9345523640885085
+        ],
+        "refit_epochs": 62
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer07_drfp.json"
+    },
+    {
+      "outer": 8,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9311538315321463,
+        "inner_mcc": [
+          0.930257602828949,
+          0.9284426799625585,
+          0.9347612118049313
+        ],
+        "refit_epochs": 65
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer08_synrfp.json"
+    },
+    {
+      "outer": 8,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9368194455297,
+        "inner_mcc": [
+          0.9406551865561823,
+          0.9406746694981053,
+          0.9291284805348122
+        ],
+        "refit_epochs": 72
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer08_drfp.json"
+    },
+    {
+      "outer": 9,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9316273289622906,
+        "inner_mcc": [
+          0.9346278236154602,
+          0.929181936430724,
+          0.9310722268406881
+        ],
+        "refit_epochs": 50
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer09_synrfp.json"
+    },
+    {
+      "outer": 9,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9376473981780412,
+        "inner_mcc": [
+          0.9359088518371238,
+          0.9404245868450849,
+          0.9366087558519147
+        ],
+        "refit_epochs": 77
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer09_drfp.json"
+    },
+    {
+      "outer": 10,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9292656210689313,
+        "inner_mcc": [
+          0.9338952672001306,
+          0.9232061090673825,
+          0.9306954869392804
+        ],
+        "refit_epochs": 91
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer10_synrfp.json"
+    },
+    {
+      "outer": 10,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9401301556725549,
+        "inner_mcc": [
+          0.9393659221445304,
+          0.9361338674481657,
+          0.9448906774249686
+        ],
+        "refit_epochs": 105
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer10_drfp.json"
+    },
+    {
+      "outer": 11,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9336896974515717,
+        "inner_mcc": [
+          0.9331220855978359,
+          0.9360468111004504,
+          0.9319001956564286
+        ],
+        "refit_epochs": 71
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer11_synrfp.json"
+    },
+    {
+      "outer": 11,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9380767922008172,
+        "inner_mcc": [
+          0.9422184513686217,
+          0.9330494167227298,
+          0.9389625085111001
+        ],
+        "refit_epochs": 67
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer11_drfp.json"
+    },
+    {
+      "outer": 12,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9320948905131697,
+        "inner_mcc": [
+          0.9266842611424553,
+          0.9357985693099934,
+          0.9338018410870609
+        ],
+        "refit_epochs": 71
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer12_synrfp.json"
+    },
+    {
+      "outer": 12,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9399175996101391,
+        "inner_mcc": [
+          0.9406307226018159,
+          0.9357408614806212,
+          0.9433812147479799
+        ],
+        "refit_epochs": 68
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer12_drfp.json"
+    },
+    {
+      "outer": 13,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9317429646106731,
+        "inner_mcc": [
+          0.9314910638641148,
+          0.930223268349838,
+          0.9335145616180666
+        ],
+        "refit_epochs": 75
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer13_synrfp.json"
+    },
+    {
+      "outer": 13,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9375047607634784,
+        "inner_mcc": [
+          0.9390955020346587,
+          0.9336101799573915,
+          0.9398086002983849
+        ],
+        "refit_epochs": 60
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer13_drfp.json"
+    },
+    {
+      "outer": 14,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9334066540492137,
+        "inner_mcc": [
+          0.9352410498092858,
+          0.9299477017374294,
+          0.9350312106009261
+        ],
+        "refit_epochs": 59
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer14_synrfp.json"
+    },
+    {
+      "outer": 14,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9402991586660532,
+        "inner_mcc": [
+          0.9392175464188484,
+          0.9455447491369483,
+          0.9361351804423629
+        ],
+        "refit_epochs": 56
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer14_drfp.json"
+    },
+    {
+      "outer": 15,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9331894339465343,
+        "inner_mcc": [
+          0.932728889441762,
+          0.9294520810989622,
+          0.9373873312988785
+        ],
+        "refit_epochs": 84
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer15_synrfp.json"
+    },
+    {
+      "outer": 15,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9383414307419375,
+        "inner_mcc": [
+          0.9348274339473412,
+          0.9415364564323466,
+          0.9386604018461249
+        ],
+        "refit_epochs": 75
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer15_drfp.json"
+    },
+    {
+      "outer": 16,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9316473692159727,
+        "inner_mcc": [
+          0.9343456080242242,
+          0.9301990506107874,
+          0.9303974490129066
+        ],
+        "refit_epochs": 47
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer16_synrfp.json"
+    },
+    {
+      "outer": 16,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9378489078765436,
+        "inner_mcc": [
+          0.9384859598616149,
+          0.9327865108611966,
+          0.9422742529068194
+        ],
+        "refit_epochs": 70
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer16_drfp.json"
+    },
+    {
+      "outer": 17,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9304618251674096,
+        "inner_mcc": [
+          0.9323764910291602,
+          0.9261147155491596,
+          0.9328942689239089
+        ],
+        "refit_epochs": 98
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer17_synrfp.json"
+    },
+    {
+      "outer": 17,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939512281292858,
+        "inner_mcc": [
+          0.9378049104958059,
+          0.9449182065890013,
+          0.9358137267937671
+        ],
+        "refit_epochs": 73
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer17_drfp.json"
+    },
+    {
+      "outer": 18,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9299609438839748,
+        "inner_mcc": [
+          0.9267076726269888,
+          0.9308792808220288,
+          0.9322958782029067
+        ],
+        "refit_epochs": 56
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer18_synrfp.json"
+    },
+    {
+      "outer": 18,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9382704273403517,
+        "inner_mcc": [
+          0.9341814474829425,
+          0.9420722926315431,
+          0.9385575419065694
+        ],
+        "refit_epochs": 57
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer18_drfp.json"
+    },
+    {
+      "outer": 19,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9295777109441761,
+        "inner_mcc": [
+          0.9292245667372311,
+          0.9290613400374815,
+          0.9304472260578155
+        ],
+        "refit_epochs": 43
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer19_synrfp.json"
+    },
+    {
+      "outer": 19,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9386163446136582,
+        "inner_mcc": [
+          0.9422210999002064,
+          0.9388171111895118,
+          0.9348108227512564
+        ],
+        "refit_epochs": 71
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer19_drfp.json"
+    },
+    {
+      "outer": 20,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9297865636036118,
+        "inner_mcc": [
+          0.9307240657852078,
+          0.9282697553285425,
+          0.930365869697085
+        ],
+        "refit_epochs": 77
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer20_synrfp.json"
+    },
+    {
+      "outer": 20,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.936800254493642,
+        "inner_mcc": [
+          0.9352135948872188,
+          0.9350775209364462,
+          0.9401096476572611
+        ],
+        "refit_epochs": 63
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer20_drfp.json"
+    },
+    {
+      "outer": 21,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9323684268333693,
+        "inner_mcc": [
+          0.9300030151722404,
+          0.934065603971691,
+          0.9330366613561767
+        ],
+        "refit_epochs": 62
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer21_synrfp.json"
+    },
+    {
+      "outer": 21,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9396780846760944,
+        "inner_mcc": [
+          0.9394812618625635,
+          0.9367065417877132,
+          0.9428464503780065
+        ],
+        "refit_epochs": 71
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer21_drfp.json"
+    },
+    {
+      "outer": 22,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.0003,
+        "mean_validation_mcc": 0.930594235589146,
+        "inner_mcc": [
+          0.9252775467614672,
+          0.9313556283355894,
+          0.9351495316703812
+        ],
+        "refit_epochs": 110
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer22_synrfp.json"
+    },
+    {
+      "outer": 22,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9410504959165573,
+        "inner_mcc": [
+          0.9393195243240833,
+          0.9432696610529693,
+          0.9405623023726193
+        ],
+        "refit_epochs": 50
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer22_drfp.json"
+    },
+    {
+      "outer": 23,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9325490178082538,
+        "inner_mcc": [
+          0.9305364542359609,
+          0.9316996708922084,
+          0.9354109282965922
+        ],
+        "refit_epochs": 87
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer23_synrfp.json"
+    },
+    {
+      "outer": 23,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9363501175137047,
+        "inner_mcc": [
+          0.9371039060787603,
+          0.9336495038607427,
+          0.9382969426016112
+        ],
+        "refit_epochs": 62
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer23_drfp.json"
+    },
+    {
+      "outer": 24,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "params": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9322335435710741,
+        "inner_mcc": [
+          0.9336667225859482,
+          0.9322139101735184,
+          0.9308199979537558
+        ],
+        "refit_epochs": 69
+      },
+      "device": 0,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer24_synrfp.json"
+    },
+    {
+      "outer": 24,
+      "fingerprint": "drfp",
+      "params": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9375795080686661,
+        "inner_mcc": [
+          0.9353336332196787,
+          0.9367770327286896,
+          0.9406278582576298
+        ],
+        "refit_epochs": 58
+      },
+      "device": 1,
+      "rc": 0,
+      "out": "Experiments/03_classification/results/r2_nested_grouped_mlp_v1/outer_refit/outer24_drfp.json"
+    }
+  ]
+}

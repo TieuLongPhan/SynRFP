@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "schneider_ub",
+ "scheme": "random",
+ "seed": 2,
+ "fingerprint": "synrfp-path-r3-b512-minhash-delta",
+ "model": "linear",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9343231260954106,
+ "accuracy": 0.9356,
+ "macro_f1": 0.9355213402935122,
+ "weighted_f1": 0.9355213402935122,
+ "balanced_accuracy": 0.9355999999999999,
+ "tokenizer": "path",
+ "radius": 3,
+ "bits": 512,
+ "sketch": "minhash",
+ "mode": "delta"
+}

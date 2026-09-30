@@ -1,0 +1,22 @@
+{
+ "dataset": "tpl_ub",
+ "fingerprint": "drfp",
+ "method": "minibatch_kmeans",
+ "seed": 8,
+ "k": 1000,
+ "n": 445115,
+ "batch_size": 8192,
+ "n_init": 3,
+ "max_iter": 100,
+ "elapsed_seconds": 533.3236657190137,
+ "label__ari": 0.16613251922655975,
+ "label__ami": 0.6670160343746206,
+ "label__nmi": 0.7056046981046139,
+ "label__homogeneity": 0.7269372839248707,
+ "label__completeness": 0.6854884627915174,
+ "label__v_measure": 0.7056046981046139,
+ "label__mcc_hungarian": 0.3078324925439744,
+ "label__n_clusters": 999,
+ "label__singleton_fraction": 2.2466104265189895e-06,
+ "label__largest_cluster_fraction": 0.013823393954371342
+}

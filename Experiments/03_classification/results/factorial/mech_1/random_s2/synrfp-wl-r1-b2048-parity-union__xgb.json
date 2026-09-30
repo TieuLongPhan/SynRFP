@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "mech_1",
+ "scheme": "random",
+ "seed": 2,
+ "fingerprint": "synrfp-wl-r1-b2048-parity-union",
+ "model": "xgb",
+ "n_train": 25337,
+ "n_val": 3168,
+ "n_test": 3168,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9637175885882387,
+ "accuracy": 0.9734848484848485,
+ "macro_f1": 0.9454470012474024,
+ "weighted_f1": 0.9733062988904693,
+ "balanced_accuracy": 0.9440908761354382,
+ "tokenizer": "wl",
+ "radius": 1,
+ "bits": 2048,
+ "sketch": "parity",
+ "mode": "union"
+}

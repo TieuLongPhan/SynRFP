@@ -1,0 +1,17 @@
+dataset,fingerprint,n,identical_under_randomisation,mean_sim_randomised,identical_to_reverse,mean_sim_reverse,valid_original,valid_randomised,valid_reversed,shared_valid_randomised,shared_valid_reversed,identical_under_randomisation_shared_valid,identical_to_reverse_shared_valid
+schneider_b,synrfp-wl-r2-b1024-parity-delta,2000,1.0,1.0,0.002,0.017999733,0.9995,0.9995,0.9995,0.9995,0.9995,1.0,0.0015007503751875938
+schneider_b,drfp,2000,0.403,0.8631268,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.403,1.0
+schneider_b,rdkit_struct,2000,1.0,1.0,0.0015,0.8485809,1.0,1.0,1.0,1.0,1.0,1.0,0.0015
+schneider_b,rdkit_diff,2000,1.0,1.0,0.0,-1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+uspto50k_b,synrfp-wl-r2-b1024-parity-delta,2000,1.0,1.0,0.0035,0.01732184,0.9965,0.9965,0.9965,0.9965,0.9965,1.0,0.0
+uspto50k_b,drfp,2000,0.397,0.8714677,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.397,1.0
+uspto50k_b,rdkit_struct,2000,1.0,1.0,0.0015,0.81398344,1.0,1.0,1.0,1.0,1.0,1.0,0.0015
+uspto50k_b,rdkit_diff,2000,1.0,1.0,0.0,-1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+ecreact_1,synrfp-wl-r2-b1024-parity-delta,2000,1.0,1.0,0.002,0.03888859,1.0,1.0,1.0,1.0,1.0,1.0,0.002
+ecreact_1,drfp,2000,0.0735,0.65201086,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0735,1.0
+ecreact_1,rdkit_struct,2000,1.0,1.0,0.0035,0.5384257,1.0,1.0,1.0,1.0,1.0,1.0,0.0035
+ecreact_1,rdkit_diff,2000,1.0,1.0,0.0025,-0.995,1.0,1.0,1.0,1.0,1.0,1.0,0.0025
+mech_2,synrfp-wl-r2-b1024-parity-delta,2000,1.0,1.0,0.0,0.013035038,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+mech_2,drfp,2000,0.0,0.05608303,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0
+mech_2,rdkit_struct,2000,1.0,1.0,0.001,0.8008,1.0,1.0,1.0,1.0,1.0,1.0,0.001
+mech_2,rdkit_diff,2000,1.0,1.0,0.0,-1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0

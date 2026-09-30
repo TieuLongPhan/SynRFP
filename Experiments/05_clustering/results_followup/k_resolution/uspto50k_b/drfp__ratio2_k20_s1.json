@@ -1,0 +1,21 @@
+{
+ "dataset": "uspto50k_b",
+ "fingerprint": "drfp",
+ "method": "kmeans_resolution",
+ "seed": 1,
+ "k_ratio": 2.0,
+ "k": 20,
+ "reference_class_count": 10,
+ "n": 50016,
+ "elapsed_seconds": 99.89385843020864,
+ "label__ari": 0.12325397616218166,
+ "label__ami": 0.3774474264253394,
+ "label__nmi": 0.3779284427162336,
+ "label__homogeneity": 0.4660338157697411,
+ "label__completeness": 0.3178397012869288,
+ "label__v_measure": 0.3779284427162336,
+ "label__mcc_hungarian": 0.2319927308696348,
+ "label__n_clusters": 20,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.2296665067178503
+}

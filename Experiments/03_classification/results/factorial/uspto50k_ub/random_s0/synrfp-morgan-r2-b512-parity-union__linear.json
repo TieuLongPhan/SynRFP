@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "uspto50k_ub",
+ "scheme": "random",
+ "seed": 0,
+ "fingerprint": "synrfp-morgan-r2-b512-parity-union",
+ "model": "linear",
+ "n_train": 44999,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.5850994278711578,
+ "accuracy": 0.6644,
+ "macro_f1": 0.6338248719191543,
+ "weighted_f1": 0.6611468637649253,
+ "balanced_accuracy": 0.6144354831103405,
+ "tokenizer": "morgan",
+ "radius": 2,
+ "bits": 512,
+ "sketch": "parity",
+ "mode": "union"
+}

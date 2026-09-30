@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "schneider_b",
+ "scheme": "random",
+ "seed": 2,
+ "fingerprint": "synrfp-wl-r3-b512-parity-delta",
+ "model": "knn",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 3,
+ "mcc": 0.9286167234305649,
+ "accuracy": 0.93,
+ "macro_f1": 0.9295446171299924,
+ "weighted_f1": 0.9295446171299924,
+ "balanced_accuracy": 0.9300000000000002,
+ "tokenizer": "wl",
+ "radius": 3,
+ "bits": 512,
+ "sketch": "parity",
+ "mode": "delta"
+}

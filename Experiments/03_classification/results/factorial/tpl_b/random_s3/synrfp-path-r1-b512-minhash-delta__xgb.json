@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "tpl_b",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-path-r1-b512-minhash-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.5506625525297051,
+ "accuracy": 0.5522,
+ "macro_f1": 0.39983592340098106,
+ "weighted_f1": 0.45963112670123785,
+ "balanced_accuracy": 0.42969260801411313,
+ "tokenizer": "path",
+ "radius": 1,
+ "bits": 512,
+ "sketch": "minhash",
+ "mode": "delta"
+}

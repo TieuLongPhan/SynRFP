@@ -1,0 +1,93 @@
+dataset,fingerprint,mean,std,count,protocol
+schneider_ub,drfp,0.9604792176242809,0.0026612553099858403,25,Track A: 25 scaffold-grouped outer folds
+schneider_ub,rdkit_diff,0.9557138032535994,0.003081940985489224,25,Track A: 25 scaffold-grouped outer folds
+schneider_ub,rdkit_struct,0.9187861475249474,0.005808667818333204,25,Track A: 25 scaffold-grouped outer folds
+schneider_ub,rxnfp,0.9955218414088572,0.0007594609723754601,25,Track A: 25 scaffold-grouped outer folds
+schneider_ub,rxnfp_mlm,0.9339731981358477,0.004382472004565423,25,Track A: 25 scaffold-grouped outer folds
+schneider_ub,synrfp-wl-r2-b1024-parity-delta,0.9758235318144536,0.0019153535015820928,25,Track A: 25 scaffold-grouped outer folds
+schneider_b,drfp,0.9292690759158606,0.0070258509599137025,25,Track A: 25 scaffold-grouped outer folds
+schneider_b,rdkit_diff,0.9362188806599141,0.007904318182460617,25,Track A: 25 scaffold-grouped outer folds
+schneider_b,rdkit_struct,0.9232488098740084,0.006407992650115461,25,Track A: 25 scaffold-grouped outer folds
+schneider_b,rxnfp,0.9388732782530278,0.003624026653843821,25,Track A: 25 scaffold-grouped outer folds
+schneider_b,rxnfp_mlm,0.8802260221709071,0.00492335360427589,25,Track A: 25 scaffold-grouped outer folds
+schneider_b,synrfp-wl-r2-b1024-parity-delta,0.9520504578698349,0.0066624239473648305,25,Track A: 25 scaffold-grouped outer folds
+tpl_ub,drfp,0.9571354420815027,0.005027209962902413,25,Track A: 25 scaffold-grouped outer folds
+tpl_ub,rdkit_diff,0.9333568150792863,0.0031079632897147214,25,Track A: 25 scaffold-grouped outer folds
+tpl_ub,rdkit_struct,0.86571222319416,0.005720614650015783,25,Track A: 25 scaffold-grouped outer folds
+tpl_ub,rxnfp,0.8686724011754421,0.007613101074008153,25,Track A: 25 scaffold-grouped outer folds
+tpl_ub,rxnfp_mlm,0.7986481391683097,0.006131813856160741,25,Track A: 25 scaffold-grouped outer folds
+tpl_ub,rxnfp_tpl,0.9973688353222248,0.0002842396060892896,25,Track A outer splits; TPL-1K supervised transfer reference
+tpl_ub,synrfp-wl-r2-b1024-parity-delta,0.9356028466431333,0.007316294918914247,25,Track A: 25 scaffold-grouped outer folds
+tpl_b,drfp,0.9454386220410332,0.007756515849743571,25,Track A: 25 scaffold-grouped outer folds
+tpl_b,rdkit_diff,0.9351310601127354,0.0047344365188165035,25,Track A: 25 scaffold-grouped outer folds
+tpl_b,rdkit_struct,0.8574659661572537,0.006857525313495874,25,Track A: 25 scaffold-grouped outer folds
+tpl_b,rxnfp,0.7395683707048962,0.010827918150997038,25,Track A: 25 scaffold-grouped outer folds
+tpl_b,rxnfp_mlm,0.6995514844539865,0.004992246836300484,25,Track A: 25 scaffold-grouped outer folds
+tpl_b,rxnfp_tpl,0.9782265021367784,0.0015008460231302047,25,Track A outer splits; TPL-1K supervised transfer reference
+tpl_b,synrfp-wl-r2-b1024-parity-delta,0.935064500862987,0.00851619686344589,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_ub,drfp,0.9161978827042375,0.0027645269702946886,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_ub,rdkit_diff,0.9691589134420846,0.002519432486272358,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_ub,rdkit_struct,0.943233566506409,0.0036730590338667434,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_ub,rxnfp,0.9964891477843564,0.0009113671951973724,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_ub,rxnfp_mlm,0.9620157352886056,0.0029794287474742714,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_ub,synrfp-wl-r2-b1024-parity-delta,0.9781420280451033,0.0021754273574700945,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_b,drfp,0.9313775639022387,0.004665605384691641,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_b,rdkit_diff,0.9690650329341751,0.0037683737161953394,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_b,rdkit_struct,0.9511480517640888,0.00315237398758176,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_b,rxnfp,0.99550511401896,0.0009838773522181429,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_b,rxnfp_mlm,0.9684914607628338,0.0028985239579868566,25,Track A: 25 scaffold-grouped outer folds
+uspto50k_b,synrfp-wl-r2-b1024-parity-delta,0.9841030005827007,0.0010665123233406404,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r0,drfp,0.9665808213508411,0.0034620725031418945,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r0,rdkit_diff,0.9658804428750274,0.002740458280207102,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r0,rdkit_struct,0.9399989629663594,0.00476538582589683,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r0,rxnfp,0.9937469773949243,0.0010657579910867284,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r0,rxnfp_mlm,0.9633140916578604,0.0018561253122285919,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r0,synrfp-wl-r2-b1024-parity-delta,0.9931385507546893,0.0008494326959123866,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r1,drfp,0.9522210012647997,0.002092663707501873,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r1,rdkit_diff,0.9310665422248771,0.004757126163818594,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r1,rdkit_struct,0.8764436715356474,0.009891888255083798,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r1,rxnfp,0.9535059640858847,0.0031896060809787825,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r1,rxnfp_mlm,0.8402883281175076,0.004705299083087388,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r1,synrfp-wl-r2-b1024-parity-delta,0.9793712383943501,0.0016791765944717033,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r2,drfp,0.9447499503069988,0.003535668498368834,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r2,rdkit_diff,0.7929809520514399,0.0062737424858665645,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r2,rdkit_struct,0.6418096010394898,0.0065083069900856265,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r2,rxnfp,0.7465350308859857,0.011145934214035503,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r2,rxnfp_mlm,0.6131615543258451,0.00650194441255941,25,Track A: 25 scaffold-grouped outer folds
+syntemp_r2,synrfp-wl-r2-b1024-parity-delta,0.9373711853080162,0.003415305713550082,25,Track A: 25 scaffold-grouped outer folds
+ecreact_1,drfp,0.852694960950313,0.0766690366118383,25,Track A: 25 scaffold-grouped outer folds
+ecreact_1,rdkit_diff,0.8335783360079883,0.06745318667017165,25,Track A: 25 scaffold-grouped outer folds
+ecreact_1,rdkit_struct,0.8444074673638511,0.06399405119995417,25,Track A: 25 scaffold-grouped outer folds
+ecreact_1,rxnfp,0.8241304235242436,0.05644985099150086,25,Track A: 25 scaffold-grouped outer folds
+ecreact_1,rxnfp_mlm,0.8535884300965074,0.06472612597019074,25,Track A: 25 scaffold-grouped outer folds
+ecreact_1,synrfp-wl-r2-b1024-parity-delta,0.872615951495413,0.07825084487923724,25,Track A: 25 scaffold-grouped outer folds
+ecreact_2,drfp,0.8079177519215369,0.07605797419214842,25,Track A: 25 scaffold-grouped outer folds
+ecreact_2,rdkit_diff,0.8028619721383139,0.07359077227494717,25,Track A: 25 scaffold-grouped outer folds
+ecreact_2,rdkit_struct,0.7717041979099174,0.06754685858530436,25,Track A: 25 scaffold-grouped outer folds
+ecreact_2,rxnfp,0.7767452943455566,0.06573611667794294,25,Track A: 25 scaffold-grouped outer folds
+ecreact_2,rxnfp_mlm,0.79337330241288,0.0674705202124793,25,Track A: 25 scaffold-grouped outer folds
+ecreact_2,synrfp-wl-r2-b1024-parity-delta,0.8289832480836884,0.07762095447201936,25,Track A: 25 scaffold-grouped outer folds
+ecreact_3,drfp,0.7644858547316494,0.06217857576112842,25,Track A: 25 scaffold-grouped outer folds
+ecreact_3,rdkit_diff,0.7524465026854114,0.05531121596962965,25,Track A: 25 scaffold-grouped outer folds
+ecreact_3,rdkit_struct,0.731165746924045,0.057077190272431626,25,Track A: 25 scaffold-grouped outer folds
+ecreact_3,rxnfp,0.7155867395418383,0.05130581843048607,25,Track A: 25 scaffold-grouped outer folds
+ecreact_3,rxnfp_mlm,0.7403592384943949,0.05239211992862113,25,Track A: 25 scaffold-grouped outer folds
+ecreact_3,synrfp-wl-r2-b1024-parity-delta,0.7697008147806181,0.054423125175252884,25,Track A: 25 scaffold-grouped outer folds
+mech_1,drfp,0.9195732684751602,0.004158940413353273,25,Track A: 25 scaffold-grouped outer folds
+mech_1,rdkit_diff,0.9704541804790208,0.0027733033440394193,25,Track A: 25 scaffold-grouped outer folds
+mech_1,rdkit_struct,0.9407649579996031,0.0044525699818474184,25,Track A: 25 scaffold-grouped outer folds
+mech_1,rxnfp,0.9616176125530241,0.0026869109519064177,25,Track A: 25 scaffold-grouped outer folds
+mech_1,rxnfp_mlm,0.8884869401170263,0.00730379275106824,25,Track A: 25 scaffold-grouped outer folds
+mech_1,synrfp-wl-r2-b1024-parity-delta,0.9831530563284488,0.001993398201141131,25,Track A: 25 scaffold-grouped outer folds
+mech_2,drfp,0.9439117097219432,0.0032550714116501627,25,Track A: 25 scaffold-grouped outer folds
+mech_2,rdkit_diff,0.9768293668710101,0.0031871639660013273,25,Track A: 25 scaffold-grouped outer folds
+mech_2,rdkit_struct,0.9227453093873393,0.004904163642173837,25,Track A: 25 scaffold-grouped outer folds
+mech_2,rxnfp,0.9371601355623068,0.005247621816238319,25,Track A: 25 scaffold-grouped outer folds
+mech_2,rxnfp_mlm,0.8099034641755603,0.006856864661347893,25,Track A: 25 scaffold-grouped outer folds
+mech_2,synrfp-wl-r2-b1024-parity-delta,0.9869744734439788,0.001780229362837976,25,Track A: 25 scaffold-grouped outer folds
+ehreact_activity,drfp,0.11933398248500836,0.14470651089442157,15,EHReact: mean over 3 assays x 5 grouped-CV repeats
+ehreact_activity,rdkit_diff,0.12432825838029228,0.13177506313134818,15,EHReact: mean over 3 assays x 5 grouped-CV repeats
+ehreact_activity,rdkit_struct,0.09522124816922153,0.1279542303268499,15,EHReact: mean over 3 assays x 5 grouped-CV repeats
+ehreact_activity,rxnfp,0.11945895059265052,0.14843267437038243,15,EHReact: mean over 3 assays x 5 grouped-CV repeats
+ehreact_activity,rxnfp_mlm,0.17084312460752485,0.144227216042068,15,EHReact: mean over 3 assays x 5 grouped-CV repeats
+ehreact_activity,synrfp-wl-r2-b1024-parity-delta,0.10523525472883015,0.14921578787357126,15,EHReact: mean over 3 assays x 5 grouped-CV repeats

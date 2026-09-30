@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "mech_2",
+ "scheme": "random",
+ "seed": 4,
+ "fingerprint": "synrfp-path-r1-b1024-cw-delta",
+ "model": "knn",
+ "n_train": 28500,
+ "n_val": 3167,
+ "n_test": 3167,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9665504935485958,
+ "accuracy": 0.9696874013261761,
+ "macro_f1": 0.9399062125936106,
+ "weighted_f1": 0.9695208324488742,
+ "balanced_accuracy": 0.9376671946136328,
+ "tokenizer": "path",
+ "radius": 1,
+ "bits": 1024,
+ "sketch": "cw",
+ "mode": "delta"
+}

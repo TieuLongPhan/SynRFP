@@ -1,0 +1,30 @@
+{
+  "study": "r2_grouped_development_screen_v1",
+  "outer_test_read": false,
+  "outer_seed": 0,
+  "inner_fold": 0,
+  "inner_split": "Experiments/03_classification/results/r2_grouped_development_screen_v1/outer0_inner.npy",
+  "settings_per_fingerprint": 8,
+  "pending": [],
+  "finished": [
+    "synrfp_w512_d0p0_b256_lr0p0003",
+    "drfp_w512_d0p0_b256_lr0p0003",
+    "synrfp_w512_d0p0_b256_lr0p001",
+    "drfp_w512_d0p0_b256_lr0p001",
+    "synrfp_w512_d0p0_b1024_lr0p0003",
+    "drfp_w512_d0p0_b1024_lr0p0003",
+    "synrfp_w512_d0p0_b1024_lr0p001",
+    "drfp_w512_d0p0_b1024_lr0p001",
+    "synrfp_w1024_d0p1_b256_lr0p0003",
+    "drfp_w1024_d0p1_b256_lr0p0003",
+    "synrfp_w1024_d0p1_b256_lr0p001",
+    "drfp_w1024_d0p1_b256_lr0p001",
+    "synrfp_w1024_d0p1_b1024_lr0p0003",
+    "drfp_w1024_d0p1_b1024_lr0p0003",
+    "synrfp_w1024_d0p1_b1024_lr0p001",
+    "drfp_w1024_d0p1_b1024_lr0p001"
+  ],
+  "failed": [],
+  "active": {},
+  "status": "complete"
+}

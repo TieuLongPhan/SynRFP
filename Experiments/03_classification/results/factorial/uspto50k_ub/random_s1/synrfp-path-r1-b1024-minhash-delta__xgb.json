@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "uspto50k_ub",
+ "scheme": "random",
+ "seed": 1,
+ "fingerprint": "synrfp-path-r1-b1024-minhash-delta",
+ "model": "xgb",
+ "n_train": 39999,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9865174523238257,
+ "accuracy": 0.9892,
+ "macro_f1": 0.9814181560177027,
+ "weighted_f1": 0.989129383214579,
+ "balanced_accuracy": 0.9728702224424056,
+ "tokenizer": "path",
+ "radius": 1,
+ "bits": 1024,
+ "sketch": "minhash",
+ "mode": "delta"
+}

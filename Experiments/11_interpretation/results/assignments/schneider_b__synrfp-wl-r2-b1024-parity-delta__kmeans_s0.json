@@ -1,0 +1,26 @@
+{
+  "assignment_file": "schneider_b__synrfp-wl-r2-b1024-parity-delta__kmeans_s0.npz",
+  "dataset": "schneider_b",
+  "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+  "invalid_rows": 25,
+  "k": 50,
+  "method": "kmeans",
+  "n_init": 10,
+  "n_rows": 50000,
+  "n_valid": 49975,
+  "scores_on_valid_rows": {
+    "label": {
+      "ami": 0.7309755665356892,
+      "ari": 0.46209637909543577,
+      "completeness": 0.748961741726496,
+      "homogeneity": 0.7171063721733849,
+      "largest_cluster_fraction": 0.06949474737368684,
+      "mcc_hungarian": 0.583540473982216,
+      "n_clusters": 50,
+      "nmi": 0.732687973244912,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.7326879732449119
+    }
+  },
+  "seed": 0
+}

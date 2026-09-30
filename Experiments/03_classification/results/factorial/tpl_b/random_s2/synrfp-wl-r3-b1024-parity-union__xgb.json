@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "tpl_b",
+ "scheme": "random",
+ "seed": 2,
+ "fingerprint": "synrfp-wl-r3-b1024-parity-union",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 2,
+ "mcc": 0.8555278202044257,
+ "accuracy": 0.8562,
+ "macro_f1": 0.782859786452433,
+ "weighted_f1": 0.8413678663929471,
+ "balanced_accuracy": 0.7834731905270619,
+ "tokenizer": "wl",
+ "radius": 3,
+ "bits": 1024,
+ "sketch": "parity",
+ "mode": "union"
+}

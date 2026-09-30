@@ -1,0 +1,17 @@
+{
+ "dataset": "uspto50k_b",
+ "fingerprint": "drfp",
+ "method": "bitbirch",
+ "param": 0.7,
+ "n": 50016,
+ "label__ari": 1.3353658968535559e-05,
+ "label__ami": 0.006162824849703538,
+ "label__nmi": 0.2873147161412577,
+ "label__homogeneity": 0.9990449428275121,
+ "label__completeness": 0.16778377385640206,
+ "label__v_measure": 0.28731471614125775,
+ "label__mcc_hungarian": 0.020634007201639104,
+ "label__n_clusters": 48839,
+ "label__singleton_fraction": 0.9611124440179143,
+ "label__largest_cluster_fraction": 0.0003198976327575176
+}

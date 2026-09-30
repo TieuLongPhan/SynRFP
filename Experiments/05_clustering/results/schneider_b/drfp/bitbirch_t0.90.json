@@ -1,0 +1,17 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "drfp",
+ "method": "bitbirch",
+ "param": 0.9,
+ "n": 50000,
+ "label__ari": 9.873103395006126e-05,
+ "label__ami": 0.007792943173128889,
+ "label__nmi": 0.5320171844534727,
+ "label__homogeneity": 0.9997855036592794,
+ "label__completeness": 0.36244194960821235,
+ "label__v_measure": 0.5320171844534727,
+ "label__mcc_hungarian": 0.04000096663644047,
+ "label__n_clusters": 49081,
+ "label__singleton_fraction": 0.96728,
+ "label__largest_cluster_fraction": 0.0002
+}

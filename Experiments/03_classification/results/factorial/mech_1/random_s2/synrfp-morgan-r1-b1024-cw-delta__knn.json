@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "mech_1",
+ "scheme": "random",
+ "seed": 2,
+ "fingerprint": "synrfp-morgan-r1-b1024-cw-delta",
+ "model": "knn",
+ "n_train": 28505,
+ "n_val": 3168,
+ "n_test": 3168,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9892031448247307,
+ "accuracy": 0.9921085858585859,
+ "macro_f1": 0.9911352732704152,
+ "weighted_f1": 0.9920950995657527,
+ "balanced_accuracy": 0.9895111014594326,
+ "tokenizer": "morgan",
+ "radius": 1,
+ "bits": 1024,
+ "sketch": "cw",
+ "mode": "delta"
+}

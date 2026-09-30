@@ -1,0 +1,53 @@
+{
+  "study": "benchmark",
+  "dataset": "mech_2",
+  "scheme": "cv",
+  "seed": 0,
+  "fingerprint": "drfp",
+  "model": "mlp",
+  "backend": "torch_cuda",
+  "protocol": "sklearn_adam_fp32_v1",
+  "n_train": 25305,
+  "n_val": 6327,
+  "n_test": 6362,
+  "n_unfeaturised_test": 0,
+  "mcc": 0.9358013043611141,
+  "accuracy": 0.9418421879911978,
+  "macro_f1": 0.8455998977233022,
+  "weighted_f1": 0.9388126163881256,
+  "balanced_accuracy": 0.8159115003158728,
+  "epochs": 14,
+  "validation_scores": [
+    0.9114974318451206,
+    0.9419201896483603,
+    0.954563413670486,
+    0.9506124061635717,
+    0.9510075069142632,
+    0.951797708415646,
+    0.9510075069142632,
+    0.9537732121691032,
+    0.9529830106677203,
+    0.9525879099170288,
+    0.9533781114184117,
+    0.9537732121691032,
+    0.9537732121691032,
+    0.9537732121691032
+  ],
+  "fit_seconds": 0.6459134249016643,
+  "gpu_seconds": 0.664812525967136,
+  "torch_version": "2.4.0.post301",
+  "device": "cuda:0",
+  "peak_gpu_bytes": 279054848,
+  "preparation_seconds": 0.10958081705030054,
+  "elapsed_seconds": 0.7848543430445716,
+  "training_params": {
+    "hidden": [
+      512
+    ],
+    "alpha": 0.0001,
+    "max_iter": 200,
+    "batch_size": 256
+  },
+  "source_sha256": "c8240bf790349877804e42246b24bb96ba6607a7cd0e56f71c5c566a3214a283",
+  "completed_utc": "2026-09-21T09:18:43.907927+00:00"
+}

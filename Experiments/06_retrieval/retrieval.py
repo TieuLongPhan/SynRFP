@@ -22,7 +22,7 @@ from synrfp_exp.data import dataset_table
 from synrfp_exp.features import load
 from synrfp_exp.models import similarity_topk
 from synrfp_exp.scopes import full_scope
-from synrfp_exp.splits import TEST, default_scheme, make_split
+from synrfp_exp.splits import TEST, make_split
 
 
 def main():
@@ -42,8 +42,12 @@ def main():
         except FileNotFoundError as e:
             log.error("%s skipped: %s", dataset, e)
             continue
-        scheme = default_scheme(cfg, dataset)
-        code = make_split(cfg, dataset, scheme, 0)
+        scheme = rc.get("scheme", "fixed")
+        try:
+            code = make_split(cfg, dataset, scheme, 0)
+        except (FileNotFoundError, ValueError) as e:
+            log.error("%s skipped: %s", dataset, e)
+            continue
         q, db = code == TEST, code != TEST
         sc = full_scope(cfg, dataset)
         levels = spec.get("hierarchy") or [spec["label"]]

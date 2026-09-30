@@ -100,14 +100,19 @@ def _load_mech(cfg: Dict[str, Any]) -> pd.DataFrame:
             "level2": raw["mechanistic_class"].astype(str),
         }
     )
-    map_path = Path(cfg["paths"]["mech_level1_map"])
-    if map_path.exists():
+    map_value = cfg["paths"].get("mech_level1_map")
+    map_path = Path(map_value) if map_value is not None else None
+    if map_path is not None and map_path.exists():
         m = pd.read_csv(map_path, comment="#")
         lut = dict(zip(m["mechanistic_class"].astype(str), m["level1"].astype(str)))
         missing = sorted(set(df["level2"]) - set(lut))
         if missing:
             raise ValueError(f"{map_path} lacks level-1 labels for: {missing}")
         df["level1"] = df["level2"].map(lut)
+    elif "labels_lv1" in raw and raw["labels_lv1"].notna().all():
+        # SynCat's public Mech31k export supplies its nine-class grouping.
+        # Do not substitute the repository's deliberately unused draft map.
+        df["level1"] = raw["labels_lv1"].astype(str).values
     else:
         df["level1"] = np.nan
     return df
@@ -203,6 +208,35 @@ def canonical_reaction(rsmi: str) -> str:
             smis.append(Chem.MolToSmiles(mol))
         out.append(".".join(sorted(smis)))
     return ">>".join(out)
+
+
+def syncat_syntemp_split(cfg: Dict[str, Any], level: int) -> np.ndarray:
+    """
+    Boolean test mask for every row of the SynRXN ``syntemp`` reaction table,
+    from SynCat's published ``Split_R{level}`` column.
+
+    ``paths.syncat_syntemp_split`` must be row-aligned with SynRXN ``syntemp``
+    (same RSMI in the same order, identical R0 labels; see exp.md §2,
+    "SynTemp split") -- this is a Track B fixed-split source, not derived here.
+
+    :raises FileNotFoundError: If the SynCat file is not present.
+    :raises ValueError: If its row count does not match the SynRXN table.
+    """
+    path = Path(cfg["paths"]["syncat_syntemp_split"])
+    if not path.exists():
+        raise FileNotFoundError(
+            f"{path} missing; provide the SynCat checkout to source the "
+            "published SynTemp split (exp.md §2, 'SynTemp split')"
+        )
+    syncat = pd.read_csv(path)
+    rt = reaction_table(cfg, "syntemp")
+    if len(syncat) != len(rt):
+        raise ValueError(
+            f"{path} has {len(syncat)} rows, SynRXN syntemp has {len(rt)}; "
+            "not row-aligned, cannot source the published split"
+        )
+    col = f"Split_R{level}"
+    return syncat[col].astype(str).str.lower().eq("test").to_numpy()
 
 
 def canonical_for(cfg: Dict[str, Any], dataset: str) -> np.ndarray:

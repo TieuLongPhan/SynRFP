@@ -1,0 +1,21 @@
+{
+  "params": {
+    "hidden": [
+      512
+    ],
+    "alpha": 0.0001,
+    "max_iter": 200,
+    "batch_size": 256
+  },
+  "devices": [
+    0,
+    1
+  ],
+  "studies": [
+    "benchmark"
+  ],
+  "source_sha256": "c8240bf790349877804e42246b24bb96ba6607a7cd0e56f71c5c566a3214a283",
+  "config_sha256": "1cf233b5c5c766ee7f965dfe8c95c91238da46ede6aa6a7b88a62be25ae4d037",
+  "gpu_python": "/home/labhhc4/anaconda3/envs/rxnfp/bin/python",
+  "started_utc": "2026-09-21T09:13:59.720650+00:00"
+}

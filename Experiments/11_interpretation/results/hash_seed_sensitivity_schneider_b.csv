@@ -1,0 +1,7 @@
+dataset,fingerprint,seed_a,seed_b,n_rows,n_common_valid,mean_hamming,median_hamming,p95_hamming,mean_fraction_changed
+schneider_b,synrfp-wl-r2-b1024-parity-delta,0,1,2000,2000,58.287,52.0,92.0,0.0569208984375
+schneider_b,synrfp-wl-r2-b1024-parity-delta,0,2,2000,2000,58.307,52.0,92.0,0.0569404296875
+schneider_b,synrfp-wl-r2-b1024-parity-delta,0,3,2000,2000,58.54,52.0,92.0,0.05716796875
+schneider_b,synrfp-wl-r2-b1024-parity-delta,1,2,2000,2000,58.407,52.0,92.0,0.0570380859375
+schneider_b,synrfp-wl-r2-b1024-parity-delta,1,3,2000,2000,58.623,52.0,92.0,0.0572490234375
+schneider_b,synrfp-wl-r2-b1024-parity-delta,2,3,2000,2000,58.687,52.0,92.0,0.0573115234375

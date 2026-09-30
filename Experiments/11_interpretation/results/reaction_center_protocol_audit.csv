@@ -1,0 +1,5 @@
+protocol,reaction_column,radius,sample_requested,sample_valid,valid_fraction,delta_center_fraction_mean,delta_occurrence_center_fraction_mean,union_center_fraction_mean,center_coverage_mean,delta_token_fraction_mean
+primary_original,original_reactions,2,200,200,1.0,0.9081478110776738,0.8805843993233776,0.21564577209603233,1.0,0.1977732030337015
+primary_original,original_reactions,3,200,200,1.0,0.9389073049031973,0.9222700717573757,0.2860322708952485,1.0,0.26249393633814294
+historical_updated,updated_reaction,2,200,200,1.0,0.8278293523817524,0.8058710695624955,0.24424931073719536,1.0,0.2588408091887864
+historical_updated,updated_reaction,3,200,200,1.0,0.8747925525972704,0.8609636665002354,0.3139397835751712,1.0,0.31882895606647643

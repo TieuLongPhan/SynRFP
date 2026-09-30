@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "syntemp_r0",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-path-r2-b2048-parity-union",
+ "model": "knn",
+ "n_train": 39096,
+ "n_val": 4344,
+ "n_test": 4345,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.7141995603313737,
+ "accuracy": 0.7350978135788262,
+ "macro_f1": 0.5281745326069807,
+ "weighted_f1": 0.7234646205245248,
+ "balanced_accuracy": 0.5032552279004611,
+ "tokenizer": "path",
+ "radius": 2,
+ "bits": 2048,
+ "sketch": "parity",
+ "mode": "union"
+}

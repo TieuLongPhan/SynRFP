@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "fp_seed": 1,
+    "fixed_random_seed": 42,
+    "cv_seed_count": 25,
+    "fixed_seed_count": 3,
+    "factorial_seed_count": 5,
+    "factorial_grid_size": 162,
+    "expected_factorial_cells_per_model": 8100,
+    "cv_scheme_is_25_repeated_grouped_splits": true,
+    "track_b_fallback_is_seed_42": true,
+    "synrfp_hash_seed_is_fixed": true,
+    "invalid_saved_seed_records": 0,
+    "all_protocol_checks_pass": true
+  },
+  "invalid_records": []
+}

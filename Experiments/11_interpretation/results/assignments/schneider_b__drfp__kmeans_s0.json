@@ -1,0 +1,26 @@
+{
+  "assignment_file": "schneider_b__drfp__kmeans_s0.npz",
+  "dataset": "schneider_b",
+  "fingerprint": "drfp",
+  "invalid_rows": 0,
+  "k": 50,
+  "method": "kmeans",
+  "n_init": 10,
+  "n_rows": 50000,
+  "n_valid": 50000,
+  "scores_on_valid_rows": {
+    "label": {
+      "ami": 0.6598975585343971,
+      "ari": 0.19001157763278917,
+      "completeness": 0.7162466842906907,
+      "homogeneity": 0.6157131479883305,
+      "largest_cluster_fraction": 0.23906,
+      "mcc_hungarian": 0.46676997328272674,
+      "n_clusters": 50,
+      "nmi": 0.6621858858405021,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.6621858858405022
+    }
+  },
+  "seed": 0
+}

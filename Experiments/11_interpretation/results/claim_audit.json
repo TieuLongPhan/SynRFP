@@ -1,0 +1,56 @@
+{
+  "claims": [
+    {
+      "claim": "SynRFP AMI result on small_kmeans",
+      "datasets": 7,
+      "expected_datasets": 7,
+      "wins": 7,
+      "expected_wins": 7,
+      "supported": true
+    },
+    {
+      "claim": "SynRFP AMI result on large_minibatch",
+      "datasets": 5,
+      "expected_datasets": 5,
+      "wins": 4,
+      "expected_wins": 4,
+      "supported": true
+    },
+    {
+      "claim": "SynRFP AMI beats drfp on every paired stability run",
+      "groups": 2,
+      "runs": 40,
+      "wins": 40,
+      "supported": true
+    },
+    {
+      "claim": "SynRFP AMI beats rdkit_struct on every paired stability run",
+      "groups": 2,
+      "runs": 40,
+      "wins": 40,
+      "supported": true
+    },
+    {
+      "claim": "SynRFP AMI beats rdkit_diff on every paired stability run",
+      "groups": 2,
+      "runs": 40,
+      "wins": 40,
+      "supported": true
+    },
+    {
+      "claim": "SynRFP AMI beats rxnfp_mlm on every paired stability run",
+      "groups": 2,
+      "runs": 40,
+      "wins": 40,
+      "supported": true
+    },
+    {
+      "claim": "kNN signed delta exceeds union on every represented endpoint",
+      "endpoints": 10,
+      "runs": 50,
+      "wins": 50,
+      "supported": true
+    }
+  ],
+  "all_supported": true
+}

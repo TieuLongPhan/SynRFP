@@ -8,7 +8,9 @@
 One JSON per run under 03_classification/results/<study>/; existing runs are
 skipped, so the script can be interrupted and restarted.
 """
+import os
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # Experiments/
@@ -32,17 +34,50 @@ USES_VALIDATION = {"xgb"}
 DETERMINISTIC = {"knn"}
 
 
-def run_one(cfg, study, dataset, scheme, seed, fp, model, sc, code, y, out):
+def claim_result(out):
+    """Claim one result path atomically before doing an expensive fit.
+
+    Existing workers may be interrupted, so locks older than 24 hours are
+    treated as stale.  The completed JSON remains the authoritative output.
+    """
     if out.exists():
+        return None
+    lock = out.with_name(out.name + ".lock")
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        os.write(fd, str(os.getpid()).encode())
+        os.close(fd)
+        return lock
+    except FileExistsError:
+        try:
+            if time.time() - lock.stat().st_mtime > 24 * 60 * 60:
+                lock.unlink()
+        except FileNotFoundError:
+            pass
+        return None
+
+
+def release_result(lock):
+    if lock is not None:
+        try:
+            lock.unlink()
+        except FileNotFoundError:
+            pass
+
+
+def run_one(cfg, study, dataset, scheme, seed, fp, model, sc, code, y, out):
+    lock = claim_result(out)
+    if lock is None:
         return
+    log.info("START %s %s s%d %s %s", dataset, scheme, seed, fp, model)
     try:
         feats = load_for_run(cfg, sc.name, fp, dataset, scheme, seed)
     except FileNotFoundError as e:
         log.warning("skip %s: %s", fp, e)
+        release_result(lock)
         return
-    # rxnfp_ft rows are aligned with the dataset table, all others with the scope
-    rows = sc.ds_pos if fp == "rxnfp_ft" else sc.feat_rows
-    tr, va, te = (rows[code == c] for c in (TRAIN, VAL, TEST))
+    tr, va, te = (sc.feat_rows[code == c] for c in (TRAIN, VAL, TEST))
     ytr, yva = y[code == TRAIN], y[code == VAL]
     if model not in USES_VALIDATION:  # nothing to tune: validation rows join training
         tr, ytr = np.concatenate([tr, va]), np.concatenate([ytr, yva])
@@ -51,6 +86,7 @@ def run_one(cfg, study, dataset, scheme, seed, fp, model, sc, code, y, out):
                            va, yva, te, seed=seed, n_jobs=cfg["n_jobs"])
     except Skip as e:
         log.info("skip %s/%s/%s: %s", dataset, fp, model, e)
+        release_result(lock)
         return
     rec = {"study": study, "dataset": dataset, "scheme": scheme, "seed": seed,
            "fingerprint": fp, "model": model,
@@ -62,6 +98,7 @@ def run_one(cfg, study, dataset, scheme, seed, fp, model, sc, code, y, out):
         rec.update(tokenizer=c.tokenizer, radius=c.radius, bits=c.bits,
                    sketch=c.sketch, mode=c.mode)
     write_json(out, rec)
+    release_result(lock)
     log.info("%s %s s%d %-40s %-6s MCC=%.3f", dataset, scheme, seed, fp, model, rec["mcc"])
 
 
@@ -91,13 +128,21 @@ def main():  # noqa: C901
                 continue
             y, sc = ds["y"].to_numpy(), full_scope(cfg, dataset)
             runs = scheme_seeds(cfg, dataset, args.schemes, args.seeds)
+            extra = expand_fingerprints(
+                cfg, cfg.get("rxnfp_dataset_fingerprints", {}).get(dataset, []))
             for scheme, seed in runs:
-                code = make_split(cfg, dataset, scheme, seed)
+                try:
+                    code = make_split(cfg, dataset, scheme, seed)
+                except (FileNotFoundError, ValueError) as e:
+                    log.error("%s %s s%d skipped: %s", dataset, scheme, seed, e)
+                    continue
                 first = seed == min(s for sch, s in runs if sch == scheme)
-                for fp in fps:
+                # Track B dataset-specific RXNFP encoders (exp.md §4): never
+                # used outside their own dataset, so only added for "fixed".
+                run_fps = fps + extra if scheme == "fixed" else fps
+                for fp in run_fps:
                     for model in args.models or study["models"]:
-                        if (scheme == "published" and model in DETERMINISTIC
-                                and fp != "rxnfp_ft" and not first):
+                        if scheme == "fixed" and model in DETERMINISTIC and not first:
                             continue  # same split and features, same result
                         out = root / dataset / f"{scheme}_s{seed}" / f"{fp}__{model}.json"
                         run_one(cfg, "benchmark", dataset, scheme, seed, fp, model,

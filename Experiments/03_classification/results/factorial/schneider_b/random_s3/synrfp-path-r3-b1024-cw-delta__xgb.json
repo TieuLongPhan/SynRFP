@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "schneider_b",
+ "scheme": "random",
+ "seed": 3,
+ "fingerprint": "synrfp-path-r3-b1024-cw-delta",
+ "model": "xgb",
+ "n_train": 40000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 5,
+ "mcc": 0.9516697883293326,
+ "accuracy": 0.9526,
+ "macro_f1": 0.9528493098500577,
+ "weighted_f1": 0.9528493098500574,
+ "balanced_accuracy": 0.9525999999999999,
+ "tokenizer": "path",
+ "radius": 3,
+ "bits": 1024,
+ "sketch": "cw",
+ "mode": "delta"
+}

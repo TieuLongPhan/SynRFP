@@ -50,7 +50,7 @@ def main():
                 "duplicate_records": int((n_per > 1).sum()),
                 "label_conflict_records": int((n_lab > 1).sum()),
                 "accuracy_ceiling": float((majority + (~valid).sum()) / len(df))}
-        for scheme in ("published", "random", "grouped"):
+        for scheme in ("cv", "fixed"):
             p = cfg["paths"]["work"] / "splits" / name / f"{scheme}_s0.npy"
             if not p.exists():
                 continue

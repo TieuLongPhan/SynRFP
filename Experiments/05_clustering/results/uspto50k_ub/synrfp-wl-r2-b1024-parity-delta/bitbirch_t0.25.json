@@ -1,0 +1,18 @@
+{
+ "dataset": "uspto50k_ub",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "bitbirch",
+ "param": 0.25,
+ "n": 50016,
+ "elapsed_seconds": 1.4721111350227147,
+ "label__ari": 0.005153958944684765,
+ "label__ami": 0.2283197295823802,
+ "label__nmi": 0.3258234507796856,
+ "label__homogeneity": 0.9185810615545312,
+ "label__completeness": 0.19803321173226526,
+ "label__v_measure": 0.3258234507796856,
+ "label__mcc_hungarian": 0.08703940611162432,
+ "label__n_clusters": 13957,
+ "label__singleton_fraction": 0.17124520153550865,
+ "label__largest_cluster_fraction": 0.005058381317978247
+}

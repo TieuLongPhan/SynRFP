@@ -1,0 +1,186 @@
+{
+  "checks": [
+    {
+      "file": "EXPLANATORY_RESULTS.md",
+      "ok": true
+    },
+    {
+      "file": "classification_label_free_by_dataset.csv",
+      "exists": true,
+      "rows": 420,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "classification_family_leave_one_out.csv",
+      "exists": true,
+      "rows": 84,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "clustering_ami_ari.csv",
+      "exists": true,
+      "rows": 62,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "clustering_stability_paired_summary.csv",
+      "exists": true,
+      "rows": 32,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "clustering_paired_inference.csv",
+      "exists": true,
+      "rows": 32,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "knn_mode_paired_inference.csv",
+      "exists": true,
+      "rows": 10,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "claim_audit.json",
+      "exists": true,
+      "claims": 7,
+      "all_supported": true,
+      "ok": true
+    },
+    {
+      "file": "feature_validity_sparsity.csv",
+      "exists": true,
+      "rows": 35,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "cross_task_endpoint_margins.csv",
+      "exists": true,
+      "rows": 92,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "cross_task_margin_summary.csv",
+      "exists": true,
+      "rows": 16,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "cross_task_drfp_matched.csv",
+      "exists": true,
+      "rows": 6,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "cluster_replay_summary.csv",
+      "exists": true,
+      "rows": 7,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "clustering_sensitivity_schneider_b.csv",
+      "exists": true,
+      "rows": 4,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "hash_seed_sensitivity_schneider_b.csv",
+      "exists": true,
+      "rows": 6,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "reaction_center_protocol_audit.csv",
+      "exists": true,
+      "rows": 4,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "feature_cost_summary.csv",
+      "exists": true,
+      "rows": 35,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "feature_cost_by_fingerprint.csv",
+      "exists": true,
+      "rows": 5,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "reaction_center_class_summary.csv",
+      "exists": true,
+      "rows": 63,
+      "missing_columns": [],
+      "finite_numeric": true,
+      "ok": true
+    },
+    {
+      "file": "classification_progress.json",
+      "ok": true,
+      "benchmark_xgb_percent": 100.0,
+      "factorial_xgb_percent": 100.0
+    },
+    {
+      "file": "protocol_audit.json",
+      "ok": true,
+      "all_protocol_checks_pass": true,
+      "invalid_records": 0
+    },
+    {
+      "file": "handoff_audit.json",
+      "ok": true,
+      "status": "post_reclaim",
+      "duplicate_free": true,
+      "locks": 0
+    },
+    {
+      "file": "assignments/ + cluster_examples_mech2.csv",
+      "ok": true,
+      "assignment_records": 7,
+      "example_files": 2,
+      "examples": 70
+    },
+    {
+      "file": "08_reaction_center/results/per_reaction.csv",
+      "ok": true,
+      "rows": 31673,
+      "finite_numeric": true,
+      "mean_occurrence_center_fraction": 0.8748869354206121,
+      "mean_union_center_fraction": 0.2134846081814982
+    }
+  ],
+  "all_ok": true
+}

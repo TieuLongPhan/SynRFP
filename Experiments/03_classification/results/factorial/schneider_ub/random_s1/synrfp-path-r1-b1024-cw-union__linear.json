@@ -1,0 +1,22 @@
+{
+ "study": "factorial",
+ "dataset": "schneider_ub",
+ "scheme": "random",
+ "seed": 1,
+ "fingerprint": "synrfp-path-r1-b1024-cw-union",
+ "model": "linear",
+ "n_train": 45000,
+ "n_val": 5000,
+ "n_test": 5000,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.8492380074844679,
+ "accuracy": 0.852,
+ "macro_f1": 0.8543530510072095,
+ "weighted_f1": 0.8543530510072095,
+ "balanced_accuracy": 0.852,
+ "tokenizer": "path",
+ "radius": 1,
+ "bits": 1024,
+ "sketch": "cw",
+ "mode": "union"
+}

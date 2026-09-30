@@ -1,0 +1,88 @@
+{
+  "knn": {
+    "available": 1874,
+    "completed": 319,
+    "remaining": 1555,
+    "unavailable": [
+      {
+        "dataset": "tpl_ub",
+        "scheme": "fixed",
+        "seed": 0,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "tpl_b",
+        "scheme": "fixed",
+        "seed": 0,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "mech_1",
+        "reason": "missing dataset table"
+      },
+      {
+        "dataset": "mech_2",
+        "reason": "missing dataset table"
+      }
+    ]
+  },
+  "xgb": {
+    "available": 2022,
+    "completed": 0,
+    "remaining": 2022,
+    "unavailable": [
+      {
+        "dataset": "tpl_ub",
+        "scheme": "fixed",
+        "seed": 0,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "tpl_ub",
+        "scheme": "fixed",
+        "seed": 1,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "tpl_ub",
+        "scheme": "fixed",
+        "seed": 2,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "tpl_b",
+        "scheme": "fixed",
+        "seed": 0,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "tpl_b",
+        "scheme": "fixed",
+        "seed": 1,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "tpl_b",
+        "scheme": "fixed",
+        "seed": 2,
+        "fingerprint": "rxnfp_tpl",
+        "reason": "missing features"
+      },
+      {
+        "dataset": "mech_1",
+        "reason": "missing dataset table"
+      },
+      {
+        "dataset": "mech_2",
+        "reason": "missing dataset table"
+      }
+    ]
+  }
+}

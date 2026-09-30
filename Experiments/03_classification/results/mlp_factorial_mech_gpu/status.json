@@ -1,0 +1,12 @@
+{
+  "pid": 3772150,
+  "started_utc": "2026-09-21T14:36:00.494888+00:00",
+  "initial_pending": 322,
+  "already_completed": 1298,
+  "finished": 322,
+  "failed": 0,
+  "active": {},
+  "status": "complete",
+  "elapsed_seconds": 378.10983094002586,
+  "remaining": 0
+}

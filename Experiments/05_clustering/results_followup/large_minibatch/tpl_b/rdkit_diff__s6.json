@@ -1,0 +1,22 @@
+{
+ "dataset": "tpl_b",
+ "fingerprint": "rdkit_diff",
+ "method": "minibatch_kmeans",
+ "seed": 6,
+ "k": 1000,
+ "n": 445115,
+ "batch_size": 8192,
+ "n_init": 3,
+ "max_iter": 100,
+ "elapsed_seconds": 390.35283061419614,
+ "label__ari": 0.11573179136081274,
+ "label__ami": 0.5627144252557721,
+ "label__nmi": 0.6150301617029493,
+ "label__homogeneity": 0.638960888933028,
+ "label__completeness": 0.5928272575190427,
+ "label__v_measure": 0.6150301617029493,
+ "label__mcc_hungarian": 0.21597510894631478,
+ "label__n_clusters": 1000,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.006191658335486335
+}

@@ -1,0 +1,117 @@
+{
+  "pid": 2280036,
+  "started_utc": "2026-09-20T17:57:16.081373+00:00",
+  "threads_per_worker": 16,
+  "knn_workers": 2,
+  "stage": "xgb",
+  "status": "running",
+  "stages": {
+    "knn": {
+      "available": 1874,
+      "completed": 1874,
+      "remaining": 0,
+      "unavailable": [
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "mech_1",
+          "reason": "missing dataset table"
+        },
+        {
+          "dataset": "mech_2",
+          "reason": "missing dataset table"
+        }
+      ]
+    },
+    "xgb": {
+      "available": 2022,
+      "completed": 35,
+      "remaining": 1987,
+      "unavailable": [
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 1,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 2,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 1,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 2,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "mech_1",
+          "reason": "missing dataset table"
+        },
+        {
+          "dataset": "mech_2",
+          "reason": "missing dataset table"
+        }
+      ]
+    }
+  },
+  "updated_utc": "2026-09-21T14:10:28.244567+00:00",
+  "workers": [
+    {
+      "pid": 3694603,
+      "datasets": [
+        "schneider_ub",
+        "schneider_b",
+        "tpl_ub",
+        "tpl_b",
+        "uspto50k_ub",
+        "uspto50k_b",
+        "syntemp_r0",
+        "syntemp_r1",
+        "syntemp_r2",
+        "ecreact_1",
+        "ecreact_2",
+        "ecreact_3"
+      ],
+      "log": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/cpu_benchmark_queue/xgb_worker0.log"
+    }
+  ]
+}

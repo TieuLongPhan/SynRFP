@@ -1,0 +1,17 @@
+{
+ "dataset": "tpl_b",
+ "fingerprint": "drfp",
+ "method": "bitbirch",
+ "param": 0.3,
+ "n": 445115,
+ "label__ari": 0.007918699230771622,
+ "label__ami": 0.16220883639133155,
+ "label__nmi": 0.6441061654542422,
+ "label__homogeneity": 0.9466254827101656,
+ "label__completeness": 0.4881157971487919,
+ "label__v_measure": 0.6441061654542422,
+ "label__mcc_hungarian": 0.08738465361603895,
+ "label__n_clusters": 286335,
+ "label__singleton_fraction": 0.5397998270109972,
+ "label__largest_cluster_fraction": 0.0023162553497410782
+}

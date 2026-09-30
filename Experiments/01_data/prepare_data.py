@@ -33,7 +33,11 @@ def main():
             continue
         y = ds["y"].to_numpy()
         for scheme, seed in scheme_seeds(cfg, name):
-            code = make_split(cfg, name, scheme, seed)
+            try:
+                code = make_split(cfg, name, scheme, seed)
+            except (FileNotFoundError, ValueError) as e:
+                log.error("%s %s s%d skipped: %s", name, scheme, seed, e)
+                continue
             rows.append({"dataset": name, "scheme": scheme, "seed": seed,
                          "records": len(ds), "classes": int(ds["y"].nunique()),
                          **split_summary(code, y)})

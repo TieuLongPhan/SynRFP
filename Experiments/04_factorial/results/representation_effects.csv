@@ -1,0 +1,33 @@
+kind,factor,level,mean,sd,effect
+main,Model,knn,0.837,0.135,
+main,Model,mlp,0.907,0.085,
+main,Model,xgb,0.918,0.078,
+main,Tokenizer,morgan,0.893,0.099,
+main,Tokenizer,path,0.874,0.125,
+main,Tokenizer,wl,0.894,0.097,
+main,Radius,1,0.894,0.112,
+main,Radius,2,0.894,0.101,
+main,Radius,3,0.873,0.111,
+main,Bits,512,0.869,0.119,
+main,Bits,1024,0.891,0.104,
+main,Bits,2048,0.902,0.099,
+main,Sketch,cw,0.856,0.136,
+main,Sketch,minhash,0.893,0.09,
+main,Sketch,parity,0.913,0.083,
+main,Mode,delta,0.941,0.069,
+main,Mode,union,0.834,0.114,
+interaction,Interaction,Model × tokenizer,,,0.013
+interaction,Interaction,Model × radius,,,0.0
+interaction,Interaction,Model × bits,,,0.009
+interaction,Interaction,Model × sketch,,,0.022
+interaction,Interaction,Model × mode,,,0.181
+interaction,Interaction,Tokenizer × radius,,,0.014
+interaction,Interaction,Tokenizer × bits,,,0.001
+interaction,Interaction,Tokenizer × sketch,,,0.0
+interaction,Interaction,Tokenizer × mode,,,0.007
+interaction,Interaction,Radius × bits,,,0.006
+interaction,Interaction,Radius × sketch,,,0.004
+interaction,Interaction,Radius × mode,,,0.033
+interaction,Interaction,Bits × sketch,,,0.013
+interaction,Interaction,Bits × mode,,,0.029
+interaction,Interaction,Sketch × mode,,,0.115

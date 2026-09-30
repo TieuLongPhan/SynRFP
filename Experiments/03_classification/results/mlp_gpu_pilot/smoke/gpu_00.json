@@ -1,0 +1,15 @@
+{
+  "backend": "gpu",
+  "seed": 0,
+  "repeat": 0,
+  "fold": 0,
+  "epochs": 1,
+  "fit_seconds": 0.33055369497742504,
+  "total_seconds": 0.331526953028515,
+  "validation_scores": [
+    0.9692460894584656
+  ],
+  "version": "2.4.0.post301",
+  "max_epochs": 1,
+  "test_accuracy": 0.9641602974592026
+}

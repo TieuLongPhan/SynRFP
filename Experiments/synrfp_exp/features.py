@@ -32,7 +32,7 @@ os.environ["PYTHONPATH"] = os.pathsep.join(
     [str(REPO_ROOT)] + [p for p in os.environ.get("PYTHONPATH", "").split(os.pathsep) if p]
 )
 
-EXTERNAL = ("rxnfp_pretrained", "rxnfp_ft")
+EXTERNAL = ("rxnfp", "rxnfp_mlm", "rxnfp_tpl", "rxnfp_schneider")
 CHUNK = 500
 
 
@@ -220,26 +220,18 @@ def compute(cfg: Dict[str, Any], scope: str, rsmis: Sequence[str], fps: List[str
         if f.startswith("synrfp-"):
             continue
         if f in EXTERNAL:
-            if not _path(cfg, scope, f).exists() and f == "rxnfp_pretrained":
-                log.warning("%s: %s missing; run external/rxnfp_embed.py", scope, f)
+            if not _path(cfg, scope, f).exists():
+                log.warning("%s: %s missing; run external/rxnfp/rxnfp_embed.py", scope, f)
             continue
         compute_baseline(cfg, scope, list(rsmis), f)
-
-
-def external_ft_path(cfg: Dict[str, Any], dataset: str, scheme: str, seed: int) -> Path:
-    """Fine-tuned RXNFP embeddings are split specific (trained on that split's train set)."""
-    return cfg["paths"]["work"] / "features" / "rxnfp_ft" / dataset / f"{scheme}_s{seed}.npz"
 
 
 def load_for_run(
     cfg: Dict[str, Any], scope: str, fp: str, dataset: str, scheme: str, seed: int
 ) -> Features:
-    if fp == "rxnfp_ft":
-        p = external_ft_path(cfg, dataset, scheme, seed)
-        if not p.exists():
-            raise FileNotFoundError(f"missing {p}; run external/rxnfp_finetune.py")
-        z = np.load(p)
-        return Features(z["X"], 0, z["ok"])
+    """Features for one classification run. ``dataset``/``scheme``/``seed`` are
+    unused now that no fingerprint is split specific; kept so call sites don't
+    need to special-case the (now-removed) fine-tuned RXNFP path."""
     return load(cfg, scope, fp)
 
 

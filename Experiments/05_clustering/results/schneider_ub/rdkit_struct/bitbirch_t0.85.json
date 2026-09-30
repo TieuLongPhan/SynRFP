@@ -1,0 +1,17 @@
+{
+ "dataset": "schneider_ub",
+ "fingerprint": "rdkit_struct",
+ "method": "bitbirch",
+ "param": 0.85,
+ "n": 50000,
+ "label__ari": 0.006013274161739533,
+ "label__ami": 0.13150650755472687,
+ "label__nmi": 0.5324768428630671,
+ "label__homogeneity": 0.9525613737685038,
+ "label__completeness": 0.3695176383147725,
+ "label__v_measure": 0.5324768428630671,
+ "label__mcc_hungarian": 0.08810858060504317,
+ "label__n_clusters": 33488,
+ "label__singleton_fraction": 0.5355,
+ "label__largest_cluster_fraction": 0.00576
+}

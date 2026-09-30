@@ -1,0 +1,17 @@
+{
+ "dataset": "tpl_b",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "bitbirch",
+ "param": 0.7,
+ "n": 445115,
+ "label__ari": 0.0022869577073417525,
+ "label__ami": 0.0924085650456963,
+ "label__nmi": 0.6520432802990996,
+ "label__homogeneity": 0.9892177573897842,
+ "label__completeness": 0.48629113974811317,
+ "label__v_measure": 0.6520432802990996,
+ "label__mcc_hungarian": 0.06886152653889291,
+ "label__n_clusters": 367784,
+ "label__singleton_fraction": 0.7564112645046785,
+ "label__largest_cluster_fraction": 0.0009368365478584186
+}

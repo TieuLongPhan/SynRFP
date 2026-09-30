@@ -1,0 +1,21 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "rxnfp_mlm",
+ "method": "kmeans_resolution",
+ "seed": 0,
+ "k_ratio": 2.0,
+ "k": 100,
+ "reference_class_count": 50,
+ "n": 50000,
+ "elapsed_seconds": 47.16630859696306,
+ "label__ari": 0.2315188520064515,
+ "label__ami": 0.520016235579971,
+ "label__nmi": 0.5256872990799405,
+ "label__homogeneity": 0.5659688911797945,
+ "label__completeness": 0.4907586319074899,
+ "label__v_measure": 0.5256872990799404,
+ "label__mcc_hungarian": 0.3310448675750207,
+ "label__n_clusters": 100,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.02756
+}

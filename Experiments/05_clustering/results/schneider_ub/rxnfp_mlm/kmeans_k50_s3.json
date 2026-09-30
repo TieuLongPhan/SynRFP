@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_ub",
+ "fingerprint": "rxnfp_mlm",
+ "method": "kmeans",
+ "param": 3,
+ "n": 50000,
+ "elapsed_seconds": 39.84531640796922,
+ "label__ari": 0.2964398788618855,
+ "label__ami": 0.5378988766999699,
+ "label__nmi": 0.5407807490930047,
+ "label__homogeneity": 0.5375572366489954,
+ "label__completeness": 0.5440431549551382,
+ "label__v_measure": 0.5407807490930048,
+ "label__mcc_hungarian": 0.42716988539258544,
+ "label__n_clusters": 50,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.03746
+}

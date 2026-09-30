@@ -10,6 +10,7 @@ dependencies:
   - pip:
       - rxnfp
       - pandas
-      - numpy
+      - numpy<1.24,>=1.19  # >=1.24 removes np.typeDict, which the pinned old
+                            # scipy/scikit-learn/transformers stack needs
       - pyyaml
       - scikit-learn

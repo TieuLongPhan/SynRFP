@@ -13,8 +13,7 @@ $PY 10_enzyme_activity/activity.py --export-only "${CFG[@]}"
 
 # RXNFP runs in its own environment and reads the CSV exports written above
 # (see external/rxnfp/environment.yml). Run it here, e.g. on a GPU machine:
-#   conda run -n rxnfp python external/rxnfp/rxnfp_embed.py    "${CFG[@]}"
-#   conda run -n rxnfp python external/rxnfp/rxnfp_finetune.py "${CFG[@]}"
+#   conda run -n rxnfp python external/rxnfp/rxnfp_embed.py "${CFG[@]}"
 # Steps below skip RXNFP rows (with a warning) until the embeddings exist.
 
 $PY 02_featurize/featurize.py --study all "${CFG[@]}"

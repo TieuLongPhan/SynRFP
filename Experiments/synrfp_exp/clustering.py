@@ -21,6 +21,20 @@ def kmeans(feats: Features, k: int, seed: int, n_init: int = 10) -> np.ndarray:
     return KMeans(n_clusters=k, n_init=n_init, random_state=seed).fit_predict(X)
 
 
+def minibatch_kmeans(
+    feats: Features, k: int, seed: int, batch_size: int = 8192,
+    n_init: int = 3, max_iter: int = 100,
+) -> np.ndarray:
+    """Scalable K-means used for the full TPL and ECReact comparisons."""
+    from sklearn.cluster import MiniBatchKMeans
+
+    X = feats.dense()
+    return MiniBatchKMeans(
+        n_clusters=k, random_state=seed, batch_size=batch_size,
+        n_init=n_init, max_iter=max_iter, reassignment_ratio=0.01,
+    ).fit_predict(X)
+
+
 def bitbirch(
     feats: Features, threshold: float, branching_factor: int = 50,
     merge_criterion: str = "diameter",

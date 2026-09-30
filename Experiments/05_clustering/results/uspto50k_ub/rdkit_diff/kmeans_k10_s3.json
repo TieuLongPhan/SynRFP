@@ -1,0 +1,18 @@
+{
+ "dataset": "uspto50k_ub",
+ "fingerprint": "rdkit_diff",
+ "method": "kmeans",
+ "param": 3,
+ "n": 50016,
+ "elapsed_seconds": 65.5440372119192,
+ "label__ari": 0.11904113622808972,
+ "label__ami": 0.30533969065526023,
+ "label__nmi": 0.30564756422657247,
+ "label__homogeneity": 0.3112406514064218,
+ "label__completeness": 0.3002519473309232,
+ "label__v_measure": 0.3056475642265725,
+ "label__mcc_hungarian": 0.15902696228302038,
+ "label__n_clusters": 10,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.3490483045425464
+}

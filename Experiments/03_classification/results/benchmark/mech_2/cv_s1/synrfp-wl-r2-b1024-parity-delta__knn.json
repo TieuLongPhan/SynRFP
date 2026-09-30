@@ -1,0 +1,22 @@
+{
+ "study": "benchmark",
+ "dataset": "mech_2",
+ "scheme": "cv",
+ "seed": 1,
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "model": "knn",
+ "n_train": 25340,
+ "n_val": 6325,
+ "n_test": 6327,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9647677093541216,
+ "accuracy": 0.9680733364943891,
+ "macro_f1": 0.9278380538389702,
+ "weighted_f1": 0.9669461038705648,
+ "balanced_accuracy": 0.9035215250942942,
+ "tokenizer": "wl",
+ "radius": 2,
+ "bits": 1024,
+ "sketch": "parity",
+ "mode": "delta"
+}

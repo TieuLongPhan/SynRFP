@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "syntemp_r1",
+ "scheme": "cv",
+ "seed": 0,
+ "fingerprint": "rxnfp_mlm",
+ "model": "knn",
+ "n_train": 34635,
+ "n_val": 8660,
+ "n_test": 8806,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.7145131050816883,
+ "accuracy": 0.7200772200772201,
+ "macro_f1": 0.487848557337283,
+ "weighted_f1": 0.7011603430301547,
+ "balanced_accuracy": 0.48982137653478036
+}

@@ -1,0 +1,17 @@
+{
+ "dataset": "tpl_b",
+ "fingerprint": "rdkit_struct",
+ "method": "bitbirch",
+ "param": 0.75,
+ "n": 445115,
+ "label__ari": 0.01000182058195501,
+ "label__ami": 0.2123233652031793,
+ "label__nmi": 0.5388332420226275,
+ "label__homogeneity": 0.7043830169144696,
+ "label__completeness": 0.4362923069512336,
+ "label__v_measure": 0.5388332420226275,
+ "label__mcc_hungarian": 0.08262649687026775,
+ "label__n_clusters": 91693,
+ "label__singleton_fraction": 0.11102524066814194,
+ "label__largest_cluster_fraction": 0.002808263033148737
+}

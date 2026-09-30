@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "rxnfp_mlm",
+ "method": "hdbscan",
+ "param": 5,
+ "n": 50000,
+ "noise_fraction": 0.65152,
+ "label__ari": 0.06600834191960281,
+ "label__ami": 0.2352867908929965,
+ "label__nmi": 0.5665530331946818,
+ "label__homogeneity": 0.9737272546586375,
+ "label__completeness": 0.3994985443713187,
+ "label__v_measure": 0.5665530331946818,
+ "label__mcc_hungarian": 0.20427796116393632,
+ "label__n_clusters": 33668,
+ "label__singleton_fraction": 0.65152,
+ "label__largest_cluster_fraction": 0.01802
+}

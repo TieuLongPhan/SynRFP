@@ -1,0 +1,9 @@
+{
+  "cpu": "AMD Ryzen Threadripper 7970X, 32 physical cores / 64 logical CPUs",
+  "cpu_worker_threads": 4,
+  "gpu_worker_device": 1,
+  "gpu": "0, NVIDIA RTX A6000, 595.84, 49140 MiB\n1, NVIDIA RTX A6000, 595.84, 49140 MiB\n",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "cpu_python": "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+  "gpu_python": "/home/labhhc4/anaconda3/envs/rxnfp/bin/python"
+}

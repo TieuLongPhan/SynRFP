@@ -1,0 +1,18 @@
+{
+ "dataset": "uspto50k_ub",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "hdbscan",
+ "param": 5,
+ "n": 50016,
+ "noise_fraction": 0.3817178502879079,
+ "label__ari": 0.002712112082085358,
+ "label__ami": 0.20308032392816033,
+ "label__nmi": 0.33140565671876276,
+ "label__homogeneity": 0.9924623645326801,
+ "label__completeness": 0.19891372720596354,
+ "label__v_measure": 0.3314056567187628,
+ "label__mcc_hungarian": 0.11291563081819224,
+ "label__n_clusters": 21443,
+ "label__singleton_fraction": 0.3817178502879079,
+ "label__largest_cluster_fraction": 0.004198656429942419
+}

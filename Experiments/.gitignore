@@ -1,5 +1,21 @@
 # caches (tables, splits, features, fine-tuned models) are rebuilt by the scripts
 work/
+
+# Model/checkpoint artifacts are local-only and must not enter the repository.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+**/weights/
+**/checkpoints/
+
+# Local MLP pilot inputs/splits include cached features and initialized weights.
+03_classification/results/mlp_gpu_pilot/X.npy
+03_classification/results/mlp_gpu_pilot/smoke/X.npy
+03_classification/results/mlp_gpu_pilot/split_*.npz
+03_classification/results/mlp_gpu_pilot/smoke/split_*.npz
+03_classification/results/multitask_hierarchy/*.npz
 # the curated mechanism mapping is provided by the authors
 # (data/mech_level1_map.csv is intentionally NOT ignored)
 **/__pycache__/

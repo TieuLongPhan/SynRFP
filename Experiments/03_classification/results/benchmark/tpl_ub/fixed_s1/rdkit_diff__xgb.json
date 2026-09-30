@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "tpl_ub",
+ "scheme": "fixed",
+ "seed": 1,
+ "fingerprint": "rdkit_diff",
+ "model": "xgb",
+ "n_train": 360543,
+ "n_val": 40061,
+ "n_test": 44511,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.97792510379808,
+ "accuracy": 0.9780279032149356,
+ "macro_f1": 0.9702571458270786,
+ "weighted_f1": 0.9777032974035551,
+ "balanced_accuracy": 0.9690661911168421
+}

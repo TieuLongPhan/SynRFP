@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_ub",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "hdbscan",
+ "param": 5,
+ "n": 50000,
+ "noise_fraction": 0.47676,
+ "label__ari": 0.015980007453501966,
+ "label__ami": 0.29466479979886206,
+ "label__nmi": 0.574690881086076,
+ "label__homogeneity": 0.9814027285254955,
+ "label__completeness": 0.4063088224288277,
+ "label__v_measure": 0.574690881086076,
+ "label__mcc_hungarian": 0.14205662698529564,
+ "label__n_clusters": 26188,
+ "label__singleton_fraction": 0.47676,
+ "label__largest_cluster_fraction": 0.0031
+}

@@ -1,0 +1,38 @@
+{
+  "assignment_file": "mech_2__rxnfp_mlm__kmeans_s0.npz",
+  "dataset": "mech_2",
+  "fingerprint": "rxnfp_mlm",
+  "invalid_rows": 0,
+  "k": 62,
+  "method": "kmeans",
+  "n_init": 10,
+  "n_rows": 31667,
+  "n_valid": 31667,
+  "scores_on_valid_rows": {
+    "level1": {
+      "ami": 0.13759501978051256,
+      "ari": 0.021048984243989866,
+      "completeness": 0.09758235034451702,
+      "homogeneity": 0.24755079691365536,
+      "largest_cluster_fraction": 0.03243123756592036,
+      "mcc_hungarian": 0.11615081345379973,
+      "n_clusters": 62,
+      "nmi": 0.13998417007696268,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.13998417007696265
+    },
+    "level2": {
+      "ami": 0.15632674914162326,
+      "ari": 0.031178061974557757,
+      "completeness": 0.14789137996209456,
+      "homogeneity": 0.2028981495881194,
+      "largest_cluster_fraction": 0.03243123756592036,
+      "mcc_hungarian": 0.07681765368322001,
+      "n_clusters": 62,
+      "nmi": 0.17108200106666588,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.1710820010666659
+    }
+  },
+  "seed": 0
+}

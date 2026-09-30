@@ -1,0 +1,22 @@
+{
+ "dataset": "tpl_b",
+ "fingerprint": "rxnfp_mlm",
+ "method": "minibatch_kmeans",
+ "seed": 1,
+ "k": 1000,
+ "n": 445115,
+ "batch_size": 8192,
+ "n_init": 3,
+ "max_iter": 100,
+ "elapsed_seconds": 54.68857094296254,
+ "label__ari": 0.06472472347478582,
+ "label__ami": 0.46099629028652167,
+ "label__nmi": 0.5281225382832194,
+ "label__homogeneity": 0.5535251604675174,
+ "label__completeness": 0.5049491862537666,
+ "label__v_measure": 0.5281225382832194,
+ "label__mcc_hungarian": 0.14673033283441614,
+ "label__n_clusters": 1000,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.003938308077687788
+}

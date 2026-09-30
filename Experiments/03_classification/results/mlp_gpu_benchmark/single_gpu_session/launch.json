@@ -1,0 +1,16 @@
+{
+  "pid": 2141784,
+  "command": [
+    "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+    "-u",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/mlp_gpu_queue.py",
+    "--gpu-python",
+    "/home/labhhc4/anaconda3/envs/rxnfp/bin/python",
+    "--devices",
+    "1",
+    "--studies",
+    "benchmark",
+    "--control",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/mlp_gpu_benchmark"
+  ]
+}

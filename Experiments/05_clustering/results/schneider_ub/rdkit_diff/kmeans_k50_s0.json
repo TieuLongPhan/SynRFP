@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_ub",
+ "fingerprint": "rdkit_diff",
+ "method": "kmeans",
+ "param": 0,
+ "n": 50000,
+ "elapsed_seconds": 230.98969012894668,
+ "label__ari": 0.16404305802942878,
+ "label__ami": 0.465303710594114,
+ "label__nmi": 0.46874212424420686,
+ "label__homogeneity": 0.4266623522615154,
+ "label__completeness": 0.5200303591210396,
+ "label__v_measure": 0.46874212424420686,
+ "label__mcc_hungarian": 0.2916223334924858,
+ "label__n_clusters": 50,
+ "label__singleton_fraction": 6e-05,
+ "label__largest_cluster_fraction": 0.14642
+}

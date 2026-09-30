@@ -1,0 +1,356 @@
+{
+  "classification_cv": {
+    "knn": {
+      "rows": 14,
+      "comparisons": {
+        "drfp": {
+          "wins": 12,
+          "ties": 0,
+          "losses": 2,
+          "mean_margin": 0.034397968269757814,
+          "min_margin": -0.04491788338044722,
+          "max_margin": 0.08046249464355804,
+          "loss_datasets": [
+            "tpl_b",
+            "tpl_ub"
+          ]
+        },
+        "rdkit_diff": {
+          "wins": 12,
+          "ties": 0,
+          "losses": 2,
+          "mean_margin": 0.13172164685788532,
+          "min_margin": -0.010582674636275824,
+          "max_margin": 0.3120074158823172,
+          "loss_datasets": [
+            "ecreact_1",
+            "ecreact_3"
+          ]
+        },
+        "rdkit_struct": {
+          "wins": 14,
+          "ties": 0,
+          "losses": 0,
+          "mean_margin": 0.3479469697408111,
+          "min_margin": 0.01544753149869893,
+          "max_margin": 0.5465016020024559,
+          "loss_datasets": []
+        },
+        "rxnfp_mlm": {
+          "wins": 14,
+          "ties": 0,
+          "losses": 0,
+          "mean_margin": 0.1765555588514598,
+          "min_margin": 0.023465789874002274,
+          "max_margin": 0.4184341931510125,
+          "loss_datasets": []
+        }
+      },
+      "synrfp_mean_rank": 1.2857142857142858,
+      "baseline_mean_ranks": {
+        "drfp": 2.2857142857142856,
+        "rdkit_diff": 2.9285714285714284,
+        "rdkit_struct": 4.857142857142857,
+        "rxnfp_mlm": 3.642857142857143
+      }
+    },
+    "mlp": {
+      "rows": 14,
+      "comparisons": {
+        "drfp": {
+          "wins": 11,
+          "ties": 0,
+          "losses": 3,
+          "mean_margin": 0.02286155438678707,
+          "min_margin": -0.021532595438369606,
+          "max_margin": 0.06357978785328866,
+          "loss_datasets": [
+            "syntemp_r2",
+            "tpl_b",
+            "tpl_ub"
+          ]
+        },
+        "rdkit_diff": {
+          "wins": 13,
+          "ties": 0,
+          "losses": 1,
+          "mean_margin": 0.027668005970895106,
+          "min_margin": -6.655924974841021e-05,
+          "max_margin": 0.1443902332565763,
+          "loss_datasets": [
+            "tpl_b"
+          ]
+        },
+        "rdkit_struct": {
+          "wins": 14,
+          "ties": 0,
+          "losses": 0,
+          "mean_margin": 0.07024715744716396,
+          "min_margin": 0.02820848413156196,
+          "max_margin": 0.2955615842685264,
+          "loss_datasets": []
+        },
+        "rxnfp_mlm": {
+          "wins": 14,
+          "ties": 0,
+          "losses": 0,
+          "mean_margin": 0.09762239250209592,
+          "min_margin": 0.01561153981986707,
+          "max_margin": 0.32420963098217115,
+          "loss_datasets": []
+        }
+      },
+      "synrfp_mean_rank": 1.2857142857142858,
+      "baseline_mean_ranks": {
+        "drfp": 2.5714285714285716,
+        "rdkit_diff": 2.7142857142857144,
+        "rdkit_struct": 4.214285714285714,
+        "rxnfp_mlm": 4.214285714285714
+      }
+    },
+    "xgb": {
+      "rows": 14,
+      "comparisons": {
+        "drfp": {
+          "wins": 11,
+          "ties": 0,
+          "losses": 3,
+          "mean_margin": 0.01715382150238188,
+          "min_margin": -0.01956180240691263,
+          "max_margin": 0.04255830274964023,
+          "loss_datasets": [
+            "syntemp_r2",
+            "tpl_b",
+            "tpl_ub"
+          ]
+        },
+        "rdkit_diff": {
+          "wins": 5,
+          "ties": 0,
+          "losses": 9,
+          "mean_margin": -0.003806861968343448,
+          "min_margin": -0.037045811230846826,
+          "max_margin": 0.03507110710755412,
+          "loss_datasets": [
+            "ecreact_1",
+            "ecreact_3",
+            "mech_1",
+            "mech_2",
+            "schneider_b",
+            "schneider_ub",
+            "tpl_b",
+            "tpl_ub",
+            "uspto50k_ub"
+          ]
+        },
+        "rdkit_struct": {
+          "wins": 14,
+          "ties": 0,
+          "losses": 0,
+          "mean_margin": 0.04673041698220983,
+          "min_margin": 0.008116275037831855,
+          "max_margin": 0.23119902767703682,
+          "loss_datasets": []
+        },
+        "rxnfp_mlm": {
+          "wins": 14,
+          "ties": 0,
+          "losses": 0,
+          "mean_margin": 0.18562136482380337,
+          "min_margin": 0.05356567873441376,
+          "max_margin": 0.47518671642695515,
+          "loss_datasets": []
+        }
+      },
+      "synrfp_mean_rank": 1.8571428571428572,
+      "baseline_mean_ranks": {
+        "drfp": 3.142857142857143,
+        "rdkit_diff": 1.4285714285714286,
+        "rdkit_struct": 3.5714285714285716,
+        "rxnfp_mlm": 5.0
+      }
+    }
+  },
+  "clustering": {
+    "large_minibatch/ecreact_1": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.3412592081369248,
+          "synrfp_value": 0.3412592081369248
+        },
+        "ARI": {
+          "fingerprint": "rdkit_diff",
+          "value": 0.2391722695737108,
+          "synrfp_value": 0.1915050459131998
+        }
+      }
+    },
+    "large_minibatch/ecreact_2": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.5239037971829325,
+          "synrfp_value": 0.5239037971829325
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.2395264906127182,
+          "synrfp_value": 0.2395264906127182
+        }
+      }
+    },
+    "large_minibatch/ecreact_3": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.5874461238055956,
+          "synrfp_value": 0.5874461238055956
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.2572680817713101,
+          "synrfp_value": 0.2572680817713101
+        }
+      }
+    },
+    "large_minibatch/tpl_b": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.7424005558488671,
+          "synrfp_value": 0.7424005558488671
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.2202430718910739,
+          "synrfp_value": 0.2202430718910739
+        }
+      }
+    },
+    "large_minibatch/tpl_ub": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "drfp",
+          "value": 0.6529965065895655,
+          "synrfp_value": 0.6299898514151614
+        },
+        "ARI": {
+          "fingerprint": "drfp",
+          "value": 0.1602550812359423,
+          "synrfp_value": 0.1501538316465666
+        }
+      }
+    },
+    "small_kmeans/mech_1": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.3634443619020733,
+          "synrfp_value": 0.3634443619020733
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.1735101906985567,
+          "synrfp_value": 0.1735101906985567
+        }
+      }
+    },
+    "small_kmeans/mech_2": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.612766455988588,
+          "synrfp_value": 0.612766455988588
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.1749792165875571,
+          "synrfp_value": 0.1749792165875571
+        }
+      }
+    },
+    "small_kmeans/schneider_b": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.718597203452006,
+          "synrfp_value": 0.718597203452006
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.4231265768570651,
+          "synrfp_value": 0.4231265768570651
+        }
+      }
+    },
+    "small_kmeans/schneider_ub": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.5750028903378883,
+          "synrfp_value": 0.5750028903378883
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.3052390951590108,
+          "synrfp_value": 0.3052390951590108
+        }
+      }
+    },
+    "small_kmeans/syntemp_r0": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.7020908562537576,
+          "synrfp_value": 0.7020908562537576
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.1660097150042885,
+          "synrfp_value": 0.1660097150042885
+        }
+      }
+    },
+    "small_kmeans/uspto50k_b": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.4345633374325547,
+          "synrfp_value": 0.4345633374325547
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.2670878136613192,
+          "synrfp_value": 0.2670878136613192
+        }
+      }
+    },
+    "small_kmeans/uspto50k_ub": {
+      "fingerprints": 5,
+      "leaders": {
+        "AMI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.4021631348738646,
+          "synrfp_value": 0.4021631348738646
+        },
+        "ARI": {
+          "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+          "value": 0.2042672893642131,
+          "synrfp_value": 0.2042672893642131
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "study": "r2_nested_grouped_mlp_v1",
+  "stage": "outer_refit",
+  "dataset": "syntemp_r2",
+  "fingerprint": "drfp",
+  "outer_seed": 19,
+  "family": "auxiliary",
+  "aux_weight": 0.02,
+  "lr": 0.001,
+  "refit_epochs": 71,
+  "n_train": 34752,
+  "n_test": 8689,
+  "mcc": 0.9548923245153026,
+  "accuracy": 0.9640925307860513,
+  "balanced_accuracy": 0.9160384842800113,
+  "macro_f1": 0.9259050517852745,
+  "seconds": 9.68244451796636,
+  "device": "cuda:1"
+}

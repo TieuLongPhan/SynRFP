@@ -1,0 +1,60 @@
+{
+  "generated_utc": "2026-09-30T18:03:01.329372+00:00",
+  "benchmark": {
+    "expected": {
+      "knn": 2188,
+      "xgb": 2364
+    },
+    "observed": {
+      "xgb": 2364,
+      "mlp": 2414,
+      "knn": 2188
+    },
+    "completion": {
+      "knn": {
+        "completed": 2188,
+        "expected": 2188,
+        "fraction": 1.0,
+        "percent": 100.0
+      },
+      "xgb": {
+        "completed": 2364,
+        "expected": 2364,
+        "fraction": 1.0,
+        "percent": 100.0
+      }
+    },
+    "missing_by_dataset": {
+      "knn": {},
+      "xgb": {}
+    }
+  },
+  "factorial": {
+    "expected_per_model": 8100,
+    "observed": {
+      "xgb": 8100,
+      "knn": 8100,
+      "mlp": 8100
+    },
+    "completion": {
+      "knn": {
+        "completed": 8100,
+        "expected": 8100,
+        "fraction": 1.0,
+        "percent": 100.0
+      },
+      "mlp": {
+        "completed": 8100,
+        "expected": 8100,
+        "fraction": 1.0,
+        "percent": 100.0
+      },
+      "xgb": {
+        "completed": 8100,
+        "expected": 8100,
+        "fraction": 1.0,
+        "percent": 100.0
+      }
+    }
+  }
+}

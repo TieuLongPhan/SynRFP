@@ -1,0 +1,40 @@
+{
+ "dataset": "tpl_ub",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "scheme": "cv",
+ "seed": 0,
+ "n_train": 267295,
+ "n_val": 88911,
+ "n_test": 88909,
+ "classes": 1000,
+ "features": 1024,
+ "threads": 16,
+ "rounds": 3,
+ "requested_rounds": 3,
+ "stopped_by_time": false,
+ "full_protocol_fit": false,
+ "fit_seconds": 44.483428478008136,
+ "total_seconds": 44.825736899045296,
+ "round_seconds": [
+  14.283574230968952,
+  14.409740520059131,
+  14.24291818891652
+ ],
+ "median_later_round_seconds": 14.326329354487825,
+ "projected_500_round_seconds": 7164.669117658457,
+ "best_iteration": 2,
+ "max_rss_gib": 7.027587890625,
+ "version": "3.2.0",
+ "training_params": {
+  "n_estimators": 500,
+  "learning_rate": 0.1,
+  "max_depth": 6,
+  "early_stopping_rounds": 20,
+  "max_classes": null
+ },
+ "mcc": 0.6426493520891583,
+ "accuracy": 0.644096773105085,
+ "macro_f1": 0.41176962162736724,
+ "weighted_f1": 0.6101142126021043,
+ "balanced_accuracy": 0.4393151019652268
+}

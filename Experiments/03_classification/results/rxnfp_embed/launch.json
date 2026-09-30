@@ -1,0 +1,27 @@
+{
+  "tpl_and_mech_rxnfp": {
+    "pid": 3264342,
+    "command": [
+      "/home/labhhc4/anaconda3/envs/rxnfp/bin/python",
+      "-u",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/external/rxnfp/rxnfp_embed.py",
+      "--fingerprints",
+      "rxnfp_tpl",
+      "rxnfp",
+      "rxnfp_mlm"
+    ]
+  },
+  "mech_features": {
+    "pid": 3264343,
+    "command": [
+      "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+      "-u",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/02_featurize/featurize.py",
+      "--study",
+      "benchmark",
+      "--datasets",
+      "mech_1",
+      "mech_2"
+    ]
+  }
+}

@@ -61,18 +61,14 @@ primary source and must be before it enters the paper.
 | tpl_u / _b | 445,115 | 1,000 | train 400,604 / test 44,511 | train = RXNFP's `bert_class_1k_tpl` training set (400,000 + 604 val) |
 | uspto50k_u / _b | 50,016 | 10 | train 45,014 / test 5,002 | |
 | ecreact_1/2/3 | 185,734 | 7 / 63 / 175 | train 166,918 / test 18,816 | from CLAIRE; test n equals CLAIRE's |
-| syntemp_r0/r1/r2 | 43,441 | 143 / 356 / 680 | **none** | SynCat has per-level splits, see below |
-| mech_1 / mech_2 | 31,673 | 9 / 63 | none (not in SynRXN) | raw MechFinder CSV; mech_1 needs `data/mech_level1_map.csv` (only a DRAFT exists) |
+| syntemp_r0/r1/r2 | 43,441 | 143 / 356 / 680 | **none** | deterministic stratified 8:1:1 Track B split, seed 42 |
+| mech_1 / mech_2 | 31,673 | 9 / 63 | none (not in SynRXN) | public SynCat Mech31k export; source `labels_lv1` supplies level 1 |
 | ehreact_activity | 1,943 rows | binary per assay | none | small-data SI case study |
 
 - Validation: 10 % of train, stratified, for every published split.
-- **SynTemp split:** `../SynCat/Data/raw/Syntemp_cluster.csv.gz` is
-  row-aligned with SynRXN `syntemp` (same RSMI in the same order, identical R0
-  labels; `R_ID` = `r_id` without the `syntemp_` prefix). It has
-  `Split_R0/R1/R2` (train 39,096 / test 4,345), a different split per level
-  (~82 % agreement between levels). Import these as the published split of
-  syntemp_r0/r1/r2.
-- **Mech:** one fixed stratified 8:1:1 split (seed 0) for Track B.
+- **SynTemp and Mech Track B split:** use the configured stratified 8:1:1
+  split with seed 42. Label these Track B results as our reference points only,
+  rather than direct replications of an external published split.
 - Classes with < 10 records are removed (logged in `work/tables/ds_<name>.json`).
 - Zenodo bug in `synrxn`: `DataLoader(source="zenodo")` fails with HTTP 400
   (`resolve_record_id` requests `size=200`, Zenodo allows 25 without a
@@ -97,17 +93,19 @@ Two classification tracks, never mixed in one table or test.
   `synrfp_default` (WL r2, 1024-bit parity, delta), `drfp` (2048, r3),
   `rdkit_struct`, `rdkit_diff`, `rxnfp` (= `bert_ft`), `rxnfp_mlm`
   (= `bert_pretrained`, label-free control).
-- Models: 5-NN (Tanimoto for bits, cosine otherwise), linear probe (SGD
-  logistic), MLP (512 hidden). XGBoost available but not in the plan.
+- Models: 5-NN (Tanimoto for bits, cosine otherwise), XGBoost (CPU histogram,
+  multiclass objective), MLP (512 hidden, GPU). XGBoost restored to the primary
+  comparison on 2026-09-21 at the author's request; no class-count exclusion.
+  Earlier linear-probe results are retained separately from the configured comparison.
 - Statistics per dataset, see §6.
 - If TPL/ECReact MLP runs are too slow: 5×2 or 3×5 CV for those four
   datasets, stated in the methods.
 
 ### Track B — reference comparison on one fixed split (no significance test)
-- Split: SynRXN `split` column; SynTemp from SynCat `Split_R*`; Mech fixed
-  8:1:1 seed 0.
-- Our six fingerprints with the same heads: kNN once, linear/MLP 3 seeds
-  (initialisation only).
+- Split: SynRXN `split` column; SynTemp and Mech fixed stratified 8:1:1, seed 42.
+- Our six fingerprints with the same heads: kNN once, XGBoost/MLP 3 seeds
+  on the same fixed partition. With full row/column sampling, XGBoost seed
+  repeats can be identical; these are reference runs, not independent data replicates.
 - RXNFP fine-tuned rows, **no fine-tuning of our own**: use the published
   dataset-specific encoders where their training split equals ours —
   `bert_class_1k_tpl` for tpl_u/b, `bert_ft_10k_25s` for schneider_u/b.
@@ -123,7 +121,7 @@ Two classification tracks, never mixed in one table or test.
 ### Other studies
 | # | study | scope | protocol |
 |---|---|---|---|
-| 04 | factorial + ANOVA | 162 SynRFP configs (tokenizer wl/morgan/path × radius 1–3 × bits 512/1024/2048 × sketch parity/minhash/cw × mode delta/union), 10 datasets (≤ 50k subsample) | 3 random splits; kNN, linear ×3 seeds, MLP ×1 seed |
+| 04 | factorial + ANOVA | 162 SynRFP configs (tokenizer wl/morgan/path × radius 1–3 × bits 512/1024/2048 × sketch parity/minhash/cw × mode delta/union), 10 datasets (≤ 50k subsample) | 5 matched random splits; kNN, XGBoost, MLP ×5 seeds |
 | 05 | clustering | 7 datasets | full data, no split; see below |
 | 06 | retrieval | 5 datasets × 6 fingerprints, k = 1/5/10 | published split (random seed 0 otherwise) |
 | 07 | robustness | balanced/unbalanced pairs, SMILES randomisation, reversal, resolution (bits, sketch, mode, radius) | as in `config.yaml → robustness` |
@@ -131,18 +129,21 @@ Two classification tracks, never mixed in one table or test.
 | 10 | EHreact activity | 3 assays × 6 fingerprints × kNN/logistic | 5 × stratified group 5-fold CV, pooled OOF: MCC, AP, ROC-AUC |
 
 ### Clustering (05)
-- Already implemented: k-means (k = #labels, 3 seeds), BitBIRCH (bblean,
-  Tanimoto threshold sweep 0.30–0.90, bit fingerprints only), HDBSCAN
+- Already implemented: k-means (k = #labels, 10 external seeds with 10 internal
+  restarts per fit), BitBIRCH (bblean, Tanimoto threshold sensitivity sweep
+  0.05–0.90, bit fingerprints only), HDBSCAN
   (PCA-50, min_cluster_size 5/10/25/50).
 - Metrics: ARI, AMI, NMI, homogeneity, completeness, V-measure,
   Hungarian-matched MCC (extra clusters count as errors), n_clusters,
   singleton and largest-cluster fraction — against every hierarchy level
   (SynTemp R0/R1/R2, Mech 1/2) → granularity profile.
-- Unsupervised, so no train/test split and no 5×5. Uncertainty: k-means
-  seeds; add bootstrap CIs (5 × 80 % reaction subsamples) if a statistical
-  claim is made.
+- Unsupervised, so no train/test split and no 5×5. K-means seed variation only
+  measures optimizer initialization on a fixed dataset. For population-level
+  uncertainty, use paired group resampling shared across fingerprints; do not
+  describe a small collection of overlapping 80% subsamples as a bootstrap CI.
 - Fingerprints: label-free only — `synrfp_default`, `drfp`, `rdkit_struct`,
-  `rxnfp_mlm`. `bert_ft` saw class labels (flag it if kept). Never cluster
+  `rdkit_diff`, `rxnfp_mlm`. BitBIRCH uses only the three binary fingerprints.
+  `bert_ft` saw class labels (flag it if kept). Never cluster
   SynCat/CLAIRE embeddings (trained on the labels being scored → circular).
 - **Bug to fix:** the BitBIRCH threshold is chosen by AMI on `uspto50k_b`,
   which is also reported in `bitbirch_frozen.csv` → that row is label-tuned.
@@ -258,61 +259,86 @@ with direct numbers):
 | block | formula | runs |
 |---|---|---|
 | A: 5×5 CV | 14 datasets × 25 splits × 6 fp × 3 models | 6,300 |
-| B: our fingerprints | 14 × 6 fp × (1 kNN + 3 linear + 3 MLP) | 588 |
+| B: our fingerprints | 14 × 6 fp × (1 kNN + 3 XGBoost + 3 MLP) | 588 |
 | B: RXNFP dataset-specific encoders | 4 datasets × 7 | 28 |
 | B: SynCat retrain | ecreact ×3 + mech ×2 (or all 14) | 5 (14) GPU |
 | B: T5Chem (optional) | 14 | 14 GPU |
-| 04 factorial | 10 × 162 × (kNN + 3 linear + 1 MLP) | 11,340 |
+| 04 factorial | 10 × 162 × 5 splits × 3 models | 24,300 |
 | 05 clustering | 7 × [4 fp × (3 k-means + 4 HDBSCAN) + 3 bit fp × 13 BitBIRCH] | 469 |
 | 06 retrieval | 5 × 6 | 30 |
 | 10 EHreact | 3 tasks × 6 fp × 2 models × 5 repeats | 180 |
 | **total** | | **≈ 18,900 CPU runs + 5–28 GPU trainings** |
 
 Featurisation is once per reaction table. RXNFP embedding = inference only
-(5 encoders at most, all reaction tables). Main CPU cost: MLP on TPL
-(400k × 1,000 classes) and ECReact inside Track A.
+(5 encoders at most, all reaction tables). MLP now runs on GPUs. XGBoost on
+TPL (400k × 1,000 classes) is a potential CPU bottleneck; measure its cost
+before scheduling the full workload. CPU timing probes are isolated in
+`03_classification/results/xgb_cost_pilot` and are not benchmark results.
 
 ---
 
 ## 8. To do (in order)
 
-1. Commit the reviewed working tree; MAP tokenizer (`synrfp/tokenizers/map.py`,
-   `core.py` hook, `tests/tokenizers/test_map.py`) as its own commit.
-2. Config: benchmark fingerprints → `synrfp_default, drfp, rdkit_struct,
-   rdkit_diff, rxnfp, rxnfp_mlm`; remove `rxnfp_ft`; rename feature
-   `rxnfp_pretrained` → `rxnfp`; `activity.min_positives: 10`; clustering
-   fingerprints → `synrfp_default, drfp, rdkit_struct, rxnfp_mlm`; add a
-   practical-significance threshold.
-3. `external/rxnfp/rxnfp_embed.py`: write `rxnfp` (`bert_ft`), `rxnfp_mlm`
-   (`bert_pretrained`), and for Track B `rxnfp_tpl` (`bert_class_1k_tpl`,
-   tpl only) and `rxnfp_schneider` (`bert_ft_10k_25s`, schneider only).
-   Run the `bert_ft` vs `bert_class_1k_tpl` weight check. Drop
-   `rxnfp_finetune.py` and the `rxnfp_ft` paths in `classify.py`/`features.py`.
-4. `synrfp_exp/metrics.py`: add `weighted_f1`.
-5. `synrfp_exp/splits.py` (+ copy in `external/rxnfp/common.py`): add the
-   grouped 5×5 `cv` scheme (Track A) and a `fixed` scheme for Track B
-   (published column; SynCat `Split_R*` for syntemp; 8:1:1 seed 0 for mech).
-   Update `scheme_seeds` and `benchmark.schemes`.
-6. `synrfp_exp/data.py::dataset_table`: source syntemp's published split from
-   SynCat `Split_R{0,1,2}` (join on RSMI or row order; assert alignment).
-7. `09_report/report.py`: per-dataset RM-ANOVA/Friedman + Tukey HSD,
-   simultaneous CIs vs SynRFP, practical threshold, sign plot and CI plot;
-   drop bold tables; separate Track B reference table (our rows + RXNFP
-   dataset-specific rows + SynCat/CLAIRE direct numbers; indirect numbers
-   as a footnote).
-8. Fix the BitBIRCH calibration leak (§3).
-9. Verify every **VERIFY** item: SynCat splits for the other 7 datasets and
-   final published numbers; CLAIRE test identity; `bert_ft` training data;
-   T5Chem/SynRXN numbers; Ash et al. details.
-10. Provide `data/mech_level1_map.csv` (author).
-11. Update `Experiments/README.md` (still says "3 split schemes × 5 seeds";
-    add Track A/B, RXNFP weights, `10_enzyme_activity`, `environment.yml`).
-12. Fix the Zenodo `size=200` bug in SynRXN.
-13. Smoke test (small config: `synrxn.source: local` on subset CSVs,
-    `paths.results_root` in a scratch folder), then the full run.
-14. Paper (`paper/synrfp_paper`, branch `enhance-from-thesis-ch08`): Track A/B
-    protocol, SynTemp r1/r2, EHreact case study, contamination note; results
-    stay `\TODO` until the re-run.
+1. ✅ Done (bundled into `877984d "exp"`, not a separate commit as originally
+   planned). MAP tokenizer: `synrfp/tokenizers/map.py`, `core.py` hook,
+   `tests/tokenizers/test_map.py`.
+2. ✅ Done. Config: `benchmark.fingerprints` →
+   `synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp, rxnfp_mlm`;
+   `rxnfp_ft` removed; `rxnfp_pretrained` → `rxnfp`; `activity.min_positives:
+   10`; `clustering.fingerprints` → `synrfp_default, drfp, rdkit_struct,
+   rxnfp_mlm`; `statistics.practical_threshold: 0.01` added (author should
+   confirm the value).
+3. ✅ Done, **not run** (no `rxnfp` env on this machine; `bert_class_1k_tpl`/
+   `bert_ft_10k_25s` are not downloaded either). `external/rxnfp/rxnfp_embed.py`
+   rewritten to write `rxnfp` (`bert_ft`), `rxnfp_mlm` (`bert_pretrained`),
+   `rxnfp_tpl` (`bert_class_1k_tpl`, tpl_ub/tpl_b only), `rxnfp_schneider`
+   (`bert_ft_10k_25s`, schneider_ub/schneider_b only; dataset scoping via the
+   new `rxnfp_dataset_fingerprints` config section), plus `--check-weights`
+   for the `bert_ft` vs `bert_class_1k_tpl` diff. `rxnfp_finetune.py` deleted;
+   `rxnfp_ft` paths removed from `classify.py`/`features.py`.
+4. ✅ Done. `synrfp_exp/metrics.py::classification` now returns `weighted_f1`.
+5. ✅ Done. `synrfp_exp/splits.py`: `published`/`random`/`grouped` replaced by
+   `cv` (Track A, seed = repeat*5+fold, 25 seeds) and `fixed` (Track B).
+   `common.py`'s dead copy of the old `scheme_seeds`/`split_codes` removed
+   (only used by the now-deleted finetune script). `06_retrieval`,
+   `07_robustness`, `01_data/audit_data.py` updated to the new scheme names.
+6. ⚠️ Code done, **data blocked**: `synrfp_exp/data.py::syncat_syntemp_split`
+   reads SynCat's `Split_R{0,1,2}` (new `paths.syncat_syntemp_split`,
+   row-aligned per §2) and `splits.py::fixed_split` uses it for
+   syntemp_r0/r1/r2. No `../SynCat` checkout exists on this machine, so this
+   raises `FileNotFoundError` until one is provided; `classify.py`/
+   `01_data/prepare_data.py` catch it and skip just that (dataset, scheme)
+   pair rather than crashing the run.
+7. ✅ Done, **statistics unverified** (Ash et al. full text still not
+   accessible — VERIFY before results enter the paper). `09_report/report.py`
+   rewritten: per-dataset one-way RM-ANOVA (subject = cv seed) + Tukey HSD
+   simultaneous CIs vs `synrfp_default` (folds/repeats treated as independent
+   replicates for the post-hoc step — not exact repeated-measures Tukey),
+   practical-significance marks (+/=/-), extended sign plot (`sign_<model>.pdf`)
+   and CI plot (`ci_<model>.pdf`, SI); `plain_latex_table` drops bold/underline
+   in favour of mean ± SD + mark; Track B is a separate, unmarked reference
+   table (`track_b_<model>.csv/.tex`) plus the literal SynCat/CLAIRE numbers
+   from §5 as `track_b_reference_{syncat,claire}.csv` (still VERIFY).
+   Friedman/Nemenyi/Holm-Wilcoxon kept as the SI cross-dataset summary.
+8. ✅ Done (marked, not excluded/recalibrated). `bitbirch_frozen.csv` now has
+   a `calibration_leak` column, `True` for the calibration dataset's own row
+   (a `log.warning` is also emitted); every other row is unaffected.
+9. ❌ Not done, **blocked**: needs `../SynCat/paper/old_syncat/SI.tex` and
+   `../SynRXN`, neither present on this machine.
+10. ❌ Not done (author): `data/mech_level1_map.csv` — only the DRAFT exists.
+11. ❌ Not done: `Experiments/README.md` still describes the old scheme design.
+12. ⚠️ Workaround only (`synrxn.record_id` pin in `config.yaml`, pre-existing);
+    the upstream `synrxn` fix is not done.
+13. ❌ Not started: no smoke test or full run (needs SynRXN data, not
+    downloaded on this machine as part of this session).
+14. ❌ Not started (paper repo, separate branch).
+
+Session note (2026-09-18, this pass): a `synrfp` conda env was built from
+`Experiments/environment.yml` + `rdkit` (`env.yml`'s only addition) and
+`pip install -e ".[dev]"`; versions satisfy `pyproject.toml`; 115 tests pass.
+Items 2–8 above were implemented and smoke-tested against synthetic/in-memory
+data (no real SynRXN table was downloaded, so none of the actual experiment
+scripts have been run end-to-end yet — that's item 13).
 
 ---
 

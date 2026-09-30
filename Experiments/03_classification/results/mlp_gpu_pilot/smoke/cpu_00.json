@@ -1,0 +1,15 @@
+{
+  "backend": "cpu",
+  "seed": 0,
+  "repeat": 0,
+  "fold": 0,
+  "epochs": 1,
+  "fit_seconds": 0.5688000100199133,
+  "total_seconds": 0.6053602810716256,
+  "validation_scores": [
+    0.9692460317460317
+  ],
+  "version": "1.9.1",
+  "max_epochs": 1,
+  "test_accuracy": 0.9641602974592026
+}

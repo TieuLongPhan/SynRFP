@@ -70,7 +70,7 @@ def run_pairs_and_transfer(cfg, rc, out):
                          "mean": sim.mean(), "median": np.median(sim),
                          "q10": np.quantile(sim, 0.1),
                          "identical": float(rowwise_identical(FU, FB).mean())})
-            code = make_split(cfg, m["B"], "published", 0)[pb]
+            code = make_split(cfg, m["B"], "fixed", 0)[pb]
             labels = pd.Categorical(np.concatenate([dsu["label"], dsb["label"]]))
             yu = labels.codes[: len(dsu)]
             yb = labels.codes[len(dsu):]
@@ -134,11 +134,22 @@ def run_perturb(cfg, rc, out):
             frev = compute_in_memory(cfg, rev, fp)
             s_p, s_r = rowwise_similarity(fo, fpert), rowwise_similarity(fo, frev)
             same_p, same_r = rowwise_identical(fo, fpert), rowwise_identical(fo, frev)
+            valid_p = fo.ok & fpert.ok
+            valid_r = fo.ok & frev.ok
             rows.append({"dataset": dataset, "fingerprint": fp, "n": len(orig),
                          "identical_under_randomisation": float(same_p.mean()),
                          "mean_sim_randomised": s_p.mean(),
                          "identical_to_reverse": float(same_r.mean()),
-                         "mean_sim_reverse": s_r.mean()})
+                         "mean_sim_reverse": s_r.mean(),
+                         "valid_original": float(fo.ok.mean()),
+                         "valid_randomised": float(fpert.ok.mean()),
+                         "valid_reversed": float(frev.ok.mean()),
+                         "shared_valid_randomised": float(valid_p.mean()),
+                         "shared_valid_reversed": float(valid_r.mean()),
+                         "identical_under_randomisation_shared_valid":
+                             float(same_p[valid_p].mean()) if valid_p.any() else np.nan,
+                         "identical_to_reverse_shared_valid":
+                             float(same_r[valid_r].mean()) if valid_r.any() else np.nan})
             log.info("%s %s: identical under randomisation %.3f", dataset, fp,
                      rows[-1]["identical_under_randomisation"])
     pd.DataFrame(rows).to_csv(out / "perturb.csv", index=False)

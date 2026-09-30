@@ -1,0 +1,97 @@
+{
+  "pid": 2240182,
+  "started_utc": "2026-09-20T17:34:09.415097+00:00",
+  "threads": 16,
+  "stage": "knn",
+  "status": "running",
+  "stages": {
+    "knn": {
+      "available": 1874,
+      "completed": 327,
+      "remaining": 1547,
+      "unavailable": [
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "mech_1",
+          "reason": "missing dataset table"
+        },
+        {
+          "dataset": "mech_2",
+          "reason": "missing dataset table"
+        }
+      ]
+    },
+    "xgb": {
+      "available": 2022,
+      "completed": 0,
+      "remaining": 2022,
+      "unavailable": [
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 1,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_ub",
+          "scheme": "fixed",
+          "seed": 2,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 0,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 1,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "tpl_b",
+          "scheme": "fixed",
+          "seed": 2,
+          "fingerprint": "rxnfp_tpl",
+          "reason": "missing features"
+        },
+        {
+          "dataset": "mech_1",
+          "reason": "missing dataset table"
+        },
+        {
+          "dataset": "mech_2",
+          "reason": "missing dataset table"
+        }
+      ]
+    }
+  },
+  "child_pid": 2240218,
+  "updated_utc": "2026-09-20T17:57:10.365748+00:00"
+}

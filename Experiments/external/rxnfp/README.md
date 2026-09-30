@@ -2,8 +2,7 @@
 
 RXNFP pins Python 3.8, an old `transformers` and numpy 1.x, so it runs in its
 own conda environment. It exchanges data with the main suite only through files
-in `Experiments/work/`: it reads `export/*.csv.gz` and `splits/*.npy` and writes
-`.npz` feature files.
+in `Experiments/work/`: it reads `export/*.csv.gz` and writes `.npz` feature files.
 
 ## Setup
 
@@ -13,43 +12,49 @@ conda activate rxnfp
 python -c "import rxnfp, pkg_resources; print(pkg_resources.resource_filename('rxnfp', 'models/transformers'))"
 ```
 
-**No separate model download is needed.** The PyPI wheel `rxnfp==0.1.0`
-(≈75 MB) ships the BERT weights. The command above prints their location:
+The PyPI wheel `rxnfp==0.1.0` (≈75 MB) ships two of the four encoders used
+here. The other two must be downloaded manually from
+<https://github.com/rxn4chemistry/rxnfp/tree/master/rxnfp/models/transformers>
+into the folder printed above (exp.md §4 has the full provenance):
 
-| folder | what it is | used by |
-| --- | --- | --- |
-| `bert_pretrained/` | masked-LM pre-training only, no class labels | start point of `rxnfp_finetune.py`; `rxnfp_embed.py --model bert_pretrained` |
-| `bert_ft/` | `bert_pretrained` fine-tuned on Pistachio reaction classes: the published RXNFP fingerprint | `rxnfp_embed.py` (default) |
-| `bert_ft_10k_25s/` | a further fine-tuned variant (see the RXNFP repository) | not used |
-
-If the weights are missing (for example, after installing from a source
-checkout without the model files), download them from the upstream repository
-at <https://github.com/rxn4chemistry/rxnfp/tree/master/rxnfp/models/transformers>
-and place them in the folder printed above.
+| fingerprint | folder | ships in the wheel? | trained on | used by |
+| --- | --- | --- | --- | --- |
+| `rxnfp_mlm` | `bert_pretrained/` | yes | masked-LM only, no class labels | Track A/B, clustering (label-free) |
+| `rxnfp` | `bert_ft/` | yes | `bert_pretrained` fine-tuned on Pistachio reaction classes: the published RXNFP fingerprint | Track A/B |
+| `rxnfp_tpl` | `bert_class_1k_tpl/` | **no, download** | `bert_pretrained` fine-tuned on the TPL template classes (our TPL train split) | Track B, tpl_ub/tpl_b only |
+| `rxnfp_schneider` | `bert_ft_10k_25s/` | **no, download** | fine-tuned on the 10k Schneider training reactions (our Schneider train split) | Track B, schneider_ub/schneider_b only |
 
 ## Run
 
-After `01_data/prepare_data.py` (and `10_enzyme_activity/activity.py --export`
-for the activity study), from the repository root:
+After `01_data/prepare_data.py` (and `10_enzyme_activity/activity.py
+--export-only` for the activity study), from the repository root:
 
 ```bash
-conda run -n rxnfp python Experiments/external/rxnfp/rxnfp_embed.py              # all reaction tables
-conda run -n rxnfp python Experiments/external/rxnfp/rxnfp_finetune.py --schemes published   # GPU
+conda run -n rxnfp python Experiments/external/rxnfp/rxnfp_embed.py
 ```
 
-- `rxnfp_embed.py` → `work/features/<rxn_key>/rxnfp_pretrained.npz` (256-d, one
-  row per reaction). Runs on CPU; a GPU is faster.
-- `rxnfp_finetune.py` fine-tunes `bert_pretrained` once per
-  (dataset, scheme, seed) on that split's training records only, then writes
-  `work/features/rxnfp_ft/<dataset>/<scheme>_s<seed>.npz`. A GPU is strongly
-  recommended. Restrict the cost with `--datasets`, `--schemes` and `--seeds`.
+Writes `work/features/<rxn_key>/<fingerprint>.npz` (256-d, one row per
+reaction) for every fingerprint in the table above; `rxnfp_tpl`/
+`rxnfp_schneider` are only ever computed for their own reaction table (never
+used outside it: USPTO 1k TPL is a superset of USPTO-50k/Schneider, so their
+test reactions may already be in its training data). Runs on CPU; a GPU is
+faster. `--fingerprints`/`--datasets` restrict the run; missing encoder
+folders are skipped with a warning rather than failing the whole run. Existing
+outputs are skipped, so interrupted runs can be restarted.
 
-Both scripts skip outputs that already exist, so interrupted runs can be restarted.
+```bash
+conda run -n rxnfp python Experiments/external/rxnfp/rxnfp_embed.py --check-weights
+```
 
-## Caveat: `rxnfp_pretrained` uses the fine-tuned `bert_ft` by default
+Compares `bert_ft` and `bert_class_1k_tpl`'s `embeddings.word_embeddings.weight`
+(exp.md §4). Run this once `bert_class_1k_tpl` is downloaded, **before**
+trusting `rxnfp` as a fair (non-TPL-trained) row: if the weights are
+identical, `bert_ft` was trained on TPL labels too, and `rxnfp_mlm` should be
+used instead as the fair label-free comparison.
 
-By default, `rxnfp_embed.py` uses the published RXNFP encoder, `bert_ft`. That
-encoder has seen Pistachio (NameRxn) class labels, which overlap the Schneider,
-TPL and USPTO label sets. The published RXNFP papers use the same encoder, so
-the numbers are comparable, but they are **not label-free**. Say so in the
-paper, or also report `--model bert_pretrained` as a label-free control.
+## Caveat: `rxnfp` (`bert_ft`) is not label-free
+
+`bert_ft` has seen Pistachio (NameRxn) class labels, which overlap the
+Schneider, TPL and USPTO label sets. The published RXNFP papers use the same
+encoder, so the numbers are comparable, but `rxnfp` is **not label-free**.
+Say so in the paper; `rxnfp_mlm` is the label-free control.

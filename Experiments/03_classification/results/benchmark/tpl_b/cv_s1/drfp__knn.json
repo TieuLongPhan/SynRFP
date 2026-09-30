@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "tpl_b",
+ "scheme": "cv",
+ "seed": 1,
+ "fingerprint": "drfp",
+ "model": "knn",
+ "n_train": 356096,
+ "n_val": 89020,
+ "n_test": 89019,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.8973625538564075,
+ "accuracy": 0.8978869679506623,
+ "macro_f1": 0.8741945869319818,
+ "weighted_f1": 0.894421615431678,
+ "balanced_accuracy": 0.8609856010063197
+}

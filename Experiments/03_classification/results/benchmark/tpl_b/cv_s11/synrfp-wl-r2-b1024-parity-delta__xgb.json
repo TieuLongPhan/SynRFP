@@ -1,0 +1,22 @@
+{
+ "study": "benchmark",
+ "dataset": "tpl_b",
+ "scheme": "cv",
+ "seed": 11,
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "model": "xgb",
+ "n_train": 267074,
+ "n_val": 89020,
+ "n_test": 89021,
+ "n_unfeaturised_test": 15,
+ "mcc": 0.934737418954179,
+ "accuracy": 0.9350490333741477,
+ "macro_f1": 0.905688752891726,
+ "weighted_f1": 0.9301176256224765,
+ "balanced_accuracy": 0.8965811870066154,
+ "tokenizer": "wl",
+ "radius": 2,
+ "bits": 1024,
+ "sketch": "parity",
+ "mode": "delta"
+}

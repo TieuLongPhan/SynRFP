@@ -1,0 +1,38 @@
+{
+  "assignment_file": "mech_2__drfp__kmeans_s0.npz",
+  "dataset": "mech_2",
+  "fingerprint": "drfp",
+  "invalid_rows": 0,
+  "k": 62,
+  "method": "kmeans",
+  "n_init": 10,
+  "n_rows": 31667,
+  "n_valid": 31667,
+  "scores_on_valid_rows": {
+    "level1": {
+      "ami": 0.3134242666550579,
+      "ari": 0.04008364497042205,
+      "completeness": 0.22898307023199535,
+      "homogeneity": 0.5073440685591373,
+      "largest_cluster_fraction": 0.23219755581520193,
+      "mcc_hungarian": 0.16137683841700343,
+      "n_clusters": 62,
+      "nmi": 0.3155477948928812,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.3155477948928812
+    },
+    "level2": {
+      "ami": 0.4523815465557345,
+      "ari": 0.06596838155621691,
+      "completeness": 0.42395142824197257,
+      "homogeneity": 0.5079927174884913,
+      "largest_cluster_fraction": 0.23219755581520193,
+      "mcc_hungarian": 0.192670794925072,
+      "n_clusters": 62,
+      "nmi": 0.4621827157827423,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.46218271578274234
+    }
+  },
+  "seed": 0
+}

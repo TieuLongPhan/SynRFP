@@ -1,0 +1,18 @@
+{
+  "dataset": "schneider_ub",
+  "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+  "records": 50000,
+  "classes": 50,
+  "params": {
+    "hidden": [
+      512
+    ],
+    "alpha": 0.0001,
+    "max_iter": 200,
+    "batch_size": 256
+  },
+  "protocol": "5 repeats x 5 product-scaffold-grouped folds",
+  "cpu_threads": 4,
+  "gpu": "cuda:1",
+  "precision": "float32; TF32 disabled"
+}

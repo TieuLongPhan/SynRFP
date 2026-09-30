@@ -8,7 +8,7 @@ level of chemical detail the fingerprint geometry resolves as the similarity
 cut tightens.
 
 Methods
-  kmeans    k = number of classes of the dataset label (seeds 0..2)
+  kmeans    k = number of classes of the dataset label (configured seeds)
   bitbirch  Tanimoto threshold sweep; bit fingerprints only
   hdbscan   min_cluster_size sweep on PCA features; all fingerprints
 
@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # Experiments/
 import argparse
+import time
 
 import numpy as np
 
@@ -72,7 +73,8 @@ def main():  # noqa: C901
             feats = Features(full.X[sc.feat_rows], full.n_bits, full.ok[sc.feat_rows])
             jobs = []
             if "kmeans" in args.methods:
-                jobs += [("kmeans", f"k{k}_s{s}", s) for s in (0, 1, 2)]
+                jobs += [("kmeans", f"k{k}_s{s}", s)
+                         for s in cc["kmeans"].get("seeds", (0, 1, 2))]
             if "bitbirch" in args.methods and feats.is_bits:
                 jobs += [("bitbirch", f"t{t:.2f}", t) for t in cc["bitbirch"]["thresholds"]]
             if "hdbscan" in args.methods:
@@ -82,6 +84,7 @@ def main():  # noqa: C901
                 if out.exists():
                     continue
                 extra = {}
+                started = time.perf_counter()
                 if method == "kmeans":
                     lab = clustering.kmeans(feats, k, seed=p, n_init=cc["kmeans"]["n_init"])
                 elif method == "bitbirch":
@@ -91,7 +94,9 @@ def main():  # noqa: C901
                     lab, noise = clustering.hdbscan(feats, p, cc["hdbscan"]["pca_dim"], seed=0)
                     extra["noise_fraction"] = noise
                 rec = {"dataset": dataset, "fingerprint": fp, "method": method,
-                       "param": p, "n": int(len(lab)), **extra, **score(ds, spec, lab)}
+                       "param": p, "n": int(len(lab)),
+                       "elapsed_seconds": time.perf_counter() - started,
+                       **extra, **score(ds, spec, lab)}
                 write_json(out, rec)
                 log.info("%s %s %s %s: %d clusters", dataset, fp, method, tag,
                          int(np.unique(lab).size))

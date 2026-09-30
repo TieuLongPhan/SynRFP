@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "mech_1",
+ "scheme": "cv",
+ "seed": 22,
+ "fingerprint": "rxnfp",
+ "model": "xgb",
+ "n_train": 19004,
+ "n_val": 6334,
+ "n_test": 6335,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9431933602843959,
+ "accuracy": 0.9586424625098658,
+ "macro_f1": 0.9303059551968873,
+ "weighted_f1": 0.958001157981287,
+ "balanced_accuracy": 0.8996686900965746
+}

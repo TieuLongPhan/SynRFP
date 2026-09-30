@@ -1,0 +1,7 @@
+{
+  "sample": 200,
+  "seed": 0,
+  "note": "Pilot protocol audit; not the full E8 result.",
+  "primary_protocol": "original_reactions, radius 2",
+  "historical_protocol": "updated_reaction, radius 3"
+}

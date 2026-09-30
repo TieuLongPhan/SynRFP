@@ -1,0 +1,25 @@
+{
+  "method": "median observed duration by fingerprint; independent UB/B workers",
+  "missing_cells": {
+    "tpl_ub": 0,
+    "tpl_b": 0
+  },
+  "completed_cells_in_log": {
+    "tpl_ub": 150,
+    "tpl_b": 149
+  },
+  "active_cell": {
+    "tpl_ub": null,
+    "tpl_b": null
+  },
+  "active_elapsed_hours": {
+    "tpl_ub": [],
+    "tpl_b": []
+  },
+  "estimated_remaining_hours": {
+    "tpl_ub": 0.0,
+    "tpl_b": 0.0
+  },
+  "wall_hours_if_both_workers_remain_active": 0.0,
+  "caveat": "The currently running cells may be partially complete; this is a conservative tail estimate, not a guarantee."
+}

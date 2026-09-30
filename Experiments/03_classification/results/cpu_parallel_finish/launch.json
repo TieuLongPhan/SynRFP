@@ -1,0 +1,10 @@
+{
+  "purpose": "complete benchmark XGBoost in three disjoint CPU workers and missing Mech31k kNN",
+  "threads_per_worker": 16,
+  "xgb_groups": [
+    ["tpl_ub", "tpl_b"],
+    ["ecreact_1", "ecreact_2", "ecreact_3"],
+    ["schneider_ub", "schneider_b", "uspto50k_ub", "uspto50k_b", "syntemp_r0", "syntemp_r1", "syntemp_r2", "mech_1", "mech_2"]
+  ],
+  "knn_group": ["mech_1", "mech_2"]
+}

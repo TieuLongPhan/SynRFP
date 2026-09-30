@@ -1,0 +1,12 @@
+{
+  "pid": 1292394,
+  "started_utc": "2026-09-28T05:48:43.565283+00:00",
+  "initial_pending": 6480,
+  "already_completed": 1620,
+  "finished": 6480,
+  "failed": 0,
+  "active": {},
+  "status": "complete",
+  "elapsed_seconds": 7051.835825340822,
+  "remaining": 0
+}

@@ -1,0 +1,23 @@
+{
+  "study": "r2_grouped_development_screen_v1",
+  "stage": "finalists_init_seed_1",
+  "outer_test_read": false,
+  "pending": [],
+  "finished": [
+    "init1_inner1_synrfp_w1024_d0p1_b256_lr0p001",
+    "init1_inner0_synrfp_w1024_d0p1_b256_lr0p001",
+    "init1_inner2_synrfp_w1024_d0p1_b256_lr0p001",
+    "init1_inner0_synrfp_w1024_d0p1_b256_lr0p0003",
+    "init1_inner1_synrfp_w1024_d0p1_b256_lr0p0003",
+    "init1_inner2_synrfp_w1024_d0p1_b256_lr0p0003",
+    "init1_inner0_drfp_w1024_d0p1_b256_lr0p001",
+    "init1_inner1_drfp_w1024_d0p1_b256_lr0p001",
+    "init1_inner2_drfp_w1024_d0p1_b256_lr0p001",
+    "init1_inner0_drfp_w1024_d0p1_b256_lr0p0003",
+    "init1_inner1_drfp_w1024_d0p1_b256_lr0p0003",
+    "init1_inner2_drfp_w1024_d0p1_b256_lr0p0003"
+  ],
+  "failed": [],
+  "active": {},
+  "status": "complete"
+}

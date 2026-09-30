@@ -1,0 +1,38 @@
+{
+  "assignment_file": "mech_2__synrfp-wl-r2-b1024-parity-delta__kmeans_s0.npz",
+  "dataset": "mech_2",
+  "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+  "invalid_rows": 0,
+  "k": 62,
+  "method": "kmeans",
+  "n_init": 10,
+  "n_rows": 31667,
+  "n_valid": 31667,
+  "scores_on_valid_rows": {
+    "level1": {
+      "ami": 0.4231188753710082,
+      "ari": 0.0649089752273217,
+      "completeness": 0.2975296173232817,
+      "homogeneity": 0.7419814758975762,
+      "largest_cluster_fraction": 0.042946916348248966,
+      "mcc_hungarian": 0.24143534123110208,
+      "n_clusters": 62,
+      "nmi": 0.4247409499031982,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.42474094990319816
+    },
+    "level2": {
+      "ami": 0.5951546974860366,
+      "ari": 0.15100428416694497,
+      "completeness": 0.5243905883989968,
+      "homogeneity": 0.7072287680604731,
+      "largest_cluster_fraction": 0.042946916348248966,
+      "mcc_hungarian": 0.2833592667372332,
+      "n_clusters": 62,
+      "nmi": 0.6022381961940747,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.6022381961940747
+    }
+  },
+  "seed": 0
+}

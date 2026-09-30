@@ -1,0 +1,93 @@
+{
+  "study": "r2_nested_grouped_mlp_v1",
+  "protocol": {
+    "outer_folds": 25,
+    "outer_split": "existing SynTemp scaffold-grouped repeated CV",
+    "inner_selection": "3 scaffold-grouped folds within each outer development pool",
+    "metric": "MCC",
+    "outer_test_used_for_selection": false,
+    "candidate_pool": "plain lr {0.0003,0.001}; auxiliary lr 0.001 (SynRFP aux weight 0.05, DRFP 0.02)"
+  },
+  "models": {
+    "synrfp-wl-r2-b1024-parity-delta": {
+      "n_outer_folds": 25,
+      "metrics": {
+        "mcc": {
+          "mean": 0.9439434295043231,
+          "std": 0.0036971629364405826,
+          "min": 0.9373738447862421,
+          "max": 0.952139453421128
+        },
+        "accuracy": {
+          "mean": 0.9546694795055274,
+          "std": 0.0022508976664669935,
+          "min": 0.9503913443830571,
+          "max": 0.9596040971343077
+        },
+        "balanced_accuracy": {
+          "mean": 0.9022576558333238,
+          "std": 0.010214403033379175,
+          "min": 0.8767776602457563,
+          "max": 0.9153594836059004
+        },
+        "macro_f1": {
+          "mean": 0.9048598034884597,
+          "std": 0.006863075809934086,
+          "min": 0.8886035723218552,
+          "max": 0.9159100102582256
+        },
+        "seconds": {
+          "mean": 7.052560693477281,
+          "std": 1.859369314850366,
+          "min": 4.7058418759843335,
+          "max": 11.2894456689246
+        }
+      },
+      "selected_config_counts": {
+        "auxiliary; lr=0.001; aux=0.05": 12,
+        "plain; lr=0.001; aux=0.0": 12,
+        "plain; lr=0.0003; aux=0.0": 1
+      }
+    },
+    "drfp": {
+      "n_outer_folds": 25,
+      "metrics": {
+        "mcc": {
+          "mean": 0.952951636168155,
+          "std": 0.0029962567055796586,
+          "min": 0.9467164069739644,
+          "max": 0.9577681628494449
+        },
+        "accuracy": {
+          "mean": 0.9619348194135351,
+          "std": 0.003035205680236114,
+          "min": 0.9563916695432056,
+          "max": 0.9661641155483945
+        },
+        "balanced_accuracy": {
+          "mean": 0.9066584299985704,
+          "std": 0.009104937518623592,
+          "min": 0.8875642692566051,
+          "max": 0.923493445724142
+        },
+        "macro_f1": {
+          "mean": 0.9195236072057841,
+          "std": 0.006262813575363624,
+          "min": 0.9043002377079332,
+          "max": 0.9303224838661868
+        },
+        "seconds": {
+          "mean": 9.114072416429408,
+          "std": 1.8788238439665785,
+          "min": 6.32661917200312,
+          "max": 14.157171216909774
+        }
+      },
+      "selected_config_counts": {
+        "auxiliary; lr=0.001; aux=0.02": 20,
+        "plain; lr=0.001; aux=0.0": 5
+      }
+    }
+  },
+  "mcc_difference_synrfp_minus_drfp": -0.009008206663831952
+}

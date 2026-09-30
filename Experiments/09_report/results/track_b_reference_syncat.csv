@@ -1,0 +1,5 @@
+model,schneider_u,schneider_b,tpl_u,tpl_b,uspto50k_u,uspto50k_b,syntemp_r0,syntemp_r1,syntemp_r2
+syncat_acc,0.981,0.973,0.991,0.988,0.995,0.996,0.996,0.992,0.982
+syncat_mcc,0.98,0.973,0.991,0.988,0.995,0.995,0.996,0.992,0.978
+rxnfp_mlp_mcc_their_run,0.985,0.956,0.988,0.971,0.993,0.989,0.994,0.954,0.758
+drfp_mlp_mcc_their_run,0.956,0.925,0.977,0.962,0.898,0.91,0.971,0.958,0.957

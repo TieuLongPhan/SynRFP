@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "ecreact_2",
+ "scheme": "cv",
+ "seed": 10,
+ "fingerprint": "rdkit_diff",
+ "model": "knn",
+ "n_train": 149114,
+ "n_val": 36619,
+ "n_test": 36620,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.6560531560353233,
+ "accuracy": 0.6755051884216275,
+ "macro_f1": 0.4671871921544679,
+ "weighted_f1": 0.6459261509919719,
+ "balanced_accuracy": 0.506742933961775
+}

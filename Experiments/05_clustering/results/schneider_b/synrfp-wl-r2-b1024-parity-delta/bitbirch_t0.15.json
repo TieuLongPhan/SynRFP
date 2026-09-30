@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "bitbirch",
+ "param": 0.15,
+ "n": 50000,
+ "elapsed_seconds": 0.975348545005545,
+ "label__ari": 0.41411711235382653,
+ "label__ami": 0.6653155979560054,
+ "label__nmi": 0.6888478165485727,
+ "label__homogeneity": 0.8032525832914427,
+ "label__completeness": 0.6029688402938432,
+ "label__v_measure": 0.6888478165485727,
+ "label__mcc_hungarian": 0.4684806495019682,
+ "label__n_clusters": 1436,
+ "label__singleton_fraction": 0.0116,
+ "label__largest_cluster_fraction": 0.03798
+}

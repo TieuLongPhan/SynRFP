@@ -116,6 +116,7 @@ def analyse(rsmi, radius, scfg):
         return dist[side].get(occ[0], far) <= occ[1]
 
     delta_w = touch_w = 0.0
+    delta_occ = touch_occ = 0.0
     covered = set()
     signed = {}
     for t in prov["R"].keys() | prov["P"].keys():
@@ -123,12 +124,19 @@ def analyse(rsmi, radius, scfg):
         if d == 0:
             continue
         side = "P" if d > 0 else "R"
-        occs = prov[side][t]
+        occs = sorted(prov[side][t])
+        # A signed count difference leaves |d| occurrences after cancellation.
+        # Select those occurrences deterministically so localization is
+        # occurrence-aware rather than granting a whole token credit when one
+        # of its occurrences touches the centre.
+        selected = occs[:abs(d)]
         delta_w += abs(d)
         if any(touches(side, o) for o in occs):
             touch_w += abs(d)
+        delta_occ += len(selected)
+        touch_occ += sum(touches(side, o) for o in selected)
         G = graphs[side]
-        for root, k in occs:
+        for root, k in selected:
             for v, dd in bfs_dist(G.adj, [root]).items():
                 if dd <= k and G.nodes[v].get("atom_map", 0) in ctr:
                     covered.add(G.nodes[v]["atom_map"])
@@ -138,6 +146,7 @@ def analyse(rsmi, radius, scfg):
     u_touch = sum(touches(s, o) for s in prov for v in prov[s].values() for o in v)
     return {
         "delta_center_fraction": touch_w / delta_w if delta_w else np.nan,
+        "delta_occurrence_center_fraction": touch_occ / delta_occ if delta_occ else np.nan,
         "union_center_fraction": u_touch / n_union if n_union else np.nan,
         "center_coverage": len(covered) / len(ctr),
         "delta_token_fraction": delta_w / n_union if n_union else np.nan,
@@ -153,10 +162,22 @@ def main():
     setup_logging()
     cfg = load_config(args.config)
     rc = cfg["reaction_center"]
-    rt = reaction_table(cfg, "mech")
+    # Reaction-centre ground truth must use the mapped reaction column named
+    # by the reaction-centre section.  The primary SynRFP protocol uses the
+    # original mapped reaction; mechanistic ``updated_reaction`` adds agents
+    # and is retained only for explicit sensitivity studies.
+    raw = pd.read_csv(cfg["paths"]["mech_raw"])
+    rc_column = rc.get("mapped_column", cfg["mech"]["mapped_column"])
+    if rc_column not in raw:
+        raise KeyError(f"reaction_center.mapped_column not found: {rc_column}")
+    rsmis = raw[rc_column].astype(str)
+    labels = raw["mechanistic_class"].astype(str)
     if rc["sample"]:
-        rt = rt.sample(n=min(rc["sample"], len(rt)), random_state=0)
-    rsmis = rt["rxn_mapped"].tolist()
+        idx = raw.sample(n=min(rc["sample"], len(raw)), random_state=0).index
+        rsmis = rsmis.loc[idx]
+        labels = labels.loc[idx]
+    rsmis = rsmis.tolist()
+    labels = labels.tolist()
     log.info("analysing %d mapped reactions at radius %d", len(rsmis), rc["radius"])
     res = Parallel(n_jobs=cfg["n_jobs"], batch_size=64)(
         delayed(analyse)(s, rc["radius"], cfg["synrfp"]) for s in rsmis)
@@ -164,7 +185,7 @@ def main():
     out = results_dir("08_reaction_center")
     keep = [i for i, r in enumerate(res) if r is not None]
     per = pd.DataFrame([{k: v for k, v in res[i].items() if k != "signed"} for i in keep])
-    per["level2"] = rt["level2"].to_numpy()[keep]
+    per["level2"] = np.asarray(labels, dtype=object)[keep]
     per.to_csv(out / "per_reaction.csv", index=False)
     summ = per.drop(columns="level2").describe().T
     summ.to_csv(out / "summary.csv")

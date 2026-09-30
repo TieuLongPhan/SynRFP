@@ -34,10 +34,9 @@ from `paths.mech_raw`. Cached tables record their source in
 `work/tables/SOURCE.json`; after changing the source or version, clear
 `work/tables`, `work/splits`, `work/features` and `work/export`.
 
-**Required before running `mech_1`:** provide the curated 9-class mechanism
-grouping as `data/mech_level1_map.csv` (columns `mechanistic_class,level1`).
-`data/mech_level1_map.DRAFT.csv` is only a placeholder guess and is never read
-automatically. Without the file, `mech_1` is skipped and `mech_2` still runs.
+The public SynCat Mech31k export supplies both the 63-class mechanism labels
+and its nine-class `labels_lv1` grouping. The benchmark reads this source from
+`data/mech31k.csv.gz`; `data/mech_level1_map.DRAFT.csv` remains unused.
 
 ## Running
 
@@ -72,15 +71,18 @@ the embeddings of test records carry no test-label information.
   scaffold of the largest product) — five seeds each. Classes with fewer than
   10 records are removed and logged in `work/tables/ds_<name>.json`.
 * **Models.** 5-NN uses Tanimoto similarity for bit vectors and cosine for
-  embeddings. The linear probe replaces XGBoost as the third estimator; XGBoost
-  is available (`--models xgb`, `multi:softprob`, skipped above 200 classes).
+  embeddings. The primary comparison uses kNN, XGBoost (`multi:softprob`, CPU
+  histogram training), and MLP (GPU queue). XGBoost was restored on 2026-09-21;
+  the former 200-class limit is disabled. The linear probe remains optional,
+  and EHreact retains its separate kNN/logistic protocol.
 * **Factorial design.** Radius and bits are crossed (162 configurations), each
-  with 5-NN, linear and MLP on three random splits. Datasets larger than 50,000
-  records are stratified-subsampled to 50,000 for this study only.
+  with 5-NN, XGBoost, and MLP on five matched random splits. Datasets larger than
+  50,000 records are stratified-subsampled to 50,000 for this study only.
 * **Clustering without k.** The BitBIRCH threshold is chosen per fingerprint on
   `uspto50k_b` by AMI and then frozen for all other datasets; the per-dataset
   optimum is reported separately as a label-tuned upper bound.
-* **No runtime benchmarking.** Timings are not recorded.
+* **Timing pilots.** GPU MLP and CPU XGBoost timing pilots are recorded separately
+  under `03_classification/results/`; short XGBoost probes are not full results.
 
 ## Differences from the archived runs
 
@@ -107,7 +109,9 @@ the archive should not be reused.
   (`mech.reaction_column`, default `original_reactions`).
 * SynRXN `ecreact.csv.gz` has 8 EC1 classes (the paper lists 7); the rare-class
   filter decides which remain and logs it.
-* `syntemp.csv.gz` has no split column, so SynTemp uses random/grouped splits.
+* `syntemp.csv.gz` has no split column. Its Track B reference point uses the
+  configured deterministic stratified 8:1:1 split (seed 42), rather than a
+  supposedly comparable external published split.
 
 ## Smoke test
 

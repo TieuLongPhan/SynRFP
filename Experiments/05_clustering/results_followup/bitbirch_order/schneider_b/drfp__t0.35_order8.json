@@ -1,0 +1,20 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "drfp",
+ "method": "bitbirch_order_stability",
+ "threshold": 0.35,
+ "order": 8,
+ "order_seed": 20260932,
+ "n": 50000,
+ "elapsed_seconds": 4.129568176926114,
+ "label__ari": 0.0019505232498882776,
+ "label__ami": 0.08011919989721852,
+ "label__nmi": 0.536823241991662,
+ "label__homogeneity": 0.9857441641791798,
+ "label__completeness": 0.3688459299787919,
+ "label__v_measure": 0.536823241991662,
+ "label__mcc_hungarian": 0.06305886247923849,
+ "label__n_clusters": 41470,
+ "label__singleton_fraction": 0.75818,
+ "label__largest_cluster_fraction": 0.001
+}

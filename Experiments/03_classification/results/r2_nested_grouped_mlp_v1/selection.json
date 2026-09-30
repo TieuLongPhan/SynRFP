@@ -1,0 +1,2707 @@
+{
+  "study": "r2_nested_grouped_mlp_v1",
+  "selection_metric": "mean inner scaffold-grouped MCC",
+  "outer_test_used_for_selection": false,
+  "selected": [
+    {
+      "outer_seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.930852999263221,
+        "inner_mcc": [
+          0.9304340108015565,
+          0.932210831208711,
+          0.9299141557793955
+        ],
+        "refit_epochs": 60
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.930852999263221,
+          "inner_mcc": [
+            0.9304340108015565,
+            0.932210831208711,
+            0.9299141557793955
+          ],
+          "refit_epochs": 60
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9307855069987129,
+          "inner_mcc": [
+            0.931524329197828,
+            0.9309830718369855,
+            0.929849119961325
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9306613446701043,
+          "inner_mcc": [
+            0.9303729258081392,
+            0.9298735646920481,
+            0.931737543510126
+          ],
+          "refit_epochs": 110
+        }
+      ]
+    },
+    {
+      "outer_seed": 0,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9372097862723973,
+        "inner_mcc": [
+          0.9385993334169177,
+          0.931916455185259,
+          0.9411135702150153
+        ],
+        "refit_epochs": 80
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9372097862723973,
+          "inner_mcc": [
+            0.9385993334169177,
+            0.931916455185259,
+            0.9411135702150153
+          ],
+          "refit_epochs": 80
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9363203902541568,
+          "inner_mcc": [
+            0.9375140905000593,
+            0.9323542235620315,
+            0.9390928567003796
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.934817028944806,
+          "inner_mcc": [
+            0.9375514298195979,
+            0.9333521986923792,
+            0.9335474583224408
+          ],
+          "refit_epochs": 139
+        }
+      ]
+    },
+    {
+      "outer_seed": 1,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.931913998848466,
+        "inner_mcc": [
+          0.9290499917333396,
+          0.9312116253870306,
+          0.9354803794250279
+        ],
+        "refit_epochs": 59
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.931913998848466,
+          "inner_mcc": [
+            0.9290499917333396,
+            0.9312116253870306,
+            0.9354803794250279
+          ],
+          "refit_epochs": 59
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9317947501220818,
+          "inner_mcc": [
+            0.936587458746814,
+            0.9308905048559997,
+            0.9279062867634317
+          ],
+          "refit_epochs": 110
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9309468525135092,
+          "inner_mcc": [
+            0.9299366518405205,
+            0.9277406222362266,
+            0.9351632834637803
+          ],
+          "refit_epochs": 54
+        }
+      ]
+    },
+    {
+      "outer_seed": 1,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939725160678914,
+        "inner_mcc": [
+          0.9433547549442122,
+          0.932242775544946,
+          0.9435779515475841
+        ],
+        "refit_epochs": 73
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.939725160678914,
+          "inner_mcc": [
+            0.9433547549442122,
+            0.932242775544946,
+            0.9435779515475841
+          ],
+          "refit_epochs": 73
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.938277814198137,
+          "inner_mcc": [
+            0.9430894414341867,
+            0.940788093419743,
+            0.9309559077404815
+          ],
+          "refit_epochs": 77
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.935639901147185,
+          "inner_mcc": [
+            0.9389272072102121,
+            0.92947746166298,
+            0.9385150345683632
+          ],
+          "refit_epochs": 76
+        }
+      ]
+    },
+    {
+      "outer_seed": 2,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.929520741536357,
+        "inner_mcc": [
+          0.9280911203419366,
+          0.929780234808933,
+          0.9306908694582015
+        ],
+        "refit_epochs": 53
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.929520741536357,
+          "inner_mcc": [
+            0.9280911203419366,
+            0.929780234808933,
+            0.9306908694582015
+          ],
+          "refit_epochs": 53
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9291083500431158,
+          "inner_mcc": [
+            0.9268701190715761,
+            0.9294554441213837,
+            0.9309994869363875
+          ],
+          "refit_epochs": 31
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9283474821727117,
+          "inner_mcc": [
+            0.929558599787767,
+            0.9258955385909943,
+            0.9295883081393738
+          ],
+          "refit_epochs": 105
+        }
+      ]
+    },
+    {
+      "outer_seed": 2,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939265713081103,
+        "inner_mcc": [
+          0.9402250958326843,
+          0.9446033120149299,
+          0.9329687313956951
+        ],
+        "refit_epochs": 90
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.939265713081103,
+          "inner_mcc": [
+            0.9402250958326843,
+            0.9446033120149299,
+            0.9329687313956951
+          ],
+          "refit_epochs": 90
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.938749108969231,
+          "inner_mcc": [
+            0.9334051917640708,
+            0.9422124361985146,
+            0.9406296989451076
+          ],
+          "refit_epochs": 40
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9371759989199738,
+          "inner_mcc": [
+            0.9420288570580089,
+            0.9333929142466064,
+            0.9361062254553065
+          ],
+          "refit_epochs": 117
+        }
+      ]
+    },
+    {
+      "outer_seed": 3,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9328134129740575,
+        "inner_mcc": [
+          0.9330028941664894,
+          0.9360035909381054,
+          0.9294337538175776
+        ],
+        "refit_epochs": 67
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9328134129740575,
+          "inner_mcc": [
+            0.9330028941664894,
+            0.9360035909381054,
+            0.9294337538175776
+          ],
+          "refit_epochs": 67
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9320614977858809,
+          "inner_mcc": [
+            0.9346575271827224,
+            0.931445595454895,
+            0.9300813707200252
+          ],
+          "refit_epochs": 57
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9316651575395385,
+          "inner_mcc": [
+            0.929898510915466,
+            0.9310002052781383,
+            0.934096756425011
+          ],
+          "refit_epochs": 102
+        }
+      ]
+    },
+    {
+      "outer_seed": 3,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939152116230106,
+        "inner_mcc": [
+          0.9435148196679617,
+          0.934919296044237,
+          0.9390222329781193
+        ],
+        "refit_epochs": 75
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.939152116230106,
+          "inner_mcc": [
+            0.9435148196679617,
+            0.934919296044237,
+            0.9390222329781193
+          ],
+          "refit_epochs": 75
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9391470585226882,
+          "inner_mcc": [
+            0.9374437961797207,
+            0.935768314416323,
+            0.944229064972021
+          ],
+          "refit_epochs": 60
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9364592225267735,
+          "inner_mcc": [
+            0.9343219569049518,
+            0.9323637945802592,
+            0.9426919160951097
+          ],
+          "refit_epochs": 114
+        }
+      ]
+    },
+    {
+      "outer_seed": 4,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9331810069648304,
+        "inner_mcc": [
+          0.9375144692371152,
+          0.9291086130934816,
+          0.9329199385638944
+        ],
+        "refit_epochs": 63
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9331810069648304,
+          "inner_mcc": [
+            0.9375144692371152,
+            0.9291086130934816,
+            0.9329199385638944
+          ],
+          "refit_epochs": 63
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9328633890909176,
+          "inner_mcc": [
+            0.9328463744078138,
+            0.9287244687342556,
+            0.9370193241306832
+          ],
+          "refit_epochs": 56
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9327234217513123,
+          "inner_mcc": [
+            0.9368099023818363,
+            0.929916922554359,
+            0.9314434403177414
+          ],
+          "refit_epochs": 132
+        }
+      ]
+    },
+    {
+      "outer_seed": 4,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9410928012781712,
+        "inner_mcc": [
+          0.9420199213301028,
+          0.9377001993306484,
+          0.9435582831737626
+        ],
+        "refit_epochs": 98
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9410928012781712,
+          "inner_mcc": [
+            0.9420199213301028,
+            0.9377001993306484,
+            0.9435582831737626
+          ],
+          "refit_epochs": 98
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9401030020794209,
+          "inner_mcc": [
+            0.9429761014994524,
+            0.9371747393846308,
+            0.9401581653541794
+          ],
+          "refit_epochs": 72
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9400113016416052,
+          "inner_mcc": [
+            0.9371733271382131,
+            0.9424329253191832,
+            0.9404276524674194
+          ],
+          "refit_epochs": 98
+        }
+      ]
+    },
+    {
+      "outer_seed": 5,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9291297943718483,
+        "inner_mcc": [
+          0.9286158899623478,
+          0.9280018530858332,
+          0.9307716400673637
+        ],
+        "refit_epochs": 66
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9291297943718483,
+          "inner_mcc": [
+            0.9286158899623478,
+            0.9280018530858332,
+            0.9307716400673637
+          ],
+          "refit_epochs": 66
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9290005220216501,
+          "inner_mcc": [
+            0.9291314499171929,
+            0.9286063094291851,
+            0.9292638067185721
+          ],
+          "refit_epochs": 90
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9286489137765847,
+          "inner_mcc": [
+            0.9299040230326772,
+            0.9293555748597638,
+            0.9266871434373128
+          ],
+          "refit_epochs": 49
+        }
+      ]
+    },
+    {
+      "outer_seed": 5,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9369584375825325,
+        "inner_mcc": [
+          0.9355285068614225,
+          0.9328124798581279,
+          0.942534326028047
+        ],
+        "refit_epochs": 59
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9369584375825325,
+          "inner_mcc": [
+            0.9355285068614225,
+            0.9328124798581279,
+            0.942534326028047
+          ],
+          "refit_epochs": 59
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9367695879505801,
+          "inner_mcc": [
+            0.9324812953820167,
+            0.9356317532615677,
+            0.9421957152081556
+          ],
+          "refit_epochs": 70
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9359623661318001,
+          "inner_mcc": [
+            0.9340767803405718,
+            0.9402189273319587,
+            0.9335913907228698
+          ],
+          "refit_epochs": 136
+        }
+      ]
+    },
+    {
+      "outer_seed": 6,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9310911864808755,
+        "inner_mcc": [
+          0.9303334876650892,
+          0.9302674991366221,
+          0.9326725726409153
+        ],
+        "refit_epochs": 69
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9310911864808755,
+          "inner_mcc": [
+            0.9303334876650892,
+            0.9302674991366221,
+            0.9326725726409153
+          ],
+          "refit_epochs": 69
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9308072389595813,
+          "inner_mcc": [
+            0.9300010202277367,
+            0.9292359437446407,
+            0.9331847529063664
+          ],
+          "refit_epochs": 91
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9306542616269954,
+          "inner_mcc": [
+            0.929268427868974,
+            0.9332669591651789,
+            0.9294273978468334
+          ],
+          "refit_epochs": 67
+        }
+      ]
+    },
+    {
+      "outer_seed": 6,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9367845149483749,
+        "inner_mcc": [
+          0.9344699747386255,
+          0.936044543407779,
+          0.9398390266987201
+        ],
+        "refit_epochs": 51
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9367845149483749,
+          "inner_mcc": [
+            0.9344699747386255,
+            0.936044543407779,
+            0.9398390266987201
+          ],
+          "refit_epochs": 51
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9364189915995458,
+          "inner_mcc": [
+            0.9360459604131904,
+            0.9336878535091853,
+            0.9395231608762615
+          ],
+          "refit_epochs": 53
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9344394409942688,
+          "inner_mcc": [
+            0.9335619024569423,
+            0.9358571787771051,
+            0.933899241748759
+          ],
+          "refit_epochs": 85
+        }
+      ]
+    },
+    {
+      "outer_seed": 7,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.930519469623884,
+        "inner_mcc": [
+          0.9286671131547573,
+          0.929944535065642,
+          0.9329467606512525
+        ],
+        "refit_epochs": 56
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.930519469623884,
+          "inner_mcc": [
+            0.9286671131547573,
+            0.929944535065642,
+            0.9329467606512525
+          ],
+          "refit_epochs": 56
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9304661747019932,
+          "inner_mcc": [
+            0.9298817298382785,
+            0.9306193557796822,
+            0.9308974384880186
+          ],
+          "refit_epochs": 72
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9303129985469143,
+          "inner_mcc": [
+            0.9300787687741319,
+            0.9281977783957286,
+            0.9326624484708824
+          ],
+          "refit_epochs": 53
+        }
+      ]
+    },
+    {
+      "outer_seed": 7,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9394330081449004,
+        "inner_mcc": [
+          0.9399851016431569,
+          0.9437615587030355,
+          0.9345523640885085
+        ],
+        "refit_epochs": 62
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9394330081449004,
+          "inner_mcc": [
+            0.9399851016431569,
+            0.9437615587030355,
+            0.9345523640885085
+          ],
+          "refit_epochs": 62
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9387513807315641,
+          "inner_mcc": [
+            0.9432199911714794,
+            0.938797384361745,
+            0.934236766661468
+          ],
+          "refit_epochs": 62
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9364614107868178,
+          "inner_mcc": [
+            0.936646122644012,
+            0.9348869274892435,
+            0.9378511822271975
+          ],
+          "refit_epochs": 130
+        }
+      ]
+    },
+    {
+      "outer_seed": 8,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9311538315321463,
+        "inner_mcc": [
+          0.930257602828949,
+          0.9284426799625585,
+          0.9347612118049313
+        ],
+        "refit_epochs": 65
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9311538315321463,
+          "inner_mcc": [
+            0.930257602828949,
+            0.9284426799625585,
+            0.9347612118049313
+          ],
+          "refit_epochs": 65
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9311221813660534,
+          "inner_mcc": [
+            0.9296456812344418,
+            0.9338417375445668,
+            0.9298791253191514
+          ],
+          "refit_epochs": 126
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9310778594645776,
+          "inner_mcc": [
+            0.9347865594137251,
+            0.9284120177894225,
+            0.9300350011905854
+          ],
+          "refit_epochs": 64
+        }
+      ]
+    },
+    {
+      "outer_seed": 8,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9368194455297,
+        "inner_mcc": [
+          0.9406551865561823,
+          0.9406746694981053,
+          0.9291284805348122
+        ],
+        "refit_epochs": 72
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9368194455297,
+          "inner_mcc": [
+            0.9406551865561823,
+            0.9406746694981053,
+            0.9291284805348122
+          ],
+          "refit_epochs": 72
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.935810950523359,
+          "inner_mcc": [
+            0.9400090408739266,
+            0.928600923447452,
+            0.9388228872486987
+          ],
+          "refit_epochs": 45
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.934898640323086,
+          "inner_mcc": [
+            0.9287035176296957,
+            0.9388090938069958,
+            0.9371833095325663
+          ],
+          "refit_epochs": 79
+        }
+      ]
+    },
+    {
+      "outer_seed": 9,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9316273289622906,
+        "inner_mcc": [
+          0.9346278236154602,
+          0.929181936430724,
+          0.9310722268406881
+        ],
+        "refit_epochs": 50
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9316273289622906,
+          "inner_mcc": [
+            0.9346278236154602,
+            0.929181936430724,
+            0.9310722268406881
+          ],
+          "refit_epochs": 50
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9315489816236707,
+          "inner_mcc": [
+            0.933115632286883,
+            0.932178659909524,
+            0.9293526526746051
+          ],
+          "refit_epochs": 143
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9312997417532398,
+          "inner_mcc": [
+            0.9293103567673345,
+            0.9310910897256446,
+            0.9334977787667404
+          ],
+          "refit_epochs": 49
+        }
+      ]
+    },
+    {
+      "outer_seed": 9,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9376473981780412,
+        "inner_mcc": [
+          0.9359088518371238,
+          0.9404245868450849,
+          0.9366087558519147
+        ],
+        "refit_epochs": 77
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9376473981780412,
+          "inner_mcc": [
+            0.9359088518371238,
+            0.9404245868450849,
+            0.9366087558519147
+          ],
+          "refit_epochs": 77
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9372726205973111,
+          "inner_mcc": [
+            0.9372755640709933,
+            0.9349781904544121,
+            0.9395641072665278
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9346045141932936,
+          "inner_mcc": [
+            0.9358928403541519,
+            0.9346196371808446,
+            0.9333010650448844
+          ],
+          "refit_epochs": 79
+        }
+      ]
+    },
+    {
+      "outer_seed": 10,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9292656210689313,
+        "inner_mcc": [
+          0.9338952672001306,
+          0.9232061090673825,
+          0.9306954869392804
+        ],
+        "refit_epochs": 91
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9292656210689313,
+          "inner_mcc": [
+            0.9338952672001306,
+            0.9232061090673825,
+            0.9306954869392804
+          ],
+          "refit_epochs": 91
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.928901577324444,
+          "inner_mcc": [
+            0.9219937286931508,
+            0.9325546520560474,
+            0.9321563512241338
+          ],
+          "refit_epochs": 51
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9288192574602175,
+          "inner_mcc": [
+            0.9229245659605195,
+            0.9320935982701969,
+            0.9314396081499363
+          ],
+          "refit_epochs": 104
+        }
+      ]
+    },
+    {
+      "outer_seed": 10,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9401301556725549,
+        "inner_mcc": [
+          0.9393659221445304,
+          0.9361338674481657,
+          0.9448906774249686
+        ],
+        "refit_epochs": 105
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9401301556725549,
+          "inner_mcc": [
+            0.9393659221445304,
+            0.9361338674481657,
+            0.9448906774249686
+          ],
+          "refit_epochs": 105
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9369034153278948,
+          "inner_mcc": [
+            0.9341105391647125,
+            0.943158180875997,
+            0.9334415259429749
+          ],
+          "refit_epochs": 43
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9354609386753667,
+          "inner_mcc": [
+            0.9403225384126279,
+            0.9334771656951754,
+            0.932583111918297
+          ],
+          "refit_epochs": 97
+        }
+      ]
+    },
+    {
+      "outer_seed": 11,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9336896974515717,
+        "inner_mcc": [
+          0.9331220855978359,
+          0.9360468111004504,
+          0.9319001956564286
+        ],
+        "refit_epochs": 71
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9336896974515717,
+          "inner_mcc": [
+            0.9331220855978359,
+            0.9360468111004504,
+            0.9319001956564286
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9324158979342266,
+          "inner_mcc": [
+            0.9353167603938528,
+            0.9294465998043712,
+            0.9324843336044557
+          ],
+          "refit_epochs": 65
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9309908526885305,
+          "inner_mcc": [
+            0.928789445128237,
+            0.9329828889245104,
+            0.9312002240128442
+          ],
+          "refit_epochs": 87
+        }
+      ]
+    },
+    {
+      "outer_seed": 11,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9380767922008172,
+        "inner_mcc": [
+          0.9422184513686217,
+          0.9330494167227298,
+          0.9389625085111001
+        ],
+        "refit_epochs": 67
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9380767922008172,
+          "inner_mcc": [
+            0.9422184513686217,
+            0.9330494167227298,
+            0.9389625085111001
+          ],
+          "refit_epochs": 67
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9369044950000558,
+          "inner_mcc": [
+            0.9396300601056573,
+            0.93866674127557,
+            0.9324166836189399
+          ],
+          "refit_epochs": 73
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9350971427870718,
+          "inner_mcc": [
+            0.9335845815552799,
+            0.9353748532987116,
+            0.9363319935072237
+          ],
+          "refit_epochs": 126
+        }
+      ]
+    },
+    {
+      "outer_seed": 12,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9320948905131697,
+        "inner_mcc": [
+          0.9266842611424553,
+          0.9357985693099934,
+          0.9338018410870609
+        ],
+        "refit_epochs": 71
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9320948905131697,
+          "inner_mcc": [
+            0.9266842611424553,
+            0.9357985693099934,
+            0.9338018410870609
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.931745291677765,
+          "inner_mcc": [
+            0.9344238958770456,
+            0.934281791368612,
+            0.9265301877876374
+          ],
+          "refit_epochs": 138
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9315405234249522,
+          "inner_mcc": [
+            0.934082243925029,
+            0.9270945266615612,
+            0.9334447996882663
+          ],
+          "refit_epochs": 69
+        }
+      ]
+    },
+    {
+      "outer_seed": 12,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9399175996101391,
+        "inner_mcc": [
+          0.9406307226018159,
+          0.9357408614806212,
+          0.9433812147479799
+        ],
+        "refit_epochs": 68
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9399175996101391,
+          "inner_mcc": [
+            0.9406307226018159,
+            0.9357408614806212,
+            0.9433812147479799
+          ],
+          "refit_epochs": 68
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9382037372405834,
+          "inner_mcc": [
+            0.9405093640144024,
+            0.938465723780816,
+            0.9356361239265315
+          ],
+          "refit_epochs": 47
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9370129966166477,
+          "inner_mcc": [
+            0.9373465861252238,
+            0.9402724070956072,
+            0.9334199966291121
+          ],
+          "refit_epochs": 109
+        }
+      ]
+    },
+    {
+      "outer_seed": 13,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9317429646106731,
+        "inner_mcc": [
+          0.9314910638641148,
+          0.930223268349838,
+          0.9335145616180666
+        ],
+        "refit_epochs": 75
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9317429646106731,
+          "inner_mcc": [
+            0.9314910638641148,
+            0.930223268349838,
+            0.9335145616180666
+          ],
+          "refit_epochs": 75
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9317070027873253,
+          "inner_mcc": [
+            0.9339369068549499,
+            0.9303045300856867,
+            0.9308795714213395
+          ],
+          "refit_epochs": 96
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9308554556024404,
+          "inner_mcc": [
+            0.9331824905792154,
+            0.9276121595644388,
+            0.9317717166636668
+          ],
+          "refit_epochs": 88
+        }
+      ]
+    },
+    {
+      "outer_seed": 13,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9375047607634784,
+        "inner_mcc": [
+          0.9390955020346587,
+          0.9336101799573915,
+          0.9398086002983849
+        ],
+        "refit_epochs": 60
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9375047607634784,
+          "inner_mcc": [
+            0.9390955020346587,
+            0.9336101799573915,
+            0.9398086002983849
+          ],
+          "refit_epochs": 60
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9363737228945932,
+          "inner_mcc": [
+            0.9378223802419576,
+            0.932667913552562,
+            0.93863087488926
+          ],
+          "refit_epochs": 70
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9349669285929089,
+          "inner_mcc": [
+            0.9385386235404716,
+            0.9313799887499297,
+            0.9349821734883251
+          ],
+          "refit_epochs": 95
+        }
+      ]
+    },
+    {
+      "outer_seed": 14,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9334066540492137,
+        "inner_mcc": [
+          0.9352410498092858,
+          0.9299477017374294,
+          0.9350312106009261
+        ],
+        "refit_epochs": 59
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9334066540492137,
+          "inner_mcc": [
+            0.9352410498092858,
+            0.9299477017374294,
+            0.9350312106009261
+          ],
+          "refit_epochs": 59
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9331231950713786,
+          "inner_mcc": [
+            0.9298334971156568,
+            0.9350781128582486,
+            0.9344579752402304
+          ],
+          "refit_epochs": 66
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9329318796472558,
+          "inner_mcc": [
+            0.9324348094426563,
+            0.9287981752994442,
+            0.9375626541996667
+          ],
+          "refit_epochs": 92
+        }
+      ]
+    },
+    {
+      "outer_seed": 14,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9402991586660532,
+        "inner_mcc": [
+          0.9392175464188484,
+          0.9455447491369483,
+          0.9361351804423629
+        ],
+        "refit_epochs": 56
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9402991586660532,
+          "inner_mcc": [
+            0.9392175464188484,
+            0.9455447491369483,
+            0.9361351804423629
+          ],
+          "refit_epochs": 56
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9397783841252513,
+          "inner_mcc": [
+            0.9355119191731174,
+            0.9456683032113555,
+            0.9381549299912809
+          ],
+          "refit_epochs": 61
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9378133160478188,
+          "inner_mcc": [
+            0.9428558925473092,
+            0.9374051289386282,
+            0.9331789266575191
+          ],
+          "refit_epochs": 79
+        }
+      ]
+    },
+    {
+      "outer_seed": 15,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9331894339465343,
+        "inner_mcc": [
+          0.932728889441762,
+          0.9294520810989622,
+          0.9373873312988785
+        ],
+        "refit_epochs": 84
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9331894339465343,
+          "inner_mcc": [
+            0.932728889441762,
+            0.9294520810989622,
+            0.9373873312988785
+          ],
+          "refit_epochs": 84
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9326945090031158,
+          "inner_mcc": [
+            0.9309115192038754,
+            0.9308233834836437,
+            0.9363486243218281
+          ],
+          "refit_epochs": 60
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9324403359168644,
+          "inner_mcc": [
+            0.9306634082936553,
+            0.9368197623199666,
+            0.9298378371369715
+          ],
+          "refit_epochs": 125
+        }
+      ]
+    },
+    {
+      "outer_seed": 15,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9383414307419375,
+        "inner_mcc": [
+          0.9348274339473412,
+          0.9415364564323466,
+          0.9386604018461249
+        ],
+        "refit_epochs": 75
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9383414307419375,
+          "inner_mcc": [
+            0.9348274339473412,
+            0.9415364564323466,
+            0.9386604018461249
+          ],
+          "refit_epochs": 75
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9375437944382936,
+          "inner_mcc": [
+            0.9371421728641773,
+            0.9405532841651645,
+            0.9349359262855392
+          ],
+          "refit_epochs": 58
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9370780376460547,
+          "inner_mcc": [
+            0.9361728631081492,
+            0.9405600036050586,
+            0.9345012462249561
+          ],
+          "refit_epochs": 134
+        }
+      ]
+    },
+    {
+      "outer_seed": 16,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9316473692159727,
+        "inner_mcc": [
+          0.9343456080242242,
+          0.9301990506107874,
+          0.9303974490129066
+        ],
+        "refit_epochs": 47
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9316473692159727,
+          "inner_mcc": [
+            0.9343456080242242,
+            0.9301990506107874,
+            0.9303974490129066
+          ],
+          "refit_epochs": 47
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9314281446582805,
+          "inner_mcc": [
+            0.9296421152322174,
+            0.9343851322749288,
+            0.9302571864676954
+          ],
+          "refit_epochs": 42
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9311299737848389,
+          "inner_mcc": [
+            0.9350477574938548,
+            0.9302352541983422,
+            0.9281069096623195
+          ],
+          "refit_epochs": 89
+        }
+      ]
+    },
+    {
+      "outer_seed": 16,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9378489078765436,
+        "inner_mcc": [
+          0.9384859598616149,
+          0.9327865108611966,
+          0.9422742529068194
+        ],
+        "refit_epochs": 70
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9378489078765436,
+          "inner_mcc": [
+            0.9384859598616149,
+            0.9327865108611966,
+            0.9422742529068194
+          ],
+          "refit_epochs": 70
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9374978455197294,
+          "inner_mcc": [
+            0.9307720838299693,
+            0.9432528093495043,
+            0.9384686433797147
+          ],
+          "refit_epochs": 43
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9339287225563346,
+          "inner_mcc": [
+            0.9371200742784446,
+            0.9280346548918484,
+            0.936631438498711
+          ],
+          "refit_epochs": 81
+        }
+      ]
+    },
+    {
+      "outer_seed": 17,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9304618251674096,
+        "inner_mcc": [
+          0.9323764910291602,
+          0.9261147155491596,
+          0.9328942689239089
+        ],
+        "refit_epochs": 98
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9304618251674096,
+          "inner_mcc": [
+            0.9323764910291602,
+            0.9261147155491596,
+            0.9328942689239089
+          ],
+          "refit_epochs": 98
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9300147151369655,
+          "inner_mcc": [
+            0.9247048676079834,
+            0.9315738105641015,
+            0.933765467238812
+          ],
+          "refit_epochs": 103
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9297073035826321,
+          "inner_mcc": [
+            0.9238459837470107,
+            0.9331131171808275,
+            0.9321628098200584
+          ],
+          "refit_epochs": 52
+        }
+      ]
+    },
+    {
+      "outer_seed": 17,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.939512281292858,
+        "inner_mcc": [
+          0.9378049104958059,
+          0.9449182065890013,
+          0.9358137267937671
+        ],
+        "refit_epochs": 73
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.939512281292858,
+          "inner_mcc": [
+            0.9378049104958059,
+            0.9449182065890013,
+            0.9358137267937671
+          ],
+          "refit_epochs": 73
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9383373518528458,
+          "inner_mcc": [
+            0.9357871829510643,
+            0.935583311656232,
+            0.9436415609512413
+          ],
+          "refit_epochs": 69
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9379816087158236,
+          "inner_mcc": [
+            0.9348312988235977,
+            0.9425734350554503,
+            0.9365400922684228
+          ],
+          "refit_epochs": 129
+        }
+      ]
+    },
+    {
+      "outer_seed": 18,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9299609438839748,
+        "inner_mcc": [
+          0.9267076726269888,
+          0.9308792808220288,
+          0.9322958782029067
+        ],
+        "refit_epochs": 56
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9299609438839748,
+          "inner_mcc": [
+            0.9267076726269888,
+            0.9308792808220288,
+            0.9322958782029067
+          ],
+          "refit_epochs": 56
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9296676644469195,
+          "inner_mcc": [
+            0.9312810052159567,
+            0.9265786697488764,
+            0.9311433183759256
+          ],
+          "refit_epochs": 78
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9289704665611836,
+          "inner_mcc": [
+            0.9267279698419633,
+            0.9304329926489316,
+            0.9297504371926564
+          ],
+          "refit_epochs": 140
+        }
+      ]
+    },
+    {
+      "outer_seed": 18,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9382704273403517,
+        "inner_mcc": [
+          0.9341814474829425,
+          0.9420722926315431,
+          0.9385575419065694
+        ],
+        "refit_epochs": 57
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9382704273403517,
+          "inner_mcc": [
+            0.9341814474829425,
+            0.9420722926315431,
+            0.9385575419065694
+          ],
+          "refit_epochs": 57
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9374133279512304,
+          "inner_mcc": [
+            0.9363003174345761,
+            0.9424993964973851,
+            0.9334402699217301
+          ],
+          "refit_epochs": 39
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9361584820775924,
+          "inner_mcc": [
+            0.9421839459409377,
+            0.9316432633407143,
+            0.9346482369511258
+          ],
+          "refit_epochs": 79
+        }
+      ]
+    },
+    {
+      "outer_seed": 19,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9295777109441761,
+        "inner_mcc": [
+          0.9292245667372311,
+          0.9290613400374815,
+          0.9304472260578155
+        ],
+        "refit_epochs": 43
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9295777109441761,
+          "inner_mcc": [
+            0.9292245667372311,
+            0.9290613400374815,
+            0.9304472260578155
+          ],
+          "refit_epochs": 43
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9292140879712663,
+          "inner_mcc": [
+            0.9308353669346733,
+            0.9274796297876146,
+            0.929327267191511
+          ],
+          "refit_epochs": 42
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9290916989325289,
+          "inner_mcc": [
+            0.9270297867871609,
+            0.931144889111633,
+            0.9291004208987927
+          ],
+          "refit_epochs": 100
+        }
+      ]
+    },
+    {
+      "outer_seed": 19,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9386163446136582,
+        "inner_mcc": [
+          0.9422210999002064,
+          0.9388171111895118,
+          0.9348108227512564
+        ],
+        "refit_epochs": 71
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9386163446136582,
+          "inner_mcc": [
+            0.9422210999002064,
+            0.9388171111895118,
+            0.9348108227512564
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9375591566137441,
+          "inner_mcc": [
+            0.9375305762899061,
+            0.9332436450516565,
+            0.94190324849967
+          ],
+          "refit_epochs": 70
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9367282538869771,
+          "inner_mcc": [
+            0.938869775779833,
+            0.9374431928293303,
+            0.9338717930517679
+          ],
+          "refit_epochs": 109
+        }
+      ]
+    },
+    {
+      "outer_seed": 20,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9297865636036118,
+        "inner_mcc": [
+          0.9307240657852078,
+          0.9282697553285425,
+          0.930365869697085
+        ],
+        "refit_epochs": 77
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9297865636036118,
+          "inner_mcc": [
+            0.9307240657852078,
+            0.9282697553285425,
+            0.930365869697085
+          ],
+          "refit_epochs": 77
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9293682008157581,
+          "inner_mcc": [
+            0.9294780322726611,
+            0.9279392911358408,
+            0.9306872790387724
+          ],
+          "refit_epochs": 56
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9282791858458248,
+          "inner_mcc": [
+            0.9259334952266614,
+            0.9286592113666942,
+            0.9302448509441189
+          ],
+          "refit_epochs": 123
+        }
+      ]
+    },
+    {
+      "outer_seed": 20,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.936800254493642,
+        "inner_mcc": [
+          0.9352135948872188,
+          0.9350775209364462,
+          0.9401096476572611
+        ],
+        "refit_epochs": 63
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.936800254493642,
+          "inner_mcc": [
+            0.9352135948872188,
+            0.9350775209364462,
+            0.9401096476572611
+          ],
+          "refit_epochs": 63
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9360241331183232,
+          "inner_mcc": [
+            0.933357497524906,
+            0.9399473932310847,
+            0.9347675085989791
+          ],
+          "refit_epochs": 35
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9347145373626207,
+          "inner_mcc": [
+            0.9385266943586202,
+            0.9314880512896868,
+            0.9341288664395553
+          ],
+          "refit_epochs": 79
+        }
+      ]
+    },
+    {
+      "outer_seed": 21,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9323684268333693,
+        "inner_mcc": [
+          0.9300030151722404,
+          0.934065603971691,
+          0.9330366613561767
+        ],
+        "refit_epochs": 62
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9323684268333693,
+          "inner_mcc": [
+            0.9300030151722404,
+            0.934065603971691,
+            0.9330366613561767
+          ],
+          "refit_epochs": 62
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.932262606041279,
+          "inner_mcc": [
+            0.9298043690868161,
+            0.9352481105079464,
+            0.9317353385290743
+          ],
+          "refit_epochs": 62
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9320938054329733,
+          "inner_mcc": [
+            0.93140195013766,
+            0.9328000302293138,
+            0.932079435931946
+          ],
+          "refit_epochs": 118
+        }
+      ]
+    },
+    {
+      "outer_seed": 21,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9396780846760944,
+        "inner_mcc": [
+          0.9394812618625635,
+          0.9367065417877132,
+          0.9428464503780065
+        ],
+        "refit_epochs": 71
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9396780846760944,
+          "inner_mcc": [
+            0.9394812618625635,
+            0.9367065417877132,
+            0.9428464503780065
+          ],
+          "refit_epochs": 71
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9391608760489168,
+          "inner_mcc": [
+            0.9416289100488857,
+            0.939151596701715,
+            0.9367021213961501
+          ],
+          "refit_epochs": 63
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9354164892970552,
+          "inner_mcc": [
+            0.9362379505612762,
+            0.9339148157639877,
+            0.9360967015659017
+          ],
+          "refit_epochs": 71
+        }
+      ]
+    },
+    {
+      "outer_seed": 22,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.0003,
+        "mean_validation_mcc": 0.930594235589146,
+        "inner_mcc": [
+          0.9252775467614672,
+          0.9313556283355894,
+          0.9351495316703812
+        ],
+        "refit_epochs": 110
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.930594235589146,
+          "inner_mcc": [
+            0.9252775467614672,
+            0.9313556283355894,
+            0.9351495316703812
+          ],
+          "refit_epochs": 110
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.929919975046506,
+          "inner_mcc": [
+            0.9249995953155472,
+            0.9350225641817473,
+            0.9297377656422234
+          ],
+          "refit_epochs": 38
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9298436336854635,
+          "inner_mcc": [
+            0.9357872310370876,
+            0.9293021533016188,
+            0.9244415167176843
+          ],
+          "refit_epochs": 50
+        }
+      ]
+    },
+    {
+      "outer_seed": 22,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9410504959165573,
+        "inner_mcc": [
+          0.9393195243240833,
+          0.9432696610529693,
+          0.9405623023726193
+        ],
+        "refit_epochs": 50
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9410504959165573,
+          "inner_mcc": [
+            0.9393195243240833,
+            0.9432696610529693,
+            0.9405623023726193
+          ],
+          "refit_epochs": 50
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9406330365675184,
+          "inner_mcc": [
+            0.9400160430816624,
+            0.9431605088249578,
+            0.9387225577959352
+          ],
+          "refit_epochs": 50
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9369422502674524,
+          "inner_mcc": [
+            0.9394490227360586,
+            0.9350234874230225,
+            0.9363542406432761
+          ],
+          "refit_epochs": 78
+        }
+      ]
+    },
+    {
+      "outer_seed": 23,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.05,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9325490178082538,
+        "inner_mcc": [
+          0.9305364542359609,
+          0.9316996708922084,
+          0.9354109282965922
+        ],
+        "refit_epochs": 87
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9325490178082538,
+          "inner_mcc": [
+            0.9305364542359609,
+            0.9316996708922084,
+            0.9354109282965922
+          ],
+          "refit_epochs": 87
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9320941851851008,
+          "inner_mcc": [
+            0.9323088436252017,
+            0.9347588189133496,
+            0.9292148930167512
+          ],
+          "refit_epochs": 65
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9320508906652534,
+          "inner_mcc": [
+            0.9345911052285601,
+            0.9304540857045771,
+            0.9311074810626231
+          ],
+          "refit_epochs": 121
+        }
+      ]
+    },
+    {
+      "outer_seed": 23,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9363501175137047,
+        "inner_mcc": [
+          0.9371039060787603,
+          0.9336495038607427,
+          0.9382969426016112
+        ],
+        "refit_epochs": 62
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9363501175137047,
+          "inner_mcc": [
+            0.9371039060787603,
+            0.9336495038607427,
+            0.9382969426016112
+          ],
+          "refit_epochs": 62
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9359954658929706,
+          "inner_mcc": [
+            0.9365654117052679,
+            0.9370682254133184,
+            0.9343527605603256
+          ],
+          "refit_epochs": 51
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9348069248771784,
+          "inner_mcc": [
+            0.9350590728698772,
+            0.9324661457848592,
+            0.9368955559767987
+          ],
+          "refit_epochs": 95
+        }
+      ]
+    },
+    {
+      "outer_seed": 24,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "selected": {
+        "family": "plain",
+        "aux_weight": 0.0,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9322335435710741,
+        "inner_mcc": [
+          0.9336667225859482,
+          0.9322139101735184,
+          0.9308199979537558
+        ],
+        "refit_epochs": 69
+      },
+      "candidates": [
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9322335435710741,
+          "inner_mcc": [
+            0.9336667225859482,
+            0.9322139101735184,
+            0.9308199979537558
+          ],
+          "refit_epochs": 69
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9318952562135449,
+          "inner_mcc": [
+            0.9334303840276913,
+            0.9312619640990004,
+            0.930993420513943
+          ],
+          "refit_epochs": 129
+        },
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.05,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.93170540793771,
+          "inner_mcc": [
+            0.9316566560259221,
+            0.9311865398879422,
+            0.9322730278992655
+          ],
+          "refit_epochs": 57
+        }
+      ]
+    },
+    {
+      "outer_seed": 24,
+      "fingerprint": "drfp",
+      "selected": {
+        "family": "auxiliary",
+        "aux_weight": 0.02,
+        "lr": 0.001,
+        "mean_validation_mcc": 0.9375795080686661,
+        "inner_mcc": [
+          0.9353336332196787,
+          0.9367770327286896,
+          0.9406278582576298
+        ],
+        "refit_epochs": 58
+      },
+      "candidates": [
+        {
+          "family": "auxiliary",
+          "aux_weight": 0.02,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9375795080686661,
+          "inner_mcc": [
+            0.9353336332196787,
+            0.9367770327286896,
+            0.9406278582576298
+          ],
+          "refit_epochs": 58
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.001,
+          "mean_validation_mcc": 0.9370626599944969,
+          "inner_mcc": [
+            0.9398659174358753,
+            0.93533954397282,
+            0.9359825185747952
+          ],
+          "refit_epochs": 50
+        },
+        {
+          "family": "plain",
+          "aux_weight": 0.0,
+          "lr": 0.0003,
+          "mean_validation_mcc": 0.9354324639316488,
+          "inner_mcc": [
+            0.9394512652630531,
+            0.9347004752590902,
+            0.9321456512728032
+          ],
+          "refit_epochs": 93
+        }
+      ]
+    }
+  ]
+}

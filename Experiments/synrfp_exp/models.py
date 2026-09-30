@@ -5,8 +5,9 @@
   the nearest neighbour). Tests whether labels are expressed by local geometry.
 * ``linear``: one-vs-rest SGD logistic regression (a linear probe).
 * ``mlp``: one hidden layer, early stopping on an internal validation split.
-* ``xgb``: gradient boosted trees (``multi:softprob``), early stopping on the
-  validation split; skipped above ``max_classes``.
+* ``xgb``: histogram gradient boosted trees (``multi:softprob``), early
+  stopping on the validation split; optional CUDA device and
+  ``max_classes`` limit.
 """
 from __future__ import annotations
 
@@ -112,11 +113,13 @@ def fit_predict(
         from xgboost import XGBClassifier
 
         classes = np.unique(y_tr)
-        if len(classes) > params["max_classes"]:
+        if params.get("max_classes") is not None and len(classes) > params["max_classes"]:
             raise Skip(f"{len(classes)} classes > max_classes")
         enc = {c: i for i, c in enumerate(classes)}
         keep = np.isin(y_va, classes)
-        clf = XGBClassifier(objective="multi:softprob", tree_method="hist",
+        if not keep.any():
+            raise Skip("no validation labels occur in the training classes")
+        clf = XGBClassifier(objective="multi:softprob", tree_method="hist", device=params.get("device", "cpu"),
                             n_estimators=params["n_estimators"],
                             learning_rate=params["learning_rate"],
                             max_depth=params["max_depth"],
@@ -127,6 +130,24 @@ def fit_predict(
             Xva = (Xva - mu) / sd
         clf.fit(Xtr, np.vectorize(enc.get)(y_tr),
                 eval_set=[(Xva, np.vectorize(enc.get)(y_va[keep]))], verbose=False)
+        # Avoid constructing a CPU DMatrix for GPU-trained models.  XGBoost
+        # otherwise warns about mismatched devices and performs a slow fallback
+        # during prediction.  ``inplace_predict`` returns class probabilities
+        # for ``multi:softprob``; reduce them to the same encoded class labels
+        # returned by ``clf.predict``.
+        if str(params.get("device", "cpu")).startswith("cuda"):
+            # XGBoost's sklearn wrapper did not expose ``inplace_predict`` in
+            # some 3.x releases.  Prefer the booster API when available and
+            # fall back to the wrapper prediction method for compatibility.
+            if hasattr(clf, "inplace_predict"):
+                pred = clf.inplace_predict(Xte)
+            elif hasattr(clf, "get_booster") and hasattr(clf.get_booster(), "inplace_predict"):
+                pred = clf.get_booster().inplace_predict(Xte)
+            else:
+                pred = clf.predict(Xte)
+            if pred.ndim == 2:
+                pred = pred.argmax(axis=1)
+            return classes[np.asarray(pred, dtype=int)]
         return classes[clf.predict(Xte).astype(int)]
 
     raise ValueError(f"unknown model {model!r}")

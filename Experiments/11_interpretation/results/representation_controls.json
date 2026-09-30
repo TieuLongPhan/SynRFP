@@ -1,0 +1,98 @@
+[
+  {
+    "case": "base",
+    "reaction": "CCO>>CC=O",
+    "fingerprint": "synrfp",
+    "n_on_bits": 14,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "base",
+    "reaction": "CCO>>CC=O",
+    "fingerprint": "synrfp_unsigned_delta",
+    "n_on_bits": 16,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "base",
+    "reaction": "CCO>>CC=O",
+    "fingerprint": "drfp",
+    "n_on_bits": 7,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "reversal",
+    "reaction": "CC=O>>CCO",
+    "fingerprint": "synrfp",
+    "n_on_bits": 16,
+    "hamming_from_base": 30,
+    "identical_to_base": false
+  },
+  {
+    "case": "reversal",
+    "reaction": "CC=O>>CCO",
+    "fingerprint": "synrfp_unsigned_delta",
+    "n_on_bits": 16,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "reversal",
+    "reaction": "CC=O>>CCO",
+    "fingerprint": "drfp",
+    "n_on_bits": 7,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "unchanged_reactant_spectator",
+    "reaction": "CCO.CCO>>CC=O.CCO",
+    "fingerprint": "synrfp",
+    "n_on_bits": 14,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "unchanged_reactant_spectator",
+    "reaction": "CCO.CCO>>CC=O.CCO",
+    "fingerprint": "synrfp_unsigned_delta",
+    "n_on_bits": 16,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "unchanged_reactant_spectator",
+    "reaction": "CCO.CCO>>CC=O.CCO",
+    "fingerprint": "drfp",
+    "n_on_bits": 3,
+    "hamming_from_base": 4,
+    "identical_to_base": false
+  },
+  {
+    "case": "unchanged_product_spectator",
+    "reaction": "CCO.CC=O>>CC=O.CC=O",
+    "fingerprint": "synrfp",
+    "n_on_bits": 14,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "unchanged_product_spectator",
+    "reaction": "CCO.CC=O>>CC=O.CC=O",
+    "fingerprint": "synrfp_unsigned_delta",
+    "n_on_bits": 16,
+    "hamming_from_base": 0,
+    "identical_to_base": true
+  },
+  {
+    "case": "unchanged_product_spectator",
+    "reaction": "CCO.CC=O>>CC=O.CC=O",
+    "fingerprint": "drfp",
+    "n_on_bits": 4,
+    "hamming_from_base": 3,
+    "identical_to_base": false
+  }
+]

@@ -1,0 +1,22 @@
+{
+ "dataset": "tpl_b",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "minibatch_kmeans",
+ "seed": 4,
+ "k": 1000,
+ "n": 445115,
+ "batch_size": 8192,
+ "n_init": 3,
+ "max_iter": 100,
+ "elapsed_seconds": 503.8265211620601,
+ "label__ari": 0.22045503521951176,
+ "label__ami": 0.7418309054971928,
+ "label__nmi": 0.7714359054998724,
+ "label__homogeneity": 0.7925628939545999,
+ "label__completeness": 0.7514060171832088,
+ "label__v_measure": 0.7714359054998724,
+ "label__mcc_hungarian": 0.34266180781355615,
+ "label__n_clusters": 996,
+ "label__singleton_fraction": 2.2466104265189895e-06,
+ "label__largest_cluster_fraction": 0.008685395908922413
+}

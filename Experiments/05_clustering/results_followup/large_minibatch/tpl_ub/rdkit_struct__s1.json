@@ -1,0 +1,22 @@
+{
+ "dataset": "tpl_ub",
+ "fingerprint": "rdkit_struct",
+ "method": "minibatch_kmeans",
+ "seed": 1,
+ "k": 1000,
+ "n": 445115,
+ "batch_size": 8192,
+ "n_init": 3,
+ "max_iter": 100,
+ "elapsed_seconds": 924.6725177690387,
+ "label__ari": 0.033449066701276,
+ "label__ami": 0.3140511872125914,
+ "label__nmi": 0.3972347531950447,
+ "label__homogeneity": 0.4144883760316939,
+ "label__completeness": 0.38136013681025627,
+ "label__v_measure": 0.3972347531950448,
+ "label__mcc_hungarian": 0.11142161773115176,
+ "label__n_clusters": 1000,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.003459780056839244
+}

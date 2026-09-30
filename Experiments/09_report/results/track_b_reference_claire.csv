@@ -1,0 +1,3 @@
+model,ec1,ec2,ec3
+claire_weighted_f1,0.958,0.944,0.861
+theia_ecreact_weighted_f1,0.387,0.333,0.228

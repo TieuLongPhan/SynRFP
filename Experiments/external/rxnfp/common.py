@@ -21,13 +21,6 @@ def load_config(path=None):
     return cfg
 
 
-def dataset_table(cfg, dataset):
-    p = cfg["paths"]["work"] / "export" / f"ds_{dataset}.csv.gz"
-    if not p.exists():
-        raise FileNotFoundError(f"{p} missing; run 01_data/prepare_data.py first")
-    return pd.read_csv(p)
-
-
 def reaction_table(cfg, key):
     return pd.read_csv(cfg["paths"]["work"] / "export" / f"rxn_{key}.csv.gz")
 
@@ -41,22 +34,6 @@ def reaction_keys(cfg):
 def rxn_key(cfg, dataset):
     spec = cfg["datasets"][dataset]
     return "mech" if spec.get("source") == "mech" else spec["name"]
-
-
-def scheme_seeds(cfg, dataset, schemes=None, seeds=None):
-    """Same rule as synrfp_exp.splits.scheme_seeds."""
-    table = cfg["benchmark"]["schemes"]
-    primary = "published" if cfg["datasets"][dataset]["split"] == "published" else "random"
-    out = []
-    for scheme in schemes or list(table):
-        if scheme in ("published", "random") and scheme != primary:
-            continue
-        out += [(scheme, s) for s in (seeds if seeds is not None else table[scheme])]
-    return out
-
-
-def split_codes(cfg, dataset, scheme, seed):
-    return np.load(cfg["paths"]["work"] / "splits" / dataset / f"{scheme}_s{seed}.npy")
 
 
 def save_features(path, X, ok):

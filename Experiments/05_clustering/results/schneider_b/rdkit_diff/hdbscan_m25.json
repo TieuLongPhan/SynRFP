@@ -1,0 +1,19 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "rdkit_diff",
+ "method": "hdbscan",
+ "param": 25,
+ "n": 50000,
+ "elapsed_seconds": 557.4357035830617,
+ "noise_fraction": 0.0161,
+ "label__ari": 0.0003934956390395967,
+ "label__ami": 0.022059164224864862,
+ "label__nmi": 0.05323261910909119,
+ "label__homogeneity": 0.0285144969285956,
+ "label__completeness": 0.39982916724618756,
+ "label__v_measure": 0.053232619109091196,
+ "label__mcc_hungarian": 0.0392505546156046,
+ "label__n_clusters": 813,
+ "label__singleton_fraction": 0.0161,
+ "label__largest_cluster_fraction": 0.97062
+}

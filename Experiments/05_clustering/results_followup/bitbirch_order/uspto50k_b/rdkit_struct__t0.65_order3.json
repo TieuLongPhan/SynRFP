@@ -1,0 +1,20 @@
+{
+ "dataset": "uspto50k_b",
+ "fingerprint": "rdkit_struct",
+ "method": "bitbirch_order_stability",
+ "threshold": 0.65,
+ "order": 3,
+ "order_seed": 20260927,
+ "n": 50016,
+ "elapsed_seconds": 3.2515707740094513,
+ "label__ari": 0.0070815819255555905,
+ "label__ami": 0.10275784891284774,
+ "label__nmi": 0.14024401487232496,
+ "label__homogeneity": 0.29849558245419117,
+ "label__completeness": 0.0916529394911914,
+ "label__v_measure": 0.14024401487232496,
+ "label__mcc_hungarian": 0.041212082899621034,
+ "label__n_clusters": 2988,
+ "label__singleton_fraction": 0.02399232245681382,
+ "label__largest_cluster_fraction": 0.04780470249520154
+}

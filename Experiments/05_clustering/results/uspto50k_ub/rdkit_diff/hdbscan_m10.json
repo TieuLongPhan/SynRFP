@@ -1,0 +1,19 @@
+{
+ "dataset": "uspto50k_ub",
+ "fingerprint": "rdkit_diff",
+ "method": "hdbscan",
+ "param": 10,
+ "n": 50016,
+ "elapsed_seconds": 725.6454707209487,
+ "noise_fraction": 0.006517914267434421,
+ "label__ari": 0.001718267127618353,
+ "label__ami": 0.004520038010140504,
+ "label__nmi": 0.017145347666437678,
+ "label__homogeneity": 0.00901444734580487,
+ "label__completeness": 0.17492655100561605,
+ "label__v_measure": 0.017145347666437678,
+ "label__mcc_hungarian": 0.019494977353267117,
+ "label__n_clusters": 330,
+ "label__singleton_fraction": 0.006517914267434421,
+ "label__largest_cluster_fraction": 0.9915227127319258
+}

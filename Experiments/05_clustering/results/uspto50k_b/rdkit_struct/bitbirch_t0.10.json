@@ -1,0 +1,18 @@
+{
+ "dataset": "uspto50k_b",
+ "fingerprint": "rdkit_struct",
+ "method": "bitbirch",
+ "param": 0.1,
+ "n": 50016,
+ "elapsed_seconds": 1.0867874609539285,
+ "label__ari": 0.0,
+ "label__ami": 0.0,
+ "label__nmi": 0.0,
+ "label__homogeneity": 0.0,
+ "label__completeness": 1.0,
+ "label__v_measure": 0.0,
+ "label__mcc_hungarian": 0.0,
+ "label__n_clusters": 1,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 1.0
+}

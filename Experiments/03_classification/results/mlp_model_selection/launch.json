@@ -1,0 +1,48 @@
+[
+  {
+    "candidate": "baseline",
+    "pid": 3254115,
+    "command": [
+      "/home/labhhc4/anaconda3/envs/rxnfp/bin/python",
+      "-u",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/mlp_model_selection.py",
+      "--dataset",
+      "tpl_ub",
+      "--seed",
+      "0",
+      "--epochs",
+      "50",
+      "--patience",
+      "10",
+      "--candidate",
+      "baseline",
+      "--device",
+      "cuda:0",
+      "--out",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/mlp_model_selection/tpl_ub_s0_baseline.json"
+    ]
+  },
+  {
+    "candidate": "wide_gelu",
+    "pid": 3254116,
+    "command": [
+      "/home/labhhc4/anaconda3/envs/rxnfp/bin/python",
+      "-u",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/mlp_model_selection.py",
+      "--dataset",
+      "tpl_ub",
+      "--seed",
+      "0",
+      "--epochs",
+      "50",
+      "--patience",
+      "10",
+      "--candidate",
+      "wide_gelu",
+      "--device",
+      "cuda:1",
+      "--out",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/mlp_model_selection/tpl_ub_s0_wide_gelu.json"
+    ]
+  }
+]

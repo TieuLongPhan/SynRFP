@@ -1,0 +1,38 @@
+{
+  "assignment_file": "mech_2__rdkit_struct__kmeans_s0.npz",
+  "dataset": "mech_2",
+  "fingerprint": "rdkit_struct",
+  "invalid_rows": 0,
+  "k": 62,
+  "method": "kmeans",
+  "n_init": 10,
+  "n_rows": 31667,
+  "n_valid": 31667,
+  "scores_on_valid_rows": {
+    "level1": {
+      "ami": 0.12394795277020479,
+      "ari": 0.015421209121596276,
+      "completeness": 0.08778390866217482,
+      "homogeneity": 0.2253465495366532,
+      "largest_cluster_fraction": 0.0226734455426785,
+      "mcc_hungarian": 0.0862121631613863,
+      "n_clusters": 62,
+      "nmi": 0.1263486218213943,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.1263486218213943
+    },
+    "level2": {
+      "ami": 0.13335943056833394,
+      "ari": 0.022939958030803956,
+      "completeness": 0.12776512762347977,
+      "homogeneity": 0.1773742213129758,
+      "largest_cluster_fraction": 0.0226734455426785,
+      "mcc_hungarian": 0.06589000016746677,
+      "n_clusters": 62,
+      "nmi": 0.148536988770249,
+      "singleton_fraction": 0.0,
+      "v_measure": 0.14853698877024904
+    }
+  },
+  "seed": 0
+}

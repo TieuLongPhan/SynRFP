@@ -1,0 +1,12 @@
+{
+  "pid": 2240182,
+  "command": [
+    "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+    "-u",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/cpu_benchmark_queue.py",
+    "--threads",
+    "16",
+    "--control",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/cpu_benchmark_queue"
+  ]
+}

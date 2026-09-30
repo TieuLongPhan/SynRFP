@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "schneider_ub",
+ "scheme": "cv",
+ "seed": 13,
+ "fingerprint": "drfp",
+ "model": "xgb",
+ "n_train": 30639,
+ "n_val": 9682,
+ "n_test": 9679,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9655335019185406,
+ "accuracy": 0.9662155181320384,
+ "macro_f1": 0.9665520478438998,
+ "weighted_f1": 0.9663532305396783,
+ "balanced_accuracy": 0.9666544952814192
+}

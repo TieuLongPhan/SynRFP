@@ -1,0 +1,17 @@
+{
+ "study": "benchmark",
+ "dataset": "uspto50k_ub",
+ "scheme": "fixed",
+ "seed": 2,
+ "fingerprint": "drfp",
+ "model": "xgb",
+ "n_train": 40512,
+ "n_val": 4502,
+ "n_test": 5002,
+ "n_unfeaturised_test": 0,
+ "mcc": 0.9525458756219435,
+ "accuracy": 0.9620151939224311,
+ "macro_f1": 0.9308703362939321,
+ "weighted_f1": 0.9616668874185271,
+ "balanced_accuracy": 0.9217962278534244
+}

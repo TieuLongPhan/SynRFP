@@ -13,6 +13,7 @@ def classification(y_true: np.ndarray, y_pred: np.ndarray) -> Dict[str, float]:
         "mcc": skm.matthews_corrcoef(y_true, y_pred),
         "accuracy": skm.accuracy_score(y_true, y_pred),
         "macro_f1": skm.f1_score(y_true, y_pred, average="macro", zero_division=0),
+        "weighted_f1": skm.f1_score(y_true, y_pred, average="weighted", zero_division=0),
         "balanced_accuracy": skm.balanced_accuracy_score(y_true, y_pred),
     }
 

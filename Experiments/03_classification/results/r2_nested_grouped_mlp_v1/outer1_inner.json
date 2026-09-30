@@ -1,0 +1,31 @@
+{
+  "outer_seed": 1,
+  "inner_seed": 1001,
+  "outer_test_rows": 8688,
+  "development_rows": 34753,
+  "aggregate_source_label": "679",
+  "aggregate_encoded_label": 644,
+  "folds": [
+    {
+      "fold": 0,
+      "train": 23170,
+      "validation": 11583,
+      "train_scaffolds": 13303,
+      "validation_scaffolds": 6416
+    },
+    {
+      "fold": 1,
+      "train": 23170,
+      "validation": 11583,
+      "train_scaffolds": 13079,
+      "validation_scaffolds": 6640
+    },
+    {
+      "fold": 2,
+      "train": 23166,
+      "validation": 11587,
+      "train_scaffolds": 13056,
+      "validation_scaffolds": 6663
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "pid": 2141784,
+  "started_utc": "2026-09-20T16:37:35.688959+00:00",
+  "initial_pending": 1676,
+  "already_completed": 346,
+  "finished": 14,
+  "failed": 0,
+  "active": {},
+  "status": "paused",
+  "elapsed_seconds": 238.8124979280401,
+  "remaining": 1662
+}

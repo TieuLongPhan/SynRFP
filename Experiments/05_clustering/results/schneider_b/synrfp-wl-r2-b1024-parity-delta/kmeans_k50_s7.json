@@ -1,0 +1,18 @@
+{
+ "dataset": "schneider_b",
+ "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+ "method": "kmeans",
+ "param": 7,
+ "n": 50000,
+ "elapsed_seconds": 147.16370971000288,
+ "label__ari": 0.44038362970307693,
+ "label__ami": 0.7313002448821992,
+ "label__nmi": 0.7330060339574175,
+ "label__homogeneity": 0.7178968432966877,
+ "label__completeness": 0.7487648878316829,
+ "label__v_measure": 0.7330060339574177,
+ "label__mcc_hungarian": 0.5685302550310232,
+ "label__n_clusters": 50,
+ "label__singleton_fraction": 0.0,
+ "label__largest_cluster_fraction": 0.08886
+}

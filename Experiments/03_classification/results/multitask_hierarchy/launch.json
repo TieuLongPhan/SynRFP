@@ -1,0 +1,15 @@
+{
+  "pid": 3268530,
+  "command": [
+    "/home/labhhc4/anaconda3/envs/rxnfp/bin/python",
+    "-u",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/multitask_hierarchy_pilot.py",
+    "run",
+    "--data",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/multitask_hierarchy/syntemp_s0.npz",
+    "--out",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/multitask_hierarchy/syntemp_s0_multitask.json",
+    "--device",
+    "cuda:1"
+  ]
+}

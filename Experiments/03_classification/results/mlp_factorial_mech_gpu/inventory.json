@@ -1,0 +1,3226 @@
+{
+  "jobs": [
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r1-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r2-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-morgan-r3-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r1-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r2-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-path-r3-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r1-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r2-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_1",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_1/random_s0/synrfp-wl-r3-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31673
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r1-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r1-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r2-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r2-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-morgan-r3-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-morgan-r3-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r1-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r1-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r2-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r2-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-path-r3-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-path-r3-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r1-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r1-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r2-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r2-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b1024-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b1024-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b1024-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b1024-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b1024-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b1024-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b1024-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b2048-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b2048-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b2048-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b2048-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b2048-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b2048-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b2048-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-cw-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b512-cw-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-cw-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b512-cw-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-minhash-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b512-minhash-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-minhash-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b512-minhash-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-parity-delta",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b512-parity-delta__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    },
+    {
+      "study": "factorial",
+      "dataset": "mech_2",
+      "scheme": "random",
+      "seed": 0,
+      "fingerprint": "synrfp-wl-r3-b512-parity-union",
+      "output": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/03_classification/results/factorial/mech_2/random_s0/synrfp-wl-r3-b512-parity-union__mlp.json",
+      "scope": "mech",
+      "records": 31667
+    }
+  ],
+  "blocked": [],
+  "already_completed": 1298
+}

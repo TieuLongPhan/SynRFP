@@ -1,0 +1,30 @@
+{
+  "jobs": {
+    "tpl_ub_benchmark": [],
+    "tpl_b_benchmark": [],
+    "cpu_factorial_xgb": [],
+    "deferred_scheduler": []
+  },
+  "benchmark": {
+    "json_files": 7313,
+    "duplicate_logical_cells": 0,
+    "duplicate_examples": []
+  },
+  "factorial": {
+    "json_files": 25423,
+    "duplicate_logical_cells": 0,
+    "duplicate_examples": []
+  },
+  "locks": {
+    "count": 0,
+    "examples": []
+  },
+  "handoff": {
+    "tpl_workers_active": false,
+    "cpu_factorial_workers_active": false,
+    "scheduler_active": false,
+    "safe_to_reclaim_cpu_now": false,
+    "duplicate_free": true,
+    "status": "post_reclaim"
+  }
+}
