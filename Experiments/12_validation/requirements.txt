@@ -1,0 +1,17 @@
+# Additional to the main experiment environment (Experiments/environment.yml,
+# Python >= 3.11, this SynRFP checkout installed with `pip install -e ..`).
+rdkit
+drfp
+synkit
+synrxn
+numpy
+scipy
+pandas
+scikit-learn>=1.7
+joblib
+PyYAML
+tabulate          # 06_report.py writes Markdown tables
+# GPU MLP queue (03_classification/mlp_gpu_queue.py): a second interpreter with
+#   torch (CUDA build) and numpy; pass it with --gpu-python.
+# RXNFP steps (external/rxnfp, 03b, 05b): the separate environment in
+#   external/rxnfp/environment.yml (Python 3.8, rxnfp, torch, pandas).

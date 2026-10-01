@@ -1,0 +1,94 @@
+# Validation suite: settings that are not in ../config.yaml.
+# Frozen 1 October 2026. Change a value only before the step that uses it and
+# note the change in runs/DECISIONS.md.
+
+# ---------------------------------------------------------------------------
+# Input policies (00_setup.py). Every policy keeps the same rows, labels,
+# scaffold groups, and split codes; only the reaction string differs.
+#   raw  strings exactly as in the source tables (archived protocol)
+#   n1   atom maps removed, RDKit canonical isomeric SMILES per component,
+#        components sorted within each field; no tautomer/salt/charge changes
+#   n2   n1, then components that occur identically on both sides are removed
+#        (common spectator policy for every encoder; sensitivity arm)
+# ---------------------------------------------------------------------------
+policies: [raw, n1, n2]
+primary_policy: n1
+
+benchmark:
+  models: [knn, mlp]          # XGBoost is not part of this suite
+  schemes: {cv: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]}
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp, rxnfp_mlm]
+  label_free: [synrfp_default, drfp, rdkit_struct, rdkit_diff, rxnfp_mlm]
+
+families:                      # for family-weighted means and leave-one-out
+  schneider: [schneider_ub, schneider_b]
+  tpl: [tpl_ub, tpl_b]
+  uspto50k: [uspto50k_ub, uspto50k_b]
+  syntemp: [syntemp_r0, syntemp_r1, syntemp_r2]
+  ecreact: [ecreact_1, ecreact_2, ecreact_3]
+  mech: [mech_1, mech_2]
+
+input_audit:
+  sample: 2000                 # reactions per reaction table, seed 0
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff]
+
+# ---------------------------------------------------------------------------
+# 02_attribution.py
+# ---------------------------------------------------------------------------
+attribution:
+  datasets: [mech_2, uspto50k_b, ecreact_1, tpl_b]   # mechanism, patent, enzyme, TPL stress
+  max_records: 50000           # stratified subsample, seed 0 (archived factorial rule)
+  cv_seeds: [0, 1, 2, 3, 4]    # repeat 0 of the grouped 5x5 CV
+  vocabularies: [wl, drfp_shingle]
+  payloads: [set_unsigned, set_signed, multiset_unsigned, multiset_signed,
+             pooled, pooled_side_tagged]
+  folds: [parity, or]
+  bits: [1024, 2048]           # 1024 primary; 2048 is the prespecified sensitivity
+  hash_seeds: [1, 2, 3]        # all reported, none selected
+  exact_reference: true        # Tanimoto on unhashed key sets (5-NN only)
+  mlp: {bits: 1024, fold: parity, hash_seed: 1}   # complementary learner, one setting
+  counterexample_sample: 2000
+
+# ---------------------------------------------------------------------------
+# 03_retrieval_proxy.py  (automatic cross-database proxy, Gate C)
+# ---------------------------------------------------------------------------
+retrieval:
+  rhea_base: https://ftp.expasy.org/databases/rhea
+  ecreact_url: https://github.com/rxn4chemistry/biocatalysis-model/raw/main/data/ecreact-1.0.csv
+  query_sources: [brenda_reaction_smiles, pathbank_reaction_smiles, metanetx_reaction_smiles]
+  development_fraction: 0.2    # of query EC numbers; only this part may be inspected early
+  k: 10
+  label_level: 3               # relevance = same EC to this level
+  fingerprints: [synrfp_default, drfp, rdkit_struct, rdkit_diff]   # + any rxnfp*.npz found
+  bootstrap: 2000
+  seed: 0
+
+locality:
+  mapped_columns: [original_reactions, updated_reaction]
+  radii: [1, 2, 3]
+  collision_datasets: [mech_2, uspto50k_b, ecreact_1, tpl_b]
+  collision_sample: 5000
+
+cost:
+  datasets: [mech_2, uspto50k_b, ecreact_1, tpl_b]
+  encode_sample: 2000
+  repeats: 5
+  corpus_sizes: [10000, 100000, 1000000]
+  queries: 200
+
+# ---------------------------------------------------------------------------
+# Gates evaluated by 06_report.py. Thresholds are fixed before the runs.
+# ---------------------------------------------------------------------------
+gates:
+  A_common_input:
+    reference: drfp
+    knn_family_mean_min: 0.010        # SynRFP minus DRFP, family-weighted mean MCC, policy n1
+    knn_leave_one_family_out_min: 0.0
+    mlp_family_mean_min: -0.005
+  B_attribution:
+    contrasts: [signed_minus_unsigned_multiset, multiset_minus_set_signed, change_minus_pooled]
+    min_endpoints_same_sign_knn: 3    # of 4
+    min_endpoints_same_sign_mlp: 2
+  C_retrieval_proxy:
+    margin_over_best_label_free_min: 0.03   # macro P@10, interval must exclude 0
+    or_within_of_best_learned: 0.02         # alternative: parity with a learned encoder
