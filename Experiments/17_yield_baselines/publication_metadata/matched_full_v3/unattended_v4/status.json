@@ -1,0 +1,17 @@
+{
+  "schema": "synrfp.yield-unattended-progress/4",
+  "completed": 61,
+  "expected": 192,
+  "completed_bert": 41,
+  "expected_bert": 128,
+  "completed_original_gnan": 20,
+  "expected_original_gnan": 64,
+  "pilot_completed": 9,
+  "pilot_expected": 9,
+  "updated_utc": "2026-10-14T14:54:50.302111+00:00",
+  "phase": "running_or_queued",
+  "plan_sha256": "8c1a84c7b5c71647490a811f007105748ce3c4db9a046de10e1c375bc0017b37",
+  "execution_sha256": "4fafd847e9bfb7047138f7a392065d2d9b07254adeb4749bcd21ed7cdc56d69a",
+  "final_exhaustive_digest_audit": false,
+  "v2_bert_provisional_outputs_excluded": true
+}

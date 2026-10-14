@@ -1,0 +1,42 @@
+{
+  "launched_utc": "2026-10-12T09:43:33.959435+00:00",
+  "units": [
+    {
+      "unit": "synrfp-yield-roles-cpu0-v1.service",
+      "properties": [
+        "AllowedCPUs=16-17",
+        "MemoryMax=12884901888",
+        "Environment=CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=2",
+        "ActiveState=active"
+      ]
+    },
+    {
+      "unit": "synrfp-yield-roles-cpu1-v1.service",
+      "properties": [
+        "AllowedCPUs=18-19",
+        "MemoryMax=12884901888",
+        "Environment=CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=2",
+        "ActiveState=active"
+      ]
+    },
+    {
+      "unit": "synrfp-yield-roles-cpu2-v1.service",
+      "properties": [
+        "AllowedCPUs=20-21",
+        "MemoryMax=12884901888",
+        "Environment=CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=2",
+        "ActiveState=active"
+      ]
+    },
+    {
+      "unit": "synrfp-yield-roles-cpu3-v1.service",
+      "properties": [
+        "AllowedCPUs=22-23",
+        "MemoryMax=12884901888",
+        "Environment=CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=2",
+        "ActiveState=active"
+      ]
+    }
+  ],
+  "GPU_use": false
+}

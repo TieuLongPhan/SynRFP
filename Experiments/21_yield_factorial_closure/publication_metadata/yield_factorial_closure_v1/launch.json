@@ -1,0 +1,32 @@
+{
+  "schema": "synrfp-yield-factorial-closure-v1",
+  "launched_utc": "2026-10-12T15:37:04.364948+00:00",
+  "units": [
+    "synrfp-yield-factorial-closure-fit0-v1.service",
+    "synrfp-yield-factorial-closure-fit1-v1.service",
+    "synrfp-yield-factorial-closure-report-v1.service"
+  ],
+  "plan_sha256": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+  "controller_sha256": "131cf43321d0df45360c87c78082de4ed94cf698339c95efeadb78c3bd51e135",
+  "worker_source_sha256": "d8acdf8979710b3df5b33aafaa9b8ff5c4a6ef727f40af42544d2ec7a0e3ddbf",
+  "new_fits": 128,
+  "reused_grid_fits": 384,
+  "reused_contextual_drfp": 64,
+  "gpus": [],
+  "numerical_cpu_sets": [
+    "0-1",
+    "2-3"
+  ],
+  "quota_per_worker_percent": 200,
+  "memory_per_worker": "4G",
+  "release_gate": {
+    "old_units": {
+      "synrfp-cluster-factorial-fit0-v1.service": "inactive",
+      "synrfp-cluster-factorial-fit1-v1.service": "inactive",
+      "synrfp-cluster-factorial-fit2-v1.service": "inactive",
+      "synrfp-cluster-factorial-fit3-v1.service": "inactive"
+    },
+    "old1080_complete": true
+  },
+  "ref_gpu_priority_changed": false
+}

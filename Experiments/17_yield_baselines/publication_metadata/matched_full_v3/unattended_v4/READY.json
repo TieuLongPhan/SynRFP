@@ -1,0 +1,32 @@
+{
+  "schema": "synrfp.yield-unattended-execution/4",
+  "plan_sha256": "8c1a84c7b5c71647490a811f007105748ce3c4db9a046de10e1c375bc0017b37",
+  "gnan_source_plan_sha256": "a9750c23344545236c1c781520a907d244f0c6ca9a7288e42e986c5d4679f477",
+  "controller_sha256": "aec578d0a4c11d85f8505416479c74ec2f564100969699f05a2bd1bea4f8a195",
+  "bert_worker_sha256": "cfbb3eba3b0ec6ff91b372123a180988446f823f6cc8084f44f21e485e308b9f",
+  "gnan_worker_sha256": "f71c00d9486d5c97a5e2c0076c36c14ca9c5a91243889bbf4b907c6eac438f85",
+  "bert_verifier_sha256": "e24e6ae9898f2b94c201873aca52965bc5686e97818eb57324c8b12356eaf95f",
+  "gnan_verifier_sha256": "d53ae81c62e674053e7879a054f54f77470ef8094b0bb31dc9008acdfe4977bb",
+  "cuda_probe_sha256": "0b3c8b7022743b3687f5aeafa7b890974eb99a49f1019dab8552211e1b44df19",
+  "learning_gate_sha256": "31980fc965386433721d7dbd50f11824c603f525867775504e4fefceb8ef3cc3",
+  "expected": 192,
+  "expected_bert": 128,
+  "expected_original_gnan": 64,
+  "claims": "Original source GNAN claims and immutable v3 BERT claims shared by both GPUs",
+  "admission": "External unattended scheduler takes stage priority; physical GPU lease is acquired here",
+  "resources": "Each parent unit must enforce CPUQuota150%, MemoryMax18G; native worker threads2",
+  "audit": "Frozen verifier logic with evaluation writes redirected; full SHA once per unchanged stat, final exhaustive digest audit",
+  "v2_bert_provisional_outputs_excluded": true,
+  "created_utc": "2026-10-12T19:52:03.332623+00:00",
+  "passed": 4,
+  "total": 4,
+  "checks": [
+    "Immutable plans/pins and original learning/correctness gates",
+    "All current saved fits pass original weight/prediction/recipe/row audits",
+    "Historical evaluation files remain unchanged",
+    "Digest cache invalidates changed files"
+  ],
+  "completed_original_gnan": 6,
+  "completed_bert": 0,
+  "scope": "CPU/read-only readiness; fresh CUDA/DGL gate runs under physical lease before stage fits"
+}

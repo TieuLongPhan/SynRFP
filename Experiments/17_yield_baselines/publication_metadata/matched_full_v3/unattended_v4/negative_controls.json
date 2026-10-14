@@ -1,0 +1,26 @@
+{
+  "schema": "synrfp.yield-unattended-negative-controls/4",
+  "controller_sha256": "aec578d0a4c11d85f8505416479c74ec2f564100969699f05a2bd1bea4f8a195",
+  "plan_sha256": "8c1a84c7b5c71647490a811f007105748ce3c4db9a046de10e1c375bc0017b37",
+  "passed": 3,
+  "total": 3,
+  "checks": [
+    {
+      "case": "changed GNAN population",
+      "rejected": true,
+      "reason": "Original GNAN population/input/split fields changed"
+    },
+    {
+      "case": "smoke",
+      "rejected": true,
+      "reason": "Invalid or smoke prediction receipt"
+    },
+    {
+      "case": "weights",
+      "rejected": true,
+      "reason": "Stored checkpoint differs from original worker attestation"
+    }
+  ],
+  "created_utc": "2026-10-12T19:54:01.156196+00:00",
+  "scope": "CPU fixtures using temporary altered receipt; no historical inputs, weights, receipts or evaluations changed"
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "synrfp-yield-factorial-fold-audit-v1",
+  "plan_sha256": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+  "audit_source_sha256": "8e80827cfb7b4d87855baeb284913fe07718dc333b300d1a3587f070932bf0ca",
+  "exact_all_cached_rows": true,
+  "comparisons": [
+    {
+      "dataset": "bh_classic",
+      "wide": "r2union2048",
+      "narrow": "r2union1024",
+      "rows": 3955,
+      "exact_packed_equality": true,
+      "wide_sha256": "6826e61b35ca71359e24607c25400cb9ac8dd529ef889de27965be31ef3c45d9",
+      "narrow_sha256": "69a3abde592089cbd572e1888e487c951de4d83faa76ece9904f874261c7ebf7"
+    },
+    {
+      "dataset": "bh_classic",
+      "wide": "r3union2048",
+      "narrow": "r3union1024",
+      "rows": 3955,
+      "exact_packed_equality": true,
+      "wide_sha256": "260b6a2796ac8a094e7e0c2aeb43abbc592cbc053d4a85826f97b9f7ed23d5cd",
+      "narrow_sha256": "3c2fbf10c4a564e3cf76ddf14cb7596789e743dbbefb746463c97c91dfc16b50"
+    },
+    {
+      "dataset": "bh_classic",
+      "wide": "r3delta2048",
+      "narrow": "r3delta1024",
+      "rows": 3955,
+      "exact_packed_equality": true,
+      "wide_sha256": "e14c31be16326a453080afa6b27b5d47741aa04fcd737fe4448fd24af2dd4041",
+      "narrow_sha256": "478a5a3d29d34e38cd31d059286e33cb031fea5c1bb4d945ef82c56e5dcf3c74"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "wide": "r2union2048",
+      "narrow": "r2union1024",
+      "rows": 5760,
+      "exact_packed_equality": true,
+      "wide_sha256": "05b12562aa977387b32c427bf8d91e26f0543b0e9e3e739ceb8657d62d8c6bbb",
+      "narrow_sha256": "d9986eab64708a074dd2add88850cca9d3cf1d4dc8fd4b25eb1e9a41e17b7b0a"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "wide": "r3union2048",
+      "narrow": "r3union1024",
+      "rows": 5760,
+      "exact_packed_equality": true,
+      "wide_sha256": "72e7380c0923fae55c2b709e17b5e96a1581bd2caeae995009ee1d3d06720553",
+      "narrow_sha256": "950fa81a8da6674448bd9cbfd548aeb3dda277c8a7b5050f9d27d2e766e44782"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "wide": "r3delta2048",
+      "narrow": "r3delta1024",
+      "rows": 5760,
+      "exact_packed_equality": true,
+      "wide_sha256": "388faa76118b4883bb2fc27f78e3e86c32bb13fc1e809404077265a08c8bbc62",
+      "narrow_sha256": "200910905381ad3f96c3f472fa25fd69e3cb2d711ccc41d687e0027b0dba10cf"
+    },
+    {
+      "dataset": "ncs_bh",
+      "wide": "r2union2048",
+      "narrow": "r2union1024",
+      "rows": 27497,
+      "exact_packed_equality": true,
+      "wide_sha256": "870550475460775d77089f656ef150e45ffd9403a358566190ae0e62b8b9e952",
+      "narrow_sha256": "2972f5115b224bebdfb9ad0d83a1ac0a76f8a63522d318c689c0a6b1b1440cf2"
+    },
+    {
+      "dataset": "ncs_bh",
+      "wide": "r3union2048",
+      "narrow": "r3union1024",
+      "rows": 27497,
+      "exact_packed_equality": true,
+      "wide_sha256": "9d768711ebdffd00e6e72cdb97c1a8af25d23c30eca31765dfbc47bd88b4cd69",
+      "narrow_sha256": "62cc8697068ff4a880fbb5287d29b52d3273a643ef3929a0c5dd5294d8252841"
+    },
+    {
+      "dataset": "ncs_bh",
+      "wide": "r3delta2048",
+      "narrow": "r3delta1024",
+      "rows": 27497,
+      "exact_packed_equality": true,
+      "wide_sha256": "130730907af2f50794daa97f74e83b396d8aa7ea34e1960ba929cd46df4b6332",
+      "narrow_sha256": "ce187b93ec21019180c054a53ca164a5fa845ed2030adad778d3d86bc607c990"
+    }
+  ],
+  "reasoning": "Same token hash seed; h mod1024=(h mod2048) mod1024, so parity1024=XOR(two1024halves)",
+  "limitation": "Bit equivalence checks sketch outputs; it is not exact reaction/token identity"
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "synrfp-yield-factorial-closure-v1",
+  "installed_utc": "2026-10-12T13:47:12.638118+00:00",
+  "queue_unit": "synrfp-yield-factorial-closure-queue-v1.service",
+  "plan_sha256": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+  "closure_source_sha256": "b54206c1127e6436538c80a0448fc0d137033922b06ee83a7bdc2676729f6090",
+  "controller_source_sha256": "131cf43321d0df45360c87c78082de4ed94cf698339c95efeadb78c3bd51e135",
+  "historical_worker_sha256": "d8acdf8979710b3df5b33aafaa9b8ff5c4a6ef727f40af42544d2ec7a0e3ddbf",
+  "new_fits": 128,
+  "reused_grid_fits": 384,
+  "reused_drfp_controls": 64,
+  "numerical_workers_launched": false,
+  "numerical_gate": "all4oldclusterfitunitsinactiveand1080COMPLETE",
+  "gpus": [],
+  "historical_files_modified": false,
+  "models_preserved_locally": true,
+  "tests": [
+    "release_gate_both_conditions",
+    "real_worker_fit_and_exact_weight_replay",
+    "feature_target_metric_artifact_mutation_refusals",
+    "full576cell_factor_report_source_binding"
+  ],
+  "fold_audit_sha256": "cb5499021cdaab2f86ec701d40f3d8fb8d0591a550384b59498b57d32abef06e"
+}

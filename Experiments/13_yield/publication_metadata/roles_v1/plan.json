@@ -1,0 +1,2300 @@
+{
+  "schema": "synrfp_yield_roles_trial_v1",
+  "created_utc": "2026-10-12T09:41:34.309389+00:00",
+  "base_plan_sha256": "c89ed907844623e2b5a51a59b8d54ca6296c19ad1a660beef62badc70c7fc116",
+  "params": {
+    "hidden": 512,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 200,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "seed": 42
+  },
+  "fingerprints": [
+    "synrfp_roles_r2b2048",
+    "synrfp_roles_r3b2048",
+    "synrfp_du_r2b2048",
+    "synrfp_du_r3b2048",
+    "synrfp_union_r2b2048"
+  ],
+  "variants": {
+    "synrfp_roles_r2b2048": {
+      "radius": 2,
+      "n_bits": 2048,
+      "mode": "roles",
+      "block_bits": [
+        1024,
+        1024
+      ],
+      "block_order": [
+        "signed_delta",
+        "shared"
+      ]
+    },
+    "synrfp_roles_r3b2048": {
+      "radius": 3,
+      "n_bits": 2048,
+      "mode": "roles",
+      "block_bits": [
+        1024,
+        1024
+      ],
+      "block_order": [
+        "signed_delta",
+        "shared"
+      ]
+    },
+    "synrfp_du_r2b2048": {
+      "radius": 2,
+      "n_bits": 2048,
+      "mode": "concatenate_delta_union",
+      "block_bits": [
+        1024,
+        1024
+      ],
+      "block_order": [
+        "signed_delta",
+        "union"
+      ]
+    },
+    "synrfp_du_r3b2048": {
+      "radius": 3,
+      "n_bits": 2048,
+      "mode": "concatenate_delta_union",
+      "block_bits": [
+        1024,
+        1024
+      ],
+      "block_order": [
+        "signed_delta",
+        "union"
+      ]
+    },
+    "synrfp_union_r2b2048": {
+      "radius": 2,
+      "n_bits": 2048,
+      "mode": "union"
+    }
+  },
+  "role_schema": {
+    "version": "synrfp_token_roles_split_blocks_v1",
+    "lost": "max(R-P,0)",
+    "gained": "max(P-R,0)",
+    "shared": "min(R,P)",
+    "signed_delta_token": "2*token + (0 if gained else 1)",
+    "shared_token": "original integer token ID, emitted once if min(R,P)>0",
+    "count_semantics": "positive role presence, not multiplicity",
+    "block_semantics": "direction in native delta block; shared context in separate block",
+    "mapping_semantics": "shared local environments do not establish atom retention",
+    "sketch_collision_policy": "native parity collisions remain possible within each block",
+    "stereo_features": false
+  },
+  "tasks": [
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_union_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_roles_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_roles_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_du_r2b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_du_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_union_r2b2048"
+    }
+  ],
+  "expected_models": 320,
+  "split_groups": {
+    "bh_random": 10,
+    "bh_published_ood": 4,
+    "suzuki_random": 10,
+    "ncs_cluster_ood": 40
+  },
+  "reference_results": [
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_01/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_01/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_01/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_01/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_02/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_02/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_02/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_02/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_03/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_03/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_03/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_03/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_04/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_04/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_04/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_04/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_05/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_05/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_05/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_05/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_06/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_06/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_06/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_06/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_07/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_07/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_07/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_07/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_08/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_08/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_08/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_08/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_09/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_09/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_09/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_09/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_10/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_10/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_10/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_10/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test4/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test4/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test4/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test4/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_4/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_4/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_4/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_4/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_5/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_5/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_5/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_5/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_6/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_6/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_6/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_6/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_7/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_7/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_7/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_7/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_8/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_8/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_8/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_8/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_9/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_9/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_9/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_9/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f3/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f0/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f0/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f0/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f0/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f1/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f1/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f1/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f1/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f2/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f2/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f2/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f2/drfp/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f3/synrfp_r2b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f3/synrfp_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f3/synrfp_union_r3b2048/result.json",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f3/drfp/result.json"
+  ],
+  "reference_models": 256,
+  "expected_comparison_cells": 576,
+  "pinned_files": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/run_yield_roles.py": "836bc7e2764ac2ca8d6ecb4401d77600ef12d03f464ca72eab9e5487805e3f3f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/yield_roles_features.py": "dc9d514feaddc0e9a51f93d04f5e93dd2710f7c4299dd4ec441a963247cb6b23",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/test_yield_roles_features.py": "b5c527300e2f560963503c656f4007d8dee2de9b35eff2da5041718a3585bf29",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/run_yield_retrain.py": "083a24bba7002117dc1ac499ca50cbc1eb6541e668b426d4520dd6552972d3b6",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/yield_retrain_cpu.py": "d8acdf8979710b3df5b33aafaa9b8ff5c4a6ef727f40af42544d2ec7a0e3ddbf",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/bh_features.py": "d9816ed6766e30579fd1af4fbf027c2de027e9db4d9bebaa98bbfa6914d1199b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/__init__.py": "267e53ee5777d831678e43c0605ffd2362be6c44b34d8092fdd3cc972ec427bb",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/__init__.py": "f19c61dfd54cd9059462c4a8b93f4da55379fca42ccfb4ad1db9b8b3d42eb131",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/batch.py": "63b1e96606d3f0e7c2c074250d6c3eeb455d8fb73e6885f480130a985c04083f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/core.py": "d158520329711c4d3bb54dcc07379f03a6b1f82e86f20cfd6cca306ff3b85494",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/engine.py": "f4eef4a186c745372293a198ccb7635d5bc20594776dd0fa6cad2dc479f42472",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/result.py": "39f8e200b796758ae2f7e96679fa35d9fccfcc711b90df9354ee0e9684e3fe4a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/__init__.py": "187f38878bd26290474914872a7dcc8fe9d4ce398e644afc71bc9c8189069fef",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/graph_data.py": "77617f3609d3b6324fdfef8f31bd4f00408c80bedb60b42c1eaaadaf0628a4c5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/molecule.py": "95c2259a5c719684e26471ccc6f70f750a672e5be81e4b74561bba54d9eddd94",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/reaction.py": "56587d9ef3a32dc06f38f7c4304f01397476cff59815040d60e5198234bb9d6a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/_hashing.py": "b8386b2506e6299e2572d34c25088e4b507479b33ee13c06a5ce9d47ab6ab030",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/base.py": "c28911a56292a95c9fbd2ff4b3bea92c1e93e23f0ed916aafa68ef47d4be5c9a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/cw_sketch.py": "ceaa871bd26c10a6d4d87eab2590631e055f1ac652f410c4057e0c89ab846d28",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/minhash_sketch.py": "441f485dbb16e15889c74ca5fbb43043185fdc27fb7a6728e2c251389ed6b55d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/parity_fold.py": "9b13bb03e526077ef98e677d0b3e20c53871f5989b97a689af76185a11467b14",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/srp_sketch.py": "edc28fa3938aa2b3ea603df96a71179c01ed55b3b37951294f22c36cf8ddec4f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/synrfp.py": "6f9f77fcf53c0e08d19451c027c86d12759fe202ec604594fc279e52b0112761",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/base.py": "5feba069538f0e894400a8892359f9ff124b184d2b533a4e4afc51c0998bb84a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/map.py": "d2ba222bf2adbfb03d8eb1094e8e6af3d2805da37e674247ce4edea07e65b94c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/morgan.py": "e57d4ef2e8880777a6d7100c7dedd59bac5a8e9bf46be819732a14fc24262a15",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/nauty.py": "a56aa78c5dcac2889a3fce55854b001399b7bf13cc2281d7ecb2ee80720f1e08",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/path.py": "d11adb2badbbaf7fe309fc1c177812e03f391caf70e5b02ffa092251e8e5b9a1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/utils.py": "ea326131aa95fb0d2f6079c6c21716ffae8f5cb24a6a1a4854fc88c1be9c9a96",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/wl.py": "c714f9170620f97d2895c4f5cee31d2bc4428a05073a20c6ee83316bc7d86f2d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/utils.py": "635a699f99d8fb187b88b3cf17c2b24f741b61bb6a6bd1d337d4e15482363e26",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_bh_classic.npz": "4dd1d805833f2d4aac8c839c3354d8ede47899d10b0abc5001d440328fdfbbb1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/bh_classic/synrfp_default.npz": "d5a56526459d741adb7ed7a2d2434050518f3a4d6aa9961649d045e41103e2c3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/bh_classic/synrfp_default.json": "28ba60ae6a7c8c7131f4022c137c303cee2f94bda7f6c3ae4f7193e9204c6af1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/bh_classic/synrfp_r2b2048.npz": "0b981fcd9e041e3b6832060ed47e79d6610ac523bc519639a6b0d3595d3686a0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/bh_classic/synrfp_r2b2048.json": "fcf164c432ddcebb5b73e6f06d627c8413c13862c9e74325c44058b9613e75a5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/bh_classic/synrfp_r3b2048.npz": "e14c31be16326a453080afa6b27b5d47741aa04fcd737fe4448fd24af2dd4041",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/bh_classic/synrfp_r3b2048.json": "1e1cbb80e19378eef3a7bd4cb2a70e22e852792687de512f504dae0bd5dfcd30",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/bh_classic/synrfp_union_r3b2048.npz": "260b6a2796ac8a094e7e0c2aeb43abbc592cbc053d4a85826f97b9f7ed23d5cd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/bh_classic/synrfp_union_r3b2048.json": "b09c9cbfad66e25f7a685328527ce54e6e36903cdc1517eae4cd97de53995e0a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/bh_classic/drfp.npz": "ec7353140d3053ce5d412a7e3cda2527b7bf22655bbda2e78f6555860e972856",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/bh_classic/drfp.json": "f7cef3839d8eec524688ec227669de2135fdd6159d17118a9ad1593e119ed414",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_suzuki_hte.npz": "5618228b95e4ae505509c344cb6cbf53a51b41fd6dffc11b10673271b367ac8e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/suzuki_hte/synrfp_default.npz": "49e9d9d1ffa1ab730ca3990db97c81334021703de12d8c83699db8b280f15cbc",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/suzuki_hte/synrfp_default.json": "3a03e419165f23112043086e1952b5aac04cd2b7c95033fe232dce478d658a7b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/suzuki_hte/synrfp_r2b2048.npz": "0985f4ebe5e647347056d46785f4a5c56a31dc91af6d7ef1d3402cd4221bf87b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/suzuki_hte/synrfp_r2b2048.json": "84ed9ce5019817772e0706d7e87f20943b904293436feaefa552cf7f0189446c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/suzuki_hte/synrfp_r3b2048.npz": "388faa76118b4883bb2fc27f78e3e86c32bb13fc1e809404077265a08c8bbc62",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/suzuki_hte/synrfp_r3b2048.json": "0c9119b219a419805664abe2920b8ed79ee1e5b11a75bf4ab5ea6b49fd7e84eb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/suzuki_hte/synrfp_union_r3b2048.npz": "72e7380c0923fae55c2b709e17b5e96a1581bd2caeae995009ee1d3d06720553",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/suzuki_hte/synrfp_union_r3b2048.json": "99f1650587405b1b0991f5745fdd34db350661df0ab82f3affd9567f06a1503a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/suzuki_hte/drfp.npz": "4bc51a39f5de8fbb68d6d11c8a983b614f5f59159ce001c98eca5d5bfcdf0c20",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/suzuki_hte/drfp.json": "788e1e97da47cda98fe6e7add75d8008ea34d9d9b2084a171ef4f61e1dd3b2df",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_ncs_bh.npz": "a74a59ac5a6456a15a61cf92d5a16dffea81ccd2f996ca6b39cbd4f3891a9839",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/ncs_bh/synrfp_default.npz": "d44332095ebafa6c2ab03fcee81fe4040d00de922c04737e1cc0ba634fe118f6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/ncs_bh/synrfp_default.json": "b6bddaa990bf14ba12b86f0710285a151f7cb902792deddea79ccd970e5eb69c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/ncs_bh/synrfp_r2b2048.npz": "85cef8f9d27637934d1a06e835c80b4cc482b289e8484176428e28398aff0c24",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/ncs_bh/synrfp_r2b2048.json": "7a607a2daf184c0196e2762793dc13e334aeadc7eb567ce2d41708d52ccf68b7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/ncs_bh/synrfp_r3b2048.npz": "130730907af2f50794daa97f74e83b396d8aa7ea34e1960ba929cd46df4b6332",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/ncs_bh/synrfp_r3b2048.json": "03eafba106046d97fe0d93e2b20d0c60b9bb87272ca94c00136cd69ac1acfdbf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/ncs_bh/synrfp_union_r3b2048.npz": "9d768711ebdffd00e6e72cdb97c1a8af25d23c30eca31765dfbc47bd88b4cd69",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/features/ncs_bh/synrfp_union_r3b2048.json": "7c576242dc0e6292bd28f07d50847403d1cd8559a743a3af12a33f182da3b7be",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/ncs_bh/drfp.npz": "4ea96f87e95f0db721f4a448ab572f5092dd4deb11189a3b961882154bfe8df2",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/features/ncs_bh/drfp.json": "f54a7c0b9d3798e604ee316c8c90c98a59d6163222b12b020ccf99f5ca3a9efe",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_01/synrfp_r2b2048/result.json": "3fa8a516e6e25eac5d8bc824ca462da6868ee767b1401155b4bf1845e0d5d299",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_01/synrfp_r3b2048/result.json": "d80c9938cee4d1574f4c77c8ccea6216139e0a0ce033cbf91b6ee5e38119afe8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_01/synrfp_union_r3b2048/result.json": "63ea45e5a6b8dde33def9358494604c24f10ab29b94ba272e643fb045fe5f19c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_01/drfp/result.json": "95e0892b96e8e1219743277153ef1cb7edd51f0865535b51eb790e85cc953682",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_02/synrfp_r2b2048/result.json": "0eac143532e5848ca24937043b0170cffa95e2a73725538fc1db96fbe97b36c7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_02/synrfp_r3b2048/result.json": "538c5317289c98c8fef38a40bf56141c5b540dba5d92a81285ab926da6a82d4a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_02/synrfp_union_r3b2048/result.json": "cc329b2170c07621ae3d42b2aba3c7a73d0bd1d4b3a1facee80e87e50a7297ed",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_02/drfp/result.json": "a5e89b1fc08ffac8f02c9e790754be0dfbd26e93e704ae2882e9107e5222bf33",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_03/synrfp_r2b2048/result.json": "7014d47b3f65925da7bff93542104050a3712582d594a1919fe35a3b62807a85",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_03/synrfp_r3b2048/result.json": "998be8caeb7cd3b84e54727333f6187b88623f8ff7519f6b2eec16f362181a94",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_03/synrfp_union_r3b2048/result.json": "b055709831c5d1407590c5ce4e31b9e5c1d04e1efc5381de74834dcdb9f6c3de",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_03/drfp/result.json": "077c24477d01b6215d22f26002941aac6ab7b82f66fd7d84d2eec93b2ee666f3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_04/synrfp_r2b2048/result.json": "2c32758c686ed33cf9ca2ed66291c0c5e0c3b759133e7e61b60e839ed0b80bd7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_04/synrfp_r3b2048/result.json": "840c05b66023d848601356665c984cfc51f4e9a70fb630c6d8f106c05b34c5e3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_04/synrfp_union_r3b2048/result.json": "a918c306fb386391b1d99122e11bfefb453d3b7a3cd99adc99376a05e00842e9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_04/drfp/result.json": "f3d1b105f1b56275cbe8e41d25b430be8768a2c29fa2176f9eb5cf81a0a225d9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_05/synrfp_r2b2048/result.json": "49d375e933fa2a640644fdb7775c8018deedeccff0c7b14c6e49310fadf05bb4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_05/synrfp_r3b2048/result.json": "59bfbdb0467536ec4d81ebf4784c2f5db6631a512b44e4295cb997d3a19dab54",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_05/synrfp_union_r3b2048/result.json": "108f3ab3ec645e7bf4276ce90dcbd6ad061d28b322905ffc0ff4033e16258b14",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_05/drfp/result.json": "67981018a9119edfb7ec43ad8ab7883ce0adffae70464b1fb1be015462b139da",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_06/synrfp_r2b2048/result.json": "2ed40fd8532863d7d7321b852ae221b50ff01a2914b9d43d9a8e8588b924a3ec",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_06/synrfp_r3b2048/result.json": "e6ad3c2106c8306cdb58f795bd0c907595b0159072314e4f980016a5ef396cb1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_06/synrfp_union_r3b2048/result.json": "7aa867a7a123166b19f2c8d25b8f5b6d5cad8d4de0ef16db45c195f4e0cf78b5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_06/drfp/result.json": "848f85cf64af05c5c07d56e9e8ed36616d12b316632250f4a248191b95a4f537",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_07/synrfp_r2b2048/result.json": "db8199db7c043ee69441e43fb4e414478a64d4c764374e7002f6e95a1cb898fc",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_07/synrfp_r3b2048/result.json": "01044db4da75dc6b34d060fde866480d6349d5b15f8854c06d158dcaf63aaac3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_07/synrfp_union_r3b2048/result.json": "43186237f87fc7ca998029f5837a0d0da79274d50de58db0ca2fa0c2731450e9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_07/drfp/result.json": "9ac1a6d3958bf331011869f264d2222c46e160b8a3030a90a1acad8d30eb08be",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_08/synrfp_r2b2048/result.json": "4c1f9f29b663d9589d138c59f16af2eed66e50000fb34aa0af1810d04805cbc7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_08/synrfp_r3b2048/result.json": "26b8e3be337545c684f1cd5c1b39df4e2f162c66afb0995917e9303d1cc32194",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_08/synrfp_union_r3b2048/result.json": "e4dc588999fdbe91ea1a4d109cf8de6447c7ce5f0090f785e475e1295130bafa",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_08/drfp/result.json": "69a63c50b4d182250b1f971218e1aafa7dbb64404384fc0894ea1af1511a1b24",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_09/synrfp_r2b2048/result.json": "f2c120a7d3048872b3d81a1938ad55e96aad45ec1cdceccc84d0c84d0e3187ae",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_09/synrfp_r3b2048/result.json": "ac76d2b1c2f3db79564ca10733e64abce61855c0ea8b6e13fb9a8c73f0910b71",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_09/synrfp_union_r3b2048/result.json": "74becce3bbe410e7699881e8a7a092fa5f950eb22d9678420a1ad3c935dd75fb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_09/drfp/result.json": "7e258d0385719af7afb136474af084a9632ef63e7d0e5eb6a78b5d5f02274411",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/FullCV_10/synrfp_r2b2048/result.json": "e751e92092f5f6c1a9b4d61055e48fd317c48572867e2ec1645e0cdff1029e68",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_10/synrfp_r3b2048/result.json": "5b4f08f25ac8febf0002b8a98f893351ff297469c106eb6b201442017d86aa56",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_10/synrfp_union_r3b2048/result.json": "9bc265f5460f0530076ab89a0e4c4ea5a361c896f2da11ffd72281c5817872cc",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/FullCV_10/drfp/result.json": "5e447966907bd96d6cf91e02a851092675b4cab2ce9eb3d012f5ef272d8e42cd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test1/synrfp_r2b2048/result.json": "0a215020347ccbbaab2461c6893b6d11969728dce46da04c7b7f73a5b9bad75f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test1/synrfp_r3b2048/result.json": "3e265fd63eebbce1c2ad0e7c41c68ed18c868187e1799c4a38b72b8af105d743",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test1/synrfp_union_r3b2048/result.json": "99849b36b8b63e2fe0ffa977d201ebe6dbd47b4de4485fdb0cb90c9d8cbd2c60",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test1/drfp/result.json": "c5bdeb1fbbf8ebc35cc2f11a767084e58ce0b12a125e0553ef0c3d383282371f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test2/synrfp_r2b2048/result.json": "497f1c9a68f1704e02e988b50ea52e38cb60a7fc30387481714c1f63518f8fe5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test2/synrfp_r3b2048/result.json": "d6009d8745c2c0a1778cfcb6d479895f161839c50d1371e71a5c226848e3a0c8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test2/synrfp_union_r3b2048/result.json": "906647987b9ea9d0add040cce5a7e077dfd95c6be4aa1cf64db667874648d01e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test2/drfp/result.json": "f96577e9f17d687b4e6f3cd474d7faa12a6b8db9c1ea63770d6cf5bea34c7b71",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test3/synrfp_r2b2048/result.json": "3ae2f6bea5d176b5d414c34e76a17cc1f7ef9e4a5b7f968fe0cac5ab0455a721",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test3/synrfp_r3b2048/result.json": "e220658f51978a1e08aae12ed2e6f64aebc0ec38630db72eb675e0a7c83e4caf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test3/synrfp_union_r3b2048/result.json": "7e9f4d8aa7f411b058173e6f9327d9a3c3eb9517d50a8e65d0c3f01d635a5c8e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test3/drfp/result.json": "0415ff2e7efe8fec5b9797a990bcd3d67f9154e1576e670d6919366af168046c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/bh_classic/Test4/synrfp_r2b2048/result.json": "cfb652e796c2462b2e80d083b3a8ff3b3d958eebe498651493c261378a845ccd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test4/synrfp_r3b2048/result.json": "c77d28cee4478a5f828711d81d7bdb1d9e36d45010aad427ffd1aa9adc583664",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test4/synrfp_union_r3b2048/result.json": "5a6cec658aaafecc2c4d6b29a153e40c3d09e29ebd2713d873b014e0884ff84d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/bh_classic/Test4/drfp/result.json": "aa6e228caf512b1d4992030b82b6e5550819e1afd6062aa9ccb3b7495188a137",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_0/synrfp_r2b2048/result.json": "a8f294e408a45d35130edef83841f4dbbdf01fb4692de0d2c1446a0a2af90b1a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_0/synrfp_r3b2048/result.json": "0613d0acdde829ea2a6e932a73e488f97dfdf8d87ff9b531203193c0759b0424",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_0/synrfp_union_r3b2048/result.json": "9086413466c2a4dc6865de5b8df19e561d698d4f56dfd74fbe2f7ede8f0471cc",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_0/drfp/result.json": "24a64e83c59f8a68926e15ae837040d0a38165e8d05d324de8ffe954609cfe4c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_1/synrfp_r2b2048/result.json": "b062d615360d99603f9684ea698586a8b1580322bba51c2649432aa8055e11ef",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_1/synrfp_r3b2048/result.json": "6583721c31645d25da08bf3711c8f6d23cf742cb8e014af395efe1e230b9ab8f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_1/synrfp_union_r3b2048/result.json": "02eb605bf54f5474b583f7e7ba23ca929ffbd2b1abc91caddc7a8ee04c73a03b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_1/drfp/result.json": "34acfcb062dd7aed053246c20ca97822b81719ac6897d96811e5e9589be1f7d7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_2/synrfp_r2b2048/result.json": "b827770f396cd855f758c93cb2617b889f0122db7332bddf8e5d50430ce9ec73",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_2/synrfp_r3b2048/result.json": "cef6e7d5aa287fcc82cbb2fd7f62272546e13b2d11fbb8df54342944a86d360e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_2/synrfp_union_r3b2048/result.json": "5022e7a332a7c0630a26e1302fcfa00c946308e200b1d3543bae8586f68bd635",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_2/drfp/result.json": "e3804a152f67753915d2bce863ca61a00824de4efec8631eb1a02c6004e2fba3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_3/synrfp_r2b2048/result.json": "a5ea9c541ee15973c57911f27d86729307aa19258621b852c6a4d75b02317b2c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_3/synrfp_r3b2048/result.json": "95db232974c8ea687bea149704d43b6476896cb2a0e1135492e2766e74187189",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_3/synrfp_union_r3b2048/result.json": "d75f411f52265935d3df9ddd62da71f57ed437129874a695803bdf6b6652e7ac",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_3/drfp/result.json": "4d5289537bd5ab3128b67cbf3d4007369040b5565ce0a459cf36a31d51f07c34",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_4/synrfp_r2b2048/result.json": "787bb7320fd4a0f1daca6d8f3dc4d214bce0e128861bd643750a082a30e1006d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_4/synrfp_r3b2048/result.json": "3bd7333b4b93b39796ba5b9e09659ec31eac9aac2422712feadee679e527714f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_4/synrfp_union_r3b2048/result.json": "d2b977f2b559760cd33e2d3ac86425f8af3ca46b004c12520840c270ae5a1437",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_4/drfp/result.json": "18f95fd5402049146c61df2101486dbc3d21842b66883e6f31771729d51888d3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_5/synrfp_r2b2048/result.json": "6cddf18eb560bc3b2aad213edfd282ef4ec0ac6206cb1854a8e6c4e2360a0482",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_5/synrfp_r3b2048/result.json": "68792355cb3205ab28bfb9c744e7f1a11d5531a23ec5b9928540b7b1a8ea97bf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_5/synrfp_union_r3b2048/result.json": "e8e60fd84391ed5d472e567990184b7084f7a2663eaff9b1c90460b2577b7a1c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_5/drfp/result.json": "23b230d5c6405203477b968d7f2313041c48af3bd8f6db147dd3c607ec1e069a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_6/synrfp_r2b2048/result.json": "a096609ab2c45c47e22bd659b21f94ba49ce6c25c584a858f67a71146771e578",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_6/synrfp_r3b2048/result.json": "a8cae072b6c4b0f5700775a706b4a8bab2e983445156b0a4f189c34f6f2bdfcd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_6/synrfp_union_r3b2048/result.json": "5d5b117cbf99c6e1860726cde531758c0adf902a57e2591efd2d28e4c1d837b9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_6/drfp/result.json": "b40efd2eb90f0c36994757e1a089789c2fb10751d6b7355112c786c9e14eb29d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_7/synrfp_r2b2048/result.json": "2684f68724b9cfe81d50abcd4bf8a9f08af0f60cfa3243aabd7bb495a721735e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_7/synrfp_r3b2048/result.json": "48252e7f9045b17367f1f9c594864783ac9c1e2c597f049ecc00cbbfb5ad23ca",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_7/synrfp_union_r3b2048/result.json": "ae168067b108d2cd56cdf87b0adefd4cc81c02213262d0410f7dd63c6c2865af",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_7/drfp/result.json": "8fb3d8d715916ccca66b3bf4bc74215c613e17e8ef117c57feb644eb5580f88e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_8/synrfp_r2b2048/result.json": "217ed652dfda082cab9337e9348baf873f70b3faf41d2fadfcf22682e5539112",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_8/synrfp_r3b2048/result.json": "ff845eff5413b5d3d50a44ddb745244d4d0e2916cd36f6ae0abcbbd8489caa0d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_8/synrfp_union_r3b2048/result.json": "19cfd097d44adf6e8c7e7f20bae6c1ab0f16b164f46695fc85bbf013718d4c09",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_8/drfp/result.json": "1d0634e34abee876b5aa24443854e232eedd155dbed6f71220443ee52ab72f87",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/suzuki_hte/random_9/synrfp_r2b2048/result.json": "cbe7480e93f050777a4ed439f3026d470d6eaf90840fe12eaaee02fd0a32f59d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_9/synrfp_r3b2048/result.json": "d214765ed43e61f76397befe74ac8aa0a2d87ed548041f26a22c521b1e64c932",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_9/synrfp_union_r3b2048/result.json": "675a2776152f9dc3fa9573e2238084bfff4f606bed9c82b7bbbf18e5c9c44ef3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/suzuki_hte/random_9/drfp/result.json": "b84d3814414dba68fd178c0c9cd6d0b1190ee07de0c1d2bf25883901678a9dc3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f0/synrfp_r2b2048/result.json": "23b126232963230b434bbf5d132f82ca932c9c74448b9994aaf34f113b9701ca",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f0/synrfp_r3b2048/result.json": "ace289fdf864ed63b0c7d146e534a2f710457a5c8b8543232772bead2002cd39",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f0/synrfp_union_r3b2048/result.json": "c63ba778df3db026cc87babce172b636c957dba96ab9ce85b1def82ce00f1d24",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f0/drfp/result.json": "efffc41a453e1caf30db715241bed9cb18d7166d61e13cac72b1a6c394ea7221",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f1/synrfp_r2b2048/result.json": "d65df5262e71380360d545ac8cd65435ad6f0f74597ab444a7e8083fc1b3cd13",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f1/synrfp_r3b2048/result.json": "e767f18aa7847e658178ac0658632441db47d08de9c75694a497728a5cf664a5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f1/synrfp_union_r3b2048/result.json": "b5a43c6b0981bf018acd586a2df9723943c5750ee74f39f320985f55dc010847",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f1/drfp/result.json": "df33ea7ad5b950e9bff90345f0c90c30dbbace8d3693816bebb4f0aa7ad654e9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f2/synrfp_r2b2048/result.json": "c10dd8d870328794b6b8f98a9fc59142f6d0428538c5c8230d6aabb384fbe32b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f2/synrfp_r3b2048/result.json": "03c1c1e398ff809e17198909b545d01b3f46e1b9236a4d4c5412c5ee96e08088",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f2/synrfp_union_r3b2048/result.json": "a149ab93893b4f2a53bbb741ad042f8dfd906a5f5d6771b19b20b6f5c5789f9b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f2/drfp/result.json": "8ff4282472945f9897b1f0f369fcd9ee9f624bd16bc8ef4eaa63c79509e7f2a6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i0_f3/synrfp_r2b2048/result.json": "c4208fd87b31d6d6fd934e28e2d4ffc91a3e2bcb3746e3fe8b37a4e7a89416b1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f3/synrfp_r3b2048/result.json": "5b910db3168d470a18d60902c55a3dfadc78d1f2970dd42852d02d609ec08780",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f3/synrfp_union_r3b2048/result.json": "df095faf75af70f4cd7623728852706346cf11a26c96b173274eb88c014468c1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i0_f3/drfp/result.json": "f1e18c28efcaa04412042edccd85d9dc26ce9197223bef3e2e34fcf85df957ff",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f0/synrfp_r2b2048/result.json": "6cea06020b2045eeae51f9a929e8d233a5b877825b7a289459da22cae29f5c6e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f0/synrfp_r3b2048/result.json": "5c56b21ef8158be124b382145c7c93f3e43cb1d4c470bdc8e06c507a3d22a8d9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f0/synrfp_union_r3b2048/result.json": "7bc657c37bdbb849af9f5e2ac04df4a84a44b3ac4350adcbe7e4627a10a7a552",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f0/drfp/result.json": "8578cdd5e2e8eccebf8dd7555bd0f53de70e420bb4b2771491d7505a4f107c2f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f1/synrfp_r2b2048/result.json": "dbfe6a0802adc54e6877b4ad35add2cc47960e25b421035c3f3a0e8365ed3320",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f1/synrfp_r3b2048/result.json": "c62bb7d96c23d1a0e291fe8369c7ade8fdcea14f7ec1cd01e5d21013537babba",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f1/synrfp_union_r3b2048/result.json": "7894a67541d9f0cab466bbb011bf408ff9a6cd8dceaf7b7ecbf9e206f8b26ec0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f1/drfp/result.json": "ed7a3377591bc6ad953f7cf160a81d9d0fa60d4ad95a434bcd61de4f12078842",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f2/synrfp_r2b2048/result.json": "2a3f39d440984461aba66ba78056482d65d5b443bb86f6e213f519b566e1baa4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f2/synrfp_r3b2048/result.json": "e551b09b0fab104e82ed5358e8351e9dfed6386294277a8d77272c197de2bc13",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f2/synrfp_union_r3b2048/result.json": "9cae44c15521ae030d6916a954f31c9294b8e66b724bb22989c58989e9ddacf7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f2/drfp/result.json": "e4bbaa505c82fcc0a02143e39d1424947a1e6de4639c19f8404e4767c2252a9f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i1_f3/synrfp_r2b2048/result.json": "ef3f6d07019c3ffa95c1014359e2da0ce3c281e53941cd1da32b5be5d771302b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f3/synrfp_r3b2048/result.json": "773550fb090b9ff2ce68d35150f03e6c930913f34573548ed3aa49e7f1ce96dd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f3/synrfp_union_r3b2048/result.json": "402722cc183b0d47fde8b5e6a7e45d27d0f048448f8a19fbdaef5e8af2a25284",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i1_f3/drfp/result.json": "b38e3ef9d531b330eb90a28799971c6dbbdddcd5bf635fb24e20c44ebfb643b5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f0/synrfp_r2b2048/result.json": "634ba0fc4d4afaf562beb28600888ceb13d6b0c64260f91e8b8ac0760dcecb6a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f0/synrfp_r3b2048/result.json": "050396ea54b3b8909d3c838db8ad8caacedac17e090cb91655aa4d76db075c65",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f0/synrfp_union_r3b2048/result.json": "83716882bf2a29f0e58004b6626afed7392c8695469a919fbbe9024bba91dc46",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f0/drfp/result.json": "10e41c0dfd161809d40bb1a0f2df3e356c94bd813108f66fc99bfc2c039d7f9c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f1/synrfp_r2b2048/result.json": "7ea1e94ce1a5e856cdc6f6c5a29713cb6eb29d0462bed57ad74c09ebb16e6f98",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f1/synrfp_r3b2048/result.json": "a7c8005d36b4a8fef2fc1e780e70b4aa9614a4742fbc70a5d14b6761eb4d24f3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f1/synrfp_union_r3b2048/result.json": "206cc22cc39266e8e5cf53586a72a4423504b3b84a3dcabf69fde0b027e96d14",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f1/drfp/result.json": "99bb937ef2e29b4a0c73231a9fc43d7403efdaf409a5e13858232d5030d9c1d5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f2/synrfp_r2b2048/result.json": "daf7c9d553c00947d7354bf35d2b999400fb87c6f65af5a706e9f664253e6763",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f2/synrfp_r3b2048/result.json": "1c12e73c853b337e2badad26b93b77497ccbbc5006893757c2a8f9207c36c594",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f2/synrfp_union_r3b2048/result.json": "763ceaaf633e16fd8a7842ec52813e075ce714172b35c7ed229e6d39ceb47838",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f2/drfp/result.json": "4df28b976ce1e9fe04cc75a9453a7aa67e6a95ec8ce0ab749ee901a2920e7168",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i2_f3/synrfp_r2b2048/result.json": "1514695d722e3cfd5829f91249760486bc1891d3b5d1e1160371e399776b5d17",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f3/synrfp_r3b2048/result.json": "c67dd4916e012dcf5d7a7b7af7fb6cb8daff1103cd068d989d7909ca87c1a4a9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f3/synrfp_union_r3b2048/result.json": "69813f56314e219957623682e323b8476514e8b3fb9968e38108254c49289393",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i2_f3/drfp/result.json": "262aa2683fbcc6fd21ecff3387f9ce8032707755cf2ae3af41cbc997b310d8b6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f0/synrfp_r2b2048/result.json": "42cb1c21349153fbd8e1031796f9b8994f4fb548335778f07494a042ec9a4fce",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f0/synrfp_r3b2048/result.json": "73095800ec2fa60323a8259f974a83f385f2c395624b4d0f7e601e5cec365061",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f0/synrfp_union_r3b2048/result.json": "1219e5fe7c6123200a78580f57f56f7fff3d7ab1d213aa25483aab9dabe78701",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f0/drfp/result.json": "96364c466576763b698a672532ab722704d900c0030e83ec20c1a4abf7354bd5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f1/synrfp_r2b2048/result.json": "2508a46e6f8a3c1126ea2ec0392e89bee85005282cbc63a3707cc9f197297ebb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f1/synrfp_r3b2048/result.json": "271f6b3a9aa56a9b37042136ce753a03ca7d63ef1a1480549633f6bea24c747f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f1/synrfp_union_r3b2048/result.json": "4f1904388811ab1b607058a8188588a626d9c57735a3958bcfa0fbd0e131bb8c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f1/drfp/result.json": "ede4c634f02a7c9e370c8f4929841b104c8eb163e01cf1d7992c98d3ca16a315",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f2/synrfp_r2b2048/result.json": "e4083311e7d08bf7236710e3f9a73b5134221fb566bb5750e19c485450dfdab4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f2/synrfp_r3b2048/result.json": "0c503a57a7fb135e2b6a745607ef8331708c826f81e1ac62ef606ba6d586b4a6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f2/synrfp_union_r3b2048/result.json": "5896d81e0f1a29214b4412c07c232e0809c88cbf1e599e91e165f86ae7e58622",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f2/drfp/result.json": "305ab72cae4bb3dfdc3ec8252ab2dbfc9595f7c5c0b63bf3c25bb911cf3513ae",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i3_f3/synrfp_r2b2048/result.json": "bd277c61a1466bf9f9b79cad6d4eeb04ec278d88644b6f229d601ead79197161",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f3/synrfp_r3b2048/result.json": "e0e61d728cd721228867eac68fe12065b759f6104e3a5427e6940b2d86f518b3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f3/synrfp_union_r3b2048/result.json": "ecaf7f56f8a6772fab633a79527a123d700e351340df2b609e75f987235e172d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i3_f3/drfp/result.json": "999260c195c36400aba98c86db91662629bb82efc85afd595e447bc8e371fae2",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f0/synrfp_r2b2048/result.json": "f79241e03f23b69ebc5f9bd9b13fd4537879b1d2c04f1f093e42d5a250b1f7cd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f0/synrfp_r3b2048/result.json": "f12347e6f6bf1dd6122fbf52eab27377cc7b365016b9ace99384518be9d3e34b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f0/synrfp_union_r3b2048/result.json": "b5f4c63170ba50c5b065df76c708da3436f1a96001ab05c74e9c46487c06c6ef",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f0/drfp/result.json": "8f79ba88116b14bdda54c03bffd9eea640cec6c88586d74d9449bb15dd718adf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f1/synrfp_r2b2048/result.json": "392cc312318d032cdb547b9b38f88da2c241e711c3997228d0910cee80c1ff5c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f1/synrfp_r3b2048/result.json": "d1762e9081ad8d54711c8b11653690a63f2ab641bd9e18ee4cb735760027424c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f1/synrfp_union_r3b2048/result.json": "b8c92b51734247d7610e6bdf2f77a2db6220ce37cc69599950402b15f1dc4363",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f1/drfp/result.json": "0620e16ed61b6ecbd7a61f8f33f9e6499f2cc4e4631b5acc8442036d8365ba92",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f2/synrfp_r2b2048/result.json": "2a43e640ee6953ad31cbd6c980390d0048f1fb7cff835213fce53ff7399745ad",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f2/synrfp_r3b2048/result.json": "514727dfcb91a62aee8cdcfa01747294fff7ed3e6ffe636065785ee8a11b7f72",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f2/synrfp_union_r3b2048/result.json": "03b17a48326c718203af96c9a82206b0defee99f23e179b7e2de1ee4f1873a06",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f2/drfp/result.json": "0792764095f751e889870ed6cdd15a8120dd59ed390a2e6a78e763dc66f58a02",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i4_f3/synrfp_r2b2048/result.json": "4c841a3c33e30b5a7c44a4d9c05afe4533156ad5b3e8e5ab3a8b091ed8068041",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f3/synrfp_r3b2048/result.json": "2590bc8c1a7d89133d7cddfa882ed1644d562fa4af9fdd99b13cd82291cf73cc",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f3/synrfp_union_r3b2048/result.json": "d1fa1ec122a83f42f695dfe6ade327c28a43ebe47144f5f10a489cccd6aea8b9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i4_f3/drfp/result.json": "98ba87362153e2bc234b28f9da5e2ab7505aa30332ddc4bb7c834003ab25cd6a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f0/synrfp_r2b2048/result.json": "e39fef48490bb758a70769591cb020f271400f106760a18bbdccbcb5555c6b18",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f0/synrfp_r3b2048/result.json": "e08946d498652b1804e3b41cb5572ef4523b8da1ca10ec9309ada5c17391da11",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f0/synrfp_union_r3b2048/result.json": "5d6ea968b5dbf26e7d9bee4a537f5c34de50b9f6ad2378f37ed2e49e6cacddc0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f0/drfp/result.json": "950fb4263a4aecf4cd79f992e1b3b55c968e5ae11c2c6ae1feeeb04b388e1cc4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f1/synrfp_r2b2048/result.json": "c2900c768f789e8392641fb44a1931a186e93921c09976c5f970c15c470a77ad",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f1/synrfp_r3b2048/result.json": "7dec0a4cbed539f871ccb2f74632d973d03d8e8cb339422a4d6ceca340d4319e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f1/synrfp_union_r3b2048/result.json": "ffae8dda72fc32ca00e68387d37fafbd0d3438bcbc4533dd6e376f041f66b3ea",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f1/drfp/result.json": "e8e33d89a25f6195f22f51cbc9e0714e825a9cfeffe3ed654c14c523928619da",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f2/synrfp_r2b2048/result.json": "bf135c0df327ab7993d2025c982c5983a6f4a3a50a1a6c0706757bf0b28bb9a0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f2/synrfp_r3b2048/result.json": "787ff33c2eb9be6ee942e72760811e56d763f0d26c18f07972b160ffd74d2873",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f2/synrfp_union_r3b2048/result.json": "5b3b211e0a2a8ae9666ffa56b8d35f3b35c41adbc12a548773d48a3584e1d818",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f2/drfp/result.json": "7ccadceef900ee6db0a505339006a67d41e7308467f9931a671c58223472e1d7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i5_f3/synrfp_r2b2048/result.json": "c3765020b79ad47ff125668bc3da075c20b8b2d1553786787a663f588263c56b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f3/synrfp_r3b2048/result.json": "0c1fe207fd454b24187f3bd01963888ce292b5f479734a0bd5eaaff8e42e226d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f3/synrfp_union_r3b2048/result.json": "cb9a75c938e9328d7d0bd1c75c5d2707947efa4591ce7209c8383cf458660ff1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i5_f3/drfp/result.json": "91e5ec64ac17d9f6f4f859a5bb30480039619fc7bdba86f198639cce31cddba5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f0/synrfp_r2b2048/result.json": "0ad8655ab51eeef1ab99a0e51fe772543f94a67d9f6c2058cbfdcb095972ddbf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f0/synrfp_r3b2048/result.json": "cecdf23c461f808b4def21b1fed2baa2a1ebcbe843f89baa5fe9e3310350b8f3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f0/synrfp_union_r3b2048/result.json": "5b739c239b32874004b1897fdcd69d8e33599e1e40f9d59550c5693f8a5fc250",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f0/drfp/result.json": "598ed3bb7161d6f34f7ec210582987de3ca850851fd789e195f94cd43d3c5a20",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f1/synrfp_r2b2048/result.json": "5a1e032cf785058021661ff6cd193f15811dad8b765089b3cbbdaac9a7aaec37",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f1/synrfp_r3b2048/result.json": "472bce200fc798c5d6a73ea732abf9cf3b84d037f153aba0ef36488de4df1073",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f1/synrfp_union_r3b2048/result.json": "0b2e31fca6bea4cdeab041cb45a64f5b42467363f6c1762abd2fe6f7b779c87a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f1/drfp/result.json": "06f5dd9a2122f7cb52dca7f91d786939cc651c73cc135a1a7ed9481dd6a82de8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f2/synrfp_r2b2048/result.json": "fa438177b4788f3c30de93c3921523be3c50a36f7ca12264c71580bc80b0169f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f2/synrfp_r3b2048/result.json": "c05805247cfb7c5562e82d11d6af52d7ced907e752d897fedc31fdba60dfef08",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f2/synrfp_union_r3b2048/result.json": "d22dd53c472e1cad71a1afd2d66da2c19c2fbb911f44f85512f050d45944fbfa",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f2/drfp/result.json": "9ee523221a6079b1918f16c0bce1e6a612c11afe7458e3ef28aed8628fb17beb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i6_f3/synrfp_r2b2048/result.json": "f45c2ccddbf86202da47bde4991a4c2211c84337ba320cc7d7cac6c54903be45",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f3/synrfp_r3b2048/result.json": "d218cf943a24f7ea61d7f30fd8d27cbeebfb92a4ca2d05405ef13c9962b4164d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f3/synrfp_union_r3b2048/result.json": "47fbdfc85d519fb870720e7a490d49cc87f441d9b1c849e7c0445131c568eae7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i6_f3/drfp/result.json": "7a4c64d3f268102112ef071f22ddbaf695e419df1dc047140806b0868c8ca5ed",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f0/synrfp_r2b2048/result.json": "de49752e93e682cb143ddfbcfb8e0c3aed9c486ed5671fcda81161b284469572",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f0/synrfp_r3b2048/result.json": "d89591ed3c97644fcd34dbda42d06110d0483c60909448bb0973ae778db6ba37",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f0/synrfp_union_r3b2048/result.json": "875e9f272e796ccf6a7020e2eae3cb623505f605d128ababb7d6849b1325bd40",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f0/drfp/result.json": "a8bc787fc0c37c19d3fdfc7b3c49d407ed7d19ab59871a5402b4136d6a9fa7ed",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f1/synrfp_r2b2048/result.json": "78521128159c66d4ab7e8bf1c7689b15c64b3637020d49a87d392253d03ad57d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f1/synrfp_r3b2048/result.json": "6dc1714966e6e883294386a7c3b9c8e0a9123cde94f7a47e49e89be1691015c4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f1/synrfp_union_r3b2048/result.json": "9f4b3a67e06d2df8196b05dcefa7c836bce1e3e6db724d1bf6f580473516386c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f1/drfp/result.json": "82097fe30dc7e88ce33fbaee9e465924b72214e712a0708e5c731a9e5db03669",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f2/synrfp_r2b2048/result.json": "76514ac8e66c3c1b98c4a0a9dabb0ea6cd5569e825066a7e6c5429b0965da14a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f2/synrfp_r3b2048/result.json": "2eece38c314e61aa16d3e6148081d3359177bf48b6507f29e074f0c43915e83a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f2/synrfp_union_r3b2048/result.json": "a98ed7ff1aeb3c8eeae35ee5bd20830444e6ad6ae52559a9544a594c94b5923a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f2/drfp/result.json": "3c3bddcae5033cca94f44cfbf1b3a20612d72f9b43febbd47296bdc118f5e705",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i7_f3/synrfp_r2b2048/result.json": "e9e2e2b4cfd42825b1f7f9cf5741bdae4d001c739f812d7dc00bcee4eb3ac765",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f3/synrfp_r3b2048/result.json": "4e9546a4b4ee4d9c80e7f74a5d829311c74c7aece798eda491f02e966a84e5b0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f3/synrfp_union_r3b2048/result.json": "6fdba2a46230b3d910c3fce6f5f6398f9d83074d08e3a5dae95e1307d23cc1ad",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i7_f3/drfp/result.json": "89b1ad4feb31c5feacbcc09e852f040cda483109c470d822c6a8e7dc83d72e1b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f0/synrfp_r2b2048/result.json": "dfd930eb9b0a4c5d7204b783d3ebd2cbbc79dbe0a145f2f935736d8af97fe3f6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f0/synrfp_r3b2048/result.json": "efc2a80ef34bd6aa415401ab86e100fcfc39423df717a4b1d8ee4146f3eb33d9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f0/synrfp_union_r3b2048/result.json": "41e3820f0eee9af7ae10e117704060a7041ea62b45661e296ef80c2d5801cdd1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f0/drfp/result.json": "09aef9beb3d3ec70401c65d9fc87fe693c093f393c0c203de16e4f251971d9ba",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f1/synrfp_r2b2048/result.json": "4603595238de6b3d6dbfe03499070bc91754afc8b7a622fc6c89ced587b19e59",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f1/synrfp_r3b2048/result.json": "cbf60d93d3a5fee5dbe74b60b0b30b1a3ec0cd93baf5e4458f08f096aad55bca",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f1/synrfp_union_r3b2048/result.json": "20093b9c276b8bcabc2a33a56b6ce66123e9137e30dbc8e7dc0c6e06371e5c5f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f1/drfp/result.json": "5beeeffe920e1aa0bb02fbc02cb76c285f32a4ea4aca8a05353797187793d49f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f2/synrfp_r2b2048/result.json": "c08c448d3f872feee027b43640a293568678bf93200bb7bfbaea300980debad8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f2/synrfp_r3b2048/result.json": "6aa8d68c64dc15079fc09a84c04213d694a033240a097b4254625d7dc91b5b14",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f2/synrfp_union_r3b2048/result.json": "a976b5fb55a479c8d752acdd2cae605053071b8061bdb3a1bf54c02793b01077",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f2/drfp/result.json": "7a34126a966b1ff5ee0b5c4af8d5dd0799cd7161ae67fba40d8dbabd3176d449",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i8_f3/synrfp_r2b2048/result.json": "774eb1c5c37abdb0ad52db1d7da4538c455b56396a722ad7c1d80fbbf2fa5b7e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f3/synrfp_r3b2048/result.json": "b2f82b8a087fda35ce80d08d41c8f4c113680801f75b00e50382eeb5a5e67d18",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f3/synrfp_union_r3b2048/result.json": "72d0030462ab4f669f3e1b1bd14c8be05bbbeedcbece8a1d1109a9d3958465af",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i8_f3/drfp/result.json": "1fda12bb1b2bc148caa3e2dc039d695f9641b6541a49746fd9450d8219dc4ace",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f0/synrfp_r2b2048/result.json": "b35ac0f5e5c569ea20bde470a8f28e16819784954b2d0936c502c7611880ed72",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f0/synrfp_r3b2048/result.json": "f71d90de54275799124e1f243ece5c6102896f9bd27bf95dedb3f0b65a2a7e43",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f0/synrfp_union_r3b2048/result.json": "1221c6648ba6caa509f432da913f83918aad55db9893a11b2e5af929623815cf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f0/drfp/result.json": "170c9cf7d5dc6ff73ea084a5100f4967bbc78b9aa22b810af2b1c00f94938b06",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f1/synrfp_r2b2048/result.json": "4ae58e6b9a92ce10102b43d95b05f4d6bdfefa4d2e76318f0e940be8a440a348",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f1/synrfp_r3b2048/result.json": "e62b969ec08f450bbdf8e375d013b1cb08ad080f366ebba79602a6ccc0ed19bb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f1/synrfp_union_r3b2048/result.json": "5243f06856184d4859242111ae9e34815a284b3484f748abef57809806f1be94",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f1/drfp/result.json": "3ae3f4aa3d945bc01447868189a6438694df24cf548a77adec3afe8fcde88d10",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f2/synrfp_r2b2048/result.json": "0a5534be83a5803c4936918180e8cfe2740be05d70adea8b8d5c55fbedc1927e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f2/synrfp_r3b2048/result.json": "18da6ab996906aceaa970cf72d65e6ffd2ec78d3ec5dd86a1cdee3fe5674f38d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f2/synrfp_union_r3b2048/result.json": "b620356c5073ebfd685f187f6121c2fa776acdf8a0c6c5d8cd97288dbfbc3b9f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f2/drfp/result.json": "07faedbfc2fbd5d5cf2c2b868f401d09dc17e1e714249a662baff9cd7fc4cef1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/r2_2048_check_v1/models/ncs_bh/i9_f3/synrfp_r2b2048/result.json": "26f30f06dfa46e3b7b18ebebba43fa954180a2eb498575f565290c67e5ddc399",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f3/synrfp_r3b2048/result.json": "ebad30c3c35a18c1f1ec586b8f1d3a52d1cce46c8259cd3c2099c96c05263f37",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f3/synrfp_union_r3b2048/result.json": "3b7d12dfb641ffab466d7b43cec5b3013190677c7c30950061408bee30ef5bf9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/retrain_r3_union_v1/models/ncs_bh/i9_f3/drfp/result.json": "bbb109a48606eaee128b6f7b942d7ee637d0ab199f8e202591ccc30ce9bd00cd"
+  },
+  "population": "Frozen seven-fingerprint shared-valid rows; unchanged train/validation/test assignments",
+  "execution": "Four CPU workers, two threads each; CPU cores16-23; no GPU use",
+  "primary_contrast": "At each radius2/3: delta2048, union2048, delta1024+union1024, delta1024+shared1024; DRFP radius3/2048/rings=True control",
+  "selection": "Five predeclared variants; no test-based choice during this trial",
+  "weights": "Keep all models, preprocessing, rows and predictions locally; never overwrite prior fits",
+  "limitations": [
+    "Exploratory after earlier benchmark scores were viewed",
+    "Shared environment support is mapping-free and does not assert atom conservation",
+    "Binary support discards multiplicities; parity collisions remain possible",
+    "Split-score standard deviations are descriptive; repeated splits are correlated",
+    "NCS shared-valid mask excludes4888 rows including4312 DreherDoyle2018 rows",
+    "The trial is not the complete radius/width/mode factorial"
+  ]
+}

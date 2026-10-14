@@ -1,0 +1,31 @@
+{
+  "schema": "synrfp-yield-factorial-closure-v1",
+  "datasets": [
+    {
+      "dataset": "bh_classic",
+      "rows": 3955,
+      "shared_valid": 3955,
+      "delta1024_equal_all_rows": true,
+      "native_composite_controls": 9,
+      "union1024_is_exact_declared_native_second_block": true
+    },
+    {
+      "dataset": "suzuki_hte",
+      "rows": 5760,
+      "shared_valid": 5760,
+      "delta1024_equal_all_rows": true,
+      "native_composite_controls": 9,
+      "union1024_is_exact_declared_native_second_block": true
+    },
+    {
+      "dataset": "ncs_bh",
+      "rows": 27497,
+      "shared_valid": 22609,
+      "delta1024_equal_all_rows": true,
+      "native_composite_controls": 9,
+      "union1024_is_exact_declared_native_second_block": true
+    }
+  ],
+  "all_reused_models_artifacts_recipe_rows_and_scores_verified": true,
+  "reused_models": 448
+}

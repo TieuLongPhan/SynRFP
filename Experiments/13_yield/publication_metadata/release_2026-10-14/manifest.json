@@ -1,0 +1,146 @@
+{
+  "schema": "synrfp-yield-result-release-v1",
+  "created_utc": "2026-10-14T15:15:04.594355+00:00",
+  "scope": "Yield result tables and supporting protocols/provenance only",
+  "datasets": [
+    {
+      "dataset": "BH classic",
+      "rows": 3955,
+      "partitions": {
+        "random": 10,
+        "published_ood": 4
+      }
+    },
+    {
+      "dataset": "Suzuki HTE",
+      "rows": 5760,
+      "partitions": {
+        "random": 10
+      }
+    },
+    {
+      "dataset": "NCS BH",
+      "raw_rows": 27497,
+      "common_rows": 22609,
+      "partitions": {
+        "cluster_ood": 40
+      }
+    }
+  ],
+  "completed_exports": [
+    {
+      "path": "Experiments/13_yield/publication_metadata/continuous_allfps_v1",
+      "status": "complete"
+    },
+    {
+      "path": "Experiments/13_yield/publication_metadata/roles_v1",
+      "status": "complete"
+    },
+    {
+      "path": "Experiments/13_yield/publication_metadata/r2_2048_check_v1",
+      "status": "complete"
+    },
+    {
+      "path": "Experiments/13_yield/publication_metadata/retrain_r3_union_v1",
+      "status": "complete"
+    },
+    {
+      "path": "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1",
+      "status": "complete"
+    },
+    {
+      "path": "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield",
+      "status": "complete"
+    }
+  ],
+  "partial_reference_export": {
+    "path": "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4",
+    "completed": 61,
+    "expected": 192,
+    "updated_utc": "2026-10-14T14:54:50.302111+00:00",
+    "status": "partial; no final exhaustive digest audit yet",
+    "provisional_v2_bert_outputs_excluded": true
+  },
+  "interpretation": [
+    "Original FP comparisons, CPU mode/width studies, and full CUDA construction factorial remain separate protocol/backend series.",
+    "Observed configuration ranks are exploratory; no test-selected configuration is promoted as a universal winner.",
+    "BH random, BH published OOD, Suzuki random and NCS cluster OOD remain separate regimes.",
+    "Old provisional reference tables, cancelled radius3/4096 runs, failed startup outputs and developer probes are outside this release."
+  ],
+  "weights_exported": false,
+  "raw_data_exported": false,
+  "checkpoints_retained_locally": true,
+  "files_sha256": {
+    "Experiments/13_yield/.gitignore": "89586ee5a4ee6ca8c5ed87f7456f2cd8be07d2f2d52466ffe507ab1aa97f92f9",
+    "Experiments/13_yield/PILOT_PROTOCOL.md": "05b807aa6f2381eca138826396dba98a2be174425540a9ce6492aad72af1edff",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/coverage_bh_classic.json": "a394344a7f51720f942fc3650fae58acc6ff077cd88a600ef2d6e6bcae9eeaca",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/coverage_ncs_bh.json": "2f75ba5382da43a3aa6acb2e61bb9faabe06fcbc908be53af23f905e43ee0c8d",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/coverage_suzuki_hte.json": "232f47b65fdfdae28c4b0b181a037f42dff5caeb1b2a378973e50172d2f09165",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/plan.json": "c89ed907844623e2b5a51a59b8d54ca6296c19ad1a660beef62badc70c7fc116",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/plan_seal.json": "307bc890116ad3874aa2c2a1b11908b44444ead1093e1b4d726fe75d1b1af11e",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/preflight.json": "b2935def43a89debc1b8720d51515290366d7304a0622e860e153e9a82d25709",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/results.csv": "46b2459ec8870c15377ac061fbd7a30579d81eea18b12b18f29284ea152b4d9a",
+    "Experiments/13_yield/publication_metadata/continuous_allfps_v1/summary.csv": "c92f9d2d6bbf3d5b97751b986b2e050954324aeae088819964d7cd20ec8e3d5a",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/comparison_cells.csv": "21a2276d8571990b7063cfdd8ff05b843ab257c18916249387a04b1958461581",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/comparison_summary.csv": "4927147c0d0b25e2259a3e96b5bd4005732b6f1dc5db79f199e9e0ec4f7fd1c6",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/final_verification.json": "65d0d9eb6bd1ad80052136386fcf25bf1072376f3ed525522ffc127f142b2bd3",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/plan.json": "41c8a0c2d303f3a922f83cf84aba8613ade630716a86ddc70b82ad47cbf931c4",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/r2_table.csv": "a80975f05c3f01223ab0378605383ca7bdfbb42eaa2626a71ec1f9f0ae18b604",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/results.csv": "5db521bdf021da5209c370f724f82774949db5985975aaf7190729d30735e616",
+    "Experiments/13_yield/publication_metadata/r2_2048_check_v1/summary.csv": "bd69ebb7d21391a2b4891e6c78fe8763954d970ce32cdd6ac986ceee96fbd185",
+    "Experiments/13_yield/publication_metadata/retrain_r3_union_v1/plan.json": "b1850b52dbcb5be6d3f0eea91b6442a71605626709c9bf2c468e738054dd95fb",
+    "Experiments/13_yield/publication_metadata/retrain_r3_union_v1/preflight.json": "db85c04dedebed0364772f92e0d042fe5a47d1f965c9694884d6452b8e9a0c5c",
+    "Experiments/13_yield/publication_metadata/retrain_r3_union_v1/results.csv": "364e031f12e491fea2e8ff7d270b82e06830295b04d429da06692e67e53dcc5d",
+    "Experiments/13_yield/publication_metadata/retrain_r3_union_v1/summary.csv": "d0818c31e7567478b3b7033ddde198608e4244ae447893f502891a99e65049c4",
+    "Experiments/13_yield/publication_metadata/roles_v1/comparison_cells.csv": "f730ff69df694668d0cb91ed20023b17631a09650e647dc05b4bd6e964d0ab9a",
+    "Experiments/13_yield/publication_metadata/roles_v1/comparison_summary.csv": "353f23f71160c2cdc7f09dea562490ae8a3b7256ebe7523da92bfed43884816e",
+    "Experiments/13_yield/publication_metadata/roles_v1/completion.json": "531b6d706b2e2b444fc0d209c76e135b5e30710f61c41c48280abad5dbf71079",
+    "Experiments/13_yield/publication_metadata/roles_v1/final_report.json": "1ddef1037bdf51d3bb44cd586cdc6bcdedcb52017706f20a289c5fcd0e4bfc31",
+    "Experiments/13_yield/publication_metadata/roles_v1/launch.json": "38cade0ff5bfdd6a0805313df13d6ce930639f8fd7a61ff1813118a328f4f25a",
+    "Experiments/13_yield/publication_metadata/roles_v1/paired_contrasts.csv": "405472b893e1a263e731af29c811f855edd32aa480180fc85f0556cff1058885",
+    "Experiments/13_yield/publication_metadata/roles_v1/plan.json": "d5557f232ddaea106ea6b1bc2a3dc68f39b7657dbe7b761c0aa38b8e70d4e8de",
+    "Experiments/13_yield/publication_metadata/roles_v1/preflight.json": "a344c7739911c1663d67e90cb24368bb455466fcf459a31a12409c38ba4ed554",
+    "Experiments/13_yield/publication_metadata/roles_v1/r2_table.csv": "4056befc104a9ffe785b659b5a3bfb7c5b97a934edd07854033071427d308870",
+    "Experiments/13_yield/publication_metadata/roles_v1/results.csv": "89d8d896b99e146c19293faf7045ea0949cce05ab6857df260cd745aa4d4fe3c",
+    "Experiments/13_yield/publication_metadata/roles_v1/summary.csv": "33e5e6c9722cbc37f1c9d444929e5f8f313effa0aff272c4be4b5502efa596a7",
+    "Experiments/13_yield/publication_metadata/roles_v1/table.html": "b94cfe969d884ae9c52d25ccf54c1e58bf3fe2908d10bdff36292fae52cb228b",
+    "Experiments/13_yield/publication_metadata/roles_v1/table.md": "49e81d5e8e9819a0a68bd97abb80d17e0c8916985743b01b6b35bceb4fc66076",
+    "Experiments/17_yield_baselines/.gitignore": "a1e8009043d9739198c57866ad1ce121f295eed12d58fe11d6b92c04c9f5cc43",
+    "Experiments/17_yield_baselines/PROTOCOL.md": "9443cb9ddc111bcea69ed2a40ed98c6df16f5eba5f563008f02992a5cf4cfa99",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/plan.json": "8c1a84c7b5c71647490a811f007105748ce3c4db9a046de10e1c375bc0017b37",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/plan_seal.json": "e74e18beedf973a8930241366fd019376dc0931f0512373d5b1b5585eb84ccee",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/READY.json": "022179c4a2b948f1cef3fb3b1007df643e49b10db261d03211f62cc00045cb31",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/cells.csv": "c504816fa0228906fd7afbc910dbe410307553d0f800fcc8625259fc7397c5b6",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/execution.json": "4fafd847e9bfb7047138f7a392065d2d9b07254adeb4749bcd21ed7cdc56d69a",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/negative_controls.json": "560e2ffd5a95427fd958c141c7c68218376c3c6c622b445cf8bd1c2ab8e7fcca",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/status.json": "1f2e7837f4ec1e7ef38a63d33636757b6dcf744fdd302669c5acbe51cb6f751d",
+    "Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/summary.csv": "8be11658df32f23a975eb72c6a62f14a6d4c8329be6d608ed26b98e45be46d05",
+    "Experiments/21_yield_factorial_closure/.gitignore": "ccf58e28fccde6c0c37d6abe83e98be8db118e70e1d82214ccaceca4bcac7931",
+    "Experiments/21_yield_factorial_closure/PROTOCOL.md": "7f8ba15cb5d6b04ec23049ad701113fbc5e107e2ca3df6fa9d573aac94b45ab7",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/analysis_protocol.json": "a94523d22c0519b9ec77589cca731ed581af689087abfc979f690531b71a9329",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/cells.csv": "234b442f2c390035faa40776bf2314e1807b8d6070c09c8313d63d4e12c6d43c",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/completion.json": "3e6fd50963dcb4d9311856d09698a1d51877f876340bf9aeab3bbbabf4fc8088",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/factor_effects.csv": "40d706b4ab0b4422931e3cdb8d055610a6f95dbe322688ed1c2a4b2590c3ec87",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/feature_equivalence_audit.json": "9bbc59e971af68702a2dba7dc7a41b17176233d62e1dc5a5b6d2a731ac52bb5d",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/fold_equivalence_audit.json": "cb5499021cdaab2f86ec701d40f3d8fb8d0591a550384b59498b57d32abef06e",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/inventory.json": "d46c27461a7c73f5657b4a3848b2f3e42a7cae998e8d4afdf17a5badf3cf11da",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/launch.json": "6b85c49a7548d33cf056eba030912a9cf5db22808383e3ce8227be5286d0af71",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/paired_split_effects.csv": "becc226403db17455264c9dfabef38e78b47cb35b6cb0ab6a16cc24ef90c8f72",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/plan.json": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/progress.json": "58803bb00de11ca74b104b40029ae76faa1cf42b151e10f817eeadecbf6b0d11",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/queue_install_receipt.json": "5d4835272f1322baca437b762ffd9cdbde6c537ad1f70ae41910f48ec0ad8614",
+    "Experiments/21_yield_factorial_closure/publication_metadata/yield_factorial_closure_v1/summary.csv": "784244e19317ea6f54bd6a527805fdf86e867c2827601251a1b56230d48716e5",
+    "Experiments/22_all_endpoint_factorial/.gitignore": "26029d620d2d97401e000db34d97c2278791979dc966998417316e35b7bdca9f",
+    "Experiments/22_all_endpoint_factorial/PROTOCOL.md": "2e0705e7e78410b99b1f04cf7cf8c5df8682aaf014c74d26c554f161bd0936b1",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/COMPLETE.json": "f52895a0ea16290189bc2eaf3bcbc82e5a5cf6534af84614fab5a60f3c1b9dec",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cells.csv": "018ff69b416563c735d2e86f948377b35f03124fbfb0004325e1e6893b3b2258",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/configuration_summary.csv": "256a21e9fb60236afbe61e21498d35ca15ae0ea269155cd70ff7122aec313cc2",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cross_panel_consistency.csv": "b93cd653a4354866ac5dc855bee2ea5658beb292fe4dc247639ab8f02a4c2657",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/inputs.json": "46c1cc837edae997e8945c67f433860f843a36638cbfb895cbf83f54640d0172",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/metric_refusals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/paired_full_interactions.csv": "0a4248b5fd32215cdebbc88060d20a0a05b43bfae3ba223aec49eeb8c300d092",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/panel_full_interactions.csv": "af74fb513d07ad605ccda64c443f464258b1cc6efee5a028d6bb7de389b65ce0",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/protocol.json": "e6df7a246f8e2c923932a91047aff4d797fecf3891d5ee7e684c08c34f23677a",
+    "Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/report.md": "65640322186da14eaa8328da8ed438d633e22120073cbb21013c793ad626a3bc"
+  }
+}

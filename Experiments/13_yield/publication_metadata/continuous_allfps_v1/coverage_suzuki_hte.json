@@ -1,0 +1,30 @@
+{
+  "dataset": "suzuki_hte",
+  "rows": 5760,
+  "shared_valid": 5760,
+  "feature_sha256": {
+    "synrfp_default": "49e9d9d1ffa1ab730ca3990db97c81334021703de12d8c83699db8b280f15cbc",
+    "drfp": "4bc51a39f5de8fbb68d6d11c8a983b614f5f59159ce001c98eca5d5bfcdf0c20",
+    "rdkit_struct": "f045205dba972b43f2398688a8b33fa030ed7104bd36bbe5914b54801d34ae7a",
+    "rdkit_diff": "78f0645d234a63a21800d3a2c7aa5f069bd37171d1aaae9744a2b4c17f6bb49c",
+    "rxnfp_mlm": "7b811beb3d7ccaf6534222143da155405d8bea8a41e3c1470a9eef06cb068844",
+    "crxnfp": "d55fa66061248d7f81584a6263910659da2d4823a39853d537651b2ad22abd38",
+    "rxnfp": "f3ff007799371431456bfa1a1195006085b7e8486061c62cc85dab7f90ce1a2e"
+  },
+  "fingerprint_valid": {
+    "synrfp_default": 5760,
+    "drfp": 5760,
+    "rdkit_struct": 5760,
+    "rdkit_diff": 5760,
+    "rxnfp_mlm": 5760,
+    "crxnfp": 5760,
+    "rxnfp": 5760
+  },
+  "by_source": [
+    {
+      "source": "Perera2018_UV_area",
+      "rows": 5760,
+      "shared_valid": 5760
+    }
+  ]
+}

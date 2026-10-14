@@ -1,0 +1,8 @@
+{
+  "finished_utc": "2026-10-12T10:34:58.747338+00:00",
+  "new_models": 320,
+  "reused_controls": 256,
+  "comparison_cells": 576,
+  "plan_sha256": "d5557f232ddaea106ea6b1bc2a3dc68f39b7657dbe7b761c0aa38b8e70d4e8de",
+  "all_model_artifacts_verified": true
+}

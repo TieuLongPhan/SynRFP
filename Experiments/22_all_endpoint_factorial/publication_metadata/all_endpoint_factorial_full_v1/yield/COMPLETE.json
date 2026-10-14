@@ -1,0 +1,21 @@
+{
+  "phase": "complete",
+  "task": "yield",
+  "cells": 4608,
+  "finished_utc": "2026-10-12T23:03:47.017961+00:00",
+  "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+  "source_sha256": "674453f339d0ada2e7d026d4ccab9deae9ac07571b78b63296552c62ae8f5acd",
+  "canonical_metric_and_artifact_checks_passed": true,
+  "configuration_selected": null,
+  "outputs_sha256": {
+    "cells.csv": "018ff69b416563c735d2e86f948377b35f03124fbfb0004325e1e6893b3b2258",
+    "configuration_summary.csv": "256a21e9fb60236afbe61e21498d35ca15ae0ea269155cd70ff7122aec313cc2",
+    "paired_full_interactions.csv": "0a4248b5fd32215cdebbc88060d20a0a05b43bfae3ba223aec49eeb8c300d092",
+    "panel_full_interactions.csv": "af74fb513d07ad605ccda64c443f464258b1cc6efee5a028d6bb7de389b65ce0",
+    "cross_panel_consistency.csv": "b93cd653a4354866ac5dc855bee2ea5658beb292fe4dc247639ab8f02a4c2657",
+    "metric_refusals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs.json": "46c1cc837edae997e8945c67f433860f843a36638cbfb895cbf83f54640d0172",
+    "protocol.json": "e6df7a246f8e2c923932a91047aff4d797fecf3891d5ee7e684c08c34f23677a",
+    "report.md": "65640322186da14eaa8328da8ed438d633e22120073cbb21013c793ad626a3bc"
+  }
+}

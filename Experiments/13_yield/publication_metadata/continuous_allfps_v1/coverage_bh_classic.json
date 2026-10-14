@@ -1,0 +1,30 @@
+{
+  "dataset": "bh_classic",
+  "rows": 3955,
+  "shared_valid": 3955,
+  "feature_sha256": {
+    "synrfp_default": "d5a56526459d741adb7ed7a2d2434050518f3a4d6aa9961649d045e41103e2c3",
+    "drfp": "ec7353140d3053ce5d412a7e3cda2527b7bf22655bbda2e78f6555860e972856",
+    "rdkit_struct": "eba44e532bee221786ed4fefb3d0643872a85eecc7a46970b70d37fde3e55a81",
+    "rdkit_diff": "1bcc43a93dec38ba7eb580fe1cdcf9477a3a68ba3b6d24007e143c8a9226ca75",
+    "rxnfp_mlm": "1c8e493a4756e6e021e707fd6322310044a30b854c2b007fee8cdc3c60f7b05d",
+    "crxnfp": "cb4f5f98847bf059dfb952522287412249aef7d14238c3bb4a0d7e3e4681fc22",
+    "rxnfp": "4185f584e0a7c3d1d4525a8e906c60628ddb02462a32b713edba0d3b212ae56d"
+  },
+  "fingerprint_valid": {
+    "synrfp_default": 3955,
+    "drfp": 3955,
+    "rdkit_struct": 3955,
+    "rdkit_diff": 3955,
+    "rxnfp_mlm": 3955,
+    "crxnfp": 3955,
+    "rxnfp": 3955
+  },
+  "by_source": [
+    {
+      "source": "DreherDoyle2018",
+      "rows": 3955,
+      "shared_valid": 3955
+    }
+  ]
+}

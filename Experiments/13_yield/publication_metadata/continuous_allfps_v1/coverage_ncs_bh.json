@@ -1,0 +1,65 @@
+{
+  "dataset": "ncs_bh",
+  "rows": 27497,
+  "shared_valid": 22609,
+  "feature_sha256": {
+    "synrfp_default": "d44332095ebafa6c2ab03fcee81fe4040d00de922c04737e1cc0ba634fe118f6",
+    "drfp": "4ea96f87e95f0db721f4a448ab572f5092dd4deb11189a3b961882154bfe8df2",
+    "rdkit_struct": "fa17503d5cd09c1f1d794dd9861450070882158ee9b71bf189e328bdcb25933a",
+    "rdkit_diff": "a25c3e4e30b077ff544fef5604754e1bfa07045e14129a20cc8925f2339ed9ae",
+    "rxnfp_mlm": "a4c00c67e4a103cf40ac0f6162a82e4a636352c00795f5c82984757e7e088221",
+    "crxnfp": "53483c8603ffed244b908125d8419ce444118b9606cb9db403e878f873c333a4",
+    "rxnfp": "5d2b652f80fb69aed7ad923e1e3e2e79bbedbc9cfee63b54cf5d398ce7e5dd23"
+  },
+  "fingerprint_valid": {
+    "synrfp_default": 27497,
+    "drfp": 27497,
+    "rdkit_struct": 27497,
+    "rdkit_diff": 27497,
+    "rxnfp_mlm": 27497,
+    "crxnfp": 22609,
+    "rxnfp": 27497
+  },
+  "by_source": [
+    {
+      "source": "AZ ELN 2023",
+      "rows": 750,
+      "shared_valid": 750
+    },
+    {
+      "source": "Dreher 2014",
+      "rows": 768,
+      "shared_valid": 192
+    },
+    {
+      "source": "Dreher 2016",
+      "rows": 144,
+      "shared_valid": 144
+    },
+    {
+      "source": "Dreher Doyle 2018",
+      "rows": 4312,
+      "shared_valid": 0
+    },
+    {
+      "source": "HiTEA 2024",
+      "rows": 2632,
+      "shared_valid": 2632
+    },
+    {
+      "source": "JNJ HTE 2024",
+      "rows": 11328,
+      "shared_valid": 11328
+    },
+    {
+      "source": "Merck 2025",
+      "rows": 4204,
+      "shared_valid": 4204
+    },
+    {
+      "source": "Roche 2023",
+      "rows": 3359,
+      "shared_valid": 3359
+    }
+  ]
+}

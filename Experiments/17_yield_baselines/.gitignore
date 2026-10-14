@@ -1,0 +1,8 @@
+external/
+env/
+runs/
+cache/
+weights/
+models/
+__pycache__/
+*.pyc

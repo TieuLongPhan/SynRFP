@@ -1,0 +1,8 @@
+{
+  "trained_fits": 64,
+  "matched_reference_pairs": 128,
+  "complete_comparison_groups": 36,
+  "all_new_fit_artifacts_sha256_verified": true,
+  "rows_and_observed_yields_identical": true,
+  "gpu_references_labeled_separately": true
+}

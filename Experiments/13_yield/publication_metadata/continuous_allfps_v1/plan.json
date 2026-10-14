@@ -1,0 +1,624 @@
+{
+  "study": "continuous_allfps_v1",
+  "created_utc": "2026-10-11T19:07:09.889226+00:00",
+  "official_data_commit": "d9e6b87ce1b881978490d68bfc00021e3b48127a",
+  "dataset_sources": [
+    "https://github.com/rxn4chemistry/rxn_yields",
+    "https://github.com/schwallergroup/bh-hte-ood"
+  ],
+  "tables": {
+    "bh_classic": {
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/bh_classic.csv.gz",
+      "rows": 3955,
+      "yield_min": 0.0,
+      "yield_max": 99.99999,
+      "above_100": 0
+    },
+    "suzuki_hte": {
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/suzuki_hte.csv.gz",
+      "rows": 5760,
+      "yield_min": 0.0,
+      "yield_max": 100.0,
+      "above_100": 0
+    },
+    "ncs_bh": {
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/ncs_bh.csv.gz",
+      "rows": 27497,
+      "yield_min": 0.0,
+      "yield_max": 114.3,
+      "above_100": 59
+    }
+  },
+  "splits": [
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_01.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_02.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_03.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_04.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_05.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_06.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_07.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_08.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_09.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "report_group": "bh_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_10.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "report_group": "bh_published_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test1.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "report_group": "bh_published_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test2.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "report_group": "bh_published_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test3.npz"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "report_group": "bh_published_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test4.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_0.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_1.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_2.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_3.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_4.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_5.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_6.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_7.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_8.npz"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "report_group": "suzuki_random",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_9.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f3.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f0.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f1.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f2.npz"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "report_group": "ncs_cluster_ood",
+      "path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f3.npz"
+    }
+  ],
+  "fingerprints": [
+    "synrfp_default",
+    "drfp",
+    "rdkit_struct",
+    "rdkit_diff",
+    "rxnfp_mlm",
+    "crxnfp",
+    "rxnfp"
+  ],
+  "params": {
+    "hidden": 512,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 200,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "seed": 42
+  },
+  "expected_models": 448,
+  "pinned_files": {
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/bh.xlsx": "d7f318abfbb42eaadca482b1e9aa54540eeed60e0089b6a0eb4e75366c31ee2e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/official_data.py": "4823e60518a1f7a9dca601ebf21b7f0e5efaf73c2f583151824c0e624fd26efb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/bh_training.py": "f6d11e9f74e006251b5a1a022cb0a9d34dec3314378aa563d06a458ed4ba95e9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_training.py": "587c62569260e411b3b14f002e97aedd4e392b57aac481445ee42297fced2998",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/bh_classic.csv.gz": "8b728455669eb474bf210e499d778cd4fb572512eb8f4635163cc4c3d11c2d09",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/encoder/inputs/bh_classic.csv.gz": "54672fec8b0a38c3628e71dde0e48712da20f713a441127757b07214471dcbcb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_01.npz": "d015b273ebab6bd1a5b81ad865716a9076ce59c9ff06ad76d91427820b24fc39",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_02.npz": "30e97af15f85432b3bd85fe5879ca8920d06fa045c3f695561470d2f751dd0e9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_03.npz": "dd9e32408f9f6f4b5ffd1b777301c789cc317e0e9ed3069f791d02d0eee9055c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_04.npz": "bd1745596ea7df845615f4ffe490505c9b146c773f88d334e1ca2e56fb5692b9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_05.npz": "d966f329277da4a0f10e033b918c9cd544eb0f1326f6065c000a7cd006230e97",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_06.npz": "da48358fdc74f665bf7f4a7d6213926953f0588a014c451f97fc85df01dd9c62",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_07.npz": "ddddf0e376b496d578ccf74db1d8a66ee81ad39ad4fd416af23615a0656a8f67",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_08.npz": "181f2f2c1690c2e23fc699b9152d7a1c77047123b9583c31a3cecbece05ae027",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_09.npz": "9d128bbf507dc0ca4e0c633e1fbc459b304c98983d95c20530dbd98508bd149c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_10.npz": "4de2108d86b98d70807ef0330724bc40ff35d98171a2e43cdded1ed041901728",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test1.npz": "0a419b636e9ab0c311d33438e15a5744ae7435904d4b27e910b1421fe116c763",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test2.npz": "8ce3dbcb2f52110a073af6a160a10fc9bd609c20a341e6e5188efd2888a67081",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test3.npz": "c54d864ae6bce416c6ab41bd3369fa4de4eed1b1c8c8120b39cc6f0735b5ce79",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test4.npz": "2172123104def1375c47b224fb629c6c72709c6ab1934fdc7e207f282b9f1445",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki.tsv": "d2acd54d3958a5369346177834e6c2b16388813bb28b105181a252a15c4a79a8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/suzuki_hte.csv.gz": "58dbb4d14c7551d5aeeeaaa88ec19bf4d2e7a727f0bbd547876686313d4e9262",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/encoder/inputs/suzuki_hte.csv.gz": "53341d99ce890b45cab987f9df29412059f821809b1ae6965df26b2125cd45c6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_0.npz": "2fe6d9301759f7507f33ec1110851507ecf92c05e47062e2e3444f4ee326a0ec",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_1.tsv": "f4d8ff77db48c5862134309cabc618735bf3dc16e13004c1cb4a02c1015c9b7a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_1.npz": "d5647be5b986bbc5797ef3544a2044c90ada44542dbc416b6a7149a0d239d989",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_2.tsv": "384733377961659f3ec7b0c33a64d92e31f1283c3d9aab552a7f20e01845a0d1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_2.npz": "07a4060a8bd08dc3f43f6e58853d0bbe750e9546a720de862cff58171339b57c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_3.tsv": "0b939b662ad26ff96339b2d43c1db59e8fdf4775431168a590a5a251619539e7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_3.npz": "17c682a2bca386be6ef9b0769083c615b64c384252bffcf80031dcfa16c5388d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_4.tsv": "8cd6bb56a8a0db7d7e52f614dc83860ae1ecb3447b673bbbe7408a4a1c277861",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_4.npz": "d48bd43c1fb8270a0893d152e185108fcfb0866fd083e624c236dbce42ffca2f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_5.tsv": "3c45c00c7e0b9a826c7885443d09601517f6f509c52bb62751eee5f7f71bbd5f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_5.npz": "ba18bd4396a7d906c1d9730475c03922d4810aab423a6512e648bf495b04c072",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_6.tsv": "4fc96fdd6995813822968145c0614b17af5e6eb7f844d1f0b569f9020e827acd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_6.npz": "151d9c171cdee7f6373ab10655f558d458a56d8776667c59365a2452087dda11",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_7.tsv": "1ebb816b2c66e1c2a4a96ac82e626ea60f5233ea4f7ccf71828876ab792e69b8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_7.npz": "f1487950aa348bb3681cd1388caba57b11cb2d52c40072662d6d249f6d9f7c5d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_8.tsv": "795ed45e3dbb081dda21b5b1c08e21b0e8498bea3548f09ca37a6d82b0ca9ae8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_8.npz": "0a3029a3e11d4a493684dc8542a6c62aaed95a29bb992df2a1adfc48ef54f6a8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/continuous_v1/suzuki_9.tsv": "b29febdd4f23f04248c6651906093ca06090b08b76e859f5b2bd3910cd77a31b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_9.npz": "f332bfc72561ad8ba15a15b47a317c0baa8d0a376ab58bd7746a34648c1adc22",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/BH_HTE_Curated_Dataset_v20260219.csv": "247473787c33fb22ee48a4177593188f2a2c6ef140756566fe4610fee89ba333",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/ncs_bh.csv.gz": "81f69510f9e75c00a15e88dc443bf52fec9b1ceeedc6ca73be6dab9eddd012e8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/encoder/inputs/ncs_bh.csv.gz": "5363fd04b3c88b45dc879264c78dcd57bc1f3b3e61b19d565a0f0d1988460c0d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/plan.json": "aebf11d7948e1321220ab1f65b437f0de095a95c22a858e14c89e9c33ec8aeec",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i0_f0.npz": "51224d513081063bee87eeb660b6ff224015140eea0e3c58fdaf738fcef4255d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f0.npz": "d68e5a44f7845de718cf48608658f21970d0885adc4224b67d975265e2078fdb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i0_f1.npz": "2fc13df1a4638c5caecb33dcb370d91f786a09a19b2c4019c8b876b88c099de6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f1.npz": "70bbe90e22101b9075023ccf2bffd0914ab5e3071ef82b4d8c47adb2595e5f89",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i0_f2.npz": "da063f92bf9bfc9beea6d9a309d90c03ede7b104b3fa8fe63ac478c3c2d74e2a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f2.npz": "10284b3ca8a8ecbe8ea1b35a42ab6cdfa0717b510a6d7dceaba554ca6ce46b36",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i0_f3.npz": "113f8a83873143089006c7db809f467185ffdf72319b53b11a3c755bbb9f13ff",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f3.npz": "7a1b8597408d6bf228ac07781950d21e30a0184d199f2152c9806b437d76ac91",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i1_f0.npz": "232e8722e0bf87a41476217a3a24b12e83445ed5d19295b6b029532d20efd348",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f0.npz": "5dee93e32cabe6ffe60cbefd15116296ccc977ad5ea490fb6a418907857f7aac",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i1_f1.npz": "caf108483d6bf40aaef6407204105b408c4bef634da848bf98b9859a2fdeb6ac",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f1.npz": "a00643aca62bda5a63115458302eaee0961bf7b28972779aa6d3d69a6b512322",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i1_f2.npz": "da7a337f2fabb0f3a9d4c52482e3a1cc54172b4925e1f889262bd2cfca4254db",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f2.npz": "c68d295d822ad532927c3ff076160b1a17003118706c0c9ef0b8510897c777fd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i1_f3.npz": "57092eb13c058832d454c8ce16861e96a7f1104080e2d21a846044a31d092c11",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f3.npz": "2e00ff9ceaec57cbb948526909dc36bcbca22cb8b853755a7ef9e74086da46ce",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i2_f0.npz": "7943eb87de42ae705432fa8f0a581381679116defb3a98d83b668b0c8863d8bf",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f0.npz": "3c538b1c79ed41e1c1fe69933d851ff73d66c0ac9067e7f64de1fbf218914b0d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i2_f1.npz": "c60c36b76ae8e0458f3762263e31f61dea988cdd76bf97a31a653574eea318df",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f1.npz": "0ed41a56bdae0ca403d0b482ff1f3243d63bc6513fac06dcce4b3ccd5dfb36da",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i2_f2.npz": "8967da88ae907697d1ba333071ac65cc902bfb4382b03f357e36685864db9916",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f2.npz": "129f3ca80c07b934efa4aca5addb1f673cc406cea4cd3d53c86ddbafbd684bf3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i2_f3.npz": "f213be7284cedf22afcd77f6a86fcd30773345c551a17a1b44ca1b732987066f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f3.npz": "3998fdf5aef5c6324fb0a76164cddfc94fc744a95328adaf3fba7a9aa45a0e24",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i3_f0.npz": "1f2692f9c39c491e6aab6c694843d94197492ae5f83423bf9d50dc7c223d2279",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f0.npz": "0481daeb536b2d08d4b163bf10a0e76f0a03a34ccd477be22cd570c43fcd89b5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i3_f1.npz": "684e6781f24f240d26b59cab0c8eeedd79a40799d92b1d52f80b4e058202e79f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f1.npz": "2218d0000a8e356021a0cb00cb1533981c8d847466726698f6d89fd598a5777c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i3_f2.npz": "3fa9ee883e25c957ed3aae46c8c6e0ce58f267a32bb4728b709088142684b037",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f2.npz": "76ec237dbd1efff649c958978fc91d45b8de4038da69cbc02f890c735aba1a6a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i3_f3.npz": "8773b77ca4d5892e5b407293a478a1b66d54589097bb9c9c1d7bbd26b16cd871",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f3.npz": "bb1a2fa41049039ef869409ec900ff34ff3d7387a3a8e7340a0b2b705d255785",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i4_f0.npz": "bb26ec2a01e1fd916110d669c6978dbe664ab8a133a54ea7372f43996a596e95",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f0.npz": "e79c0618a6c1da00ef6aa187c86f2d3b028cd408c0e30117f78fdef40893abae",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i4_f1.npz": "e4724a4d2769d4ae7603b234c80f64d3601ffd3ac092f10524c8624b1cf2a700",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f1.npz": "a9da8915212c41c74407eda05b057f1b8203f1c245607794c457b14c2502cc9d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i4_f2.npz": "4080d7606bcfa7597695826e38d65153a081da970b2396799de60d7547f1fee5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f2.npz": "14598fe89930fe3832452c90216450e788be012930cb3639da82066c4a4dd425",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i4_f3.npz": "060c2db138e589d3c3c7614dea3482545cc8c91ed90b58e5a4afd0160f90f7a4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f3.npz": "659022ede428ae02ef19b9604db033c7ae3d284b246b07297f3c986d5e33cec7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i5_f0.npz": "eaead2eb6faa53c29aea7238a684e14a2a3ad71227d4dd1db5b813da2924e776",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f0.npz": "e47f7cbdeb4d984a68a80cc14c8b1110d0e28920e4774e8eb341bcc317b7c344",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i5_f1.npz": "5d9731d3ede7f6d0b5e684cdc299e8ada021543caf1759f35a64c63f957a3419",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f1.npz": "29778326be25b1b84398bef48ad99a6dc7272a96e05ba6cbfba64bc1710d3847",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i5_f2.npz": "04f47e7bbb6c8d40edc4ecbff5aa2dcc20536b4298c67a2207ba6a2796cf1f5a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f2.npz": "7f48b79cd0c5bc803dd54992a98fadda0e09e3b53d96a3657496c95d86127c9c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i5_f3.npz": "97fceb29c1d287d3b2d0908ee11faa910e6ee498ddd46584cfc14d41928d6026",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f3.npz": "470867af9f6c1c74252f5303c2159a5c108237d82af6e358196639dbd419a6d7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i6_f0.npz": "10c9e46b833f1d0305e4cb2024186fdfe8ebdada506ce3fe997c55a11804dc80",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f0.npz": "df1a693baa6b3e6a029f538d580bf1d398135f8e365149e0df8c588a8dbedea7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i6_f1.npz": "42588b55ac735953585f0f6a83b6172964aa7733a6a8b9e294827eaff02c7e4e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f1.npz": "3eedd412558526f512c421228be3ca0decf6ced09de450b2ed6da36dcc2c82c8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i6_f2.npz": "23dc92f8cc38734d023b0b16dba6d63dba7aaf37eb7886ffce96c1b935beab19",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f2.npz": "6e62d415d2c756559163082f4b7627427db7b3247065d77cb72e35f20f05b3a0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i6_f3.npz": "22ef11c1e56429dcbf537e76ad7af74ae883afee7a49514151fcefac41922bbd",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f3.npz": "6299ca0895ea81a395ef887b41ff7c8b407639d3b2c395026d78f651dc82b63b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i7_f0.npz": "c212273f5f248ecfa6ed5d8bdce7f9b01399c5e336f7abd4c2dd76ca9b982f33",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f0.npz": "2baad9b67dd676c6bc1a76f1ee0a5dadf60e65abee0781bb354390c1858c72e5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i7_f1.npz": "12c114b6ec457d5e613b6daefe6a299be306710b51cdbd570d88bd50bd3b192d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f1.npz": "17379a687623ac9a7db45d4cadb424d3636bf6778ff259dcbc6cae3b43d0898d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i7_f2.npz": "d102c5131950aa354c935ae037bbffaf001c1c4e07508f87b7e764415dc375fa",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f2.npz": "85b0ff497cd73dec0e72218441ed6452c5e9eeda5f06721d73e2a8edfea2cef4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i7_f3.npz": "9004dadccf4dbaa6d7d9ab3e115aeaaa2d463eadc86ebd2f037450e5c677e693",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f3.npz": "84242f9e20336215bb54329d074773b81885b7e951fda2607e85b4c15f703ec5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i8_f0.npz": "3164f9a68705b8523ed5013ae717466f6755da81faa754b1b398f96bb7a23ae3",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f0.npz": "b7807461fd02918e9450d58b0586b76e770246d1f4f770a75ca89acbfa46c43f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i8_f1.npz": "0cb40131a645a92f6b718c15d71749070504d017c21174c521d9f9f0471ed5e9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f1.npz": "1f1db49b1cdd3ec7235132342053560b374fa837b3bb41f2f25d62bbbb5f1c52",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i8_f2.npz": "99cb7549b1bc0b6711101f53c02ca4c1e1e618e6d02b8658319ab27505cfb57d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f2.npz": "17e910a91bbf9ccd5e3fad4a7cdd7aa57b8163c8cd3657caf2f981c6a4dde1c1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i8_f3.npz": "401e0308f68c580c4dd913fd467ec0ce66f44835032b5200b87b4ae2d3294e80",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f3.npz": "5ca22d8206374b297c8a365aaac9ecf90f17162948668b84794efa1e2556ea83",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i9_f0.npz": "4911d1994fdc0f65cfb4ea97cb03a24d196f6819a1fbdee1df38148cf2c97ce9",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f0.npz": "a4388ac6c04235da1aa5bbcb72d005f6b71093c49bce7a4189257cae97bba571",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i9_f1.npz": "1576be6f9d8b31963fe18374a73994574bde811625f99f0f7d11da4720cac3ff",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f1.npz": "9d2794ca3f29a28284143a9fd008efbbf5597d31de9c359abffaa29fc23d718c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i9_f2.npz": "8e8be23b752ded8eb65364e65a1a57e01e59e109e3c17967894dd6b35171e4e7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f2.npz": "e9b7c8a88da3080e8e8c2a4ad2ba39d6395835f0db7361c63289e2150868e98e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/outer_benchmark_40splits_v3/splits/i9_f3.npz": "69a95e3bbe3acce061a78950d6b91a6503bd3fc3571b34587c1f1db0265476a4",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f3.npz": "d03153e4b1ca584a64c11e4b1fa14092d5d60468d10b892c20143ab81da186ce",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/features/synrfp_default.npz": "d44332095ebafa6c2ab03fcee81fe4040d00de922c04737e1cc0ba634fe118f6",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/features/drfp.npz": "4ea96f87e95f0db721f4a448ab572f5092dd4deb11189a3b961882154bfe8df2",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/run_continuous.py": "31b2bb988914edeeb25effc5d97a8854d66a7a63f868698a3d376ab4c942a2df",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/continuous_mlp.py": "3f8c326fb324d593527980ea5d4786c03ade61f826ee8603d5fadb6b45ca7b7c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/continuous_encoder.py": "1060d36edff7971342b9985cd6f092bdb5d878c60069b65914239fe9e7b65081",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/continuous_rxnfp.py": "2a377db065e7432bbcd214c5b76094534f6675b8f9a31070072999f6d93435fa",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/bh_features.py": "d9816ed6766e30579fd1af4fbf027c2de027e9db4d9bebaa98bbfa6914d1199b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/modern_encoder.py": "a2ef2aee2325a9e2b995a50fe9ad57e7218ac94bae17deb58d3b087dc45587ba",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/tokenization.py": "9db8fd76dce1613a1145c087ebe86248ad1612e4bfe79b5dd738442bbc04bb60",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/smiles_util.py": "de1e6411de93922e30f47b316306e387a6db5b57563918f2a949760b000dd866",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/README.md": "16b706cfb31fe7f3ca3b18d825ecc71f23e304104139dad7e83fa17313a7cd5e",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/tokenizer_config.json": "b557b8436d888995f74b889dff2c5f582f85e48599a58ee1b3f10602f5ae7308",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config_sentence_transformers.json": "9afb9db5b9433bffa325f8272065c0b330efb570a873abb3e296d3a387f82301",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/modules.json": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/model.safetensors": "7a78e798d0e82b190918442744948bd53d6d16608c7b01708ee1cc746a97cb2d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config.json": "b6a20d680daeeb360abc2fbc92100f3a9e438e5c0dd19e19755e2a86e0f5e7fe",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/1_Pooling/config.json": "38d3f4705824ec41c63a0b14e19870d59c7e16eac9c0aac3378be1ce548bc313",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_ft/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_ft/pytorch_model.bin": "5bb7f9f5831ec16a4b90545f95394853caf19ff9a8272291c86e0b231e0ff2ba",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_ft/config.json": "a64d1b3f68ea08d078e2ec87953e9c51ede6f135e5d7c97821d6e5680a1429a9",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/pytorch_model.bin": "50a6ed263d33ae759affa82c1e85554cc5ea9f56145f5c7fb39b6c25d4356437",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/config.json": "024d89cb6056e146e066ebbcd9d565d6968d53e82953570a8b110b26495d7d4b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/features.py": "eaf3bc6ff3bad09afd6308dd4ce0132e9e86d0c6bb015a93a328e882524944f5"
+  },
+  "primary_synrfp": "unchanged WL radius2, parity delta 1024 bits, fingerprint seed1",
+  "primary_encoder_panel": [
+    "synrfp_default",
+    "drfp",
+    "rdkit_struct",
+    "rdkit_diff",
+    "rxnfp_mlm",
+    "crxnfp"
+  ],
+  "supervised_reference": {
+    "rxnfp": "bert_ft; classification-supervised pretrained reference, exposure disclosed"
+  },
+  "selection": "Fixed settings for every fingerprint; best validation MSE, no test labels or tuning",
+  "preprocessing": "Dense features standardized on actual fit-train only; bit features unchanged; target mean/scale on actual fit-train only",
+  "population": "Common intersection of all seven valid encodings within each published split; original rows retained and exclusion/source coverage saved",
+  "metrics": [
+    "RMSE percentage points",
+    "MAE percentage points",
+    "R2",
+    "training-mean prediction control"
+  ],
+  "predictions": "Unclipped continuous response; 59 NCS measurements above100 preserved",
+  "limitations": [
+    "BH classic overlaps with NCS DreherDoyle source; not independent replication",
+    "NCS additive identities unavailable in combined CSV; no descriptors or source IDs added to fingerprints",
+    "Suzuki response is UV area analytical yield, not isolated yield",
+    "NCS original study targets binary success; this is a new continuous-response extension",
+    "Official crxnfp preprocessor may reject embedded dative arrows; report coverage and use identical remaining rows",
+    "Repeated split scores are correlated; no independent-fold significance claim"
+  ],
+  "resource_policy": "GPU1 only; wait for crxnfp GPU service, shared GPU1 file lock; four CPU cores; no new XGBoost"
+}

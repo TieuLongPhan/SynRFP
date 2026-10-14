@@ -1,0 +1,3047 @@
+{
+  "schema": "synrfp.yield-baseline-plan/3",
+  "study": "matched_full_v3",
+  "scope": "full",
+  "created_utc": "2026-10-12T13:11:47.765798+00:00",
+  "root": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v3",
+  "parent_plan": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/plan.json",
+  "repositories": {
+    "rxn_yields": {
+      "directory": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields",
+      "commit": "d9e6b87ce1b881978490d68bfc00021e3b48127a"
+    },
+    "gnan": {
+      "directory": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan",
+      "commit": "070fc4540999265f389ee9c08ae21c5a32057e09"
+    },
+    "mfp": {
+      "directory": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp",
+      "commit": "60a1f5009d7e842b32ed5ce74270b6cdf0b77468"
+    }
+  },
+  "tables": {
+    "bh_classic": {
+      "source_path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/bh_classic.csv.gz",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "rows": 3955,
+      "shared_valid": 3955,
+      "role_columns": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    "ncs_bh": {
+      "source_path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/ncs_bh.csv.gz",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "rows": 27497,
+      "shared_valid": 22609,
+      "role_columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "suzuki_hte": {
+      "source_path": "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/suzuki_hte.csv.gz",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "rows": 5760,
+      "shared_valid": 5760,
+      "role_columns": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "alignments": {
+    "bh_classic": {
+      "chemically_aligned_retained_rows": 3955,
+      "participant_columns": 6,
+      "constant_columns_removed_for_GNAN": [
+        1,
+        2
+      ],
+      "BH_source_adaptation": "Matched GNAN consumes frozen parent stereo/Pd chemistry, not altered author processed molecules",
+      "above_100_shared_rows": 0
+    },
+    "ncs_bh": {
+      "chemically_aligned_retained_rows": 22609,
+      "participant_columns": 5,
+      "constant_columns_removed_for_GNAN": [],
+      "BH_source_adaptation": null,
+      "above_100_shared_rows": 59
+    },
+    "suzuki_hte": {
+      "chemically_aligned_retained_rows": 5760,
+      "participant_columns": 6,
+      "constant_columns_removed_for_GNAN": [
+        2
+      ],
+      "BH_source_adaptation": null,
+      "above_100_shared_rows": 0
+    }
+  },
+  "jobs": [
+    {
+      "id": "bh_classic__FullCV_01__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_01.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_01__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_01.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_01__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_01.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_02__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_02.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_02__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_02.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_02__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_02.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_03__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_03.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_03__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_03.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_03__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_03.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_04__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_04.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_04__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_04.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_04__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_04.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_05__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_05.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_05__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_05.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_05__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_05.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_06__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_06.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_06__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_06.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_06__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_06.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_07__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_07.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_07__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_07.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_07__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_07.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_08__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_08.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_08__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_08.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_08__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_08.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_09__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_09.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_09__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_09.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_09__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_09.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_10__yieldbert",
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "report_group": "bh_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_10.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_10__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "report_group": "bh_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_10.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__FullCV_10__gnan",
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "report_group": "bh_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_10.npz",
+      "counts": {
+        "train": 2490,
+        "validation": 277,
+        "test": 1188
+      }
+    },
+    {
+      "id": "bh_classic__Test1__yieldbert",
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test1.npz",
+      "counts": {
+        "train": 2751,
+        "validation": 306,
+        "test": 898
+      }
+    },
+    {
+      "id": "bh_classic__Test1__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test1.npz",
+      "counts": {
+        "train": 2751,
+        "validation": 306,
+        "test": 898
+      }
+    },
+    {
+      "id": "bh_classic__Test1__gnan",
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "report_group": "bh_published_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test1.npz",
+      "counts": {
+        "train": 2751,
+        "validation": 306,
+        "test": 898
+      }
+    },
+    {
+      "id": "bh_classic__Test2__yieldbert",
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test2.npz",
+      "counts": {
+        "train": 2749,
+        "validation": 306,
+        "test": 900
+      }
+    },
+    {
+      "id": "bh_classic__Test2__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test2.npz",
+      "counts": {
+        "train": 2749,
+        "validation": 306,
+        "test": 900
+      }
+    },
+    {
+      "id": "bh_classic__Test2__gnan",
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "report_group": "bh_published_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test2.npz",
+      "counts": {
+        "train": 2749,
+        "validation": 306,
+        "test": 900
+      }
+    },
+    {
+      "id": "bh_classic__Test3__yieldbert",
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test3.npz",
+      "counts": {
+        "train": 2752,
+        "validation": 306,
+        "test": 897
+      }
+    },
+    {
+      "id": "bh_classic__Test3__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test3.npz",
+      "counts": {
+        "train": 2752,
+        "validation": 306,
+        "test": 897
+      }
+    },
+    {
+      "id": "bh_classic__Test3__gnan",
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "report_group": "bh_published_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test3.npz",
+      "counts": {
+        "train": 2752,
+        "validation": 306,
+        "test": 897
+      }
+    },
+    {
+      "id": "bh_classic__Test4__yieldbert",
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test4.npz",
+      "counts": {
+        "train": 2749,
+        "validation": 306,
+        "test": 900
+      }
+    },
+    {
+      "id": "bh_classic__Test4__yieldbert_da",
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "report_group": "bh_published_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test4.npz",
+      "counts": {
+        "train": 2749,
+        "validation": 306,
+        "test": 900
+      }
+    },
+    {
+      "id": "bh_classic__Test4__gnan",
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "report_group": "bh_published_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test4.npz",
+      "counts": {
+        "train": 2749,
+        "validation": 306,
+        "test": 900
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f0.npz",
+      "counts": {
+        "train": 10534,
+        "validation": 1187,
+        "test": 10888
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f0.npz",
+      "counts": {
+        "train": 10534,
+        "validation": 1187,
+        "test": 10888
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f0.npz",
+      "counts": {
+        "train": 10534,
+        "validation": 1187,
+        "test": 10888
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f1.npz",
+      "counts": {
+        "train": 15576,
+        "validation": 1726,
+        "test": 5307
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f1.npz",
+      "counts": {
+        "train": 15576,
+        "validation": 1726,
+        "test": 5307
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f1.npz",
+      "counts": {
+        "train": 15576,
+        "validation": 1726,
+        "test": 5307
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f2.npz",
+      "counts": {
+        "train": 16629,
+        "validation": 1866,
+        "test": 4114
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f2.npz",
+      "counts": {
+        "train": 16629,
+        "validation": 1866,
+        "test": 4114
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f2.npz",
+      "counts": {
+        "train": 16629,
+        "validation": 1866,
+        "test": 4114
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f3.npz",
+      "counts": {
+        "train": 18278,
+        "validation": 2031,
+        "test": 2300
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f3.npz",
+      "counts": {
+        "train": 18278,
+        "validation": 2031,
+        "test": 2300
+      }
+    },
+    {
+      "id": "ncs_bh__i0_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f3.npz",
+      "counts": {
+        "train": 18278,
+        "validation": 2031,
+        "test": 2300
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f0.npz",
+      "counts": {
+        "train": 18372,
+        "validation": 2042,
+        "test": 2195
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f0.npz",
+      "counts": {
+        "train": 18372,
+        "validation": 2042,
+        "test": 2195
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f0.npz",
+      "counts": {
+        "train": 18372,
+        "validation": 2042,
+        "test": 2195
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f1.npz",
+      "counts": {
+        "train": 12155,
+        "validation": 1369,
+        "test": 9085
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f1.npz",
+      "counts": {
+        "train": 12155,
+        "validation": 1369,
+        "test": 9085
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f1.npz",
+      "counts": {
+        "train": 12155,
+        "validation": 1369,
+        "test": 9085
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f2.npz",
+      "counts": {
+        "train": 14156,
+        "validation": 1589,
+        "test": 6864
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f2.npz",
+      "counts": {
+        "train": 14156,
+        "validation": 1589,
+        "test": 6864
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f2.npz",
+      "counts": {
+        "train": 14156,
+        "validation": 1589,
+        "test": 6864
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f3.npz",
+      "counts": {
+        "train": 16302,
+        "validation": 1842,
+        "test": 4465
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f3.npz",
+      "counts": {
+        "train": 16302,
+        "validation": 1842,
+        "test": 4465
+      }
+    },
+    {
+      "id": "ncs_bh__i1_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f3.npz",
+      "counts": {
+        "train": 16302,
+        "validation": 1842,
+        "test": 4465
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f0.npz",
+      "counts": {
+        "train": 15288,
+        "validation": 1706,
+        "test": 5615
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f0.npz",
+      "counts": {
+        "train": 15288,
+        "validation": 1706,
+        "test": 5615
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f0.npz",
+      "counts": {
+        "train": 15288,
+        "validation": 1706,
+        "test": 5615
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f1.npz",
+      "counts": {
+        "train": 14852,
+        "validation": 1670,
+        "test": 6087
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f1.npz",
+      "counts": {
+        "train": 14852,
+        "validation": 1670,
+        "test": 6087
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f1.npz",
+      "counts": {
+        "train": 14852,
+        "validation": 1670,
+        "test": 6087
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f2.npz",
+      "counts": {
+        "train": 17388,
+        "validation": 1938,
+        "test": 3283
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f2.npz",
+      "counts": {
+        "train": 17388,
+        "validation": 1938,
+        "test": 3283
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f2.npz",
+      "counts": {
+        "train": 17388,
+        "validation": 1938,
+        "test": 3283
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f3.npz",
+      "counts": {
+        "train": 13465,
+        "validation": 1520,
+        "test": 7624
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f3.npz",
+      "counts": {
+        "train": 13465,
+        "validation": 1520,
+        "test": 7624
+      }
+    },
+    {
+      "id": "ncs_bh__i2_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f3.npz",
+      "counts": {
+        "train": 13465,
+        "validation": 1520,
+        "test": 7624
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f0.npz",
+      "counts": {
+        "train": 16819,
+        "validation": 1855,
+        "test": 3935
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f0.npz",
+      "counts": {
+        "train": 16819,
+        "validation": 1855,
+        "test": 3935
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f0.npz",
+      "counts": {
+        "train": 16819,
+        "validation": 1855,
+        "test": 3935
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f1.npz",
+      "counts": {
+        "train": 14279,
+        "validation": 1575,
+        "test": 6755
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f1.npz",
+      "counts": {
+        "train": 14279,
+        "validation": 1575,
+        "test": 6755
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f1.npz",
+      "counts": {
+        "train": 14279,
+        "validation": 1575,
+        "test": 6755
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f2.npz",
+      "counts": {
+        "train": 13506,
+        "validation": 1504,
+        "test": 7599
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f2.npz",
+      "counts": {
+        "train": 13506,
+        "validation": 1504,
+        "test": 7599
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f2.npz",
+      "counts": {
+        "train": 13506,
+        "validation": 1504,
+        "test": 7599
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f3.npz",
+      "counts": {
+        "train": 16481,
+        "validation": 1808,
+        "test": 4320
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f3.npz",
+      "counts": {
+        "train": 16481,
+        "validation": 1808,
+        "test": 4320
+      }
+    },
+    {
+      "id": "ncs_bh__i3_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f3.npz",
+      "counts": {
+        "train": 16481,
+        "validation": 1808,
+        "test": 4320
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f0.npz",
+      "counts": {
+        "train": 14808,
+        "validation": 1680,
+        "test": 6121
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f0.npz",
+      "counts": {
+        "train": 14808,
+        "validation": 1680,
+        "test": 6121
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f0.npz",
+      "counts": {
+        "train": 14808,
+        "validation": 1680,
+        "test": 6121
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f1.npz",
+      "counts": {
+        "train": 17261,
+        "validation": 1917,
+        "test": 3431
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f1.npz",
+      "counts": {
+        "train": 17261,
+        "validation": 1917,
+        "test": 3431
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f1.npz",
+      "counts": {
+        "train": 17261,
+        "validation": 1917,
+        "test": 3431
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f2.npz",
+      "counts": {
+        "train": 13085,
+        "validation": 1472,
+        "test": 8052
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f2.npz",
+      "counts": {
+        "train": 13085,
+        "validation": 1472,
+        "test": 8052
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f2.npz",
+      "counts": {
+        "train": 13085,
+        "validation": 1472,
+        "test": 8052
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f3.npz",
+      "counts": {
+        "train": 15831,
+        "validation": 1773,
+        "test": 5005
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f3.npz",
+      "counts": {
+        "train": 15831,
+        "validation": 1773,
+        "test": 5005
+      }
+    },
+    {
+      "id": "ncs_bh__i4_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f3.npz",
+      "counts": {
+        "train": 15831,
+        "validation": 1773,
+        "test": 5005
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f0.npz",
+      "counts": {
+        "train": 17711,
+        "validation": 1999,
+        "test": 2899
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f0.npz",
+      "counts": {
+        "train": 17711,
+        "validation": 1999,
+        "test": 2899
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f0.npz",
+      "counts": {
+        "train": 17711,
+        "validation": 1999,
+        "test": 2899
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f1.npz",
+      "counts": {
+        "train": 13014,
+        "validation": 1449,
+        "test": 8146
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f1.npz",
+      "counts": {
+        "train": 13014,
+        "validation": 1449,
+        "test": 8146
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f1.npz",
+      "counts": {
+        "train": 13014,
+        "validation": 1449,
+        "test": 8146
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f2.npz",
+      "counts": {
+        "train": 14286,
+        "validation": 1603,
+        "test": 6720
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f2.npz",
+      "counts": {
+        "train": 14286,
+        "validation": 1603,
+        "test": 6720
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f2.npz",
+      "counts": {
+        "train": 14286,
+        "validation": 1603,
+        "test": 6720
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f3.npz",
+      "counts": {
+        "train": 15973,
+        "validation": 1792,
+        "test": 4844
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f3.npz",
+      "counts": {
+        "train": 15973,
+        "validation": 1792,
+        "test": 4844
+      }
+    },
+    {
+      "id": "ncs_bh__i5_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f3.npz",
+      "counts": {
+        "train": 15973,
+        "validation": 1792,
+        "test": 4844
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f0.npz",
+      "counts": {
+        "train": 15060,
+        "validation": 1689,
+        "test": 5860
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f0.npz",
+      "counts": {
+        "train": 15060,
+        "validation": 1689,
+        "test": 5860
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f0.npz",
+      "counts": {
+        "train": 15060,
+        "validation": 1689,
+        "test": 5860
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f1.npz",
+      "counts": {
+        "train": 15094,
+        "validation": 1666,
+        "test": 5849
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f1.npz",
+      "counts": {
+        "train": 15094,
+        "validation": 1666,
+        "test": 5849
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f1.npz",
+      "counts": {
+        "train": 15094,
+        "validation": 1666,
+        "test": 5849
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f2.npz",
+      "counts": {
+        "train": 14373,
+        "validation": 1611,
+        "test": 6625
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f2.npz",
+      "counts": {
+        "train": 14373,
+        "validation": 1611,
+        "test": 6625
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f2.npz",
+      "counts": {
+        "train": 14373,
+        "validation": 1611,
+        "test": 6625
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f3.npz",
+      "counts": {
+        "train": 16516,
+        "validation": 1818,
+        "test": 4275
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f3.npz",
+      "counts": {
+        "train": 16516,
+        "validation": 1818,
+        "test": 4275
+      }
+    },
+    {
+      "id": "ncs_bh__i6_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f3.npz",
+      "counts": {
+        "train": 16516,
+        "validation": 1818,
+        "test": 4275
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f0.npz",
+      "counts": {
+        "train": 17312,
+        "validation": 1932,
+        "test": 3365
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f0.npz",
+      "counts": {
+        "train": 17312,
+        "validation": 1932,
+        "test": 3365
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f0.npz",
+      "counts": {
+        "train": 17312,
+        "validation": 1932,
+        "test": 3365
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f1.npz",
+      "counts": {
+        "train": 14700,
+        "validation": 1642,
+        "test": 6267
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f1.npz",
+      "counts": {
+        "train": 14700,
+        "validation": 1642,
+        "test": 6267
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f1.npz",
+      "counts": {
+        "train": 14700,
+        "validation": 1642,
+        "test": 6267
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f2.npz",
+      "counts": {
+        "train": 12770,
+        "validation": 1425,
+        "test": 8414
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f2.npz",
+      "counts": {
+        "train": 12770,
+        "validation": 1425,
+        "test": 8414
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f2.npz",
+      "counts": {
+        "train": 12770,
+        "validation": 1425,
+        "test": 8414
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f3.npz",
+      "counts": {
+        "train": 16243,
+        "validation": 1803,
+        "test": 4563
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f3.npz",
+      "counts": {
+        "train": 16243,
+        "validation": 1803,
+        "test": 4563
+      }
+    },
+    {
+      "id": "ncs_bh__i7_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f3.npz",
+      "counts": {
+        "train": 16243,
+        "validation": 1803,
+        "test": 4563
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f0.npz",
+      "counts": {
+        "train": 15714,
+        "validation": 1731,
+        "test": 5164
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f0.npz",
+      "counts": {
+        "train": 15714,
+        "validation": 1731,
+        "test": 5164
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f0.npz",
+      "counts": {
+        "train": 15714,
+        "validation": 1731,
+        "test": 5164
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f1.npz",
+      "counts": {
+        "train": 11753,
+        "validation": 1346,
+        "test": 9510
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f1.npz",
+      "counts": {
+        "train": 11753,
+        "validation": 1346,
+        "test": 9510
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f1.npz",
+      "counts": {
+        "train": 11753,
+        "validation": 1346,
+        "test": 9510
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f2.npz",
+      "counts": {
+        "train": 16524,
+        "validation": 1832,
+        "test": 4253
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f2.npz",
+      "counts": {
+        "train": 16524,
+        "validation": 1832,
+        "test": 4253
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f2.npz",
+      "counts": {
+        "train": 16524,
+        "validation": 1832,
+        "test": 4253
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f3.npz",
+      "counts": {
+        "train": 17025,
+        "validation": 1902,
+        "test": 3682
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f3.npz",
+      "counts": {
+        "train": 17025,
+        "validation": 1902,
+        "test": 3682
+      }
+    },
+    {
+      "id": "ncs_bh__i8_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f3.npz",
+      "counts": {
+        "train": 17025,
+        "validation": 1902,
+        "test": 3682
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f0__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f0.npz",
+      "counts": {
+        "train": 15016,
+        "validation": 1690,
+        "test": 5903
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f0__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f0.npz",
+      "counts": {
+        "train": 15016,
+        "validation": 1690,
+        "test": 5903
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f0__gnan",
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f0.npz",
+      "counts": {
+        "train": 15016,
+        "validation": 1690,
+        "test": 5903
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f1__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f1.npz",
+      "counts": {
+        "train": 15008,
+        "validation": 1683,
+        "test": 5918
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f1__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f1.npz",
+      "counts": {
+        "train": 15008,
+        "validation": 1683,
+        "test": 5918
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f1__gnan",
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f1.npz",
+      "counts": {
+        "train": 15008,
+        "validation": 1683,
+        "test": 5918
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f2__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f2.npz",
+      "counts": {
+        "train": 15207,
+        "validation": 1701,
+        "test": 5701
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f2__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f2.npz",
+      "counts": {
+        "train": 15207,
+        "validation": 1701,
+        "test": 5701
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f2__gnan",
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f2.npz",
+      "counts": {
+        "train": 15207,
+        "validation": 1701,
+        "test": 5701
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f3__yieldbert",
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f3.npz",
+      "counts": {
+        "train": 15772,
+        "validation": 1750,
+        "test": 5087
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f3__yieldbert_da",
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f3.npz",
+      "counts": {
+        "train": 15772,
+        "validation": 1750,
+        "test": 5087
+      }
+    },
+    {
+      "id": "ncs_bh__i9_f3__gnan",
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "report_group": "ncs_cluster_ood",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f3.npz",
+      "counts": {
+        "train": 15772,
+        "validation": 1750,
+        "test": 5087
+      }
+    },
+    {
+      "id": "suzuki_hte__random_0__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_0.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_0__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_0.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_0__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_0.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_1__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_1.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_1__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_1.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_1__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_1.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_2__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_2.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_2__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_2.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_2__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_2.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_3__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_3.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_3__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_3.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_3__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_3.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_4__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_4.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_4__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_4.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_4__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_4.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_5__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_5.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_5__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_5.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_5__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_5.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_6__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_6.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_6__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_6.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_6__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_6.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_7__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_7.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_7__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_7.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_7__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_7.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_8__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_8.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_8__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_8.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_8__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_8.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_9__yieldbert",
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "report_group": "suzuki_random",
+      "method": "yieldbert",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_9.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_9__yieldbert_da",
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "report_group": "suzuki_random",
+      "method": "yieldbert_da",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_9.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    },
+    {
+      "id": "suzuki_hte__random_9__gnan",
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "report_group": "suzuki_random",
+      "method": "gnan",
+      "input_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz",
+      "split_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_9.npz",
+      "counts": {
+        "train": 3628,
+        "validation": 404,
+        "test": 1728
+      }
+    }
+  ],
+  "expected_models": 192,
+  "pilot_job_ids": [
+    "bh_classic__FullCV_01__yieldbert",
+    "bh_classic__FullCV_01__yieldbert_da",
+    "bh_classic__FullCV_01__gnan",
+    "ncs_bh__i0_f0__yieldbert",
+    "ncs_bh__i0_f0__yieldbert_da",
+    "ncs_bh__i0_f0__gnan",
+    "suzuki_hte__random_0__yieldbert",
+    "suzuki_hte__random_0__yieldbert_da",
+    "suzuki_hte__random_0__gnan"
+  ],
+  "model_protocol": {
+    "yieldbert": {
+      "initialization": "RXNFP bert_pretrained MLM; fresh scalar regression head, not bert_ft",
+      "max_seq_length": 300,
+      "batch_size": 16,
+      "learning_rate_BH_NCS": 9.659e-05,
+      "dropout_BH_NCS": 0.7987,
+      "learning_rate_Suzuki": 5.812e-05,
+      "dropout_Suzuki": 0.5848,
+      "epochs_BH_NCS": 10,
+      "epochs_Suzuki": 15,
+      "optimizer": "Official Transformers2.11 AdamW, correct_bias=True, decay0, epsilon1e-8; linear schedule, no warmup",
+      "checkpoint": "lowest validation MSE for matched; final fixed epoch for source-protocol",
+      "optimizer_source_url": "https://raw.githubusercontent.com/huggingface/transformers/v2.11.0/src/transformers/optimization.py",
+      "optimizer_source_sha256": "972c1afa77149cd2f404fe5fc4bf551e6a40cef841790b0b1f4ae59407408b80",
+      "training_mode": "Call model.train() once before all epochs; evaluation sets eval mode and train mode is never restored, reproducing historical SimpleTransformers0.34.4 effective behavior",
+      "evaluation_cadence": "Every2000 optimizer steps and every epoch end on MATCHED validation rows only",
+      "training_source_url": "https://raw.githubusercontent.com/ThilinaRajapakse/simpletransformers/v0.34.4/simpletransformers/classification/classification_model.py",
+      "training_source_sha256": "6ce11bfd9138ba0c04bef4b87719dfbb0cf866454fb821efb68e20a73eda21c1",
+      "target_scale": "Same matched-training population standard deviation as v2; original author pandas sample std differs slightly"
+    },
+    "yieldbert_da": {
+      "augmentation": "15 rotated SMILES + independently shuffled precursor components per fit-training row; no chemistry changes",
+      "source": "rxn_yields augmentation.randomize_smiles, plus explicit component shuffling",
+      "validation": "canonical inputs, same validation rows; no label-dependent augmentation",
+      "primary_test": "10 deterministic chemistry-preserving variants averaged; canonical prediction retained separately",
+      "training_mode": "Same source-effective mode and2000-step evaluation cadence as YieldBERT; first augmented epoch can cross2000 before epoch end"
+    },
+    "gnan": {
+      "architecture": "unmodified author model.reactionMPNN and data/get_data.py featurizer",
+      "epochs": 500,
+      "batch": 128,
+      "optimizer": "author AdamW.001 decay.05 warmup10 cosine to1e-5",
+      "loss": "author squared error+heteroscedastic and three additive regularizers",
+      "validation": "every10epochs with5MC dropout passes; lowest validation MSE matched, final500epoch source-protocol",
+      "test": "30MC dropout passes",
+      "clipping": "primary matched predictions unbounded, classic clipped secondary retained; NCS never clipped"
+    }
+  },
+  "seed": 42,
+  "initialization_checkpoint": "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained",
+  "pins": {
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/plan.json": "c89ed907844623e2b5a51a59b8d54ca6296c19ad1a660beef62badc70c7fc116",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/setup.py": "dc11ec9509d4c647d54a62563aa8d95a63083831316cccd951a49a11b9554993",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/rxn_yields/data.py": "4823e60518a1f7a9dca601ebf21b7f0e5efaf73c2f583151824c0e624fd26efb",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/rxn_yields/augmentation.py": "53ef1fe8f6b3231b3e320453dd2bcad823ab9ee6eb7948f8ea7df3b6f8061dd4",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/rxn_yields/_nbdev.py": "f3de34e00a9ed873c3c0ae58c7b35fea646416fae8c825ded269540d39f70009",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/rxn_yields/__init__.py": "b172e1ee0dca0b84021717191814e91b6b1c47b866981b0c8eae8ba91a6d9118",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/rxn_yields/core.py": "5594d93d978b73a19e51834a7251ab6a86c70267322b3a02291244115e029357",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/training_scripts/launch_uspto_training.py": "d2251e433088d075fa59ddfdbd8e3133474db85c0e5d9eabf3d4edee31b895c4",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/training_scripts/repro_neurips_buchwald_hartwig_experiments.py": "db5f17e39ddab57a490626bf89e36a268dc82dd8c1bb1d7aaf572507059caf5e",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/training_scripts/example_wandb_hyperparam_sweep.py": "f017fd878d4319d1cfed85e144255f1e687899b883d75b91c59ac38a3f964d09",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/training_scripts/launch_suzuki_miyaura_training.py": "587c62569260e411b3b14f002e97aedd4e392b57aac481445ee42297fced2998",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/rxn_yields/training_scripts/launch_buchwald_hartwig_training.py": "f6d11e9f74e006251b5a1a022cb0a9d34dec3314378aa563d06a458ed4ba95e9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/dataset.py": "82dab424a554642d7d9f6cd921992a086a1ea4f25bd007cc4f38bec59a4ffb82",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/util.py": "db1c8af727facb024644ea8dbec036dcc17871eb16ce6c4866afec09e36c9289",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/run.py": "0135f3648b20f218ac6161d44f30926abb29decdd0746f9edd5d636f516cb5ad",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/model.py": "fe3c3abc8424f61b894812aee3651d1b80b2b3652c5d2f09e62e7daf1297f4a9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/data/get_data.py": "0789158e3781f1e82ec1cf5b5b138726d9371267ea569289382c7c8fa0b065cb",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp/training_scripts/train_morgan_ann_bh.py": "2aabbe4a6c9b9f930cc61041aa3b1cbc0641f79e5d799e831b8d1599e5de77d7",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp/training_scripts/fp_ablation_sm_all_splits.py": "9aa1f591fa37409392de726426bdfe163fce40c543b84e886a28580171c4e7a8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp/training_scripts/fp_ablation_bh_all_splits.py": "d6733486987ea500dbed0db2a6e8b8d5400397de2724ebd012f6c0c4e41a0ebf",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp/training_scripts/train_morgan_ann_sm.py": "2b0af500b084236d70faf6be8472a9a4d6e5f80aec4862ab0c17616f23edc038",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp/training_scripts/utils/common.py": "de19848d13a1fc42d5b0f0d604fc07df91490ae6e4b0535252df16a3e3f2ba8a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/mfp/training_scripts/utils/__init__.py": "eee04937fb14fecd86d5ea1d7807e2977ee8827471fb6a200bbcd0d3c4113ab8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/baseline_worker_v2.py": "f71c00d9486d5c97a5e2c0076c36c14ca9c5a91243889bbf4b907c6eac438f85",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/baseline_common.py": "7ae1e5524e8aa39d1820ba9e6d367b65322260b5b0c5c05b3312e041cec4376f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/prepare_baselines_v2.py": "e939dccc840f7ac469494039b215c97404b8e9e316149f8517b41aff356e3b3b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/baseline_worker.py": "23f3408b28c0189798ccf18a6912c822d0c5ed926b558e0c71f01f8d0867b619",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/prepare_baselines.py": "f857c410997d0c60cae8a2af245898a33c2d7bd3f028cc964cc8c342f8712765",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/run_baselines.py": "d53ae81c62e674053e7879a054f54f77470ef8094b0bb31dc9008acdfe4977bb",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/pytorch_model.bin": "50a6ed263d33ae759affa82c1e85554cc5ea9f56145f5c7fb39b6c25d4356437",
+    "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/config.json": "024d89cb6056e146e066ebbcd9d565d6968d53e82953570a8b110b26495d7d4b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/bh_classic.csv.gz": "8b728455669eb474bf210e499d778cd4fb572512eb8f4635163cc4c3d11c2d09",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/data/split/dataset_1_0.npz": "e4d2eb961a1c013696e0848baf78f7546340919081bf03d772c7fc35abc66b39",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_bh_classic.npz": "4dd1d805833f2d4aac8c839c3354d8ede47899d10b0abc5001d440328fdfbbb1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic.npz": "19fa68b31d4481c32179cbeba4cb084ad3ca2e35ab253ee36436be918aee980d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_01.npz": "d015b273ebab6bd1a5b81ad865716a9076ce59c9ff06ad76d91427820b24fc39",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_01.npz": "6c345dd788f34b479ed9b0d06ec6ed7cbb1b6e40528fe8d8ac47adc64eb8c725",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_02.npz": "30e97af15f85432b3bd85fe5879ca8920d06fa045c3f695561470d2f751dd0e9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_02.npz": "135c910e0d81682d5259982f9f3ecbf52762215d6023f97eb0523ab595f6d197",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_03.npz": "dd9e32408f9f6f4b5ffd1b777301c789cc317e0e9ed3069f791d02d0eee9055c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_03.npz": "4eea7b357b30637aa21a62068bbafb1a01f8953a60b7dfdd2ce024ba283d054f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_04.npz": "bd1745596ea7df845615f4ffe490505c9b146c773f88d334e1ca2e56fb5692b9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_04.npz": "b25f0e53ee153ed3d84443c6505a52ee30a38da5f6cfe26f28b80a776652e82e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_05.npz": "d966f329277da4a0f10e033b918c9cd544eb0f1326f6065c000a7cd006230e97",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_05.npz": "c3d4805506bf44f8256598be353070f93dcf6914002eef01417466733f6c2e6f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_06.npz": "da48358fdc74f665bf7f4a7d6213926953f0588a014c451f97fc85df01dd9c62",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_06.npz": "f2c554ae25d378a36b10e954d22f6e613b8bef071683d8dcdebbc4dfb22a6d64",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_07.npz": "ddddf0e376b496d578ccf74db1d8a66ee81ad39ad4fd416af23615a0656a8f67",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_07.npz": "6dc85d9ac70ec74a0e18cc7bb6550cabc620cb762a0783861e9235ec2a86c32c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_08.npz": "181f2f2c1690c2e23fc699b9152d7a1c77047123b9583c31a3cecbece05ae027",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_08.npz": "f874a2bf86dd0232f74bec76e11f5e7a374b62042a9da316cc8f06d58b39a470",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_09.npz": "9d128bbf507dc0ca4e0c633e1fbc459b304c98983d95c20530dbd98508bd149c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_09.npz": "fa3df171e342f3d5fa1b8949c5a8d8a6cb1399453e50acf1ee6fff24fff1966c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/FullCV_10.npz": "4de2108d86b98d70807ef0330724bc40ff35d98171a2e43cdded1ed041901728",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/FullCV_10.npz": "5bef8efcadb2d65fa7101514edb9bbaeb11ad8e618f1adad366f6121a1df91b5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test1.npz": "0a419b636e9ab0c311d33438e15a5744ae7435904d4b27e910b1421fe116c763",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test1.npz": "5106e6e2c1afded8c5237aa061960176438cceab278396d07facd5d13370b6bb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test2.npz": "8ce3dbcb2f52110a073af6a160a10fc9bd609c20a341e6e5188efd2888a67081",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test2.npz": "6dc07f6dcdec29232ca12181f445f4a2065a93337d5d94f144df0758e121e901",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test3.npz": "c54d864ae6bce416c6ab41bd3369fa4de4eed1b1c8c8120b39cc6f0735b5ce79",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test3.npz": "4bc222beb54476ec48246481ef85de0a997ddff8df45957cfee7a8938dc99491",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/bh_classic/Test4.npz": "2172123104def1375c47b224fb629c6c72709c6ab1934fdc7e207f282b9f1445",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/bh_classic/Test4.npz": "2790393008aa8b9dd529d7be7c8a686052b2dc28e9f133772307438e491a0a58",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/ncs_bh.csv.gz": "81f69510f9e75c00a15e88dc443bf52fec9b1ceeedc6ca73be6dab9eddd012e8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/data/BH_HTE_Curated_Dataset_v20260219.csv": "247473787c33fb22ee48a4177593188f2a2c6ef140756566fe4610fee89ba333",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_ncs_bh.npz": "a74a59ac5a6456a15a61cf92d5a16dffea81ccd2f996ca6b39cbd4f3891a9839",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh.npz": "8749aecd5303c3cd50f8932052c1b496cccab7410cf1a9bb1685e557415e9b8d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f0.npz": "d68e5a44f7845de718cf48608658f21970d0885adc4224b67d975265e2078fdb",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f0.npz": "68124d89902809b76c434ab7fb2473e5d1811137e198f46eed8aab54e6ac2652",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f1.npz": "70bbe90e22101b9075023ccf2bffd0914ab5e3071ef82b4d8c47adb2595e5f89",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f1.npz": "8b4de1de488ea78a2fadcf0a74123fa364c9aca451960206b2b841f083625f3d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f2.npz": "10284b3ca8a8ecbe8ea1b35a42ab6cdfa0717b510a6d7dceaba554ca6ce46b36",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f2.npz": "5511270f36a00b9f7688acdff036b731d768633932d0535df5195a681e24bdb7",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i0_f3.npz": "7a1b8597408d6bf228ac07781950d21e30a0184d199f2152c9806b437d76ac91",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i0_f3.npz": "6dd38c74402f0e3c1d07a13195c6b5f95ce5c437d4e9db0aba05ef2f342a5c13",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f0.npz": "5dee93e32cabe6ffe60cbefd15116296ccc977ad5ea490fb6a418907857f7aac",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f0.npz": "0523daef8dfbd0b2ae6b2f3f1fab6fb9b7b2b19f4b928c473f291d77f2f12a4c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f1.npz": "a00643aca62bda5a63115458302eaee0961bf7b28972779aa6d3d69a6b512322",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f1.npz": "914a9fa648b1d9ab910f2e1768b2adb79a5f9fcc8633798da04febf1b7e590f5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f2.npz": "c68d295d822ad532927c3ff076160b1a17003118706c0c9ef0b8510897c777fd",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f2.npz": "347e305b800af099c61ce95899d0875332c23508ab47c4123147f75c31d5f484",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i1_f3.npz": "2e00ff9ceaec57cbb948526909dc36bcbca22cb8b853755a7ef9e74086da46ce",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i1_f3.npz": "8ed2f492e1951d0f74e93fbde3cc95e9c6c4bfeac240cb7957121bf68e280012",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f0.npz": "3c538b1c79ed41e1c1fe69933d851ff73d66c0ac9067e7f64de1fbf218914b0d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f0.npz": "30f642611a8360043da36ce74a5e0cfeb8ab4671378df7d1989935c04011044a",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f1.npz": "0ed41a56bdae0ca403d0b482ff1f3243d63bc6513fac06dcce4b3ccd5dfb36da",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f1.npz": "33f7c643aa012cdfa7a78234f779c858e0b84704c274045488034e3188cd88ce",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f2.npz": "129f3ca80c07b934efa4aca5addb1f673cc406cea4cd3d53c86ddbafbd684bf3",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f2.npz": "6e118ffecbc957e2dac6a0aa2b5bf2dc19b3127b111fcb09d8569c4687f9b39f",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i2_f3.npz": "3998fdf5aef5c6324fb0a76164cddfc94fc744a95328adaf3fba7a9aa45a0e24",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i2_f3.npz": "7c37a5116853b31e44616c9990a294c1b4615e5b0bbe1e00278a5c62f4a6e591",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f0.npz": "0481daeb536b2d08d4b163bf10a0e76f0a03a34ccd477be22cd570c43fcd89b5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f0.npz": "1d9e1277942294c08e4d6ad71e383da025df6f2cd6bf1aaa3af63a8e04996125",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f1.npz": "2218d0000a8e356021a0cb00cb1533981c8d847466726698f6d89fd598a5777c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f1.npz": "bad180e56a8b61176b8b7f4533ea33c416c97b802d2a7ebd1480aedb217cc998",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f2.npz": "76ec237dbd1efff649c958978fc91d45b8de4038da69cbc02f890c735aba1a6a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f2.npz": "ae9c2c6650f60698369f6f53dbdc0936fa22ffe1aa57d12921b8477233600a3b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i3_f3.npz": "bb1a2fa41049039ef869409ec900ff34ff3d7387a3a8e7340a0b2b705d255785",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i3_f3.npz": "2e04ef514990edc086f6aadf7d8b5a4513c25412cd36c2b2b365068fa28aa059",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f0.npz": "e79c0618a6c1da00ef6aa187c86f2d3b028cd408c0e30117f78fdef40893abae",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f0.npz": "3eb4d6afb9ec0775ec9049f60bc7627cc45d1aa51ef892218a061401fa11ecec",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f1.npz": "a9da8915212c41c74407eda05b057f1b8203f1c245607794c457b14c2502cc9d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f1.npz": "3b142214a1183169f832a12292a51335d874ffd55d6a2b7c2f03ce3671466952",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f2.npz": "14598fe89930fe3832452c90216450e788be012930cb3639da82066c4a4dd425",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f2.npz": "9509d8c2629898ecdaae08f5daf9bbb3628f3bc3dd0ccbe7e56e36990a578905",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i4_f3.npz": "659022ede428ae02ef19b9604db033c7ae3d284b246b07297f3c986d5e33cec7",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i4_f3.npz": "d922db99940a16bc9012ee1c6b37da9f53a46b34c462eb9792e7af57311e629d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f0.npz": "e47f7cbdeb4d984a68a80cc14c8b1110d0e28920e4774e8eb341bcc317b7c344",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f0.npz": "08420242bb373b17f839cfccae3da32a945693e86123f64ee53cc9037a68883b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f1.npz": "29778326be25b1b84398bef48ad99a6dc7272a96e05ba6cbfba64bc1710d3847",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f1.npz": "6aeaf876cb5dcf8d7f2d23f85bed1b0fd7fe8876ddd8b41025d89489a053970d",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f2.npz": "7f48b79cd0c5bc803dd54992a98fadda0e09e3b53d96a3657496c95d86127c9c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f2.npz": "4f4e99696a5f7d730d8e4ae99a5fa23a0c46f6e06cd270298372ea2011799fe0",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i5_f3.npz": "470867af9f6c1c74252f5303c2159a5c108237d82af6e358196639dbd419a6d7",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i5_f3.npz": "9bf364705e185048b20d91ada602ff76c3a7599c23210bef536a3fae8fbb7ef2",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f0.npz": "df1a693baa6b3e6a029f538d580bf1d398135f8e365149e0df8c588a8dbedea7",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f0.npz": "121f2d9851a36982cd8e71a45e2e4785aa25a2e64c5386b92f74a9dec6268c54",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f1.npz": "3eedd412558526f512c421228be3ca0decf6ced09de450b2ed6da36dcc2c82c8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f1.npz": "a70d588ff9d1986ec5b2022a90ae21f33849447e25bab0f2dabc543ebc99f372",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f2.npz": "6e62d415d2c756559163082f4b7627427db7b3247065d77cb72e35f20f05b3a0",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f2.npz": "5ffe5f649187e7f4de3f588bf31bf694fced65ea511db20239f726fe34d4bfa8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i6_f3.npz": "6299ca0895ea81a395ef887b41ff7c8b407639d3b2c395026d78f651dc82b63b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i6_f3.npz": "4074899f472639b24836ac2399331153cbdf15071d10dee79a816ef1f38a87be",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f0.npz": "2baad9b67dd676c6bc1a76f1ee0a5dadf60e65abee0781bb354390c1858c72e5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f0.npz": "866d7b847ee2a349fbfc9211f7e846675797d1bf0f82fdcf68dc8aa4c806b37e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f1.npz": "17379a687623ac9a7db45d4cadb424d3636bf6778ff259dcbc6cae3b43d0898d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f1.npz": "277ce94214d318ce0808f3db4e70edb39454a430337b848c700d4c50cbcc8235",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f2.npz": "85b0ff497cd73dec0e72218441ed6452c5e9eeda5f06721d73e2a8edfea2cef4",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f2.npz": "6fc86748ddb826ca5d02ef4a947396e82aa835ed6cb8eb01e0e149984b80542e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i7_f3.npz": "84242f9e20336215bb54329d074773b81885b7e951fda2607e85b4c15f703ec5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i7_f3.npz": "68a8d6b19da5701f13ba1552d2ca71863ee08010d0299d2a13cb8134111da0b5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f0.npz": "b7807461fd02918e9450d58b0586b76e770246d1f4f770a75ca89acbfa46c43f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f0.npz": "02795efdcc7119ea5cab38945f042728b083345cc70dd3e8a917179ff393357e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f1.npz": "1f1db49b1cdd3ec7235132342053560b374fa837b3bb41f2f25d62bbbb5f1c52",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f1.npz": "7d1ea85be5a97f7b3311634db7ab6377cea2a1dbddb651990be3bf8a74282d89",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f2.npz": "17e910a91bbf9ccd5e3fad4a7cdd7aa57b8163c8cd3657caf2f981c6a4dde1c1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f2.npz": "9708e647471d6016ade8079a9c94761ec3d287b65822561a1901f7139a878b56",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i8_f3.npz": "5ca22d8206374b297c8a365aaac9ecf90f17162948668b84794efa1e2556ea83",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i8_f3.npz": "cec38292c5a96012d4fc76d118feda874ff93a4aeedf018e1ae6a3f0a620dc3c",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f0.npz": "a4388ac6c04235da1aa5bbcb72d005f6b71093c49bce7a4189257cae97bba571",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f0.npz": "946e72e1a98a583266e4145b94263108458a1c91fd173cae87cacf5a7b614c63",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f1.npz": "9d2794ca3f29a28284143a9fd008efbbf5597d31de9c359abffaa29fc23d718c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f1.npz": "9c1934e0a73ad1967c5d98799ccbe35588c1bc2d030adf170c9da236e4778650",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f2.npz": "e9b7c8a88da3080e8e8c2a4ad2ba39d6395835f0db7361c63289e2150868e98e",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f2.npz": "2834537b162da00c021adf81453e3458c3d94e5fb3f701d07441d4e451962ba5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/ncs_bh/i9_f3.npz": "d03153e4b1ca584a64c11e4b1fa14092d5d60468d10b892c20143ab81da186ce",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/ncs_bh/i9_f3.npz": "b2cd89afdb696d19a303ae0d196c97ea5c9090283b61a99517720a77fe9008ef",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/tables/suzuki_hte.csv.gz": "58dbb4d14c7551d5aeeeaaa88ec19bf4d2e7a727f0bbd547876686313d4e9262",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/external/gnan/data/split/dataset_2_0.npz": "4a709212f9ae35f8fdd91017ab7838f18f329f21376fd27437efaf883e9a961e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_suzuki_hte.npz": "5618228b95e4ae505509c344cb6cbf53a51b41fd6dffc11b10673271b367ac8e",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte.npz": "fc99b4cff19536589c39248240544beed18b7b928705b2174c2181b4a2f5bf98",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_0.npz": "2fe6d9301759f7507f33ec1110851507ecf92c05e47062e2e3444f4ee326a0ec",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_0.npz": "3fc7ed79748efa5178a02a39fa67239fad26024d90b5671a1c9eaa18b045193b",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_1.npz": "d5647be5b986bbc5797ef3544a2044c90ada44542dbc416b6a7149a0d239d989",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_1.npz": "2cded6612114f17250de9e9ee4ff710ad22f2e9371f9afb639158140986f33d5",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_2.npz": "07a4060a8bd08dc3f43f6e58853d0bbe750e9546a720de862cff58171339b57c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_2.npz": "cc73f473c75771389838792bb868bf3b53429ab720388d6d620f2807a23a503e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_3.npz": "17c682a2bca386be6ef9b0769083c615b64c384252bffcf80031dcfa16c5388d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_3.npz": "04b12f365a853a9764d017de287d92ca8529d004da4acd155c9527b794ff1570",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_4.npz": "d48bd43c1fb8270a0893d152e185108fcfb0866fd083e624c236dbce42ffca2f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_4.npz": "4ae2a64501470a65167f46796f3b2456b74cfd32af55f9bae7b1ec3ac6e011bb",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_5.npz": "ba18bd4396a7d906c1d9730475c03922d4810aab423a6512e648bf495b04c072",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_5.npz": "1d47a1c27eb97f21059cd4da4a03645070999f741f14efea73affe6ac8e62d58",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_6.npz": "151d9c171cdee7f6373ab10655f558d458a56d8776667c59365a2452087dda11",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_6.npz": "6073cdd5683f9d69fa31514ebf2dcaec293d054aede515c1299b98939460fc94",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_7.npz": "f1487950aa348bb3681cd1388caba57b11cb2d52c40072662d6d249f6d9f7c5d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_7.npz": "033161b28642642fd814c030ffa26bc999607670f966b6f2786eecfb4ea24275",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_8.npz": "0a3029a3e11d4a493684dc8542a6c62aaed95a29bb992df2a1adfc48ef54f6a8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_8.npz": "2b979a48926c8565c213f219a4693090a2fd889c9a79399d4d5056fda0467410",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/splits/suzuki_hte/random_9.npz": "f332bfc72561ad8ba15a15b47a317c0baa8d0a376ab58bd7746a34648c1adc22",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/inputs/suzuki_hte/random_9.npz": "d79fc5b1528eacfaaa2fe6bfdd93b708cea601bc220952bc30080e8a40c7c196",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/plan.json": "a9750c23344545236c1c781520a907d244f0c6ca9a7288e42e986c5d4679f477",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/baseline_worker_v3.py": "cfbb3eba3b0ec6ff91b372123a180988446f823f6cc8084f44f21e485e308b9f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/run_baselines_v3.py": "a3226af127d8ba0b073f17fc0dfc94dad09cfa13f9c1ff6eb55bb7fddcd8c32b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/verify_baselines_v3.py": "e24e6ae9898f2b94c201873aca52965bc5686e97818eb57324c8b12356eaf95f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/run_gnan_only.py": "15c9aaa95f25f9c2181a71998b0d250e7468cbbf2536b76d271e75b96aed00c1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/prepare_baselines_v3.py": "b44e236f68265ecc37c11444dcedd2c798f3f17494419810db596697588b9eeb",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/cache/legacy_transformers_v211_optimization.py": "972c1afa77149cd2f404fe5fc4bf551e6a40cef841790b0b1f4ae59407408b80",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/publication_metadata/learning_sanity_v1/v3_learning_pilot.json": "31980fc965386433721d7dbd50f11824c603f525867775504e4fefceb8ef3cc3",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/publication_metadata/learning_sanity_v1/historical_training_mode.json": "51e0e708b4d4eb7ea6fa0fd349b7c58d705d7e9cb068cd8b255432c9740fd1aa"
+  },
+  "task": "continuous regression; NCS is exploratory mixed-assay extension, not paper success classification",
+  "evaluation": "controller alone reads test outcomes after saved predictions; exact parent common-valid rows",
+  "environment": {
+    "python": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/env/bin/python",
+    "packages": {
+      "torch": "2.4.0.post301",
+      "transformers": "4.46.3",
+      "rxnfp": "0.1.0",
+      "dgl": "1.1.3+cu121",
+      "numpy": "1.23.5",
+      "pandas": "2.0.3",
+      "rdkit": "2024.3.5"
+    }
+  },
+  "limits": [
+    "New matched adapters do not reproduce legacy SimpleTransformers numerics bit for bit",
+    "2026 MFP paper gives inconsistent BH test count830 versus actual1188 and misidentifies GNANcitation; use pinned source population",
+    "15-training/10-test DA variant budget is explicit; 2026 manuscript leaves K and TTA count unspecified",
+    "No role normalization that changes ~ bonds or dative chemistry is permitted in matched inputs",
+    "GNAN author BH molecules omit ligand stereo and use a different Pd drawing; new matched inputs keep parent chemistry",
+    "Classical source-protocol comparisons use full70%training fixedepochs and are separate from matched validation-heldout fits",
+    "Modern HuggingFace forward remains numerical adaptation; the historical high-dropout effective mode schedule is explicitly reproduced and validated"
+  ],
+  "gnan_source_plan": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/runs/matched_full_v2/plan.json",
+  "gnan_source_plan_sha256": "a9750c23344545236c1c781520a907d244f0c6ca9a7288e42e986c5d4679f477",
+  "new_fits": 128,
+  "gnan_original_plan_cells": 64,
+  "correction": "Replay the source-effective SimpleTransformers0.34.4 training-mode transitions and legacy Transformers2.11 AdamW; old v2 BERT fits remain provisional and excluded",
+  "correction_basis": "Audited source and a fresh fixed-recipe train/validation-only learning gate; no test-score recipe selection",
+  "learning_gate_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/publication_metadata/learning_sanity_v1/v3_learning_pilot.json",
+  "learning_gate_sha256": "31980fc965386433721d7dbd50f11824c603f525867775504e4fefceb8ef3cc3"
+}

@@ -1,0 +1,22 @@
+{
+  "generated_utc": "2026-10-12T10:35:28.035238+00:00",
+  "completion": {
+    "finished_utc": "2026-10-12T10:34:58.747338+00:00",
+    "new_models": 320,
+    "reused_controls": 256,
+    "comparison_cells": 576,
+    "plan_sha256": "d5557f232ddaea106ea6b1bc2a3dc68f39b7657dbe7b761c0aa38b8e70d4e8de",
+    "all_model_artifacts_verified": true
+  },
+  "report_source_sha256": "4ab84a6ca84a6880514d9896900715931840b1dbe71fd635bb94a7d39771a422",
+  "plan_sha256": "d5557f232ddaea106ea6b1bc2a3dc68f39b7657dbe7b761c0aa38b8e70d4e8de",
+  "files": {
+    "comparison_cells.csv": "f730ff69df694668d0cb91ed20023b17631a09650e647dc05b4bd6e964d0ab9a",
+    "comparison_summary.csv": "353f23f71160c2cdc7f09dea562490ae8a3b7256ebe7523da92bfed43884816e",
+    "table.md": "49e81d5e8e9819a0a68bd97abb80d17e0c8916985743b01b6b35bceb4fc66076",
+    "table.html": "b94cfe969d884ae9c52d25ccf54c1e58bf3fe2908d10bdff36292fae52cb228b",
+    "paired_contrasts.csv": "405472b893e1a263e731af29c811f855edd32aa480180fc85f0556cff1058885"
+  },
+  "statistics": "Exploratory means, stds and paired descriptive differences; no independent-fold significance claim",
+  "model_weights_exported": false
+}

@@ -1,0 +1,14 @@
+{
+  "verified_utc": "2026-10-11T20:45:24.455039+00:00",
+  "original_splits_verified": 64,
+  "unique_fits": 384,
+  "jobs_per_cpu_worker": [
+    96,
+    96,
+    96,
+    96
+  ],
+  "gpu_used": false,
+  "weight_retention": "all local",
+  "feature_smoke": "native union dimensions and unchanged API passed"
+}

@@ -1,0 +1,22 @@
+{
+  "completed_grid_configurations": 6,
+  "total_grid_configurations": 8,
+  "completed_grid_fits": 384,
+  "missing_configurations": [
+    {
+      "radius": 3,
+      "bits": 1024,
+      "mode": "delta"
+    },
+    {
+      "radius": 3,
+      "bits": 1024,
+      "mode": "union"
+    }
+  ],
+  "new_fits_needed": 128,
+  "contextual_drfp_controls": 64,
+  "grid_expected": 512,
+  "comparison_expected": 576,
+  "stale_historical_inventory_unchanged": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/publication_metadata/yield_full_comparison_v1/completion_inventory.json"
+}

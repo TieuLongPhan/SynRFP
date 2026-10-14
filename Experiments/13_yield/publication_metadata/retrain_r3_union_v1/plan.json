@@ -1,0 +1,1972 @@
+{
+  "created_utc": "2026-10-11T20:43:58.047160+00:00",
+  "base_plan_sha256": "c89ed907844623e2b5a51a59b8d54ca6296c19ad1a660beef62badc70c7fc116",
+  "fingerprints": [
+    "synrfp_default",
+    "synrfp_r3b2048",
+    "synrfp_union_r2b1024",
+    "synrfp_union_r3b2048",
+    "synrfp_delta_union_r3b4096",
+    "drfp"
+  ],
+  "params": {
+    "hidden": 512,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 200,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "seed": 42
+  },
+  "tasks": [
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_01",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_02",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_03",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_04",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_05",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_06",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_07",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_08",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_09",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "FullCV_10",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "bh_classic",
+      "split": "Test4",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_4",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_5",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_6",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_7",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_8",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "suzuki_hte",
+      "split": "random_9",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i0_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i1_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i2_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i3_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i4_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i5_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i6_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i7_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i8_f3",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f0",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f1",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f2",
+      "fingerprint": "drfp"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_default"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_union_r2b1024"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_union_r3b2048"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "synrfp_delta_union_r3b4096"
+    },
+    {
+      "dataset": "ncs_bh",
+      "split": "i9_f3",
+      "fingerprint": "drfp"
+    }
+  ],
+  "expected_models": 384,
+  "split_groups": {
+    "bh_random": 10,
+    "bh_published_ood": 4,
+    "suzuki_random": 10,
+    "ncs_cluster_ood": 40
+  },
+  "population": "Exact same seven-fingerprint shared-valid mask and original train/validation/test identities as continuous_allfps_v1",
+  "execution": "four CPU workers, two threads each; both GPUs remain on barrier study",
+  "weights": "all local, ignored; never overwrite or delete prior fits",
+  "r3_selection": "Frozen from 3 inner folds within BH FullCV01 outer training; only validation RMSE used",
+  "union_variants": "All predeclared; exploratory ablation, no test-selected winner for unbiased claims",
+  "limitations": [
+    "Previously viewed outer tests make this exploratory",
+    "Extra SynRFP development versus fixed DRFP control; no equal-search-budget superiority claim",
+    "Input dimensions change model parameter count; original GPU and new CPU scores retained separately",
+    "Repeated split scores are correlated; std is descriptive",
+    "NCS shared-valid population excludes 4888 rows, including all4312 DreherDoyle2018 rows"
+  ],
+  "pinned_files": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/run_yield_retrain.py": "083a24bba7002117dc1ac499ca50cbc1eb6541e668b426d4520dd6552972d3b6",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/yield_retrain_features.py": "20c1a5fae7db638864c08d8f1cdcf5c5a96208209312b0670d0c34df43280091",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/yield_retrain_cpu.py": "d8acdf8979710b3df5b33aafaa9b8ff5c4a6ef727f40af42544d2ec7a0e3ddbf",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/publication_metadata/config_screen_v1/selection.json": "3ad6e21d2da5cd79fb2bac6fd00cfedf6fc774463f3e710c4b55bac8aca960d8",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_bh_classic.npz": "4dd1d805833f2d4aac8c839c3354d8ede47899d10b0abc5001d440328fdfbbb1",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_suzuki_hte.npz": "5618228b95e4ae505509c344cb6cbf53a51b41fd6dffc11b10673271b367ac8e",
+    "/var/tmp/synrfp-labhhc4-storage/bh_hte_2026/runs/continuous_allfps_v1/coverage_ncs_bh.npz": "a74a59ac5a6456a15a61cf92d5a16dffea81ccd2f996ca6b39cbd4f3891a9839"
+  }
+}

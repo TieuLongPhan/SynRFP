@@ -1,0 +1,14 @@
+{
+  "schema": "synrfp-yield-factorial-closure-v1",
+  "updated_utc": "2026-10-12T15:47:26.441222+00:00",
+  "new_completed": 128,
+  "new_expected": 128,
+  "reused_grid_fits": 384,
+  "reused_drfp_controls": 64,
+  "grid_cells": 512,
+  "grid_expected": 512,
+  "comparison_cells": 576,
+  "comparison_expected": 576,
+  "integrity_audit_complete": true,
+  "plan_sha256": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "yield_roles_preflight_v1",
+  "checked_utc": "2026-10-12T09:43:33.922847+00:00",
+  "encoder_sha256": "dc9d514feaddc0e9a51f93d04f5e93dd2710f7c4299dd4ec441a963247cb6b23",
+  "controller_sha256": "836bc7e2764ac2ca8d6ecb4401d77600ef12d03f464ca72eab9e5487805e3f3f",
+  "plan_sha256": "d5557f232ddaea106ea6b1bc2a3dc68f39b7657dbe7b761c0aa38b8e70d4e8de",
+  "focused_tests": {
+    "passed": 16,
+    "subtests_passed": 47
+  },
+  "archived_baseline_spread_checks": 189,
+  "controller_review": {
+    "new_unique_tasks": 320,
+    "tasks_per_worker": 80,
+    "matched_controls_rows_params_worker_verified": 256,
+    "comparison_cells": 576,
+    "loader_schema_compatible": true
+  },
+  "publication_gate": "Every row must match original delta1024 plus radius2/3 delta2048 before publishing any feature cache",
+  "device": "cpu",
+  "models_kept_locally": true
+}

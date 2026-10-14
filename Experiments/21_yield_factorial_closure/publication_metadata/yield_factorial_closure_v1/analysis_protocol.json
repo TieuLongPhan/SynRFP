@@ -1,0 +1,26 @@
+{
+  "source_sha256": "b54206c1127e6436538c80a0448fc0d137033922b06ee83a7bdc2676729f6090",
+  "plan_sha256": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+  "axes": {
+    "radius": [
+      2,
+      3
+    ],
+    "bits": [
+      1024,
+      2048
+    ],
+    "mode": [
+      "delta",
+      "union"
+    ]
+  },
+  "control_excluded": "DRFP",
+  "paired_unit": "same original dataset/split",
+  "contrast": "Marginal high-low main effects and successive differences for interactions; average other axes equally",
+  "significance_claim": false,
+  "confidence_intervals": null,
+  "selection": null,
+  "dispersion": "Split-score SD is descriptive; original repetitions/folds correlated",
+  "source_variation": "All reuse/new fits use same pinned CPU worker and numerical recipe; widths change parameter count"
+}

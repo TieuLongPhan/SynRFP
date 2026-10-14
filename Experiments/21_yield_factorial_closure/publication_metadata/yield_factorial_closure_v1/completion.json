@@ -1,0 +1,24 @@
+{
+  "schema": "synrfp-yield-factorial-closure-v1",
+  "finished_utc": "2026-10-12T15:48:52.318466+00:00",
+  "plan_sha256": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+  "source_sha256": "b54206c1127e6436538c80a0448fc0d137033922b06ee83a7bdc2676729f6090",
+  "new_models": 128,
+  "reused_grid_models": 384,
+  "contextual_drfp": 64,
+  "grid_cells": 512,
+  "comparison_cells": 576,
+  "all_artifacts_recipe_rows_and_metrics_verified": true,
+  "new_weights_prediction_replay_exact": true,
+  "weights_exported": false,
+  "files": {
+    "plan.json": "6033f1d82270f79ae731255dd460b564c6f67e72d16c47acb83745dabe6baee9",
+    "inventory.json": "d46c27461a7c73f5657b4a3848b2f3e42a7cae998e8d4afdf17a5badf3cf11da",
+    "feature_equivalence_audit.json": "9bbc59e971af68702a2dba7dc7a41b17176233d62e1dc5a5b6d2a731ac52bb5d",
+    "cells.csv": "234b442f2c390035faa40776bf2314e1807b8d6070c09c8313d63d4e12c6d43c",
+    "summary.csv": "784244e19317ea6f54bd6a527805fdf86e867c2827601251a1b56230d48716e5",
+    "paired_split_effects.csv": "becc226403db17455264c9dfabef38e78b47cb35b6cb0ab6a16cc24ef90c8f72",
+    "factor_effects.csv": "40d706b4ab0b4422931e3cdb8d055610a6f95dbe322688ed1c2a4b2590c3ec87",
+    "analysis_protocol.json": "a94523d22c0519b9ec77589cca731ed581af689087abfc979f690531b71a9329"
+  }
+}
