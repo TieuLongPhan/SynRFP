@@ -1,0 +1,26 @@
+{
+  "configuration_selected": "synrfp-wl-r2-b2048-parity-delta",
+  "final_receipt_sha256": "fb57ced534c41afd73479ce5c0ab8fe4b210a8402706d49e78108e8089401e79",
+  "independent_confirmation": false,
+  "logical_cells": 8238,
+  "omitted": "Weights, raw datasets, caches, unrelated work and specialist-reference experiment35.",
+  "schema": "synrfp-published-main-tables-v1",
+  "scientific_proofs_sha256": {
+    "clustering/COMPLETE.json": "8692307b1eaa929b6b1123afadcefb8a7d01d5ccf8261d3227456082083bca54",
+    "execution.json": "aa1dc7c11c4667c703d1541a53ea27db23a4d5ba7742bc8a6493baf19d4874fb",
+    "recovery_v3/execution.json": "327d1b8dc654666c2ad03133d7dd4b20f8326292aea91b6312c91271c99f5c4e",
+    "regression/COMPLETE.json": "ca26e628f8f3b9570990477db94cd41a4aa70886f8988de31bc9258dd71565c6"
+  },
+  "scope": "Seven-task fingerprint results and scientific metadata. This is not a standalone archive of every historical training input.",
+  "selection_interpretation": "exploratory_after_prior_test_results_viewed",
+  "specialist_references_required": false,
+  "task_counts": {
+    "barrier": 1944,
+    "classification": 4200,
+    "clustering": 1440,
+    "condition": 180,
+    "feasibility": 30,
+    "reagent": 60,
+    "yield": 384
+  }
+}

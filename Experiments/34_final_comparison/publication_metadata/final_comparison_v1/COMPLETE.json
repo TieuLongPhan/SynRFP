@@ -1,0 +1,86 @@
+{
+  "components": {
+    "clustering": {
+      "cells_sha256": "a6a81f511cce471bc5c4f658ce101bc4f8fb911277d07d025807cdf415b5ac7d",
+      "phase": "complete",
+      "plan_sha256": "c48e98d07464ae46c8799098d3b43fb218772860ebfbd67a9bd1d401d4a133a3",
+      "receipt_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/34_final_comparison/publication_metadata/final_comparison_v1/clustering/final_component.json",
+      "receipt_sha256": "8692307b1eaa929b6b1123afadcefb8a7d01d5ccf8261d3227456082083bca54",
+      "selected_cells": 240
+    },
+    "regression": {
+      "cells_sha256": "dfab91c7b652cff24f509cce0d28bb945f36b9b2ee126b1c4af60ceb41fa67f1",
+      "phase": "complete",
+      "plan_sha256": "1ba75e729bb6c567bd5932ad3bf9a7c21da183f051acc91c968be641f796c687",
+      "receipt_path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/34_final_comparison/publication_metadata/final_comparison_v1/regression/COMPLETE.json",
+      "receipt_sha256": "ca26e628f8f3b9570990477db94cd41a4aa70886f8988de31bc9258dd71565c6",
+      "selected_cells": 174
+    }
+  },
+  "configuration_selected": "synrfp-wl-r2-b2048-parity-delta",
+  "independent_confirmation": false,
+  "logical_cells": 8238,
+  "outputs_sha256": {
+    "barrier_cells.csv": "2a596ac863661261b27c89e9d046f068cb395c0d748818840093905c3474e1a8",
+    "barrier_summary.csv": "a52cc037c98ce17823952c057f05f4b7b94498c388d62ef437e80059ef956360",
+    "classification_cells.csv": "24833b5c6b9a26e560f2ecb52ddc2d7ce40330baf77bf0f1ca053ad7e92dbd35",
+    "classification_summary.csv": "9099a7bcf4c1e29fac9041d7e8d8e4688c4838e9d5a5714a254cb66ac5ce584f",
+    "clustering_cells.csv": "24e44f46dc2dc5811df62a5dd7fc310dfec5562b86b760fd24f61f7a5c348b4c",
+    "clustering_summary.csv": "ed420b94ecb071f20f30e3778c7e71b1e9afce2961b95b5e1b7715ab3584dfc4",
+    "condition_cells.csv": "a797296d6cdbf6f49300e6a3011c129f0cf1b481648970b4484ccc7e14f539ae",
+    "condition_summary.csv": "3f79d0afda032a1486e9919d4adebca13b05662bbae4a0d218d4c9516cc3f2ef",
+    "feasibility_cells.csv": "111a13ebf94a5a771b1d83b5e9cbebd548f3f6d52f401ce65ec233baffb118eb",
+    "feasibility_summary.csv": "4de98808aa90673c893719a355629eeadbc5fb1b6c20751802f4e1eef2c0838b",
+    "reagent_cells.csv": "3d5c8bac3e393f3c89f8ff050bc060c798ab6185b4b33dc2d78bfc439f3532b0",
+    "reagent_summary.csv": "57ceff8bd09e6be7059fe05667dc321ba452b1701836d62940c18e560a6f488c",
+    "reference_inventory.json": "36bfefe70e8550a3a1a477f1d7995322c4a911995b7978375dd88b6fe5d956ce",
+    "report.md": "4aed13ea008a27f06c8dabc3658b51083463515f19ae6d96821b5a37b3814a35",
+    "yield_cells.csv": "6566c664492882ec808f91879cc8041b6ec72ccd25cbac6268279aeade0e51dd",
+    "yield_summary.csv": "9576a8b9580866305a95afe26db2f5d6c548221e849ad6161a8f135aa212d891"
+  },
+  "phase": "complete",
+  "plan_sha256": "17384c46bda99abfabbd461e3e6f3ca1322a06e4550bbdd1c089b8b299ad3e64",
+  "schema": "synrfp-final-comparison-report-v1",
+  "selected_preset_sha256": "e62fdb9b4797707f4aa45f413306678e92c8a0525ce04cbd13a3679c2111e0f6",
+  "selection_interpretation": "exploratory_after_prior_test_results_viewed",
+  "tasks": {
+    "barrier": {
+      "complete": true,
+      "completed_cells": 1944,
+      "expected_cells": 1944
+    },
+    "classification": {
+      "complete": true,
+      "completed_cells": 4200,
+      "expected_cells": 4200
+    },
+    "clustering": {
+      "complete": true,
+      "completed_cells": 1440,
+      "expected_cells": 1440
+    },
+    "condition": {
+      "complete": true,
+      "completed_cells": 180,
+      "expected_cells": 180
+    },
+    "feasibility": {
+      "complete": true,
+      "completed_cells": 30,
+      "expected_cells": 30
+    },
+    "reagent": {
+      "complete": true,
+      "completed_cells": 60,
+      "expected_cells": 60
+    },
+    "yield": {
+      "complete": true,
+      "completed_cells": 384,
+      "expected_cells": 384
+    }
+  },
+  "total_completed": 8238,
+  "total_expected": 8238,
+  "updated_utc": "2026-10-19T12:29:32.143934+00:00"
+}

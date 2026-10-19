@@ -1,0 +1,44 @@
+{
+  "schema": "synrfp-shared-preset-decision-v1",
+  "phase": "complete",
+  "authority": {
+    "source": "explicit_user_delegation_in_session",
+    "date": "2026-10-15",
+    "instruction": "I maybe cannot check factorial so maybe you can make decision fo rme",
+    "scope": "Choose one shared experimental paper preset across all seven tasks; retain two sensitivity candidates."
+  },
+  "configuration_selected": "synrfp-wl-r2-b2048-parity-delta",
+  "sensitivity_configurations": [
+    "synrfp-morgan-r2-b2048-parity-delta_union",
+    "synrfp-morgan-r2-b2048-parity-delta"
+  ],
+  "source32_configuration_selected": null,
+  "runtime_bindings": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/33_shared_preset_decision/decision.py": "56a7ba73d75bce9384be014c39b903ed3b2693a3427538b2c5f7f0ff214786ad",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/33_shared_preset_decision/PROTOCOL.md": "16344871445174d3db4ca9328fb0468083136bff1d2f505589f3d6c52dc68b36",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/33_shared_preset_decision/test_decision.py": "b6384cde39b3a818a71faf1fe0de530b19957bd463f0a055c2705157413d5281",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/shortlist.py": "abf4c6d70dbf4fffefe243a4a9a98d02816d8927ac248f45546d59e3abb392f8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/PROTOCOL.md": "7713fded480623401454d21139f5ae25deea608dd430d7e4252867ec3d590e86",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/test_shortlist.py": "e03a53c340179281608084339d2889a893cc31b32e21fabbb8d6f6a516a421e8"
+  },
+  "input_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/shared_preset_review_v1/COMPLETE.json": "accda8e87aabf56fe99195e6f7a26ca121cf909d07b49e5c556d1e256d584785",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMMON_TASK_ANALYSIS_COMPLETE.json": "7e961f72ed7c0043aac308bfb1f4c69e8a438b6232817c0ed0e27a165fe9c9fc",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/common_candidates.csv": "657a8559b38c206f82ab32f8e09fb4ece9554d130296e59de59d7aee047c78cc",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/task_view_summary.csv": "fe8245028b1a2700c5c11daaa6dd1c4bff9814d69d52b05386b00097ba68baaf",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/endpoint_summary.csv": "88614982199714082956ef7d7dbf25995586489a9779933058aed4b9ce05ca87",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/family_summary.csv": "3463455db73bff736aee350736cd1b58c2725a47224079d91961ed708b62e742"
+  },
+  "outputs_sha256": {
+    "FROZEN_PRESET.json": "e62fdb9b4797707f4aa45f413306678e92c8a0525ce04cbd13a3679c2111e0f6",
+    "decision.json": "fa5eadac1ec279a46ce4f7ca52ae6d607aefc566342c4252056db37f8f185a55",
+    "benchmark_followup.json": "925c942c17af29953bffa4e8fa2ee2901ac4c11ac5d920b8f87064c886a03e25",
+    "selected_endpoint_metrics.csv": "ceb4cdbd6059c866077558f28b3ac6283bc3a72cfc09d05888a0319eda194cdf",
+    "report.md": "5befdb0dd8c6f37642c66afc060ee02b77c3805bdf7864667bc4fd244bca718c"
+  },
+  "output_root": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/33_shared_preset_decision/publication_metadata/shared_preset_decision_v1",
+  "new_fits_launched": 0,
+  "all_benchmarks_complete": false,
+  "interpretation": "exploratory_after_prior_test_results_viewed",
+  "finished_utc": "2026-10-16T02:38:18.074030+00:00"
+}

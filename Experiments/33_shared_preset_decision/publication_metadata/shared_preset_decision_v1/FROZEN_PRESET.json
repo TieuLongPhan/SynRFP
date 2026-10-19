@@ -1,0 +1,229 @@
+{
+  "schema": "synrfp-frozen-shared-experiment-preset-v1",
+  "configuration_selected": "synrfp-wl-r2-b2048-parity-delta",
+  "configuration": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "sensitivity_configurations": [
+    "synrfp-morgan-r2-b2048-parity-delta_union",
+    "synrfp-morgan-r2-b2048-parity-delta"
+  ],
+  "sensitivity_constructions": {
+    "synrfp-morgan-r2-b2048-parity-delta_union": {
+      "tokenizer": "morgan",
+      "radius": 2,
+      "sketch": "parity",
+      "mode": "delta_union",
+      "n_bits": 2048,
+      "kind": "bits",
+      "seed": 1,
+      "bbit": 2,
+      "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+      "block_bits": [
+        1024,
+        1024
+      ],
+      "block_order": [
+        "signed_delta",
+        "union"
+      ]
+    },
+    "synrfp-morgan-r2-b2048-parity-delta": {
+      "tokenizer": "morgan",
+      "radius": 2,
+      "sketch": "parity",
+      "mode": "delta",
+      "n_bits": 2048,
+      "kind": "bits",
+      "seed": 1,
+      "bbit": 2,
+      "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+    }
+  },
+  "selection_rule": {
+    "view": "grouped_main",
+    "order": [
+      "macro_rank",
+      "macro_regret",
+      "worst_task_rank",
+      "config"
+    ],
+    "aggregation": "endpoint/regime -> related source family -> equal seven-task weight"
+  },
+  "rationale": "First global candidate under the already fixed task-balanced ordering; no task-specific substitutions.",
+  "task_diagnostics": [
+    {
+      "task": "barrier",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 20.08333333333333,
+      "regret": 0.2270274154807246,
+      "encoding_coverage": 1.0,
+      "source_families": 6,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "classification",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 11.5,
+      "regret": 0.1177229857520137,
+      "encoding_coverage": 0.9996304806893096,
+      "source_families": 6,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "clustering",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 8.5,
+      "regret": 0.0691333590716701,
+      "encoding_coverage": 0.9996300676397176,
+      "source_families": 6,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "condition",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 5.0,
+      "regret": 0.0796800649706712,
+      "encoding_coverage": 1.0,
+      "source_families": 1,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "feasibility",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 9.0,
+      "regret": 0.1333442399147034,
+      "encoding_coverage": 1.0,
+      "source_families": 1,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "reagent",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 10.0,
+      "regret": 0.0929540073684423,
+      "encoding_coverage": 1.0,
+      "source_families": 1,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "yield",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 31.5,
+      "regret": 0.2433132652700195,
+      "encoding_coverage": 1.0,
+      "source_families": 3,
+      "view": "grouped_main",
+      "shortlist_position": 1
+    },
+    {
+      "task": "barrier",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 20.08333333333333,
+      "regret": 0.2270274154807246,
+      "encoding_coverage": 1.0,
+      "source_families": 6,
+      "view": "native_reference",
+      "shortlist_position": 1
+    },
+    {
+      "task": "classification",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 11.5,
+      "regret": 0.1177229857520137,
+      "encoding_coverage": 0.9996304806893096,
+      "source_families": 6,
+      "view": "native_reference",
+      "shortlist_position": 1
+    },
+    {
+      "task": "clustering",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 8.5,
+      "regret": 0.0691333590716701,
+      "encoding_coverage": 0.9996300676397176,
+      "source_families": 6,
+      "view": "native_reference",
+      "shortlist_position": 1
+    },
+    {
+      "task": "condition",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 5.0,
+      "regret": 0.035771201888501,
+      "encoding_coverage": 1.0,
+      "source_families": 1,
+      "view": "native_reference",
+      "shortlist_position": 1
+    },
+    {
+      "task": "feasibility",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 9.0,
+      "regret": 0.1333442399147034,
+      "encoding_coverage": 1.0,
+      "source_families": 1,
+      "view": "native_reference",
+      "shortlist_position": 1
+    },
+    {
+      "task": "reagent",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 21.0,
+      "regret": 0.2168727458624795,
+      "encoding_coverage": 1.0,
+      "source_families": 1,
+      "view": "native_reference",
+      "shortlist_position": 1
+    },
+    {
+      "task": "yield",
+      "config": "synrfp-wl-r2-b2048-parity-delta",
+      "rank": 31.5,
+      "regret": 0.2433132652700195,
+      "encoding_coverage": 1.0,
+      "source_families": 3,
+      "view": "native_reference",
+      "shortlist_position": 1
+    }
+  ],
+  "weaknesses": "Task ranks, normalized regrets, encoding coverage and separate raw endpoint metrics remain visible; a global compromise need not win each task.",
+  "authority": {
+    "source": "explicit_user_delegation_in_session",
+    "date": "2026-10-15",
+    "instruction": "I maybe cannot check factorial so maybe you can make decision fo rme",
+    "scope": "Choose one shared experimental paper preset across all seven tasks; retain two sensitivity candidates."
+  },
+  "public_api_default_changed": false,
+  "interpretation": "exploratory_after_prior_test_results_viewed",
+  "test_sets_independent": false,
+  "new_seeds_remove_selection_bias": false,
+  "source32_configuration_selected": null,
+  "source_plan_sha256": [
+    "077b5065a96c1073b6f0cba91814f9d842d804fc02097f7166fa210c70f40bf9",
+    "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b"
+  ],
+  "source_counts": {
+    "classification": 5040,
+    "clustering": 4320,
+    "yield": 4608,
+    "barrier_feasibility_reagent_condition": 6480,
+    "total": 20448
+  },
+  "construction_scope": "One unchanged 2048-bit original-grid construction; no new roles variant or stereo extension.",
+  "frozen_utc": "2026-10-16T02:38:15.668072+00:00"
+}

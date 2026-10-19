@@ -1,0 +1,87 @@
+{
+  "schema": "synrfp-selected-preset-followup-inventory-v1",
+  "configuration_selected": "synrfp-wl-r2-b2048-parity-delta",
+  "phase": "inventory_requires_compatibility_audit",
+  "entries": [
+    {
+      "task": "classification",
+      "primary_preset_protocol_cells": 700,
+      "factorial_cells_per_configuration": 70,
+      "protocol": "14 endpoints x25 grouped splits x2 learners (MLP and kNN), original n1 policy; factorial has only five MLP folds.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    },
+    {
+      "task": "clustering",
+      "primary_preset_protocol_cells": 240,
+      "factorial_cells_per_configuration": 60,
+      "protocol": "12 endpoints x10 initializations x2 frozen populations (all rows/shared valid); main known-class-count K differs from factorial row-count K. Adaptive unknown-K studies remain separate.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    },
+    {
+      "task": "yield",
+      "primary_preset_protocol_cells": 64,
+      "factorial_cells_per_configuration": 64,
+      "protocol": "64 original partitions: classic BH 14, Suzuki 10, NCS BH 40; preserve official random/OOD regimes.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    },
+    {
+      "task": "barrier",
+      "primary_preset_protocol_cells": 324,
+      "factorial_cells_per_configuration": 45,
+      "protocol": "Primary14 GDB7/Cyclo 110 per preset plus seven15 activation targets 214; preserve random CV, group CV, grouped holdouts, native splits and learning fractions separately. Exclude duplicate15 Cyclo G_act.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    },
+    {
+      "task": "feasibility",
+      "primary_preset_protocol_cells": 5,
+      "factorial_cells_per_configuration": 5,
+      "protocol": "Five optimizer initializations on the same fixed expert test; not five independent tests.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    },
+    {
+      "task": "reagent",
+      "primary_preset_protocol_cells": 10,
+      "factorial_cells_per_configuration": 10,
+      "protocol": "Five author-split initializations plus one five-fold grouped CV.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    },
+    {
+      "task": "condition",
+      "primary_preset_protocol_cells": 30,
+      "factorial_cells_per_configuration": 30,
+      "protocol": "Five author-split initializations plus five fixed grouped folds xfive optimizer seeds; not five repeated CV partitions.",
+      "reuse_state": "requires_exact_identity_audit",
+      "reusable_cells_verified": 0,
+      "missing_cells": null
+    }
+  ],
+  "primary_preset_protocol_cells": 1373,
+  "factorial_cells_per_configuration": 284,
+  "new_fits_launched": 0,
+  "all_benchmarks_complete": false,
+  "sensitivity_scope": "Two retained global candidates already have factorial coverage; no automatic full benchmark expansion.",
+  "baseline_scope": "Reuse existing baseline results only within their exact frozen protocol; this inventory creates no new baseline model jobs.",
+  "required_identity_checks": [
+    "exact encoder construction and version",
+    "feature bytes and failure-vector/validity policy",
+    "original row population and ordered IDs",
+    "saved train/validation/calibration/test selectors",
+    "learner hyperparameters and numeric backend",
+    "model seeds and threshold/vocabulary fitting scope",
+    "retained checkpoint/predictions/metric replay",
+    "full source and artifact hash bindings"
+  ],
+  "specialist_references": "Learned yield references continue independently; completed DMPNN/SynCat references retain their scoped datasets. Parrot, T5Chem, adapted feasibility SynCat and full SynCluster are not declared completed or launched here."
+}

@@ -1,0 +1,21 @@
+[Unit]
+Description=Publish audited seven-task SynRFP results without waiting for specialist references
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/labhhc4/Documents/Workspace/Long/SynRFP
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=OMP_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=GIT_TERMINAL_PROMPT=0
+ExecStart=/usr/bin/taskset -c 31 /home/labhhc4/anaconda3/envs/synrfp/bin/python -u /home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/34_final_comparison/publish_main_results.py --watch
+CPUQuota=10%
+MemoryMax=256M
+KillMode=control-group
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,37 @@
+[
+  {
+    "available": true,
+    "included_in_six_fp_aggregate": false,
+    "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/cells.csv",
+    "reference": "yield_learned_references",
+    "sha256": "ef6895a19df6e4c1c8dcce074f1d1ca911022306d6852e40f7c111f3d4857414"
+  },
+  {
+    "available": true,
+    "included_in_six_fp_aggregate": false,
+    "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/18_model_references/publication_metadata/syncat_reference_v1",
+    "reference": "syncat_classification",
+    "sha256": null
+  },
+  {
+    "available": true,
+    "included_in_six_fp_aggregate": false,
+    "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/publication_metadata/continuous_allfps_v1/results.csv",
+    "reference": "rxnfp_supervised_yield",
+    "sha256": "46b2459ec8870c15377ac061fbd7a30579d81eea18b12b18f29284ea152b4d9a"
+  },
+  {
+    "available": true,
+    "included_in_six_fp_aggregate": false,
+    "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/14_barrier/publication_metadata/barrier_allfps_v1/results.csv",
+    "reference": "dmpnn_barrier_and_supervised_rxnfp",
+    "sha256": "6f1fdf6f44b1ee7c29cd8645dd30c78bad55f9c63736ead265b95a68bd1aaf48"
+  },
+  {
+    "available": true,
+    "included_in_six_fp_aggregate": false,
+    "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/15_properties/publication_metadata/properties_allfps_v1/cells.csv",
+    "reference": "supervised_rxnfp_properties",
+    "sha256": "cef98568d4a76cf8821637f9a3a2771256ae19ee6f8416c6bca2c55060394713"
+  }
+]

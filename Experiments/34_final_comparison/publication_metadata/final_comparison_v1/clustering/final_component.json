@@ -1,0 +1,18 @@
+{
+ "all_artifact_hashes_verified": true,
+ "baseline_cells": 1200,
+ "completed": 240,
+ "expected": 240,
+ "fresh_completed": 200,
+ "full_metric_replay": true,
+ "outputs_sha256": {
+  "baseline_cells.csv": "8b600ff9c4b96e854e8564413d8f049bc0f37707763a90b3c4fc5544041cd335",
+  "cells.csv": "a6a81f511cce471bc5c4f658ce101bc4f8fb911277d07d025807cdf415b5ac7d",
+  "plan.json": "c48e98d07464ae46c8799098d3b43fb218772860ebfbd67a9bd1d401d4a133a3",
+  "summary.csv": "2ef6816a691d6874512654f75f034c8db576e87b7b966f2453f8684ce3432c41"
+ },
+ "phase": "complete",
+ "plan_sha256": "c48e98d07464ae46c8799098d3b43fb218772860ebfbd67a9bd1d401d4a133a3",
+ "population_copies_completed": 40,
+ "updated_utc": "2026-10-19T12:18:34.195052+00:00"
+}
