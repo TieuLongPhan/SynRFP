@@ -1,0 +1,21 @@
+{
+  "phase": "complete",
+  "task": "classification",
+  "cells": 5040,
+  "finished_utc": "2026-10-13T08:02:30.274851+00:00",
+  "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+  "source_sha256": "674453f339d0ada2e7d026d4ccab9deae9ac07571b78b63296552c62ae8f5acd",
+  "canonical_metric_and_artifact_checks_passed": true,
+  "configuration_selected": null,
+  "outputs_sha256": {
+    "cells.csv": "e3b43bfa550472320d4910a6028713353ea14aea95a23d628dba1cc2002d7709",
+    "configuration_summary.csv": "ac99d74def654b505e286d6bc3f445ce112fca8c94f7c93282f5af8be6f4dd0c",
+    "paired_full_interactions.csv": "a5e132689c9de6c8c496f8ae39e05c718844b3bfafcd2ec68fef5c7c33659a65",
+    "panel_full_interactions.csv": "f8f7746ea067c7fa9f9a05a01e8bd05987c803c6cea68bb27851dbd7ad00d321",
+    "cross_panel_consistency.csv": "1220237c25792accb481033a182318423956099537a8381a2fe17880a1275794",
+    "metric_refusals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs.json": "506f91bd5c2c66d47be4d73a7d43fb5c6eb7dab932076b4aeaef61266946f41d",
+    "protocol.json": "7f5806c945aaa7f9b593da9ce153d704a3e2f391283394636530354ee6e1fe1c",
+    "report.md": "c9e6fff28269067eb029b92d6c03ba5cb3c6eb05bf2ca3301c8ed45023ad1009"
+  }
+}

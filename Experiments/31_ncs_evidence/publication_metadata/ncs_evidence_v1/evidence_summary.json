@@ -1,0 +1,463 @@
+{
+  "scope": "Read-only inventory with hashes at analysis time; historical scores are not rerun",
+  "files_by_group": {
+    "cluster_coherence": 600,
+    "representative_selection": 168,
+    "clustering_attribution": 8,
+    "locality_collisions": 3,
+    "cost": 4,
+    "bond_coherence": 2
+  },
+  "crxnfp_in_legacy_utility": false,
+  "legacy_utility_rows_per_dataset": 20000,
+  "legacy_utility_seeds": 3,
+  "legacy_utility_budgets": [
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "legacy_synrfp": "wl/r2/1024/parity/delta; different from the new 2048-bit grid",
+  "limitations": [
+    "No crxnfp comparator in legacy chemical utility or bond-coherence tables",
+    "ECReact L1 and USPTO balanced class coverage saturates; no general utility dominance established",
+    "Product-group coverage is not an independent transformation identity or experimental usefulness measure",
+    "Legacy cost uses different settings/hardware/load; current native fit times are descriptive, not a fair speed ranking",
+    "Legacy locality/collisions describe WL radius2 delta at1024bits, not every new mode or sketch",
+    "No learned-reference completion is inferred by this analysis"
+  ],
+  "utility_expected_cells": 168,
+  "utility_observed_cells": 168,
+  "utility_complete_inventory": true,
+  "utility_fingerprints": [
+    "drfp",
+    "rdkit_diff",
+    "rdkit_struct",
+    "rdkit_struct_greedy",
+    "rxnfp_mlm",
+    "synrfp-wl-r2-b1024-parity-delta",
+    "uniform_random"
+  ],
+  "utility_descriptive_means": [
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "drfp",
+      "budget": 0.005,
+      "class_coverage": 0.5833333333333334,
+      "product_group_coverage": 0.010065199674001631
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "drfp",
+      "budget": 0.01,
+      "class_coverage": 0.6666666666666666,
+      "product_group_coverage": 0.017766911165444172
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "drfp",
+      "budget": 0.02,
+      "class_coverage": 0.8333333333333334,
+      "product_group_coverage": 0.029747351263243682
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "drfp",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.05925020374898126
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.005,
+      "class_coverage": 0.9583333333333334,
+      "product_group_coverage": 0.010431947840260797
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.01,
+      "class_coverage": 0.9583333333333334,
+      "product_group_coverage": 0.020374898125509373
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.03647106764466178
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.08459657701711491
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.005,
+      "class_coverage": 0.7916666666666666,
+      "product_group_coverage": 0.009983700081499592
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.01,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.018907905460472697
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.03447432762836186
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.0780358598207009
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.005,
+      "class_coverage": 0.75,
+      "product_group_coverage": 0.011002444987775062
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.01,
+      "class_coverage": 0.7916666666666666,
+      "product_group_coverage": 0.020211898940505294
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.02,
+      "class_coverage": 0.9166666666666666,
+      "product_group_coverage": 0.03679706601466993
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.08162184189079054
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.005,
+      "class_coverage": 0.75,
+      "product_group_coverage": 0.010350448247758761
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.01,
+      "class_coverage": 0.9583333333333334,
+      "product_group_coverage": 0.018826405867970658
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.034881825590872044
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.07730236348818255
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.005,
+      "class_coverage": 0.9166666666666666,
+      "product_group_coverage": 0.009331703341483292
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.01,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.016666666666666666
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.027587612061939687
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.05570497147514262
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "uniform_random",
+      "budget": 0.005,
+      "class_coverage": 0.8333333333333334,
+      "product_group_coverage": 0.010635696821515892
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "uniform_random",
+      "budget": 0.01,
+      "class_coverage": 0.875,
+      "product_group_coverage": 0.020741646291768542
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "uniform_random",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.038630806845965766
+    },
+    {
+      "dataset": "ecreact_1",
+      "fingerprint": "uniform_random",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.08618581907090465
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "drfp",
+      "budget": 0.005,
+      "class_coverage": 0.9,
+      "product_group_coverage": 0.00633158758696162
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "drfp",
+      "budget": 0.01,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.01323640532582923
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "drfp",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.026498866567654183
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "drfp",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.06203913598582558
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.005,
+      "class_coverage": 0.8666666666666667,
+      "product_group_coverage": 0.006540034914927435
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.01,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.011985721358034341
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.021965137184397715
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_diff",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.05469136767503061
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.005,
+      "class_coverage": 0.8000000000000002,
+      "product_group_coverage": 0.0068527059068761555
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.01,
+      "class_coverage": 0.8000000000000002,
+      "product_group_coverage": 0.013366684905807863
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.02,
+      "class_coverage": 0.9333333333333332,
+      "product_group_coverage": 0.026394642903671276
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.06495739857734699
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.005,
+      "class_coverage": 0.9,
+      "product_group_coverage": 0.00690481773886761
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.01,
+      "class_coverage": 0.9666666666666667,
+      "product_group_coverage": 0.01258500742593606
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.024440449203991767
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rdkit_struct_greedy",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.06060606060606061
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.005,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.007269600562807785
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.01,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.013731467729748039
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.02644675473566273
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "rxnfp_mlm",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.06203913598582558
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.005,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.0068527059068761555
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.01,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.01315823757784205
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.02,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.02644675473566273
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.06318559628963756
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "uniform_random",
+      "budget": 0.005,
+      "class_coverage": 0.9,
+      "product_group_coverage": 0.007191432814820605
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "uniform_random",
+      "budget": 0.01,
+      "class_coverage": 0.9666666666666667,
+      "product_group_coverage": 0.013913859141718126
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "uniform_random",
+      "budget": 0.02,
+      "class_coverage": 0.9666666666666667,
+      "product_group_coverage": 0.0270981526355559
+    },
+    {
+      "dataset": "uspto50k_b",
+      "fingerprint": "uniform_random",
+      "budget": 0.05,
+      "class_coverage": 1.0,
+      "product_group_coverage": 0.0654524609812658
+    }
+  ],
+  "bond_coherence_cells": 50,
+  "bond_coherence_proxy_means": [
+    {
+      "fingerprint": "drfp",
+      "signature_agreement": 0.5044185632857572,
+      "signature_agreement_different_product_group": 0.5034761373943526
+    },
+    {
+      "fingerprint": "rdkit_diff",
+      "signature_agreement": 0.6425473571791638,
+      "signature_agreement_different_product_group": 0.6435267834641293
+    },
+    {
+      "fingerprint": "rdkit_struct",
+      "signature_agreement": 0.31887947338183315,
+      "signature_agreement_different_product_group": 0.3190947727386478
+    },
+    {
+      "fingerprint": "rxnfp_mlm",
+      "signature_agreement": 0.8610848504211439,
+      "signature_agreement_different_product_group": 0.8597029592329395
+    },
+    {
+      "fingerprint": "synrfp-wl-r2-b1024-parity-delta",
+      "signature_agreement": 0.8757958345591854,
+      "signature_agreement_different_product_group": 0.8751251076553952
+    }
+  ]
+}

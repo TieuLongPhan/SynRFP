@@ -1,0 +1,83 @@
+{
+  "schema": "synrfp-seven-task-common-candidate-report-v1",
+  "phase": "complete",
+  "tasks": [
+    "classification",
+    "clustering",
+    "yield",
+    "barrier",
+    "feasibility",
+    "reagent",
+    "condition"
+  ],
+  "configurations": 72,
+  "logical_input_cells": 20448,
+  "sources": [
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/cells.csv",
+      "csv_sha256": "e3b43bfa550472320d4910a6028713353ea14aea95a23d628dba1cc2002d7709",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/COMPLETE.json",
+      "complete_sha256": "edcfeea707dee55283093d85b9374a207175bfa636383ac4f1954893421b524c",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 5040
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/cells.csv",
+      "csv_sha256": "e622c333c36c6a9a26465cc956864caf7790e78d312eb250a694411feefa1368",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/COMPLETE.json",
+      "complete_sha256": "7722f75d60522d73d6cba3e7be36d27e2649e75166c4c318686f3899fd019bf7",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 4320
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cells.csv",
+      "csv_sha256": "018ff69b416563c735d2e86f948377b35f03124fbfb0004325e1e6893b3b2258",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/COMPLETE.json",
+      "complete_sha256": "f52895a0ea16290189bc2eaf3bcbc82e5a5cf6534af84614fab5a60f3c1b9dec",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 4608
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/30_cross_task_factorial/publication_metadata/cross_task_factorial_v1/cells.csv",
+      "csv_sha256": "2fa346048a6d456c7413220f8a48b4cff8f1f07f80882c8dc5ef1801cdf94748",
+      "complete": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMPLETE.json",
+      "complete_sha256": "14d51049a292a22b545f06e060a255d1efffe46876e4f53590f03ad4fad5beb6",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/plan.json",
+      "plan_sha256": "077b5065a96c1073b6f0cba91814f9d842d804fc02097f7166fa210c70f40bf9",
+      "cells": 6480
+    }
+  ],
+  "source_sha256": "c6ff85dbe8e117fd5ef51889ed3c146f4a83e37ec50f9d68704cc3d6ef10c0ba",
+  "interpretation": "exploratory_after_prior_test_results_viewed",
+  "configuration_selected": null,
+  "metric_by_task": {
+    "classification": "mcc",
+    "clustering": "ami",
+    "yield": "r2",
+    "barrier": "rmse",
+    "feasibility": "auroc",
+    "reagent": "micro_f1",
+    "condition": "micro_f1"
+  },
+  "views": [
+    "grouped_main",
+    "native_reference"
+  ],
+  "aggregation": "fold/seed -> endpoint/regime -> source family -> equal task rank/regret",
+  "test_sets_independent": false,
+  "outputs_sha256": {
+    "fold_seed_summary.csv": "23e631620d77360b244187d2b09d0c41d0b82820d5ea38aa432dcf1f8341fdde",
+    "endpoint_summary.csv": "88614982199714082956ef7d7dbf25995586489a9779933058aed4b9ce05ca87",
+    "family_summary.csv": "3463455db73bff736aee350736cd1b58c2725a47224079d91961ed708b62e742",
+    "task_regime_summary.csv": "18db379a4b8aa81b6c917dfeec3181cbb7c5297e558e9072161b613b38dbd2d5",
+    "task_view_summary.csv": "fe8245028b1a2700c5c11daaa6dd1c4bff9814d69d52b05386b00097ba68baaf",
+    "common_candidates.csv": "657a8559b38c206f82ab32f8e09fb4ece9554d130296e59de59d7aee047c78cc",
+    "report.md": "e375da727674491d174794076fbc70e6cb9e9199951201cea845e34234864f6d"
+  },
+  "output_root": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis",
+  "cost_scope": "Incomplete cross-task cell-level cost columns; consult native fit/encoding receipts",
+  "finished_utc": "2026-10-16T02:36:17.661069+00:00"
+}

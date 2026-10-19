@@ -1,0 +1,18 @@
+{
+  "phase": "complete",
+  "completed": 6480,
+  "expected": 6480,
+  "reused": 270,
+  "fresh": 6210,
+  "canonical_metrics_and_artifacts_audited": 6480,
+  "plan_sha256": "077b5065a96c1073b6f0cba91814f9d842d804fc02097f7166fa210c70f40bf9",
+  "training_backend": "torch_cuda",
+  "configuration_selected": null,
+  "updated_utc": "2026-10-16T02:35:54.766097+00:00",
+  "outputs_sha256": {
+    "cells.csv": "2fa346048a6d456c7413220f8a48b4cff8f1f07f80882c8dc5ef1801cdf94748",
+    "configuration_summary.csv": "9427c590d42b85b7e84fdab5c67b16604e97e5ec79fb0fff13e41d8cc888c971",
+    "seed_stability.csv": "c7fae47081eb0893e2ca3ec05286ad217f3994de42dc4f11cca67e4a1135d95f",
+    "paired_differences.csv": "53353e8c756c45ac9b602478c317936ebe8fd1d9a341db2f7fba9b213c18cc2b"
+  }
+}

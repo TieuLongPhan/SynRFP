@@ -1,0 +1,81 @@
+{
+  "schema": "synrfp-cross-task-factorial-v1",
+  "created_utc": "2026-10-14T21:22:08.125334+00:00",
+  "barrier_scope": "all_activation",
+  "counts": {
+    "logical": {
+      "feasibility": 360,
+      "reagent": 720,
+      "condition": 2160,
+      "barrier": 3240
+    },
+    "reused": {
+      "feasibility": 30,
+      "reagent": 60,
+      "condition": 180,
+      "barrier": 0
+    },
+    "fresh": {
+      "feasibility": 330,
+      "reagent": 660,
+      "condition": 1980,
+      "barrier": 3240
+    },
+    "total": 6480,
+    "total_reused": 270,
+    "total_fresh": 6210
+  },
+  "expected_models": 6480,
+  "expected_fresh_models": 6210,
+  "expected_reused_models": 270,
+  "construction_protocol": {
+    "total_bits": 2048,
+    "fingerprint_seed": 1,
+    "bbit": 2,
+    "tokenizers": [
+      "wl",
+      "morgan",
+      "path"
+    ],
+    "radii": [
+      2,
+      3
+    ],
+    "sketches": [
+      "parity",
+      "minhash",
+      "cw"
+    ],
+    "modes": [
+      "delta",
+      "union",
+      "delta_union",
+      "roles"
+    ],
+    "cw": "unit signed/unsigned support only after full multiset algebra",
+    "roles": "original 1024 signed_delta plus 1024 shared; new joint roles retired"
+  },
+  "selection_policy": {
+    "status": "exploratory_after_prior_test_results_viewed",
+    "metric_by_task": {
+      "classification": "MCC",
+      "clustering": "AMI",
+      "yield": "R2",
+      "barrier": "RMSE",
+      "feasibility": "AUROC",
+      "reagent": "micro_F1",
+      "condition": "micro_F1"
+    },
+    "aggregation": "First seed/fold within endpoint, then related endpoints within source family, then equal task weights",
+    "report": "Configuration ranks, standardized within-endpoint regret, seed/fold stability, cost and coverage",
+    "representative": "User selects a single common preset after analysis; no automatic promotion of test maximum",
+    "confirmation": "A selected preset needs separately frozen confirmation; the factorial test scores remain exploratory"
+  },
+  "relation_limits": [
+    "GDB7 and RDB7 have related source provenance; do not count them as independent families",
+    "E2SN2 combines E2 and SN2; within-family averaging avoids duplicate task weight",
+    "Cycloadd G_act is represented by primary14 Cyclo only, not double-counted as15 Cycloadd",
+    "14 reactant grouped holdouts remain holdouts,15 grouped CV remains CV"
+  ],
+  "population_policy": "Frozen native populations and selectors; additional encoding failures are zero vectors, never deleted"
+}

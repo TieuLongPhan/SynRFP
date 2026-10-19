@@ -1,0 +1,73 @@
+{
+  "schema": "synrfp-ncs-evidence-v1",
+  "phase": "complete",
+  "ready_tasks": [
+    "classification",
+    "clustering",
+    "yield",
+    "barrier",
+    "feasibility",
+    "reagent",
+    "condition"
+  ],
+  "expected_tasks": 7,
+  "canonical_input_cells": 20448,
+  "paired_mode_contrasts": 18144,
+  "configuration_selected": null,
+  "analysis_scope": "Seven-task descriptive explanation only; not completion of learned references or all NCS work",
+  "preliminary": false,
+  "independent_test_sets": false,
+  "updated_utc": "2026-10-18T12:15:16.635999+00:00",
+  "outputs_sha256": {
+    "matched_mode_contrasts.csv": "d5ba43b91bf94aef3f0173e55731ca05706975aacda26d722867c6512ae889c2",
+    "endpoint_contrasts.csv": "1886a846b90d5af40857bafaa989436060a539c37b64187be08bdae04202a040",
+    "family_contrasts.csv": "4c150b043be7e69d20d807d441baf02d8a43be41fdb0807efe81507b5bfabd02",
+    "task_contrasts.csv": "067962806307948b529d5ebb77c6efe5d5750fee8ca414ac0270eecf3e8ea2d5",
+    "evidence_inventory.csv": "8e903a40ae0e5f02eb948edfcf0de240847b54547d87e4dfbf7230f671c4ccaa",
+    "evidence_summary.json": "191e0ab689f73c12a427a62d44965e1a0e19123f16f50c903f3bc571e7118c18",
+    "inputs.json": "4a13a37c94fd5f45c63ab6fb6e963563be00070482cd4bdef832414bbf27f004",
+    "report.md": "82cd6df37876bda1af0fa9d5eee070442b1eb4908addbb35696f0580330de5f6",
+    "status.json": "974985c105986d0654eaa8214592e9bcfbb07496796eef70bb2fcd8751f5f8fe"
+  },
+  "source_sha256": "d857f7495f02b3b012aa94892c64ebc0f48955940d0fc2a69bc57b2d2c14ca2c",
+  "protocol_sha256": "19549706fbbc625fecd1b4b93574f4e949073337c41a9e96bf213ae27cedd294",
+  "factorial_sources": [
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/cells.csv",
+      "csv_sha256": "e3b43bfa550472320d4910a6028713353ea14aea95a23d628dba1cc2002d7709",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/COMPLETE.json",
+      "complete_sha256": "edcfeea707dee55283093d85b9374a207175bfa636383ac4f1954893421b524c",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 5040
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/cells.csv",
+      "csv_sha256": "e622c333c36c6a9a26465cc956864caf7790e78d312eb250a694411feefa1368",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/COMPLETE.json",
+      "complete_sha256": "7722f75d60522d73d6cba3e7be36d27e2649e75166c4c318686f3899fd019bf7",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 4320
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cells.csv",
+      "csv_sha256": "018ff69b416563c735d2e86f948377b35f03124fbfb0004325e1e6893b3b2258",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/COMPLETE.json",
+      "complete_sha256": "f52895a0ea16290189bc2eaf3bcbc82e5a5cf6534af84614fab5a60f3c1b9dec",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 4608
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/30_cross_task_factorial/publication_metadata/cross_task_factorial_v1/cells.csv",
+      "csv_sha256": "2fa346048a6d456c7413220f8a48b4cff8f1f07f80882c8dc5ef1801cdf94748",
+      "complete": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMPLETE.json",
+      "complete_sha256": "14d51049a292a22b545f06e060a255d1efffe46876e4f53590f03ad4fad5beb6",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/plan.json",
+      "plan_sha256": "077b5065a96c1073b6f0cba91814f9d842d804fc02097f7166fa210c70f40bf9",
+      "cells": 6480
+    }
+  ],
+  "learned_reference_completion_asserted": false
+}

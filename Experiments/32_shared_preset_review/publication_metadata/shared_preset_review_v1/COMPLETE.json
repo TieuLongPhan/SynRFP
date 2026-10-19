@@ -1,0 +1,55 @@
+{
+  "schema": "synrfp-shared-preset-review-v1",
+  "phase": "complete",
+  "tasks": [
+    "classification",
+    "clustering",
+    "yield",
+    "barrier",
+    "feasibility",
+    "reagent",
+    "condition"
+  ],
+  "configurations": 72,
+  "logical_input_cells": 20448,
+  "shortlisted_configurations": [
+    "synrfp-wl-r2-b2048-parity-delta",
+    "synrfp-morgan-r2-b2048-parity-delta_union",
+    "synrfp-morgan-r2-b2048-parity-delta"
+  ],
+  "configuration_selected": null,
+  "refits_started": 0,
+  "primary_view": "grouped_main",
+  "order": [
+    "macro_rank",
+    "macro_regret",
+    "worst_task_rank",
+    "config"
+  ],
+  "interpretation": "exploratory_after_prior_test_results_viewed",
+  "test_sets_independent": false,
+  "common_receipt": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMMON_TASK_ANALYSIS_COMPLETE.json",
+  "common_receipt_sha256": "7e961f72ed7c0043aac308bfb1f4c69e8a438b6232817c0ed0e27a165fe9c9fc",
+  "runtime_bindings": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/shortlist.py": "abf4c6d70dbf4fffefe243a4a9a98d02816d8927ac248f45546d59e3abb392f8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/PROTOCOL.md": "7713fded480623401454d21139f5ae25deea608dd430d7e4252867ec3d590e86",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/test_shortlist.py": "e03a53c340179281608084339d2889a893cc31b32e21fabbb8d6f6a516a421e8"
+  },
+  "input_csv_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/common_candidates.csv": "657a8559b38c206f82ab32f8e09fb4ece9554d130296e59de59d7aee047c78cc",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/task_view_summary.csv": "fe8245028b1a2700c5c11daaa6dd1c4bff9814d69d52b05386b00097ba68baaf",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/endpoint_summary.csv": "88614982199714082956ef7d7dbf25995586489a9779933058aed4b9ce05ca87",
+    "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/family_summary.csv": "3463455db73bff736aee350736cd1b58c2725a47224079d91961ed708b62e742"
+  },
+  "outputs_sha256": {
+    "all_72_rankings.csv": "bc581354a8d99aedd6cccde3a753b5bb7b8adc6b93b224037016c842a7bd7162",
+    "top3_candidates.csv": "9dd55024b51f668389449be605fb0c76de7c51521b507b713129b1d28b5d80b3",
+    "top3_task_diagnostics.csv": "024dc2506789258571b974341cc16a1db8c31da93fcf2ab929b0d83b4d4b2444",
+    "top3_endpoint_metrics.csv": "da1b479535d5f28d0b6c305360bb3ab77bfed43c7f102a4d9444f4daab18936b",
+    "top3_family_diagnostics.csv": "4bc2292b5829de648eabf1f8fef6b7d41fb940eced0d1156152ae19a276b3ede",
+    "shortlist.json": "87af247e8b4ba15099db6cda124802aa8b53d1764f78a0eba3af2f3be9a5eba7",
+    "report.md": "bfa90c13940308fa6868fa4cf92216224258064fafe551b65d9b6326427a33c2"
+  },
+  "output_root": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/32_shared_preset_review/publication_metadata/shared_preset_review_v1",
+  "finished_utc": "2026-10-16T02:37:18.953725+00:00"
+}

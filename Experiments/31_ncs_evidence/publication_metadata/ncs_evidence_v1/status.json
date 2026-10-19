@@ -1,0 +1,21 @@
+{
+  "schema": "synrfp-ncs-evidence-v1",
+  "phase": "complete",
+  "ready_tasks": [
+    "classification",
+    "clustering",
+    "yield",
+    "barrier",
+    "feasibility",
+    "reagent",
+    "condition"
+  ],
+  "expected_tasks": 7,
+  "canonical_input_cells": 20448,
+  "paired_mode_contrasts": 18144,
+  "configuration_selected": null,
+  "analysis_scope": "Seven-task descriptive explanation only; not completion of learned references or all NCS work",
+  "preliminary": false,
+  "independent_test_sets": false,
+  "updated_utc": "2026-10-18T12:15:16.635999+00:00"
+}

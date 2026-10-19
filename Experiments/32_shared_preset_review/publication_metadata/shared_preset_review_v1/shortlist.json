@@ -1,0 +1,61 @@
+{
+  "shortlisted_configurations": [
+    "synrfp-wl-r2-b2048-parity-delta",
+    "synrfp-morgan-r2-b2048-parity-delta_union",
+    "synrfp-morgan-r2-b2048-parity-delta"
+  ],
+  "configuration_selected": null,
+  "order": [
+    "macro_rank",
+    "macro_regret",
+    "worst_task_rank",
+    "config"
+  ],
+  "primary_view": "grouped_main",
+  "native_view": "native_reference",
+  "selection_scope": "three global configurations across all seven tasks",
+  "interpretation": "exploratory_after_prior_test_results_viewed",
+  "configs": {
+    "synrfp-wl-r2-b2048-parity-delta": {
+      "tokenizer": "wl",
+      "radius": 2,
+      "sketch": "parity",
+      "mode": "delta",
+      "n_bits": 2048,
+      "kind": "bits",
+      "seed": 1,
+      "bbit": 2,
+      "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+    },
+    "synrfp-morgan-r2-b2048-parity-delta_union": {
+      "tokenizer": "morgan",
+      "radius": 2,
+      "sketch": "parity",
+      "mode": "delta_union",
+      "n_bits": 2048,
+      "kind": "bits",
+      "seed": 1,
+      "bbit": 2,
+      "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+      "block_bits": [
+        1024,
+        1024
+      ],
+      "block_order": [
+        "signed_delta",
+        "union"
+      ]
+    },
+    "synrfp-morgan-r2-b2048-parity-delta": {
+      "tokenizer": "morgan",
+      "radius": 2,
+      "sketch": "parity",
+      "mode": "delta",
+      "n_bits": 2048,
+      "kind": "bits",
+      "seed": 1,
+      "bbit": 2,
+      "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+    }
+  }
+}

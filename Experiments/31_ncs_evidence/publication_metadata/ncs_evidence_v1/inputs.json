@@ -1,0 +1,592 @@
+{
+  "factorial_sources": [
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/cells.csv",
+      "csv_sha256": "e3b43bfa550472320d4910a6028713353ea14aea95a23d628dba1cc2002d7709",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/COMPLETE.json",
+      "complete_sha256": "edcfeea707dee55283093d85b9374a207175bfa636383ac4f1954893421b524c",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 5040
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/cells.csv",
+      "csv_sha256": "e622c333c36c6a9a26465cc956864caf7790e78d312eb250a694411feefa1368",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/COMPLETE.json",
+      "complete_sha256": "7722f75d60522d73d6cba3e7be36d27e2649e75166c4c318686f3899fd019bf7",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 4320
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cells.csv",
+      "csv_sha256": "018ff69b416563c735d2e86f948377b35f03124fbfb0004325e1e6893b3b2258",
+      "complete": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/COMPLETE.json",
+      "complete_sha256": "f52895a0ea16290189bc2eaf3bcbc82e5a5cf6534af84614fab5a60f3c1b9dec",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+      "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "cells": 4608
+    },
+    {
+      "csv": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/30_cross_task_factorial/publication_metadata/cross_task_factorial_v1/cells.csv",
+      "csv_sha256": "2fa346048a6d456c7413220f8a48b4cff8f1f07f80882c8dc5ef1801cdf94748",
+      "complete": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMPLETE.json",
+      "complete_sha256": "14d51049a292a22b545f06e060a255d1efffe46876e4f53590f03ad4fad5beb6",
+      "plan": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/plan.json",
+      "plan_sha256": "077b5065a96c1073b6f0cba91814f9d842d804fc02097f7166fa210c70f40bf9",
+      "cells": 6480
+    }
+  ],
+  "common_analysis_receipt": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMMON_TASK_ANALYSIS_COMPLETE.json",
+  "common_analysis_sha256": "7e961f72ed7c0043aac308bfb1f4c69e8a438b6232817c0ed0e27a165fe9c9fc",
+  "optional_statuses": [
+    {
+      "path": "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/status.json",
+      "sha256": "da433a83fe9a1014ad5a0c71497551c31b006302beb0b8ffa7efa7fa5e94d264",
+      "status": {
+        "completed_unique_sources": 24,
+        "completed_utc": "2026-10-15T12:32:52Z",
+        "elapsed_seconds": 72.82323069695849,
+        "phase": "complete",
+        "sampled_rows": 3072,
+        "schema": "synrfp-bounded-token-information-v1"
+      }
+    },
+    {
+      "path": "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/COMPLETE.json",
+      "sha256": "1c48652800cbddc77880af740a3ceb093286c93c6b6ee518cfc5fc7afac0214b",
+      "status": {
+        "completed_unique_sources": 24,
+        "completed_utc": "2026-10-15T12:32:52Z",
+        "elapsed_seconds": 72.82323069695849,
+        "expected_declared_sources": 24,
+        "outputs": {
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/plan.json": "ba386ea912ddc95e98bb1b1e76ccb2991d4c3210b8e8f56499ae79433b8a5ce7",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__bh_classic/COMPLETE.json": "7b6c59279df8dc5e79215eb1b4f21e6ff8aaf8c5f94fb84d4bf31df380fb7b2e",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__bh_classic/observed_equalities.csv": "7ebf09bda4f8487135983b6bb4e9cbfd487b6dcbc96417d816b0debf5a7e9746",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__bh_classic/rows.jsonl": "80e85b4b92fb938258e82edac5824bb4be118a312e26ea8bd2a6b71db1a1c143",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__bh_classic/sample.json": "7b6086fd0626b38b64c9f710e7016a9407a00a6b8a840bb7bf9ccb4e5ca731a5",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__bh_classic/token_information.csv": "68b4aee22f9fdb4d83e2189c2fa6a6dec43eab2b83d56f0cd3516f170f80e2e1",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ecreact/COMPLETE.json": "0613cdacb20807530e0c48aaaa4b17e0758d6ba64045cf0b5eb7fb4e56e9c950",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ecreact/observed_equalities.csv": "67d10df32719af49aee1e4295dd5dcd6f8f3803043332a3230ea376e22bec6d8",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ecreact/rows.jsonl": "34906835df341ab350afb43f864c4057131e628124f939b60d9efb1a0efb766a",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ecreact/sample.json": "bcd967c19eeb7560867315d89b5c32669dd44fb7c90b72c518a17a477403cd57",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ecreact/token_information.csv": "fc95dd9a920c84dbeb2bbf20c43d83c4496d33e1d75adb40e865c30b98612c92",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__mech/COMPLETE.json": "3b6e781e9114fbc7d54846d81affdfdf3e3d657ffa9841bc52eba85eb2c8f782",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__mech/observed_equalities.csv": "faf6013877d900f8c23f0726397448b2df2267734e71e44c72edd5fa7184bd43",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__mech/rows.jsonl": "76dbddfe4b7e754cf4ad91558f953dc982ee66f7eac913b44c6cbb3d229e2436",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__mech/sample.json": "5a26bf4311966b82242a1b32cb90b90f9203b3333751c5c95db2a91971201c0c",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__mech/token_information.csv": "6085b8dc7b2bfcd873e6f9abff551d5b40494fa0ae3da7adf05223e351672a66",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ncs_bh/COMPLETE.json": "8222014681b75a9cfe006298095952521ebdba7d4b3f6265f4e4f1fe97a06725",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ncs_bh/observed_equalities.csv": "81fba82e3b6633d42c51a773588518d80e28cc103f3ac9bb34c7ef98bc1dacab",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ncs_bh/rows.jsonl": "79c3986a7c261cc8b65711c40c8ebe4745549c4e5d07442488c6ae8f5a5d92ee",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ncs_bh/sample.json": "ea5ead0ddfd76d8ce70b79336c8b9ab8391d68e9d7c741c7e7f301868153a505",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__ncs_bh/token_information.csv": "3c94d692767656db0862d2f96fce0d1666de90314e5a0a26736c9420b4eb1738",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_b/COMPLETE.json": "159c36b717eea083de16264a014134b119035b9f1b53aeba2232cb0cbea65900",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_b/observed_equalities.csv": "79cb0e281e3c4136167a6c8813cd13b8b0551f1c60d6c3a39417484b49accacd",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_b/rows.jsonl": "a7a9b5af0b09bb9ab9766d0dd330dc63576f358eb351e59326559c509a5e80da",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_b/sample.json": "ce65f732f87cabebf7e2046f82db804c8539af9ab67303c55de4514851fe8a2a",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_b/token_information.csv": "b3cf97efe0b32a20e441dd06a36343d089632a90319f258a6cd859041cf301b1",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_u/COMPLETE.json": "440187761018eea98be78549e59b0275b6c27b6955c5aaafe786b3f25d0f3158",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_u/observed_equalities.csv": "b0391096fb4dc44619197ae4de682e0e324a6f84152d56b0bcd3621e48345088",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_u/rows.jsonl": "2f1cb60025f62a40e52b68cb6b318b355ab34d72aa7dc516f3b5d38053c5b430",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_u/sample.json": "9a319af66c36ec2838d80446ad9bfa90196936736d4a6899403974ac5f0ab2a5",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__schneider_u/token_information.csv": "0c805cf7ae436e7d5b4430e1b053190c177f981980af5a62cea0b52b53fa80f2",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__suzuki_hte/COMPLETE.json": "299733eea64e9c0ce05625e400983b179f09ffbfb390a5ddb55f34fe47d3ad32",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__suzuki_hte/observed_equalities.csv": "1b9424e41995af3025090725bbc992aea8cbf39788ec53f80530f2110c247fa8",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__suzuki_hte/rows.jsonl": "b7c394b74ff33e4f363ca917a8eda5c98c0670eed15679b806662f71da451d50",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__suzuki_hte/sample.json": "76a771eda1e9a70ddf733a259b59da2f4d9f5f85493cfa6cf9e2a29db78b9057",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__suzuki_hte/token_information.csv": "96fb033811f9fae70e901037eaf57c2973006c64c2c8e2f290d83c497672f260",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__syntemp/COMPLETE.json": "fc04e5c607bd5fc79599e812f0fb9ca162b7fb4a215f78fd65d0bdc494128151",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__syntemp/observed_equalities.csv": "fe5d9e6a4e8c931a1dfb61ae2c7fd6a42cc9d7a71f6cd838934dac7c0f7f25f8",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__syntemp/rows.jsonl": "c7870e298ed1d29329082c5fd3e2d1cf14455fc2e56cc73d1bd9a16f3841af44",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__syntemp/sample.json": "0307c67cddf4da83a069d1372a48c6a948f4001135bb1ba2208ef75714996890",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__syntemp/token_information.csv": "45c7119433af38227802f7a503ba40cf6edaa1c26eabf05bdc2d3d24eaf439be",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_b/COMPLETE.json": "1dbea00bff8674f538bc49a7b0bd8be2f11a54300866bc6e0fe7445f71eb04fa",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_b/observed_equalities.csv": "5cbfa4d967df8a3e9082ead491d7e8b93a88527ae513922a3f905aa32b810944",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_b/rows.jsonl": "a259605f3ef1520a26018e43c497b2020437be2d995312463e6005f843159bdd",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_b/sample.json": "8bb96655ccbe9741194622704e60395f562098edbb13bd7e647fce7b53168648",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_b/token_information.csv": "2012a71e2cacf7d6478a6afb316eb9b67c9188a6a8c93137b4d94c04a32c7c73",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_u/COMPLETE.json": "248652491b80899c30575da5d7fced18a63185b89cee567f1823529a4ddd2e7a",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_u/observed_equalities.csv": "d73918afdd138fa43a8cc78875269cd34a1e21d4221ba5f32c2490b949aeea24",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_u/rows.jsonl": "39cdab4c31074d17b507370ad0626b57c132484e417253dc9a0fef3c79433468",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_u/sample.json": "371f8890ac9073cae687535a7021f69a80c98d62bd6eeeec80d1350480fe4164",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__tpl_u/token_information.csv": "fd99a655b3490df3d811e25fb302da67c3647619533154ed328faeaa4b404eaa",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_b/COMPLETE.json": "c5c4ebc1b055191c49866d7161739977808c97bc3e0a1640348c05d85c68600d",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_b/observed_equalities.csv": "131cda5cc22714ac7f9d171ba9a3823fce1ca1a1ee9f6709e477c4550114c97b",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_b/rows.jsonl": "b9fdbb392f914980de134e2accd24d74fab022ec9020428c5b61bdb5b37164d4",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_b/sample.json": "4b6294074a0c964a895bf4de898eef16b49b22a009e69dc3d2fe4f3607e2e17d",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_b/token_information.csv": "536c5769054776607ddc32a952858728755de671f13bd14d688c9d74f4bb51b5",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_u/COMPLETE.json": "e09c71764afb13f7ca61d18c778281d44360778cea63e5910c52258793fd856d",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_u/observed_equalities.csv": "cc9f299eed17821c832077e32074babe7e8959fe3e33752e704525b99d8f5b67",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_u/rows.jsonl": "589d893e80cce777af1012c3843ad8ff3da80855467f13346773c2a210e471f8",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_u/sample.json": "1981f6a5c027817c03e2101ed7672ff31629484e4266bfbf9588db3747930afb",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/all_endpoint_factorial_full_v1__uspto_50k_u/token_information.csv": "8fa073516576ce5481415caa1c0dcfaa8b45c1cc6e45c1acce51ad99c87f9200",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__b97xd3/COMPLETE.json": "dad5da81234c39940568e9185f821504d35035b0b2dee3cc9df6b4ba32afc1c5",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__b97xd3/observed_equalities.csv": "144d1af0747776f08c6625e4f8f7036254796aa914cf3d079c2cc7c6ab459140",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__b97xd3/rows.jsonl": "ab0dfc5e12718294865614fe030c896995177f725b8ad719218b5ea1995de350",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__b97xd3/sample.json": "7cd789bc40180d8aa219395ef97e01a25870c87ed8e3f36dbc992b129dfe0b65",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__b97xd3/token_information.csv": "230dc4cb1331da32d808abc0641a9fb083fa1da6e5acb2b37343d5bf3d660d46",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__condition/COMPLETE.json": "730b11bf4a5696d3026f27f4c06b0600835518a9bfdc9c6e2c65e87805628959",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__condition/observed_equalities.csv": "c7a2fbb621b7c58b67ea56fd5b32011d2040499722726c8fd5278b9208303f86",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__condition/rows.jsonl": "d168b033e6bd0f1b9221ca898ef4ec326a3e4ce3eccb2960166ff0d928c38119",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__condition/sample.json": "c2f7ef485bcee11c2b4735b2af2fe38ffbfe0f796c2ad5382eab865cf5a91c48",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__condition/token_information.csv": "85333a55b3668e4728e5ee980daebff40b0e0833e468c5c9b31071cc8ff84049",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__cyclo/COMPLETE.json": "af16f1c6e8ee557e92c271e9cce83b20f08de3f572f9301ae17ca7344c60f755",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__cyclo/observed_equalities.csv": "a03156c40630cea962d0d1e9c365b767457846bcdb6f87d16f0520284d5e65df",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__cyclo/rows.jsonl": "5fc645ea20a3bc4d063d166937e7725207e956336711b0583e560c65f45dcc24",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__cyclo/sample.json": "ef9438e5b46092a9878f8ea907cc7a5e8a441f4ec9775d8ae221e406045e660a",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__cyclo/token_information.csv": "2779b21f37bc5e1ad67bf6223ae3eb3f9a1c9fd8da2341c8948b2608a31068ff",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2/COMPLETE.json": "9e12f1cabca84bc686ebad7f46028aa2bfacbaddc23fe93814f315a99fbbc2f3",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2/observed_equalities.csv": "a0cc4d47e296d8fdff438e9ccce78012f7c0f26cf8e3a27904ed56552d5fcb82",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2/rows.jsonl": "25ce22cd832fbf615bd164a81faf21469e1b4c35608a7100282facef813d7543",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2/sample.json": "714d67042478d2c96f42b6d73523323dca0a5b63083e148ac444a555c83fa843",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2/token_information.csv": "120ec0f8b0bff3f46285a692919e18737e19aa8190ff9111ecd57b98218c44f8",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2sn2/COMPLETE.json": "3086f7cf7893536d1a0a93318f0104a41505402a6d7e822db5edee5eaa6f0687",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2sn2/observed_equalities.csv": "be3ca100abce8c6af575ab6b49ea11150ada43b27f80ca0e74afb9ed5073f964",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2sn2/rows.jsonl": "896a41a28a6bebc651367c54c05c6fbc5f784b11cfbb208712d87a55ac98e344",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2sn2/sample.json": "26d99c6b32023877d9b90c60cf104b21498545b07e353118ff826679b59a8d5c",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__e2sn2/token_information.csv": "88f0085dcec64eebd3870434ce232c7ac9970c20ffba0eef0158bb95cc19ce7f",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__feasibility/COMPLETE.json": "17af2c097529bd2b92773dd6795b654cd3062a9c0a25395eddc6ed0596a6f024",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__feasibility/observed_equalities.csv": "a51b6cec6fb4c8ccc85565b160955d607558530d4f7546d478a92879a3745426",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__feasibility/rows.jsonl": "ee1eb56d44eeadeeb9812c054632ed7c7d803f8990372a8b83305067d38c6fdb",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__feasibility/sample.json": "5fdb377023381cad6a3d670b17cf667f3a4efd48778e17c90f5204e597e7a90a",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__feasibility/token_information.csv": "105c85f19bea1bd8758ff5104a17ef4559ae5f59e0ef84a27bce8640368c8409",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__gdb7/COMPLETE.json": "2cb7ae2fc0a94a66fb8765efc3c40511788bf9f4b2578b4c202ef7a581b3f4f6",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__gdb7/observed_equalities.csv": "d3ffc6d4aeee7fd7827013325d73bf5d9d4df0834b71232626dba588697bbb76",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__gdb7/rows.jsonl": "966cad18883208b92cd726bb8e07fe88acbbf5a96950235ec8a72290a45e80c2",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__gdb7/sample.json": "8b9987390c8cd925f13eff5fc6c0115c0fbeb041211cf95bd29e812d2f168769",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__gdb7/token_information.csv": "5ff2b0184dcf028b8f6de34fa4ce8b2896fa6d9c24569705f54c9fbe80b931b9",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rdb7/COMPLETE.json": "e9096a24498d54a6f18ec1b8273138cfcd363453963dae062a4d74634e88e506",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rdb7/observed_equalities.csv": "e59c97353abdfd723e19d5d02997121cfe998e54639d72b9b9aad4f188caa0f4",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rdb7/rows.jsonl": "3d80b3f096b4aca7074bbb77b00a40ba51b89daeda10e93598d0d51a3eb7ea85",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rdb7/sample.json": "480ae7dd3e750b998600112455e7026d859ea47159b0da18079a4e8b846fc3cc",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rdb7/token_information.csv": "5f6f6c3c926b4954dc8f3e4583d4e5b59507e8491612e18040fed39986c6e0e5",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__reagent/COMPLETE.json": "89cd74c2ed7328db995612dbc805c333e4efec1f7d4028a8510271aadd190b78",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__reagent/observed_equalities.csv": "f694aaaf7f7f63146ff84d9063b1e2ef74a7a3a6d39d545b00d7b197b83e652e",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__reagent/rows.jsonl": "1e4623489f9bf24f2e3641ec33f32eae78565398e31d5ac015ac1e4224bb0c0f",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__reagent/sample.json": "81b46969972421b891cc26ae903101ece45468ed8e51f93830e45ebdc64f379e",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__reagent/token_information.csv": "a47f263f04eb3d63e5b6c2778e1aad9cce80e41da62b853a32c02f215f087885",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rgd1/COMPLETE.json": "2f3cc32e495ce39c8aea969b46400e7a88a6e849dee2f6fbf602a9c9fc1201a6",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rgd1/observed_equalities.csv": "68e9a3a10bc8755b163e7826cc487d4bf4ec8ee00c9b119e4267c07d52bc354c",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rgd1/rows.jsonl": "74d929fe75f3ce7060b5b048aacc3f9a4ac0b724719042ab6a91ac5a05e878a7",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rgd1/sample.json": "564da3fcbfcf580754bb4ff38f2cf62bbc1f22b2c961839f1f7e1d7a1a08ee00",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__rgd1/token_information.csv": "8dc82ce84dc34d5103776e2703365a9280ecc0fe02d124fdef9b6230810027a5",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__sn2/COMPLETE.json": "d9d8e305b0a8d494b4da14c3c0f9caeaacf8012e0036ad6a9835c2f8fee88e7b",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__sn2/observed_equalities.csv": "6494837e6771993f0a52de29a0024b6e20afcbd4a81f161115c2789e16bfa3af",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__sn2/rows.jsonl": "681cf2d6411f32a0370eea9cd1dbc27dbf78896db839e7216703b657cfa44680",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__sn2/sample.json": "161d000686cceeeea8c5ec98bb3b7ecebc40b1092fff50e2f4a0cd8968c03e29",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__sn2/token_information.csv": "d68432dfb81cbd2dd06f690459697c441980a82d0514d8e6cfa9e70c500498cb",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__snar/COMPLETE.json": "2db9beb9eab1d3e5c3a7f49d01b59dc1a5df9d0c2b8f5f78e233b58d55a18b3c",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__snar/observed_equalities.csv": "135a59f677565964ccabd047ac8bbb7f03b8e9bb5fce8949f49a747bebdd59cb",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__snar/rows.jsonl": "34aded8e4126384902937767009ed1429e9131382ce29434fbe67dd9d8ecaeb3",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__snar/sample.json": "728b0f2aa03ca49888db72e31157310499b3b72559d15e694a0428e2f357e85f",
+          "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/sources/cross_task_factorial_v1__snar/token_information.csv": "f269d55e54be4bc756a40735e53ec82048cb72416fef542c5729498a480cc11f",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/31_ncs_evidence/publication_metadata/ncs_evidence_v1/token_audit/README.md": "21570c916d34c8eef34dc0e07b6209a73085a09fbceacfa0734c2daa0c4b10c8",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/31_ncs_evidence/publication_metadata/ncs_evidence_v1/token_audit/observed_equalities.csv": "260f40deeec33536c07b1e2cdfbcb16ff46ad7faeab17a7c266da7d4c9250cc1",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/31_ncs_evidence/publication_metadata/ncs_evidence_v1/token_audit/protocol.json": "fbeee8d782f19a5bff7d27fafbdfaac74eaebe862ddeda5c94ebc1546a91d02a",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/31_ncs_evidence/publication_metadata/ncs_evidence_v1/token_audit/token_information.csv": "63a0aa3b3ee461cbbb4693d53fd2a0e6e66c9606372e4d288955a0026b3179fd"
+        },
+        "phase": "complete",
+        "pins": {
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan_seal.json": "b9aa61d28abe65cc48a225af7ae3c46d5086de9ef2f5dc8d697fb187602aa4cc",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/bh_classic.csv.gz": "3887f6b75897a4dfc328ecdfed4120921eb1ed7e57c3fda43bea5a866d4f7d4c",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/ecreact.csv.gz": "ff6b45dd11ad2e3c9e0061bbdb19def4521b6ee5d84688f32a03250f29670241",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/mech.csv.gz": "2014745c8a555dc23b9f82901895d32a976c35be8d4e595d148f46c81f2000ec",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/ncs_bh.csv.gz": "cb625a58f868249626baf93ba358b306c0662b7401117e45275eb2b420069aef",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/schneider_b.csv.gz": "17306273a5e9fd2e6dc198dffdf25471b6009f8de4172b797b65d086e71d3bcf",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/schneider_u.csv.gz": "69d81c5acb669244eec4c31214e947782775564e286cd6f5f9e10856e5c10c29",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/suzuki_hte.csv.gz": "2f910d73ee74a2f8f0a244ecc1cb4be8618211c88bc4195b20d6488753f84cab",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/syntemp.csv.gz": "ef93462353bcf2c9d855f9255a6c837355e70ea21221d90df8d0ba50a0689cab",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/tpl_b.csv.gz": "b56ec94b4a68938cf5b789bddc192f68846de8a9f7673da979b1793436365300",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/tpl_u.csv.gz": "1376cc2dcdbe4e1cb94228dde6b3ba7bde76cf64e056bce34e1b5c99969f38e6",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_b.csv.gz": "ea7770bacaeaf23c7ecb456e7a1550ebc154091e7ef7b911ad09e0c32304c76f",
+          "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_u.csv.gz": "07d64516778000bc93a1ad96537364263492d812c451aec9d2057b01d9acc20e",
+          "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/inputs/reactions.csv.gz": "ab84c6f3c4a5d69f4b8d401872d4fe82d6287562a4eabaecd42a5c341fddd717",
+          "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/plan.json": "077b5065a96c1073b6f0cba91814f9d842d804fc02097f7166fa210c70f40bf9",
+          "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/plan_seal.json": "76562a92ab574ee1347a9c949f795623f23e1d21aa1a7dd8776fb0d161b8eae8",
+          "/home/labhhc4/.local/share/synrfp-runs/feasibility_frea_v1/populations/inputs.csv.gz": "912504494ecbbc58c1b703ab4a697884a88bf8774a5229894e1c86dee24c894c",
+          "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/inputs/reactions.csv.gz": "43ad2ec12dd413792d306ae7940cfff9274f0504dfa29875baa4bb4ed7ffacde",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/13_yield/bh_features.py": "d9816ed6766e30579fd1af4fbf027c2de027e9db4d9bebaa98bbfa6914d1199b",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/20_focused_factorial/encode_factorial.py": "b9d1e1fc82b1e702bcbb2cef7c513c2b6389ed0dd23b20c520bfbe78fdc7231a",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/31_ncs_evidence/test_token_audit.py": "e8672304f9b77f9e01443a2e6a2e38f89fc2678cb89e5e0ab7255f2659f7b2cf",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/31_ncs_evidence/token_audit.py": "a8138a265aaf6c9a8770e0a50f77f0ebcc74e908912cbccefbf5f7d47fa069fb",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/features.py": "eaf3bc6ff3bad09afd6308dd4ce0132e9e86d0c6bb015a93a328e882524944f5",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/__init__.py": "267e53ee5777d831678e43c0605ffd2362be6c44b34d8092fdd3cc972ec427bb",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/__init__.py": "f19c61dfd54cd9059462c4a8b93f4da55379fca42ccfb4ad1db9b8b3d42eb131",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/batch.py": "63b1e96606d3f0e7c2c074250d6c3eeb455d8fb73e6885f480130a985c04083f",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/core.py": "d158520329711c4d3bb54dcc07379f03a6b1f82e86f20cfd6cca306ff3b85494",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/engine.py": "f4eef4a186c745372293a198ccb7635d5bc20594776dd0fa6cad2dc479f42472",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/encode/result.py": "39f8e200b796758ae2f7e96679fa35d9fccfcc711b90df9354ee0e9684e3fe4a",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/__init__.py": "187f38878bd26290474914872a7dcc8fe9d4ce398e644afc71bc9c8189069fef",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/graph_data.py": "77617f3609d3b6324fdfef8f31bd4f00408c80bedb60b42c1eaaadaf0628a4c5",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/molecule.py": "95c2259a5c719684e26471ccc6f70f750a672e5be81e4b74561bba54d9eddd94",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/graph/reaction.py": "56587d9ef3a32dc06f38f7c4304f01397476cff59815040d60e5198234bb9d6a",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/_hashing.py": "b8386b2506e6299e2572d34c25088e4b507479b33ee13c06a5ce9d47ab6ab030",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/base.py": "c28911a56292a95c9fbd2ff4b3bea92c1e93e23f0ed916aafa68ef47d4be5c9a",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/cw_sketch.py": "ceaa871bd26c10a6d4d87eab2590631e055f1ac652f410c4057e0c89ab846d28",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/minhash_sketch.py": "441f485dbb16e15889c74ca5fbb43043185fdc27fb7a6728e2c251389ed6b55d",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/parity_fold.py": "9b13bb03e526077ef98e677d0b3e20c53871f5989b97a689af76185a11467b14",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/sketchers/srp_sketch.py": "edc28fa3938aa2b3ea603df96a71179c01ed55b3b37951294f22c36cf8ddec4f",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/synrfp.py": "6f9f77fcf53c0e08d19451c027c86d12759fe202ec604594fc279e52b0112761",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/base.py": "5feba069538f0e894400a8892359f9ff124b184d2b533a4e4afc51c0998bb84a",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/map.py": "d2ba222bf2adbfb03d8eb1094e8e6af3d2805da37e674247ce4edea07e65b94c",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/morgan.py": "e57d4ef2e8880777a6d7100c7dedd59bac5a8e9bf46be819732a14fc24262a15",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/nauty.py": "a56aa78c5dcac2889a3fce55854b001399b7bf13cc2281d7ecb2ee80720f1e08",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/path.py": "d11adb2badbbaf7fe309fc1c177812e03f391caf70e5b02ffa092251e8e5b9a1",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/utils.py": "ea326131aa95fb0d2f6079c6c21716ffae8f5cb24a6a1a4854fc88c1be9c9a96",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/tokenizers/wl.py": "c714f9170620f97d2895c4f5cee31d2bc4428a05073a20c6ee83316bc7d86f2d",
+          "/home/labhhc4/Documents/Workspace/Long/SynRFP/synrfp/utils.py": "635a699f99d8fb187b88b3cf17c2b24f741b61bb6a6bd1d337d4e15482363e26",
+          "/var/tmp/synrfp-labhhc4-storage/runs/barrier_allfps_v1/tables/cyclo.csv.gz": "f0a9431516df1edf3dd24a0a6d3054213b5315c2ada084f6f58c2ff936b38ecf",
+          "/var/tmp/synrfp-labhhc4-storage/runs/barrier_allfps_v1/tables/gdb7.csv.gz": "1ae8aa6e6cdaca183a3923d26d2612ae42a14cc4540d4dae4fdd82773591eace",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/b97xd3.csv.gz": "00cc066a7417e7336f36b4062c6fcfc450a5e1ec328e9cb92dbe936eef900bdc",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/e2.csv.gz": "34e13354e90af80964e7a7a22ce5a02417e8562702ce42f935b80b2026f3574b",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/e2sn2.csv.gz": "31aea308a93047222193f5a2c22df5e1c572d8ddd1b463cbd822084fe874479e",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/rdb7.csv.gz": "380680441990a353b7b54baa598ba4647902a9b42ac1f0d0ec873d7edcab13f1",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/rgd1.csv.gz": "8daebf7cb7c66aa611dd32fdc01296d1f9a52c5ba44715ec44998c6484596847",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/sn2.csv.gz": "09b97b8e714adc93fa91174d55ec2e90c9d01609f0a2ad08072e67c9fd4b4f00",
+          "/var/tmp/synrfp-labhhc4-storage/runs/properties_allfps_v1/tables/snar.csv.gz": "3c825bf650d62f7ff3fee56a480729c378a76a982c1df133f4a90bd258fd71d2"
+        },
+        "pins_sha256": "8e6594f0242cc8523e1d175088ccf3ac81540f6eb1e213d5f792d75e89711354",
+        "protocol_sha256": "d0319de1757d88e5e97bc91c839439c370603822144a8a81726e07cd1c8801c1",
+        "sampled_rows": 3072,
+        "schema": "synrfp-bounded-token-information-v1"
+      }
+    },
+    {
+      "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/status.json",
+      "sha256": "ddc4274652e9168b026999ada08518f40c3dcec3c89b6fa06dc7668fa41747a2",
+      "status": {
+        "schema": "synrfp.yield-unattended-progress/4",
+        "completed": 192,
+        "expected": 192,
+        "completed_bert": 128,
+        "expected_bert": 128,
+        "completed_original_gnan": 64,
+        "expected_original_gnan": 64,
+        "pilot_completed": 9,
+        "pilot_expected": 9,
+        "updated_utc": "2026-10-18T12:15:04.257046+00:00",
+        "phase": "complete",
+        "plan_sha256": "8c1a84c7b5c71647490a811f007105748ce3c4db9a046de10e1c375bc0017b37",
+        "execution_sha256": "4fafd847e9bfb7047138f7a392065d2d9b07254adeb4749bcd21ed7cdc56d69a",
+        "final_exhaustive_digest_audit": true,
+        "v2_bert_provisional_outputs_excluded": true
+      }
+    }
+  ],
+  "input_signature": {
+    "script": "d857f7495f02b3b012aa94892c64ebc0f48955940d0fc2a69bc57b2d2c14ca2c",
+    "protocol": "19549706fbbc625fecd1b4b93574f4e949073337c41a9e96bf213ae27cedd294",
+    "receipts": {
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/COMPLETE.json": "edcfeea707dee55283093d85b9374a207175bfa636383ac4f1954893421b524c",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/COMPLETE.json": "7722f75d60522d73d6cba3e7be36d27e2649e75166c4c318686f3899fd019bf7",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/COMPLETE.json": "f52895a0ea16290189bc2eaf3bcbc82e5a5cf6534af84614fab5a60f3c1b9dec"
+    },
+    "common": "7e961f72ed7c0043aac308bfb1f4c69e8a438b6232817c0ed0e27a165fe9c9fc",
+    "watched_file_metadata": [
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json",
+        "size": 33742688,
+        "mtime_ns": 1791821569549193738,
+        "ctime_ns": 1791821569556193800,
+        "inode": 58234005
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/COMPLETE.json",
+        "size": 764,
+        "mtime_ns": 1792118154768511774,
+        "ctime_ns": 1792118154768511774,
+        "inode": 61377122
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/common_candidates.csv",
+        "size": 53902,
+        "mtime_ns": 1792118177060033008,
+        "ctime_ns": 1792118177060033008,
+        "inode": 61516219
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/endpoint_summary.csv",
+        "size": 596769,
+        "mtime_ns": 1792118176867023722,
+        "ctime_ns": 1792118176867023722,
+        "inode": 61516215
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/family_summary.csv",
+        "size": 211598,
+        "mtime_ns": 1792118176962028294,
+        "ctime_ns": 1792118176962028294,
+        "inode": 61516216
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/fold_seed_summary.csv",
+        "size": 2032934,
+        "mtime_ns": 1792118176761018621,
+        "ctime_ns": 1792118176761018621,
+        "inode": 61516214
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/report.md",
+        "size": 2010,
+        "mtime_ns": 1792118177061479864,
+        "ctime_ns": 1792118177061479864,
+        "inode": 61516220
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/task_regime_summary.csv",
+        "size": 85904,
+        "mtime_ns": 1792118176965028439,
+        "ctime_ns": 1792118176965028439,
+        "inode": 61516217
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/common_representative_analysis/task_view_summary.csv",
+        "size": 101294,
+        "mtime_ns": 1792118176967028535,
+        "ctime_ns": 1792118176967028535,
+        "inode": 61516218
+      },
+      {
+        "path": "/home/labhhc4/.local/share/synrfp-runs/cross_task_factorial_v1/plan.json",
+        "size": 9850499,
+        "mtime_ns": 1792012928274718006,
+        "ctime_ns": 1792012928277661153,
+        "inode": 61344483
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/COMPLETE.json",
+        "size": 1265,
+        "mtime_ns": 1791878550279538626,
+        "ctime_ns": 1791878550279538626,
+        "inode": 58500573
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/cells.csv",
+        "size": 2701551,
+        "mtime_ns": 1791878550099838161,
+        "ctime_ns": 1791878550099838161,
+        "inode": 58500564
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/configuration_summary.csv",
+        "size": 379626,
+        "mtime_ns": 1791878550108838308,
+        "ctime_ns": 1791878550108838308,
+        "inode": 58500565
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/cross_panel_consistency.csv",
+        "size": 5499,
+        "mtime_ns": 1791878550168418440,
+        "ctime_ns": 1791878550168418440,
+        "inode": 58500568
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/inputs.json",
+        "size": 1146036,
+        "mtime_ns": 1791878550172831668,
+        "ctime_ns": 1791878550172839351,
+        "inode": 58500570
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/metric_refusals.json",
+        "size": 3,
+        "mtime_ns": 1791878550168802181,
+        "ctime_ns": 1791878550168802181,
+        "inode": 58500569
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/paired_full_interactions.csv",
+        "size": 2078014,
+        "mtime_ns": 1791878550157839107,
+        "ctime_ns": 1791878550157839107,
+        "inode": 58500566
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/panel_full_interactions.csv",
+        "size": 438842,
+        "mtime_ns": 1791878550167839270,
+        "ctime_ns": 1791878550167839270,
+        "inode": 58500567
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/protocol.json",
+        "size": 773,
+        "mtime_ns": 1791878550173364856,
+        "ctime_ns": 1791878550173364856,
+        "inode": 58500571
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/classification/report.md",
+        "size": 1941,
+        "mtime_ns": 1791878550174538124,
+        "ctime_ns": 1791878550174538124,
+        "inode": 58500572
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/COMPLETE.json",
+        "size": 1355,
+        "mtime_ns": 1791926364374689485,
+        "ctime_ns": 1791926364374689485,
+        "inode": 58632162
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/cells.csv",
+        "size": 3709953,
+        "mtime_ns": 1791926364155671508,
+        "ctime_ns": 1791926364155671508,
+        "inode": 58632152
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/configuration_summary.csv",
+        "size": 586235,
+        "mtime_ns": 1791926364167671404,
+        "ctime_ns": 1791926364168671396,
+        "inode": 58632153
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/cross_panel_consistency.csv",
+        "size": 5351,
+        "mtime_ns": 1791926364248466370,
+        "ctime_ns": 1791926364248466370,
+        "inode": 58632156
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/inputs.json",
+        "size": 886476,
+        "mtime_ns": 1791926364252878788,
+        "ctime_ns": 1791926364252878788,
+        "inode": 58632159
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/metric_refusals.json",
+        "size": 3,
+        "mtime_ns": 1791926364250757105,
+        "ctime_ns": 1791926364250757105,
+        "inode": 58632158
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/paired_full_interactions.csv",
+        "size": 3107704,
+        "mtime_ns": 1791926364232670845,
+        "ctime_ns": 1791926364232670845,
+        "inode": 58632154
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/panel_full_interactions.csv",
+        "size": 679541,
+        "mtime_ns": 1791926364247670715,
+        "ctime_ns": 1791926364247670715,
+        "inode": 58632155
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/protocol.json",
+        "size": 769,
+        "mtime_ns": 1791926364253207077,
+        "ctime_ns": 1791926364253207077,
+        "inode": 58632160
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/report.md",
+        "size": 1901,
+        "mtime_ns": 1791926364253984596,
+        "ctime_ns": 1791926364253984596,
+        "inode": 58632161
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/clustering/seed_stability.csv",
+        "size": 75006,
+        "mtime_ns": 1791926364249670698,
+        "ctime_ns": 1791926364249670698,
+        "inode": 58632157
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/COMPLETE.json",
+        "size": 1256,
+        "mtime_ns": 1791846227022004041,
+        "ctime_ns": 1791846227022004041,
+        "inode": 59012703
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cells.csv",
+        "size": 2806450,
+        "mtime_ns": 1791846226827001051,
+        "ctime_ns": 1791846226827001051,
+        "inode": 59012694
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/configuration_summary.csv",
+        "size": 122935,
+        "mtime_ns": 1791846226830001097,
+        "ctime_ns": 1791846226830001097,
+        "inode": 59012695
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/cross_panel_consistency.csv",
+        "size": 4666,
+        "mtime_ns": 1791846226905744997,
+        "ctime_ns": 1791846226905744997,
+        "inode": 59012698
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/inputs.json",
+        "size": 1018956,
+        "mtime_ns": 1791846226912458244,
+        "ctime_ns": 1791846226912458244,
+        "inode": 59012700
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/metric_refusals.json",
+        "size": 3,
+        "mtime_ns": 1791846226906195299,
+        "ctime_ns": 1791846226906195299,
+        "inode": 59012699
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/paired_full_interactions.csv",
+        "size": 1944870,
+        "mtime_ns": 1791846226900002171,
+        "ctime_ns": 1791846226900002171,
+        "inode": 59012696
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/panel_full_interactions.csv",
+        "size": 138968,
+        "mtime_ns": 1791846226904002232,
+        "ctime_ns": 1791846226904002232,
+        "inode": 59012697
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/protocol.json",
+        "size": 764,
+        "mtime_ns": 1791846226913079415,
+        "ctime_ns": 1791846226913079415,
+        "inode": 59012701
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/publication_metadata/all_endpoint_factorial_full_v1/yield/report.md",
+        "size": 1913,
+        "mtime_ns": 1791846226915256773,
+        "ctime_ns": 1791846226915256773,
+        "inode": 59012702
+      },
+      {
+        "path": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/30_cross_task_factorial/publication_metadata/cross_task_factorial_v1/cells.csv",
+        "size": 2217458,
+        "mtime_ns": 1792118154729945269,
+        "ctime_ns": 1792118154729945269,
+        "inode": 61376572
+      }
+    ],
+    "optional": {
+      "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/status.json": "da433a83fe9a1014ad5a0c71497551c31b006302beb0b8ffa7efa7fa5e94d264",
+      "/home/labhhc4/.local/share/synrfp-runs/ncs_evidence_v1/token_audit/COMPLETE.json": "1c48652800cbddc77880af740a3ceb093286c93c6b6ee518cfc5fc7afac0214b",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/17_yield_baselines/publication_metadata/matched_full_v3/unattended_v4/status.json": "ddc4274652e9168b026999ada08518f40c3dcec3c89b6fa06dc7668fa41747a2"
+    }
+  }
+}
