@@ -1,0 +1,35 @@
+{
+  "artifacts_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/coverage.json": "cca3a11050feb574b6c079235486331c064e17acc067b3f02b5799a9a04bbced",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/fingerprints.npz": "7c8c5764e66fcfd914f4d5f6bf629f0a3e18828da8100680fac755ab731b4ada",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/partition_full.json": "4553c42140b14ec72f557b6289df7d711cd141a28feed1833f47b5c42e1919da",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/partition_full.npz": "e3fd5bd095bb9da506e565ae51a6eef190d6c014bbc8be2eed7a3b498559e266",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/templates.json": "b4edd7e5132cdb9145b75343fb7705ea1424cd02927c164ec242a723f8ad3261"
+  },
+  "finished_utc": "2026-10-19T12:24:22.576460+00:00",
+  "full_source_rows_processed": 50016,
+  "input_atom_mapping": "author-supplied, never inferred/remapped",
+  "known_class_count_used": false,
+  "native_sparse_count_tanimoto_butina_preserved": true,
+  "native_train_valid_rows": 43381,
+  "paper_77_clusters_not_required_or_assumed": true,
+  "partition": {
+    "fingerprints_sha256": "7c8c5764e66fcfd914f4d5f6bf629f0a3e18828da8100680fac755ab731b4ada",
+    "finished_utc": "2026-10-19T12:24:22.400780+00:00",
+    "labels_or_class_count_used": false,
+    "merged_nonempty_clusters": 77,
+    "n": 43381,
+    "native_order": "upstream train then valid, preserving source order within each split",
+    "partition_sha256": "e3fd5bd095bb9da506e565ae51a6eef190d6c014bbc8be2eed7a3b498559e266",
+    "peak_rss_gib": 2.197906494140625,
+    "phase": "complete",
+    "raw_clusters": 378,
+    "seconds": 508.1851429340895
+  },
+  "phase": "complete",
+  "plan_sha256": "45b789e930b5912101496429de9c0c4a8ffc412f3cadc15284d3d4b3c9f231f0",
+  "source_test_rows_used_for_clustering": false,
+  "source_test_rows_used_for_template_correction": true,
+  "total_seconds": 2735.1282055950724,
+  "upstream_full_method_reproduced": "standalone template-clustering component; inference models outside scope"
+}

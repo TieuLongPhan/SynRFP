@@ -1,0 +1,42 @@
+{
+  "task": "clustering",
+  "factors": {
+    "tokenizer": [
+      "wl",
+      "morgan",
+      "path"
+    ],
+    "radius": [
+      2,
+      3
+    ],
+    "sketch": [
+      "parity",
+      "minhash",
+      "cw"
+    ],
+    "mode": [
+      "delta",
+      "union",
+      "delta_union",
+      "roles"
+    ]
+  },
+  "reference": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta"
+  },
+  "interaction_orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "row_cap": null,
+  "configuration_selected": null,
+  "uncertainty": "Descriptive correlated-repeat SD only; no p-values/CI",
+  "source_sha256": "674453f339d0ada2e7d026d4ccab9deae9ac07571b78b63296552c62ae8f5acd",
+  "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b"
+}

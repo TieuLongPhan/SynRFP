@@ -1,0 +1,66 @@
+{
+  "admitted_train_valid_rows": 8677,
+  "artifacts_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/pilot/coverage.json": "f4e8b1059b32bf9bd9973f10e11ed73e4dcf6ffd1ea78c97dfe67ccc5f0367a9",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/pilot/fingerprints.npz": "3b53a9cd4cd911e0a02a3a62c675337c9e300784e86cf143548d2f0d6b3c2397",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/pilot/templates.json": "e8282929c8182f20cde5b637c2398c370e79f30cd46779b725b492f52a885586",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/pilot/timings.json": "0ad13fe77de8b59e7aa89389f0c9dc65e6f3745a1dcc0d6f50e58a2d2b734722"
+  },
+  "finished_utc": "2026-10-19T11:38:43.514583+00:00",
+  "measurements": [
+    {
+      "fingerprints_sha256": "3b53a9cd4cd911e0a02a3a62c675337c9e300784e86cf143548d2f0d6b3c2397",
+      "finished_utc": "2026-10-19T11:38:15.179443+00:00",
+      "labels_or_class_count_used": false,
+      "merged_nonempty_clusters": 4,
+      "n": 1000,
+      "native_order": "upstream train then valid, preserving source order within each split",
+      "partition_sha256": "2207925489d4c11ce93aecf7395030e123d35ee84ffafe6e8a5c0ec7ed6a88e0",
+      "peak_rss_gib": 0.11997222900390625,
+      "phase": "complete",
+      "raw_clusters": 125,
+      "seconds": 0.2691364719066769
+    },
+    {
+      "fingerprints_sha256": "3b53a9cd4cd911e0a02a3a62c675337c9e300784e86cf143548d2f0d6b3c2397",
+      "finished_utc": "2026-10-19T11:38:22.278895+00:00",
+      "labels_or_class_count_used": false,
+      "merged_nonempty_clusters": 21,
+      "n": 5000,
+      "native_order": "upstream train then valid, preserving source order within each split",
+      "partition_sha256": "345c1f4b3a6465717248c458055e20e29903a6d607ac5d6a8a3d67df0347e0d8",
+      "peak_rss_gib": 0.11997222900390625,
+      "phase": "complete",
+      "raw_clusters": 221,
+      "seconds": 6.705427255947143
+    },
+    {
+      "fingerprints_sha256": "3b53a9cd4cd911e0a02a3a62c675337c9e300784e86cf143548d2f0d6b3c2397",
+      "finished_utc": "2026-10-19T11:38:43.415073+00:00",
+      "labels_or_class_count_used": false,
+      "merged_nonempty_clusters": 32,
+      "n": 8677,
+      "native_order": "upstream train then valid, preserving source order within each split",
+      "partition_sha256": "57bc0831b3edd415bcaf869b7c161a53ded78079745b2b781ed2f69b3c65fdb5",
+      "peak_rss_gib": 0.16771697998046875,
+      "phase": "complete",
+      "raw_clusters": 264,
+      "seconds": 20.699179321993142
+    }
+  ],
+  "phase": "ready",
+  "pilot_only": true,
+  "pilot_template_correction_population": "10,000 label-blind hash-selected source rows",
+  "plan_sha256": "45b789e930b5912101496429de9c0c4a8ffc412f3cadc15284d3d4b3c9f231f0",
+  "production_recomputes_corpus_wide_correction": true,
+  "projection": {
+    "basis": "largest native pilot elapsed/RSS times unordered-pair ratio",
+    "conservative_rss_gib": 4.51312093982418,
+    "exact_dense_neighbor_memory_not_guaranteed": true,
+    "largest_pilot_n": 8677,
+    "quadratic_seconds": 556.9972679340027,
+    "target_n_upper_bound": 45009
+  },
+  "selected_source_rows": 10000,
+  "total_seconds": 577.015051708091
+}

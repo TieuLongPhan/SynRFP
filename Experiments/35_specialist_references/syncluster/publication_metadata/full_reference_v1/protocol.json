@@ -1,0 +1,83 @@
+{
+  "author_source_rows": 50016,
+  "comparison": {
+    "algorithm": "MiniBatchKMeans",
+    "algorithm_controlled": false,
+    "environment": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    },
+    "fp_seed": 1,
+    "k_rule": "min(512,max(2,round(sqrt(n/2))))",
+    "native_author_rows_exactly_matched": true,
+    "optimizer_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "parameters": {
+      "batch_size": 8192,
+      "max_iter": 100,
+      "max_no_improvement": 10,
+      "n_init": 3,
+      "reassignment_ratio": 0.01,
+      "tol": 0.0
+    },
+    "preset": "synrfp-wl-r2-b2048-parity-delta",
+    "settings": {
+      "agents": "both",
+      "bbit": 2,
+      "edge_attrs": [
+        "order"
+      ],
+      "node_attrs": [
+        "element",
+        "aromatic",
+        "charge",
+        "hcount"
+      ]
+    }
+  },
+  "correspondence_tables": {
+    "schneider_ub": "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/tables/ds_schneider_ub.pkl",
+    "uspto50k_ub": "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/tables/ds_uspto50k_ub.pkl"
+  },
+  "created_utc": "2026-10-19T11:22:26.875536+00:00",
+  "full_template_correction_includes_source_test": true,
+  "large_unmapped_tpl_ecreact_outside_native_quadratic_reference": true,
+  "main_canonical_tables_unmapped": true,
+  "maximum_train_valid_rows": 45009,
+  "native_method": {
+    "algorithm": "Butina",
+    "class_labels_used_for_fit_or_tuning": false,
+    "distance": "1-RDKit generalized Tanimoto",
+    "distance_cutoff": 0.6,
+    "morgan_feature_radius": 2,
+    "reordering": true,
+    "residual_min_size": 50,
+    "sparse_signed_counts": true,
+    "template_radius": 1
+  },
+  "native_partition_order": "train then valid, original source order within split",
+  "no_inferred_or_external_atom_maps": true,
+  "phase": "frozen",
+  "pilot_selection": "SHA256(position, fixed seed42), no labels",
+  "pilot_source_sizes": [
+    1000,
+    5000,
+    10000
+  ],
+  "schema": "syncluster-full-mapped-author-reference-v1",
+  "statistical_scope": "ten initializations on one chemical population, not ten independent datasets",
+  "upstream_commit": "c2f55ba19453bc542bb65b127ab6db567b87f344",
+  "weights_and_raw_records_local_only": true
+}

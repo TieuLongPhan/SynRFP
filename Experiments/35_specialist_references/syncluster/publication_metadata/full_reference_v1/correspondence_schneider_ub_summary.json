@@ -1,0 +1,11 @@
+{
+  "author_admitted_train_valid_rows": 43381,
+  "author_with_any_match": 282,
+  "author_with_unique_match": 248,
+  "canonical_full_rows": 50000,
+  "canonical_rows_covered": 322,
+  "duplicate_correspondence_retained": true,
+  "identity_scope": "canonical isomeric endpoint molecules, atom maps erased; not joint placement identity",
+  "no_matching_by_label_or_row_position": true,
+  "this_is_not_a_full_canonical_native_comparison": true
+}

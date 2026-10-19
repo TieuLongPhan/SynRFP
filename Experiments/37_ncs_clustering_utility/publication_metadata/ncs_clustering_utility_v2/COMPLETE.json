@@ -1,0 +1,25 @@
+{
+  "phase": "complete",
+  "schema": "synrfp37-clustering-utility-v2-complete",
+  "selections": 280,
+  "models": 560,
+  "model_replays": 560,
+  "exact_keyed_grid_verified": true,
+  "all_full_predictions_replayed": true,
+  "plan_sha256": "32cfecdf45ffbaa46ffe112e972fec53d8d218e8bb93b16214f802326b2a6b78",
+  "fit_completion_sha256": "c4250d79d4033fdf4c609b8c03a28d09521cbfb93e8cfea381a394489bdaa4b9",
+  "outputs_sha256": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/37_ncs_clustering_utility/publication_metadata/ncs_clustering_utility_v2/heldout_cells.csv": "017114f035f0a2ce3b7cab5cb82d7e892a8cc22fd051e806ee861e7cedc46b31",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/37_ncs_clustering_utility/publication_metadata/ncs_clustering_utility_v2/heldout_summary.csv": "a4d144d240cb4c16d8be645c59f14926819b6a50d4a601074c89b7d3c84ebb31",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/37_ncs_clustering_utility/publication_metadata/ncs_clustering_utility_v2/selection_cells.csv": "5a25fd09a23e4412d4dd05eaccd6ba519fc866a1becca68fc6d5f37f36f2dcbf",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/37_ncs_clustering_utility/publication_metadata/ncs_clustering_utility_v2/selection_summary.csv": "488300085a4e6c55ece6e54aff04852dde343765b665a6a0cf8fd33889bd8c4c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/37_ncs_clustering_utility/publication_metadata/ncs_clustering_utility_v2/timing_model_sizes.csv": "a6dabb195cfb1948880ece58e976bffb5610579295cdb5ae917336c7013ca0c2",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/37_ncs_clustering_utility/publication_metadata/ncs_clustering_utility_v2/report.md": "9a7f6afbc8979870fe509c906888486ef12fc0001ee37bfdb0ec7abb7b598b27"
+  },
+  "selection_exploratory": true,
+  "independent_outer_tests": 1,
+  "elapsed_scoring_seconds": 28.79435465601273,
+  "peak_rss_bytes": 1575157760,
+  "universal_clustering_win_claim": false,
+  "finished_utc": "2026-10-19T13:50:21.831224+00:00"
+}

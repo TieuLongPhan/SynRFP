@@ -1,0 +1,22 @@
+{
+  "common_native_rows": 43381,
+  "finished_utc": "2026-10-19T12:44:44.385405+00:00",
+  "full_native_partition_replay_sha256": "14711bee23beea5abc7db40c3bc8c7c87a06e33e5b4955d2abcd7420d5b0b4b7",
+  "full_source_rows": 50016,
+  "matched_centers_predictions_replayed": true,
+  "matched_synrfp_fits": 10,
+  "native_full_reference": true,
+  "native_partition_and_source_artifacts_verified": true,
+  "outputs_sha256": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/center_replay.json": "3b417a9ae546ce07ca1de2fe48e1e57884cbeaac15eacb290ff480a00dad15cb",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/comparison.json": "14845666b4169d235668aba609dac95c2eb402d75285d56d36fd48b150f7eba1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/comparison_cells.csv": "473f7ea78c5ffacefb014a87f87c5e5f4bd161395d138fe778827f208ddfbc61",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/correspondence_schneider_ub_summary.json": "0f4536a407eeb09b67f4d0c961a148391d136a5654ecc821114d7ca8176bd41f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/correspondence_uspto50k_ub_summary.json": "930195b2f8f0256aa94211253bf5b3fa5ee877ebc457f32d780388beba037c41",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/native_completion.json": "0aaaab206a0a3f712c69c14f08c92d96e5214782a61be5f820305678b1653b2e",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/pilot.json": "bb3248f66daea8536478ff019fc296a6abf05a46c8996b4adf595f45ad5ba499",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/protocol.json": "6bd9a56390c6d9db5f7eeb24593e7d2ff300317f2ca3536a662b0a46ac4ea596"
+  },
+  "phase": "complete",
+  "requires_no_gpu": true
+}

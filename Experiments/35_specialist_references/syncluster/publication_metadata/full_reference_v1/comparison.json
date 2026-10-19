@@ -1,0 +1,94 @@
+{
+  "algorithm_controlled": false,
+  "author_merged": {
+    "actual_clusters": 77,
+    "ami": 0.46477275504617943,
+    "ari": 0.16556747830288096,
+    "largest_cluster_fraction": 0.12281874553375902,
+    "method": "SynCluster_native_residual_merged",
+    "n": 43381,
+    "nmi": 0.46641561668417336,
+    "purity": 0.7838685138655171,
+    "seed": "native_order",
+    "singleton_reaction_fraction": 0.0
+  },
+  "author_raw": {
+    "actual_clusters": 378,
+    "ami": 0.4761608303896755,
+    "ari": 0.16903552433095956,
+    "largest_cluster_fraction": 0.12281874553375902,
+    "method": "SynCluster_native_raw",
+    "n": 43381,
+    "nmi": 0.48146052501115366,
+    "purity": 0.8271132523454969,
+    "seed": "native_order",
+    "singleton_reaction_fraction": 0.0023743113344551763
+  },
+  "end_to_end_method_comparison": true,
+  "finished_utc": "2026-10-19T12:44:44.343801+00:00",
+  "full_native_source_processed_rows": 50016,
+  "full_native_template_correction_included_test_inputs": true,
+  "main_canonical_correspondence": {
+    "schneider_ub": {
+      "author_admitted_train_valid_rows": 43381,
+      "author_with_any_match": 282,
+      "author_with_unique_match": 248,
+      "canonical_full_rows": 50000,
+      "canonical_rows_covered": 322,
+      "duplicate_correspondence_retained": true,
+      "identity_scope": "canonical isomeric endpoint molecules, atom maps erased; not joint placement identity",
+      "no_matching_by_label_or_row_position": true,
+      "this_is_not_a_full_canonical_native_comparison": true
+    },
+    "uspto50k_ub": {
+      "author_admitted_train_valid_rows": 43381,
+      "author_with_any_match": 43040,
+      "author_with_unique_match": 42504,
+      "canonical_full_rows": 50016,
+      "canonical_rows_covered": 43095,
+      "duplicate_correspondence_retained": true,
+      "identity_scope": "canonical isomeric endpoint molecules, atom maps erased; not joint placement identity",
+      "no_matching_by_label_or_row_position": true,
+      "this_is_not_a_full_canonical_native_comparison": true
+    }
+  },
+  "n": 43381,
+  "native_author_class_count_unknown": true,
+  "no_paper_77_cluster_or_0_784_purity_claim": true,
+  "optimizer_seeds_are_not_independent_chemical_replicates": true,
+  "phase": "complete",
+  "same_rows": true,
+  "selected_synrfp": {
+    "actual_clusters": {
+      "mean": 147.0,
+      "std": 0.0
+    },
+    "ami": {
+      "mean": 0.4222041448164605,
+      "std": 0.006402403385905784
+    },
+    "ari": {
+      "mean": 0.050790561809167245,
+      "std": 0.0021631558728250843
+    },
+    "largest_cluster_fraction": {
+      "mean": 0.03405638413130172,
+      "std": 0.014271169106160447
+    },
+    "nmi": {
+      "mean": 0.42498897146608394,
+      "std": 0.006369201197033346
+    },
+    "purity": {
+      "mean": 0.8518222263202786,
+      "std": 0.010803754612973624
+    },
+    "singleton_reaction_fraction": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "source_plan_sha256": "45b789e930b5912101496429de9c0c4a8ffc412f3cadc15284d3d4b3c9f231f0",
+  "synrfp_seed_stability_mean_ari": 0.5273630955606887,
+  "test_labels_not_used_and_no_predictive_generalization_claim": true
+}

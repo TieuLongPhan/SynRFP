@@ -1,0 +1,22 @@
+{
+  "phase": "complete",
+  "task": "clustering",
+  "cells": 4320,
+  "finished_utc": "2026-10-13T21:19:24.369564+00:00",
+  "plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+  "source_sha256": "674453f339d0ada2e7d026d4ccab9deae9ac07571b78b63296552c62ae8f5acd",
+  "canonical_metric_and_artifact_checks_passed": true,
+  "configuration_selected": null,
+  "outputs_sha256": {
+    "cells.csv": "e622c333c36c6a9a26465cc956864caf7790e78d312eb250a694411feefa1368",
+    "configuration_summary.csv": "44180d5d3199a33bf47851e860a06da3580d150573c2e4a73502375ab75e1b75",
+    "paired_full_interactions.csv": "86d4d2856bc3c8ca5439f4f9c0ddba2e088df2e0634de5fe2f77ef629d0db19b",
+    "panel_full_interactions.csv": "f44ef7e88c2fdf47cf05f86d06ecc09374f6983a8b414ebdf78cf75d924b6d08",
+    "cross_panel_consistency.csv": "90700093be97a718f7cbd3bd347cec28793821f5df807291e77162c02e8c3a8b",
+    "seed_stability.csv": "55b8951d1b779ab0d652a4380f4c694428a4ad061ba6e5fafbd83afb704d4b49",
+    "metric_refusals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs.json": "bcbcb95236da3e411212285eef89f7df9713700300ec3221fab7acf2fad50179",
+    "protocol.json": "97dabe1e22a5885dffba67765e7aa517967ce562221f14cc2afdb75b301c57b3",
+    "report.md": "bafeb0aac06e9152895d2ebfbb3a4ce8f779b33042c8cb58a3c35e3bc2e059bd"
+  }
+}
