@@ -1,0 +1,22 @@
+[Unit]
+Description=Five reviewed independent Path clustering CPU fits
+After=default.target
+Conflicts=synrfp-task-preset44-v1.service synrfp-task-preset44-parallel-v2.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/labhhc4/Documents/Workspace/Long/SynRFP
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=OMP_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+ExecStart=/usr/bin/taskset -c 31 /home/labhhc4/anaconda3/envs/synrfp/bin/python -u /home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/44_task_preset_comparison/controller_parallel_v3.py
+CPUQuota=10%
+MemoryMax=256M
+MemorySwapMax=0
+KillMode=control-group
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

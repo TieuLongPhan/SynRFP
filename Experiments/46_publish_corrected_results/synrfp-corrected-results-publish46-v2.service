@@ -1,0 +1,19 @@
+[Unit]
+Description=Independent corrected-result publication with five-lane Path provenance
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/labhhc4/Documents/Workspace/Long/SynRFP
+ExecStart=/usr/bin/taskset -c 31 /home/labhhc4/anaconda3/envs/synrfp/bin/python -u /home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/46_publish_corrected_results/controller_runtime_v2.py
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+CPUQuota=10%
+MemoryMax=256M
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=60
+
+[Install]
+WantedBy=default.target

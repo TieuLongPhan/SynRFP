@@ -1,0 +1,22 @@
+[Unit]
+Description=Reviewed Morgan and Path priority while future blind-clustering dispatch is paused
+After=default.target
+Conflicts=synrfp-morgan43-v1.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/labhhc4/Documents/Workspace/Long/SynRFP
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=OMP_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+ExecStart=/usr/bin/taskset -c 31 /home/labhhc4/anaconda3/envs/synrfp/bin/python -u /home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/controller_priority_v2.py
+CPUQuota=10%
+MemoryMax=256M
+MemorySwapMax=0
+KillMode=control-group
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

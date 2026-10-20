@@ -1,0 +1,22 @@
+{
+  "candidate": "synrfp-path-r2-b2048-parity-delta",
+  "classification_deferred": true,
+  "component": "path",
+  "initialization_seeds": 10,
+  "main_shared_control_preserved": true,
+  "scientific_gate": {
+    "baseline_cells": 1200,
+    "candidate_cells": 240,
+    "cells_with_shared_control": 1680,
+    "component": "path",
+    "initialization_seeds": 10,
+    "phase": "complete",
+    "primary_cells": 1440,
+    "scientific_receipts_sha256": {
+      "/home/labhhc4/.local/share/synrfp-runs/task_preset_comparison_v1/COMPLETE.json": "e1ed610d119799e86604cd7d867ba761a60a3e6d4a5dcfef2003d8c2ca0d7528",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/44_task_preset_comparison/publication_metadata/task_preset_comparison_v1/clustering/COMPLETE.json": "ae50cb6bba5ccdedbe326421aef57e498fde3a45b21f658dc234ab622d2b408c"
+    }
+  },
+  "task": "clustering",
+  "weights_local_only": true
+}

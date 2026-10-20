@@ -1,0 +1,26 @@
+{
+  "all_keyed_cells_verified": true,
+  "all_retained_artifact_hashes_verified": true,
+  "baseline_cells": 1200,
+  "candidate": "synrfp-path-r2-b2048-parity-delta",
+  "candidate_cells": 240,
+  "cells_with_shared_control": 1680,
+  "classification_deferred": true,
+  "completed_utc": "2026-10-20T17:53:40.113240+00:00",
+  "decision_sha256": "5f4739de764fe5ba2e2ecdcc025853f1aa16d8e09be15c658b3cb0fa2ad69acf",
+  "exploratory": true,
+  "initialization_seeds": 10,
+  "outputs_sha256": {
+    "cells.csv": "4be88e761811e56817ba8081f015bccada7a827566b4f47fe1b0bd3b7b47fdff",
+    "inputs.json": "9a88ab253b6ac11926505f78cff42bdde756ecdb64c8b58c111cda7753501b70",
+    "protocol.json": "f1555a021fe5888583fac18c4dee44bfab55b45139bbf11abbc07fddf20b0ce2",
+    "summary.csv": "1240cd8e59616c3680b4ede622745208aabc7566daf4261dcc18074e8e1667a0",
+    "summary_with_shared_control.csv": "193c71089ee06ea57846d2ba44a35316c6c658ce87495db8eaca840ad0141e54",
+    "with_shared_control.csv": "67e339d013e97443ee9bc54ec13ed11ba96bc592e295a3f1a778295116fba25d"
+  },
+  "phase": "complete",
+  "primary_cells": 1440,
+  "schema": "synrfp-task-preset-comparison-complete-v1",
+  "scientific_plan_sha256": "61f5ebda1799555b0ec4b02cfd006bce2f82298f2ce2297f0e0221c6ca74c4cb",
+  "task": "clustering"
+}

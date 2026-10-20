@@ -1,0 +1,22 @@
+{
+  "phase": "complete",
+  "stage": "clustering",
+  "plan_sha256": "61f5ebda1799555b0ec4b02cfd006bce2f82298f2ce2297f0e0221c6ca74c4cb",
+  "decision_sha256": "5f4739de764fe5ba2e2ecdcc025853f1aa16d8e09be15c658b3cb0fa2ad69acf",
+  "sources_sha256": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/44_task_preset_comparison/clustering.py": "37bb661dc1110ca3afddc4e6412aa1e310640a7d7267c2d3a943557c668bbf88",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/44_task_preset_comparison/test_clustering.py": "cbb66257761559b08d9f29d8f1e6f14c768a740d084c373f381fd498cdaae7dc",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/34_final_comparison/clustering.py": "a8b63fb2bab913fce631ee6362df8ffb20754a6c9a158f67cd6787d083111b56",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/34_final_comparison/clustering_recovery_v3.py": "e6f347a06c0f907b1f94b15146315bb2b42bcc91d11f6e45c86651bc1e816353",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/07_clustering.py": "72b955100887654c995dfbd0834463720df486929de3dc9d4d68d32b81eec1ac",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/features.py": "eaf3bc6ff3bad09afd6308dd4ce0132e9e86d0c6bb015a93a328e882524944f5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/data.py": "dc752cb2174a7efbc6b0d696dd6f620996e94a012346c553fa7d30243bbb0823",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/config.py": "c813cd4479a21e933779c875a31171722dec384f5045198df63e9ef9f954b2e3",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/metrics.py": "1336d91cd7494058e2439f90d3aa006135d6471a044791c17489fdf3f7572f6d"
+  },
+  "expected_items": 240,
+  "fresh_fits": 200,
+  "population_copies": 40,
+  "baseline_cells": 1200,
+  "finished_utc": "2026-10-20T12:12:20.219457+00:00"
+}

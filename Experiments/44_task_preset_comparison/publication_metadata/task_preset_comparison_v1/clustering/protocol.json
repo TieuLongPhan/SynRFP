@@ -1,0 +1,30 @@
+{
+  "actual_candidate_fits": 200,
+  "baseline_cells_reused": 1200,
+  "candidate_cells": 240,
+  "class_count_blind_comparison": "Separate study41; no results are replaced or pooled.",
+  "classification": "Deferred by the user; no classification main or GPU work is completed here.",
+  "cv_folds": false,
+  "declaration": "Explicit Path challenger; corrected Morgan may change the eventual task winner.",
+  "exploratory": true,
+  "identical_population_copies": 40,
+  "methods_with_shared_control": 7,
+  "primary_methods": 6,
+  "protocol": "known_k_10_seeds",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "selected_config": "synrfp-path-r2-b2048-parity-delta",
+  "selected_status": "provisional_user_requested_challenger",
+  "task": "clustering",
+  "unchanged_shared_preset": "synrfp-wl-r2-b2048-parity-delta"
+}
