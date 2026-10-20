@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "synrfp"
-version = "0.0.3"
+version = "0.0.4"
 description = "Mapping-free, graph-based reaction fingerprints"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -71,6 +71,7 @@ include = [
   "/tests",
   "/LICENSE",
   "/README.md",
+  "/CHANGELOG.md",
   "/pyproject.toml",
 ]
 
