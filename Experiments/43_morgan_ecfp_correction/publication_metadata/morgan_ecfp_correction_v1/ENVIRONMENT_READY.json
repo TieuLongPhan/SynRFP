@@ -1,0 +1,74 @@
+{
+  "schema": "morgan43-stage-environments-v1",
+  "phase": "complete",
+  "stage_python": {
+    "encode": "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+    "clustering": "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+    "mlp": "/home/labhhc4/anaconda3/envs/synprop/bin/python",
+    "report": "/home/labhhc4/anaconda3/envs/synrfp/bin/python"
+  },
+  "runtime_versions": {
+    "synrfp": {
+      "python": "/home/labhhc4/anaconda3/envs/synrfp/bin/python",
+      "versions": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "synkit": "1.6.2",
+        "networkx": "3.6.1",
+        "datasketch": "2.0.0",
+        "torch": null
+      },
+      "sources_sha256": {
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/METADATA": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/scikit_learn-1.9.1.dist-info/METADATA": "32e503c710a61e4e04be4edb450f9f8141233ac6af3f3db59a877667538fa4ec",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/synkit-1.6.2.dist-info/METADATA": "be5b3c9486958920f9df2efc74a4fe87da5f48d122e7c02d00738ad8d8b0e03c",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/METADATA": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/datasketch-2.0.0.dist-info/METADATA": "12c42bbd090a0b52eed1912c9253f24114d82d2bca64c0aca892c43ea74e7446",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/datasketch/minhash.py": "0e46ddd5b3e41787dc576c01b2b0c744c7ff3cb151dc97a9f9fa7c9baf1f6242",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/datasketch/hashfunc.py": "42ed5bd5572188af1bf5c80ab131a07bff65bb91660a2522eac4d4228fef760b"
+      }
+    },
+    "synprop": {
+      "python": "/home/labhhc4/anaconda3/envs/synprop/bin/python",
+      "versions": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.0",
+        "synkit": "1.6.0",
+        "networkx": "3.6.1",
+        "datasketch": null,
+        "torch": "2.13.0"
+      },
+      "sources_sha256": {
+        "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/numpy-2.4.6.dist-info/METADATA": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0",
+        "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/scikit_learn-1.9.0.dist-info/METADATA": "ee61a579f42d3edabe3e483db483475e33fffec04d7f3e69c539527bd93eaca6",
+        "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/synkit-1.6.0.dist-info/METADATA": "c7315661e58d3b6751fc7c24f8e93f48db04ddedaca052d917c7eb4a56fb1582",
+        "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/networkx-3.6.1.dist-info/METADATA": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a",
+        "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/torch-2.13.0.dist-info/METADATA": "63e791c950d477e7107e22f186e91ae81fbca5beec545c013a71edbde72f6c00"
+      }
+    }
+  },
+  "sources_sha256": {
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/METADATA": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/scikit_learn-1.9.1.dist-info/METADATA": "32e503c710a61e4e04be4edb450f9f8141233ac6af3f3db59a877667538fa4ec",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/synkit-1.6.2.dist-info/METADATA": "be5b3c9486958920f9df2efc74a4fe87da5f48d122e7c02d00738ad8d8b0e03c",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/METADATA": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/datasketch-2.0.0.dist-info/METADATA": "12c42bbd090a0b52eed1912c9253f24114d82d2bca64c0aca892c43ea74e7446",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/datasketch/minhash.py": "0e46ddd5b3e41787dc576c01b2b0c744c7ff3cb151dc97a9f9fa7c9baf1f6242",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/datasketch/hashfunc.py": "42ed5bd5572188af1bf5c80ab131a07bff65bb91660a2522eac4d4228fef760b",
+    "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/numpy-2.4.6.dist-info/METADATA": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0",
+    "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/scikit_learn-1.9.0.dist-info/METADATA": "ee61a579f42d3edabe3e483db483475e33fffec04d7f3e69c539527bd93eaca6",
+    "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/synkit-1.6.0.dist-info/METADATA": "c7315661e58d3b6751fc7c24f8e93f48db04ddedaca052d917c7eb4a56fb1582",
+    "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/networkx-3.6.1.dist-info/METADATA": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a",
+    "/home/labhhc4/anaconda3/envs/synprop/lib/python3.11/site-packages/torch-2.13.0.dist-info/METADATA": "63e791c950d477e7107e22f186e91ae81fbca5beec545c013a71edbde72f6c00",
+    "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/operations/pre_environment_pilot_v1/PILOT_READY.json": "5d9e82081ea2b4c8f621c9ed7786191473d83fb8b3d61f66efb7276ab6102519",
+    "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/operations/legacy_cache_replay_synrfp_v1.json": "080957d04512b32ca0e5f160eb53829baf8cc6f1927b9a886fca27fd6b7158e5"
+  },
+  "cpu_pilot_receipt_sha256": "a2459e2273a73a87089efd93ebc7673e9bc845812025d20bb06c8203cd87ef75",
+  "original_mlp_initialization_pilot_path": "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/operations/pre_environment_pilot_v1/PILOT_READY.json",
+  "original_mlp_initialization_pilot_sha256": "5d9e82081ea2b4c8f621c9ed7786191473d83fb8b3d61f66efb7276ab6102519",
+  "science_code_ready_sha256": "5cec5bd84eabcf765ffcd551b33be9c5137ed01062e122f65adf51bfe34365f9",
+  "legacy_cache_replay_path": "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/operations/legacy_cache_replay_synrfp_v1.json",
+  "legacy_cache_replay_sha256": "080957d04512b32ca0e5f160eb53829baf8cc6f1927b9a886fca27fd6b7158e5",
+  "interpretation": "Use the exact original22 CPU environment/datasketch backend for encoding/clustering/report and original synprop environment for MLP parent/CUDA child. Initial synprop CPU timing is a superseded environment diagnostic; allits files remain. No production work used that CPU environment.",
+  "finished_utc": "2026-10-20T09:58:46.200096+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "morgan43-science-code-ready-v1",
+  "phase": "complete",
+  "tests_passed": 18,
+  "sources_sha256": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/study.py": "fbdd8d24ed023702c9e2c1a3320974a3540981e6bc703277136072b08bc24f1e",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/encode.py": "053813dc38970033a5f008d8fdcf27a6a2aecf0fc25a8f5ef1c591501fbb6fec",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/models.py": "07b54539994c4e9ba276c6f9a14959d21fca1b0898a6961c84da221ca2b7aa00",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/clustering.py": "6c6df826aed2cca81945c007a487cc95014b30973b91f06470a392c1c8caec8c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/worker.py": "0ce5b222f686c04dc556a1df77112caf876199fcf534670301dae0c498cefff0",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/test_study.py": "666855744a0cd7bbc70b874ec9cc9e4b7babc5f900464a5918b2416c6e64f259",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/test_encode.py": "74749f6966ad3c62dba9b5c31332b2adba33ccc29c45b475cdf0f5271dfcc606",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/test_models.py": "81338f5d263edb0e7d7e4c25ea835633096a2f96a93311374966f7c12f6daffc",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/test_clustering.py": "a21986c57c56e5b37d12b4837ea3ef04b732c99050cf8b456233f722514249c5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/PROTOCOL.md": "c4ce4f5ff15a245d9f12ed1f1e11b37389cf6f20cbf8cda642baf8c6b55a0741",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/models.py": "aeed037d87c0f40df732246456440c4710626d5fa1ccb644afc4b799e05eacad",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/clustering.py": "ed3d995a7c11090f1cc9ee2983e4924b7bc24ea79ccc97e89809d6aae4ddcbb5",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/gpu_worker.py": "e60119016cd0a5e170b99342c792ebfdc3b225dc3f6a2428f9d8b6cd857c4105",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/22_all_endpoint_factorial/gpu_worker_runtime_v2.py": "9327aa7fe17391eda8065a3d6d057f5e4c700777a728184635c5d169e14996ca",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/20_focused_factorial/encode_factorial.py": "b9d1e1fc82b1e702bcbb2cef7c513c2b6389ed0dd23b20c520bfbe78fdc7231a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/16_modes/classification_worker.py": "e321ad47998d8a9a1c98a9c301c43ce95bced2b14462c0d103d49f3660504198"
+  },
+  "plan_sha256": "0044a4565a9ba8692dbab6af0d17b7e6f55fc3b08b397c9e02657b7e17488e0c",
+  "core_ready_sha256": "1b441ed18a2549f18dcb13d291eda6f67263eea55e43504950ade70940e186fa",
+  "expected_mlp": 1680,
+  "expected_clustering": 1440,
+  "feature_pools": 216,
+  "full_endpoint_counts": {
+    "classification": 14,
+    "clustering": 12
+  },
+  "root": "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1",
+  "python": "/home/labhhc4/anaconda3/envs/synprop/bin/python",
+  "entrypoint": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/worker.py",
+  "gpu_training_pilot_executed": false,
+  "training_arithmetic_changed": false,
+  "production_launched": false,
+  "ready_utc": "2026-10-20T09:49:44.128540+00:00"
+}

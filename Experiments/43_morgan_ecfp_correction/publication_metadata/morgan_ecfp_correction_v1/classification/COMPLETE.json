@@ -1,0 +1,38 @@
+{
+  "schema": "morgan43-report-status-v1",
+  "phase": "complete",
+  "task": "classification",
+  "corrected_cells": 1680,
+  "expected_corrected_cells": 1680,
+  "plan_sha256": "0044a4565a9ba8692dbab6af0d17b7e6f55fc3b08b397c9e02657b7e17488e0c",
+  "updated_utc": "2026-10-20T23:16:06.370110+00:00",
+  "cells": 5040,
+  "reused_control_cells": 3360,
+  "all_keyed_cells_verified": true,
+  "all_retained_artifact_hashes_verified": true,
+  "source_and_feature_closure_verified": true,
+  "interaction_orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "sources_sha256": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/report.py": "cfecfca5eda58751474f227ac0962207d76b794fa6abacbb6f67dcb8911100b0",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/43_morgan_ecfp_correction/test_report.py": "a0fa3e16245eff6e55bc489b9969da97f6b5e168b84309bf6657592133b41f34",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/20_focused_factorial/analysis.py": "b35bc788633d0fd0b8143b3fe050b3807060d96923f9954efd5a812867a15009",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/20_focused_factorial/per_task_analysis.py": "5165cfdb330de58d44d97e910fac38d208c5248577d38333fa766e7642470e6f"
+  },
+  "outputs_sha256": {
+    "cells.csv": "8c552aa7eb6cb383e61f6fe73005157ebbf67f4371a119380102bfa8b16bb8ef",
+    "configuration_summary.csv": "7f8d8c9d263cc8f1893259df98d65be1b20801ee9127a7be73e81879659840c5",
+    "observed_ranks.csv": "817c1066a5635579570d7f31951b6daa012a58ef229404135e469830179425ae",
+    "cross_panel_consistency.csv": "c595beedf68f8aa6de124b2fb18140b3fb95fe1e1f58e127dc3dc5b9f9548256",
+    "paired_full_interactions.csv": "bcc2a7d068837c991fb14fa41ee2e7f53671adcba32f55a6deeb25b790fea0a0",
+    "panel_full_interactions.csv": "f6e8e65c572a02601fc4f310e217751e6f91e98d97b0fe0eb1ca3217619ec3d4",
+    "metric_refusals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "protocol.json": "5d9511a10aafaf533861fe8f6703f8601927b5a2cf1dbd3908a25853067febe3",
+    "inputs.json": "fd280c4d71757df200194c45af53e1340ef3cc8741ccf769d40d9a63c7f7f31c",
+    "report.md": "807eb4371abcd0e9bc5aaa165961640903dca61ac25cfb87b4ac2fcb82be5b2b"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "code_branch": "fix/morgan-ecfp-0.0.4",
+  "code_commit": "54cebc43c5814370c1be26220df76bbb1454f1fc",
+  "code_url": "https://github.com/TieuLongPhan/SynRFP/commit/54cebc43c5814370c1be26220df76bbb1454f1fc",
+  "core_ready_sha256": "1b441ed18a2549f18dcb13d291eda6f67263eea55e43504950ade70940e186fa",
+  "main_checkout_package_source_changed": false,
+  "package_version": "0.0.4",
+  "schema": "synrfp-ecfp-v004-release-provenance-v1",
+  "scientific_gate": {
+    "combined_report_cells": 9360,
+    "component": "morgan",
+    "core_paths": [
+      "CHANGELOG.md",
+      "pyproject.toml",
+      "synrfp/tokenizers/morgan.py",
+      "tests/tokenizers/test_morgan.py",
+      "tests/tokenizers/test_morgan_ecfp.py"
+    ],
+    "core_ready_sha256": "1b441ed18a2549f18dcb13d291eda6f67263eea55e43504950ade70940e186fa",
+    "logical_corrected_cells": 3120,
+    "phase": "complete",
+    "scientific_receipts_sha256": {
+      "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/COMPLETE.json": "6de168f652ce0ef4e02a985d752565b843c017f55fa2002d791115617edf2a17",
+      "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/CORE_READY.json": "1b441ed18a2549f18dcb13d291eda6f67263eea55e43504950ade70940e186fa",
+      "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/report/classification/COMPLETE.json": "cb804f2c7a34718892b0147cbdba553ee5522aed7a98c8d8f13e8207b04c0307",
+      "/home/labhhc4/.local/share/synrfp-runs/morgan_ecfp_correction_v1/report/clustering/COMPLETE.json": "4a8f98ab9b14497217d7a0afe204520e5ffee9b1e81cc3d24a591b7d9171aa78"
+    },
+    "tokenizer_profile": "synrfp-ecfp-count-v1"
+  },
+  "source_files_sha256": {
+    "CHANGELOG.md": "7cfadef7f8a59f4e36977c945d861956de066b3446e3f5db190bb80104138a39",
+    "pyproject.toml": "b671907f135afe507c9f586a4d236311d6b63938ac040f31cc5466c8988fa685",
+    "synrfp/tokenizers/morgan.py": "c559478d6b411059e31154edd792e1e2b11a54faf95f5b491efca102b0d9beb9",
+    "tests/tokenizers/test_morgan.py": "de78204d545a75d26482c7a2145caffdf8b602a4827c432bdac88b210aa36df0",
+    "tests/tokenizers/test_morgan_ecfp.py": "ae81d7017a6847267e3825dbfdc132f888a13ec67495d7e369bcdc51b8433116"
+  },
+  "tokenizer_profile": "synrfp-ecfp-count-v1"
+}

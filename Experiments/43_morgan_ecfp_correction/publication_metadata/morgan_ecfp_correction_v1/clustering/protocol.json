@@ -1,0 +1,24 @@
+{
+  "schema": "morgan43-corrected72-analysis-v1",
+  "task": "clustering",
+  "total_configs": 72,
+  "corrected_morgan_configs": 24,
+  "reused_wl_path_configs": 48,
+  "tokenizer_profile": "synrfp-ecfp-count-v1",
+  "source_plan_sha256": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+  "plan_sha256": "0044a4565a9ba8692dbab6af0d17b7e6f55fc3b08b397c9e02657b7e17488e0c",
+  "core_ready_sha256": "1b441ed18a2549f18dcb13d291eda6f67263eea55e43504950ade70940e186fa",
+  "row_cap": null,
+  "repeats": 5,
+  "repeat_type": "initialization seeds",
+  "orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "configuration_selected": null,
+  "labels_for_hyperparameter_selection": false,
+  "uncertainty": "Descriptive SD of correlated folds/seeds; no independent-dataset p-values or confidence claims",
+  "interpretation": "Exploratory corrected-tokenizer comparison; old Morgan excluded, exact old WL/Path controls reused"
+}
