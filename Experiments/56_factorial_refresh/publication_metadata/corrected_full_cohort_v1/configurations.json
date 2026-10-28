@@ -1,0 +1,1082 @@
+{
+  "synrfp-wl-r2-b2048-parity-delta": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r2-b2048-parity-union": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r2-b2048-parity-delta_union": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-wl-r2-b2048-parity-roles": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-wl-r2-b2048-minhash-delta": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r2-b2048-minhash-union": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r2-b2048-minhash-delta_union": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-wl-r2-b2048-minhash-roles": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-wl-r2-b2048-cw-delta": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r2-b2048-cw-union": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r2-b2048-cw-delta_union": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-wl-r2-b2048-cw-roles": {
+    "tokenizer": "wl",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-wl-r3-b2048-parity-delta": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r3-b2048-parity-union": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r3-b2048-parity-delta_union": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-wl-r3-b2048-parity-roles": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-wl-r3-b2048-minhash-delta": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r3-b2048-minhash-union": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r3-b2048-minhash-delta_union": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-wl-r3-b2048-minhash-roles": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-wl-r3-b2048-cw-delta": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r3-b2048-cw-union": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-wl-r3-b2048-cw-delta_union": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-wl-r3-b2048-cw-roles": {
+    "tokenizer": "wl",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-morgan-r2-b2048-parity-delta": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r2-b2048-parity-union": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r2-b2048-parity-delta_union": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-morgan-r2-b2048-parity-roles": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-morgan-r2-b2048-minhash-delta": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r2-b2048-minhash-union": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r2-b2048-minhash-delta_union": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-morgan-r2-b2048-minhash-roles": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-morgan-r2-b2048-cw-delta": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r2-b2048-cw-union": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r2-b2048-cw-delta_union": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-morgan-r2-b2048-cw-roles": {
+    "tokenizer": "morgan",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-morgan-r3-b2048-parity-delta": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r3-b2048-parity-union": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r3-b2048-parity-delta_union": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-morgan-r3-b2048-parity-roles": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-morgan-r3-b2048-minhash-delta": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r3-b2048-minhash-union": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r3-b2048-minhash-delta_union": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-morgan-r3-b2048-minhash-roles": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-morgan-r3-b2048-cw-delta": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r3-b2048-cw-union": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-morgan-r3-b2048-cw-delta_union": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-morgan-r3-b2048-cw-roles": {
+    "tokenizer": "morgan",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-path-r2-b2048-parity-delta": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r2-b2048-parity-union": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r2-b2048-parity-delta_union": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-path-r2-b2048-parity-roles": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "parity",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-path-r2-b2048-minhash-delta": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r2-b2048-minhash-union": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r2-b2048-minhash-delta_union": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-path-r2-b2048-minhash-roles": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "minhash",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-path-r2-b2048-cw-delta": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r2-b2048-cw-union": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r2-b2048-cw-delta_union": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-path-r2-b2048-cw-roles": {
+    "tokenizer": "path",
+    "radius": 2,
+    "sketch": "cw",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-path-r3-b2048-parity-delta": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r3-b2048-parity-union": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r3-b2048-parity-delta_union": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-path-r3-b2048-parity-roles": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "parity",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-path-r3-b2048-minhash-delta": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r3-b2048-minhash-union": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r3-b2048-minhash-delta_union": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-path-r3-b2048-minhash-roles": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "minhash",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  },
+  "synrfp-path-r3-b2048-cw-delta": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "delta",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r3-b2048-cw-union": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra"
+  },
+  "synrfp-path-r3-b2048-cw-delta_union": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "delta_union",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "union"
+    ]
+  },
+  "synrfp-path-r3-b2048-cw-roles": {
+    "tokenizer": "path",
+    "radius": 3,
+    "sketch": "cw",
+    "mode": "roles",
+    "n_bits": 2048,
+    "kind": "bits",
+    "seed": 1,
+    "bbit": 2,
+    "count_policy": "unit_support_after_full_multiset_algebra",
+    "block_bits": [
+      1024,
+      1024
+    ],
+    "block_order": [
+      "signed_delta",
+      "shared"
+    ]
+  }
+}

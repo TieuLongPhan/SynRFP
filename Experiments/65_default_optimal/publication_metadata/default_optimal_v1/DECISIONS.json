@@ -1,0 +1,165 @@
+{
+  "schema": "synrfp65-task-decisions-v1",
+  "phase": "frozen",
+  "default_config": "synrfp-wl-r2-b2048-parity-delta",
+  "default_scope": "existing shared experimental preset; library default unchanged",
+  "optimal": {
+    "classification": {
+      "config": "synrfp-wl-r2-b2048-parity-delta_union",
+      "configuration": {
+        "tokenizer": "wl",
+        "radius": 2,
+        "sketch": "parity",
+        "mode": "delta_union",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+        "block_bits": [
+          1024,
+          1024
+        ],
+        "block_order": [
+          "signed_delta",
+          "union"
+        ]
+      },
+      "rank": 6.805555555555556,
+      "regret": 0.0377762164240024
+    },
+    "clustering": {
+      "config": "synrfp-path-r2-b2048-parity-delta",
+      "configuration": {
+        "tokenizer": "path",
+        "radius": 2,
+        "sketch": "parity",
+        "mode": "delta",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+      },
+      "rank": 4.833333333333333,
+      "regret": 0.044869014265996064
+    },
+    "yield": {
+      "config": "synrfp-wl-r3-b2048-parity-roles",
+      "configuration": {
+        "tokenizer": "wl",
+        "radius": 3,
+        "sketch": "parity",
+        "mode": "roles",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+        "block_bits": [
+          1024,
+          1024
+        ],
+        "block_order": [
+          "signed_delta",
+          "shared"
+        ]
+      },
+      "rank": 2.5,
+      "regret": 0.01524661101132361
+    },
+    "barrier": {
+      "config": "synrfp-wl-r2-b2048-parity-delta_union",
+      "configuration": {
+        "tokenizer": "wl",
+        "radius": 2,
+        "sketch": "parity",
+        "mode": "delta_union",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "native_unweighted_support_after_full_multiset_algebra",
+        "block_bits": [
+          1024,
+          1024
+        ],
+        "block_order": [
+          "signed_delta",
+          "union"
+        ]
+      },
+      "rank": 10.694444444444443,
+      "regret": 0.14909239307531266
+    },
+    "feasibility": {
+      "config": "synrfp-path-r2-b2048-parity-delta",
+      "configuration": {
+        "tokenizer": "path",
+        "radius": 2,
+        "sketch": "parity",
+        "mode": "delta",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+      },
+      "rank": 1.0,
+      "regret": 0.0
+    },
+    "reagent": {
+      "config": "synrfp-path-r2-b2048-cw-roles",
+      "configuration": {
+        "tokenizer": "path",
+        "radius": 2,
+        "sketch": "cw",
+        "mode": "roles",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "unit_support_after_full_multiset_algebra",
+        "block_bits": [
+          1024,
+          1024
+        ],
+        "block_order": [
+          "signed_delta",
+          "shared"
+        ]
+      },
+      "rank": 1.0,
+      "regret": 0.0
+    },
+    "condition": {
+      "config": "synrfp-path-r2-b2048-parity-delta",
+      "configuration": {
+        "tokenizer": "path",
+        "radius": 2,
+        "sketch": "parity",
+        "mode": "delta",
+        "n_bits": 2048,
+        "kind": "bits",
+        "seed": 1,
+        "bbit": 2,
+        "count_policy": "native_unweighted_support_after_full_multiset_algebra"
+      },
+      "rank": 1.0,
+      "regret": 0.0
+    }
+  },
+  "policy": "study56 grouped_main: family-balanced mean rank, normalized regret, config ID",
+  "one_optimum_per_task": true,
+  "classification_selection_learner": "MLP; transferred to kNN",
+  "exploratory": true,
+  "external_confirmation": false,
+  "USPTO_yield_selection": "transfer from completed four-regime yield factorial; no USPTO factorial claimed",
+  "inputs_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/factorial_refresh_corrected_v1/COMPLETE.json": "cd1a2bcbd463246f5504492edc150427538fd5c0caa265cf66168f8947daf464",
+    "/home/labhhc4/.local/share/synrfp-runs/factorial_refresh_corrected_v1/plan.json": "5df5e8f4e4ff62e7e507564709e2535f064cac24fcdfc317f0fa955b3cea4bb2",
+    "/home/labhhc4/.local/share/synrfp-runs/factorial_refresh_corrected_v1/analysis/task_view_summary.csv": "c20dae9e06ba77b8da5a6f57513470d328f33fba50a5449548ba9ad169efb074",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/33_shared_preset_decision/publication_metadata/shared_preset_decision_v1/FROZEN_PRESET.json": "e62fdb9b4797707f4aa45f413306678e92c8a0525ce04cbd13a3679c2111e0f6"
+  },
+  "frozen_utc": "2026-10-26T10:33:40.976141+00:00"
+}

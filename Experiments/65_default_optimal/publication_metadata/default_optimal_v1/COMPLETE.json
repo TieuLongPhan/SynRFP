@@ -1,0 +1,92 @@
+{
+  "schema": "synrfp65-default-optimal-report-v1",
+  "phase": "complete",
+  "tasks": {
+    "classification": {
+      "phase": "complete",
+      "cells": 4900,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-wl-r2-b2048-parity-delta_union",
+      "exploratory": true
+    },
+    "clustering": {
+      "phase": "complete",
+      "cells": 1680,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-path-r2-b2048-parity-delta",
+      "exploratory": true
+    },
+    "yield": {
+      "phase": "complete",
+      "cells": 528,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-wl-r3-b2048-parity-roles",
+      "exploratory": true
+    },
+    "barrier": {
+      "phase": "complete",
+      "cells": 2268,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-wl-r2-b2048-parity-delta_union",
+      "exploratory": true
+    },
+    "feasibility": {
+      "phase": "complete",
+      "cells": 35,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-path-r2-b2048-parity-delta",
+      "exploratory": true
+    },
+    "reagent": {
+      "phase": "complete",
+      "cells": 70,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-path-r2-b2048-cw-roles",
+      "exploratory": true
+    },
+    "condition": {
+      "phase": "complete",
+      "cells": 210,
+      "pending": 0,
+      "default_config": "synrfp-wl-r2-b2048-parity-delta",
+      "optimal_config": "synrfp-path-r2-b2048-parity-delta",
+      "exploratory": true
+    }
+  },
+  "pending_models": 0,
+  "expected_new_models": 1089,
+  "all_tasks_have_default_and_optimal": true,
+  "optimal_selected_per_task_not_per_dataset": true,
+  "exploratory": true,
+  "plan_sha256": "554988111c817210a52ecbca3cb722a13cde4fd6fd5189f0aafb91f24967ea5b",
+  "updated_utc": "2026-10-27T18:42:44.168002+00:00",
+  "source_completion_path": "/home/labhhc4/.local/share/synrfp-runs/default_optimal_benchmark_v1/COMPLETE.json",
+  "source_completion_sha256": "2ff49a491192ab7acc7564746116b998ab163f2aacaa66e4aa35d267a72232f5",
+  "exported_outputs_sha256": {
+    "classification/cells.csv": "69129717a84e257228bed73293c8c49f9cd2fd58b7f39ba786df69f00b60807d",
+    "classification/summary.csv": "7f86bd9f2f206c3785b81dbb3279bae6df1636d7af924cfb9e93edc0409832b3",
+    "clustering/cells.csv": "7e1d534001bb683f1a22a8d5bca2dae53eca32ef35c3cb5c4801118f1e668254",
+    "clustering/summary.csv": "dad831446e255a0d55fb4acea2eda19ff990be3b00b3f5ac2e5cf1ecf0502073",
+    "yield/cells.csv": "7c350d493908608c6bc6d7f42bb7f4182d58ffadee4965d5bda61b98eaf6334b",
+    "yield/summary.csv": "233f8d9e1c10caa5e9b742a9b6780625d09b8c51d3de8da18291e8c42b211277",
+    "barrier/cells.csv": "3e4506f234a5b00cfd0545ee21e869e2637a5e6db0b5284a69a7dbe1d1d04bbd",
+    "barrier/summary.csv": "0c5660a603847d0cd3ec6f2a2f9b52fb29717ae4d2cd63cdebfb1ddf5cd9e8e7",
+    "feasibility/cells.csv": "daa6595435297299f6b297e9dd848349e5bafd77b89240088c3851d904293912",
+    "feasibility/summary.csv": "fcf66bd11ace84ef77229b34142188b0b6ac4abbd763527d14e462e1786390c7",
+    "reagent/cells.csv": "fd98848a0ea1abcf44e12cdf4d650d8b4ae59aaab502800207992cd0a946311a",
+    "reagent/summary.csv": "e93f064cc67f226ae374b4424273ffa20c701ba4465e5b2cd16a9d4d127d007a",
+    "condition/cells.csv": "9499ea78e92248eb9f31da483571cb9235af19c2f233f1098b4298ad9c77264f",
+    "condition/summary.csv": "69e2a9401cad1c0f3c0609daf92d79a226489d96cbec424b0421960dee5f7c07",
+    "clustering_blind/cells.csv": "50e07744bb4f128e41294c8d12a4c12b887435ad8742fb8239bee6ffa7290e34",
+    "DECISIONS.json": "2553410322114c43df718363800e5d148e0e30697c6e7900215ba13b3f8e9eba",
+    "DECISIONS_SEAL.json": "29f13fca660a6e54d9982e5c7354084e1d7a002b95245907abc2fddc98052a6f",
+    "plan_seal.json": "78066faf76562532b373e377ff7a3ec370b64ed0362093cc1fc62e5ef0da19fd"
+  },
+  "export_scope": "scalar tables and provenance only; weights, raw data, fitting matrices and predictions remain local"
+}

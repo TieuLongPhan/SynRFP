@@ -1,0 +1,23 @@
+{
+  "schema": "synrfp56-separate-knn-refresh-complete-v1",
+  "phase": "complete",
+  "plan_sha256": "5df5e8f4e4ff62e7e507564709e2535f064cac24fcdfc317f0fa955b3cea4bb2",
+  "cells": 5040,
+  "coverage52_replacements": 360,
+  "learner": "fixed5Tanimoto_kNN",
+  "mixed_with_MLP_rankings": false,
+  "exploratory": true,
+  "configuration_selected": null,
+  "completed_utc": "2026-10-28T05:10:40.386902+00:00",
+  "source_completion_path": "/home/labhhc4/.local/share/synrfp-runs/factorial_refresh_corrected_v1/knn_aux/COMPLETE.json",
+  "source_completion_sha256": "a0bc70cd0ca0a400631a1236ae1833fb64da496d2a4972d280e2c02ac13b23d9",
+  "exported_outputs_sha256": {
+    "configuration_summary.csv": "4d05f05e713da92e1d8163854f844155b5135f2c9155436ea738e4e8adfa34be",
+    "full_interactions.csv": "3a9fe74297229e78adc028b2f6bb0d4080b5c8b63a32feb77f4c8dd9a70c2ce7",
+    "interaction_variance.csv": "2bf4d843fd88cb20e313fd9a2289e71e1397b5a1d7fa0585a61d6de09bbbf7c6",
+    "matched_factor_contrasts.csv": "eda1f88d4bd345c84f5bec2ddd0bbe6b7e90f11ad7bca0d0bb7ccf387e28310c",
+    "source_family_summary.csv": "3152446b52fcf121b82582fed6a127ba326c914ebe240bfff2acd866fbc7c889",
+    "learner_ranking.csv": "d8697c3d9467fc8b67902b2b059d5e4c01408d9a2db360366ce5121e99f8abe6"
+  },
+  "export_scope": "corrected 5040-cell kNN factorial summaries; primary MLP rankings remain separate"
+}

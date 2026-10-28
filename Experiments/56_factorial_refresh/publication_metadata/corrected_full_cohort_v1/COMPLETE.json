@@ -1,0 +1,63 @@
+{
+  "schema": "synrfp56-seven-task-factorial-refresh-complete-v1",
+  "phase": "complete",
+  "plan_sha256": "5df5e8f4e4ff62e7e507564709e2535f064cac24fcdfc317f0fa955b3cea4bb2",
+  "logical_input_cells": 20448,
+  "construction_configs": 72,
+  "tasks": [
+    "classification",
+    "clustering",
+    "barrier",
+    "feasibility",
+    "reagent",
+    "condition",
+    "yield"
+  ],
+  "replaced_full_cohort_cells": 3960,
+  "unchanged_cells": 16488,
+  "all_keyed_cells_verified": true,
+  "all_native_artifact_catalogues_verified": true,
+  "interaction_orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_family_balanced": true,
+  "configuration_selected": null,
+  "exploratory": true,
+  "GPU_work": false,
+  "models_trained": 0,
+  "completed_utc": "2026-10-26T09:34:58.496678+00:00",
+  "reader_recovery": {
+    "source": "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/64_report_recovery/factorial_v2.py",
+    "source_sha256": "1a70c2e3863a001c4fb98c3a391bbac582e079032b9738b4e8671516fd39436a",
+    "review_sha256": "af44236e017bb9fa53125e73e548bf5756c7ec128f76d6412ccc34ee0725b1aa",
+    "family_aliases": {
+      "uspto_50k_u": "uspto50k_u",
+      "uspto_50k_b": "uspto50k_b"
+    },
+    "target_metadata_origin": "sealed study30 per-source target",
+    "model_rows_and_scores_unchanged": true,
+    "models_trained": 0
+  },
+  "source_completion_path": "/home/labhhc4/.local/share/synrfp-runs/factorial_refresh_corrected_v1/COMPLETE.json",
+  "source_completion_sha256": "cd1a2bcbd463246f5504492edc150427538fd5c0caa265cf66168f8947daf464",
+  "exported_outputs_sha256": {
+    "fold_seed_summary.csv": "c2e572be96a79951b6ff5fcbedef9f0c7d439070b54f6b0ddaf92a3ed7534e6e",
+    "endpoint_summary.csv": "a07c94c95ad03a003b84c7c255d166d70029abac9e3771a7f206c0b87728e15a",
+    "family_summary.csv": "5c77f4ff7e10d854bde734a7afff2f68a35d1e828a183d76eb5f898addc4638f",
+    "task_regime_summary.csv": "7dc415e2778953759d52809e9dc5b36036d6ece0400d7ca65c4cd57cf406a02e",
+    "task_view_summary.csv": "c20dae9e06ba77b8da5a6f57513470d328f33fba50a5449548ba9ad169efb074",
+    "common_candidates.csv": "4ef8cdf059ee77eaecb42b336bdec80b7d3937be1e8e6fd54ddf4d718be62f74",
+    "cells.csv": "92c9a46227f07368b21265781e96e640df9691bd7a9f7934a7cb30b4628ff196",
+    "configuration_summary.csv": "4650e52e63f127baefc014461595e486e0113c8fb2a189ebde37c88d20d00e07",
+    "full_interactions.csv": "0c8e298c977ee1c44f4dca3cf74993f96cd9892107b776579a9bfb6788876dd2",
+    "interaction_variance.csv": "089f34a2c0ede561b54f1fdfc98eabd45b2e2d88969d5ce593331ec8c6d778ef",
+    "matched_factor_contrasts.csv": "8183733354bb64c17583cbbecca9111d51b952a954613e95745c03f19ac551ef",
+    "task_raw_metric_diagnostics.csv": "a31db1a81a52b43a725407de1fbd9729d0884871b4e0d34cb3c781bdf5cc1bc4",
+    "canonical_cells.csv": "46baa90e8f16d392d13f65e7b8affb0b5cd033cc1075ac4e283d2cb48cb8c6b5",
+    "configurations.json": "806089d3cac777f25ddc30a69d962cb907433eb80f78e5b46540447057967bcd"
+  },
+  "export_scope": "corrected scalar results and analysis; full artifact catalogue remains local"
+}
