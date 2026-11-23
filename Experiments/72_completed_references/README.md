@@ -30,3 +30,14 @@ not represented as completed references in this snapshot. Existing seven-task
 fingerprint main and factorial results remain in their previously published
 locations, indexed by `docs/SEVEN_TASK_RESULTS.md` and
 `docs/SEVEN_TASK_REFRESH_2026-10-28.md`.
+
+## User-requested stop, 24 November 2026
+
+All remaining benchmark jobs were stopped and automatic startup was disabled
+so the workstation can be used for other tasks. Parrot has 2/30 completed fits
+and T5Chem has 3/10; their unfinished comparisons are excluded from the completed
+benchmark tables. Partial-run means are not presented as full references.
+All local checkpoints and completed results remain available, including the
+interrupted Parrot fit's saved optimizer/RNG checkpoint. Work must not resume
+without a new user instruction. The stop receipt is
+`publication_metadata/20261124_USER_STOPPED.json`.

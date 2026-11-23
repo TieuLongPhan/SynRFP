@@ -1,0 +1,56 @@
+{
+  "phase": "stopped_by_user",
+  "stopped_utc": "2026-11-23T17:09:47.772829+00:00",
+  "instruction": "Stop all benchmarking jobs; prioritize other tasks; publish completed benchmarks excluding incomplete Parrot/T5Chem comparisons.",
+  "active_synrfp_services": [],
+  "disabled_previously_enabled_units": [
+    "synrfp-condition-controller-v3.service",
+    "synrfp-corrected-results-publish46-v3.service",
+    "synrfp-cross-factorial-controller-v1.service",
+    "synrfp-delta-union-followup-controller-v1.service",
+    "synrfp-gnan69-causal-and-repair-v2.service",
+    "synrfp-gpu060-ncs-yieldbert-controller-v1.service",
+    "synrfp-knn-corrected45-ram90-v5.service",
+    "synrfp-main-results-publish-v2.service",
+    "synrfp-morgan43-assist-v4.service",
+    "synrfp-morgan47-recovery-v4.service",
+    "synrfp-morgan47-recovery-v5.service",
+    "synrfp-native41-ram90-v4.service",
+    "synrfp-native41-restore-after43-v5.service",
+    "synrfp-ncs-continuous-v1.service",
+    "synrfp-ncs-evidence-controller-v1.service",
+    "synrfp-ncs-execution-v1.service",
+    "synrfp-ncs-reference65-resume-v8.service",
+    "synrfp-optimal65-controller-v7.service",
+    "synrfp-rgd166-controller-v1.service",
+    "synrfp-shared-preset-decision-v1.service",
+    "synrfp-shared-preset-review-v1.service",
+    "synrfp-specialists-recovery35-v3.service",
+    "synrfp-syncat71-feasibility-last-v2.service",
+    "synrfp-syncluster41-input-repair-v2.service",
+    "synrfp-synrxn40-ram90-v3.service",
+    "synrfp-task-preset44-parallel-v3.service",
+    "synrfp-uspto67-reference-recovery-v1.service",
+    "synrfp-uspto68-bert-continuation-v1.service",
+    "synrfp-specialist73-resume-v1.service",
+    "synrfp-deadline54-reference-credit-v12.service"
+  ],
+  "incomplete_references": {
+    "t5chem": {
+      "completed_models": 3,
+      "retained_resume_checkpoint": "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed44/resume.pt",
+      "bytes": 176662332,
+      "sha256": "69cd882903b55157a4dd07af8e34c43ca03046adc4ccfe279d31aad563332c11"
+    },
+    "parrot": {
+      "completed_models": 2,
+      "retained_resume_checkpoint": "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed44/resume.pt",
+      "bytes": 110022200,
+      "sha256": "b6cbd2aad386eea6a549464021ac29296ec0d0cc3e148dd2e5174bd039686a48"
+    }
+  },
+  "completed_results_commit": "df12932888693d5127974410bcbbc7f32d0737d6",
+  "weights_deleted": false,
+  "weights_pushed": false,
+  "resume_requires_new_user_instruction": true
+}
