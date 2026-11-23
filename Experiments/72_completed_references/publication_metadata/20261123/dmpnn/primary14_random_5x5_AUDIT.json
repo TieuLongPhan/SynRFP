@@ -1,0 +1,13 @@
+{
+  "phase": "complete",
+  "fits": 50,
+  "datasets": [
+    "cyclo",
+    "gdb7"
+  ],
+  "exact_shared_DRFP_selectors_verified": true,
+  "native_result_metrics_verified": true,
+  "source_csv_sha256": "6f1fdf6f44b1ee7c29cd8645dd30c78bad55f9c63736ead265b95a68bd1aaf48",
+  "aggregation": "Mean five fold metrics within each repeat, then mean and sample SD across five repeats; not pooled OOF metrics.",
+  "new_training_jobs": 0
+}

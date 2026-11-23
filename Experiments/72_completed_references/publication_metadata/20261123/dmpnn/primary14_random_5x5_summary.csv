@@ -1,0 +1,3 @@
+dataset,method,units,n_fits,n_repeats,n_folds_per_repeat,sd_scope,mae_mean,mae_sd_repeat_means,rmse_mean,rmse_sd_repeat_means,r2_mean,r2_sd_repeat_means
+cyclo,chemprop_v2_default,kcal/mol,25,5,5,sample_SD_across_five_means_of_five_fold_metrics,3.0062171494341525,0.035650819465096656,4.028865844314597,0.04780389972734925,0.8288417137868241,0.004128683550082154
+gdb7,chemprop_v2_default,kcal/mol,25,5,5,sample_SD_across_five_means_of_five_fold_metrics,5.476132050297695,0.052013335598100244,8.56303822835137,0.07655237782593545,0.8460878355554726,0.002658215848304363

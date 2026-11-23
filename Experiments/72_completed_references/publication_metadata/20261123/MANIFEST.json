@@ -70,5 +70,17 @@
   },
   "weights_included": false,
   "raw_rows_included": false,
-  "prediction_arrays_included": false
+  "prediction_arrays_included": false,
+  "additional_primary14_random_cv": {
+    "fits": 50,
+    "datasets": [
+      "cyclo",
+      "gdb7"
+    ],
+    "files_sha256": {
+      "dmpnn/primary14_random_5x5_cells.csv": "be2ea8bcff105fcf3f5204cdaeb223505292b938d53c19e8686b40984e369f4a",
+      "dmpnn/primary14_random_5x5_AUDIT.json": "db31e3852d8d557f278aad9e4fb0719435fc66b98acf2b42d35285049b7ffeca",
+      "dmpnn/primary14_random_5x5_summary.csv": "e83c112fee384d0cf9b2496fe75460f2fea1f953cf74ba564bd65b06a2b1730d"
+    }
+  }
 }

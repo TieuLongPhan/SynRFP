@@ -41,3 +41,15 @@ All local checkpoints and completed results remain available, including the
 interrupted Parrot fit's saved optimizer/RNG checkpoint. Work must not resume
 without a new user instruction. The stop receipt is
 `publication_metadata/20261124_USER_STOPPED.json`.
+
+## Primary barrier reference export correction
+
+The earlier export omitted study14's already-completed Cyclo and GDB7 random
+5×5 D-MPNN results. These are now exported separately as
+`dmpnn/primary14_random_5x5_{cells,summary}.csv`, with 25 fits per endpoint.
+All 50 native scalar receipts and exact shared DRFP split/row hashes were
+checked. RMSE is 4.0288658443 ± 0.0478038997 for Cyclo and
+8.5630382284 ± 0.0765523778 for GDB7 (kcal/mol). These use mean fold metrics
+within repeat, then sample SD across the five repeat means, matching Table S13's
+stated aggregation. Do not substitute pooled out-of-fold statistics or the
+separately mapped study40 cycloadd cohort. No new training was performed.
