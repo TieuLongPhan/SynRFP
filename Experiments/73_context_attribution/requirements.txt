@@ -1,0 +1,8 @@
+# Direct dependencies from the environment used to verify the E1 workflow.
+numpy==2.4.4
+pandas==2.3.3
+rdkit==2026.3.1
+synkit==1.7.0
+scikit-learn==1.7.2
+joblib==1.5.3
+threadpoolctl==3.6.0

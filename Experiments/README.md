@@ -18,6 +18,12 @@ its outputs in `results/`. Shared code lives in `synrfp_exp/`, settings in
 | `09_report` | Tables (CSV + LaTeX), Friedman/Nemenyi and Wilcoxon–Holm statistics, CD diagrams, granularity plots | all |
 | `external/rxnfp` | Pretrained and split-wise fine-tuned RXNFP embeddings (separate environment) | baselines |
 
+## Fixed-budget yield attribution
+
+The [E1 workstation guide](73_context_attribution/README.md) covers the
+matched width, context and condition-placement ablation on the classic
+Buchwald–Hartwig and Suzuki screens.
+
 ## Setup
 
 ```bash
