@@ -1,0 +1,36 @@
+{
+  "phase": "complete",
+  "completed_models": 5,
+  "expected_models": 5,
+  "fixed_expert_n": 751,
+  "independent_test_folds": false,
+  "summary": {
+    "auroc": {
+      "mean": 0.639835491023532,
+      "sample_sd": 0.009482393928107163
+    },
+    "average_precision": {
+      "mean": 0.52690000111544,
+      "sample_sd": 0.01276274370387458
+    },
+    "balanced_accuracy": {
+      "mean": 0.6327837779844074,
+      "sample_sd": 0.0020519399649571606
+    },
+    "mcc": {
+      "mean": 0.2910345703049725,
+      "sample_sd": 0.006058780107287752
+    },
+    "f1": {
+      "mean": 0.6666473872570442,
+      "sample_sd": 0.0030857378623162794
+    },
+    "brier": {
+      "mean": 0.23482805752586966,
+      "sample_sd": 0.0053944630568100475
+    }
+  },
+  "outputs_sha256": {
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncat_feasibility/publication_metadata/syncat_feasibility_v1/per_seed.csv": "1f6114073e194eef3b443feb35998ffab5dccf48d2d8fdcd587b04008736f8a2"
+  }
+}

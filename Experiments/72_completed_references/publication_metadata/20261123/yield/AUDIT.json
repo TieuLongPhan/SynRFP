@@ -1,0 +1,33 @@
+{
+  "phase": "complete",
+  "verified_utc": "2026-11-12T06:16:07.326744+00:00",
+  "complete_method_panels": 55,
+  "methods": 11,
+  "panels": 5,
+  "partial_panels": 0,
+  "prior_audit_sha256": "4bda17480aa889dab6993a73e8b05f723d9803c03287ce42e43d4eb16fcfe2c7",
+  "prior_summary_sha256": "1dd30da66b06a856e62f5cb689937a23a1c0c541a79af1dd065c32630143cfaf",
+  "GNAN_USPTO_profile": "gnan69-fp64-variance-floor1e-8-v1",
+  "GNAN_USPTO_numerical_adaptation": true,
+  "other_GNAN_panels_original_recipe": true,
+  "all5_GNAN_heldout_rows_ids_outcomes_and_metrics_checked": true,
+  "source_results_and_evaluations_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/gnan_numerical_repair_v1/models/uspto_yield__pubdup_f0__gnan/result.json": "c97924d0b459ff7d87fe538ad1af8a11463d99f7ebe711bf2d26019c7b91e263",
+    "/home/labhhc4/.local/share/synrfp-runs/uspto_literal_fullrow_v1/models/uspto_yield__pubdup_f0__gnan/attempt_r69-full-1794342368870250306/evaluation69.npz": "da82597481d396203219828e7fe1048e0ed069df17ce43847cfffec419edaa14",
+    "/home/labhhc4/.local/share/synrfp-runs/gnan_numerical_repair_v1/models/uspto_yield__pubdup_f1__gnan/result.json": "34a08587849aafa4af29a734e046fd9a183c59aa6e288428234f78303a0158c3",
+    "/home/labhhc4/.local/share/synrfp-runs/uspto_literal_fullrow_v1/models/uspto_yield__pubdup_f1__gnan/attempt_r69-full-1794360642383908063/evaluation69.npz": "d7f2262b908b934983df478654c48a72f6c215387228cd16f23ed74be26dfd6e",
+    "/home/labhhc4/.local/share/synrfp-runs/gnan_numerical_repair_v1/models/uspto_yield__pubdup_f2__gnan/result.json": "f76578ee6587a34ceb63381a45e82d50bceddbefc2fffd2250bed9c64ba4f0de",
+    "/home/labhhc4/.local/share/synrfp-runs/uspto_literal_fullrow_v1/models/uspto_yield__pubdup_f2__gnan/attempt_r69-full-1794378710195363190/evaluation69.npz": "7f141aa5c9af3235b6719a3a6e979fc05dbfc65b9c846191bf1bff2799f0778e",
+    "/home/labhhc4/.local/share/synrfp-runs/gnan_numerical_repair_v1/models/uspto_yield__pubdup_f3__gnan/result.json": "7ca3537e4e6fb67dee1cf6350e6b9bbeb92665de4f8b4155be057d7e91dcc429",
+    "/home/labhhc4/.local/share/synrfp-runs/uspto_literal_fullrow_v1/models/uspto_yield__pubdup_f3__gnan/attempt_r69-full-1794397881749286643/evaluation69.npz": "fe109b0d7e6d2015a0e5438ffa87876a396c31b8c64e2849d8a1f498b8efc6db",
+    "/home/labhhc4/.local/share/synrfp-runs/gnan_numerical_repair_v1/models/uspto_yield__pubdup_f4__gnan/result.json": "8cad823e35bb16847e6a655c0a3b96fcfd9f4b51ba8c0699076db0ebcc3e4495",
+    "/home/labhhc4/.local/share/synrfp-runs/uspto_literal_fullrow_v1/models/uspto_yield__pubdup_f4__gnan/attempt_r69-full-1794418550189152803/evaluation69.npz": "4e0bb11bd37da81a89c8c3bde33f0d115fb194678e47c27ae4fc26df6baad741"
+  },
+  "outputs_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/summary.csv": "fea77494c63ef4636a4ff9689b132ff957cbc257289c1dd3818b3499f395490a",
+    "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/r2_table.txt": "15c3087abda6563eb0863a5bbc98e34b27ab1b77a8e887e647914e5bdc800b21",
+    "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/mae_table.txt": "0c01a962e3a2c8b42fce76f8c6fea2500111c7d0b2e7ddf9d60dc5d731c75f9b"
+  },
+  "SD": "NCS ten iteration means of four holdouts; other panels across native partitions",
+  "no_new_model_fits": true
+}

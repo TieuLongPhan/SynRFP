@@ -1,0 +1,74 @@
+{
+  "schema": "completed-references-scalar-snapshot-v1",
+  "source_files": {
+    "yield/summary.csv": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/summary.csv",
+      "sha256": "fea77494c63ef4636a4ff9689b132ff957cbc257289c1dd3818b3499f395490a"
+    },
+    "yield/r2_table.txt": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/r2_table.txt",
+      "sha256": "15c3087abda6563eb0863a5bbc98e34b27ab1b77a8e887e647914e5bdc800b21"
+    },
+    "yield/mae_table.txt": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/mae_table.txt",
+      "sha256": "0c01a962e3a2c8b42fce76f8c6fea2500111c7d0b2e7ddf9d60dc5d731c75f9b"
+    },
+    "yield/split_counts.csv": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/split_counts.csv",
+      "sha256": "d8a1058b1366aa4b898b862a5ba88bdc591c6c91ab8eb58f6a472099303c7dab"
+    },
+    "yield/AUDIT.json": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/yield_full_comparison_20261112_v1/AUDIT.json",
+      "sha256": "7d51c10e8011b3505413339a71b7abfaa1f67792da70574ee8bd5f655528c80a"
+    },
+    "dmpnn/random_5x5/cells.csv": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/dmpnn_random5x5_summary_20261106_v1/cells.csv",
+      "sha256": "16c41377f141ebadb4125fdddc3fc762677c7754c4a1fbb1857fe4e8d3be3665"
+    },
+    "dmpnn/random_5x5/summary.csv": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/dmpnn_random5x5_summary_20261106_v1/summary.csv",
+      "sha256": "1b297041c28fa50126aeef2dfd83ee62665d1de0a1be75fca2b0f305c5274af0"
+    },
+    "dmpnn/random_5x5/AUDIT.json": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/dmpnn_random5x5_summary_20261106_v1/AUDIT.json",
+      "sha256": "e8a5df10fb38b306ef8b589aa92acecd47b8a1501c48162ee344a96f5fc74bcc"
+    },
+    "dmpnn/rgd1_fullrow_COMPLETE.json": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/rgd1_dmpnn_fullrow_v1/COMPLETE.json",
+      "sha256": "3e953adaac0581d37a42a1644fe3276fa7292e11589dd25c3b0a7c9467022ab1"
+    },
+    "syncat_classification/cells.csv": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/syncat_dual_gpu_v1/cells.csv",
+      "sha256": "39615afe11631d506a2d7fcba95ca9325d3dcb10f3e55cddfe59db4b50cf8a61"
+    },
+    "syncat_classification/COMPLETE.json": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/syncat_dual_gpu_v1/COMPLETE.json",
+      "sha256": "c66dcfb046079578363e97aa759419abf8caa7c74228c519d409d2dcd626dbab"
+    },
+    "syncat_classification/full_cohort_COMPLETE.json": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/syncat_paper_architecture_v1/COMPLETE.json",
+      "sha256": "b9ba974350205d0556c04f1755e8f0ed398cc74da0315c494d0ded0fdfa44136"
+    },
+    "syncat_feasibility/per_seed.csv": {
+      "source": "Experiments/35_specialist_references/syncat_feasibility/publication_metadata/syncat_feasibility_v1/per_seed.csv",
+      "sha256": "1f6114073e194eef3b443feb35998ffab5dccf48d2d8fdcd587b04008736f8a2"
+    },
+    "syncat_feasibility/COMPLETE.json": {
+      "source": "Experiments/35_specialist_references/syncat_feasibility/publication_metadata/syncat_feasibility_v1/COMPLETE.json",
+      "sha256": "9c6a32b7fb4a819967d9ffb2411e3856c98dcaf7bb0aa2b3c49927b49adad434"
+    },
+    "syncat_queue_COMPLETE.json": {
+      "source": "/home/labhhc4/.local/share/synrfp-runs/syncat_small_first_v1/COMPLETE.json",
+      "sha256": "3430efa11d0c89e7142a1cf1d55f870846284bdde6902003e62276daaecf510a"
+    }
+  },
+  "counts": {
+    "yield_method_panels": 55,
+    "dmpnn_matched_models": 396,
+    "syncat_classification_models": 70,
+    "syncat_feasibility_seeds": 5
+  },
+  "weights_included": false,
+  "raw_rows_included": false,
+  "prediction_arrays_included": false
+}
