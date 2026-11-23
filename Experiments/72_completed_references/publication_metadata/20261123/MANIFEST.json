@@ -82,5 +82,17 @@
       "dmpnn/primary14_random_5x5_AUDIT.json": "db31e3852d8d557f278aad9e4fb0719435fc66b98acf2b42d35285049b7ffeca",
       "dmpnn/primary14_random_5x5_summary.csv": "e83c112fee384d0cf9b2496fe75460f2fea1f953cf74ba564bd65b06a2b1730d"
     }
+  },
+  "barrier_statistical_inputs": {
+    "per_fit_scores": 1800,
+    "per_repeat_means": 360,
+    "paired_dataset_repeat_rows": 45,
+    "files_sha256": {
+      "barrier_statistical_inputs/per_fit_scores.csv": "0ecf2a6c73a1dd1655e81982099eb9e824d2831d4c76744f08ef9b9ebfb04d4e",
+      "barrier_statistical_inputs/README.md": "a79bd298fc150cf28eec76cbf97a07021564d72853f8300b46d96652098b643f",
+      "barrier_statistical_inputs/per_repeat_mean_scores.csv": "c7083d7971762a7301f2744b5f43858cc2057b1aa6e3b20c8b59fc9e67e6afb8",
+      "barrier_statistical_inputs/AUDIT.json": "d4b9db21a205fd1ed5be73d71622e36f66f1295eb394bbaf6fefed4da9e8bae0",
+      "barrier_statistical_inputs/paired_repeat_scores_wide.csv": "d415817c2a5ae21fd0b90fd0cdf06604b1b2e9bfbe534c186c32d38bd56057f6"
+    }
   }
 }

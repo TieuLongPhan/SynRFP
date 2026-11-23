@@ -1,0 +1,40 @@
+{
+  "phase": "complete",
+  "per_fit_scores": 1800,
+  "repeat_mean_rows": 360,
+  "paired_dataset_repeat_rows": 45,
+  "datasets": [
+    "b97xd3",
+    "cyclo",
+    "e2",
+    "e2sn2",
+    "gdb7",
+    "rdb7",
+    "rgd1",
+    "sn2",
+    "snar"
+  ],
+  "methods": [
+    "crxnfp",
+    "dmpnn",
+    "drfp",
+    "rdkit_diff",
+    "rdkit_struct",
+    "rxnfp_mlm",
+    "synrfp_default",
+    "synrfp_optimal"
+  ],
+  "FP_native_receipt_hashes_and_metrics_verified": 1525,
+  "FP_scores_from_published_table_without_individual_receipt_pointer": 50,
+  "DMPNN_native_receipt_hashes_and_metrics_verified": 225,
+  "same_train_validation_test_counts_per_DMPNN_DRFP_pair": true,
+  "FP_source_csv_sha256": "3e4506f234a5b00cfd0545ee21e869e2637a5e6db0b5284a69a7dbe1d1d04bbd",
+  "outputs_sha256": {
+    "barrier_statistical_inputs/per_fit_scores.csv": "0ecf2a6c73a1dd1655e81982099eb9e824d2831d4c76744f08ef9b9ebfb04d4e",
+    "barrier_statistical_inputs/per_repeat_mean_scores.csv": "c7083d7971762a7301f2744b5f43858cc2057b1aa6e3b20c8b59fc9e67e6afb8",
+    "barrier_statistical_inputs/paired_repeat_scores_wide.csv": "d415817c2a5ae21fd0b90fd0cdf06604b1b2e9bfbe534c186c32d38bd56057f6"
+  },
+  "statistics_not_run": true,
+  "new_model_fits": 0,
+  "prediction_arrays_published": false
+}
