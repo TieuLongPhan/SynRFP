@@ -44,6 +44,25 @@ python Experiments/73_context_attribution/run_ablation.py \
   | tee "$run_dir/fitting.log"
 ```
 
+### Reconstruct missing input tables
+
+SynRXN keeps the two compressed references out of Git. From the experiment
+worktree, the command below reconstructs them from three pinned author files,
+verifies their exact output hashes and writes into a new local directory.
+
+```bash
+run_dir="Experiments/work/context_attribution/E1-$(date -u +%Y%m%dT%H%M%SZ)"
+python Experiments/73_context_attribution/prepare_inputs.py --output-dir "$run_dir/inputs"
+(cd "$run_dir/inputs" && sha256sum -c SHA256SUMS)
+```
+
+Use `data_dir="$run_dir/inputs"` in the source-audit and encoding commands
+above, keeping the same `run_dir`. For an offline rebuild, add `--source-dir`
+with the directory containing the pinned author files under the names
+`bh.xlsx`, `suzuki_source.xlsx` and `suzuki_0.tsv`. The script checks the
+author-file hashes before reading them. The two reconstructed tables retain
+their local-reference status. [Pinned author repository](https://github.com/rxn4chemistry/rxn_yields/tree/d9e6b87ce1b881978490d68bfc00021e3b48127a)
+
 The checks audit the input tables and feature coverage without fitting. Keep
 raw inputs, features, row-level outcomes, split membership and predictions
 on the workstation under `Experiments/work/` or in the local data checkout.
