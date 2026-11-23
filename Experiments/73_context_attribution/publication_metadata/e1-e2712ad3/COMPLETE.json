@@ -1,0 +1,15 @@
+{
+  "phase": "complete",
+  "cells": 720,
+  "source_revision": "e2712ad3d3c63b6df29831d516e68bfc5fd09db4",
+  "outputs_sha256": {
+    "results.csv": "96388dad94d6f1ad0c55807c08ace894e72f065603449f50658e5e029aa9face",
+    "paired.csv": "e43dcd2a40a185e1d78a32947cd1e50ce4440c25435f5d443b4969760eccc49f",
+    "grouped_oof.csv": "90bb5251992d803252187340da0055b74ba099c4995c8dd99aaa0f39f370f3e5",
+    "manifest.json": "22bfd404a942348b50c3d3f2549c2e3034db4a2f5faa4a282026932928f920fe"
+  },
+  "local_artifact_sha256": {
+    "predictions.csv.gz": "54bf2f819595f52ce290ea714313cfb8b6d7a1a9b17f7d38efaf1548c2815522",
+    "splits.csv.gz": "bf989cbd89bbbfa861cca4a18c6cb0279d471845381cb34d7b2f60690f6d78e4"
+  }
+}

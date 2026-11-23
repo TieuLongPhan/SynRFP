@@ -1,0 +1,90 @@
+{
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 2026
+  },
+  "cpu_jobs": 24,
+  "environment": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "python": "3.12.7",
+    "rdkit": "2026.3.1",
+    "scikit-learn": "1.7.2",
+    "synkit": "1.7.0"
+  },
+  "feature_receipt": {
+    "coverage": {
+      "bh": {
+        "condition_components": 30,
+        "groups": 15,
+        "intended_products": 5,
+        "source_rows": 3955
+      },
+      "suzuki": {
+        "condition_components": 31,
+        "groups": 15,
+        "intended_products": 1,
+        "source_rows": 5760
+      }
+    },
+    "dirty_encoder": false,
+    "feature_code_sha256": "9408e5283d0cd5ac03e44349a7471f040d7c8359f1c94596082c11c3071af7ff",
+    "feature_sha256": {
+      "bh.npz": "f6b03ef6725d15798f9c65dd227a730c327bc106332081696de4cd9ac2b87551",
+      "suzuki.npz": "d8eee4ca1215da1b9e62fdb524050d9071885546769d5dadc3d4ab70f8cf6731"
+    },
+    "input_sha256": {
+      "bh_classic.csv.gz": "ab5cea6673bb6c1e0dd13f200b25fabcecf8f13ad5471d09f3004f3712fea2f7",
+      "suzuki_native_reference.csv.gz": "c5a3354079455ad37462253861a76d04e724911b9fc23929f3b10f51ad3a29ce"
+    },
+    "schema": 1,
+    "source_revision": "e2712ad3d3c63b6df29831d516e68bfc5fd09db4",
+    "versions": {
+      "joblib": "1.5.3",
+      "numpy": "2.4.4",
+      "pandas": "2.3.3",
+      "python": "3.12.7",
+      "rdkit": "2026.3.1",
+      "scikit-learn": "1.7.2",
+      "synkit": "1.7.0"
+    }
+  },
+  "feature_receipt_sha256": "0eef5cc5b21d086d31330025189c4c0576f32b039079fdb050d923ab0a7c32f4",
+  "learner": {
+    "activation": "relu",
+    "alpha": 0.0001,
+    "batch_size": 256,
+    "checkpoint": "lowest standardized validation MSE",
+    "early_stopping": false,
+    "epoch_limit": 200,
+    "hidden_layer_sizes": [
+      512
+    ],
+    "learning_rate_init": 0.001,
+    "max_iter": 200,
+    "patience": 15,
+    "random_seed": 42,
+    "solver": "adam",
+    "tolerance": 0.0001
+  },
+  "runner_sha256": "3834a6b0a8c8c86038ec223eec3120f131f8d26522238ed7acc8acfd07a1c7c3",
+  "splits": {
+    "grouped_outer_folds": 5,
+    "random_outer_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "random_outer_test_fraction": 0.2,
+    "validation_fraction": 0.1,
+    "validation_seed_base": 1337
+  }
+}
