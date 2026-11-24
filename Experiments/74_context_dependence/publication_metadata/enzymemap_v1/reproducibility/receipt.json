@@ -1,0 +1,102 @@
+{
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 2026,
+  "ec_lower_bound_pp_unrounded": 0.4477461330536486,
+  "fit_scores_sha256": "8bb0a971b578ba98e4747d5b5337602c0b9773deb85aa22ce5c670c93869f2ca",
+  "group_weighted_error_rates_mean_over_three_seeds": {
+    "bond_edit_multiset": {
+      "d2048": 0.15790946713548748,
+      "d_pooled": 0.16396153902859145,
+      "reactant_context": 0.16309287214174292,
+      "relative_error_reduction": -0.0383262131326884
+    },
+    "ec_level_2": {
+      "d2048": 0.06364936714388751,
+      "d_pooled": 0.04255820940188182,
+      "reactant_context": 0.04358590842508192,
+      "relative_error_reduction": 0.3313647674504984
+    }
+  },
+  "interaction_lower_bound_pp_unrounded": 0.4451945663635214,
+  "largest_scaffold_group_sensitivity": {
+    "draws": 10000,
+    "effects": {
+      "bond_edit_multiset": {
+        "gain": -0.0060433208096798315,
+        "interval": [
+          -0.022959266284869172,
+          0.01109323792388503
+        ]
+      },
+      "ec_level_2": {
+        "gain": 0.02105917645944131,
+        "interval": [
+          0.004556659457968458,
+          0.038917576705222216
+        ]
+      },
+      "interaction": {
+        "gain": 0.027102497269121135,
+        "interval": [
+          0.004446404817146702,
+          0.05085315200170897
+        ]
+      }
+    },
+    "removed_rows": 8060,
+    "retained_groups": 419,
+    "retained_rows": 1571,
+    "scope": "descriptive post-hoc influence check with existing held-out predictions",
+    "seed": 2026
+  },
+  "parent_commit": "832e158885a35a3cac85c4c78d94e83921a8fca5",
+  "point_and_interval_reproduction": "Bit-exact draw replay, all eight contrasts and primary interaction checked",
+  "pooled_vs_reactant_only_intervals": {
+    "enzymemap_v1": [
+      {
+        "comparator": "reactant_context",
+        "gain": 0.0010276990232001024,
+        "gain_relative_to_majority_error": 0.0012695770381499641,
+        "interval": [
+          -0.004825921419586047,
+          0.007881284757295555
+        ],
+        "target": "ec_level_2"
+      },
+      {
+        "comparator": "reactant_context",
+        "gain": -0.0008686668868485046,
+        "gain_relative_to_majority_error": -0.0011255151634788738,
+        "interval": [
+          -0.013102976398965165,
+          0.011454526315316493
+        ],
+        "target": "bond_edit_multiset"
+      }
+    ],
+    "quantumpioneer_v1": [
+      {
+        "comparator": "reactant_context",
+        "gain": 0.0009404397511391208,
+        "interval": [
+          -0.0025537119260497123,
+          0.004488400397878208
+        ],
+        "target": "barrier"
+      },
+      {
+        "comparator": "reactant_context",
+        "gain": 0.0014411783615938265,
+        "interval": [
+          -0.0019730368948131676,
+          0.004693680190398661
+        ],
+        "target": "deltaHrxn"
+      }
+    ]
+  },
+  "private_bootstrap_sha256": "e7b828bf2f667c8e6b5934fe90525ef83c2b7f0f85ee0ed67290b4b2082a0f90",
+  "published_draws_sha256": "c0b6c67d9bde846181e4a2680d06484cd4e049ad08c32ec485cc5255108ab8c0",
+  "scaffold_groups": 420,
+  "scores_sha256": "880cad5ec7479114d5642a2018bc6cd0237b6e0b3acd24d6297d93dc036f8930"
+}
