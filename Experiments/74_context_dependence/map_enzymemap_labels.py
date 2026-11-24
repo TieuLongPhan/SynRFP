@@ -1,4 +1,4 @@
-"""Map the frozen EnzymeMap training reactions and derive EC-blind bond-edit labels."""
+"""Map a frozen EnzymeMap partition and derive EC-blind bond-edit labels."""
 
 from __future__ import annotations
 
@@ -57,12 +57,16 @@ def verify_precheck(precheck, followup):
     return report, pins
 
 
-def training_rows(precheck, expected):
+def cohort_rows(precheck, split, expected):
     with gzip.open(precheck / "cohort.csv.gz", "rt", newline="") as handle:
-        rows = [row for row in csv.DictReader(handle) if row["split"] == "train"]
+        rows = [row for row in csv.DictReader(handle) if row["split"] == split]
     if len(rows) != expected or len({row["row_id"] for row in rows}) != expected:
-        raise ValueError("Training row count or identity disagrees with the frozen precheck")
+        raise ValueError(f"{split} row count or identity disagrees with the frozen precheck")
     return rows
+
+
+def training_rows(precheck, expected):
+    return cohort_rows(precheck, "train", expected)
 
 
 def sides(smiles):
@@ -187,10 +191,10 @@ def infer(batch):
     return output
 
 
-def run(precheck, followup, source, deps, output, jobs, pilot):
+def run(precheck, followup, source, deps, output, jobs, pilot, split):
     started = time.monotonic()
     report, pins = verify_precheck(precheck, followup)
-    rows = training_rows(precheck, report["cohort"]["rows"]["train"])
+    rows = cohort_rows(precheck, split, report["cohort"]["rows"][split])
     if pilot:
         rows = rows[::max(1, len(rows) // pilot)][:pilot]
     inputs = [(row["row_id"], row["reaction_smiles"]) for row in rows]
@@ -203,7 +207,7 @@ def run(precheck, followup, source, deps, output, jobs, pilot):
         "profile": "atom_conserving_bond_type_multiset_v1",
         "pilot": pilot, "expected": len(inputs), "device": "cpu", "batch_size": BATCH_SIZE,
         "mapper_head": 3, "mapper_layers": [10], "confidence_cutoff": None,
-        "mapper_inputs": ["unmapped reaction SMILES"], "scope": "train",
+        "mapper_inputs": ["unmapped reaction SMILES"], "scope": split,
     }
     output.mkdir(parents=True, exist_ok=True)
     manifest_path = output / "manifest.json"
@@ -220,7 +224,7 @@ def run(precheck, followup, source, deps, output, jobs, pilot):
         return checkpoint / f"{index:06d}.json"
 
     missing = [index for index in range(len(batches)) if not batch_path(index).exists()]
-    print(f"CPU mapper ready: {len(rows):,} train reactions, {len(missing):,} pending batches", flush=True)
+    print(f"CPU mapper ready: {len(rows):,} {split} reactions, {len(missing):,} pending batches", flush=True)
     with ProcessPoolExecutor(max_workers=jobs, initializer=init_mapper, initargs=(source, deps)) as pool:
         completed = len(batches) - len(missing)
         for index, result in zip(missing, pool.map(infer, (batches[i] for i in missing)), strict=True):
@@ -240,11 +244,14 @@ def run(precheck, followup, source, deps, output, jobs, pilot):
     for path, digest in pins.items():
         if sha256(path) != digest:
             raise ValueError(f"Changed precheck input during mapping: {path}")
-    labels = output / "train_labels.json"
+    labels = output / f"{split}_labels.json"
     write(labels, records)
+    admitted = output / "admitted.json"
+    write(admitted, [record["row_id"] for record in records if "label" in record])
     write(output / "COMPLETE.json", {
         "rows": len(records), "validated": len(records) - refusals.total(), "refusals": refusals,
         "labels_sha256": sha256(labels), "manifest_sha256": sha256(manifest_path),
+        "admitted_sha256": sha256(admitted),
         "elapsed_seconds": time.monotonic() - started, "pilot": pilot,
     })
     print(json.dumps(read(output / "COMPLETE.json")), flush=True)
@@ -256,11 +263,12 @@ def main():
         parser.add_argument(f"--{option}", required=True, type=Path)
     parser.add_argument("--jobs", type=int, default=6)
     parser.add_argument("--pilot", type=int)
+    parser.add_argument("--split", choices=("train", "validation", "test"), default="train")
     args = parser.parse_args()
     if args.jobs < 1 or (args.pilot is not None and args.pilot < 1):
         parser.error("jobs and pilot must be positive")
     run(args.precheck.resolve(), args.followup.resolve(), args.mapper_source.resolve(),
-        args.mapper_deps.resolve(), args.output.resolve(), args.jobs, args.pilot)
+        args.mapper_deps.resolve(), args.output.resolve(), args.jobs, args.pilot, args.split)
 
 
 if __name__ == "__main__":

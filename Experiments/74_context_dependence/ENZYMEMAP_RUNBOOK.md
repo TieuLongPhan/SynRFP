@@ -93,3 +93,35 @@ label by verified training row ID, and saves `prediction.json` and its training
 OOF ledger. The two targets share GroupKFold partitions and query/reference
 eligibility. Keep mapped reactions and the OOF ledger local. The prediction is
 an ordering to test in the later held-out replication.
+
+## Run the held-out classification replication
+
+Commit the verified training-only prediction before opening the holdout. Map
+validation and test using the same mapper command with `--split validation` or
+`--split test`. Set the matching output directory to
+`enzymemap-labels-validation-v1` or `enzymemap-labels-test-v1`. The mapper
+stores admitted row IDs separately from the test label file.
+
+Use the pinned ECReact raw archive for the classification smoke test and the
+E1 environment for both commands below.
+
+```sh
+"$e1_python" "$study/smoke_enzymemap.py" \
+  --source "$pinned_ecreact" --output "$runs/enzymemap-development-v1"
+"$e1_python" "$study/run_enzymemap.py" \
+  --runs "$runs" --source "$study/inputs/enzymemap_v2_brenda2023.csv.gz" \
+  --development "$runs/enzymemap-development-v1/COMPLETE.json" \
+  --output "$runs/enzymemap-replication-v1" --jobs 10
+```
+
+Both targets and all fingerprint arms use the same mapped rows. The model
+vocabulary comes from training. Validation selects the epoch by cross-entropy.
+Unseen validation labels have their probability clipped from zero to machine
+epsilon. Unseen test labels count as errors. The test target files are opened
+for scoring once all 30 fits and prediction archives verify. The reported
+interaction compares the pooled-versus-standard delta gain for the frozen
+higher-ranked target with the same gain for the other target. The 10,000
+paired bootstrap draws resample scaffold groups.
+
+The output includes scalar results and checksums. Keep reaction maps, weights,
+feature matrices, split identities and per-row predictions on the workstation.
