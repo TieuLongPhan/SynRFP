@@ -1,0 +1,6 @@
+QuantumPioneer Dataset v1
+Creators: Wu, Haoyang; Zheng, Jonathan W.; Pang, Hao-Wei; Kao, Yu-Chi; Zalte, Akshat Shirish; Abreu, Charlles R. A.; Al Ibrahim, Emad; Biswas, Sayandeep; Byun, Chansup; Burns, Jackson W.; Cao, Chuangchuang; Chung, Yunsie; Dong, Xiaorui; Doner, Anna; Kepner, Jeremy; Koo, Bonhyeok; Li, Shih-Cheng; Menon, Angiras; Milechin, Lauren; Morgan, Nathan; Moreno Sader, Kariana; Spiekermann, Kevin; Vermeire, Florence; Wang, Bryan; Kraft, Markus; Coley, Connor W.; Green, William H.
+Data DOI: https://doi.org/10.5281/zenodo.20060606
+Paper: https://doi.org/10.1021/jacs.6c10371
+License: CC BY4.0 https://creativecommons.org/licenses/by/4.0/
+Changes: added stable source rowIDs, exact-recorded-reactant grouping and proposed group splits; added base10log of native k298. Native physical targets retained without unit conversion. Computed references, not measured rate constants. No endorsement implied.
