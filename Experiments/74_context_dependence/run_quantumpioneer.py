@@ -57,7 +57,8 @@ def validate_fit_inputs(fit_y, validation_y):
         raise ValueError("Constant training target")
 
 
-def fit_cell(packed, parts, fit_y, validation_y, arm, target, seed, directory, plan_hash):
+def fit_cell(packed, parts, fit_y, validation_y, arm, target, seed, directory, plan_hash,
+             shared_paths=None):
     final = directory / f"{target}__{arm}__s{seed}"
     if final.exists():
         saved = read(final / "COMPLETE.json")
@@ -70,7 +71,12 @@ def fit_cell(packed, parts, fit_y, validation_y, arm, target, seed, directory, p
 
     validate_fit_inputs(fit_y, validation_y)
     start = time.monotonic()
-    train, val, blind_test = matrices(packed, parts)
+    if shared_paths is None:
+        train, val, blind_test = matrices(packed, parts)
+    else:
+        train, val, blind_test = (
+            np.load(path, mmap_mode="r", allow_pickle=False) for path in shared_paths
+        )
     center, scale = float(fit_y.mean()), float(fit_y.std())
     y_train, y_val = (fit_y - center) / scale, (validation_y - center) / scale
     model = MLPRegressor(**e1.FIT_OPTIONS, random_state=np.random.RandomState(seed))
@@ -197,10 +203,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for field in ("source", "features", "frozen", "development", "synthetic", "output"):
         parser.add_argument(f"--{field}", type=Path, required=True)
+    parser.add_argument("--shared-matrices", type=Path)
     parser.add_argument("--jobs", type=int, default=4)
     args = parser.parse_args()
-    if not 1 <= args.jobs <= 4:
-        raise ValueError("Dense full-row fitting is capped at four workers")
+    if not 1 <= args.jobs <= (16 if args.shared_matrices else 4):
+        raise ValueError("Worker count exceeds the limit for this matrix-loading mode")
     repo = Path(__file__).resolve().parents[2]
     git = lambda *argv: subprocess.check_output(
         ["git", "-C", str(repo), *argv], text=True
@@ -223,8 +230,16 @@ def main():
     feature_receipt = verified_artifacts(args.features)
     frozen_file = args.frozen / "prediction.json"
     frozen = read(frozen_file)
+    frozen_rev = frozen["checkout_commit"]
+    if frozen_rev != git("rev-parse", "HEAD"):
+        git("merge-base", "--is-ancestor", frozen_rev, "HEAD")
+        changed = set(git("diff", "--name-only", frozen_rev, "HEAD").splitlines())
+        operational_paths = {f"Experiments/74_context_dependence/{name}" for name in (
+            "prepare_shared_matrices.py", "run_quantumpioneer.py", "shared_fit_smoke.py",
+        )}
+        if not args.shared_matrices or not changed <= operational_paths:
+            raise ValueError("Changes after the training-only freeze exceed matrix loading")
     if (frozen["phase"] != "training_only_prediction_frozen" or
-        frozen["checkout_commit"] != git("rev-parse", "HEAD") or
         frozen["protocol_sha256"] != sha256(Path(__file__).with_name("PROTOCOL.md")) or
         frozen["heldout_outcomes_scored"] or frozen["source_sha256"] != sha256(args.source) or
         frozen["feature_receipt_sha256"] != sha256(args.features / "COMPLETE.json")):
@@ -243,6 +258,23 @@ def main():
         parts = tuple(stored[f"{split}_indices"] for split in ("train", "validation", "test"))
         groups, ids = stored["test_groups"], stored["test_ids"]
         train_y, val_y = stored["train_targets"], stored["validation_targets"]
+    shared_paths = None
+    if args.shared_matrices:
+        shared = verified_artifacts(args.shared_matrices)
+        if (shared["phase"] != "shared_matrices_verified" or
+            shared["frozen_prediction_sha256"] != sha256(frozen_file) or
+            shared["feature_receipt_sha256"] != sha256(args.features / "COMPLETE.json")):
+            raise ValueError("Shared matrices were not decoded from this frozen input")
+        shared_paths = {}
+        for arm in ARMS:
+            paths = tuple(args.shared_matrices / f"{arm}__{split}.npy"
+                          for split in ("train", "validation", "test"))
+            for path, rows in zip(paths, parts, strict=True):
+                matrix = np.load(path, mmap_mode="r", allow_pickle=False)
+                if (matrix.shape != (len(rows), feature_receipt["widths"][arm]) or
+                    matrix.dtype != np.float32 or not matrix.flags.c_contiguous):
+                    raise ValueError(f"Unexpected shared matrix shape, type or layout: {path}")
+            shared_paths[arm] = paths
     manifest = args.output / "manifest.json"
     plan = {
         "source_sha256": frozen["source_sha256"], "frozen_prediction_sha256": sha256(frozen_file),
@@ -255,6 +287,8 @@ def main():
         "patience": e1.PATIENCE, "tolerance": e1.TOLERANCE,
         "environment": features.environment(), "splits": frozen["split_summary"],
         "checkpoint_selection": "minimum standardized validation MSE",
+        "shared_matrix_receipt_sha256": (sha256(args.shared_matrices / "COMPLETE.json")
+                                         if args.shared_matrices else None),
     }
     if manifest.exists():
         if read(manifest) != json.loads(json.dumps(plan)):
@@ -269,8 +303,9 @@ def main():
     fits = args.output / "cells"
     fits.mkdir(exist_ok=True)
     receipts = Parallel(n_jobs=args.jobs, verbose=5)(
-        delayed(fit_cell)(packed[arm], parts, train_y[:, i], val_y[:, i],
-                          arm, target, seed, fits, plan_hash)
+        delayed(fit_cell)(None if shared_paths else packed[arm], parts, train_y[:, i],
+                          val_y[:, i], arm, target, seed, fits, plan_hash,
+                          shared_paths[arm] if shared_paths else None)
         for (i, target), arm, seed in product(enumerate(TARGET_NAMES), ARMS, SEEDS)
     )
     predictions = blind_predictions(fits, receipts, parts[2])
