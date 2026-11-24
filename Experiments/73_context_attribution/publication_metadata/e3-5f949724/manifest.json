@@ -1,0 +1,118 @@
+{
+  "condition_indicators": true,
+  "cpu_jobs": 24,
+  "design": "co-hold out each exact-delta precursor pair; keep the third form in fitting",
+  "e1_manifest_sha256": "22bfd404a942348b50c3d3f2549c2e3034db4a2f5faa4a282026932928f920fe",
+  "e1_release_commit": "654968ec04990a238c115095641ddefbf9f7957a",
+  "e1_source_commit": "e2712ad3d3c63b6df29831d516e68bfc5fd09db4",
+  "holdouts": [
+    {
+      "delta_class": "delta01",
+      "matched_recipes": 262,
+      "n_fit": 3165,
+      "n_test": 526,
+      "n_validation": 264,
+      "split": "delta01_pair01"
+    },
+    {
+      "delta_class": "delta01",
+      "matched_recipes": 262,
+      "n_fit": 3165,
+      "n_test": 526,
+      "n_validation": 264,
+      "split": "delta01_pair02"
+    },
+    {
+      "delta_class": "delta01",
+      "matched_recipes": 264,
+      "n_fit": 3163,
+      "n_test": 528,
+      "n_validation": 264,
+      "split": "delta01_pair03"
+    },
+    {
+      "delta_class": "delta02",
+      "matched_recipes": 264,
+      "n_fit": 3163,
+      "n_test": 528,
+      "n_validation": 264,
+      "split": "delta02_pair01"
+    },
+    {
+      "delta_class": "delta02",
+      "matched_recipes": 263,
+      "n_fit": 3164,
+      "n_test": 527,
+      "n_validation": 264,
+      "split": "delta02_pair02"
+    },
+    {
+      "delta_class": "delta02",
+      "matched_recipes": 263,
+      "n_fit": 3164,
+      "n_test": 527,
+      "n_validation": 264,
+      "split": "delta02_pair03"
+    },
+    {
+      "delta_class": "delta03",
+      "matched_recipes": 264,
+      "n_fit": 3164,
+      "n_test": 528,
+      "n_validation": 263,
+      "split": "delta03_pair01"
+    },
+    {
+      "delta_class": "delta03",
+      "matched_recipes": 263,
+      "n_fit": 3165,
+      "n_test": 527,
+      "n_validation": 263,
+      "split": "delta03_pair02"
+    },
+    {
+      "delta_class": "delta03",
+      "matched_recipes": 263,
+      "n_fit": 3165,
+      "n_test": 527,
+      "n_validation": 263,
+      "split": "delta03_pair03"
+    }
+  ],
+  "learner": {
+    "activation": "relu",
+    "alpha": 0.0001,
+    "batch_size": 256,
+    "early_stopping": false,
+    "epoch_limit": 200,
+    "hidden_layer_sizes": [
+      512
+    ],
+    "learning_rate_init": 0.001,
+    "max_iter": 200,
+    "patience": 15,
+    "seed": 42,
+    "solver": "adam",
+    "tolerance": 0.0001
+  },
+  "place": "S",
+  "primary_metric": "equal-class mean reduction in squared matched yield gap vs zero",
+  "runner_dirty": false,
+  "runner_sha256": "8ef0a6618a9d7cb9a6c55cb54903aedefc58c9d582623ae5ccf0b0a366c83324",
+  "source_data": {
+    "filename": "bh_classic.csv.gz",
+    "n_rows": 3955,
+    "sha256": "ab5cea6673bb6c1e0dd13f200b25fabcecf8f13ad5471d09f3004f3712fea2f7"
+  },
+  "validation_seed_base": 1337,
+  "versions": {
+    "joblib": "1.5.3",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "python": "3.12.7",
+    "rdkit": "2026.3.1",
+    "scikit-learn": "1.7.2",
+    "synkit": "1.7.0"
+  },
+  "worktree_commit": "5f9497245c6a62bc276a1ecff61cc78d42097249"
+}

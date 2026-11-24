@@ -1,0 +1,14 @@
+{
+  "fits": 27,
+  "local_artifact_sha256": {
+    "predictions.csv.gz": "a112f48659112c69acd7f9a8b7c306b708d2dd50d47392224cb1dcf81d8a4d9f",
+    "splits.csv.gz": "b0ebe17f0c976db7a15b6640bc143722a7b7bfc3d255931f8f75b8ba1a61f594"
+  },
+  "outputs_sha256": {
+    "class_gap_scores.csv": "79b93bf62782e3fc598d8f1f5afd6a6cde2a00ea6412dff35348e7d99ef88072",
+    "fit_scores.csv": "d7f5a5698f33335e317671d1d732f27f84464fde94aaa10d803d6233af92a589",
+    "manifest.json": "cc2241350dec13430d37c78971a761ff3e621d203861f9ddcb229de8ccd76d57",
+    "pair_gap_scores.csv": "07dd6be653214e892c7d733ddb5837209d8152849d254d0d6841e92646d640a3"
+  },
+  "phase": "complete"
+}
