@@ -1,0 +1,20 @@
+{
+  "analysis_commit": "ac7c7b7daad83fb4da4091ec0dd1968dad57640f",
+  "files_sha256": {
+    "README.md": "77a1d76434d5af84176f22ceb330bf08d56950af097d1f80a952280461d9c742",
+    "VERIFIED.json": "ab85e228f3c521ac3adebf7dbcb3fd30bbfbb693091aa2e10da15434a94e60b7",
+    "development.json": "9d873c12ff90b17f536aedad2562a64b0d97056d353315f65e3c5718014a300c",
+    "eligibility_followup.json": "92bbda2ebf94e066fef92da664c2210101f2aa30aa1c8f7c915f261fb0c144ca",
+    "fit_receipts.json": "4f391537848e68e66a6825aa6f5dd0f4261fc78b909ab9a8ce5af26d1ab42136",
+    "fit_scores.csv": "8bb0a971b578ba98e4747d5b5337602c0b9773deb85aa22ce5c670c93869f2ca",
+    "input_coverage.json": "3118932f5af58dcdefe18c8bd6f2ff0f6c6814f4526b21aa28a30d3ead9d40e3",
+    "plan.json": "633b26ab93bd8478b07f0cb30026a5c23f6a8da1d111ac23a4906b104994deff",
+    "prediction.json": "c7ab68625ee63a09e16eb0f4a49075822a93f9ad1c61720b0d74c5ec3a619093",
+    "scores.json": "880cad5ec7479114d5642a2018bc6cd0237b6e0b3acd24d6297d93dc036f8930",
+    "status.json": "b30789e30393de86d9c2629bd927f4aec4cf30e895d88f8a38386dfd2f2d1345"
+  },
+  "fit_count": 30,
+  "fit_scores_export": "Line endings normalized to LF. status.json records the original workstation artifact checksums.",
+  "status": "verified",
+  "verified_utc": "2026-11-24T17:06:24.189096+00:00"
+}

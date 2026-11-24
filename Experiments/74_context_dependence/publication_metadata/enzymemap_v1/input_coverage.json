@@ -1,0 +1,48 @@
+{
+  "cohort_sha256": "5f95161238b402cf2361a7d5f04dfaad4276a421f711d0b392a05de2d035393e",
+  "method": "Unmapped source-side explicit atom counts by atomic number and isotope. No test targets read.",
+  "splits": {
+    "test": {
+      "admitted_rows": 9631,
+      "mapping_receipt_sha256": "84e80953a2d1020af813960bb84ad19f5d62f29ff0627c888a3bff4283d09a8b",
+      "most_affected_group_refused_rows": 5060,
+      "most_affected_group_source_rows": 13120,
+      "refused_composition_counts": {
+        "element_and_isotope_balanced": 72,
+        "unbalanced": 5041
+      },
+      "refused_rows": 5113,
+      "retained_group_count": 420,
+      "source_group_count": 441,
+      "source_rows": 14744
+    },
+    "train": {
+      "admitted_rows": 13469,
+      "mapping_receipt_sha256": "6967171c00a2ae8aa85b6520a3f7086e877b26524261580e9809e8b05ccf8b1c",
+      "most_affected_group_refused_rows": 73,
+      "most_affected_group_source_rows": 3744,
+      "refused_composition_counts": {
+        "element_and_isotope_balanced": 197,
+        "unbalanced": 310
+      },
+      "refused_rows": 507,
+      "retained_group_count": 3451,
+      "source_group_count": 3619,
+      "source_rows": 13976
+    },
+    "validation": {
+      "admitted_rows": 1730,
+      "mapping_receipt_sha256": "99753201140a153ccde3f5e088050bb92ec1499616fee0277f7bfb66dd81304d",
+      "most_affected_group_refused_rows": 13,
+      "most_affected_group_source_rows": 13,
+      "refused_composition_counts": {
+        "element_and_isotope_balanced": 11,
+        "unbalanced": 33
+      },
+      "refused_rows": 44,
+      "retained_group_count": 436,
+      "source_group_count": 452,
+      "source_rows": 1774
+    }
+  }
+}

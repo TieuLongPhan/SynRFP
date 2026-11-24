@@ -1,0 +1,13 @@
+{
+  "phase": "complete",
+  "utc": "2026-11-24T17:06:08.004845+00:00",
+  "verified_fits": 30,
+  "outputs_sha256": {
+    "scores.json": "880cad5ec7479114d5642a2018bc6cd0237b6e0b3acd24d6297d93dc036f8930",
+    "fit_scores.csv": "03191d81c5bb0e35a6c2dd889a716e1c4af1cf2a9bb3edfa27343d70c45a029b",
+    "fit_receipts.json": "4f391537848e68e66a6825aa6f5dd0f4261fc78b909ab9a8ce5af26d1ab42136",
+    "plan.json": "633b26ab93bd8478b07f0cb30026a5c23f6a8da1d111ac23a4906b104994deff",
+    "group_bootstrap.npz": "e7b828bf2f667c8e6b5934fe90525ef83c2b7f0f85ee0ed67290b4b2082a0f90",
+    "test_label_contingency.csv": "b95e88313c4c9f75aeb9ba3696ae986d03d015164e0930d59734f01f37718bca"
+  }
+}

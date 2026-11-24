@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "utc": "2026-11-24T17:00:31.709529+00:00",
+  "source_sha256": "c730e5bd196dc69b5ebc421cce37010162f7e129f149b28196f0069ee242bdcd",
+  "runner_sha256": "7bdea1791d7907848bee373fdb7e6c5eed5cf72666607bbabfa0469b810e5463",
+  "smoke_sha256": "3f6d99dd73407844b7feca31cf598ba0429640ed8262b3f34e6ab582ec82b852",
+  "rows": 520,
+  "training_classes": 4,
+  "fit_epochs": 34,
+  "validation_unseen_rows": 1,
+  "identical_prediction_gain": 0.0,
+  "unseen_test_class_control": true
+}
