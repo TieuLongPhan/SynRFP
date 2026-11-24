@@ -1,0 +1,31 @@
+{
+  "phase": "target_free_features_complete",
+  "source_sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520",
+  "runner_sha256": "b927943f5e337b18308ab56468cfb33cd6334d0fe64896864551a28a62675baf",
+  "e1_feature_code_sha256": "9408e5283d0cd5ac03e44349a7471f040d7c8359f1c94596082c11c3071af7ff",
+  "widths": {
+    "d1024": 1024,
+    "d2048": 2048,
+    "d_pooled": 2048,
+    "d_rehash": 2048,
+    "reactant_context": 2048
+  },
+  "counts": {
+    "source_rows": 166158,
+    "encoded_rows": 166158,
+    "rows_radicals_omitted_as_explicit_label": 166158,
+    "rows_explicit_H_node_count_changed": 0,
+    "rows_nonzero_formal_charge_histogram_changed": 0,
+    "exact_delta_classes": 146279
+  },
+  "unsigned_flags": "Radical count is absent from WL node labels; H and charge checks compare parsed atom resources",
+  "outputs_sha256": {
+    "exact_delta_certificates.sqlite": "4b7d076c7c211ed4b54040d320fb3cd4a66ebba1b93a0a26494b77a791ffd17e",
+    "feature_rows.csv.gz": "5a22097567f430fa094854e9cd3b692d35aee67107095fa93380509e3479b217",
+    "d1024.npy": "ab33c4d46eec06738d1bb8bc4e78716999563fdfa3280cde4955adf0360498ef",
+    "d2048.npy": "21466e7d4bf1e3988cd8855fbdc7f30e9983c0445fa30028b1006b17ad00e8b6",
+    "d_pooled.npy": "590b5b69ae983be96a45ab73ddc438a1a82b2f4d055a2c0e0fa9740518b4f062",
+    "d_rehash.npy": "1a482dc0056451fb05148afae5b08a6d541c955f884d1fb2c7d985bc7759dfc4",
+    "reactant_context.npy": "46677a0904931a575f89dde71f336485b1cc3dcb9118956a8484bb0b5d7a7182"
+  }
+}

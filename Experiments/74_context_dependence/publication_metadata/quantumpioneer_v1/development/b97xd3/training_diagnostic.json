@@ -1,0 +1,27 @@
+{
+  "scope": "development_training_only",
+  "targets": [
+    "ea",
+    "dh"
+  ],
+  "original": {
+    "eligible_queries": 0,
+    "coverage": 0.0,
+    "query_groups": 0,
+    "classes": 0,
+    "third_neighbor_boundary_ties": 0,
+    "diagnostic": null,
+    "coverage_passes": false,
+    "higher_gain_target_index": null
+  },
+  "permutation": {
+    "eligible_queries": 0,
+    "coverage": 0.0,
+    "query_groups": 0,
+    "classes": 0,
+    "third_neighbor_boundary_ties": 0,
+    "diagnostic": null,
+    "coverage_passes": false,
+    "higher_gain_target_index": null
+  }
+}

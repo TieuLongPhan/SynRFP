@@ -1,0 +1,82 @@
+{
+  "phase": "shared_training_pilot_complete",
+  "jobs": 12,
+  "shared_matrix_receipt_sha256": "cde27fe2d7abc3e6bff1299da46012d94d694d0084a4e14fa8d46e5bc5e3a91a",
+  "bit_exact_checkpoint_and_prediction_replay": true,
+  "pilot_training_epochs": [
+    {
+      "arm": "d1024",
+      "seed": 17,
+      "rows": 133299,
+      "epoch_seconds": 19.544811413623393
+    },
+    {
+      "arm": "d2048",
+      "seed": 18,
+      "rows": 133299,
+      "epoch_seconds": 38.13957104180008
+    },
+    {
+      "arm": "d_pooled",
+      "seed": 19,
+      "rows": 133299,
+      "epoch_seconds": 35.74808251671493
+    },
+    {
+      "arm": "d_rehash",
+      "seed": 20,
+      "rows": 133299,
+      "epoch_seconds": 38.23432229086757
+    },
+    {
+      "arm": "reactant_context",
+      "seed": 21,
+      "rows": 133299,
+      "epoch_seconds": 36.39158325083554
+    },
+    {
+      "arm": "d1024",
+      "seed": 22,
+      "rows": 133299,
+      "epoch_seconds": 20.833710530772805
+    },
+    {
+      "arm": "d2048",
+      "seed": 23,
+      "rows": 133299,
+      "epoch_seconds": 38.11913212388754
+    },
+    {
+      "arm": "d_pooled",
+      "seed": 24,
+      "rows": 133299,
+      "epoch_seconds": 37.21645927801728
+    },
+    {
+      "arm": "d_rehash",
+      "seed": 25,
+      "rows": 133299,
+      "epoch_seconds": 38.30917838122696
+    },
+    {
+      "arm": "reactant_context",
+      "seed": 26,
+      "rows": 133299,
+      "epoch_seconds": 33.130861763842404
+    },
+    {
+      "arm": "d1024",
+      "seed": 27,
+      "rows": 133299,
+      "epoch_seconds": 17.95952655747533
+    },
+    {
+      "arm": "d2048",
+      "seed": 28,
+      "rows": 133299,
+      "epoch_seconds": 38.12124676909298
+    }
+  ],
+  "memory_peak_bytes": 7323623424,
+  "heldout_outcomes_opened": false
+}

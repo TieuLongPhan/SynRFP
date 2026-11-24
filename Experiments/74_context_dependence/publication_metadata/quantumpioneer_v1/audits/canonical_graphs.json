@@ -1,0 +1,26 @@
+{
+  "phase": "internal_graph_audit_complete",
+  "source_sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520",
+  "graph_profile": "RDKit canonical isomeric sides, removeHs=False, atom maps removed",
+  "source_rows": {
+    "train": 133299,
+    "test": 16329,
+    "validation": 16530
+  },
+  "crossing_connected_groups": 0,
+  "internally_eligible_rows": {
+    "train": 133299,
+    "test": 16329,
+    "validation": 16530
+  },
+  "exclusions": {},
+  "rows_with_explicit_h": 76951,
+  "rows_with_radicals": 166158,
+  "rows_with_charge": 890,
+  "prior_benchmark_overlap_completed": false,
+  "feature_profile_loss_audit_completed": false,
+  "external_scores_opened": false,
+  "outputs_sha256": {
+    "row_graph_audit.csv.gz": "ad06310e7a3a1a0956ec68b0858b8a52f33287a4d48794b6d3d44182fae7b7ce"
+  }
+}

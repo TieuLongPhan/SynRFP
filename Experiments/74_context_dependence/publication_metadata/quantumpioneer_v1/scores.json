@@ -1,0 +1,303 @@
+{
+  "scope": "primary_external_ordering",
+  "n_rows": 16329,
+  "n_groups": 13349,
+  "native_metrics": [
+    {
+      "target": "barrier",
+      "arm": "d1024",
+      "seed": 17,
+      "rmse": 4.870084994711667,
+      "mae": 2.797118614215408
+    },
+    {
+      "target": "barrier",
+      "arm": "d1024",
+      "seed": 29,
+      "rmse": 4.889450320053957,
+      "mae": 2.8452700825972923
+    },
+    {
+      "target": "barrier",
+      "arm": "d1024",
+      "seed": 43,
+      "rmse": 4.885178434924459,
+      "mae": 2.8086497574876286
+    },
+    {
+      "target": "barrier",
+      "arm": "d2048",
+      "seed": 17,
+      "rmse": 4.858591299691101,
+      "mae": 2.8047422279231813
+    },
+    {
+      "target": "barrier",
+      "arm": "d2048",
+      "seed": 29,
+      "rmse": 4.887621872400042,
+      "mae": 2.8071972195911066
+    },
+    {
+      "target": "barrier",
+      "arm": "d2048",
+      "seed": 43,
+      "rmse": 4.85769209801274,
+      "mae": 2.7742765721325955
+    },
+    {
+      "target": "barrier",
+      "arm": "d_pooled",
+      "seed": 17,
+      "rmse": 4.8007447709101605,
+      "mae": 2.7647811867861223
+    },
+    {
+      "target": "barrier",
+      "arm": "d_pooled",
+      "seed": 29,
+      "rmse": 4.8246742878542666,
+      "mae": 2.763537350472671
+    },
+    {
+      "target": "barrier",
+      "arm": "d_pooled",
+      "seed": 43,
+      "rmse": 4.767804263859805,
+      "mae": 2.7624253779801546
+    },
+    {
+      "target": "barrier",
+      "arm": "d_rehash",
+      "seed": 17,
+      "rmse": 4.859913134510173,
+      "mae": 2.799642380619864
+    },
+    {
+      "target": "barrier",
+      "arm": "d_rehash",
+      "seed": 29,
+      "rmse": 4.880233848281992,
+      "mae": 2.814919580606182
+    },
+    {
+      "target": "barrier",
+      "arm": "d_rehash",
+      "seed": 43,
+      "rmse": 4.855011385904018,
+      "mae": 2.7689957542893944
+    },
+    {
+      "target": "barrier",
+      "arm": "reactant_context",
+      "seed": 17,
+      "rmse": 4.8072000208001535,
+      "mae": 2.791322869898591
+    },
+    {
+      "target": "barrier",
+      "arm": "reactant_context",
+      "seed": 29,
+      "rmse": 4.823360941711456,
+      "mae": 2.772276311295734
+    },
+    {
+      "target": "barrier",
+      "arm": "reactant_context",
+      "seed": 43,
+      "rmse": 4.7710879529523185,
+      "mae": 2.7531231386078256
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d1024",
+      "seed": 17,
+      "rmse": 2.948610334279764,
+      "mae": 1.9354712295432563
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d1024",
+      "seed": 29,
+      "rmse": 2.99420753688665,
+      "mae": 1.9718810817864905
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d1024",
+      "seed": 43,
+      "rmse": 2.954728687076908,
+      "mae": 1.947838296452091
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d2048",
+      "seed": 17,
+      "rmse": 2.8444217992462155,
+      "mae": 1.85714211815477
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d2048",
+      "seed": 29,
+      "rmse": 2.864319072626603,
+      "mae": 1.8708424709813887
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d2048",
+      "seed": 43,
+      "rmse": 2.8623692969157295,
+      "mae": 1.8632293827604791
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d_pooled",
+      "seed": 17,
+      "rmse": 2.783907665379184,
+      "mae": 1.7840631708150705
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d_pooled",
+      "seed": 29,
+      "rmse": 2.7759052188043225,
+      "mae": 1.7896353634814461
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d_pooled",
+      "seed": 43,
+      "rmse": 2.7889337311792173,
+      "mae": 1.778336995582068
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d_rehash",
+      "seed": 17,
+      "rmse": 2.8459241911373447,
+      "mae": 1.854652225277258
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d_rehash",
+      "seed": 29,
+      "rmse": 2.8680818845989107,
+      "mae": 1.8686446069478646
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "d_rehash",
+      "seed": 43,
+      "rmse": 2.859051455989578,
+      "mae": 1.8488307884211366
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "reactant_context",
+      "seed": 17,
+      "rmse": 2.7983434386099657,
+      "mae": 1.7981449139607357
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "reactant_context",
+      "seed": 29,
+      "rmse": 2.789858497058894,
+      "mae": 1.7918512938039457
+    },
+    {
+      "target": "deltaHrxn",
+      "arm": "reactant_context",
+      "seed": 43,
+      "rmse": 2.799011361869514,
+      "mae": 1.7984076879604187
+    }
+  ],
+  "units": "kcal/mol",
+  "normalized_gain": [
+    {
+      "target": "barrier",
+      "comparator": "d1024",
+      "gain": 0.020234705792035405,
+      "interval": [
+        0.014012005431631228,
+        0.02658972329611018
+      ]
+    },
+    {
+      "target": "barrier",
+      "comparator": "d2048",
+      "gain": 0.01647440327332576,
+      "interval": [
+        0.009868635849869732,
+        0.023368517434844804
+      ]
+    },
+    {
+      "target": "barrier",
+      "comparator": "d_rehash",
+      "gain": 0.015246174003160523,
+      "interval": [
+        0.009138919467408343,
+        0.021489855014035723
+      ]
+    },
+    {
+      "target": "barrier",
+      "comparator": "reactant_context",
+      "gain": 0.0009404397511391208,
+      "interval": [
+        -0.0025537119260497123,
+        0.004488400397878208
+      ]
+    },
+    {
+      "target": "deltaHrxn",
+      "comparator": "d1024",
+      "gain": 0.0325949219975676,
+      "interval": [
+        0.027867802218245166,
+        0.03744965202231774
+      ]
+    },
+    {
+      "target": "deltaHrxn",
+      "comparator": "d2048",
+      "gain": 0.013786175046924889,
+      "interval": [
+        0.00893129389642655,
+        0.018831944004835875
+      ]
+    },
+    {
+      "target": "deltaHrxn",
+      "comparator": "d_rehash",
+      "gain": 0.013727720858071365,
+      "interval": [
+        0.00898941939337444,
+        0.01849106224167535
+      ]
+    },
+    {
+      "target": "deltaHrxn",
+      "comparator": "reactant_context",
+      "gain": 0.0014411783615938265,
+      "interval": [
+        -0.0019730368948131676,
+        0.004693680190398661
+      ]
+    }
+  ],
+  "interaction": {
+    "higher_ranked_target": "deltaHrxn",
+    "gain_difference": -0.002688228226400871,
+    "interval": [
+      -0.010839165770093952,
+      0.005159711990732987
+    ]
+  },
+  "test_target_pearson_r": 0.6321558264858085,
+  "bootstrap_seed": 2026,
+  "bootstrap_draws": 10000
+}

@@ -1,0 +1,63 @@
+{
+  "phase": "training_only_prediction_frozen",
+  "frozen_utc": "2026-11-24T13:29:56.207917+00:00",
+  "protocol_sha256": "0913082da8750160563065d70deebae46629be8189159ea8ebdf94a35f430bad",
+  "checkout_commit": "2ed27bb132a80fd03c4dcf87607c13c6d726f297",
+  "source_sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520",
+  "graph_audit_receipt_sha256": "06fccb4c6646fc50f6880b6f5ef1846590c12cf081f3b2b568b11e1face66307",
+  "feature_receipt_sha256": "e9c1f998cc36622c548b05221801649db249967b270685e64a2e1cc45ae4a15e",
+  "overlap_audit_sha256": "10cacb4ed9e4dcdadb796e21b24ddafc4d41e2870c0adb8e46cce29728bcf350",
+  "source_code_sha256": {
+    "freeze_qp_prediction.py": "2e6af6f8a2edc080d588eea1bb53e1dc519fbe74e0de6b826dc975e09b031206",
+    "paired_analysis.py": "fa98e13fd83a71615eaf9c47ad8d3e500815225820d05c85fbe7cd7797283401"
+  },
+  "targets": [
+    "barrier",
+    "deltaHrxn"
+  ],
+  "diagnostic": {
+    "eligible_queries": 8014,
+    "coverage": 0.060120481023863644,
+    "query_groups": 7493,
+    "classes": 1170,
+    "third_neighbor_boundary_ties": 751,
+    "diagnostic": [
+      -0.038200286144327224,
+      -0.00793697443221369
+    ],
+    "coverage_passes": true,
+    "higher_gain_target_index": 1
+  },
+  "predicted_higher_gain_target": "deltaHrxn",
+  "exclusions": {},
+  "split_summary": {
+    "train": {
+      "rows": 133299,
+      "groups": 109093,
+      "row_ids_sha256": "2ef5b7fc54edb3d8ef53609d9fadec685200649b3353adf9bc71531d15275986"
+    },
+    "validation": {
+      "rows": 16530,
+      "groups": 13551,
+      "row_ids_sha256": "ef91b8738cd61d3b8460e4191667ffc106c9be46c4a77502d7494180dd79b222"
+    },
+    "test": {
+      "rows": 16329,
+      "groups": 13349,
+      "row_ids_sha256": "77ebe386aaad93883e4ea3ad81e424e749d27679065df0d66635de7c5e3b60f3"
+    }
+  },
+  "heldout_chemistry_overlap": {
+    "distinct_training_partners": 98067,
+    "test_rows_with_recurring_partner": 16329,
+    "test_rows_with_all_partners_recurring": 3324,
+    "test_rows_with_shared_scaffold": 16329,
+    "test_rows_with_all_scaffolds_shared": 12738
+  },
+  "artifact_sha256": {
+    "cohort.npz": "72661d150f07a9d817d14ef8ac876ea727a2e9227fdcc8b2388956d4321ba929",
+    "eligibility.csv.gz": "e5ac8515afca5b2f194d6e17e041ee140e34ddea50aa2631cde74ac02c01f88e",
+    "training_diagnostic_oof.npz": "a790b0711dcc866ae4fb008406f03a6212b410afc17aa6f20c55ec7a21fba38e"
+  },
+  "heldout_outcomes_scored": false
+}

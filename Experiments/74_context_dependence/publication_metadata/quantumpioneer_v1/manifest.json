@@ -1,0 +1,69 @@
+{
+  "source_sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520",
+  "frozen_prediction_sha256": "fcc3d4612090d5060b61b3b21509b3bee70c91715a744d33876471bad593efca",
+  "features_sha256": "e9c1f998cc36622c548b05221801649db249967b270685e64a2e1cc45ae4a15e",
+  "development_sha256": "79d17a396661cb2173b0c613e577dcbc62a5a2c1913115991a87b5927a75528d",
+  "synthetic_sha256": "de244c52b4f55e154e96163da69342091417950e1a7d02c46b35d372d2625407",
+  "runner_commit": "10232d68a4024d5428b2cc8218df561aee6090e7",
+  "runner_sha256": "6047ae3a4ceb8e0f3bbc2127eed82297664101c4c98e4d0564e29dfb81a49c6f",
+  "arms": [
+    "d1024",
+    "d2048",
+    "d_pooled",
+    "d_rehash",
+    "reactant_context"
+  ],
+  "targets": [
+    "barrier",
+    "deltaHrxn"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "fits": 30,
+  "fit_options": {
+    "hidden_layer_sizes": [
+      512
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "learning_rate_init": 0.001,
+    "alpha": 0.0001,
+    "batch_size": 256,
+    "max_iter": 200,
+    "early_stopping": false
+  },
+  "max_epochs": 200,
+  "patience": 15,
+  "tolerance": 0.0001,
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "rdkit": "2026.3.1",
+    "synkit": "1.7.0",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.3"
+  },
+  "splits": {
+    "train": {
+      "rows": 133299,
+      "groups": 109093,
+      "row_ids_sha256": "2ef5b7fc54edb3d8ef53609d9fadec685200649b3353adf9bc71531d15275986"
+    },
+    "validation": {
+      "rows": 16530,
+      "groups": 13551,
+      "row_ids_sha256": "ef91b8738cd61d3b8460e4191667ffc106c9be46c4a77502d7494180dd79b222"
+    },
+    "test": {
+      "rows": 16329,
+      "groups": 13349,
+      "row_ids_sha256": "77ebe386aaad93883e4ea3ad81e424e749d27679065df0d66635de7c5e3b60f3"
+    }
+  },
+  "checkpoint_selection": "minimum standardized validation MSE",
+  "shared_matrix_receipt_sha256": "cde27fe2d7abc3e6bff1299da46012d94d694d0084a4e14fa8d46e5bc5e3a91a"
+}

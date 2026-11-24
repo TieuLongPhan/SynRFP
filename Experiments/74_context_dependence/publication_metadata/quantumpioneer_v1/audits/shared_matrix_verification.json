@@ -1,0 +1,22 @@
+{
+  "phase": "shared_matrices_verified",
+  "feature_receipt_sha256": "e9c1f998cc36622c548b05221801649db249967b270685e64a2e1cc45ae4a15e",
+  "frozen_prediction_sha256": "fcc3d4612090d5060b61b3b21509b3bee70c91715a744d33876471bad593efca",
+  "outputs_sha256": {
+    "d1024__train.npy": "15c3c0d76a51954163dae783af714fca0b2b8c233f482597bec64b517b520d73",
+    "d1024__validation.npy": "1d14ccd32cfe1187ef6fc09abeb5b3fe550b2f48c9ed17d0ccaab0e426c4bc8e",
+    "d1024__test.npy": "9ff43823c3005165660af85c4c5b2dbf28c22f630f1d8b6303341f6c98991123",
+    "d2048__train.npy": "f8cf9fc92cd2bc43951694f39029a8728d73b134ef5e4bfea80bce312fd85649",
+    "d2048__validation.npy": "4b99da66ed4ecadca94e7ca48a2885e35a5207ebdfa550975b4c5feaa1c531f3",
+    "d2048__test.npy": "021fcff6c70a6e702b280c6a46535fef02755e74d6ca294ba28926520921a473",
+    "d_pooled__train.npy": "042ec8e14a6e64b210ac00668fd71be8012049b1e8203a68af0dae6f7fee8872",
+    "d_pooled__validation.npy": "7cf8ca57f620d5afae66156a0dd73b3c2617ab6966d4e57015c66cb2a4cc9f1e",
+    "d_pooled__test.npy": "87b3e293f1065e44a6d5dc9a8f1742b6cae3b91b2447d11b43ceb5197b4d4c9a",
+    "d_rehash__train.npy": "c937aa36d2f94d3664f463a1c74447a5ce22fa17eda79886da5bde40f23889ef",
+    "d_rehash__validation.npy": "4f199bff8af4315d0f54612fb5519435f668d65e392994ffb55731f078b5675a",
+    "d_rehash__test.npy": "fc68116cbe8c232bf86b4e212ac709f599ec990fc4e5a884eb1d268d3e2bf451",
+    "reactant_context__train.npy": "026d2ca87a4e59d2dfc2871b4472e920e6d9f1418f0441780d380c418f299c65",
+    "reactant_context__validation.npy": "75cd13c283fcc8120e871bc1af499577078f766a77b0be58f8943b30a9753835",
+    "reactant_context__test.npy": "5db4e7b0dcc7622178f22c41053517b1d4b9402c6a93b1c20175b1591c5a4cb9"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "phase": "verified_release",
+  "fit_count": 30,
+  "verified_native_run_sha256": "0adf69ee61eb2a6ddd1c5ad94f8ccef06683b82c87925792635b0c676673356d",
+  "checkpoint_and_prediction_hashes_verified": true,
+  "paired_intervals_replayed": true,
+  "contents_sha256": {
+    "audits/canonical_graphs.json": "06fccb4c6646fc50f6880b6f5ef1846590c12cf081f3b2b568b11e1face66307",
+    "audits/fingerprint_coverage.json": "e9c1f998cc36622c548b05221801649db249967b270685e64a2e1cc45ae4a15e",
+    "audits/input_manifest.json": "c27e5011c47061f5fed7d9f399d836afe8074bce4abe05a112bdf4e43ee10228",
+    "audits/prior_benchmark_overlap.json": "2319883a257c1b4c3cbba38403edb07671e935729db498ede6c558bd90153b45",
+    "audits/prior_overlap_refusal_resolution.json": "c7ff176c12ed2841039962ddf08c2aef26c9a0c44414879a9f6574fb45c919c6",
+    "audits/shared_matrix_verification.json": "cde27fe2d7abc3e6bff1299da46012d94d694d0084a4e14fa8d46e5bc5e3a91a",
+    "audits/training_only_capacity_pilot.json": "992ab607b582e6f622e24130ced7445debc57ab71a32288315dc8422f9a1db27",
+    "development/b97xd3/COMPLETE.json": "59c5109bfa1ae631548e0ca030f43576321239bb1dd4c1b3093bbf0e4967fc52",
+    "development/b97xd3/training_diagnostic.json": "9b4cfb97531be72dcdd06ad385788bdbf357e527971a5cf9468a6befe48a2345",
+    "development/cycloadd/COMPLETE.json": "b641fcf67e9f836b9234d325d836acd6a48a7649f08e14d7cc060c7fb8b38784",
+    "development/cycloadd/training_diagnostic.json": "02254fe7a9cc0792973cde40402a9c72bc21b87b5dac4b727fe544287faa8b90",
+    "fit_scores.csv": "622876db02b151479ddf4b43e8edfe51779f44f4df4f9e676d63f5f2526b4293",
+    "manifest.json": "df3060738ba8b478f30dc14022a43019689c5e35f671f26aeaa80846c4968803",
+    "paired_bootstrap_draws.npz": "51a8dccd288d7da63790ead4237b20ba850f3d4c24d826543d9f99236e075431",
+    "prediction.json": "fcc3d4612090d5060b61b3b21509b3bee70c91715a744d33876471bad593efca",
+    "scores.json": "16da2eeafa53c2e2332f3c087c83299fe1e70e740477bf4461ba2b77f45f431f",
+    "status.json": "0adf69ee61eb2a6ddd1c5ad94f8ccef06683b82c87925792635b0c676673356d",
+    "synthetic/COMPLETE.json": "de244c52b4f55e154e96163da69342091417950e1a7d02c46b35d372d2625407",
+    "synthetic/fit_scores.csv": "9df466fe4ae6920f4eaeb1bf3381200401f45d853a7305b0c4a738c30300ceab",
+    "README.md": "0c242ecc21df2556cbbecad611cbbb44d92d01d441cb0757d34dca46c1a4df9e"
+  }
+}

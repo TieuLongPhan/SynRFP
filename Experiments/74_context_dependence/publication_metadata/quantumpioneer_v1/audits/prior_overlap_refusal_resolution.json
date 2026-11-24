@@ -1,0 +1,8 @@
+{
+  "phase": "one_refusal_resolved_by_element_invariant",
+  "benchmark_row": "USPTO_22532",
+  "refused_record_contains_phosphorus_on_both_sides": true,
+  "quantumpioneer_heldout_rows_without_any_phosphorus_token": 16329,
+  "overlap_receipt_sha256": "10cacb4ed9e4dcdadb796e21b24ddafc4d41e2870c0adb8e46cce29728bcf350",
+  "source_sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520"
+}

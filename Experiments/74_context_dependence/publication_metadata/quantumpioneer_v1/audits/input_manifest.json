@@ -1,0 +1,134 @@
+{
+  "stage": "source_intake",
+  "protocol_sha256": "0913082da8750160563065d70deebae46629be8189159ea8ebdf94a35f430bad",
+  "script_sha256": "0dd61438c3b842b336e3eb0b4b38ee758c06df1d752ed221482019e58baf8445",
+  "checkout_commit": "eabcc77482bff2f39424c4bf687d0246704d3fd3",
+  "sources": {
+    "b97xd3": {
+      "expected_filename": "b97xd3.csv.gz",
+      "expected_sha256": "33f881612842378a6cff97b2db0c99b1c4877a7e81a318129a26dd58e9702d73",
+      "expected_rows": 16365,
+      "sha256": "33f881612842378a6cff97b2db0c99b1c4877a7e81a318129a26dd58e9702d73",
+      "status": "source_intake_verified",
+      "columns": [
+        "r_id",
+        "aam",
+        "ea",
+        "dh"
+      ],
+      "counts": {
+        "rows": 16365,
+        "finite_ea": 16365,
+        "finite_dh": 16365,
+        "both_targets_finite": 16365,
+        "distinct_source_row_ids": 16365
+      },
+      "split_rows": {}
+    },
+    "cycloadd": {
+      "expected_filename": "cycloadd.csv.gz",
+      "expected_sha256": "afd03a88ef6268350f2c176b70a67396ff1902b85e6742bb2ac3ef0d9ca84004",
+      "expected_rows": 5269,
+      "sha256": "afd03a88ef6268350f2c176b70a67396ff1902b85e6742bb2ac3ef0d9ca84004",
+      "status": "source_intake_verified",
+      "columns": [
+        "r_id",
+        "aam",
+        "G_act",
+        "G_r",
+        "split"
+      ],
+      "counts": {
+        "rows": 5269,
+        "finite_G_act": 5269,
+        "finite_G_r": 5269,
+        "both_targets_finite": 5269,
+        "distinct_source_row_ids": 5269
+      },
+      "split_rows": {
+        "test": 526,
+        "train": 4216,
+        "val": 527
+      }
+    },
+    "quantumpioneer": {
+      "expected_filename": "quantumpioneer_kinetics.csv",
+      "expected_sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520",
+      "expected_rows": 166158,
+      "sha256": "e81aa5f9158564e64356a524c046469e2a13e471469ff641713ded3c37ff1520",
+      "split_group_counts": {
+        "train": 109093,
+        "test": 13349,
+        "validation": 13551
+      },
+      "energy_units": {
+        "kcal/mol": 166158
+      },
+      "status": "source_intake_verified",
+      "columns": [
+        "source_record_id",
+        "source_row_index",
+        "reaction_smiles",
+        "reactant_pair_group",
+        "proposed_split",
+        "temperature_K",
+        "reference_kind",
+        "theory",
+        "rate_unit",
+        "energy_unit",
+        "k_298",
+        "log10_k_298",
+        "A_low",
+        "Ea_low",
+        "A_high",
+        "Ea_high",
+        "barrier",
+        "deltaHrxn",
+        "deltaHrxn298",
+        "deltaGrxn298",
+        "P2M"
+      ],
+      "counts": {
+        "rows": 166158,
+        "finite_barrier": 166158,
+        "finite_deltaHrxn": 166158,
+        "both_targets_finite": 166158
+      },
+      "split_rows": {
+        "train": 133299,
+        "test": 16329,
+        "validation": 16530
+      }
+    },
+    "enzymemap": {
+      "expected_filename": "enzymemap_v2_brenda2023.csv.gz",
+      "expected_sha256": "0a70759a7cec5720b6aeb2d63c887a670b9ac2a6ada7c0a1ef3c1740ee3cc2cf",
+      "expected_rows": 349458,
+      "sha256": "0a70759a7cec5720b6aeb2d63c887a670b9ac2a6ada7c0a1ef3c1740ee3cc2cf",
+      "status": "source_intake_verified",
+      "columns": [
+        "rxn_idx",
+        "mapped",
+        "unmapped",
+        "orig_rxn_text",
+        "rule",
+        "rule_id",
+        "source",
+        "steps",
+        "quality",
+        "natural",
+        "organism",
+        "protein_refs",
+        "protein_db",
+        "ec_num"
+      ],
+      "counts": {
+        "rows": 349458,
+        "direct_single_rows": 231492,
+        "distinct_direct_single_literal_reactions": 32920
+      },
+      "split_rows": {}
+    }
+  },
+  "models_fitted": 0
+}

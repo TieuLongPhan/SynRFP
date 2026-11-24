@@ -1,0 +1,10 @@
+{
+  "phase": "complete",
+  "fits": 30,
+  "completed_utc": "2026-11-24T14:24:57.767078+00:00",
+  "outputs_sha256": {
+    "manifest.json": "df3060738ba8b478f30dc14022a43019689c5e35f671f26aeaa80846c4968803",
+    "scores.json": "16da2eeafa53c2e2332f3c087c83299fe1e70e740477bf4461ba2b77f45f431f",
+    "group_bootstrap.npz": "2e4efd48d67df750367d03378412b42376f30a3d8ba492258689270dee27407f"
+  }
+}
