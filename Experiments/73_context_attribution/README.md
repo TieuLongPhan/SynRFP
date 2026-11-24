@@ -172,6 +172,9 @@ ledger. Use a new output directory for each run.
 
 ## Sequence after E1
 
+The [E3 protocol](EXACT_DELTA_PROTOCOL.md) defines a follow-up with
+joint holdouts of matched precursor forms and three 2,048-bit encodings.
+
 1. Review paired effects and recipe placement alongside the width and
    rehash controls. Record the primary result before revising the paper.
 2. Audit exact signed-delta equivalence classes on these sources. Report
