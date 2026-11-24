@@ -47,3 +47,49 @@ Send `eligibility_precheck.json` and `overlap.json`. Keep `cohort.csv.gz`, `excl
 An exact class contributes to the optimistic bound if it spans at least four distinct training scaffold groups and two distinct pooled bit codes. Cross-fold references and successful label mapping can only reduce those counts on the fixed groups. The percentage of training rows is assessed after label validation fixes the denominator. An upper-bound pass schedules the label audit. The final prediction and the 30 fits are a later stage.
 
 [EnzymeMap v2 archive and citation](https://zenodo.org/records/8254726) · [Original archive and notices](inputs/README.md) · [Historical benchmark source checksums](publication_metadata/quantumpioneer_v1/audits/prior_benchmark_overlap.json)
+
+## Run the training label audit
+
+Run this stage after the overlap audit clears the cohort. Use the pinned RXNMapper
+v2 workstation environment with Torch and Transformers for mapping, then return
+to the E1 environment for the fingerprint diagnostic. The label stage works
+only on the frozen training partition.
+
+```sh
+study=Experiments/74_context_dependence
+runs=Experiments/work/74_context_dependence
+assets="$HOME/.local/share/synrfp-runs"
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+export CUDA_VISIBLE_DEVICES= TOKENIZERS_PARALLELISM=false
+
+"$mapper_python" "$study/map_enzymemap_labels.py" \
+  --precheck "$runs/enzymemap-precheck-v1" \
+  --followup "$runs/enzymemap-refusal-audit-v1" \
+  --mapper-source "$assets/rxnmapper_v2_source_bfa575bc" \
+  --mapper-deps "$assets/rxnmapper_v2_deps_v1" \
+  --output "$runs/enzymemap-labels-train-v1" --jobs 8
+
+"$e1_python" "$study/audit_enzymemap_labels.py" \
+  --precheck "$runs/enzymemap-precheck-v1" \
+  --followup "$runs/enzymemap-refusal-audit-v1" \
+  --mapping "$runs/enzymemap-labels-train-v1" \
+  --source "$study/inputs/enzymemap_v2_brenda2023.csv.gz" \
+  --output "$runs/enzymemap-diagnostic-v1" --jobs 8
+```
+
+The mapper receives only the unmapped reaction SMILES. The primary label
+requires a bijective element- and isotope-preserving atom correspondence and
+exact recovery of both source sides when the maps are removed. It counts the
+multiset of bond changes by endpoint elements and ordered before/after bond
+type, including absence and aromatic bonds. The `no_edit` class records an
+empty bond multiset. Charge, stereo, and hydrogen-state changes do not add
+entries to this label. Record refusals individually and report coverage on
+the frozen training rows as well as on the validated paired subset.
+
+The mapping directory stores atomic per-batch checkpoints. Reusing the output
+path resumes missing batches only when the manifest matches. The diagnostic
+replays every accepted edit and signed-count signature, joins the existing EC
+label by verified training row ID, and saves `prediction.json` and its training
+OOF ledger. The two targets share GroupKFold partitions and query/reference
+eligibility. Keep mapped reactions and the OOF ledger local. The prediction is
+an ordering to test in the later held-out replication.

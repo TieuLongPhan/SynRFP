@@ -1,0 +1,31 @@
+{
+  "baseline_eligibility_sha256": "3a0189b1bb7eaa56419d60b66f3715f6cd421402c11dbdc578fb2bf6f18fdff5",
+  "baseline_overlap_sha256": "81bd0743f35f531656f46aebf9beb7705c26c44e435549a8d4b40504d991c309",
+  "confirmed_overlap_controls_passed": 1351,
+  "confirmed_overlaps_excluded": 503,
+  "decision": "proceed_to_label_audit",
+  "final_training_row_fraction_minimum": 0.05,
+  "followup_script_sha256": "8e02ee2b2eddf303be0d18fcb25a8d3647e1735790ccbd5aba7e704eeaf365bc",
+  "label_audit_status": "pending",
+  "method": "Exact reaction overlap requires matched component heavy-element multisets. Cancellation of a shared molecule subtracts the same element signature from both sides. All 299 previously unresolved entries failed this necessary condition for full or canceled overlap in either direction.",
+  "precheck_commit": "0fe69203f8583fcf4f3d738e08c25e138942e322",
+  "previously_unresolved_entries_ruled_out": 299,
+  "refusal_audit_sha256": "0aaf109bbf3d2332aebbc8d1912546f6b1ae64b2b7526534d108f5ade710bfd2",
+  "remaining_unresolved_entries": 0,
+  "status": "supplemental_eligibility_decision",
+  "upper_bound": {
+    "candidate_training_rows": 13976,
+    "encoded_training_rows": 13976,
+    "encoding_flags": {
+      "charge_changed": 0,
+      "explicit_h_changed": 0,
+      "radicals_present": 5
+    },
+    "exact_delta_classes": 5844,
+    "feature_refusals": {},
+    "possible_exact_delta_classes": 281,
+    "possible_query_groups": 1717,
+    "possible_query_rows": 5052
+  },
+  "verified_tables": 39
+}

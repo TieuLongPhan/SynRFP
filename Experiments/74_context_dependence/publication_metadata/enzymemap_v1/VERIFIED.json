@@ -1,0 +1,14 @@
+{
+  "heldout_model_fits": 0,
+  "paired_training_rows": 13469,
+  "prediction_file_utc": "2026-11-24T16:53:47.268147+00:00",
+  "prediction_sha256": "c7ab68625ee63a09e16eb0f4a49075822a93f9ad1c61720b0d74c5ec3a619093",
+  "query_groups": 1499,
+  "reconstructed_group_weighted_error_reductions": {
+    "bond_edit_multiset": 0.006501966838512838,
+    "ec_level_2": 0.021328020714735028
+  },
+  "training_only": true,
+  "verified_queries": 4500,
+  "verified_utc": "2026-11-24T16:54:11.837876+00:00"
+}
