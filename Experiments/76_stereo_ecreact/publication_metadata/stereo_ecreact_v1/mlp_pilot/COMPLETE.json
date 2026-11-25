@@ -1,0 +1,11 @@
+{
+  "files_sha256": {
+    "AUDIT.json": "8fe600c441a1422c1ce7f3ca4a6039668144980e2bb278eb0e87263004dfab44",
+    "README.md": "e2732740651b6101edfaa9630e7783c35ab754ecebec436452872a27d3371fdf",
+    "cells.csv": "e33c6e0d71f7a77a566ed86a5fe8d1655f813996b7a8b097b32a232032e4381e",
+    "original_arm_comparison.csv": "91db0fa0039fc828d6bb9dc04c371492d7b61a9869411e3cb63469849d5922cf",
+    "summary.csv": "4e5538d4ecf8be27a8d20d70561cf5c66bf473c36ff45af16cb7be8232cd595c"
+  },
+  "n_fits": 70,
+  "status": "complete"
+}
