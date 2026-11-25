@@ -1,0 +1,24 @@
+{
+  "archived_case_f_replay": {
+    "paired_seed_votes_reproduced": 20,
+    "selected_rows_reproduced": 20
+  },
+  "independent_syntemp_r2_pandas_replay": {
+    "gain_from_mergers": 5338,
+    "gain_from_singletons": 0,
+    "merger_rows": 35024,
+    "merging_path_classes": 4105
+  },
+  "input_hashes_verified": 83,
+  "path_endpoints_verified": 14,
+  "population_totals_verified": {
+    "enzymemap": [
+      546,
+      236
+    ],
+    "quantumpioneer": [
+      7467,
+      6509
+    ]
+  }
+}

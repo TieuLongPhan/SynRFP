@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "AUDIT.json": "789bb1f9fa9044d893167b1fa39efa7a4d849562df8f400b54f6c5c9d62996cb",
+    "VERIFIED.json": "35203fa7a4ef6a6820eaf5a99ae9b39053da05c2c2388dbb28d2dd4a1975947e",
+    "case_descriptions_check.md": "ec698c10a66ce6ece3b3b429bb821b7494a58cc3e7331174a9332fc9488a2ec6",
+    "enzymemap_composition.csv": "1fb2609a810cf7d36b8e7d379aa815bb6ae6c767d0de27f917659b24ae46f1f7",
+    "path_overlap_note.md": "17ae1d4b69f9cb35e823a935973bfa9ac8419eb8d49fd722c5650cc80f3420ae",
+    "path_overlap_summary.csv": "29bde2789aec46945ea5b061a3ca3ca56be064743f3b864471c3afda37a3e83e",
+    "quantumpioneer_composition.csv": "4e448041be94ef666dd4cac1f4493a598ad961f4c9be22927e6f9ec438bebbd3"
+  },
+  "status": "complete"
+}
