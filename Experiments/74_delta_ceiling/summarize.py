@@ -36,7 +36,7 @@ def same_partition(first, second):
     return int(second.max())+1 == n and np.array_equal(lookup[first], second)
 
 
-def published_selectors(endpoint, panel, base):
+def published_selectors(endpoint, panel, base, source_positions):
     plan = Path(base)/"default_optimal_benchmark_v1"
     selectors, integrity = [], {}
     for seed in range(25):
@@ -56,12 +56,14 @@ def published_selectors(endpoint, panel, base):
         check(row_file, pin["selection.npz"])
         with np.load(row_file, allow_pickle=False) as selected:
             outer, test = selected["outer"], selected["test"]
-        np.testing.assert_array_equal(outer, np.r_[np.flatnonzero(code==0),np.flatnonzero(code==1)])
-        np.testing.assert_array_equal(test, np.flatnonzero(code==2))
+        panel_outer = np.r_[np.flatnonzero(code==0),np.flatnonzero(code==1)]
+        panel_test = np.flatnonzero(code==2)
+        np.testing.assert_array_equal(outer, source_positions[panel_outer])
+        np.testing.assert_array_equal(test, source_positions[panel_test])
         with np.load(state, allow_pickle=False) as checkpoint:
             actual, valid = checkpoint["train"], checkpoint["val"]
         np.testing.assert_array_equal(np.sort(np.r_[actual,valid]), np.arange(len(outer)))
-        selectors.append((outer[actual],test))
+        selectors.append((panel_outer[actual],panel_test))
         integrity[str(seed)] = {"split_sha256":fit_hash,"optimizer_selection_state_sha256":pin["state.npz"],
                                 "result_sha256":digest(fit),"selection_sha256":pin["selection.npz"]}
     for repeat in range(5):
@@ -91,7 +93,8 @@ def examples(endpoint, groups, labels, mixed, heavy, ids, reactions, raw, source
         for suffix, index in (("a",left),("b",right)):
             source = raw.iloc[source_positions[index]]
             item.update({f"r_id_{suffix}":ids[index],f"rxn_{suffix}":reactions[index],
-                         f"heavy_atoms_{suffix}":int(heavy[index])})
+                         f"heavy_atoms_{suffix}":int(heavy[index]),
+                         f"source_position_{suffix}":int(source_positions[index])})
             item.update({f"ec{level}_{suffix}":source[f"ec{level}"] for level in (1,2,3)})
         label = int(endpoint[-1])
         if item[f"ec{label}_a"] == item[f"ec{label}_b"]:
@@ -127,7 +130,7 @@ def analyze(job):
     eligible[ok] = np.arange(n,dtype=np.int32)
     labels = np.unique(population.y.to_numpy()[ok],return_inverse=True)[1]
     n_labels = int(labels.max())+1
-    selectors, integrity = published_selectors(endpoint,panel,base)
+    selectors, integrity = published_selectors(endpoint,panel,base,pos)
     fit_test = [(eligible[fit][ok[fit]],eligible[test][ok[test]]) for fit,test in selectors]
     fold_total = sum(len(test) for _,test in fit_test)
     assert fold_total == 5*n
