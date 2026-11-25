@@ -19,6 +19,7 @@ from rdkit import RDLogger
 from synkit.Graph.Stereo.canonical import canonicalize_stereograph
 from synkit.IO import smiles_to_graph
 
+from rooted import ConfiguredExpansion
 from synrfp.graph.molecule import Molecule
 from synrfp.tokenizers.wl import WLTokenizer
 
@@ -86,7 +87,7 @@ def rooted_digest(graph, descriptors, atom_color, bond_color):
     return result.canonical_digest
 
 
-def component(smiles):
+def component(smiles, backend="bliss"):
     graph=smiles_to_graph(smiles,drop_non_aam=False,use_index_as_atom_map=False,
                            include_stereo_descriptors=True)
     if graph is None or not graph:
@@ -97,18 +98,29 @@ def component(smiles):
     types=Counter(type(value).__name__ for value in descriptor)
     tetra=tuple(value for value in descriptor if type(value).__name__=="TetrahedralStereo")
     planar=tuple(value for value in descriptor if type(value).__name__=="PlanarBondStereo")
+    if tetra and backend=="bliss":
+        exact=ConfiguredExpansion(graph,tetra,NODE_ATTRS,EDGE_ATTRS)
     for value in tetra:
-        node=graph.nodes[value.atoms[0]]
-        node[ATOM_ROOT]=True
-        node[ATOM_TOKEN]=rooted_digest(graph,tetra,(*NODE_ATTRS,ATOM_ROOT),EDGE_ATTRS)
-        node.pop(ATOM_ROOT)
+        owner=value.atoms[0]
+        node=graph.nodes[owner]
+        if backend=="native":
+            node[ATOM_ROOT]=True
+            node[ATOM_TOKEN]=rooted_digest(graph,tetra,(*NODE_ATTRS,ATOM_ROOT),EDGE_ATTRS)
+            node.pop(ATOM_ROOT)
+        else:
+            node[ATOM_TOKEN]=exact.atom(owner)
     carbon=Molecule.from_nx_graph(graph)
     tetra_counts=TOKENIZERS[1].tokens_graph(carbon,2)
     for value in planar:
-        edge=graph.edges[value.atoms[2],value.atoms[3]]
-        edge[BOND_ROOT]=True
-        edge[BOND_TOKEN]=rooted_digest(graph,(value,),NODE_ATTRS,(*EDGE_ATTRS,BOND_ROOT))
-        edge.pop(BOND_ROOT)
+        left,right=value.atoms[2:4]
+        edge=graph.edges[left,right]
+        if backend=="native":
+            edge[BOND_ROOT]=True
+            edge[BOND_TOKEN]=rooted_digest(graph,(value,),NODE_ATTRS,(*EDGE_ATTRS,BOND_ROOT))
+            edge.pop(BOND_ROOT)
+        else:
+            exact=ConfiguredExpansion(graph,(value,),NODE_ATTRS,EDGE_ATTRS)
+            edge[BOND_TOKEN]=exact.bond(left,right)
     alkene=Molecule.from_nx_graph(graph)
     stereo_counts=TOKENIZERS[2].tokens_graph(alkene,2)
     return (ordinary,tetra_counts,stereo_counts),dict(types)
@@ -165,9 +177,11 @@ def main():
     unique=sorted({part for pair in sides for side in pair for part in side},key=lambda s:(-len(s),s))
     manifest={
         "checkout":subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
-        "runner_sha256":digest(Path(__file__)),"source_sha256":digest(source),
+        "runner_sha256":digest(Path(__file__)),"rooted_backend_sha256":digest(HERE/"rooted.py"),
+        "canonical_backend":"SynKit configured incidence graph and igraph Bliss exact rooted certificates",
+        "source_sha256":digest(source),
         "request74_key_archive_sha256":digest(reference),"profiles":PROFILES,"channels":CHANNELS,
-        "packages":{k:version(k) for k in ("synkit","rdkit","numpy","pandas","networkx","scikit-learn")},
+        "packages":{k:version(k) for k in ("synkit","rdkit","numpy","pandas","networkx","scikit-learn","igraph")},
     }
     manifest_path=out/"ENCODING_PLAN.json"
     if manifest_path.exists() and read(manifest_path)!=json.loads(json.dumps(manifest)):
