@@ -1,0 +1,3 @@
+dataset,target,method,n_folds,population_rows,units,sd_scope,mae_mean,rmse_mean,r2_mean,mae_sd,rmse_sd,r2_sd
+cyclo,G_act,chemprop_v2_default,5,5269,kcal/mol,sample_SD_across_five_grouped_fold_metrics,3.1520269255045354,4.194149043602872,0.8141304612838118,0.1951359855095798,0.31898436083386716,0.030009032593641686
+gdb7,dE0,chemprop_v2_default,5,11926,kcal/mol,sample_SD_across_five_grouped_fold_metrics,5.531072234155821,8.683245208060328,0.8418182144469616,0.1693230328502362,0.28881534150052807,0.008007092375923215

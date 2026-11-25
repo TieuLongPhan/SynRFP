@@ -1,0 +1,22 @@
+{
+  "fingerprint_release_cells_sha256": "3e4506f234a5b00cfd0545ee21e869e2637a5e6db0b5284a69a7dbe1d1d04bbd",
+  "fits": 10,
+  "matched_fingerprint_study": "65_default_optimal",
+  "new_fits": 0,
+  "original_release_csv_sha256": "6f1fdf6f44b1ee7c29cd8645dd30c78bad55f9c63736ead265b95a68bd1aaf48",
+  "outputs_sha256": {
+    "cells.csv": "54488aaca90eb0d968ecff0d9b979b2cf18286ad185d69813c36fe81759951bf",
+    "summary.csv": "474f29a83e4c61c6a797b0d7082feef51e6f6098bd15fa9c6b6a2c8a72adf5f9"
+  },
+  "previous_benchmark_commit": "55181ba9",
+  "source_study": "14_barrier",
+  "status": "verified",
+  "verified_checks": [
+    "All seven fingerprint rows match each source split checksum and partition size.",
+    "Chemprop train, validation and test position arrays match the original splits exactly.",
+    "Held-out arrays match all original test positions and targets.",
+    "Recomputed MAE, RMSE and R2 match both scalar receipts and the original CSV.",
+    "Each dataset is covered by exactly five disjoint test folds.",
+    "Each Chemprop receipt records bit-identical checkpoint replay."
+  ]
+}
