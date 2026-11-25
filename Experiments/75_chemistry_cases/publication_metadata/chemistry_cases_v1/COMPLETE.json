@@ -1,0 +1,24 @@
+{
+  "exported_csv_rows": {
+    "A": 60,
+    "B": 72,
+    "C": 140,
+    "D": 4736,
+    "E": 120,
+    "F": 20
+  },
+  "files_sha256": {
+    "AUDIT.json": "6b821133211cd8af51068f6144b9c431aebdcf358bd43e86b1a6f28743114897",
+    "README.md": "52f0c77bf4a69a96e1e75195d586cae2d7489fa9b9fccfb941233dc6cad393d3",
+    "case_a.csv": "bb72435019d025a624ba4cca5ae4b990704dd1af91d6dc469e98d3864d7fb76c",
+    "case_b.csv": "b5a1000ea73027ee7c87fd50b80529c6686f7f742d93232ab34c463b7789dec3",
+    "case_c.csv": "062aee47375fa12cab3479398db99be7106cccc11b8430531e706cd85f9895ab",
+    "case_d.csv": "9c7a4897621dffd33d1f3809b226254232e4db482d04d2a4688dcd6ef56f329b",
+    "case_e.csv": "44a2cac51788a56df6fd1408c43b690d863e9cce267d178fe58ffb62798da230",
+    "case_f.csv": "5867e034e8eb1e8dc18b6924523c19ba06e7dc9de3ba5aaafedcbe7dbf6ba3a0",
+    "fold_collision_summary.csv": "c477706ce25f99d601ca00ac568d54e88e88bdab5c5332f3c73119ef5bd4f93b",
+    "selection_rules.md": "8cb854944353c8a0c3aa05061a2bd18d75358665f760a4eaebb67fb2ec06c346",
+    "stereo_probe.md": "d3561b198f63d2975688552173cebb5f142ada4f8bc74bdab48c8ec49db792d8"
+  },
+  "status": "complete"
+}
