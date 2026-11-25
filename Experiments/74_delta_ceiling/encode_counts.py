@@ -8,6 +8,7 @@ from importlib.metadata import version
 import importlib.util
 import json
 from pathlib import Path
+import os
 from struct import Struct
 import subprocess
 import sys
@@ -113,6 +114,7 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--profiles", nargs="+", choices=TOKENIZERS, default=list(TOKENIZERS))
     parser.add_argument("--jobs", type=int, default=24)
+    parser.add_argument("--resume-from", type=Path)
     args = parser.parse_args()
     base = args.base.resolve()
     output = args.output.resolve()
@@ -163,6 +165,16 @@ def main():
     if mf.exists() and read(mf) != json.loads(json.dumps(manifest)):
         raise ValueError("Output contains a different capsule")
     write(mf, manifest)
+    previous = None
+    if args.resume_from is not None:
+        previous = read(args.resume_from/"ENCODING_PLAN.json")
+        for field in ("input_plans_sha256","packages","token_profiles","channels"):
+            if previous[field] != json.loads(json.dumps(manifest[field])):
+                raise ValueError(f"Cannot reuse earlier outputs with changed {field}")
+        inherited = {k:v for k,v in previous["files_sha256"].items() if k!=str(Path(__file__))}
+        current = {k:v for k,v in manifest["files_sha256"].items() if k!=str(Path(__file__))}
+        if current != inherited:
+            raise ValueError("Shared chemistry and tokenizer code changed")
     only_repairs = {r["source_position"]: r for r in repairrows["sources"]["tpl_b"]["repair_rows"]}
     pools = {}
     for source in sorted(native["sources"], key=lambda k: old["sources"][k]["n"]):
@@ -173,7 +185,7 @@ def main():
         frame = pd.read_csv(table, dtype={"row_id":str})
         n = src["n"]
         np.testing.assert_array_equal(frame["source_position"], np.arange(n))
-        if len(frame) != n or not frame.row_id.is_unique:
+        if len(frame) != n or frame.row_id.isna().any():
             raise ValueError(f"Source identity changed: {source}")
         source_receipt = output/(source+".json")
         artifact = output/(source+".npz")
@@ -181,6 +193,21 @@ def main():
             record = read(source_receipt)
             check(artifact, record["artifact_sha256"])
             pools[source] = record
+            continue
+        if previous and (args.resume_from/source_receipt.name).is_file():
+            record = read(args.resume_from/source_receipt.name)
+            if record["rows"] != n or record["source_sha256"] != digest(table):
+                raise ValueError("Earlier source receipt differs")
+            path = args.resume_from/artifact.name
+            check(path,record["artifact_sha256"])
+            with np.load(path,allow_pickle=False) as saved:
+                np.testing.assert_array_equal(saved["row_ids"],frame.row_id.to_numpy(str))
+            os.link(path, artifact)
+            record["reused_from_plan_sha256"] = digest(args.resume_from/"ENCODING_PLAN.json")
+            record["reused_from_encoder_sha256"] = previous["files_sha256"][str(Path(__file__))]
+            write(source_receipt,record)
+            pools[source] = record
+            print(f"Reused verified source {source}: {n:,} rows",flush=True)
             continue
         for part, record in only_repairs.items() if source == "tpl_b" else ():
             assert frame.row_id.iloc[part] == record["row_id"] and frame.rxn.iloc[part] == record["reaction"]
