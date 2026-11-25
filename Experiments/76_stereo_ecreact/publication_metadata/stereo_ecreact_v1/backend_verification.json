@@ -1,0 +1,13 @@
+{
+  "alcohol_stereo_pair_controls": 2,
+  "n_components": 60,
+  "n_ec_react_case_reactions": 15,
+  "n_exact_root_certificates": 205,
+  "native_bliss_root_equivalence_verified": true,
+  "renumbering_invariance_verified": true,
+  "runner_sha256": "c304468011245e93adc15219de6293097d559623db07370cdd31e73aa5d6378c",
+  "source_alcohol_sha256": "17c86ff0711164622070c9e153430a43b225800bed40214cf4f520c3ea070af9",
+  "source_cases_sha256": "bb72435019d025a624ba4cca5ae4b990704dd1af91d6dc469e98d3864d7fb76c",
+  "status": "passed",
+  "synthetic_configured_pair_controls": 4
+}

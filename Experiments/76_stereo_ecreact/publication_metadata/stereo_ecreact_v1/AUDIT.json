@@ -1,0 +1,67 @@
+{
+  "archived_case_counts": {
+    "ecreact_2": 7,
+    "ecreact_3": 8
+  },
+  "encoding": {
+    "canonical_backend": "SynKit configured incidence graph and igraph Bliss exact rooted certificates",
+    "channels": [
+      "D",
+      "U",
+      "D+U"
+    ],
+    "checkout": "5a703423edccdcda96b4e21ab8b233fffbb3e49e",
+    "packages": {
+      "igraph": "0.11.9",
+      "networkx": "3.6.1",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "rdkit": "2026.3.6",
+      "scikit-learn": "1.9.1",
+      "synkit": "1.6.2"
+    },
+    "profiles": [
+      "ordinary",
+      "stereo_tetra",
+      "stereo_ez"
+    ],
+    "request74_key_archive_sha256": "bf663ba45dd473276c6dc4facca2ab67a84f28178a7030dc32db012b8b72bdfa",
+    "rooted_backend_sha256": "45e0320e16940428e0c13baddb24b02b43b2f13242842b1b96fa25dd6aa47697",
+    "runner_sha256": "a711792262b138d1d30c4df343d5bcf3dfc1caa03ba7f867782efc2d7fcb343d",
+    "source_sha256": "ff6b45dd11ad2e3c9e0061bbdb19def4521b6ee5d84688f32a03250f29670241"
+  },
+  "encoding_receipt": {
+    "artifact_sha256": "107d602e65bd7917d805625dd295697e267f89fcc1dd9b473fb2daf8d6aee541",
+    "encoding_plan_sha256": "ae7de83e29e1b6c21f2ae7e59fb0ee5a7644c4e4f07a202dc7257f3abef2c279",
+    "n_encoded": 185720,
+    "n_source": 185734,
+    "ordinary_rows_replayed": 185720,
+    "seconds": 37.91368974838406,
+    "status": "complete",
+    "unique_component_descriptors": {
+      "PlanarBondStereo": 98946,
+      "TetrahedralStereo": 115552
+    },
+    "unique_components": 45830
+  },
+  "input_sha256": {
+    "classification_plan": "a2039c8234a4785cdf198402a0ba5c44eda63a51ecf767063d54d55195ad2130",
+    "ecreact_1": "9795b55a3bcf9438cf132e4863c5d7c6dfc8ee4f52aba0fa78d085bbb504c690",
+    "ecreact_2": "54527b3c40bc9374092e7e22f2506c20674eca2ee60d50348a3b6b4ea0ffd1fe",
+    "ecreact_3": "56ada3538a2854a44f26f70e97253bb7807f724d56994b2283f1942b1cfab77c",
+    "request74_summary": "44906a97443cc9c765ac848b832849391fc1b4005d75f749191a27c5957f8027",
+    "request75_case_a_sha256": "bb72435019d025a624ba4cca5ae4b990704dd1af91d6dc469e98d3864d7fb76c",
+    "request75_complete_sha256": "8b915e84f19ceb7375c0f9525b4fcbb9c959bf38565599c778cc643cde499696",
+    "source_table": "ff6b45dd11ad2e3c9e0061bbdb19def4521b6ee5d84688f32a03250f29670241",
+    "study65_plan": "554988111c817210a52ecbca3cb722a13cde4fd6fd5189f0aafb91f24967ea5b"
+  },
+  "model_fits": 0,
+  "reporter_checkout": "5a703423edccdcda96b4e21ab8b233fffbb3e49e",
+  "reporter_sha256": "daac1cae5c1672f387742fffe4dcb1ab69ad67e1a038820ee61ca88c331597fd",
+  "tokenizer_profiles": [
+    "ordinary",
+    "stereo_tetra",
+    "stereo_ez"
+  ],
+  "verified_baseline_report": true
+}
