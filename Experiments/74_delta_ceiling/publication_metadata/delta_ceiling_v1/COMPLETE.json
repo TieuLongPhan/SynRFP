@@ -1,0 +1,22 @@
+{
+  "endpoints": 14,
+  "examples": 60,
+  "files_sha256": {
+    "AUDIT.json": "74c5f041119eccc1fc95d3b00a574fcce7c805b0b03eefe971525756fec62745",
+    "README.md": "fd9781a132b46461d800460b75dd2baac828c61ea11a249b2390933c2f4b48b6",
+    "endpoint_summary.csv": "44906a97443cc9c765ac848b832849391fc1b4005d75f749191a27c5957f8027",
+    "examples.csv": "e04c20de61703057a4c1a442b21fb3f909ee74d6ac1d10fb3f662b60f9b0a567",
+    "fold_summary.csv": "479ac5dc0de8e788a1dea8280c0963e9a74e5801cac041710a3cf0a63af0119c",
+    "group_table.csv.gz": "d7954c7885c9ee9f472ea77d8dab64f8c6ede985a4eb519d0bb705580b5ba51c",
+    "stereo_feasibility.json": "f02cc138a2c8c6c644f4b99a625a39235a1dc0615e0071b7fdeee58db14d9151"
+  },
+  "fold_cells": 5600,
+  "profiles": [
+    "wl_r2",
+    "wl_r3",
+    "morgan_r2",
+    "path_r2"
+  ],
+  "status": "complete",
+  "summary_cells": 224
+}

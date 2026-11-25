@@ -1,0 +1,24 @@
+{
+  "all_four_ordinary_fingerprints_distinct": false,
+  "all_four_stereo_aware_fingerprints_distinct": true,
+  "atom_renumbering_invariance_verified": true,
+  "pairs": {
+    "boc_hydroxyproline_methyl_esters": {
+      "ordinary_differs": false,
+      "stereo_aware_differs": true
+    },
+    "phthalimidocyclohexanols": {
+      "ordinary_differs": false,
+      "stereo_aware_differs": true
+    }
+  },
+  "paper_input_revision": "ac83ccf",
+  "paper_input_sha256": "17c86ff0711164622070c9e153430a43b225800bed40214cf4f520c3ea070af9",
+  "predictions_fitted": 0,
+  "profiles": "WL/r2, parity, delta, 2048 bits",
+  "rdkit": "2026.3.1",
+  "runner_sha256": "27a0f9299b61501169fb20050fc2e8311648e84c98045a10299537b03267b637",
+  "side_convention": "Original substrate stereo and paper's constitution-only intended product",
+  "stereo_profile": "Exact rooted configured stereograph digest at the tetrahedral centers",
+  "synkit": "1.7.0"
+}

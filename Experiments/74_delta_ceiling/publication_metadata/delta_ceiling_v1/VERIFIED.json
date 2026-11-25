@@ -1,0 +1,12 @@
+{
+  "complete_sha256": "6fb3283b7192706d71cee5ca5898157cc0135add7ab137aa06e5c0bbe73b5867",
+  "published_summary_values_reconstructed_from_group_and_fold_exports": true,
+  "reconstructed_group_rows": 19649230,
+  "repository_subtests_passed": 34,
+  "repository_tests_passed": 115,
+  "same_delta_different_label_pairs_verified": 60,
+  "source_verifier_sha256": "c84b2fcd99daaf5c34676f4dcc44dc61afb4b29e8c1f8ed57af7b37a448b9d9d",
+  "status": "verified",
+  "verified_fold_rows": 5600,
+  "verified_summary_rows": 224
+}
