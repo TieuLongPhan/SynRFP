@@ -1,0 +1,13 @@
+{
+  "datasets_screened": 3,
+  "files_sha256": {
+    "AUDIT.json": "b792133ce3dde314182563c14c456a6a482fc018bea4c4100027b271a7ea4547",
+    "README.md": "f936c3197d0b98572f33288be6e49587905707d04f865642b7b7648f7111d2a1",
+    "barrier_case_scan.csv": "1d14391416cdc1565429200993d7852a3e6e5af7f3470bb193f5cc2c24346530",
+    "barrier_figure_cases.csv": "f421ae39f95f2632da35ed918da36a9194c0b4e60660ebc2827c4735b031fa82"
+  },
+  "recipe_cases_verified": 3,
+  "request75_yield_case_sha256": "9c7a4897621dffd33d1f3809b226254232e4db482d04d2a4688dcd6ef56f329b",
+  "selected_pairs": 1,
+  "status": "complete"
+}

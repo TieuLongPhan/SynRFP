@@ -1,0 +1,4 @@
+dataset,n_reactions,D_classes,required_gap_kcal_mol,empty_D_rows,empty_D_distinct_reactant_constitutions,empty_D_DU_classes,repeated_D_classes,repeated_D_classes_split_by_U,nonempty_D_classes_split_by_U,nonempty_D_different_constitutions_split_by_U_pairs,figure_eligible_pairs,figure_eligible_pairs_same_test_fold,source_snar_rows_matched_by_reaction_and_target
+sn2,2361,926,3.2223557862487673,636,316,316,499,1,0,0,0,0,
+snar,503,237,0.9468551185968709,0,0,0,76,45,45,784,362,50,503
+e2sn2,3625,1627,3.3225661222973817,636,316,316,858,1,0,0,0,0,
