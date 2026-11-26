@@ -1,0 +1,51 @@
+index,code,name,source
+0,1.2.1,Aldehyde reductive amination,https://doi.org/10.1021/ci5006614.s002
+1,1.2.4,Eschweiler-Clarke methylation,https://doi.org/10.1021/ci5006614.s002
+2,1.2.5,Ketone reductive amination,https://doi.org/10.1021/ci5006614.s002
+3,1.3.6,Bromo N-arylation,https://doi.org/10.1021/ci5006614.s002
+4,1.3.7,Chloro N-arylation,https://doi.org/10.1021/ci5006614.s002
+5,1.3.8,Fluoro N-arylation,https://doi.org/10.1021/ci5006614.s002
+6,1.6.2,Bromo N-alkylation,https://doi.org/10.1021/ci5006614.s002
+7,1.6.4,Chloro N-alkylation,https://doi.org/10.1021/ci5006614.s002
+8,1.6.8,Iodo N-alkylation,https://doi.org/10.1021/ci5006614.s002
+9,1.7.4,Hydroxy to methoxy,https://doi.org/10.1021/ci5006614.s002
+10,1.7.6,Methyl esterification,https://doi.org/10.1021/ci5006614.s002
+11,1.7.7,Mitsunobu aryl ether synthesis,https://doi.org/10.1021/ci5006614.s002
+12,1.7.9,Williamson ether synthesis,https://doi.org/10.1021/ci5006614.s002
+13,1.8.5,Thioether synthesis,https://doi.org/10.1021/ci5006614.s002
+14,10.1.1,Bromination,https://doi.org/10.1021/ci5006614.s002
+15,10.1.2,Chlorination,https://doi.org/10.1021/ci5006614.s002
+16,10.1.5,Wohl-Ziegler bromination,https://doi.org/10.1021/ci5006614.s002
+17,10.2.1,Nitration,https://doi.org/10.1021/ci5006614.s002
+18,10.4.2,Methylation,https://doi.org/10.1021/ci5006614.s002
+19,2.1.1,Amide Schotten-Baumann,https://doi.org/10.1021/ci5006614.s002
+20,2.1.2,Carboxylic acid + amine reaction,https://doi.org/10.1021/ci5006614.s002
+21,2.1.7,N-acetylation,https://doi.org/10.1021/ci5006614.s002
+22,2.2.3,Sulfonamide Schotten-Baumann,https://doi.org/10.1021/ci5006614.s002
+23,2.3.1,Isocyanate + amine reaction,https://doi.org/10.1021/ci5006614.s002
+24,2.6.1,Ester Schotten-Baumann,https://doi.org/10.1021/ci5006614.s002
+25,2.6.3,Fischer-Speier esterification,https://doi.org/10.1021/ci5006614.s002
+26,2.7.2,Sulfonic ester Schotten-Baumann,https://doi.org/10.1021/ci5006614.s002
+27,3.1.1,Bromo Suzuki coupling,https://doi.org/10.1021/ci5006614.s002
+28,3.1.5,Bromo Suzuki-type coupling,https://doi.org/10.1021/ci5006614.s002
+29,3.1.6,Chloro Suzuki-type coupling,https://doi.org/10.1021/ci5006614.s002
+30,3.3.1,Sonogashira coupling,https://doi.org/10.1021/ci5006614.s002
+31,3.4.1,Stille reaction,https://doi.org/10.1021/ci5006614.s002
+32,5.1.1,N-Boc protection,https://doi.org/10.1021/ci5006614.s002
+33,6.1.1,N-Boc deprotection,https://doi.org/10.1021/ci5006614.s002
+34,6.1.3,N-Cbz deprotection,https://doi.org/10.1021/ci5006614.s002
+35,6.1.5,N-Bn deprotection,https://doi.org/10.1021/ci5006614.s002
+36,6.2.1,CO2H-Et deprotection,https://doi.org/10.1021/ci5006614.s002
+37,6.2.2,CO2H-Me deprotection,https://doi.org/10.1021/ci5006614.s002
+38,6.2.3,CO2H-tBu deprotection,https://doi.org/10.1021/ci5006614.s002
+39,6.3.1,O-Bn deprotection,https://doi.org/10.1021/ci5006614.s002
+40,6.3.7,Methoxy to hydroxy,https://doi.org/10.1021/ci5006614.s002
+41,7.1.1,Nitro to amino,https://doi.org/10.1021/ci5006614.s002
+42,7.2.1,Amide to amine reduction,https://doi.org/10.1021/ci5006614.s002
+43,7.3.1,Nitrile reduction,https://doi.org/10.1021/ci5006614.s002
+44,7.9.2,Carboxylic acid to alcohol reduction,https://doi.org/10.1021/ci5006614.s002
+45,8.1.4,Alcohol to aldehyde oxidation,https://doi.org/10.1021/ci5006614.s002
+46,8.1.5,Alcohol to ketone oxidation,https://doi.org/10.1021/ci5006614.s002
+47,8.2.1,Sulfanyl to sulfinyl,https://doi.org/10.1021/ci5006614.s002
+48,9.1.6,Hydroxy to chloro,https://doi.org/10.1021/ci5006614.s002
+49,9.3.1,Carboxylic acid to acid chloride,https://doi.org/10.1021/ci5006614.s002

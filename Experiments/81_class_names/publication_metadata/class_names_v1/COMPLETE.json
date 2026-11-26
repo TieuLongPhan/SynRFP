@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "request_revision": "350458f5",
+  "files_sha256": {
+    "schneider_class_names.csv": "eb8209890ab4c0f89da4f0ec5c0044af36bc15ce648a85be92446385b5646e6a",
+    "uspto50k_label_crosswalk.csv": "cded90ebf2734a253ec274f8caa2d9ca60febe6f417247a466035c67f87b1c70",
+    "class_names_note.md": "f277afaa173b8b8820107c1c65c8042edb65f8f4e9689a1727123bd8d3ea930e",
+    "AUDIT.json": "55624cb774764746c47a5645515375e1c5a5a5cee829cf56f680b4e389b03118",
+    "uspto50k_label_check.md": "44051532d268ab2967656a34c5e46f459f87f99d963eb024d19e02435a607cf4"
+  },
+  "code_sha256": {
+    "audit.py": "eed36a3c35959fbcf7b668aec6e76343cc289e519b6944e12461872e133adc1a",
+    "inputs.json": "8ab61a6f9906ba8cc76b1bc965243ec33efb57052aee3a0c162f5e13e4f7bfd6"
+  }
+}

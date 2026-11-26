@@ -1,0 +1,86 @@
+{
+  "cat_USPTO_50k_balanced.csv.gz": {
+    "sha256": "c3f203c2340bdf242b66390bdaeb1db4e974860a20d23800984db1d51a5883cb",
+    "url": "https://raw.githubusercontent.com/phuocchung123/SynCat/5f34a26cb90c95831268c635de3dea1be3b7552b/Data/raw/USPTO_50k_balanced.csv.gz"
+  },
+  "cat_USPTO_50k_unbalanced.csv.gz": {
+    "sha256": "45aaae51f2be2f4e299ffc157cf36e5cb72c536ec441cc9079ffc8dbfdfa8d6f",
+    "url": "https://raw.githubusercontent.com/phuocchung123/SynCat/5f34a26cb90c95831268c635de3dea1be3b7552b/Data/raw/USPTO_50k_unbalanced.csv.gz"
+  },
+  "cat_schneider50k_balanced.csv.gz": {
+    "sha256": "30cdc91c278ef0cbb6bf5ebd2931a37fa80710b59347d152efc71e909a153cc2",
+    "url": "https://raw.githubusercontent.com/phuocchung123/SynCat/5f34a26cb90c95831268c635de3dea1be3b7552b/Data/raw/schneider50k_balanced.csv.gz"
+  },
+  "cat_schneider50k_unbalanced.csv.gz": {
+    "sha256": "7f1ef7e2890bddf1458ccd954aa7a4a82c991ade906d10f7b704d7a4496d9aed",
+    "url": "https://raw.githubusercontent.com/phuocchung123/SynCat/5f34a26cb90c95831268c635de3dea1be3b7552b/Data/raw/schneider50k_unbalanced.csv.gz"
+  },
+  "ci5006614_si_002.zip": {
+    "sha256": "92ef6bc5f6e8ff278a1ca6b26e651d00c67fa51cab051e3d762a99d72e3fa98d",
+    "url": "https://ndownloader.figshare.com/files/3848755"
+  },
+  "ci6b00564_si_002.zip": {
+    "sha256": "ce95f5ac1ad7e37e06c537c4c78a6e6e0b792c5d3713ff3b9c032b8bf7f22fea",
+    "url": "https://ndownloader.figshare.com/files/7005749"
+  },
+  "liu.xml": {
+    "sha256": "7f0e76d00427718105836aedca5be102bfee0a18f347ced5a0d1128252526aea",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5658761/fullTextXML"
+  },
+  "rxnclass2id.json": {
+    "sha256": "95d5dca95d46fccfc1715032e9a16646553812447d5e8270de246968af5070bc",
+    "url": "https://raw.githubusercontent.com/rxn4chemistry/rxnfp/6fd48f4927c2178555cc5d71dbfb225fb178f43c/data/rxnclass2id.json"
+  },
+  "rxnclass2name.json": {
+    "sha256": "370b0b2ffe362917d46dae33a11b39391d6913291df5e96ccdd5270553d93047",
+    "url": "https://raw.githubusercontent.com/rxn4chemistry/rxnfp/6fd48f4927c2178555cc5d71dbfb225fb178f43c/data/rxnclass2name.json"
+  },
+  "schneider50k.tsv": {
+    "sha256": "d85dc26729fdda73ca4b9ed5573a9a6be5ecff578317a47011e999bcec70156e",
+    "url": "https://raw.githubusercontent.com/rxn4chemistry/rxnfp/6fd48f4927c2178555cc5d71dbfb225fb178f43c/data/schneider50k.tsv"
+  },
+  "schneider_b.csv.gz": {
+    "sha256": "72c6560f458c3777f1e0f1e73c3a35ac7974cc4a49e3ae6441421d4e91bf86b2",
+    "url": "https://raw.githubusercontent.com/TieuLongPhan/SynRXN/e7c03766bd6a405da468e281d922cf1beccdd56a/Data/classification/schneider_b.csv.gz"
+  },
+  "schneider_u.csv.gz": {
+    "sha256": "fbd6e409459354ade4a6d15aeaf2206694f7df335a315384ca7dbcf06d2ee5b4",
+    "url": "https://raw.githubusercontent.com/TieuLongPhan/SynRXN/e7c03766bd6a405da468e281d922cf1beccdd56a/Data/classification/schneider_u.csv.gz"
+  },
+  "synrxn_manifest.json": {
+    "sha256": "5bf0cc8ce61bc93f1ba86e9289ed1de59f56dd0ec7b6230da2fc3b38c458bfca",
+    "url": "https://raw.githubusercontent.com/TieuLongPhan/SynRXN/e7c03766bd6a405da468e281d922cf1beccdd56a/manifest.json"
+  },
+  "test_sources": {
+    "sha256": "dd10431c929eb9f7fe8952d263c1fed118b8fb4c6e8f8004b73c528adf1989c9",
+    "url": "https://raw.githubusercontent.com/pandegroup/reaction_prediction_seq2seq/9a6f040198ce990cbdeea812e7e99df7becd142c/processed_data/test_sources"
+  },
+  "test_targets": {
+    "sha256": "408504846efaafcfc2c0559a507a40232dcf3393fb7263aa83f583ececbd8179",
+    "url": "https://raw.githubusercontent.com/pandegroup/reaction_prediction_seq2seq/9a6f040198ce990cbdeea812e7e99df7becd142c/processed_data/test_targets"
+  },
+  "train_sources": {
+    "sha256": "a09a5700f1fe3f91aea33d122eda870bd1d99ad2ec0fd81fa37f43b0e2871747",
+    "url": "https://raw.githubusercontent.com/pandegroup/reaction_prediction_seq2seq/9a6f040198ce990cbdeea812e7e99df7becd142c/processed_data/train_sources"
+  },
+  "train_targets": {
+    "sha256": "af8fb61d23357618d45a2009020e5354d0325e96d6d3f5b1d9ffd781b6a147ca",
+    "url": "https://raw.githubusercontent.com/pandegroup/reaction_prediction_seq2seq/9a6f040198ce990cbdeea812e7e99df7becd142c/processed_data/train_targets"
+  },
+  "uspto_50k_b.csv.gz": {
+    "sha256": "098f85a386e25742791e5b87b8be8a7a090e920b6eca5f2b85452aa913ddba51",
+    "url": "https://raw.githubusercontent.com/TieuLongPhan/SynRXN/e7c03766bd6a405da468e281d922cf1beccdd56a/Data/classification/uspto_50k_b.csv.gz"
+  },
+  "uspto_50k_u.csv.gz": {
+    "sha256": "355d38f0ef86b6546bfd24bbee97ebfe09d16c9ffed8b13282dc336734421fdb",
+    "url": "https://raw.githubusercontent.com/TieuLongPhan/SynRXN/e7c03766bd6a405da468e281d922cf1beccdd56a/Data/classification/uspto_50k_u.csv.gz"
+  },
+  "valid_sources": {
+    "sha256": "40459c9e5c0f63c1ca08a8ebda2cc80bde42f5dbf0d520cd6c9f9069ae694f48",
+    "url": "https://raw.githubusercontent.com/pandegroup/reaction_prediction_seq2seq/9a6f040198ce990cbdeea812e7e99df7becd142c/processed_data/valid_sources"
+  },
+  "valid_targets": {
+    "sha256": "b856e45c5b762e416fbe93e75432c5cc4d3ee0dd90582d8b4c0d9cacaf3a6dee",
+    "url": "https://raw.githubusercontent.com/pandegroup/reaction_prediction_seq2seq/9a6f040198ce990cbdeea812e7e99df7becd142c/processed_data/valid_targets"
+  }
+}

@@ -1,0 +1,11 @@
+synrxn_label,author_class,name,schneider2016_n_matching_class,schneider2016_n_conflicting_class,liu2017_n_matching_class,liu2017_n_conflicting_class,combined_n_matching_class,combined_n_conflicting_class
+0,1,heteroatom alkylation and arylation,15150,0,14882,0,15151,0
+1,2,acylation and related processes,11892,0,11729,0,11893,0
+2,3,C–C bond formation,5660,0,5364,0,5660,0
+3,4,heterocycle formation,909,0,870,0,909,0
+4,5,protections,672,0,664,0,672,0
+5,6,deprotections,8230,0,8184,0,8237,0
+6,7,reductions,4607,0,4591,0,4612,0
+7,8,oxidations,811,0,716,0,811,0
+8,9,functional group interconversion (FGI),1826,0,1716,0,1831,0
+9,10,functional group addition (FGA),230,0,205,0,230,0
