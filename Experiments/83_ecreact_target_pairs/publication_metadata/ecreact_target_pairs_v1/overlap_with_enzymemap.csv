@@ -1,0 +1,6 @@
+population,rows,exact_direction,reverse_only,either_direction,exact_direction_with_validated_enzymemap_label
+all_source,185734,600,6,606,0
+fingerprint_encoded,185720,600,6,606,0
+mapped_edit,4017,597,6,603,0
+paired_eligible,4017,597,6,603,0
+paired_eligible_no_enzymemap,3414,0,0,0,0

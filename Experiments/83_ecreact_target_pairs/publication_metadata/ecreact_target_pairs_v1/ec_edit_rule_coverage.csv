@@ -1,0 +1,3 @@
+scope,train_rows,eligible,coverage,query_groups,exact_d_classes,passes,predicted_higher_gain,diagnostic_ec2,diagnostic_edit,n_boundary_ties
+all_mapped,3465,603,0.17402597402597403,166,18,True,ec_level_2,0.05074844833880978,0.0,101
+without_enzymemap,2923,430,0.1471091344509066,131,16,True,ec_level_2,0.046475661742837314,0.0,56
