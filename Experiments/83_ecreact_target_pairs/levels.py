@@ -207,7 +207,7 @@ def coverage_jobs(workers):
     print("Training-only EC-level comparisons complete",flush=True)
 
 
-def dispatch(workers, pilot, tail):
+def dispatch(workers, pilot, tail, skip_tail):
     a=ROOT/"A"
     prep=prepare()
     for name,h in prep["files_sha256"].items():
@@ -216,7 +216,8 @@ def dispatch(workers, pilot, tail):
     if pilot:
         tasks=tasks[:1]
     elif tail:
-        tasks=tasks[-tail:][::-1]
+        assert 0 <= skip_tail < tail <= len(tasks)
+        tasks=tasks[-tail:len(tasks)-skip_tail][::-1]
     args=[(task,) for task in tasks if not (task/"COMPLETE.json").exists()]
     with ProcessPoolExecutor(max_workers=workers) as pool:
         list(pool.map(fit_task,args))
@@ -343,13 +344,14 @@ def main():
     p.add_argument("--jobs",type=int,default=6)
     p.add_argument("--pilot",action="store_true")
     p.add_argument("--tail",type=int,default=0)
+    p.add_argument("--skip-tail",type=int,default=0)
     a=p.parse_args()
     if a.stage=="prepare":
         prepare()
     elif a.stage=="coverage":
         coverage_jobs(a.jobs)
     elif a.stage=="fit":
-        dispatch(a.jobs,a.pilot,a.tail)
+        dispatch(a.jobs,a.pilot,a.tail,a.skip_tail)
     else:
         score()
 
