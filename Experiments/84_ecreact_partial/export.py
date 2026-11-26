@@ -35,7 +35,7 @@ def interval(level, prediction, y, group):
         rows.append(dict(target=f"L{level}",metric=kind,estimate=score,ci_low=low,ci_high=high,
                          n_rows=len(y),n_scaffold_groups=n,folds=25,partial=False,
                          status="complete_single_level"))
-    return rows
+    return rows, point, draws
 
 
 def snapshot_levels(pins):
@@ -47,6 +47,7 @@ def snapshot_levels(pins):
     assert sha(root/"cohort.npz")==prep["files_sha256"]["cohort.npz"]
     records=[]
     single=[]
+    completed_levels={}
     for level in (1,2,3):
         prediction=np.full((2,5,len(y)),-1,dtype=np.int32)
         for seed,code in enumerate(codes):
@@ -83,11 +84,25 @@ def snapshot_levels(pins):
                 records.append(dict(level=level,seed=seed,arm=mode,n_test=len(idx),
                                     status=state,partial=state=="pending",mcc=mcc,error=err))
         if np.all(prediction>=0):
-            single+=interval(level,prediction,y[:,level-1],group)
+            scores,point,draws=interval(level,prediction,y[:,level-1],group)
+            single+=scores
+            completed_levels[level]=(point,draws)
         else:
             single.append(dict(target=f"L{level}",metric="all",status="incomplete_common_fits",partial=True))
-    for label in ("L3_minus_L1","L2_minus_L1"):
-        single.append(dict(target=label,metric="paired_gains",status="incomplete_common_fits",partial=True))
+    for level in (3,2):
+        label=f"L{level}_minus_L1"
+        if 1 not in completed_levels or level not in completed_levels:
+            single.append(dict(target=label,metric="paired_gains",status="incomplete_common_fits",partial=True))
+            continue
+        low_point,low_draws=completed_levels[1]
+        high_point,high_draws=completed_levels[level]
+        delta=high_point-low_point
+        paired=high_draws-low_draws
+        for i in (2,5):
+            ci_low,ci_high=np.quantile(paired[i],[.025,.975])
+            single.append(dict(target=label,metric=METRICS[i],estimate=delta[i],ci_low=ci_low,ci_high=ci_high,
+                       n_rows=len(y),n_scaffold_groups=int(group.max())+1,folds=25,partial=False,
+                       status="complete_paired_contrast"))
     pd.DataFrame(single).to_csv(OUT/"ec_level_pairs.csv",index=False)
     pd.DataFrame(records).to_csv(OUT/"ec_level_fit_status.csv",index=False)
     return pd.DataFrame(single),pd.DataFrame(records)
@@ -140,7 +155,8 @@ def main():
         c["partial"]=False
         c.to_csv(OUT/a_rule.name,index=False)
         pins[str(a_rule)]=sha(a_rule)
-        rule="The completed training-rule results are included for all 75 fold-by-contrast checks."
+        rule=("The frozen training rule predicted a larger gain for Level 3 than for either "
+              "lower level on all 25 folds. All 75 fold-by-contrast checks are included.")
     else:
         rule="The training-only EC-level ordering is still being calculated."
     lines=[
@@ -154,11 +170,10 @@ def main():
         f"[{mcc.ci_low:+.4f}, {mcc.ci_high:+.4f}] and reduced error by **{err.estimate:+.4f}** "
         f"[{err.ci_low:+.4f}, {err.ci_high:+.4f}], using 10,000 paired scaffold-group draws.",
         "",
-        "The paired differences with Level 1 require the other levels to close. "
+        "The table reports paired differences as soon as both levels in a contrast have closed. "
         f"{rule} [Per-fit inventory](ec_level_fit_status.csv)",
-        "At the observed CPU rate, the remaining common-split fits and paired intervals "
-        "are expected in roughly two to four hours from this snapshot. This estimate "
-        "depends on early stopping and workstation load.",
+        "The remaining fits and final publication are expected in roughly 20–45 minutes "
+        "from this snapshot, depending on early stopping.",
         "",
         "**Experiment B mapping is complete.** The pinned mapper accepted 185,343/185,734 "
         "under the original mapping policy. The stricter atom-conserving EnzymeMap label "
