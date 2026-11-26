@@ -5,6 +5,7 @@ import importlib.metadata
 import math
 import multiprocessing
 import os
+import subprocess
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import time
@@ -16,7 +17,8 @@ from sklearn.cluster import MiniBatchKMeans
 from sklearn.metrics import adjusted_mutual_info_score
 from threadpoolctl import threadpool_limits
 
-from common78 import BASE, D, DU, LOCAL, REPO, Pins, digest, export, paper_table, read, write
+from common78 import BASE, HERE, D, DU, LOCAL, REPO, Pins, digest, export, paper_table, read, write
+from packed_init78 import PackedInitializationKMeans
 
 WEIGHTS = (0.0, .25, .5, .75, 1.0)
 SEEDS = tuple(range(5))
@@ -168,13 +170,21 @@ def distances(endpoint, packed, label, ok, seed=7801):
 
 
 def fit(job):
-    matrix, label, params, k, seed, threads = job
+    matrix, label, params, k, seed, threads, weight, library = job
     started = time.monotonic()
-    shape = read(matrix/"shape.json")
-    arrays = [np.load(matrix/f"{key}.npy",mmap_mode="c",allow_pickle=False) for key in ("data","indices","indptr")]
-    X = csr_matrix(tuple(arrays),shape=tuple(shape),copy=False)
-    with threadpool_limits(limits=threads,user_api="openmp"), threadpool_limits(limits=1,user_api="blas"):
+    if library is not None:
+        X = np.load(matrix/"dense.npy", mmap_mode="c", allow_pickle=False)
+        model = PackedInitializationKMeans(n_clusters=k, random_state=seed, **params)
+        model.packed_rows = np.load(matrix/"packed.npy", mmap_mode="r", allow_pickle=False)
+        model.pooled_weight = 1.0 if weight is None else weight
+        model.kernel_path = library
+    else:
+        shape = read(matrix/"shape.json")
+        arrays = [np.load(matrix/f"{key}.npy",mmap_mode="c",allow_pickle=False)
+                  for key in ("data","indices","indptr")]
+        X = csr_matrix(tuple(arrays),shape=tuple(shape),copy=False)
         model = MiniBatchKMeans(n_clusters=k, random_state=seed, **params)
+    with threadpool_limits(limits=threads,user_api="openmp"), threadpool_limits(limits=1,user_api="blas"):
         assignment = model.fit_predict(X)
     score = adjusted_mutual_info_score(label, assignment)
     return {"ami":float(score),"n_iter":model.n_iter_,"n_steps":model.n_steps_,
@@ -207,8 +217,22 @@ def matrix_file(path, packed, weight):
     write(path/"shape.json",[len(packed),2048])
 
 
+def dense_matrix(path, packed, weight):
+    path.mkdir()
+    values = np.lib.format.open_memmap(path/"dense.npy", mode="w+", dtype=np.float32, shape=(len(packed),2048))
+    for start in range(0,len(values),8192):
+        chunk = values[start:start+8192]
+        chunk[:,:] = np.unpackbits(packed[start:start+8192],axis=1)
+        if weight is not None and weight!=1:
+            chunk[:,1024:] *= weight
+    values.flush()
+    np.save(path/"packed.npy",packed)
+
+
 def run_source(source, pins, plan, repair, known, params, canonical, published, pool, args):
     ids, arrays = features(pins, plan, repair, source)
+    library = args.compiled if source in ("tpl_b","tpl_u") else None
+    layout = "float32_dense_packed_init" if library else "float32_csr"
     panels = endpoints(pins,plan,known,source,ids)
     for endpoint,(rows,label,k,heuristic) in panels.items():
         dist = distances(endpoint, arrays[DU][0][rows],label,arrays[DU][1][rows])
@@ -239,27 +263,32 @@ def run_source(source, pins, plan, repair, known, params, canonical, published, 
                                 "setting":tag,"u_weight":weight,"n_rows":len(rows),"n_refusal_placeholders":int((~ok[rows]).sum()),
                                 "paper_mean_context_ami_change_over_18":published[endpoint]}
                         destination = args.output/"fits"/f"{endpoint}__{regime}__{tag}__{seed}.json"
+                        if regime=="factorial_k" and weight in (None,1.0):
+                            line["published_factorial_ami"] = anchor(pins,endpoint,config,seed,len(rows),k,params,sha,canonical)
                         if destination.exists():
                             record=read(destination)
                             for key,value in line.items():
                                 assert record[key]==value
-                            assert record["input_feature_sha256"]==sha and record["runner_sha256"]==digest(__file__)
+                            assert record["input_feature_sha256"]==sha and record["input_layout"]==layout
+                            allowed = {digest(__file__)}
+                            if library is None:
+                                allowed.add(args.previous_runner_sha)
+                            assert record["runner_sha256"] in allowed
                             continue
                         line.update(input_feature_sha256=sha,runner_sha256=digest(__file__))
-                        if regime=="factorial_k" and weight in (None,1.0):
-                            line["published_factorial_ami"] = anchor(pins,endpoint,config,seed,len(rows),k,params,sha,canonical)
                         pending.append((destination,line,label,k,seed))
             if pending:
                 with TemporaryDirectory(dir=args.scratch,prefix="scan78-") as scratch:
-                    matrix = Path(scratch)/"csr"
-                    matrix_file(matrix,packed[rows],weight)
+                    matrix = Path(scratch)/"features"
+                    builder = dense_matrix if library else matrix_file
+                    builder(matrix,packed[rows],weight)
                     pending_futures = {
-                        pool.submit(fit,(matrix,label,params,k,seed,args.threads)):(path,line)
+                        pool.submit(fit,(matrix,label,params,k,seed,args.threads,weight,library)):(path,line)
                         for path,line,label,k,seed in pending
                     }
                     for future in as_completed(pending_futures):
                         path,line = pending_futures[future]
-                        line.update(future.result(),origin="new_weight_scan",input_layout="float32_csr")
+                        line.update(future.result(),origin="new_weight_scan",input_layout=layout)
                         if "published_factorial_ami" in line:
                             line["ami_minus_published_factorial"] = line["ami"]-line["published_factorial_ami"]
                         write(path,line)
@@ -268,12 +297,17 @@ def run_source(source, pins, plan, repair, known, params, canonical, published, 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output",type=Path,default=LOCAL/"clustering_csr")
+    parser.add_argument("--output",type=Path,default=LOCAL/"clustering_v4")
     parser.add_argument("--scratch",type=Path,default=LOCAL/"scratch")
     parser.add_argument("--jobs",type=int,default=6)
     parser.add_argument("--threads",type=int,default=2)
     parser.add_argument("--source-jobs",type=int,default=9)
+    parser.add_argument("--compiled",type=Path,required=True)
     args=parser.parse_args()
+    from hashlib import sha256
+    historical = subprocess.check_output(["git","-C",str(REPO),"show",
+                                          "df19301d:Experiments/78_clustering_barrier_ceiling/clustering78.py"])
+    args.previous_runner_sha = sha256(historical).hexdigest()
     assert os.environ.get("CUDA_VISIBLE_DEVICES")==""
     for folder in (args.output/"fits",args.scratch):
         folder.mkdir(parents=True,exist_ok=True)
@@ -317,6 +351,12 @@ def main():
         "initialization_seeds":list(SEEDS),"cpu_workers":args.jobs,"omp_threads_per_worker":args.threads,
         "source_workers":args.source_jobs,
         "parameters":params,"elapsed_seconds":time.monotonic()-started,
+        "packed_initializer_sha256":digest(HERE/"packed_init78.py"),
+        "packed_distance_c_sha256":digest(HERE/"packed_distance.c"),
+        "compile_command":"cc -O3 -march=native -fPIC -shared packed_distance.c -o packed_distance.so",
+        "compiler_version":subprocess.check_output(["cc","--version"],text=True).splitlines()[0],
+        "packed_distance_binary_sha256":digest(args.compiled),
+        "baseline_csr_runner_sha256":args.previous_runner_sha,
         "packages":{p:importlib.metadata.version(p) for p in ("scikit-learn","scipy","numpy","pandas","threadpoolctl")},
         "outputs_sha256":{p.name:digest(p) for p in args.output.glob("clustering_*.csv")},
     })

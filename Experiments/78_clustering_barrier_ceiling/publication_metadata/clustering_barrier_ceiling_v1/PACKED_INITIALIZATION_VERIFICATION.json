@@ -1,0 +1,52 @@
+{
+  "compiled_kernel_sha256": "d65e2bb0441c717c526dbee1fd2791ce941110119ac3dafdabbfc6261c9be2f1",
+  "full_tpl_b_weight1_known_k_seed3_comparison": {
+    "csr_elapsed_seconds": 549.2997346166521,
+    "csr_native_ami": 0.7507134242958736,
+    "dense_update_sparse_initialization": {
+      "ami": 0.7507134242958736,
+      "elapsed": 306.77819480374455,
+      "endpoint": "tpl_b",
+      "fit_seconds": 285.88812132086605,
+      "k": 1000,
+      "n_steps": 171,
+      "seed": 3,
+      "weight": 1
+    }
+  },
+  "real_tpl_b_validation_rows": 24576,
+  "sampled_kmeansplusplus_centers": [
+    {
+      "centers": 1000,
+      "exact": true,
+      "native_seconds": 46.337874189950526,
+      "packed_seconds": 3.409038451500237,
+      "weight": 1.0
+    },
+    {
+      "centers": 1000,
+      "exact": true,
+      "native_seconds": 67.93830961640924,
+      "packed_seconds": 7.004311439581215,
+      "weight": 0.25
+    },
+    {
+      "centers": 1000,
+      "exact": true,
+      "native_seconds": 93.4166409401223,
+      "packed_seconds": 2.4117861799895763,
+      "weight": 0.75
+    }
+  ],
+  "synthetic_controls": {
+    "native_dense_final_assignment_and_stopping_step_exact": true,
+    "native_selected_indices_exact_for_three_seeds": true,
+    "weights": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ]
+  }
+}

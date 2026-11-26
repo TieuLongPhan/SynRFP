@@ -34,7 +34,9 @@ def check_clustering(root):
     assert cells == set(product(endpoints, PROTOCOLS, SETTINGS, range(5)))
     assert len(raw) == len(cells) == 720
     assert raw.origin.eq("new_weight_scan").all() and audit["new_fits"] == 720
-    assert raw.input_layout.eq("float32_csr").all()
+    tpl = raw.endpoint.str.startswith("tpl_")
+    assert raw.loc[tpl, "input_layout"].eq("float32_dense_packed_init").all()
+    assert raw.loc[~tpl, "input_layout"].eq("float32_csr").all()
     anchored = raw.loc[raw.published_factorial_ami.notna()].copy()
     assert len(anchored) == audit["archived_factorial_scores"] == 120
     assert anchored.protocol.eq("factorial_k").all()
@@ -78,14 +80,16 @@ def overview(summaries, pairs, archive, checks):
         "The published construction factorial used MiniBatchKMeans with K selected from the full row "
         "count. Request 78 specifies K equal to the reference class count. Both scans use the original "
         "five initialization seeds and MiniBatchKMeans settings on the same 12 full factorial panels. "
-        "The D2048 reference and all weight settings were refitted with the same scikit-learn "
-        "implementation on sparse float32 matrices. Each sparse input has the exact values "
-        "of the weighted dense matrix. The factorial-K rows also provide the archived dense D2048 "
+        "The D2048 reference and all weight settings were refitted with scikit-learn. "
+        "Ten endpoints use sparse float32 matrices. The two TPL endpoints use dense updates "
+        "with a packed-bit k-means++ initializer. Its squared distances and selected centres "
+        "match native initialization on validation inputs. Both layouts preserve the exact "
+        "weighted feature values. The factorial-K rows also provide the archived dense D2048 "
         "and w = 1 AMI for direct comparison. "
         f"Of those {anchors} matched anchors, {matches} agree at 1e-12 AMI. The maximum "
         f"absolute difference is {max_delta:.4f} AMI. Sparse accumulation and the recorded "
         "runtime can affect cluster assignments, so the weighting contrasts compare fits "
-        "using the same sparse layout.",
+        "using a common layout within each endpoint.",
         "",
         "All settings use WL radius 2, parity and fingerprint seed 1. At w = 0 only the 1,024-bit "
         "signed block remains active. D2048 uses all 2,048 bits for signed changes. The distance "
@@ -155,7 +159,7 @@ def overview(summaries, pairs, archive, checks):
 
 
 def main():
-    root=LOCAL/"clustering_csr"
+    root=LOCAL/"clustering_v4"
     summaries,pairs,arch,audit,checks=check_clustering(root)
     barrier=read(OUTPUT/"barrier_AUDIT.json")
     check_files(OUTPUT,{"barrier_groups.csv":barrier["table_sha256"]})
@@ -166,7 +170,8 @@ def main():
     (OUTPUT/"clustering_note.md").write_text(note)
     records=sorted(p for p in OUTPUT.iterdir() if p.name!="COMPLETE.json")
     write(OUTPUT/"COMPLETE.json",{"status":"complete","files_sha256":{p.name:digest(p) for p in records},
-                                "code_sha256":{p.name:digest(p) for p in HERE.glob("*.py")},
+                                "code_sha256":{p.name:digest(p) for p in sorted(HERE.iterdir())
+                                               if p.suffix in (".py", ".c")},
                                 "barrier_totals":{"datasets":9,"rows":barrier["full_parity_feature_replay_rows"]},
                                 "clustering_scored_cells":audit["fit_cells"],"clustering_outcomes":counts,
                                 "archive_anchor_comparison":checks})
