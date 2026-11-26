@@ -1,0 +1,16 @@
+dataset,fold,n_train,predicted_higher_gain,primary_diagnostic,second_diagnostic,eligible_queries,coverage,query_groups,classes,third_neighbor_boundary_ties,coverage_passes
+b97xd3,group_cv_f0,11923,,,,0,0.0,0,0,0,False
+b97xd3,group_cv_f1,11847,,,,0,0.0,0,0,0,False
+b97xd3,group_cv_f2,11882,,,,0,0.0,0,0,0,False
+b97xd3,group_cv_f3,11865,,,,0,0.0,0,0,0,False
+b97xd3,group_cv_f4,11840,,,,0,0.0,0,0,0,False
+cyclo,group_cv_f0,3823,,,,0,0.0,0,0,0,False
+cyclo,group_cv_f1,3814,,,,0,0.0,0,0,0,False
+cyclo,group_cv_f2,3812,,,,0,0.0,0,0,0,False
+cyclo,group_cv_f3,3822,,,,0,0.0,0,0,0,False
+cyclo,group_cv_f4,3800,,,,0,0.0,0,0,0,False
+gdb7,group_cv_f0,8546,,,,0,0.0,0,0,0,False
+gdb7,group_cv_f1,8646,,,,0,0.0,0,0,0,False
+gdb7,group_cv_f2,8590,,,,0,0.0,0,0,0,False
+gdb7,group_cv_f3,8633,,,,0,0.0,0,0,0,False
+gdb7,group_cv_f4,8583,,,,0,0.0,0,0,0,False
