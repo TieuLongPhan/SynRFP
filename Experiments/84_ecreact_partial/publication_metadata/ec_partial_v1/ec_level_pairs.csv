@@ -1,0 +1,11 @@
+target,metric,status,partial,estimate,ci_low,ci_high,n_rows,n_scaffold_groups,folds
+L1,all,incomplete_common_fits,True,,,,,,
+L2,all,incomplete_common_fits,True,,,,,,
+L3,D_mcc,complete_single_level,False,0.7782356124906751,0.7156492845342397,0.8263977441546773,185734.0,28959.0,25.0
+L3,DU_mcc,complete_single_level,False,0.7952888676629076,0.7332995629148076,0.8421116715629068,185734.0,28959.0,25.0
+L3,gain_mcc,complete_single_level,False,0.01705325517223255,0.01076512941756006,0.02386180772754592,185734.0,28959.0,25.0
+L3,D_error,complete_single_level,False,0.20862416143517748,0.16153525590123793,0.2719910601563956,185734.0,28959.0,25.0
+L3,DU_error,complete_single_level,False,0.19278322762660893,0.14701136103084958,0.255507777087861,185734.0,28959.0,25.0
+L3,gain_error,complete_single_level,False,0.015840933808568547,0.009972550283525939,0.022261055309941692,185734.0,28959.0,25.0
+L3_minus_L1,paired_gains,incomplete_common_fits,True,,,,,,
+L2_minus_L1,paired_gains,incomplete_common_fits,True,,,,,,

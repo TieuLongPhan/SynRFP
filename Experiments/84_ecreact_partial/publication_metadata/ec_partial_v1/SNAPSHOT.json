@@ -1,0 +1,29 @@
+{
+  "B_fits_complete": true,
+  "code_sha256": "2d0de5bd19d282c5c7de65b3a158ae1650301c1f024e0dea2c33276f14425ea6",
+  "completed_A_fits": 50,
+  "files_sha256": {
+    "ec_edit_rule_coverage.csv": "bc885f52458c247368b9d39d2c0ea3aa50dd9741167cc4ef2e3b96a2894e3ade",
+    "ec_level_fit_status.csv": "173826993244819fcad1b8267d3753f571cd3cc5c9e64ba97e4f860002883daa",
+    "ec_level_pairs.csv": "81f41539c6e55f1de0dad418e5a9ec39885834c644622914697cb670870dbb3f",
+    "ecreact_target_pair.csv": "b86e0d1d346337a0bbc3cd70a575524795a0a404b3a2922dc3069c538e8565f7",
+    "mapping_quality_partial.csv": "2913f0d35088ffdfdbe4bc92aa850211c0653d339ca1a267fa98c6a2cf9c30e7",
+    "overlap_with_enzymemap.csv": "35de9d756877dd839fb7accd3c5c16f79fab28891781d356b73bf3fe17efe813",
+    "status_note.md": "1cca99c673474abe1371d613be63bf8df28677ef0525960552ccf6139256d2e9"
+  },
+  "inputs_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/request83_ecreact_target_pairs_v1/A/PREPARED.json": "9dbb63ce16c1b7f2882eac186e2b1abd54c3b6952d97a04e5b2eea0132029921",
+    "/home/labhhc4/.local/share/synrfp-runs/request83_ecreact_target_pairs_v1/B_COMPLETE.json": "65613b5d2a3ef7853d3a0400730f5aea9fcdef3591c1b52e66099106ba7c57f7",
+    "/home/labhhc4/.local/share/synrfp-runs/request83_ecreact_target_pairs_v1/MAPPING_COMPLETE.json": "0c22bff483bd10b740b4687f3f1d71d0538ba8259806c053664ab2bdcb50459d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-ecreact-target-pairs/Experiments/83_ecreact_target_pairs/levels.py": "6a145a2d3db3f3cc5887ee493db59b22cf0b9bd07e79cc1682374fb673c16aa9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-ecreact-target-pairs/Experiments/83_ecreact_target_pairs/publication_metadata/ecreact_target_pairs_v1/ec_edit_rule_coverage.csv": "9044f45f7220969985dfb2ac920be8d9619961bf9993712b325b2eb0721dc97b",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-ecreact-target-pairs/Experiments/83_ecreact_target_pairs/publication_metadata/ecreact_target_pairs_v1/ecreact_target_pair.csv": "332f88f33307a286207053f1be635fe6f278fe741d58dc88f235916eb43da8c1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-ecreact-target-pairs/Experiments/83_ecreact_target_pairs/publication_metadata/ecreact_target_pairs_v1/mapping_quality.csv": "f04c4e906b1aa5d4e31a6f9d0252431a6000a3eebf40e1d9c67adf7c65d747ee",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-ecreact-target-pairs/Experiments/83_ecreact_target_pairs/publication_metadata/ecreact_target_pairs_v1/overlap_with_enzymemap.csv": "a5172c3dc6f19ba220eba3715897b6a3a073c9405e00a3874d515b34bb3c52c8"
+  },
+  "request_83_revision": "fc4e13cf",
+  "request_84_revision": "71f3df22",
+  "required_A_fits": 150,
+  "snapshot_utc": "2026-11-26 14:22 UTC",
+  "status": "partial"
+}
