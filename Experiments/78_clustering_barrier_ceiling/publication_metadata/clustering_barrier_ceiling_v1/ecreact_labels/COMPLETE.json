@@ -1,0 +1,15 @@
+{
+  "case_a_rows": 36,
+  "case_c_rows": 80,
+  "files_sha256": {
+    "LABEL_AUDIT.json": "5a33b02c486722ea248b80a54f4192321af06564c3adb6691acf074873a70044",
+    "README.md": "623ab869bc8aafe408b7ac7aee2a7b9034300dc20c1ba932c219a45ec2ac6f8d",
+    "case_a_ec.csv": "344a856a520acdcd5338fb5e96e4602c767976030c6ae0c68f3cf553178812d5",
+    "case_c_ec.csv": "869753fac86d9024b44736ccbcdf41beb87f890ab728730f13c403bb09b83831",
+    "ecreact_label_map.csv": "f37f6b26d142e4ecc8ec15c3f2f5f85d2dc2101c24cf30610299a73be167c89b"
+  },
+  "independently_replayed_source_rows": 185734,
+  "input_hashes_verified": 9,
+  "mapping_rows": 247,
+  "status": "complete"
+}

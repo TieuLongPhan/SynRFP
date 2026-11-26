@@ -1,0 +1,52 @@
+{
+  "case_a_ec_rows": 36,
+  "case_c_ec_rows": 80,
+  "case_c_prediction_status": "No predictions in archived Case C. Fields empty.",
+  "helper_sha256": "dde4eb02514bc164fc9a535c250b62ec353db383f49ff7e64b87929225f08318",
+  "input_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/ecreact.csv.gz": "ff6b45dd11ad2e3c9e0061bbdb19def4521b6ee5d84688f32a03250f29670241",
+    "/home/labhhc4/.local/share/synrfp-runs/request78_ec_labels_v1/claire_full_pinned.csv.gz": "cc3731eb2cacd598e2f096fd329460295408f65d0e818cd0a747c9fc6d9088c8",
+    "/home/labhhc4/.local/share/synrfp-runs/request78_ec_labels_v1/synrxn_build_classification_dataset.py": "0bafed7aa02c09d3cb9ad200251ec3ced668888d5271b35048a75366d53792a1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-chemistry-cases/Experiments/75_chemistry_cases/publication_metadata/chemistry_cases_v1/COMPLETE.json": "8b915e84f19ceb7375c0f9525b4fcbb9c959bf38565599c778cc643cde499696",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-chemistry-cases/Experiments/75_chemistry_cases/publication_metadata/chemistry_cases_v1/case_a.csv": "bb72435019d025a624ba4cca5ae4b990704dd1af91d6dc469e98d3864d7fb76c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-chemistry-cases/Experiments/75_chemistry_cases/publication_metadata/chemistry_cases_v1/case_c.csv": "062aee47375fa12cab3479398db99be7106cccc11b8430531e706cd85f9895ab",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/Experiments/74_delta_ceiling/publication_metadata/delta_ceiling_v1/AUDIT.json": "74c5f041119eccc1fc95d3b00a574fcce7c805b0b03eefe971525756fec62745",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/Experiments/74_delta_ceiling/publication_metadata/delta_ceiling_v1/COMPLETE.json": "6fb3283b7192706d71cee5ca5898157cc0135add7ab137aa06e5c0bbe73b5867",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/work/synrxn_cache/artifacts/zenodo/22045145/classification/ecreact.csv.gz": "c730e5bd196dc69b5ebc421cce37010162f7e129f149b28196f0069ee242bdcd"
+  },
+  "mapping_counts": {
+    "ec1": 8,
+    "ec2": 63,
+    "ec3": 176
+  },
+  "new_fits": 0,
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5"
+  },
+  "prior_experiment_78_commit": "4ba01b4bbfde4bc01c68a1efe1618c6392ac79f4",
+  "python": "3.11.16",
+  "request74_release_commit": "c2f046a9724a70d4821e16d5a6b27b546003f8fe",
+  "request75_release_commit": "9e2c2de9c38d7ad342bbd86e744d5684b3024e2f",
+  "request_commit": "509e0ff98574fe6573429dc7895effefe0efb818",
+  "runner_sha256": "83716d1335d9fd9cc806cafeb018226218818304cf26bbbdfcfd8fdad16d4ece",
+  "source_literals_preserved": {
+    "ec1": {
+      "7": "-"
+    },
+    "ec2": {
+      "59": "-",
+      "62": "3.A"
+    },
+    "ec3": {
+      "163": "-",
+      "170": "3.A.1"
+    }
+  },
+  "source_projection_rows_verified": 185734,
+  "syncat_source_commit": "051e7bf9eca68067b6f8d47f7f29f3e855cc7c74",
+  "syncat_source_url": "https://raw.githubusercontent.com/phuocchung123/SynCat/051e7bf9eca68067b6f8d47f7f29f3e855cc7c74/Data/raw/claire_full.csv.gz",
+  "synrxn_curation_commit": "e7c03766bd6a405da468e281d922cf1beccdd56a",
+  "synrxn_curation_url": "https://github.com/TieuLongPhan/SynRXN/blob/e7c03766bd6a405da468e281d922cf1beccdd56a/script/build_classification_dataset.py#L601",
+  "synrxn_release": "https://zenodo.org/records/22045145"
+}
