@@ -1,0 +1,55 @@
+{
+  "archive_anchor_comparison": {
+    "archive_anchors": 120,
+    "match_at_1e_12": 91,
+    "max_abs_ami_delta": 0.0025436271123584,
+    "median_abs_ami_delta": 0.0
+  },
+  "barrier_totals": {
+    "datasets": 9,
+    "rows": 419149
+  },
+  "clustering_outcomes": {
+    "distance_ratios": {
+      "lower_U_on_paper_loss": 9,
+      "lower_U_overall": 11
+    },
+    "factorial_k": {
+      "monotone_on_paper_loss": 2,
+      "monotone_on_wl_r2_union_loss": 2,
+      "paper_loss_endpoints": 10,
+      "wl_r2_union_loss_endpoints": 10,
+      "zero_helps_on_paper_loss": 9,
+      "zero_helps_on_wl_r2_union_loss": 9
+    },
+    "known_k": {
+      "monotone_on_paper_loss": 1,
+      "monotone_on_wl_r2_union_loss": 1,
+      "paper_loss_endpoints": 10,
+      "wl_r2_union_loss_endpoints": 9,
+      "zero_helps_on_paper_loss": 8,
+      "zero_helps_on_wl_r2_union_loss": 9
+    }
+  },
+  "clustering_scored_cells": 720,
+  "code_sha256": {
+    "barrier78.py": "b2d191f4fcb395ff1cabb428de89d96a1df874cef734975ac898b7c4946fa7cf",
+    "clustering78.py": "c6f8d90ae702592e696f53f1dca17b11c02198680c08a1642230221f0e656478",
+    "common78.py": "dde4eb02514bc164fc9a535c250b62ec353db383f49ff7e64b87929225f08318",
+    "packed_distance.c": "f77ce0ee2f673a8bd3dd29694f36b00f819b959ba3aba054776c16f0c234a1ab",
+    "packed_init78.py": "33e64a9b3d600c3d46644fd1f5c5a38b0bd56dc8c6e4fe8f295bcb566e35fb88",
+    "report78.py": "7763b6c95bab97cadd08b7ef497823c48fea1acf1b0aa996089b31edc0e6fe4e"
+  },
+  "files_sha256": {
+    "PACKED_INITIALIZATION_VERIFICATION.json": "74a961eb46d62fa65de5a1fe8b8b1e1a03d6aab5013fb9a72c57af978feaa85c",
+    "barrier_AUDIT.json": "95b286e3231ec07d6fb35cf227726b6822b2fe3b13884f4cc0b513ca72f0fcd7",
+    "barrier_groups.csv": "ae8d3db5ac6ecc819e9d9789f276d1fe8c63b54a46d6f6eb7bef9c8e6ead49a3",
+    "barrier_note.md": "39984602b339f5fd9c28029aa6336b38175362ff0bebc9b93e445dc4446769f8",
+    "clustering_AUDIT.json": "f599cf568fb55b487d2667b588fe0d7419d9a65c6fcad0bab35d3a91e7e7477c",
+    "clustering_distance_ratio.csv": "a461c6f696a0c69d4ab6ccb1f68f0687db30ff318d336564895c3747051e2142",
+    "clustering_note.md": "9bbfa349cefc0bb1b8bacf32e06ddbef0f5edd2c3cdd6e70c8f0ae99cbbf3f70",
+    "clustering_weight_cells.csv": "ce82c26879d938e7c13530ce6cc617a4e1a81e9b7cac053b9d5990a6ffcb2080",
+    "clustering_weight_scan.csv": "e50d200743e07be520e4d9bb6576357c26f9d270381fefe073705fbe822e63ab"
+  },
+  "status": "complete"
+}
