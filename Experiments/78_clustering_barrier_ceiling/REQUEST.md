@@ -54,6 +54,19 @@ mixed-label share. One short note should say whether it predicts where context h
 
 Outputs: `barrier_groups.csv`, `barrier_note.md`.
 
+## Experiment C (required, small): decode the ECReact class labels to EC numbers
+
+The ECReact labels `ec1`, `ec2`, `ec3` in `classification/ecreact.csv.gz` are integer indices. The paper
+wants to print the EC numbers on its case figures. Export the mapping from each index to its EC string
+(for example `3`, `3.5`, `3.5.1`) for the three levels, with the source of the mapping (the CLAIRE
+release or the SynRXN curation script and commit). If the mapping cannot be recovered from a pinned
+source, say so and do not infer it from the reactions.
+
+Then add the decoded EC numbers to the request 75 case tables for the ECReact rows (`case_a.csv`,
+`case_c.csv`): true, predicted by D, predicted by D+U and collision partner.
+
+Outputs: `ecreact_label_map.csv` (level, index, ec), `case_a_ec.csv`, `case_c_ec.csv`.
+
 ## Constraints
 
 Same as requests 74 to 77: pinned commits and hashes, package versions, no weights, no per-row predictions,
