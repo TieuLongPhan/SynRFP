@@ -2,10 +2,10 @@ level,seed,arm,n_test,status,partial,mcc,error
 1,0,delta,35011,pending,True,,
 1,0,delta_union,35011,pending,True,,
 1,1,delta,35338,pending,True,,
-1,1,delta_union,35338,pending,True,,
-1,2,delta,35793,pending,True,,
-1,2,delta_union,35793,pending,True,,
-1,3,delta,39797,pending,True,,
+1,1,delta_union,35338,complete_new,False,0.9230374701187632,0.04932367423170524
+1,2,delta,35793,complete_new,False,0.8942323374992684,0.06973430559047858
+1,2,delta_union,35793,complete_new,False,0.9160548139952988,0.05548570949627022
+1,3,delta,39797,complete_new,False,0.7294380521374896,0.19911048571500364
 1,3,delta_union,39797,pending,True,,
 1,4,delta,39795,pending,True,,
 1,4,delta_union,39795,pending,True,,
