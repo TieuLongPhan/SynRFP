@@ -11,6 +11,7 @@ import time
 
 import numpy as np
 import pandas as pd
+from scipy.sparse import csr_matrix
 from sklearn.cluster import MiniBatchKMeans
 from sklearn.metrics import adjusted_mutual_info_score
 from threadpoolctl import threadpool_limits
@@ -169,7 +170,9 @@ def distances(endpoint, packed, label, ok, seed=7801):
 def fit(job):
     matrix, label, params, k, seed, threads = job
     started = time.monotonic()
-    X = np.load(matrix, mmap_mode="r", allow_pickle=False)
+    shape = read(matrix/"shape.json")
+    arrays = [np.load(matrix/f"{key}.npy",mmap_mode="c",allow_pickle=False) for key in ("data","indices","indptr")]
+    X = csr_matrix(tuple(arrays),shape=tuple(shape),copy=False)
     with threadpool_limits(limits=threads,user_api="openmp"), threadpool_limits(limits=1,user_api="blas"):
         model = MiniBatchKMeans(n_clusters=k, random_state=seed, **params)
         assignment = model.fit_predict(X)
@@ -179,14 +182,29 @@ def fit(job):
 
 
 def matrix_file(path, packed, weight):
-    out = np.lib.format.open_memmap(path,mode="w+",dtype=np.float32,shape=(len(packed),2048))
-    for start in range(0,len(out),8192):
-        end = start+8192
-        chunk = out[start:end]
-        chunk[:,:] = np.unpackbits(packed[start:end],axis=1)
-        if weight is not None and weight!=1:
-            chunk[:,1024:] *= weight
-    out.flush()
+    path.mkdir()
+    count_table = np.unpackbits(np.arange(256,dtype=np.uint8)[:,None],axis=1).sum(axis=1)
+    active = packed[:, :128] if weight==0 else packed
+    ptr = np.empty(len(active)+1,dtype=np.int32)
+    ptr[0]=0
+    for start in range(0,len(active),8192):
+        stop=min(start+8192,len(active))
+        count=count_table[active[start:stop]].sum(axis=1)
+        ptr[start+1:stop+1]=np.cumsum(count,dtype=np.int32)+ptr[start]
+    np.save(path/"indptr.npy",ptr)
+    size=int(ptr[-1])
+    indices=np.lib.format.open_memmap(path/"indices.npy",mode="w+",dtype=np.int32,shape=(size,))
+    values=np.lib.format.open_memmap(path/"data.npy",mode="w+",dtype=np.float32,shape=(size,))
+    for start in range(0,len(active),8192):
+        stop=min(start+8192,len(active))
+        bits=np.unpackbits(active[start:stop],axis=1)
+        cols=np.nonzero(bits)[1]
+        idx=slice(ptr[start],ptr[stop])
+        indices[idx]=cols
+        values[idx]=1.0 if weight is None else np.where(cols<1024,1.0,weight)
+    indices.flush()
+    values.flush()
+    write(path/"shape.json",[len(packed),2048])
 
 
 def run_source(source, pins, plan, repair, known, params, canonical, published, pool, args):
@@ -229,14 +247,11 @@ def run_source(source, pins, plan, repair, known, params, canonical, published, 
                             continue
                         line.update(input_feature_sha256=sha,runner_sha256=digest(__file__))
                         if regime=="factorial_k" and weight in (None,1.0):
-                            score = anchor(pins,endpoint,config,seed,len(rows),k,params,sha,canonical)
-                            line.update(ami=score,origin="archived_corrected_factorial")
-                            write(destination,line)
-                        else:
-                            pending.append((destination,line,label,k,seed))
+                            line["published_factorial_ami"] = anchor(pins,endpoint,config,seed,len(rows),k,params,sha,canonical)
+                        pending.append((destination,line,label,k,seed))
             if pending:
                 with TemporaryDirectory(dir=args.scratch,prefix="scan78-") as scratch:
-                    matrix = Path(scratch)/"float32.npy"
+                    matrix = Path(scratch)/"csr"
                     matrix_file(matrix,packed[rows],weight)
                     pending_futures = {
                         pool.submit(fit,(matrix,label,params,k,seed,args.threads)):(path,line)
@@ -244,14 +259,16 @@ def run_source(source, pins, plan, repair, known, params, canonical, published, 
                     }
                     for future in as_completed(pending_futures):
                         path,line = pending_futures[future]
-                        line.update(future.result(),origin="new_weight_scan")
+                        line.update(future.result(),origin="new_weight_scan",input_layout="float32_csr")
+                        if "published_factorial_ami" in line:
+                            line["ami_minus_published_factorial"] = line["ami"]-line["published_factorial_ami"]
                         write(path,line)
                         print(f"{path.stem} AMI={line['ami']:.5f} {line['elapsed_seconds']:.1f}s",flush=True)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output",type=Path,default=LOCAL/"clustering")
+    parser.add_argument("--output",type=Path,default=LOCAL/"clustering_csr")
     parser.add_argument("--scratch",type=Path,default=LOCAL/"scratch")
     parser.add_argument("--jobs",type=int,default=6)
     parser.add_argument("--threads",type=int,default=2)
@@ -274,7 +291,8 @@ def main():
                 future.result()
     cells=[read(path) for path in sorted((args.output/"fits").glob("*.json"))]
     assert len(cells)==720
-    assert sum(r["origin"]=="new_weight_scan" for r in cells)==600
+    assert sum(r["origin"]=="new_weight_scan" for r in cells)==720
+    assert sum("published_factorial_ami" in r for r in cells)==120
     d=[row for path in sorted(args.output.glob("distance_*.json")) for row in read(path)]
     assert len(d)==24
     export(args.output/"clustering_distance_ratio.csv",d)
@@ -288,15 +306,18 @@ def main():
         info=first[phi].to_dict()
         info["u_weight"]=None if pd.isna(info["u_weight"]) else info["u_weight"]
         info.update(n_seeds=len(v),ami_mean=float(v.ami.mean()),ami_sd=float(v.ami.std(ddof=1)))
+        if v.published_factorial_ami.notna().all():
+            info.update(published_factorial_ami_mean=float(v.published_factorial_ami.mean()),
+                        published_factorial_ami_sd=float(v.published_factorial_ami.std(ddof=1)))
         summaries.append(info)
     export(args.output/"clustering_weight_scan.csv",summaries)
     write(args.output/"clustering_AUDIT.json",{
         "request_revision":"773ba9ac4610fe573576a6fa91c9383caace8abd", "input_sha256":pins.hashes,
-        "runner_sha256":digest(__file__),"fit_cells":len(cells),"new_fits":600,"reused_factorial_fits":120,
+        "runner_sha256":digest(__file__),"fit_cells":len(cells),"new_fits":720,"archived_factorial_scores":120,
         "initialization_seeds":list(SEEDS),"cpu_workers":args.jobs,"omp_threads_per_worker":args.threads,
         "source_workers":args.source_jobs,
         "parameters":params,"elapsed_seconds":time.monotonic()-started,
-        "packages":{p:importlib.metadata.version(p) for p in ("scikit-learn","numpy","pandas","threadpoolctl")},
+        "packages":{p:importlib.metadata.version(p) for p in ("scikit-learn","scipy","numpy","pandas","threadpoolctl")},
         "outputs_sha256":{p.name:digest(p) for p in args.output.glob("clustering_*.csv")},
     })
 
