@@ -1,0 +1,141 @@
+{
+  "additional_control_rows": 1,
+  "benchmark_rows": 7,
+  "code_sha256": {
+    "classical86.py": "695e55c4dd39f0ec512673bdd03b8f5b3e2c87bfd88e5729a2d7ddbe0732406f",
+    "common86.py": "024dda674ee1f97e679c85e248d4a857bc1a6e60efade6b13955f2f9b92e0dbc",
+    "neural86.py": "8e1d0500753d816d292eecdaa62dbd6ce7d692f970ec8c9c667db246632146a8",
+    "prepare86.py": "ddda3452c3e92548686b585e6c30bd6e6a2888d90ec250ea84f1fa9f501067e5",
+    "report86.py": "5d4c271cca241989797679d8c3cb065c4a0aa4ba18157c8070254d9f96e4bb38"
+  },
+  "files_sha256": {
+    "encoding_failure_rows_tpl_ub.csv": "d01412aa7a42616c354ed8b2969323338e649cb3dc9fb8f35db97c7e7c6bb0ec",
+    "encoding_failures_tpl_ub.csv": "09e5c04a49faf8f4cd61165c95148d76900c777ad514f5cbbc2bda6181553afa",
+    "encoding_warnings_tpl_ub.csv": "09e5c04a49faf8f4cd61165c95148d76900c777ad514f5cbbc2bda6181553afa",
+    "note.md": "7bc1164f9ebb1e864a9c03cc319ae4a2652f44c87b49a7e1ba4380eefe694c12",
+    "perturbation_tpl_ub.csv": "21f4b1c78ef1227961d681ed68cccc77f1ab10c98a09be3dc192042ce21ffdcf",
+    "release_replay.csv": "a1dc10671b207ca5ba20e05ff94aa113bcf1e39a8e3cfe44cbb43545e68c12c7"
+  },
+  "manifest_sha256": "a7306bc653a18c02af61f6de2eafc0c9ef4295bdac55d07c0843e9af4bcf06bb",
+  "module_receipts_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/request87_invariance_tpl_ub_v1/classical_COMPLETE.json": "a2ebcad96a753cd80d32070fc643bf91d3c6b4b66574e2e1a573b6aa94c38725",
+    "/home/labhhc4/.local/share/synrfp-runs/request87_invariance_tpl_ub_v1/crxnfp_COMPLETE.json": "24e6efd937e843f2a64e37cffec60e470c87ee527df1f967dc60e892ada847c5",
+    "/home/labhhc4/.local/share/synrfp-runs/request87_invariance_tpl_ub_v1/rxnfp_mlm_COMPLETE.json": "5aed767974cb43c0cfa186d2f2f87ff2c292dedbd1c0fa9c60cdab133c34fab6"
+  },
+  "n_reactions": 2000,
+  "producers": {
+    "classical": {
+      "inputs_sha256": {
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/20_focused_factorial/encode_factorial.py": "b9d1e1fc82b1e702bcbb2cef7c513c2b6389ed0dd23b20c520bfbe78fdc7231a",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/48_yield_input_repair/reaction_parser.py": "c7b91a4c5893d9c28bbfcbd9fa56dcc14a0f7df584fb4fdb6bb3321a83cb84e8",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/51_encoder_coverage_repair/adapter.py": "a8ccde86fd7d5c96a9b883bbd84adaaebe96240f3cd1914af59cfe679bdf4684",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/drfp/fingerprint.py": "bdef66856b48205a881dc28946ac07d8a85be6a214d9f68c5520b2db57e9d9a9"
+      },
+      "outputs_sha256": {
+        "classical_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "classical_tpl_ub.npz": "ec16ceeca9138ba609eee6ad20e11000d95df56366702e7b0214d781ed158dec"
+      },
+      "versions": {
+        "drfp": "0.3.7",
+        "numpy": "2.4.6",
+        "rdkit": "2026.3.6",
+        "synkit": "1.6.2"
+      }
+    },
+    "crxnfp": {
+      "batch": "20 matched triplets per batch, native 512-token truncation",
+      "device": "cpu",
+      "inputs_sha256": {
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/1_Pooling/config.json": "38d3f4705824ec41c63a0b14e19870d59c7e16eac9c0aac3378be1ce548bc313",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/README.md": "16b706cfb31fe7f3ca3b18d825ecc71f23e304104139dad7e83fa17313a7cd5e",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config.json": "b6a20d680daeeb360abc2fbc92100f3a9e438e5c0dd19e19755e2a86e0f5e7fe",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config_sentence_transformers.json": "9afb9db5b9433bffa325f8272065c0b330efb570a873abb3e296d3a387f82301",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/model.safetensors": "7a78e798d0e82b190918442744948bd53d6d16608c7b01708ee1cc746a97cb2d",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/modules.json": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/tokenizer_config.json": "b557b8436d888995f74b889dff2c5f582f85e48599a58ee1b3f10602f5ae7308",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/smiles_util.py": "de1e6411de93922e30f47b316306e387a6db5b57563918f2a949760b000dd866",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/tokenization.py": "9db8fd76dce1613a1145c087ebe86248ad1612e4bfe79b5dd738442bbc04bb60",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/modern_encoder.py": "a2ef2aee2325a9e2b995a50fe9ad57e7218ac94bae17deb58d3b087dc45587ba",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/48_yield_input_repair/reaction_parser.py": "c7b91a4c5893d9c28bbfcbd9fa56dcc14a0f7df584fb4fdb6bb3321a83cb84e8"
+      },
+      "method": "crxnfp",
+      "outputs_sha256": {
+        "crxnfp_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "crxnfp_tpl_ub.npz": "752a36294d44b6e4ea13909060e1da4859dd78f7b45225ae89cfe5124bc9b6f2"
+      },
+      "versions": {
+        "numpy": "1.23.5",
+        "rdkit": "2024.3.5",
+        "rxnfp": "0.1.0",
+        "torch": "2.4.0.post301",
+        "transformers": "4.46.3"
+      }
+    },
+    "rxnfp_mlm": {
+      "batch": "20 matched triplets per batch, native 512-token truncation",
+      "device": "cpu",
+      "inputs_sha256": {
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/external/rxnfp/common.py": "361711e3ab56cbfc63a7250ba96d830bb4acb7a53168b21798b19a3b6628cc14",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/config.json": "024d89cb6056e146e066ebbcd9d565d6968d53e82953570a8b110b26495d7d4b",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/pytorch_model.bin": "50a6ed263d33ae759affa82c1e85554cc5ea9f56145f5c7fb39b6c25d4356437",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/tokenization.py": "682df5c07744384a09eb0c25d16941df66b1ec943d6f29051deba122e140e66a",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/transformer_fingerprints.py": "4389e2c4b7b8f9ea4099adfa30d182d40f8fc09d2ca0be9a1dfbf9acf4c68172"
+      },
+      "method": "rxnfp_mlm",
+      "outputs_sha256": {
+        "rxnfp_mlm_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "rxnfp_mlm_tpl_ub.npz": "c2a5de23247010300ab959568c9bf22dedf168a3613558f2c86d7b56b0e052fa"
+      },
+      "versions": {
+        "numpy": "1.23.5",
+        "rdkit": "2024.3.5",
+        "rxnfp": "0.1.0",
+        "torch": "2.4.0.post301",
+        "transformers": "4.46.3"
+      }
+    }
+  },
+  "request86_reference_commit": "3fdd44463fe4cdec76a92e62ecc6245474c650f6",
+  "request87_runner_sha256": "94dc0f92ec6c335d74ce3c041b2db4230029531ef1e335d820f8a5862b941765",
+  "request_revision": "6259067a522ee0627b705ae7c49fb48aa197a192",
+  "source_manifest": {
+    "canonical_search_rdkit": "2026.03.6",
+    "draw_seed": 0,
+    "endpoints": {
+      "tpl_ub": {
+        "anchor_sha256": "94a4844f5fd0711c1163853e7b0c90703679874f1e83fba067cbbfcaca2fc2e7",
+        "full_rows": 445115,
+        "n_source_rows": 445115,
+        "sample_rows": 2000,
+        "source": "tpl_u"
+      }
+    },
+    "forms_sha256": "517fdf6db85b986784012d362f84b51c22f6be4d1f2c4c4ecbc99cb2dbdaa4c3",
+    "inputs_sha256": {
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/tpl_u/COMPLETE.json": "14ac259535b8bbab69f162f4454314b6e8cdd210d8c0f6b714e79adba88b64d0",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/tpl_u/synrfp-wl-r2-b2048-parity-delta.npz": "42718c28c76c95d81121c0699254dd7c496b2f5e5040b69373b1f8010b2eef0b",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/tpl_u/synrfp-wl-r2-b2048-parity-delta_union.npz": "2b800de94fcb3d52c3d68cc69408452f9da41ae76e18cdb3141517f1f367b33c",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/tpl_ub.csv.gz": "c8612c60fb530b99b2a5b3b87075cdf73f64744157e75307332c725c0c2da427",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/tpl_u.csv.gz": "1376cc2dcdbe4e1cb94228dde6b3ba7bde76cf64e056bce34e1b5c99969f38e6",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/plan.json": "0361dd9ea471c4a097da5623677c8145c540cd4aae6c77fd0901b8c43abc2aff",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/07_robustness/robustness.py": "27d7077657d72527b86a23821666098b600a321c467fb715038e2f9348699549",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/tpl_u.json": "cc5223d42e7ecdf163e1c795f02832c4f182387e77318f883d87aa0415a91dd2",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/tpl_u.npz": "27c44634674cd1d93a44182aa98f817fd944f5d8cfbc718f69484bc49db6ff46",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/tpl_u/drfp.npz": "f9261664bfdedc40319a8c269a606f98ab732eea7bc2c1568749928459ca621d",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/tpl_u/rdkit_diff.npz": "f22443b70d0c40118d820c18eb2e6f180afba9bac5811bfddf085121bef2bfaf",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/tpl_u/rdkit_struct.npz": "a389c5a7cdb03f8e17e2110e63787dfb9a66fd0b9a44bbccf6773cfbde171282",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/tpl_u/rxnfp_mlm.npz": "ed04cdaa30903ae43f15963327e037396576d7fca8a0182f211a9917ec3127c4"
+    },
+    "n_selected": 2000,
+    "panel_sampling": "ordered study22 panel, np.random.default_rng(0) independently per endpoint",
+    "request_revision": "6259067a522ee0627b705ae7c49fb48aa197a192",
+    "rewrite": "native run_perturb procedure with dative-aware separators and seeded RDKit"
+  },
+  "status": "complete"
+}

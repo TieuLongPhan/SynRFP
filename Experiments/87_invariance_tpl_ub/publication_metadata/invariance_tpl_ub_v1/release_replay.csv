@@ -1,0 +1,8 @@
+endpoint,fingerprint,n_valid_compared,max_abs_error,comparison_tolerance
+tpl_ub,synrfp-wl-r2-b2048-parity-delta,2000,0.0,0.0
+tpl_ub,synrfp-wl-r2-b2048-parity-delta_union,2000,0.0,0.0
+tpl_ub,drfp,2000,0.0,0.0
+tpl_ub,rdkit_diff,2000,0.0,0.0
+tpl_ub,rdkit_struct,2000,0.0,0.0
+tpl_ub,crxnfp,2000,2.7418136596679688e-06,2e-05
+tpl_ub,rxnfp_mlm,2000,4.649162292480469e-06,2e-05

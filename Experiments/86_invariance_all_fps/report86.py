@@ -20,6 +20,8 @@ RULES={
 }
 TOLERANCE=1e-6
 REPLAY_TOLERANCE=2e-5
+artifact_names=dict(scores="perturbation_all_fps.csv",failures="encoding_failures.csv",
+                    warnings="encoding_warnings.csv",ledger="encoding_failure_rows.csv")
 
 
 def score(X,ok,bit):
@@ -213,7 +215,7 @@ def main():
                                 similarity="tanimoto" if fp in BINARY else "cosine",
                                 preprocessing=RULES[fp],**score(X,ok,fp in BINARY)))
     scores=pd.DataFrame(tab)
-    assert len(scores)==32 and len(controls)==28
+    assert len(scores)==len(ENDPOINTS)*(len(FPS)+1) and len(controls)==len(ENDPOINTS)*len(FPS)
     assert not scores.duplicated(["dataset","fingerprint"]).any()
     counts,ledger=details(annotate(events,rows),rows)
     for i,r in scores.iterrows():
@@ -223,17 +225,17 @@ def main():
             assert 2000-int(r["n_valid_"+form])==failures
     summaries=pd.DataFrame(counts,columns=["endpoint","fingerprint","form","cause","count","example","stage","kind",
                                            "example_row_id","exception","example_message"])
-    scores.to_csv(OUTPUT/"perturbation_all_fps.csv",index=False)
+    scores.to_csv(OUTPUT/artifact_names["scores"],index=False)
     pd.DataFrame(controls).to_csv(OUTPUT/"release_replay.csv",index=False)
-    summaries[summaries.kind.eq("failure")].to_csv(OUTPUT/"encoding_failures.csv",index=False)
-    summaries[summaries.kind.eq("warning")].to_csv(OUTPUT/"encoding_warnings.csv",index=False)
+    summaries[summaries.kind.eq("failure")].to_csv(OUTPUT/artifact_names["failures"],index=False)
+    summaries[summaries.kind.eq("warning")].to_csv(OUTPUT/artifact_names["warnings"],index=False)
     # Detailed errors keep row identity and diagnostics, while feature matrices never leave the workstation.
     pd.DataFrame([r for r in ledger if r["kind"]=="failure"],
                  columns=["endpoint","fingerprint","form","sample","row_id","stage","cause","kind","exception","message"]
-                 ).to_csv(OUTPUT/"encoding_failure_rows.csv",index=False)
+                 ).to_csv(OUTPUT/artifact_names["ledger"],index=False)
     markdown(scores,summaries)
-    write(OUTPUT/"COMPLETE.json",dict(status="complete",request_revision=OUT86,benchmark_rows=28,
-          additional_control_rows=4,n_reactions=8000,manifest_sha256=digest(ROOT/"manifest.json"),
+    write(OUTPUT/"COMPLETE.json",dict(status="complete",request_revision=OUT86,benchmark_rows=len(controls),
+          additional_control_rows=len(ENDPOINTS),n_reactions=manifest["n_selected"],manifest_sha256=digest(ROOT/"manifest.json"),
           module_receipts_sha256=receipts,source_manifest=manifest,
           producers={g:read(ROOT/f"{g}_COMPLETE.json") for g in GROUPS},
           code_sha256={p.name:digest(p) for p in HERE.glob("*.py")},
