@@ -1,0 +1,207 @@
+{
+  "additional_control_rows": 4,
+  "benchmark_rows": 28,
+  "code_sha256": {
+    "classical86.py": "695e55c4dd39f0ec512673bdd03b8f5b3e2c87bfd88e5729a2d7ddbe0732406f",
+    "common86.py": "024dda674ee1f97e679c85e248d4a857bc1a6e60efade6b13955f2f9b92e0dbc",
+    "neural86.py": "8e1d0500753d816d292eecdaa62dbd6ce7d692f970ec8c9c667db246632146a8",
+    "prepare86.py": "ddda3452c3e92548686b585e6c30bd6e6a2888d90ec250ea84f1fa9f501067e5",
+    "report86.py": "b729c599ca450f5423835d39e0d8fc56359ddace37ad1412cbbb6aa01c740f1b"
+  },
+  "files_sha256": {
+    "encoding_failure_rows.csv": "4b32dfbc4acd62cac83cc91480d4c5127480d71e3abcc943b19463c396abd156",
+    "encoding_failures.csv": "2778178b384edf07d5e6b21f88fb998af9b4ddb293ce02f784142696d3296567",
+    "encoding_warnings.csv": "06c76cbb38666e1f4d178da54dad3b117f589533289ab63ac779020862b3d159",
+    "invariance_note.md": "d2b7b79f961e7baec40bd48a74d61c9e08b3b011c5f0320eb4667af1fb8dc731",
+    "perturbation_all_fps.csv": "4db8bf53751dcad1a17c38684cc258ef6e57e2eac6d966fcc94fa20602e32768",
+    "release_replay.csv": "8068869aaa6864fadac4ed28ea953bf3e35e7de32353f7be009ce9371c639972"
+  },
+  "manifest_sha256": "e58f99bf2325394b774e84856bae49ec699100350c85b4fdbe6d990b844cd4d2",
+  "module_receipts_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/request86_invariance_v1/classical_COMPLETE.json": "9ba99dd9f36fd06212be91fc38502681e83c6c51608268301cf7e7be834f663f",
+    "/home/labhhc4/.local/share/synrfp-runs/request86_invariance_v1/crxnfp_COMPLETE.json": "fa61bfa2b64626b0449ed80224915a49cb516c28547b8acbfbb314ae52c13899",
+    "/home/labhhc4/.local/share/synrfp-runs/request86_invariance_v1/rxnfp_mlm_COMPLETE.json": "caf48bb4ba05264f00748b88f0999dfaf7579bdfa9dff9a27cd22e4317026beb"
+  },
+  "n_reactions": 8000,
+  "producers": {
+    "classical": {
+      "inputs_sha256": {
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/20_focused_factorial/encode_factorial.py": "b9d1e1fc82b1e702bcbb2cef7c513c2b6389ed0dd23b20c520bfbe78fdc7231a",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/48_yield_input_repair/reaction_parser.py": "c7b91a4c5893d9c28bbfcbd9fa56dcc14a0f7df584fb4fdb6bb3321a83cb84e8",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/51_encoder_coverage_repair/adapter.py": "a8ccde86fd7d5c96a9b883bbd84adaaebe96240f3cd1914af59cfe679bdf4684",
+        "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/drfp/fingerprint.py": "bdef66856b48205a881dc28946ac07d8a85be6a214d9f68c5520b2db57e9d9a9"
+      },
+      "outputs_sha256": {
+        "classical_ecreact_1.npz": "53fb2c906e6d1d971cc5cbd0b523937113f50c93f3401e767102b867d1f5e049",
+        "classical_issues.json": "b94a5e81d3caeae7d12144b0d1f048266a833aef442422883db9963a0c8e4985",
+        "classical_mech_2.npz": "bb2e4bebdeda7875e492f95a92e34fe00eb946d14dfd927a0d1bd9560b03785f",
+        "classical_schneider_ub.npz": "9bc75078db751063c65c332daa9774f69b1b2b0e925bd366a081163a4db2f08d",
+        "classical_tpl_b.npz": "1ad30519a911190959d21f563315e4b41e362767be82f8f4c1e120b1376a4123"
+      },
+      "versions": {
+        "drfp": "0.3.7",
+        "numpy": "2.4.6",
+        "rdkit": "2026.3.6",
+        "synkit": "1.6.2"
+      }
+    },
+    "crxnfp": {
+      "batch": "20 matched triplets per batch, native 512-token truncation",
+      "device": "cpu",
+      "inputs_sha256": {
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/1_Pooling/config.json": "38d3f4705824ec41c63a0b14e19870d59c7e16eac9c0aac3378be1ce548bc313",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/README.md": "16b706cfb31fe7f3ca3b18d825ecc71f23e304104139dad7e83fa17313a7cd5e",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config.json": "b6a20d680daeeb360abc2fbc92100f3a9e438e5c0dd19e19755e2a86e0f5e7fe",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config_sentence_transformers.json": "9afb9db5b9433bffa325f8272065c0b330efb570a873abb3e296d3a387f82301",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/model.safetensors": "7a78e798d0e82b190918442744948bd53d6d16608c7b01708ee1cc746a97cb2d",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/modules.json": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/tokenizer_config.json": "b557b8436d888995f74b889dff2c5f582f85e48599a58ee1b3f10602f5ae7308",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/smiles_util.py": "de1e6411de93922e30f47b316306e387a6db5b57563918f2a949760b000dd866",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/tokenization.py": "9db8fd76dce1613a1145c087ebe86248ad1612e4bfe79b5dd738442bbc04bb60",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/modern_encoder.py": "a2ef2aee2325a9e2b995a50fe9ad57e7218ac94bae17deb58d3b087dc45587ba",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/48_yield_input_repair/reaction_parser.py": "c7b91a4c5893d9c28bbfcbd9fa56dcc14a0f7df584fb4fdb6bb3321a83cb84e8"
+      },
+      "method": "crxnfp",
+      "outputs_sha256": {
+        "crxnfp_ecreact_1.npz": "d37c06f6fd6f12f1b9ed30d1cf2de099a9a7049b071ea2b4dce8c6aa59bb2488",
+        "crxnfp_issues.json": "2bb7de1c9915f9d2018f6869c6f60497b9f319854eba6a42e8f35c3213335f92",
+        "crxnfp_mech_2.npz": "9e8f4f0ad1d92a4241c1f13a464cf4937302dbd78ddb447cc49204db580a2fef",
+        "crxnfp_schneider_ub.npz": "23749aea0295c65911b450b8e05e8020ed1d6906835b083c77caca268a9cacff",
+        "crxnfp_tpl_b.npz": "2263fde0d837b2b52ca65c871804c7ed366194bf287a941eb68b5caee0c59063"
+      },
+      "versions": {
+        "numpy": "1.23.5",
+        "rdkit": "2024.3.5",
+        "rxnfp": "0.1.0",
+        "torch": "2.4.0.post301",
+        "transformers": "4.46.3"
+      }
+    },
+    "rxnfp_mlm": {
+      "batch": "20 matched triplets per batch, native 512-token truncation",
+      "device": "cpu",
+      "inputs_sha256": {
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/external/rxnfp/common.py": "361711e3ab56cbfc63a7250ba96d830bb4acb7a53168b21798b19a3b6628cc14",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/config.json": "024d89cb6056e146e066ebbcd9d565d6968d53e82953570a8b110b26495d7d4b",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/pytorch_model.bin": "50a6ed263d33ae759affa82c1e85554cc5ea9f56145f5c7fb39b6c25d4356437",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/tokenization.py": "682df5c07744384a09eb0c25d16941df66b1ec943d6f29051deba122e140e66a",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/transformer_fingerprints.py": "4389e2c4b7b8f9ea4099adfa30d182d40f8fc09d2ca0be9a1dfbf9acf4c68172"
+      },
+      "method": "rxnfp_mlm",
+      "outputs_sha256": {
+        "rxnfp_mlm_ecreact_1.npz": "87671607dbd3b1c76d202b9141ee88cd28571bbe7ee25f5b765410bd7a73a5fc",
+        "rxnfp_mlm_issues.json": "1fddd2f163d81d193a6d1ffb9dd88f92add01b2474a0d8cd8f0b9a46752ef276",
+        "rxnfp_mlm_mech_2.npz": "a6762332cc45650375779791dac831e07bd8b31234f78a0c01d30713ab626e52",
+        "rxnfp_mlm_schneider_ub.npz": "8fc1c61101ffd30c79cbb9a184d2c3a166dbe439821443174f6a9259cabb1fce",
+        "rxnfp_mlm_tpl_b.npz": "698396204649402c8392add0379b0daddbfbaac657520d5da45761f93cba7f54"
+      },
+      "versions": {
+        "numpy": "1.23.5",
+        "rdkit": "2024.3.5",
+        "rxnfp": "0.1.0",
+        "torch": "2.4.0.post301",
+        "transformers": "4.46.3"
+      }
+    }
+  },
+  "request_revision": "6e7acef5d5f16d9b25ed6009a7538bd1fe638482",
+  "source_manifest": {
+    "canonical_search_rdkit": "2026.03.6",
+    "draw_seed": 0,
+    "endpoints": {
+      "ecreact_1": {
+        "anchor_sha256": "f95378976b2cef540ea563a978249dda6b2d690b7d77d2f506acbfdb3dd8b6c5",
+        "full_rows": 185734,
+        "n_source_rows": 185734,
+        "sample_rows": 2000,
+        "source": "ecreact"
+      },
+      "mech_2": {
+        "anchor_sha256": "731b98497c65f94dfc681c538320a47c6b59ddf657e5ce50ba5fc705072112b0",
+        "full_rows": 31667,
+        "n_source_rows": 31673,
+        "sample_rows": 2000,
+        "source": "mech"
+      },
+      "schneider_ub": {
+        "anchor_sha256": "e27de9bd3046771256d7503f2216faa3d94ce18d3d5bb3c560d1477a7ca5991d",
+        "full_rows": 50000,
+        "n_source_rows": 50000,
+        "sample_rows": 2000,
+        "source": "schneider_u"
+      },
+      "tpl_b": {
+        "anchor_sha256": "79b649db5cce70562845ce9e92acbab40d827c25092c0a0a5cfad8b3d16f5237",
+        "full_rows": 445115,
+        "n_source_rows": 445115,
+        "sample_rows": 2000,
+        "source": "tpl_b"
+      }
+    },
+    "forms_sha256": "5cd766800d91fd77489ef25edbc6d2a91b3aaad55caaccc1ee5baea187b0c3e9",
+    "inputs_sha256": {
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/COMPLETE.json": "243ea2903209c4c8e4970173629a8a0146125de06be5e769abe1dd3dd5015863",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/synrfp-wl-r2-b2048-parity-delta.npz": "d2a0df632f19863cb3e7638e8ebe041eda7652eb50e606285d044cb7f984e755",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/synrfp-wl-r2-b2048-parity-delta_union.npz": "766fd2b2961bdabfab924856762d082f6b2b911bf6ce80f7f71b1d26db4f5874",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/COMPLETE.json": "2ffe79dd8fe56ff2c4288282bf51763aad40258af6d1a1852f64db6a0dc5d0a3",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/synrfp-wl-r2-b2048-parity-delta.npz": "d29526baf9e9e44708e0d7147d015ee1b14dc5183a008193e9eb34a18434276e",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/synrfp-wl-r2-b2048-parity-delta_union.npz": "a1cc543cbaf3e294cd9c59cdd001d0cc6db2be661862bdf47fa88576c0ecf4c8",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/schneider_u/COMPLETE.json": "1efeb2db0ba5b7d080dc441a2a2dbc20b738fc714377d5bba5d48919c5dc18a5",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/schneider_u/synrfp-wl-r2-b2048-parity-delta.npz": "1210de04b9d2c1b18ad14bf31cbcb036d4b2fab974ae099ef00e381bc99d6bd6",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/schneider_u/synrfp-wl-r2-b2048-parity-delta_union.npz": "46c320641a4ae5f9ef65cea873be136eaf69bbcdb679418859817e8375809f80",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/ecreact_1.csv.gz": "9795b55a3bcf9438cf132e4863c5d7c6dfc8ee4f52aba0fa78d085bbb504c690",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/mech_2.csv.gz": "3ba62d8932b371e7e7dc43101cb8854dab780915151d9faf397622021ed59633",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/schneider_ub.csv.gz": "705c7dd23588074f11ad64e37cb76c87048ea91a023d5724bbf7a97a58dcd447",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/tpl_b.csv.gz": "f362cd40e3929d3a6eac075153e28d6346cb051624a65ad8996725cf7517ebae",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/ecreact.csv.gz": "ff6b45dd11ad2e3c9e0061bbdb19def4521b6ee5d84688f32a03250f29670241",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/mech.csv.gz": "2014745c8a555dc23b9f82901895d32a976c35be8d4e595d148f46c81f2000ec",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/schneider_u.csv.gz": "69d81c5acb669244eec4c31214e947782775564e286cd6f5f9e10856e5c10c29",
+      "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/tpl_b.csv.gz": "b56ec94b4a68938cf5b789bddc192f68846de8a9f7673da979b1793436365300",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/crxnfp.json": "e591c5b90e7a5e4142c3179f9ed252005e9a168ba6dcef276764ef4f37a92aed",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/crxnfp.npz": "8d154904f2328fdb907985f0d5733180faa2d5bfbe45461096a04084dd87cbcb",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/drfp.json": "7abeb08f8d780bfd36cabbc7857dacabc2f0eaaa1608009e11c95caaccb35f54",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/drfp.npz": "73a70599d4ad0fcee47f7ad967dc2a87787fc36bc43b5ce42d3aa2e73308dc28",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/rdkit_diff.json": "0397ced866396d5e0fd94b0fa879fa442e21577e4d78c8b35604e4d5a8d341e4",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/rdkit_diff.npz": "eeff619434033fcf264d14dd3ca1cda0017d4b5b13d2f1fc5adac20a4f32c2af",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/rdkit_struct.json": "b15a7fae7699b56f2939d267b3ccf274fdd17f8e27d95e779bba59422c4392d9",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/rdkit_struct.npz": "fb3938579d81f67c3dc4894e044c54cd7e6785feff9a12f482ff7f9247dfbe34",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/rxnfp_mlm.json": "aad5ba2a74b8e1118821c942f64cf56cb659a9a30fac442fd8b13a27842f45e4",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/rxnfp_mlm.npz": "e7359d728a92d9c7eb402b290ea80b6045a0b37d82b6d79cd9e6aa1c973653c2",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/synrfp-wl-r2-b2048-parity-delta.json": "c7bbf940056e3b0804d0c9bea72f4452323bcdfbd93e647fe911765ae4351e6e",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/synrfp-wl-r2-b2048-parity-delta.npz": "90a701e26e9b29f5b2251c138e5867412b1b7a17ff1379e81d6ba1c0cf0dbec6",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/synrfp-wl-r2-b2048-parity-delta_union.json": "dfc584eb42d737aab62c7bafdb41546ab5ebe46d3f6356732935a06777de79bc",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/features/tpl_b/synrfp-wl-r2-b2048-parity-delta_union.npz": "95d3f7743eb131eabf76f6a65f1cdfdc37b116389afd718e065b6efa04b04d27",
+      "/home/labhhc4/.local/share/synrfp-runs/coverage_refits_v1/plan.json": "0361dd9ea471c4a097da5623677c8145c540cd4aae6c77fd0901b8c43abc2aff",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/07_robustness/robustness.py": "27d7077657d72527b86a23821666098b600a321c467fb715038e2f9348699549",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/ecreact.json": "64acaa16f315d18415bea2234cec32b5b2cbff4a3f3cb7c91051286a2054d217",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/ecreact.npz": "e79ff7be62e18cf16f912bca36aabb237589c55dd15f58fc988484a8da9f74c9",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/mech.json": "de9a5a68c2a8e4d9d5bbec04571eefc4f14c01ba5cc3eaddb632b8bafc10abc8",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/mech.npz": "ecf8ebd07b9a827c0c138abaf86089eb6481b51de9b6cb8f5c890a37d3a07854",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/schneider_u.json": "f063eca374eb67e887a3f6935760f6c8b5b73430a83a6de7409ac1c56eec4885",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/schneider_u.npz": "e365957afd3e0e6e1c9ba4bedb21fe0812bc17e52a09bcc9046e29ab4cdbdea9",
+      "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/ecreact/drfp.npz": "05e6ae96aaf73b58d3097ea7457cb2220f23d3d63cdf7f8c5a570d743ace1948",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/ecreact/rdkit_diff.npz": "c24dba23d5aca9094bd082ecdab8a1a8830cd5c4ec8b505256e2c113d8e528c6",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/ecreact/rdkit_struct.npz": "1a5e3e1399329e51acf2052241b5d68cb5f7cbc4c21167e3bf3aaac552489292",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/ecreact/rxnfp_mlm.npz": "8f50cf52d689fd6861b97200ea88b27599b77bce34ad535b263ef8c62d23dc64",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/mech/drfp.npz": "65180393b2c4e75297bdcc501b9bd1ca3daba98fe5e17a2a71160f562d58eac6",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/mech/rdkit_diff.npz": "6be1a0f7270552507be9b2df55ab1e70ec3e520928e89aa51c122bcad989e2bb",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/mech/rdkit_struct.npz": "3e549c9930be2a79a548d789838168b0530ab62e7a36122cfc36b8b0ed2d6545",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/mech/rxnfp_mlm.npz": "dcfcb8ee13cb8ed1c8d6bcf304f46f44053df116d1fee988c2712efca2602b8c",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/schneider_u/drfp.npz": "a4be4228fd6310e85eba71b67e02545ec2c8e76a0013b63277abec57fe92dc8f",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/schneider_u/rdkit_diff.npz": "482b812bebf30a5f35ce928d33ba593ecf8ac3a22db7d6f44e35f14b67a382a5",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/schneider_u/rdkit_struct.npz": "cb6ceb03807927718163b463580528d7287d9f332c38448ff33c33df32c0b340",
+      "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/schneider_u/rxnfp_mlm.npz": "30769b4bbe0be70d0273e5a3fbb81b2dd35458a6c7647382978455bafd1f8762"
+    },
+    "n_selected": 8000,
+    "panel_sampling": "ordered study22 panel, np.random.default_rng(0) independently per endpoint",
+    "request_revision": "6e7acef5d5f16d9b25ed6009a7538bd1fe638482",
+    "rewrite": "native run_perturb procedure with dative-aware separators and seeded RDKit"
+  },
+  "status": "complete"
+}
