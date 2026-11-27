@@ -1,0 +1,3 @@
+seed,n_test_rows,distinct_top1_tuples,modal_top1_rows,modal_predicted_catalyst,modal_predicted_first_solvent,modal_predicted_second_solvent,modal_predicted_first_reagent,modal_predicted_second_reagent,test_rows_with_unseen_canonical_slot,distinct_unseen_canonical_slots,canonical_slot_vocabulary,test_rows_with_exact_reference_among_saved_five,training_epochs,best_epoch,best_validation_loss,last_validation_loss,distinct_reference_slot_tuples,reference_components_mean
+42,65946,1,65946,,ClCCl,,,,0,0,309,5341,16,1,1.326867179950893,2.012314925310319,10028,2.6945682831407516
+43,65946,1,65946,,ClCCl,,,,0,0,309,5631,17,2,1.2987398935953103,2.1291523695934287,10028,2.6945682831407516

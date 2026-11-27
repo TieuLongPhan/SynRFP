@@ -1,0 +1,75 @@
+{
+  "status": "complete",
+  "request_revision": "e4e6055b897021de9a4ae41a530e513c0cba8e78",
+  "output_sha256": {
+    "neural_reagent_condition_note.md": "846f35c0c2245925bb9f29658dad9831267c1271210b92029ac8d1128703cfe8",
+    "parrot_condition_audit.csv": "49c53e2f02c97eb5988d96649a2eb4f53d181c048e327cf9f936e821a91a7ff1",
+    "parrot_diagnostics.csv": "8bf0bce9ef922a284f8a132ccfb2e23749d21f3867807531301bc69ddb90a709",
+    "t5chem_reagent_seeds.csv": "966fd8d35c8cbfb16ed0eab9b1f22cb2aa59675d123656701027803dd9de48f4",
+    "test_row_overlap.csv": "728a9fdbcfd6c7f13dd8c6d33372421672abc572e00f54b0ea3a5a930ae349f4"
+  },
+  "input_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/input_audit.json": "3432599f5e597c8bf9ade8d19d65ce68d4e48732e3f93ca806ccc4205b1b067f",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/inputs/reactions.csv.gz": "ab84c6f3c4a5d69f4b8d401872d4fe82d6287562a4eabaecd42a5c341fddd717",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/inputs/targets.json": "ead9efbf79ad0eaeeba0f5ae6818df3d160585a72b8d9ab56433382f8646d8f6",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/plan.json": "946cbadde66b3b06e428e82a030c4d1a3226004ff89388eba2c8a6a67e05286d",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/raw/USPTO_condition.csv": "869f23847ef8b69bea956d7ca479168355742b7174714522c5c817f71ee5c8f6",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/raw/official/USPTO_condition_final.zip": "34033a3522784111d5eed4e566a06895f0564dd59325724cce6a2f3e241b006c",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/source_provenance.json": "6943bbe49be9fc873132e64da9287388eb8ed84b842402ff3682713ee3bd17bc",
+    "/home/labhhc4/.local/share/synrfp-runs/condition_prediction_v1/splits/native.npz": "47e74c6deefcbf1795dbd10a315ad38cd06256ba24c64b1ae681a7187e01e9e1",
+    "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/inputs/reactions.csv.gz": "43ad2ec12dd413792d306ae7940cfff9274f0504dfa29875baa4bb4ed7ffacde",
+    "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/inputs/targets.json": "37071da5b1f948e9e6fe7a69a797ad89872c6093e99951983ecd751b0f55c8a7",
+    "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/plan.json": "ea2af301069dbe9929132d8a3a924f826abf73f86830c02d53b54314a77b18d5",
+    "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/splits/native_seed42.npz": "741144c19162d61d033ff9b6f88f75c0bb750d003d66f5a41c0479b6d6ce9f26",
+    "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/splits/native_seed43.npz": "741144c19162d61d033ff9b6f88f75c0bb750d003d66f5a41c0479b6d6ce9f26",
+    "/home/labhhc4/.local/share/synrfp-runs/reagent_prediction_v1/splits/native_seed44.npz": "741144c19162d61d033ff9b6f88f75c0bb750d003d66f5a41c0479b6d6ce9f26",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed42/COMPLETE.json": "00229a2e249ed816d02cfd0db422d7cbd8950a40bdd293f9efa7ada8fd33e5c4",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed42/history.json": "f26514cce079f58fdc48e44a0f80ecd901e990d3a5b052c0bb344a94a3b1b32e",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed42/predictions.json.gz": "a9566bce5334f0e55000845251b9c3ffee0d48af957f8ed7fbe9050e5b502721",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed42/vocabulary.json": "58b1decbd0fbb44c4e263967c3d84f194cd0a27e8fb2e8e3d2366e6ee1650ae0",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed43/COMPLETE.json": "c9fe3a30e0f25620574b82b40db7e112416b731a4e5ddda9c3129545e3e83921",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed43/history.json": "0e1c7aa3ed485e92d962151096c0b409f3ca01d15f0044e1d7c43501e0756caa",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed43/predictions.json.gz": "34e0962698c4589f43525a5c22aaf9440a7fac8e2b9ff54522b931defbac3e1f",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/models/native_seed43/vocabulary.json": "58b1decbd0fbb44c4e263967c3d84f194cd0a27e8fb2e8e3d2366e6ee1650ae0",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/plan.json": "dcbd63d88d71206aef996c7ab733cad32918410e2e662ae868057ccf45d1b61f",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/parrot/slots.json": "5454e22c0ff74de5517f5124f1fefa62c74e1d9109cad0d0eadcd1fc321808f3",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed42/COMPLETE.json": "d896b6ca9ea8e311adc6a49a7e3ca11d90a1bf264c814869532c7b38281e7a00",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed42/predictions.json.gz": "2403ed2ee8882d99ab553dc313b7a4d9bceb06b08d4efae0d5fe5cbb2860c293",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed43/COMPLETE.json": "bdcaf04c559cea701278b983f7bba255d549160b25c8f2018b77a927326524d9",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed43/predictions.json.gz": "5060fbe311a78be177a28df718c16413e9585e033ecb2bcd2532203422907590",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed44/COMPLETE.json": "92fa2e07509753bdce161c6051ba873da14f38cb3b18d6d5a6027b2ec6413e3f",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/models/native_seed44/predictions.json.gz": "caf2f28744ba8072ad203367a262779b8954275ac0235c3d21b02ba6c4351582",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/t5chem/plan.json": "3b6101c11222e6330a4d734bb59009dbb4ff4ab0662b6871413b76b904dd34a6",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/vendor/Parrot/configs/config_uspto_condition.yaml": "8ba564847c476ff692b1ae2101fbcf073e51b066079f97bb1650772da383e050",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/vendor/Parrot/models/parrot_model.py": "3b2b8712c9873c5fa2fd6788e0ef570a37a0bb8e8217304420801372cae8da7c",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/vendor/Parrot/models/utils.py": "efd38a4e12df5b110db25bb034e047a0abad587dcfe32b84fc7ebb278fe87162",
+    "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/vendor/Parrot/test_parrot_model.py": "d4a7bfbea2619b1be2c97d44db120d50719a42f04edb08ca8a09351a6ac925e9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/23_reagent_prediction/study.py": "7766c2d7e7ab856376d9f4fb04f408cf02e6820bd30ffb4261fc488c9eae682f",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/parrot/normalize.py": "0401876dd1bba2e82a4692f599ea8e72bb2edb97a2c66af7aa160ded3ba47684",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/t5chem/run.py": "3b086e706e10849abcee7b956b6a82e5b7449ac9e52ac6589678ad4d48cb8b78"
+  },
+  "audit_code_sha256": "25fd73124f37ee9e446a1a4e6185093ec955af6f6c53371925029f2073331896",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "rdkit": "2026.3.6"
+  },
+  "python": "3.11.16 (main, Sep  2 2026, 23:39:52) [GCC 15.3.0]",
+  "author_scorer_environment": {
+    "torch": "2.4.0.post301",
+    "pandas": "2.0.3",
+    "python": "3.8.20 | packaged by conda-forge | (default, Sep 30 2024, 17:52:49) \n[GCC 13.3.0]"
+  },
+  "native_seed_counts": {
+    "t5chem": 3,
+    "parrot": 2
+  },
+  "seed44_gate": {
+    "threshold": 0.15,
+    "passed": false,
+    "training_launched": false
+  },
+  "parrot_publisher_model": "Parrot-LM-E 26.91% ordered top-1, Table 1",
+  "literature": "https://doi.org/10.34133/research.0231",
+  "no_new_fits": true
+}
