@@ -1,0 +1,9 @@
+endpoint,seed,expert_label,outcome,n_rows,n_label_rows
+frea_expert,1,0,both_right,150,410
+frea_expert,1,0,only_synrfp_right,170,410
+frea_expert,1,0,only_syncat_right,20,410
+frea_expert,1,0,both_wrong,70,410
+frea_expert,1,1,both_right,207,341
+frea_expert,1,1,only_synrfp_right,24,341
+frea_expert,1,1,only_syncat_right,81,341
+frea_expert,1,1,both_wrong,29,341

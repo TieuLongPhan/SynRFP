@@ -1,0 +1,11 @@
+# Feasibility and activation-barrier examples
+
+**Feasibility.** Both seed-1 models scored the same fixed 751 expert rows, including 341 feasible reactions. Thresholds come from the archived calibration decisions and were independently recomputed from the saved calibration scores. The two disagreement pools contain only expert-infeasible rows for the figures. Within each pool, rows with a recorded failure reason rank first, followed by heavy-atom count, stable ID, and source position. The counts table covers both expert classes.
+
+**Barrier comparison.** Every GDB7 and RGD1 row appears once in the paired grouped-fold predictions. Candidate ranking uses the difference in absolute errors, with fewer heavy atoms, row ID, and source position as tie-breaks. Each endpoint contributes its three largest scaffold-eligible SynRFP losses and one largest D-MPNN loss. Counts refer to the actual fitting rows, excluding validation. The released delta sketch narrows the search and every matched-sketch candidate is checked with exact signed WL radius-2 counts. GDB7 targets are in kcal/mol. RGD1 uses the retained release target values for both models.
+
+**GDB7.** The three selected SynRFP losses have 6–7 reactant heavy atoms and contain C, N, O. The ring-size lists differ from reactants to products in 1/3, and the absolute-error gaps range from 66.57 to 83.92 in the stored benchmark units. The counts of actual training rows sharing their exact signed WL radius-2 counts are 0, 0, 0.
+
+**RGD1.** The three selected SynRFP losses have 3–8 reactant heavy atoms and contain C, N, O. The ring-size lists differ from reactants to products in 2/3, and the absolute-error gaps range from 100.17 to 103.72 in the stored benchmark units. The counts of actual training rows sharing their exact signed WL radius-2 counts are 9768, 0, 0. The largest loss, `rgd1_239801`, has identical unmapped sides and an empty signed delta. The saved mapped representation places hydrogen atom labels 4 and 6 on opposite nitrogen atoms across the two sides.
+
+Scaffold identity follows Request 88 across this export, including the canonical largest-component fallback for acyclic reactions. Eligible outcome and barrier pools are recorded in the counts table and manifest. These are selected examples from saved predictions. Chemical descriptions are limited to the observed structures.
