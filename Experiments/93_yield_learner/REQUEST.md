@@ -34,6 +34,27 @@ fit-train rows used for the released MLP results. Same input fields and preproce
 2. Optional: XGBoost regressor with default settings plus early stopping on an inner validation split
    of the fit-train rows. Skip and say so if it is not installed or too slow on USPTO.
 
+## C. Ranking conditions with a success classifier (Neves et al. route)
+
+Request 92 ranked the conditions of held-out substrate pairs by predicted yield and found no gain over
+the training mean. Neves et al. instead trained classifiers of reaction success. Test that route on the
+same data.
+
+- Panel: the 40 released cluster holdouts of the expanded BH set (`ncs_bh`), same fit-train rows.
+- Label: the released binary success label (`labels`, yield above 10%), exactly as released.
+- Representations: SynRFP default, SynRFP yield configuration, DRFP, RDKit structural.
+- Learners: the MLP of the yield protocol with a sigmoid output and binary cross-entropy, and the random
+  forest classifier of part A (500 trees, class_weight balanced). No tuning on test rows.
+- Scoring: the 609 held-out pair instances of request 92 (at least eight test recipes, pair absent from
+  train and validation). Rank each pair's recipes by predicted success probability and report, per
+  method and learner, top-1 and top-4 success rates, mean Spearman between predicted probability and
+  observed yield, and ROC AUC and balanced accuracy over all held-out rows. Use the same tie rule,
+  replicate averaging and training-mean and global-mean baselines as request 92, and add the training
+  success rate per recipe as a classifier baseline.
+
+Output on the same branch: `classifier_ranking.csv`, `classifier_metrics.csv`, and a section in
+`note.md`.
+
 ## Output
 
 On a new branch `exp/93-yield-learner`:
