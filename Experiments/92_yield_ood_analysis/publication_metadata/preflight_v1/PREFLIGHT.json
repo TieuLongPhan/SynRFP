@@ -1,0 +1,19 @@
+{
+  "author_sha256": "247473787c33fb22ee48a4177593188f2a2c6ef140756566fe4610fee89ba333",
+  "max_absolute_r2_difference": 9.020562075079397e-17,
+  "outputs_sha256": {
+    "condition_coverage.csv": "86ce8557139713db2fb8fefbd1ae607fa29c94ba3718aa023bae5d5d8b940fef",
+    "predictions_summary.csv": "eb8556a5db22e1b49dfb73feac56c3f17e1d0dcffeaa188622018c3643cc9300"
+  },
+  "pairs_absent_from_train_and_validation": 609,
+  "pairs_with_eight_test_recipes": 6213,
+  "phase": "prediction_and_condition_coverage_preflight",
+  "plan_sha256": "769c4c6347263dd588960e3e9b8ddbbab0fc9d9674cfe459e373f48fa2ad07d7",
+  "release_table_sha256": "7c350d493908608c6bc6d7f42bb7f4182d58ffadee4965d5bda61b98eaf6334b",
+  "request_commit": "d531791d985f574d6703d5740af6d563a665e8f8",
+  "verified_prediction_sets": 180,
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5"
+  }
+}
