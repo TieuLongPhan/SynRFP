@@ -1,0 +1,7 @@
+endpoint,pair_id,side,r_id,rxn,label,n_heavy_atoms,scaffold,source_position,mapped_rxn,mapping_origin,outcome,true_reagents,t5chem_predicted_reagents,synrfp_predicted_reagents
+uspto500_reagent,D_only_t5chem_01,1,uspto_500_17271,O=Cc1ccc(Br)nc1>>OCc1ccc(Br)nc1,"[""CO"",""[BH4-]"",""[Na+]""]",18,c1ccncc1,17270,,,only_t5chem,"[""CO"",""[BH4-]"",""[Na+]""]","[""CO"",""[BH4-]"",""[Na+]""]","[""C1CCOC1"",""CO"",""[BH4-]"",""[Na+]""]"
+uspto500_reagent,D_only_t5chem_02,1,uspto_500_14760,COc1ccccn1.OO>>COc1cccc[n+]1[O-],"[""CC(=O)O""]",19,c1cc[nH+]cc1,14759,,,only_t5chem,"[""CC(=O)O""]","[""CC(=O)O""]",[]
+uspto500_reagent,D_only_t5chem_03,1,uspto_500_15821,CC(C)=O.OCC(O)CCl>>CC1(C)OCC(CCl)O1,"[""Cc1ccc(S(=O)(=O)O)cc1""]",19,C1COCO1,15820,,,only_t5chem,"[""Cc1ccc(S(=O)(=O)O)cc1""]","[""Cc1ccc(S(=O)(=O)O)cc1""]",[]
+uspto500_reagent,D_only_t5chem_04,1,uspto_500_24085,COC(=O)c1cc(O)ns1>>O=C(O)c1cc(O)ns1,"[""CO"",""[Na+]"",""[OH-]""]",19,c1cnsc1,24084,,,only_t5chem,"[""CO"",""[Na+]"",""[OH-]""]","[""CO"",""[Na+]"",""[OH-]""]","[""C1CCOC1"",""CO"",""O"",""[Na+]"",""[OH-]""]"
+uspto500_reagent,D_only_synrfp_01,1,uspto_500_22224,CC(C)(C)CC(=O)Cl.NCCCO>>CC(C)(C)CC(=O)NCCCO,"[""ClCCl""]",25,acyclic:CC(C)(C)CC(=O)NCCCO,22223,,,only_synrfp,"[""ClCCl""]","[""CCN(CC)CC"",""ClCCl""]","[""ClCCl""]"
+uspto500_reagent,D_only_synrfp_02,1,uspto_500_18117,Cn1ccc(S(=O)(=O)NC(C)(C)C)c1Br>>Cn1ccc(S(N)(=O)=O)c1Br,"[""ClCCl"",""O=C(O)C(F)(F)F""]",26,c1cc[nH]c1,18116,,,only_synrfp,"[""ClCCl"",""O=C(O)C(F)(F)F""]","[""O=C(O)C(F)(F)F""]","[""ClCCl"",""O=C(O)C(F)(F)F""]"

@@ -1,0 +1,5 @@
+endpoint,seed,outcome,n_rows,n_test_rows
+uspto500_reagent,42,both_exact,180,14215
+uspto500_reagent,42,only_t5chem,2195,14215
+uspto500_reagent,42,only_synrfp,300,14215
+uspto500_reagent,42,neither_exact,11540,14215

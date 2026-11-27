@@ -1,0 +1,11 @@
+# Reaction witnesses for the supplementary analyses
+
+**A. Count magnitudes.** 4 of 18,294 eligible row pairs for ecreact_1 and 4 of 30,536 eligible row pairs for tpl_b. Both members of each pair have the same signed token support and different observed labels. The differing count triples and rooted WL environments are included. The sign-only replay added 13 forced errors on ECReact L1 and 154 on TPL B.
+
+**B. Compression.** The two exact D classes in the prior six-endpoint summary are the two sides of one USPTO50K UB collision. The genuine ECReact L1 fold merge is a second case. The cases are uspto50k_ub at 1024, 2048 bits (support); ecreact_1 at 1024, 2048 bits (folding). The audit contains both IDs, counts, labels and differing-bit token lists for both cases. The drawing CSV covers 2 cases. A partner sharing a scaffold is recorded in the inventory with its ID.
+
+**C. Reversal.** 7 of the 8,000 Request 86 reactions had identical valid vectors in the two directions. The drawing CSV contains 6 unique scaffolds. The inventory records the qualifying rows omitted by scaffold deduplication. The cause field uses canonical molecular components with and without stereo while preserving multiplicities.
+
+**D. Reagent prediction.** Seeds and 14,215 native test rows match both released arms. T5Chem uses its first saved candidate and SynRFP uses the saved validation threshold. The four-cell table counts exact agreement with the full reference set. The drawing CSV shows four T5Chem-only and two SynRFP-only successes.
+
+Reversal and fold cases take priority for the shared scaffold inventory, followed by magnitude pairs and reagent examples. Single rows rank by total heavy atoms, row ID, and source position. Magnitude pairs rank by combined heavy atoms, ordered member ranks, and endpoint. For fold cases, the rule first maximizes the number of new drawable scaffolds and then uses the same size and identity tie-breaks. The scaffold is the Bemis–Murcko scaffold of the largest molecular component across the reaction, with the Request 75 canonical largest-component identity convention for acyclic molecules. Mapped SMILES come from local archived maps that preserve the configured input and product component identities.

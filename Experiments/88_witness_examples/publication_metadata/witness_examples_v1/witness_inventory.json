@@ -1,0 +1,211 @@
+{
+  "count_magnitude": {
+    "ecreact_1": {
+      "added_forced_errors": 13,
+      "eligible_original_row_pairs": 18294,
+      "encoded_rows": 185720,
+      "exported_pairs": 4,
+      "mixed_label_multi_count_classes": 17,
+      "sign_classes": 20607
+    },
+    "tpl_b": {
+      "added_forced_errors": 154,
+      "eligible_original_row_pairs": 30536,
+      "encoded_rows": 445043,
+      "exported_pairs": 4,
+      "mixed_label_multi_count_classes": 94,
+      "sign_classes": 221627
+    }
+  },
+  "fold_collisions": [
+    {
+      "bit_witnesses": {
+        "1024": [],
+        "2048": []
+      },
+      "bucket_rows": 2,
+      "differing_signed_counts": [
+        [
+          "85731f45c3f123d1",
+          -7,
+          -19
+        ],
+        [
+          "869f994dc3109ee0",
+          -5,
+          -17
+        ],
+        [
+          "c414b8f30a96dfa9",
+          -3,
+          -15
+        ]
+      ],
+      "eligible_row_pairs": 1,
+      "endpoint": "uspto50k_ub",
+      "exact_D_classes": 2,
+      "left_label": "1",
+      "left_r_id": "USPTO_6096",
+      "pair_id": "B_uspto50k_ub_01",
+      "right_label": "1",
+      "right_r_id": "USPTO_294",
+      "stage": "support",
+      "widths": [
+        1024,
+        2048
+      ]
+    },
+    {
+      "bit_witnesses": {
+        "1024": [
+          {
+            "bit_index": 151,
+            "left_signed_keys": [
+              [
+                "a80a48abe2a30e21",
+                "-"
+              ],
+              [
+                "e6139e067ed33aaa",
+                "+"
+              ]
+            ],
+            "right_signed_keys": [],
+            "shared_bit_value": 0
+          }
+        ],
+        "2048": [
+          {
+            "bit_index": 1175,
+            "left_signed_keys": [
+              [
+                "a80a48abe2a30e21",
+                "-"
+              ],
+              [
+                "e6139e067ed33aaa",
+                "+"
+              ]
+            ],
+            "right_signed_keys": [],
+            "shared_bit_value": 0
+          }
+        ]
+      },
+      "bucket_rows": 8,
+      "differing_signed_counts": [
+        [
+          "a80a48abe2a30e21",
+          -1,
+          0
+        ],
+        [
+          "c58dedaeb75366c8",
+          -1,
+          -2
+        ],
+        [
+          "e6139e067ed33aaa",
+          1,
+          0
+        ],
+        [
+          "eb4b8261fd4339d3",
+          1,
+          2
+        ]
+      ],
+      "eligible_row_pairs": 12,
+      "endpoint": "ecreact_1",
+      "exact_D_classes": 2,
+      "left_label": "2",
+      "left_r_id": "ecreact_33501",
+      "pair_id": "B_ecreact_1_01",
+      "right_label": "2",
+      "right_r_id": "ecreact_28815",
+      "stage": "folding",
+      "widths": [
+        1024,
+        2048
+      ]
+    }
+  ],
+  "reagent_outcomes": [
+    {
+      "endpoint": "uspto500_reagent",
+      "n_rows": 180,
+      "n_test_rows": 14215,
+      "outcome": "both_exact",
+      "seed": 42
+    },
+    {
+      "endpoint": "uspto500_reagent",
+      "n_rows": 2195,
+      "n_test_rows": 14215,
+      "outcome": "only_t5chem",
+      "seed": 42
+    },
+    {
+      "endpoint": "uspto500_reagent",
+      "n_rows": 300,
+      "n_test_rows": 14215,
+      "outcome": "only_synrfp",
+      "seed": 42
+    },
+    {
+      "endpoint": "uspto500_reagent",
+      "n_rows": 11540,
+      "n_test_rows": 14215,
+      "outcome": "neither_exact",
+      "seed": 42
+    }
+  ],
+  "reverse_equal": {
+    "causes": {
+      "Identical canonical reactant and product component multisets": 3,
+      "Stereo-only difference under canonical component comparison": 4
+    },
+    "displayed_reactions": 6,
+    "eligible_reactions": 7
+  },
+  "source_mapping_rows": {
+    "ecreact": 13,
+    "tpl_b": 10,
+    "uspto500_reagent": 0,
+    "uspto_50k_u": 2
+  },
+  "withheld_by_scaffold_rule": [
+    {
+      "cause": "Identical canonical reactant and product component multisets",
+      "endpoint": "tpl_b",
+      "label": "151",
+      "n_heavy_atoms": 78,
+      "n_signed_tokens": 0,
+      "pair_id": "C_06",
+      "part": "C",
+      "r_id": "tpl_100305",
+      "reason": "scaffold already used by the smaller qualifying row",
+      "sample": 1321,
+      "scaffold": "c1ccccc1",
+      "side": 1,
+      "signed_delta": "{}",
+      "source_position": 100304
+    },
+    {
+      "bit_widths": "[1024,2048]",
+      "collision_stage": "folding",
+      "differing_signed_counts_left_right": "[[\"a80a48abe2a30e21\",-1,0],[\"c58dedaeb75366c8\",-1,-2],[\"e6139e067ed33aaa\",1,0],[\"eb4b8261fd4339d3\",1,2]]",
+      "endpoint": "ecreact_1",
+      "folded_bit_keys": "{\"1024\":[{\"bit_index\":151,\"left_signed_keys\":[[\"a80a48abe2a30e21\",\"-\"],[\"e6139e067ed33aaa\",\"+\"]],\"right_signed_keys\":[],\"shared_bit_value\":0}],\"2048\":[{\"bit_index\":1175,\"left_signed_keys\":[[\"a80a48abe2a30e21\",\"-\"],[\"e6139e067ed33aaa\",\"+\"]],\"right_signed_keys\":[],\"shared_bit_value\":0}]}",
+      "label": "2",
+      "n_heavy_atoms": 64,
+      "pair_id": "B_ecreact_1_01",
+      "part": "B",
+      "r_id": "ecreact_28815",
+      "reason": "scaffold already used by the paired or an earlier qualifying row",
+      "scaffold": "c1ncc2ncn(C3CCCO3)c2n1",
+      "side": 2,
+      "source_position": 28814
+    }
+  ]
+}
