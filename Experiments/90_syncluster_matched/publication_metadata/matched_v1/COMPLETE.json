@@ -1,0 +1,366 @@
+{
+  "archived_cells": 12,
+  "code_sha256": {
+    "butina90.cpp": "4aa87a12d4ba73fbeb2e255a1e93da3c6e4eeb8c0b237aba075bd8277ee34b59",
+    "common90.py": "05744cbbfdf50ce0656745da88a8a2c82b6693efb8afc5a2fbef8fe0b25ccfd4",
+    "exact_init90.py": "f2549eb358f8627be4349dc0eba56abbbf7c66fd5dd93e6f1bce4ff4e606b1b0",
+    "features90.py": "7067958d0033482c3e83084b472e1dd31bce931379dcd6e87354fe42fa817430",
+    "kmeans90.py": "fe4db7b3c8f3ce52ba077f1d0ec28607b19461be5e7f59317d918b0417398414",
+    "nativebutina90.py": "bcb3522272f0b3e30491f651a85b128c831ff5e65b14d74b9480035e31e79887",
+    "prepare90.py": "3af92484934c83993bb744da503147a20a89d37d4f874387165e40b620975cf4",
+    "prove_init90.py": "a9c137941e59efb635729ea740fad16558137647b7493345b69e34c83c0e7a60",
+    "publish90.py": "707f27c7056775c60c5b33b6da7f30a5e69c630ada0dda8852202f2935c22b07",
+    "sweep90.py": "2151311de57a5df550df6c0fc029af46f53b878ee574bcc4a5c4bde6b6e861de"
+  },
+  "elapsed_from_preparation_seconds": 1308.7311716079712,
+  "feature_receipts": {
+    "crxnfp": {
+      "max_replay_error": 2.205371856689453e-06,
+      "new_unique_inputs": 338,
+      "pins": {
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan_seal.json": "b9aa61d28abe65cc48a225af7ae3c46d5086de9ef2f5dc8d697fb187602aa4cc",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_u.csv.gz": "07d64516778000bc93a1ad96537364263492d812c451aec9d2057b01d9acc20e",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/PREPARED.json": "893bdd02590ad75d6a87154cff0a56e5aeb22a8f7a11accf397c52906d1f7561",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/inputs.csv": "d794f402ba234bd47801fb8e99a28fb47d550a39655757207bb28864f1a4f857",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP-invariance-all-fps/Experiments/86_invariance_all_fps/neural86.py": "8e1d0500753d816d292eecdaa62dbd6ce7d692f970ec8c9c667db246632146a8",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/1_Pooling/config.json": "38d3f4705824ec41c63a0b14e19870d59c7e16eac9c0aac3378be1ce548bc313",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/README.md": "16b706cfb31fe7f3ca3b18d825ecc71f23e304104139dad7e83fa17313a7cd5e",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config.json": "b6a20d680daeeb360abc2fbc92100f3a9e438e5c0dd19e19755e2a86e0f5e7fe",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/config_sentence_transformers.json": "9afb9db5b9433bffa325f8272065c0b330efb570a873abb3e296d3a387f82301",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/model.safetensors": "7a78e798d0e82b190918442744948bd53d6d16608c7b01708ee1cc746a97cb2d",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/modules.json": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/tokenizer_config.json": "b557b8436d888995f74b889dff2c5f582f85e48599a58ee1b3f10602f5ae7308",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/checkpoint-45600/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/smiles_util.py": "de1e6411de93922e30f47b316306e387a6db5b57563918f2a949760b000dd866",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/external/crxnfp_local/tokenization.py": "9db8fd76dce1613a1145c087ebe86248ad1612e4bfe79b5dd738442bbc04bb60",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/12_validation/modern_encoder.py": "a2ef2aee2325a9e2b995a50fe9ad57e7218ac94bae17deb58d3b087dc45587ba",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/48_yield_input_repair/reaction_parser.py": "c7b91a4c5893d9c28bbfcbd9fa56dcc14a0f7df584fb4fdb6bb3321a83cb84e8",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/uspto_50k_u.json": "73c28adc914564a0bdbc1d5d13a5230c2638cd9aa4de6a163fc7eb91f65e39a6",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/encoder/features/uspto_50k_u.npz": "5c84b73dba4bdc15d074aed5bb2a2e642e4cd52eec7bdf9b17857138d398984d",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce"
+      },
+      "reused_rows": 43040,
+      "rows": 43381,
+      "sha256": "2a20538ea1ba0b18d7d194ec75679a89f2bfb98b81e490368c851c0a240198d9",
+      "tests_replayed": 64,
+      "versions": {
+        "numpy": "1.23.5",
+        "rdkit": "2024.3.5",
+        "rxnfp": "0.1.0",
+        "torch": "2.4.0.post301",
+        "transformers": "4.46.3"
+      }
+    },
+    "drfp": {
+      "max_replay_error": 0.0,
+      "new_unique_inputs": 338,
+      "pins": {
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan_seal.json": "b9aa61d28abe65cc48a225af7ae3c46d5086de9ef2f5dc8d697fb187602aa4cc",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_u.csv.gz": "07d64516778000bc93a1ad96537364263492d812c451aec9d2057b01d9acc20e",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/PREPARED.json": "893bdd02590ad75d6a87154cff0a56e5aeb22a8f7a11accf397c52906d1f7561",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/inputs.csv": "d794f402ba234bd47801fb8e99a28fb47d550a39655757207bb28864f1a4f857",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/features.py": "eaf3bc6ff3bad09afd6308dd4ce0132e9e86d0c6bb015a93a328e882524944f5",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce",
+        "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/uspto_50k_u/drfp.npz": "9b6c606816d1e8fd00b43b753df5fb2cf8da58b34ce4bc4c0218e84b56249ebd"
+      },
+      "reused_rows": 43040,
+      "rows": 43381,
+      "sha256": "b5ab767184710e573f706d4c3eec0c9f018c339db775c472cec3d66a0b561604",
+      "tests_replayed": 64,
+      "versions": {
+        "drfp": "0.3.7",
+        "numpy": "2.4.6",
+        "rdkit": "2026.3.6"
+      }
+    },
+    "rdkit_diff": {
+      "max_replay_error": 0.0,
+      "new_unique_inputs": 338,
+      "pins": {
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan_seal.json": "b9aa61d28abe65cc48a225af7ae3c46d5086de9ef2f5dc8d697fb187602aa4cc",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_u.csv.gz": "07d64516778000bc93a1ad96537364263492d812c451aec9d2057b01d9acc20e",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/PREPARED.json": "893bdd02590ad75d6a87154cff0a56e5aeb22a8f7a11accf397c52906d1f7561",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/inputs.csv": "d794f402ba234bd47801fb8e99a28fb47d550a39655757207bb28864f1a4f857",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/features.py": "eaf3bc6ff3bad09afd6308dd4ce0132e9e86d0c6bb015a93a328e882524944f5",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce",
+        "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/uspto_50k_u/rdkit_diff.npz": "126cbc653eceafaefc410c6663b57079ce8f95bcef84e4349b23be727319e63f"
+      },
+      "reused_rows": 43040,
+      "rows": 43381,
+      "sha256": "e51a1ac2df9512fa6019d9d95afe27b488fddb7032dcda0536391836190d4831",
+      "tests_replayed": 64,
+      "versions": {
+        "drfp": "0.3.7",
+        "numpy": "2.4.6",
+        "rdkit": "2026.3.6"
+      }
+    },
+    "rdkit_struct": {
+      "max_replay_error": 0.0,
+      "new_unique_inputs": 338,
+      "pins": {
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan_seal.json": "b9aa61d28abe65cc48a225af7ae3c46d5086de9ef2f5dc8d697fb187602aa4cc",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_u.csv.gz": "07d64516778000bc93a1ad96537364263492d812c451aec9d2057b01d9acc20e",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/PREPARED.json": "893bdd02590ad75d6a87154cff0a56e5aeb22a8f7a11accf397c52906d1f7561",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/inputs.csv": "d794f402ba234bd47801fb8e99a28fb47d550a39655757207bb28864f1a4f857",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/synrfp_exp/features.py": "eaf3bc6ff3bad09afd6308dd4ce0132e9e86d0c6bb015a93a328e882524944f5",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce",
+        "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/uspto_50k_u/rdkit_struct.npz": "f1522c66756216b4c7709a7dc1fa7ac579e628ab999a7da0993befd98d5ddd5a"
+      },
+      "reused_rows": 43040,
+      "rows": 43381,
+      "sha256": "3ef58f0534c02e59dbb84cfc7c4437b44df4968ffda00c9c940e93144d3d376d",
+      "tests_replayed": 64,
+      "versions": {
+        "drfp": "0.3.7",
+        "numpy": "2.4.6",
+        "rdkit": "2026.3.6"
+      }
+    },
+    "rxnfp_mlm": {
+      "max_replay_error": 5.424022674560547e-06,
+      "new_unique_inputs": 338,
+      "pins": {
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan_seal.json": "b9aa61d28abe65cc48a225af7ae3c46d5086de9ef2f5dc8d697fb187602aa4cc",
+        "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/uspto_50k_u.csv.gz": "07d64516778000bc93a1ad96537364263492d812c451aec9d2057b01d9acc20e",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/PREPARED.json": "893bdd02590ad75d6a87154cff0a56e5aeb22a8f7a11accf397c52906d1f7561",
+        "/home/labhhc4/.local/share/synrfp-runs/request90_syncluster_matched_v1/inputs.csv": "d794f402ba234bd47801fb8e99a28fb47d550a39655757207bb28864f1a4f857",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP-invariance-all-fps/Experiments/86_invariance_all_fps/neural86.py": "8e1d0500753d816d292eecdaa62dbd6ce7d692f970ec8c9c667db246632146a8",
+        "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/external/rxnfp/common.py": "361711e3ab56cbfc63a7250ba96d830bb4acb7a53168b21798b19a3b6628cc14",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/config.json": "024d89cb6056e146e066ebbcd9d565d6968d53e82953570a8b110b26495d7d4b",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/pytorch_model.bin": "50a6ed263d33ae759affa82c1e85554cc5ea9f56145f5c7fb39b6c25d4356437",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/models/transformers/bert_pretrained/vocab.txt": "399868a653e85549ce150af4a1f6cd2776240c6a3d951ced2120565f00f027fd",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/tokenization.py": "682df5c07744384a09eb0c25d16941df66b1ec943d6f29051deba122e140e66a",
+        "/home/labhhc4/anaconda3/envs/rxnfp/lib/python3.8/site-packages/rxnfp/transformer_fingerprints.py": "4389e2c4b7b8f9ea4099adfa30d182d40f8fc09d2ca0be9a1dfbf9acf4c68172",
+        "/var/tmp/synrfp-labhhc4-storage/runs/crxnfp_full_v1/plan.json": "d8bd69c6ac4c1534449e914c0f09b3faa6df222dae21b23aa4d51b619346a8ce",
+        "/var/tmp/synrfp-labhhc4-storage/work/validation/n1/features/uspto_50k_u/rxnfp_mlm.npz": "6276545165b25d18c6ada5729db07f2c88f6b2b5519fb4479e7888f4aece025f"
+      },
+      "reused_rows": 43040,
+      "rows": 43381,
+      "sha256": "0490b4c215299b2dcd6117f92dd26a85cc1429b34a865dc8df8050c6f220f384",
+      "tests_replayed": 64,
+      "versions": {
+        "numpy": "1.23.5",
+        "rdkit": "2024.3.5",
+        "rxnfp": "0.1.0",
+        "torch": "2.4.0.post301",
+        "transformers": "4.46.3"
+      }
+    }
+  },
+  "n": 43381,
+  "new_butina_cells": 35,
+  "new_kmeans_cells": 90,
+  "output_sha256": {
+    "matched_cells.csv": "f33052e3470a25fc6a64a5eae02e518c4b878c7b51ee25b28da77cfe820aedee",
+    "matched_summary.csv": "839c6750736dcd249f006f19d2aa5be8b3c855dde2b59380e063b91bf3f123e5",
+    "note.md": "c59bef9e78ff6042a2711882b51117e8a2e4a147d57e90f06835e3984a15ce9e"
+  },
+  "preparation": {
+    "distinct_author_ids": 20781,
+    "input_sha256": {
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/COMPLETE.json": "0528dc5e82eef962652e3bd09275e1bfd72d09ce6f6d167aa64fa7a60edc7b28",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/NATIVE_COMPLETE.json": "0aaaab206a0a3f712c69c14f08c92d96e5214782a61be5f820305678b1653b2e",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/matched_synrfp/features.json": "0779f21d42933a03456642a77ce442823ce08e6f5ee1f59a75d0b6cc2c682af0",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/matched_synrfp/features.npz": "67b4a28606b92875275f7e90286e353c58b0dd6c490411b0b9bed94c54f63f6f",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/plan.json": "45b789e930b5912101496429de9c0c4a8ffc412f3cadc15284d3d4b3c9f231f0",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/plan_seal.json": "c3afb9724fba5d421fc6aa6c2ebb412e4c073e41a5af76ced6838ac222aef393",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/fingerprints.npz": "7c8c5764e66fcfd914f4d5f6bf629f0a3e18828da8100680fac755ab731b4ada",
+      "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/partition_full.npz": "e3fd5bd095bb9da506e565ae51a6eef190d6c014bbc8be2eed7a3b498559e266",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/19_syncluster_reference/external/SynCluster/clustering/scripts/data/uspto_50k.csv": "3d553efab11041589801b3b8e81af4572d0855399b808b5e1eb5c4c0918ac610",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/compare.py": "0270024ee75067a8ccffa7ce70e34a158238591089a71afd79b9ab151d514f10",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/comparison_cells.csv": "473f7ea78c5ffacefb014a87f87c5e5f4bd161395d138fe778827f208ddfbc61",
+      "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/35_specialist_references/syncluster/publication_metadata/full_reference_v1/protocol.json": "6bd9a56390c6d9db5f7eeb24593e7d2ff300317f2ca3536a662b0a46ac4ea596"
+    },
+    "kmeans": {
+      "algorithm": "MiniBatchKMeans",
+      "algorithm_controlled": false,
+      "environment": {
+        "numpy": "2.4.6",
+        "pandas": "3.0.5",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1"
+      },
+      "fp_seed": 1,
+      "k_rule": "min(512,max(2,round(sqrt(n/2))))",
+      "native_author_rows_exactly_matched": true,
+      "optimizer_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "parameters": {
+        "batch_size": 8192,
+        "max_iter": 100,
+        "max_no_improvement": 10,
+        "n_init": 3,
+        "reassignment_ratio": 0.01,
+        "tol": 0.0
+      },
+      "preset": "synrfp-wl-r2-b2048-parity-delta",
+      "settings": {
+        "agents": "both",
+        "bbit": 2,
+        "edge_attrs": [
+          "order"
+        ],
+        "node_attrs": [
+          "element",
+          "aromatic",
+          "charge",
+          "hcount"
+        ]
+      }
+    },
+    "local_sha256": {
+      "cohort.npz": "927b5cd1c014aa242a81dc9c14585374d3eb3ab3bb36bf5d90d94d823cc4f6d4",
+      "inputs.csv": "d794f402ba234bd47801fb8e99a28fb47d550a39655757207bb28864f1a4f857",
+      "synrfp_bits.npy": "a27304c668a98e797a27cd5fcb7039e8877dad5dbe64e8085ce99c8d9b57532c"
+    },
+    "n": 43381,
+    "native": {
+      "algorithm": "Butina",
+      "class_labels_used_for_fit_or_tuning": false,
+      "distance": "1-RDKit generalized Tanimoto",
+      "distance_cutoff": 0.6,
+      "morgan_feature_radius": 2,
+      "reordering": true,
+      "residual_min_size": 50,
+      "sparse_signed_counts": true,
+      "template_radius": 1
+    },
+    "native_fingerprint_path": "/home/labhhc4/.local/share/synrfp-runs/specialist_references_v1/syncluster/production/fingerprints.npz",
+    "upstream": "c2f55ba19453bc542bb65b127ab6db567b87f344"
+  },
+  "prepared_sha256": "893bdd02590ad75d6a87154cff0a56e5aeb22a8f7a11accf397c52906d1f7561",
+  "request_revision": "397dc658968a000a8e24e77ec4713dd92e454f6a",
+  "same_native_author_order": true,
+  "status": "complete",
+  "table_rows": 137,
+  "verification": {
+    "integer_controls": {
+      "controls": {
+        "drfp_k378_s0": {
+          "fast_result_sha256": "5245f7d8fe5d6457da5383068ec406d8b2aab5182b69de7a76ac6419a4c866f1",
+          "identical_centers_and_memberships": true,
+          "native_result_sha256": "2955323494d1df028aa28835afb1f94282cb7d03bbc5369b85d3b44504a784a9"
+        },
+        "synrfp_k147_s0": {
+          "fast_result_sha256": "a3b89de77294a902629a21f68a66f3b8d7ecc5b9eb376ea0bdda4589bee3115c",
+          "identical_centers_and_memberships": true,
+          "native_result_sha256": "d3cf5688bede7d5bef1968654c76de454a945dcb2499e31738c1214b289340bb"
+        },
+        "synrfp_k147_s1": {
+          "fast_result_sha256": "6962700c85970a51ad5338ffae5e1b2b428a9a89f6cb94a86c163383df365e99",
+          "identical_centers_and_memberships": true,
+          "native_result_sha256": "5af3046cfb81ae31299bee1933914d971cbbb5ed57bb27fd946ed89abf57b7c1"
+        },
+        "synrfp_k378_s0": {
+          "fast_result_sha256": "f9f7112fc4625d7f8d91b439d34ca39272100c433803406ec64d2b262b4779b1",
+          "identical_centers_and_memberships": true,
+          "native_result_sha256": "620bacf2a8a15c16697058751dcf819b03fe1aeb84616f83c11769f19d821bc1"
+        }
+      },
+      "source_sha256": "f2549eb358f8627be4349dc0eba56abbbf7c66fd5dd93e6f1bce4ff4e606b1b0"
+    },
+    "native_butina": {
+      "drfp": {
+        "actual_clusters": 17549,
+        "cutoff": 0.6,
+        "n": 43381,
+        "rdkit": "2021.09.5",
+        "runtime_seconds": 1128.2921683879977,
+        "sha256": "2336146929141b878e3dab447a3fb122fff506f55219cc16ba8f047f3f75df46",
+        "upstream_source_sha256": "3ae604f5ad8696274343c940cd465984d8e37ecd5a73f5588837e0b205a706b5"
+      },
+      "synrfp": {
+        "actual_clusters": 7712,
+        "cutoff": 0.6,
+        "n": 43381,
+        "rdkit": "2021.09.5",
+        "runtime_seconds": 1127.8209214820017,
+        "sha256": "2827ed58b3ea0a1e5e9a0a751e52f129e0df60c040f1f820ae53e30194a1590f",
+        "upstream_source_sha256": "3ae604f5ad8696274343c940cd465984d8e37ecd5a73f5588837e0b205a706b5"
+      }
+    },
+    "sweep": {
+      "artifact_sha256": {
+        "cutoff_0000.json": "ee999a883aaa2a6c7ee762ec62f499db6513b601be3ef2dbe865c81160cf7735",
+        "cutoff_0050.json": "b67ef75dc5a24179eda6a7a9c6e76411b6c371f382482426c8cee81d16365701",
+        "cutoff_0100.json": "249bfde98139c362a588112614333d87e58f0c39e4e28891d5eb332025332fa5",
+        "cutoff_0150.json": "ac92f6c153706e2772bf8427e5bd812d196cc0cd0fc1751498e733e03a5b0a37",
+        "cutoff_0200.json": "769fd5ebc8f08aae9438ff01e81e94fd6b12342184df8db6fb77fda4376bf9e2",
+        "cutoff_0250.json": "2932bdeedeede5a43be41abd2d33a2065657fd2291abf32f1d8f2baa461308a5",
+        "cutoff_0300.json": "4814789105c16720db6f9c69b69c52bcb6af2fe4660d6e976fa75b52cbdf0c52",
+        "cutoff_0350.json": "ec47fe4161ba805dca248eafcdf7415cd76b2312556ecbaf26b2a68eb1cee42f",
+        "cutoff_0400.json": "108043c7d904aceaa451032ed448dc5f7a50785e936a7d101dae203936f4a065",
+        "cutoff_0450.json": "4a510a717a68e3689817ddcd814f915970791f937058ae107792e5605a750b37",
+        "cutoff_0500.json": "d520211f3503b379aafd235d406ba84dfc4a08c7207ffdbddabccb0b33fb78fa",
+        "cutoff_0550.json": "3e2a18d4413952a0971ccb71b708f3ed6fc3105e512a73852dab13fa9e319e87",
+        "cutoff_0600.json": "d9c65363bf1c02e96dd98055415cbeb55c23dcb1beabbfe33ab0d4c02cca2614",
+        "cutoff_0650.json": "1ee76c4deabafca8660407f2ed6a2dc89030be6a6a4cb1ae4e183d01140b92f9",
+        "cutoff_0700.json": "53bbe02e2a03aa5ea9a75d004b4bf686a9f4d05a00b55665a9dd29c366f5dc92",
+        "cutoff_0750.json": "c0818c30f687674f66402ba5872b7267cb3388c52920294f6bb0fc98cb30c4eb",
+        "cutoff_0800.json": "42c0bd8b21155ba6a906975ad47dd959e4155f097fdec71c5c1ca2eba8ed56bf",
+        "cutoff_0850.json": "1ffd36038ae8f420155a5b3a5ede99e8ff09eaf86f48e01128eb6bfe0e73fb17",
+        "cutoff_0860.json": "d87a10c329631a5d688793a7ff67aeedc4addaeeec8621a75848f3bbc9751e7d",
+        "cutoff_0870.json": "87008b19ae5c53cd77d8cba74397cdab6efd2dce8e003e84e66ec7b106a3b253",
+        "cutoff_0880.json": "929fb09059fc4949c28d2ca9e394d9934a8582bc4c2a6963f0d34a404a65f246",
+        "cutoff_0881.json": "9980c4165c2988e4711d3db09f992b2c171cc229d544bb2b276296d0cbff93e2",
+        "cutoff_0882.json": "d42bfc78863e9cf6baf1c84b1f8a52de480a85d00ccd8d00c7f2f65e29df27fd",
+        "cutoff_0883.json": "640e0ec81153ce38568bf9518918246ef7198bb6c92ad6adb2c53e857a6b422e",
+        "cutoff_0884.json": "9c64ea87b73d67f5eaa7a263dd523f048f179f89c6bfc4dff1435b850ac0a1f4",
+        "cutoff_0885.json": "4eab1e92e76a49f610610b8b93c300655cb3be664b22f633d2b208b81a921847",
+        "cutoff_0886.json": "f43114ee252338db4f58869c385f1230eece8a20cb83c7e88a7ca09e155855c6",
+        "cutoff_0887.json": "3cc841eb4623b4e6f8cb72a0d1e10a2f78b4d99135971f584900fc3b61849fb3",
+        "cutoff_0888.json": "e36ef5a2a6c3fefdb018fe4a3fdc91553538136fbeae0bf93db73893e6aa1b73",
+        "cutoff_0889.json": "b6e46c88120b93950e7b22f1dec25d6eb29ab8549d699b779a8a300ad08a2dc9",
+        "cutoff_0890.json": "b5e5b30c26076f9f2e5ab813d50244037806d8d0e78307c29a946e161c31367c",
+        "cutoff_0900.json": "220c71ee68f79cc61c864971aa10affb5333f45b0f851d37c8fc5ff20acb5d77",
+        "cutoff_0950.json": "76f81b4b054b442fc39576399f3b442d16f4bf1950d6afe0d083307064557f37",
+        "cutoff_1000.json": "d3804cf74acd36dce3bf5032e809132e551f9a759d6b6c08c5ed3386774e7dfc"
+      },
+      "coarse_clusters": 258,
+      "coarse_distance_cutoff": 0.9,
+      "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "distance_pair_seconds": 6.886248933995375,
+      "fixtures": {
+        "fixture_rows": 523,
+        "memberships_and_centers_verified": true,
+        "rdkit": "2021.09.5",
+        "thresholds_checked": 24
+      },
+      "runtime_seconds": 137.70891675299936,
+      "selected_clusters": 375,
+      "selected_distance_cutoff": 0.885,
+      "source_sha256": {
+        "butina90.cpp": "4aa87a12d4ba73fbeb2e255a1e93da3c6e4eeb8c0b237aba075bd8277ee34b59",
+        "sweep90.py": "2151311de57a5df550df6c0fc029af46f53b878ee574bcc4a5c4bde6b6e861de"
+      }
+    }
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1"
+  },
+  "wall_seconds": {
+    "baselines": 500.0181827940032,
+    "native": 61.51535070900718
+  }
+}
