@@ -34,7 +34,7 @@ def verify(path, expected):
     return path
 
 
-def audit_predictions(ref, selectors, cohort):
+def load_predictions(ref, selectors, cohort):
     path = verify(Path(ref.source_result_path), ref.source_result_sha256)
     result = read(path)
     assert result["phase"] == "complete"
@@ -60,14 +60,19 @@ def audit_predictions(ref, selectors, cohort):
     else:
         predicted = np.load(predictions, allow_pickle=False)
     assert predicted.shape == observed.shape and np.isfinite(predicted).all()
+    return predicted, observed, hashes[str(rows)], hashes[str(predictions)]
+
+
+def audit_predictions(ref, selectors, cohort):
+    predicted, observed, row_hash, prediction_hash = load_predictions(ref, selectors, cohort)
     error = predicted - observed
     metrics = dict(r2=1-np.sum(error**2)/np.sum((observed-observed.mean())**2),
                    rmse=np.sqrt(np.mean(error**2)), mae=np.mean(np.abs(error)))
-    counts = dict(ntrain=len(selectors["train"]), nval=len(selectors["validation"]), ntest=len(test))
+    counts = dict(ntrain=len(selectors["train"]), nval=len(selectors["validation"]), ntest=len(observed))
     assert tuple(counts.values()) == (ref.ntrain, ref.nval, ref.ntest)
     record = dict(dataset=ref.dataset, split=ref.split, method=ref.method,
                   configuration=ref.configuration, **counts, result_sha256=ref.source_result_sha256,
-                  selector_sha256=hashes[str(rows)], predictions_sha256=hashes[str(predictions)])
+                  selector_sha256=row_hash, predictions_sha256=prediction_hash)
     for name, value in metrics.items():
         released = getattr(ref, name)
         np.testing.assert_allclose(value, released, atol=1e-10, rtol=0)
