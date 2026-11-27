@@ -55,6 +55,22 @@ same data.
 Output on the same branch: `classifier_ranking.csv`, `classifier_metrics.csv`, and a section in
 `note.md`.
 
+## D. Paired tests on single test sets (feasibility, reagents, conditions)
+
+These tasks have five seeds or folds, too few for a signed-rank test across units (the smallest
+two-sided p with n = 5 is 0.0625). Test on the reactions instead, with the saved predictions of the
+benchmark release (no refits).
+
+- Feasibility, fixed 751-reaction expert test: for SynRFP default and selected against each other
+  fingerprint, per training seed, DeLong test for paired AUROC and McNemar test on the thresholded
+  decisions; then combine the five seeds (report per seed and the median p).
+- Reagents and conditions, native test sets: paired bootstrap over test reactions (2,000 resamples,
+  seed 0) of the micro-F1 difference between each SynRFP configuration and each other fingerprint,
+  per seed or fold; report the mean difference and the 95% percentile interval.
+- Holm correction over the comparisons within each task.
+
+Output on the same branch: `paired_tests_single_test.csv` and a section in `note.md`.
+
 ## Output
 
 On a new branch `exp/93-yield-learner`:
