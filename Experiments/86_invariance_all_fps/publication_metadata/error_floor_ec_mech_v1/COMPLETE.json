@@ -1,0 +1,61 @@
+{
+  "code_sha256": {
+    "common86.py": "024dda674ee1f97e679c85e248d4a857bc1a6e60efade6b13955f2f9b92e0dbc",
+    "error_floor86.py": "d20a3fd3d2e09deefde4b284e607f8e11180ba4c39eed0efc17c2bb013d49887"
+  },
+  "endpoints": [
+    "ecreact_1",
+    "mech_2"
+  ],
+  "inputs_sha256": {
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/COMPLETE.json": "243ea2903209c4c8e4970173629a8a0146125de06be5e769abe1dd3dd5015863",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/synrfp-wl-r2-b2048-parity-delta.npz": "d2a0df632f19863cb3e7638e8ebe041eda7652eb50e606285d044cb7f984e755",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/synrfp-wl-r2-b2048-parity-delta_union.npz": "766fd2b2961bdabfab924856762d082f6b2b911bf6ce80f7f71b1d26db4f5874",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/ecreact/synrfp-wl-r2-b2048-parity-union.npz": "2f0b2d38b724e4cce7984b336b642eb772803c1e9050f7dd9d12a271863754ad",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/COMPLETE.json": "2ffe79dd8fe56ff2c4288282bf51763aad40258af6d1a1852f64db6a0dc5d0a3",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/synrfp-wl-r2-b2048-parity-delta.npz": "d29526baf9e9e44708e0d7147d015ee1b14dc5183a008193e9eb34a18434276e",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/synrfp-wl-r2-b2048-parity-delta_union.npz": "a1cc543cbaf3e294cd9c59cdd001d0cc6db2be661862bdf47fa88576c0ecf4c8",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/features/mech/synrfp-wl-r2-b2048-parity-union.npz": "17a8a75e9135fda494fa34d92294ef89d2c57b6878da6771fe79fc4a264bcf89",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/ecreact_1.csv.gz": "9795b55a3bcf9438cf132e4863c5d7c6dfc8ee4f52aba0fa78d085bbb504c690",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/panels/mech_2.csv.gz": "3ba62d8932b371e7e7dc43101cb8854dab780915151d9faf397622021ed59633",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/plan.json": "9bd10af8dee274984c50f6ba1cd661f7a4e028655555d5f18d7d26d198703e6b",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/ecreact.csv.gz": "ff6b45dd11ad2e3c9e0061bbdb19def4521b6ee5d84688f32a03250f29670241",
+    "/home/labhhc4/.local/share/synrfp-runs/all_endpoint_factorial_full_v1/sources/mech.csv.gz": "2014745c8a555dc23b9f82901895d32a976c35be8d4e595d148f46c81f2000ec",
+    "/home/labhhc4/.local/share/synrfp-runs/default_optimal_benchmark_v1/native/classification/plan.json": "a2039c8234a4785cdf198402a0ba5c44eda63a51ecf767063d54d55195ad2130",
+    "/home/labhhc4/.local/share/synrfp-runs/default_optimal_benchmark_v1/plan.json": "554988111c817210a52ecbca3cb722a13cde4fd6fd5189f0aafb91f24967ea5b",
+    "/home/labhhc4/.local/share/synrfp-runs/delta_ceiling_request74_v2/ENCODED.json": "e3c8d55f641cf029ece0bc0a64f4d0fb001852e521e7dc76887512bbd1fa7c8b",
+    "/home/labhhc4/.local/share/synrfp-runs/delta_ceiling_request74_v2/ENCODING_PLAN.json": "c2277d9e82cb92eadecae6426e3e74978eaa3a5514127a74c2c7918b18031f96",
+    "/home/labhhc4/.local/share/synrfp-runs/delta_ceiling_request74_v2/ecreact.npz": "bf663ba45dd473276c6dc4facca2ab67a84f28178a7030dc32db012b8b72bdfa",
+    "/home/labhhc4/.local/share/synrfp-runs/delta_ceiling_request74_v2/mech.npz": "c2a4b8e4f19a35703e4c953fb58b53a706ce498e748d3cbb0c95041708ef70ef",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/Experiments/20_focused_factorial/encode_factorial.py": "b9d1e1fc82b1e702bcbb2cef7c513c2b6389ed0dd23b20c520bfbe78fdc7231a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/Experiments/74_delta_ceiling/encode_counts.py": "ab9cd5678ebedb28a098875825edc312bc12c0b32a2bdb9e1a7556198b8ee5f8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/Experiments/74_delta_ceiling/publication_metadata/delta_ceiling_v1/COMPLETE.json": "6fb3283b7192706d71cee5ca5898157cc0135add7ab137aa06e5c0bbe73b5867",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/Experiments/74_delta_ceiling/publication_metadata/delta_ceiling_v1/endpoint_summary.csv": "44906a97443cc9c765ac848b832849391fc1b4005d75f749191a27c5957f8027",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/graph/molecule.py": "95c2259a5c719684e26471ccc6f70f750a672e5be81e4b74561bba54d9eddd94",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/graph/reaction.py": "56587d9ef3a32dc06f38f7c4304f01397476cff59815040d60e5198234bb9d6a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/base.py": "5feba069538f0e894400a8892359f9ff124b184d2b533a4e4afc51c0998bb84a",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/map.py": "d2ba222bf2adbfb03d8eb1094e8e6af3d2805da37e674247ce4edea07e65b94c",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/morgan.py": "e57d4ef2e8880777a6d7100c7dedd59bac5a8e9bf46be819732a14fc24262a15",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/nauty.py": "a56aa78c5dcac2889a3fce55854b001399b7bf13cc2281d7ecb2ee80720f1e08",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/path.py": "d11adb2badbbaf7fe309fc1c177812e03f391caf70e5b02ffa092251e8e5b9a1",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/utils.py": "ea326131aa95fb0d2f6079c6c21716ffae8f5cb24a6a1a4854fc88c1be9c9a96",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-delta-ceiling/synrfp/tokenizers/wl.py": "c714f9170620f97d2895c4f5cee31d2bc4428a05073a20c6ee83316bc7d86f2d",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP-morgan-ecfp-v004/synrfp/tokenizers/morgan.py": "c559478d6b411059e31154edd792e1e2b11a54faf95f5b491efca102b0d9beb9",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/48_yield_input_repair/reaction_parser.py": "c7b91a4c5893d9c28bbfcbd9fa56dcc14a0f7df584fb4fdb6bb3321a83cb84e8",
+    "/home/labhhc4/Documents/Workspace/Long/SynRFP/Experiments/51_encoder_coverage_repair/adapter.py": "a8ccde86fd7d5c96a9b883bbd84adaaebe96240f3cd1914af59cfe679bdf4684",
+    "/home/labhhc4/anaconda3/envs/synrfp/lib/python3.11/site-packages/synkit/IO/__init__.py": "30db4ff4292608c46301e280d8922c9b2dd8ff8b4cdb7bc2a0c684171fd0509e"
+  },
+  "native_request74_commit": "c2f046a9724a70d4821e16d5a6b27b546003f8fe",
+  "outputs_sha256": {
+    "README.md": "da23ec478025b8709a60fcd3df087fe530235156e6bdd596fdf312fcab8ab889",
+    "error_floor_by_stage.csv": "974e0004a7acb323d61d493ee054cabeb5f6b74faba8090d278b5354def70a22",
+    "table_s6_ec_mech.csv": "f00a7d76d8e35ad8ec3c107584e64fb56fff0dcaa6474d4399cef499869abb1a"
+  },
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5"
+  },
+  "request86_commit": "3fdd44463fe4cdec76a92e62ecc6245474c650f6",
+  "status": "complete"
+}
